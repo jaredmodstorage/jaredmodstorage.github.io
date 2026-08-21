@@ -20,6 +20,8 @@ Published method: https://jaredmodstorage.github.io/writing/facility-identity-dr
 
 Applied tool: https://jaredmodstorage.github.io/downloads/facility-identity-control-self-assessment.xlsx
 
+Full sample presentation: https://jaredmodstorage.github.io/downloads/governing-facility-identity-operating-control.pptx
+
 ## Session 2 — Evidence Before Automation
 
 A decision boundary for teams adopting AI without allowing a suggestion, approval, action, and reconciled outcome to collapse into the same claim.

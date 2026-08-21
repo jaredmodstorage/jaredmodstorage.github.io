@@ -35,6 +35,11 @@ Do not state product availability, customer, revenue, funding, partnership, inte
 
 Headshot: Courtesy of Jared Mastroianni. Editorial use with name credit.
 
+## Presentation assets
+
+- Full 16-slide sample deck with presenter notes: https://jaredmodstorage.github.io/downloads/governing-facility-identity-operating-control.pptx
+- Facility identity control self-assessment: https://jaredmodstorage.github.io/downloads/facility-identity-control-self-assessment.xlsx
+
 ## Official pages
 
 - Jared Mastroianni public authority profile: https://jaredmodstorage.github.io/
