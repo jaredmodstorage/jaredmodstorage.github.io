@@ -55,6 +55,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://jaredmodstorage.github.io/assets</loc>
+<lastmod>2026-08-21T00:00:00.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://jaredmodstorage.github.io/writing/evidence-before-automation</loc>
 <lastmod>2026-08-21T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
