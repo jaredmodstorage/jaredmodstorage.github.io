@@ -18,6 +18,8 @@ Learning outcomes:
 
 Published method: https://jaredmodstorage.github.io/writing/facility-identity-drift/
 
+Applied tool: https://jaredmodstorage.github.io/downloads/facility-identity-control-self-assessment.xlsx
+
 ## Session 2 — Evidence Before Automation
 
 A decision boundary for teams adopting AI without allowing a suggestion, approval, action, and reconciled outcome to collapse into the same claim.
@@ -69,6 +71,7 @@ Jared's modSTORAGE and Facily.ai roles must be disclosed. These sessions are non
 
 - Email: jared@modstorage.com
 - Speaking catalog: https://jaredmodstorage.github.io/speaking/
+- Facility identity control self-assessment: https://jaredmodstorage.github.io/downloads/facility-identity-control-self-assessment.xlsx
 - Media kit: https://jaredmodstorage.github.io/media/
 - Research hub: https://jaredmodstorage.github.io/research/
 - Publishing principles: https://jaredmodstorage.github.io/publishing-principles/
