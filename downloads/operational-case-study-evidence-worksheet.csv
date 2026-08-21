@@ -1,0 +1,19 @@
+Section,Field,What to record,Required evidence,Release gate
+Scope,Operating question,One narrow decision or workflow question,Approved study brief and named decision owner,Question is specific enough to measure
+Scope,Subject and cohort,Facilities teams transactions or events included,Fixed inclusion and exclusion rules,No selected-success sample
+Baseline,Period,Start and end dates before the intervention,Timestamped source extract,Period is long enough to represent the baseline limitation honestly
+Baseline,Governing source,System that authoritatively records the measure,Source owner and field definitions,Dashboard displays are reconciled to the governing source
+Measure,Numerator,Count or amount that forms the top of the measure,Reproducible query or export,Definition is stable across baseline and result periods
+Measure,Denominator,Population opportunity or exposure behind the measure,Reproducible query or export,Rate is not presented without its denominator
+Intervention,Change made,Exact process training software or property change,Approved change record and implementation timestamp,Proposed or partial work is not labeled implemented
+Control,Authorization,Person or role that approved the intervention,Approval record,Approval and execution are separately evidenced
+Control,Exceptions,Failures exclusions reversals and manual overrides,Exception log and treatment rule,Material adverse and null outcomes are retained
+Comparison,Method,Before-after matched comparison or other design,Predefined comparison rule,Causal language matches the design limitation
+Result,Measured outcome,Value units denominator and period,Source extract and calculation,Result is reproducible and not a model estimate
+Result,Reconciliation,Proof the outcome posted or closed in the governing system,Receipt ledger export or final system state,Activity is not treated as completion
+Quality,Data checks,Missing duplicate stale or inconsistent records,Quality log and correction notes,Known defects are disclosed
+Privacy,Data rights,Permission redaction aggregation and retention rules,Data-owner and privacy review,No tenant payment credential or customer-identifying data is exposed
+Review,Independent challenge,Reviewer questions alternative explanations and adverse findings,Named review record,Material criticism is addressed or disclosed
+Publication,Relationships,Operator vendor product funder and contributor relationships,Disclosure statement,Readers can identify relevant interests
+Publication,Limitations,Selection measurement comparison duration and transferability limits,Approved limitations paragraph,No portfolio-wide best or guaranteed claim exceeds the evidence
+Publication,Release approval,Exact public tables figures wording and destination,Named publication approval,Public URL is released only after final evidence readback
