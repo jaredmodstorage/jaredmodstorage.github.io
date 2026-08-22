@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:jaredmastroianni:semantic-contract:draft-2020-12:v1",
+  "title": "Semantic Contract — Authored Draft",
+  "description": "Structural schema for one evidence-bounded facility-field semantic contract. Conformance does not establish truth, authority, compatibility, adoption, model validity, or operational safety.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id", "contract_version", "term_id", "term_label", "definition",
+    "producer_system", "authoritative_owner", "value_kind", "unit_iri", "scale_factor",
+    "population_definition", "inclusion_rules", "exclusion_rules", "null_semantics",
+    "allowed_values", "event_time_field", "observed_time_field", "effective_from",
+    "source_schema_version", "transformation_id", "transformation_version", "downstream_uses",
+    "decision_impact", "compatibility", "change_summary", "migration_required",
+    "backfill_required", "approval_owner", "rollback_contract_version", "evidence_boundary"
+  ],
+  "properties": {
+    "contract_id": { "type": "string", "minLength": 1 },
+    "contract_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "term_id": { "type": "string", "minLength": 1 },
+    "term_label": { "type": "string", "minLength": 1 },
+    "definition": { "type": "string", "minLength": 20 },
+    "producer_system": { "type": "string", "minLength": 1 },
+    "authoritative_owner": { "type": "string", "minLength": 1 },
+    "value_kind": { "enum": ["boolean", "integer", "number", "string", "datetime", "duration", "code", "identifier", "object"] },
+    "unit_iri": { "type": ["string", "null"], "format": "uri" },
+    "scale_factor": { "type": "number", "exclusiveMinimum": 0 },
+    "population_definition": { "type": "string", "minLength": 1 },
+    "inclusion_rules": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+    "exclusion_rules": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "null_semantics": { "enum": ["unknown", "not_observed", "not_applicable", "not_available", "withheld", "error", "prohibited"] },
+    "allowed_values": { "type": "array", "items": { "type": ["string", "number", "integer", "boolean"] }, "uniqueItems": true },
+    "event_time_field": { "type": "string", "minLength": 1 },
+    "observed_time_field": { "type": "string", "minLength": 1 },
+    "effective_from": { "type": "string", "format": "date-time" },
+    "effective_to": { "type": ["string", "null"], "format": "date-time" },
+    "source_schema_version": { "type": "string", "minLength": 1 },
+    "transformation_id": { "type": "string", "minLength": 1 },
+    "transformation_version": { "type": "string", "minLength": 1 },
+    "downstream_uses": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+    "decision_impact": { "enum": ["display_only", "advisory", "workflow_routing", "approval_input", "action_gate"] },
+    "compatibility": { "enum": ["additive", "non_breaking", "breaking", "unknown"] },
+    "predecessor_contract_id": { "type": ["string", "null"] },
+    "predecessor_contract_version": { "type": ["string", "null"] },
+    "change_summary": { "type": "string", "minLength": 1 },
+    "migration_required": { "type": "boolean" },
+    "dual_read_from": { "type": ["string", "null"], "format": "date-time" },
+    "dual_read_to": { "type": ["string", "null"], "format": "date-time" },
+    "backfill_required": { "type": "boolean" },
+    "approval_owner": { "type": "string", "minLength": 1 },
+    "approved_at": { "type": ["string", "null"], "format": "date-time" },
+    "rollback_contract_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "evidence_boundary": { "type": "string", "minLength": 20 }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "compatibility": { "const": "breaking" } }, "required": ["compatibility"] },
+      "then": { "properties": { "migration_required": { "const": true } } }
+    },
+    {
+      "if": { "properties": { "migration_required": { "const": true } }, "required": ["migration_required"] },
+      "then": { "required": ["predecessor_contract_id", "predecessor_contract_version"] }
+    }
+  ]
+}

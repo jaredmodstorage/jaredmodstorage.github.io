@@ -8,6 +8,15 @@
     <lastBuildDate>Sat, 22 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Semantic Drift Register: When a Facility Field Keeps Its Name but Changes Its Meaning</title>
+      <link>https://jaredmodstorage.github.io/writing/semantic-drift-register/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/semantic-drift-register/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A versioned release control for detecting when a facility field retains its label but changes identity, population, unit, time, authority, null, state, transformation, decision-use, or evidence-boundary meaning.</description>
+    </item>
+    <item>
       <title>The Five-Layer Operating Context Stack for Multi-Facility AI</title>
       <link>https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</guid>

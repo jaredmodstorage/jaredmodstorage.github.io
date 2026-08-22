@@ -1,0 +1,49 @@
+{
+  "contract_id": "SC-FICTIONAL-OCCUPANCY-RATE",
+  "contract_version": "3.0.0",
+  "term_id": "metric.occupancy_rate",
+  "term_label": "occupancy_rate",
+  "definition": "Percentage of rentable units in an active occupied rental state at the end of the facility's local operating day.",
+  "producer_system": "fictional-portfolio-metric-service",
+  "authoritative_owner": "fictional-revenue-operations-data-owner",
+  "value_kind": "number",
+  "unit_iri": "https://qudt.org/vocab/unit/PERCENT",
+  "scale_factor": 100,
+  "population_definition": "Rentable units assigned to the facility and effective for the observation date.",
+  "inclusion_rules": [
+    "Include units whose rental state is active_occupied at event-time cutoff",
+    "Include only units effective within the named facility on the observation date"
+  ],
+  "exclusion_rules": [
+    "Exclude units in offline_maintenance state",
+    "Exclude company_use and non_rentable spaces",
+    "Exclude units whose identity is unresolved or cross-facility conflicted"
+  ],
+  "null_semantics": "unknown",
+  "allowed_values": [],
+  "event_time_field": "rental_state.effective_at",
+  "observed_time_field": "metric_observation.observed_at",
+  "effective_from": "2026-09-01T00:00:00Z",
+  "effective_to": null,
+  "source_schema_version": "rental-state-5.2",
+  "transformation_id": "transform.fictional.occupancy-rate",
+  "transformation_version": "3.0.0",
+  "downstream_uses": [
+    "daily-operator-dashboard",
+    "portfolio-exception-review",
+    "ai-assisted-narrative-draft"
+  ],
+  "decision_impact": "approval_input",
+  "compatibility": "breaking",
+  "predecessor_contract_id": "SC-FICTIONAL-OCCUPANCY-RATE",
+  "predecessor_contract_version": "2.4.1",
+  "change_summary": "Removes offline-maintenance and company-use spaces from the denominator and changes the governing cutoff from recorded UTC midnight to facility-local end of operating day.",
+  "migration_required": true,
+  "dual_read_from": "2026-08-15T00:00:00Z",
+  "dual_read_to": "2026-09-15T00:00:00Z",
+  "backfill_required": false,
+  "approval_owner": "fictional-metric-governance-owner",
+  "approved_at": null,
+  "rollback_contract_version": "2.4.1",
+  "evidence_boundary": "Fictional teaching contract only; schema conformance does not establish a real metric, approved definition, source authority, historical comparability, operational fitness, or measured result."
+}
