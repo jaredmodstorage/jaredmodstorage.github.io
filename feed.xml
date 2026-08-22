@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Jared Mastroianni — Writing</title>
+    <link>https://jaredmodstorage.github.io/writing/</link>
+    <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 22 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Designing a Human Review Queue That Does Not Become a Bottleneck</title>
+      <link>https://jaredmodstorage.github.io/writing/human-review-queue-without-bottleneck/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/human-review-queue-without-bottleneck/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A capacity-bounded architecture for evidence-complete admission, consequence routing, qualified adjudication, visible aging, execution, reconciliation, and reopening.</description>
+    </item>
+    <item>
+      <title>Automation SLOs for Operators: Freshness, Completion, Reconciliation, and Recovery</title>
+      <link>https://jaredmodstorage.github.io/writing/automation-slos-for-operators/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/automation-slos-for-operators/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A self-storage reliability method built around freshness, completion, reconciliation, recovery, evidence integrity, and consequence-aware error budgets.</description>
+    </item>
+    <item>
+      <title>The Facility Event Spine: A Governed Pattern for Multi-Location Self-Storage Operations</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-event-spine/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-event-spine/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A governed event-driven pattern that separates observations, commands, policy decisions, projections, and reconciliation evidence across a self-storage portfolio.</description>
+    </item>
+    <item>
+      <title>Observe the Decision Chain, Not Just the API Call</title>
+      <link>https://jaredmodstorage.github.io/writing/observe-decision-chain-not-api-call/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/observe-decision-chain-not-api-call/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>An eight-stage trace model for separating AI recommendation, authority, human review, provider acceptance, source readback, reconciliation, and closure in self-storage operations.</description>
+    </item>
+    <item>
+      <title>Build a Source-of-Truth Map Before You Build a Dashboard</title>
+      <link>https://jaredmodstorage.github.io/writing/source-of-truth-map-before-dashboard/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/source-of-truth-map-before-dashboard/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A field-level map for governing sources, transformations, event evidence, freshness, conflict ownership, reconciliation, and rollback.</description>
+    </item>
+    <item>
+      <title>The Five-Layer Operating Context Stack for Multi-Facility AI</title>
+      <link>https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A proposed architecture for preserving identity, authority, state, time, evidence, human review, reconciliation, and rollback across facilities.</description>
+    </item>
+    <item>
+      <title>Evidence Before Automation</title>
+      <link>https://jaredmodstorage.github.io/writing/evidence-before-automation/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/evidence-before-automation/</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>Why AI-assisted operating decisions need visible sources, freshness, approvals, and reconciliation boundaries.</description>
+    </item>
+    <item>
+      <title>The Quiet Cost of Facility-Identity Drift</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-identity-drift/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-identity-drift/</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>An 18-control register and eight-step workflow for keeping facility identities aligned across systems.</description>
+    </item>
+    <item>
+      <title>An Operating System Is Not Another Dashboard</title>
+      <link>https://jaredmodstorage.github.io/writing/operating-system-not-dashboard/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/operating-system-not-dashboard/</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>The difference between displaying activity and governing work across a multi-facility operator.</description>
+    </item>
+    <item>
+      <title>Structured Data Should Describe the Entity You Can Prove</title>
+      <link>https://jaredmodstorage.github.io/writing/structured-data-entity-boundary/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/structured-data-entity-boundary/</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A five-layer entity map and seven-point release gate for accurate, maintainable structured data.</description>
+    </item>
+    <item>
+      <title>Access Is Not Ownership: Three Ledgers for Digital Business Profiles</title>
+      <link>https://jaredmodstorage.github.io/writing/access-is-not-ownership/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/access-is-not-ownership/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A three-ledger method for separating public business facts, platform administration, and legal relationships.</description>
+    </item>
+    <item>
+      <title>How to Publish an Operations Case Study That Survives Scrutiny</title>
+      <link>https://jaredmodstorage.github.io/writing/case-study-that-survives-scrutiny/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/case-study-that-survives-scrutiny/</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A reproducible path from operating question to source, intervention, reconciliation, limitations, and release.</description>
+    </item>
+    <item>
+      <title>What AI-Native Should Mean in Facility Management</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-native-facility-management-standard/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-native-facility-management-standard/</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>Six tests for source-grounded, authority-aware, measurable, reviewable, and recoverable AI-assisted operations.</description>
+    </item>
+  </channel>
+</rss>
