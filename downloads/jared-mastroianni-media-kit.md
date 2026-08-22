@@ -1,13 +1,13 @@
 # Jared Mastroianni media fact sheet
 
-Last reviewed: 21 August 2026
+Last reviewed: 22 August 2026
 
 ## Identification
 
 - Full name: Jared Mastroianni
 - Current role: Chief Operating Officer, modSTORAGE
 - Current role: CEO and Co-Founder, Facily.ai
-- Preferred descriptor: Self-storage operating executive and technology founder
+- Preferred descriptor: Self-storage operating executive and Facily.ai CEO and Co-Founder
 
 ## Approved short biography
 
