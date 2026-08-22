@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DOFp2eoL.css" data-rsc-css-href="/_next/static/css/index.DOFp2eoL.css" data-precedence="vite-rsc/importer-resources"/><title>The Correction Propagation Contract for Facility Facts | Jared Mastroianni</title><meta name="description" content="A versioned operating contract for propagating one corrected facility assertion through governing data, replicas, reports, workflows, AI context, communications, and nonreversible real-world effects."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Correction Propagation Contract for Facility Facts | Jared Mastroianni"/><meta property="og:description" content="A versioned operating contract for propagating one corrected facility assertion through governing data, replicas, reports, workflows, AI context, communications, and nonreversible real-world effects."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/correction-propagation-contract/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/correction-propagation-contract/correction-propagation-control-plane.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A superseded facility assertion and governing candidate enter a seven-stage correction packet, which assigns typed dispositions across seven consumer classes before independent readback and residual reconciliation."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Correction Propagation Contract for Facility Facts | Jared Mastroianni"/><meta name="twitter:description" content="A versioned operating contract for propagating one corrected facility assertion through governing data, replicas, reports, workflows, AI context, communications, and nonreversible real-world effects."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/correction-propagation-contract/correction-propagation-control-plane.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/correction-propagation-contract/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/correction-propagation-contract/#article","url":"https://jaredmodstorage.github.io/writing/correction-propagation-contract/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/correction-propagation-contract/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Correction Propagation Contract: When One Facility Fact Was Wrong, What Must Be Recomputed, Retracted, or Replayed?","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/correction-propagation-contract/correction-propagation-control-plane.png","description":"A versioned operating contract for propagating one corrected facility assertion through governing data, replicas, reports, workflows, AI context, communications, and nonreversible real-world effects.","proficiencyLevel":"Expert","about":["Self-storage operations","Facility data governance","Correction propagation","Provenance","Automation safety","AI context","Operational intelligence","Human authority"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/correction-propagation-contract/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Identity and governance","item":"https://jaredmodstorage.github.io/writing/topics/governance/"},{"@type":"ListItem","position":3,"name":"The Correction Propagation Contract: When One Facility Fact Was Wrong, What Must Be Recomputed, Retracted, or Replayed?","item":"https://jaredmodstorage.github.io/writing/correction-propagation-contract/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/governance/">Identity and governance</a></li><li aria-current="page">The Correction Propagation Contract: When One Facility Fact Was Wrong, What Must Be Recomputed, Retracted, or Replayed?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert governance paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Correction Propagation Contract: When One Facility Fact Was Wrong, What Must Be Recomputed, Retracted, or Replayed?</h1><p class="lede">Propagate one corrected facility assertion through governing data, replicas, reports, workflows, AI context, communications, and nonreversible real-world effects.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>17 min read</span></div></header><div class="essay-body"><blockquote>
+<p>Authored proposed method. Every facility, system, record, threshold, message, action, and result in this paper and its companion tools is fictional. This is not evidence of a Facily.ai or modSTORAGE product, deployment, customer result, performance level, certification, legal conclusion, or industry standard.</p>
+</blockquote>
+<p class="dropcap">A facility address was wrong in the source record. The operator fixed it.</p>
+<p>That sentence sounds like closure. It is usually the beginning of the hard part.</p>
+<p>The old address may still exist in a reporting table, a call-routing export, a cached API response, an automation condition, a search index, a generated briefing, a vendor file, or a message already sent. A correction applied at the point of entry does not prove that the operational system now agrees with it. It proves only that one representation changed.</p>
+<p>This problem becomes sharper when AI is involved. A corrected source row does not automatically retract a prior model recommendation, remove an obsolete retrieval chunk, revise a human decision already made, or undo a real-world action. The correction has to travel through the same dependency structure that allowed the wrong fact to travel in the first place.</p>
+<p>I call the control for that work a <strong>correction propagation contract</strong>: a versioned packet that identifies the superseded assertion, establishes correction authority, freezes an exact dependency view, assigns a disposition to every affected consumer, and requires readback before the correction can be called reconciled.</p>
+<p>The contract is not a database feature. It is an operating agreement across data, workflow, automation, reporting, AI, communication, and human authority.</p>
+<p><a href="correction-propagation-control-plane.svg"><img src="correction-propagation-control-plane.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A superseded facility assertion and governing candidate enter a seven-stage correction packet, which assigns typed dispositions across seven consumer classes before independent readback and residual reconciliation."></a></p>
+<p><a href="correction-propagation-control-plane.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="correction-propagation-contract-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="correction-propagation-contract-downloads">Use the contract. Test propagation and residuals.</h2>
+<p>These files contain fictional examples and structural tools. They do not establish a live facility fact, source authority, product capability, customer result, correction outcome, operating performance, certification, or independent validation.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="correction-propagation-register-template.csv" download>Download the correction-propagation register <span aria-hidden="true">↓</span></a><a href="correction-propagation-readiness-suite.csv" download>Download the correction-propagation readiness suite <span aria-hidden="true">↓</span></a><a href="correction-propagation-contract.schema.json" download>Download the Draft 2020-12 correction contract schema <span aria-hidden="true">↓</span></a><a href="fictional-correction-propagation-record.json" download>Download the fictional correction-propagation record <span aria-hidden="true">↓</span></a><a href="correction-propagation-runbook.md" download>Download the correction-propagation runbook <span aria-hidden="true">↓</span></a><a href="correction-propagation-control-plane.svg" download>Download the accessible correction control-plane SVG <span aria-hidden="true">↓</span></a><a href="correction-propagation-control-plane.png" download>Download the correction control-plane PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+<h2>A correction is not an overwrite</h2>
+<p>An overwrite answers one question: what value is stored here now?</p>
+<p>A governed correction must answer at least seven:</p>
+<ol>
+<li>What exact assertion was wrong?</li>
+<li>Who or what has authority to supersede it?</li>
+<li>From what effective time is the correction applicable?</li>
+<li>Which consumers used, copied, derived, displayed, or acted on the old assertion?</li>
+<li>What disposition does each consumer require?</li>
+<li>What cannot be reversed and therefore must be annotated or escalated?</li>
+<li>What evidence proves the governing outputs now reflect the intended state?</li>
+</ol>
+<p>The <a href="https://www.w3.org/TR/2017/REC-dwbp-20170131/">W3C Data on the Web Best Practices</a> recommends persistent identifiers, provenance, version indicators, version history, and documented update practices. Those ideas are useful, but a self-storage operator still has to define the operational closure rule. A visible “updated” timestamp does not show which reports were recomputed or which actions remain contaminated.</p>
+<p>The distinction is practical:</p>
+<ul>
+<li><strong>update</strong> changes a value;</li>
+<li><strong>correction</strong> supersedes a prior assertion under named authority;</li>
+<li><strong>propagation</strong> applies an explicit disposition to affected consumers;</li>
+<li><strong>reconciliation</strong> compares governing outputs with the correction packet;</li>
+<li><strong>closure</strong> records completed readback and every unresolved residual.</li>
+</ul>
+<p>Skipping any of those states invites false confidence.</p>
+<h2>The unit of control is an assertion</h2>
+<p>A facility fact is more than a field and value. The useful unit is an assertion:</p>
+<p><code>subject + predicate + value + effective interval + source + authority + version + evidence boundary</code></p>
+<p>Suppose a fictional facility record says:</p>
+<p><code>FAC-FIC-004 + access_hours + 24/7 + effective 2026-08-01 + vendor_feed + unqualified + v17</code></p>
+<p>The candidate correction says:</p>
+<p><code>FAC-FIC-004 + access_hours + 06:00–22:00 + effective 2026-08-01 + signed_manager_notice + facility_operations_owner + v18</code></p>
+<p>Changing <code>24/7</code> to <code>06:00–22:00</code> without preserving the superseded assertion destroys information needed to determine who saw the old value, what period it affected, and whether a previous action was reasonable under the evidence then available.</p>
+<p>The <a href="https://www.w3.org/TR/2013/REC-prov-dm-20130430/">W3C PROV Data Model</a> supplies domain-neutral concepts for entities, activities, derivation, agents, generation, invalidation, and revision. It also states its own boundary: provenance can support assessments, but the model does not decide domain truth. In this method, PROV concepts help describe the correction chain; the named facility authority still determines which assertion governs.</p>
+<p>The <a href="https://www.w3.org/TR/2013/REC-prov-constraints-20130430/">PROV Constraints Recommendation</a> adds ordering and consistency constraints for provenance descriptions. A valid ordering is valuable, but it does not prove the dependency inventory is complete. The <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV Ontology</a> provides interoperable vocabulary, not an operational promise that every downstream copy was found.</p>
+<p>That is why the correction packet should preserve both identities:</p>
+<ul>
+<li><code>superseded_assertion_id</code></li>
+<li><code>governing_assertion_id</code></li>
+</ul>
+<p>It should never silently mutate the first into the second.</p>
+<h2>Freeze the dependency closure</h2>
+<p>Before propagation begins, freeze a versioned view of the affected dependency closure. This is the set of known consumers reachable from the superseded assertion at the moment the correction is scoped.</p>
+<p>For facility operations, I use seven consumer classes.</p>
+<h3>1. Governing source</h3>
+<p>The system or record allowed to hold the corrected assertion. It needs a conditional write, immutable audit entry, or equivalent conflict control. If the governing record changes again during propagation, the packet must stop or rebase.</p>
+<h3>2. Replicas and read models</h3>
+<p>Operational databases, replicated tables, caches, API projections, search indexes, mobile stores, extracts, and spreadsheets. These may require replacement, invalidation, rebuilding, or quarantine.</p>
+<h3>3. Derived information</h3>
+<p>Metrics, aggregates, rankings, forecasts, exception lists, dashboards, scheduled reports, and exported files. Replacing the source value is insufficient when the derivative persists independently.</p>
+<h3>4. Workflow and automation state</h3>
+<p>Tasks, eligibility results, routing decisions, timers, retries, approval queues, and pending actions. A corrected fact can change whether work should continue, stop, or return to a human.</p>
+<h3>5. AI context and evaluation state</h3>
+<p>Retrieval chunks, embeddings, prompt context, feature rows, recommendation records, evaluation cohorts, and durable operational memory. Some artifacts should be rebuilt; others should remain immutable but receive a correction link and exclusion status.</p>
+<h3>6. Communications and public surfaces</h3>
+<p>Drafts, sent messages, call scripts, web pages, listings, documents, and vendor notifications. A sent message cannot be unsent. Its disposition may be correction notice, annotation, targeted follow-up, or no further action under a documented threshold.</p>
+<h3>7. Executed real-world actions</h3>
+<p>Access changes, work performed, money moved, notices posted, customers contacted, or decisions approved. Data replay must never be confused with physical reversal. These effects require an accountable human disposition.</p>
+<p>The closure is versioned because dependencies change. <code>dependency_snapshot_id</code> identifies what was inspected. <code>closure_query</code> records how it was built. <code>known_gap</code> records what could not be enumerated. A correction packet with an undocumented consumer gap is not complete; it is qualified.</p>
+<h2>Give every consumer a typed disposition</h2>
+<p>“Update downstream systems” is not executable. Each consumer should receive one disposition from a small controlled vocabulary:</p>
+<ul>
+<li><strong>replace</strong> — write the governing assertion into a mutable consumer;</li>
+<li><strong>recompute</strong> — regenerate a derivative from qualified inputs;</li>
+<li><strong>retract</strong> — mark an artifact as no longer eligible for use;</li>
+<li><strong>invalidate</strong> — force a cache, index, retrieval object, or decision input to be refreshed;</li>
+<li><strong>replay</strong> — rerun a bounded, idempotent process against the corrected assertion;</li>
+<li><strong>annotate</strong> — preserve an immutable historical artifact and attach the correction;</li>
+<li><strong>notify</strong> — send a governed correction notice to an affected recipient;</li>
+<li><strong>quarantine</strong> — remove the consumer from decision use until qualified;</li>
+<li><strong>no action</strong> — retain the consumer with an explicit reason and authority;</li>
+<li><strong>cannot reverse</strong> — escalate a completed real-world effect and record the residual.</li>
+</ul>
+<p>These are operational meanings, not generic software verbs.</p>
+<p>For structured mutations, <a href="https://www.rfc-editor.org/rfc/rfc6902.html">RFC 6902</a> defines ordered JSON Patch operations including <code>test</code>, <code>remove</code>, <code>add</code>, and <code>replace</code>. The <code>test</code> operation is particularly useful for asserting the expected predecessor before change. But a successful JSON Patch says only that operations applied to a target document. It does not prove that the target was authoritative or that any derivative was repaired.</p>
+<p>For HTTP resources, <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-if-match">RFC 9110’s <code>If-Match</code> semantics</a> can prevent a correction from overwriting a representation that changed after qualification. That is a concurrency guard, not closure evidence.</p>
+<p>For caches, <a href="https://www.rfc-editor.org/rfc/rfc9111.html#name-invalidation">RFC 9111’s invalidation rules</a> explain when stored responses become invalid after successful unsafe requests. Facility correction scope is wider: exports, embeddings, messages, and completed actions do not disappear because an HTTP cache was invalidated.</p>
+<p>Typed dispositions keep those differences visible.</p>
+<h2>Tombstones have a deadline</h2>
+<p>Event-driven systems often represent deletion or retraction with a tombstone. That marker matters only if consumers can observe it before retention removes it.</p>
+<p>The versioned <a href="https://kafka.apache.org/42/design/design/">Apache Kafka 4.2 log-compaction design</a> explains keyed compaction, delete markers, offsets, and delete retention. It also exposes a critical operating lesson: a consumer that is too far behind can miss the window needed to reconstruct a valid final state from the log.</p>
+<p>The correction contract should therefore record:</p>
+<ul>
+<li>tombstone or retraction event ID;</li>
+<li>topic or channel;</li>
+<li>partition and offset when applicable;</li>
+<li>retention deadline;</li>
+<li>consumer checkpoint before propagation;</li>
+<li>consumer checkpoint after propagation;</li>
+<li>replay source if the retention window closes;</li>
+<li>owner of any lagging consumer.</li>
+</ul>
+<p>“Tombstone emitted” is not the same state as “all named consumers observed the retraction.”</p>
+<h2>Preserve history without serving the wrong history</h2>
+<p>Some systems use immutable files and snapshots. A correction may create a new governing snapshot while older snapshots remain intentionally queryable.</p>
+<p>The current <a href="https://iceberg.apache.org/spec/">Apache Iceberg table specification</a> documents snapshots, sequence numbers, optimistic concurrency, row-level deletes, retained history, and version distinctions. Versions 1 through 3 are described as complete; version 4 is explicitly under development. The lesson here is bounded: immutable history and a corrected current view can coexist, but consumers must identify which snapshot governs their task.</p>
+<p>A correction packet should record:</p>
+<ul>
+<li>predecessor snapshot;</li>
+<li>candidate snapshot;</li>
+<li>commit condition;</li>
+<li>delete or replacement mechanism;</li>
+<li>query or report snapshot selection;</li>
+<li>historical-use label;</li>
+<li>rollback target;</li>
+<li>retention boundary.</li>
+</ul>
+<p>An older snapshot can remain valid evidence of what the system held at the time while being ineligible for a current operating decision.</p>
+<h2>Recompute is not replay</h2>
+<p>The words are often used interchangeably, but the risk is different.</p>
+<p><strong>Recompute</strong> regenerates a derived artifact from corrected inputs under a named transformation version. Example: rebuild a fictional weekly exception count after a unit-state correction.</p>
+<p><strong>Replay</strong> re-presents an event or command to a process. Example: rerun a fictional routing workflow after correcting the facility identity attached to the event.</p>
+<p>Recompute should declare:</p>
+<ul>
+<li>input assertion set and versions;</li>
+<li>transformation identity and hash;</li>
+<li>effective interval;</li>
+<li>output artifact identity;</li>
+<li>comparison method;</li>
+<li>release owner.</li>
+</ul>
+<p>Replay should declare:</p>
+<ul>
+<li>original event identity;</li>
+<li>correction identity;</li>
+<li>causation and correlation identifiers;</li>
+<li>idempotency key;</li>
+<li>replay boundary;</li>
+<li>side effects suppressed or allowed;</li>
+<li>expected governing readback;</li>
+<li>stop condition.</li>
+</ul>
+<p>Never replay an operation with physical, financial, access, or communication effects merely because the data path is technically idempotent. The business effect may not be.</p>
+<h2>Treat AI artifacts by their operational role</h2>
+<p>“Refresh the model” is rarely a useful correction instruction. Different AI artifacts need different treatment.</p>
+<h3>Retrieval content</h3>
+<p>Invalidate the obsolete chunk, preserve its version for audit when allowed, rebuild the current chunk from the governing assertion, update the retrieval manifest, and test that the old assertion is no longer returned for current-state questions.</p>
+<h3>Embeddings and indexes</h3>
+<p>Record the source version, embedding or index version, deletion or invalidation receipt, rebuild job, and query readback. Vector deletion is not proof that every cached answer or exported index changed.</p>
+<h3>Recommendation records</h3>
+<p>Do not rewrite a historical recommendation as though the model had seen the corrected fact. Preserve the original input envelope, mark the recommendation affected, and create a separate reevaluation record if useful.</p>
+<h3>Evaluations</h3>
+<p>If a corrected assertion changes cohort membership, label, ground truth, or outcome status, do not silently edit the score. Version the evaluation dataset, recompute eligible measures, and disclose the correction boundary.</p>
+<h3>Durable memory</h3>
+<p>Invalidate or supersede the affected memory item, propagate the new authority and version, and test retrieval under the decision context where the old assertion mattered.</p>
+<p>The <a href="https://json-schema.org/draft/2020-12/json-schema-core">JSON Schema Draft 2020-12 Core specification</a> can help validate that a correction packet contains required structural fields. Schema conformance cannot prove the dependency graph is complete or that the governing assertion is true.</p>
+<p>The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a> frames AI risk work across Govern, Map, Measure, and Manage. The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST AI 600-1 generative-AI profile</a> adds cross-sector considerations around provenance, monitoring, feedback, incident response, and information integrity. Both are voluntary. In this method they support disciplined questions, not certification or a claim that an AI system is safe.</p>
+<h2>Use a seven-stage correction state machine</h2>
+<p>I recommend seven states.</p>
+<h3>1. Detected</h3>
+<p>A possible wrong assertion is reported. No correction is yet assumed.</p>
+<h3>2. Qualified</h3>
+<p>The exact subject, predicate, predecessor, candidate, authority, evidence, effective time, confidentiality, and consequence class are named.</p>
+<h3>3. Scoped</h3>
+<p>The dependency snapshot is frozen. Every known consumer receives a proposed disposition, owner, deadline, and readback method. Known gaps are explicit.</p>
+<h3>4. Authorized</h3>
+<p>The governing source owner and consequence-qualified reviewers approve the exact packet. High-consequence replays or notices require separate authority.</p>
+<h3>5. Propagated</h3>
+<p>The approved dispositions execute with idempotency and receipt capture. Failures stay open; success in one consumer does not advance another.</p>
+<h3>6. Read back</h3>
+<p>Named queries, views, reports, retrieval tests, workflow states, public surfaces, and affected records are checked independently of the write response.</p>
+<h3>7. Reconciled</h3>
+<p>The packet records completed consumers, unresolved residuals, nonreversible effects, notices, exceptions, and the next review date. Only then can the correction close.</p>
+<p>This state machine prevents a common reporting error: treating “accepted for processing” as “correct everywhere.”</p>
+<h2>The minimum correction packet</h2>
+<p>The companion <a href="correction-propagation-register-template.csv">correction propagation register</a> expands the fields, but the minimum packet is small enough to inspect:</p>
+<ul>
+<li>correction ID and status;</li>
+<li>subject and fact path;</li>
+<li>superseded and governing assertion IDs;</li>
+<li>prior and corrected values or protected hashes;</li>
+<li>discovery, effective, recorded, authorized, executed, and readback times;</li>
+<li>correction reason and evidence reference;</li>
+<li>correction authority and approval scope;</li>
+<li>dependency snapshot and query;</li>
+<li>consumer identity and class;</li>
+<li>disposition and consequence class;</li>
+<li>transformation, snapshot, event, or index versions;</li>
+<li>idempotency and concurrency control;</li>
+<li>execution receipt;</li>
+<li>governing-output readback;</li>
+<li>rollback or compensating action;</li>
+<li>residual, exception owner, and review date;</li>
+<li>fictional or production-data flag;</li>
+<li>evidence boundary.</li>
+</ul>
+<p>Sensitive values do not belong in a broad correction register. Store a protected reference or hash when the value itself is private, financial, access-related, or customer-specific.</p>
+<p>The companion <a href="correction-propagation-runbook.md">runbook</a> turns these fields into stop, qualification, scoping, authorization, propagation, readback, and reconciliation gates. The <a href="correction-propagation-control-plane.svg">control-plane diagram</a> shows the full assertion-to-consumer path. A <a href="correction-propagation-contract.schema.json">Draft 2020-12 teaching schema</a> and <a href="fictional-correction-propagation-record.json">conforming fictional instance</a> make the packet mechanically inspectable without suggesting that structural validation establishes operational truth.</p>
+<h2>A fictional walkthrough</h2>
+<p>A fictional manager reports that <code>FAC-FIC-004</code> was labeled as offering 24/7 access for a period when the governing approved schedule was 06:00–22:00.</p>
+<p>The correction owner does not immediately push a new value everywhere.</p>
+<p>First, the owner qualifies the source evidence and effective interval. Second, the team freezes dependency snapshot <code>DEP-FIC-029</code>. It identifies a public-hours projection, a call-center export, an internal briefing, a retrieval chunk, two unsent message drafts, one already-sent message, and an immutable recommendation record.</p>
+<p>The dispositions differ:</p>
+<ul>
+<li>replace the current public-hours projection;</li>
+<li>recompute the call-center export;</li>
+<li>retract the internal briefing;</li>
+<li>invalidate and rebuild the retrieval chunk;</li>
+<li>replace the unsent drafts;</li>
+<li>send a correction notice only if the message owner confirms the already-sent message crossed the defined consequence threshold;</li>
+<li>annotate the immutable recommendation record and exclude it from current-state evaluation.</li>
+</ul>
+<p>The team then reads back the governing public view, export row, retrieval result, draft content, and recommendation status. The sent message remains a residual until its owner chooses and records a disposition.</p>
+<p>The correction is propagated, but not reconciled, until that residual is resolved or accepted under explicit authority.</p>
+<p>Nothing in this fictional walkthrough asserts that a real facility had incorrect hours, that a specific system exists, or that any customer was affected.</p>
+<h2>Tests that catch false closure</h2>
+<p>The companion <a href="correction-propagation-readiness-suite.csv">readiness suite</a> covers beginner through architect cases. The most valuable tests are the ones that make a technically successful correction fail operationally:</p>
+<ul>
+<li>predecessor changed after qualification;</li>
+<li>candidate authority is missing;</li>
+<li>effective time is unknown;</li>
+<li>one consumer has no owner;</li>
+<li>cache invalidated but export not rebuilt;</li>
+<li>metric recomputed under a different transformation version;</li>
+<li>tombstone retention expires before a consumer catches up;</li>
+<li>replay reissues a message or access side effect;</li>
+<li>retrieval index is rebuilt but old response cache persists;</li>
+<li>immutable recommendation is silently rewritten;</li>
+<li>public page changes but structured data does not;</li>
+<li>one readback queries a replica older than the correction;</li>
+<li>correction notice is sent but delivery is unknown;</li>
+<li>source is corrected but a real-world effect cannot be reversed;</li>
+<li>all writes succeed but the governing output still shows the predecessor.</li>
+</ul>
+<p>These are not edge cases. They are the difference between a corrected record and a corrected operation.</p>
+<h2>An operator exercise</h2>
+<p>Choose one low-risk fictional assertion, such as a made-up office-hour label.</p>
+<ol>
+<li>Assign it a subject, predicate, version, effective time, source, and authority.</li>
+<li>Draw seven consumer classes and add at least one fictional consumer to four of them.</li>
+<li>Change the assertion and preserve both predecessor and candidate identities.</li>
+<li>Give every consumer exactly one typed disposition.</li>
+<li>Name the write receipt and the independent readback for each.</li>
+<li>Add one immutable historical artifact and one nonreversible action.</li>
+<li>Decide what evidence is required for reconciliation.</li>
+<li>Introduce a second correction before the first finishes. Decide whether to stop, merge, or supersede the packet.</li>
+</ol>
+<p>If the exercise ends with “the field is fixed,” the dependency closure is incomplete.</p>
+<h2>What this method does not claim</h2>
+<p>The correction propagation contract is a proposed operating method. It does not prove that a dependency graph is complete, a source is authoritative, a correction is true, a consumer observed a tombstone, a replay is safe, an AI answer is repaired, a notice was delivered, or a real-world effect was reversed.</p>
+<p>It also does not replace privacy, legal, accounting, safety, access-control, customer-communication, or incident-response review. Consequence-qualified owners remain responsible for those decisions.</p>
+<p>What the method does is make the work inspectable. It refuses to let one successful write stand in for a corrected operation.</p>
+<p>That is the standard operators should apply internally: not “did we change the value?” but “did every named consumer receive the right disposition, and did we read back the governing result?”</p>
+<p>Until the answer is evidenced, the correction is still open.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert governance paper</p><h3><a href="/writing/semantic-drift-register/">The Semantic Drift Register: When a Facility Field Keeps Its Name but Changes Its Meaning</a></h3><p>Detect and govern consequential changes in field meaning before downstream consumers act.</p><a href="/writing/semantic-drift-register/" class="text-link" aria-label="Read the article: The Semantic Drift Register: When a Facility Field Keeps Its Name but Changes Its Meaning">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating note</p><h3><a href="/writing/facility-identity-drift/">The Quiet Cost of Facility-Identity Drift</a></h3><p>Use a governed register and visible correction loop to keep facility facts aligned across systems.</p><a href="/writing/facility-identity-drift/" class="text-link" aria-label="Read the article: The Quiet Cost of Facility-Identity Drift">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Technical explainer</p><h3><a href="/writing/structured-data-entity-boundary/">Structured Data Should Describe the Entity You Can Prove</a></h3><p>Publish an entity graph only as far as the governing evidence supports it.</p><a href="/writing/structured-data-entity-boundary/" class="text-link" aria-label="Read the article: Structured Data Should Describe the Entity You Can Prove">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
