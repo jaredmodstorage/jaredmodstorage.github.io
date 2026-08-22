@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Governed facility event spine for multi-location self-storage operations</title>
+  <desc id="desc">A six-layer architecture showing stable facility identity and message contracts feeding distinct observation and command paths through policy and authority controls, operational projections, and a separate evidence and reconciliation plane.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06151f"/><stop offset="1" stop-color="#17394b"/></linearGradient>
+    <linearGradient id="spine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#69d7c2"/><stop offset="1" stop-color="#7aaeea"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#000812" flood-opacity=".36"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#72d3c5"/></marker>
+    <style>
+      .eyebrow{font:600 18px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:3px;fill:#77d9c6}
+      .title{font:700 44px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#f6fbfd}
+      .subtitle{font:400 21px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#bfd1da}
+      .num{font:700 18px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#061c25}
+      .layer-title{font:700 23px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#f8fcfd}
+      .layer-copy{font:400 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#cfdee4}
+      .role{font:700 17px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#071f28}
+      .role-copy{font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#173943}
+      .evidence-title{font:700 20px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#fff8ee}
+      .evidence-copy{font:400 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#ffe3c2}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <circle cx="1510" cy="40" r="330" fill="#176777" opacity=".16"/><circle cx="90" cy="890" r="340" fill="#2e5186" opacity=".17"/>
+  <text x="84" y="72" class="eyebrow">EXPERT SELF-STORAGE REFERENCE ARCHITECTURE</text>
+  <text x="84" y="128" class="title">The facility event spine</text>
+  <text x="84" y="168" class="subtitle">Transport moves messages. Governance gives each message a bounded operating meaning.</text>
+
+  <path d="M263 256H1327" fill="none" stroke="url(#spine)" stroke-width="6" marker-end="url(#arrow)" opacity=".9"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(82 210)"><rect width="245" height="133" rx="20" fill="#113d4b" stroke="#408091"/><circle cx="34" cy="34" r="20" fill="#70d5c2"/><text x="34" y="40" text-anchor="middle" class="num">1</text><text x="66" y="39" class="layer-title">Identity</text><text x="22" y="78" class="layer-copy">Stable facility reference</text><text x="22" y="101" class="layer-copy">Scope · timezone · lifecycle</text></g>
+    <g transform="translate(380 210)"><rect width="245" height="133" rx="20" fill="#173b61" stroke="#507eaa"/><circle cx="34" cy="34" r="20" fill="#8ab7e8"/><text x="34" y="40" text-anchor="middle" class="num">2</text><text x="66" y="39" class="layer-title">Contract</text><text x="22" y="78" class="layer-copy">Envelope · schema · time</text><text x="22" y="101" class="layer-copy">Causation · idempotency</text></g>
+    <g transform="translate(678 210)"><rect width="245" height="133" rx="20" fill="#3b315c" stroke="#7d6daa"/><circle cx="34" cy="34" r="20" fill="#c3a8ef"/><text x="34" y="40" text-anchor="middle" class="num">3</text><text x="66" y="39" class="layer-title">Command</text><text x="22" y="78" class="layer-copy">Bounded request · expected state</text><text x="22" y="101" class="layer-copy">Expiration · rollback owner</text></g>
+    <g transform="translate(976 210)"><rect width="245" height="133" rx="20" fill="#57362b" stroke="#a16d58"/><circle cx="34" cy="34" r="20" fill="#efb18d"/><text x="34" y="40" text-anchor="middle" class="num">4</text><text x="66" y="39" class="layer-title">Authority</text><text x="22" y="78" class="layer-copy">Policy · consequence · review</text><text x="22" y="101" class="layer-copy">Allow · stop · limit · deny</text></g>
+    <g transform="translate(1274 210)"><rect width="245" height="133" rx="20" fill="#24483f" stroke="#548f7c"/><circle cx="34" cy="34" r="20" fill="#91d4b7"/><text x="34" y="40" text-anchor="middle" class="num">5</text><text x="66" y="39" class="layer-title">Projection</text><text x="22" y="78" class="layer-copy">Derived view · watermark</text><text x="22" y="101" class="layer-copy">Freshness · gaps · rebuild</text></g>
+  </g>
+
+  <rect x="82" y="392" width="1437" height="165" rx="25" fill="#0a1e2b" stroke="#315a6c" stroke-width="2"/>
+  <text x="112" y="428" class="eyebrow">MESSAGE ROLES REMAIN DISTINCT</text>
+  <g transform="translate(112 454)"><rect width="240" height="72" rx="15" fill="#71d5c2"/><text x="18" y="30" class="role">OBSERVATION</text><text x="18" y="53" class="role-copy">A source reported something</text></g>
+  <g transform="translate(392 454)"><rect width="240" height="72" rx="15" fill="#8ab7e8"/><text x="18" y="30" class="role">COMMAND</text><text x="18" y="53" class="role-copy">A bounded change was requested</text></g>
+  <g transform="translate(672 454)"><rect width="240" height="72" rx="15" fill="#c4a8ef"/><text x="18" y="30" class="role">POLICY DECISION</text><text x="18" y="53" class="role-copy">Authority was evaluated</text></g>
+  <g transform="translate(952 454)"><rect width="240" height="72" rx="15" fill="#91d4b7"/><text x="18" y="30" class="role">PROJECTION</text><text x="18" y="53" class="role-copy">A derived view was rebuilt</text></g>
+  <g transform="translate(1232 454)"><rect width="257" height="72" rx="15" fill="#efbd7d"/><text x="18" y="30" class="role">EVIDENCE</text><text x="18" y="53" class="role-copy">One transition was supported</text></g>
+
+  <path d="M802 557V611" fill="none" stroke="#efbd7d" stroke-width="6" marker-end="url(#arrow)"/>
+  <rect x="82" y="626" width="1437" height="152" rx="25" fill="#4b3123" stroke="#9c6a45" stroke-width="2"/>
+  <circle cx="128" cy="673" r="22" fill="#efbd7d"/><text x="128" y="680" text-anchor="middle" class="num">6</text>
+  <text x="166" y="680" class="evidence-title">Evidence and reconciliation plane</text>
+  <text x="112" y="719" class="evidence-copy">Command → receiver acceptance → execution record → governing-source readback → verified result or open exception</text>
+  <text x="112" y="750" class="evidence-copy">Accepted is not executed · executed is not reconciled · a replay is not permission to repeat a side effect</text>
+
+  <rect x="82" y="808" width="1437" height="54" rx="16" fill="#76d7c4"/>
+  <text x="800" y="842" text-anchor="middle" class="role">AI MAY CLASSIFY, SUMMARIZE, AND RECOMMEND — AUTHORITY REMAINS EXPLICIT</text>
+  <text x="84" y="889" class="eyebrow">JARED MASTROIANNI · FACILITY EVENT SPINE · PROPOSED METHOD</text>
+</svg>

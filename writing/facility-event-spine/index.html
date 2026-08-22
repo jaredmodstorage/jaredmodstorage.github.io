@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.BethnUFc.css" data-rsc-css-href="/_next/static/css/index.BethnUFc.css" data-precedence="vite-rsc/importer-resources"/><title>The Facility Event Spine | Jared Mastroianni</title><meta name="description" content="A governed event-driven architecture for separating observations, commands, policy decisions, projections, and reconciliation evidence across multi-location self-storage operations."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Facility Event Spine | Jared Mastroianni"/><meta property="og:description" content="A governed event-driven architecture for separating observations, commands, policy decisions, projections, and reconciliation evidence across multi-location self-storage operations."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/facility-event-spine"/><meta property="og:type" content="article"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="The Facility Event Spine | Jared Mastroianni"/><meta name="twitter:description" content="A governed event-driven architecture for separating observations, commands, policy decisions, projections, and reconciliation evidence across multi-location self-storage operations."/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/facility-event-spine"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><main><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"The Facility Event Spine: A Governed Pattern for Multi-Location Self-Storage Operations","datePublished":"2026-08-22","dateModified":"2026-08-22","author":{"@id":"https://jaredmodstorage.github.io/#person"},"mainEntityOfPage":"https://jaredmodstorage.github.io/writing/facility-event-spine","description":"A governed event-driven architecture for separating observations, commands, policy decisions, projections, and reconciliation evidence across multi-location self-storage operations.","proficiencyLevel":"Expert","about":["Self-storage operations","Event-driven architecture","Artificial intelligence","Data governance","Multi-location operations"]}</script><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/facily">Facily</a><a href="/facily-os">Facily OS</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/contact">Contact</a><a href="/media" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/facily">Facily</a><a href="/facily-os">Facily OS</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/contact">Contact</a><a href="/financial-profile-and-disclosures">Financial disclosures</a><a href="/media">Media kit</a><a href="/assets">Assets</a><a href="/publishing-principles">Publishing principles</a></nav></details></header><span class="content-anchor" id="site-content" tabindex="-1"></span><article class="essay"><header class="essay-header"><p class="eyebrow">Expert reference architecture · 22 August 2026</p><h1>The Facility Event Spine</h1><p class="lede">A governed pattern for separating observations, commands, policy decisions, derived projections, and reconciliation evidence across multi-location self-storage operations.</p><div class="byline"><span>By Jared Mastroianni</span><span>20 min read</span></div></header><div class="essay-body">
+<p class="dropcap">An event bus can move a message across a portfolio. It cannot decide whether the message is true, whether the sender had authority, whether the receiving system changed state, or whether the operation is complete.</p>
+<p>That distinction matters in self-storage because one operating fact can cross a property-management system, access platform, call center, work-order tool, public website, accounting process, sensor, and an AI-assisted workflow before a regional operator sees it. If every message is treated as equivalent, the portfolio becomes fast at distributing ambiguity.</p>
+<p>A multi-location operator needs more than event transport. It needs a governed facility event spine: a pattern that separates observations, commands, policy decisions, derived projections, and reconciliation evidence while preserving stable facility identity across them.</p>
+<p>This paper proposes that pattern. It is a reference architecture and operator method, not a description of a deployed product, a self-storage industry standard, a customer result, or a claim about scale or reliability.</p>
+<p><a href="/diagrams/facility-event-spine.svg"><img src="/diagrams/facility-event-spine.svg" alt="Governed facility event spine showing facility identity and message contracts feeding observations and commands through policy and authority controls, derived projections, and a separate evidence and reconciliation plane."></a></p>
+<p><a href="/diagrams/facility-event-spine.svg">Open the full-size facility event-spine diagram.</a></p>
+
+<h2>Do not let the word “event” erase operating meaning</h2>
+<p>In ordinary implementation conversations, teams may call every message an event. That shortcut is expensive. A door controller observation, a request to close a facility, an approval to publish different hours, and a readback confirming the public page changed are not interchangeable records.</p>
+<p>Use five explicit roles:</p>
+<table class="event-role-table">
+<thead><tr><th>Record role</th><th>What it asserts</th><th>What it does not prove</th></tr></thead>
+<tbody>
+<tr><td data-label="Role">Observation event</td><td data-label="Asserts">A source reported that something occurred or was observed.</td><td data-label="Does not prove">That the report is authoritative, current, unique, or complete.</td></tr>
+<tr><td data-label="Role">Command</td><td data-label="Asserts">An authorized actor or service requested a bounded state change.</td><td data-label="Does not prove">That the receiver accepted, executed, or reconciled the change.</td></tr>
+<tr><td data-label="Role">Policy decision</td><td data-label="Asserts">A named policy version evaluated a defined request and returned allow, deny, stop, or review.</td><td data-label="Does not prove">That enforcement occurred or the operating result followed.</td></tr>
+<tr><td data-label="Role">Projection</td><td data-label="Asserts">A derived view assembled from events and other sources for a declared purpose.</td><td data-label="Does not prove">That the view governs every underlying field.</td></tr>
+<tr><td data-label="Role">Evidence record</td><td data-label="Asserts">A receipt, readback, inspection, posted result, or other record supports one defined state transition.</td><td data-label="Does not prove">More than the evidence source and method can actually establish.</td></tr>
+</tbody></table>
+<p>This vocabulary prevents a common architectural failure: an observation enters a stream, a consumer updates a dashboard, and the dashboard silently becomes the authority. The event spine should make that promotion impossible unless a declared policy and source-of-truth rule allow it.</p>
+
+<h2>The spine has six governed layers</h2>
+<p>The pattern is logical, not vendor-specific. A small operator could implement parts of it with a database, queue, workflow tool, and disciplined records. A larger portfolio may use brokers, schema registries, policy services, stream processors, and dedicated evidence stores. The control boundaries should remain visible in either case.</p>
+
+<h3>1. Facility identity and partition</h3>
+<p>Every material record begins with a stable, opaque <code>facility_ref</code>. Public names, street addresses, management labels, legal entities, software-account IDs, device groups, and third-party location IDs are attributes or translations—not substitutes for the stable reference.</p>
+<p>The partition also carries the facility’s lifecycle state, local timezone, applicable operating region, and identity-map version. A command for <code>FAC-DEMO-101</code> must not be routed by fuzzy name matching to “Airport,” “Main Street,” or whichever record looks closest.</p>
+<p>Portfolio-wide work should declare its scope as a set of stable facility references or a governed group version. “All facilities” is not a durable target if properties can enter or leave the portfolio while a workflow is running.</p>
+
+<h3>2. Message contract and envelope</h3>
+<p>The contract layer defines the required context for every record role. CloudEvents is a useful vendor-neutral starting point for event data: its core specification requires <code>id</code>, <code>source</code>, <code>specversion</code>, and <code>type</code>; it defines <code>time</code> as an optional RFC 3339 timestamp for the occurrence; and it allows optional <code>subject</code>, <code>dataschema</code>, and extension attributes.</p>
+<p>CloudEvents also states that <code>source</code> plus <code>id</code> identifies a distinct event and may be reused when a duplicate is resent. That is a delivery-level deduplication key. It is not automatically a business idempotency rule. Two distinct events can still describe the same underlying occurrence, and one occurrence may produce more than one event.</p>
+<p>A facility contract therefore adds governed semantics such as:</p>
+<ul>
+<li><code>record_role</code> and <code>facility_ref</code>;</li>
+<li><code>aggregate_type</code>, <code>aggregate_ref</code>, and expected version;</li>
+<li><code>correlation_ref</code> for a shared operating case;</li>
+<li><code>causation_ref</code> for the immediate record that caused this one;</li>
+<li><code>occurred_at</code>, <code>observed_at</code>, <code>emitted_at</code>, and <code>received_at</code> when each is known;</li>
+<li><code>policy_ref</code>, authority scope, and consequence class;</li>
+<li>schema URI and compatibility classification;</li>
+<li>sensitivity, retention, and safe evidence references; and</li>
+<li>replay, retry, and idempotency metadata.</li>
+</ul>
+<p>AsyncAPI 3.0 can describe the messages, channels, and operations of a message-driven API without prescribing one protocol or broker topology. It can also distinguish messages that behave as events, commands, requests, or responses. The document is valuable as a machine-readable contract surface; it does not determine self-storage authority, field ownership, reconciliation, or operating policy.</p>
+
+<h3>3. Command gateway</h3>
+<p>Observations should not directly mutate consequential operating state. A command gateway is the point where a proposed change becomes a bounded request. It validates facility scope, actor or service authority, policy version, expected state, expiration, idempotency key, and consequence class.</p>
+<p>A good command is narrow and testable. <code>close_facility</code> is too vague if it might mean changing office staffing, tenant access, rentals, public hours, phone routing, or maintenance dispatch. The gateway should accept smaller commands such as:</p>
+<ul>
+<li><code>publish_<wbr>temporary_<wbr>office_<wbr>hours</code>;</li>
+<li><code>suspend_<wbr>new_<wbr>move_<wbr>in_<wbr>appointments</code>;</li>
+<li><code>create_<wbr>weather_<wbr>inspection_<wbr>task</code>;</li>
+<li><code>request_<wbr>access_<wbr>schedule_<wbr>review</code>; or</li>
+<li><code>notify_<wbr>approved_<wbr>contact_<wbr>group</code>.</li>
+</ul>
+<p>The gateway should reject a command when the target facility, expected version, authority, required evidence, or rollback owner is missing. A duplicate with the same idempotency key should return the existing result rather than repeat the side effect.</p>
+
+<h3>4. Policy and authority plane</h3>
+<p>The policy plane answers who or what may decide, for which facility, under which conditions, and with what limits. It should preserve the input facts, policy reference and version, effective time, decision, reason code, required reviewer role, and enforcement point.</p>
+<p>AI belongs behind this boundary. A model may classify an incoming observation, summarize a weather bulletin, identify affected procedures, recommend commands, or assemble a review packet. Unless the declared policy grants a narrower automated action, its output remains a recommendation.</p>
+<p>The policy plane should be able to return more than allow or deny. <code>stop_missing_evidence</code>, <code>review_required</code>, <code>allowed_with_expiration</code>, and <code>denied_out_of_scope</code> are more useful operating states. A missing policy is not an implicit allow.</p>
+
+<h3>5. Projections and operational views</h3>
+<p>Projections turn message history into useful views: current facility exception state, open inspections, temporary-hours status, unreconciled commands, AI recommendations awaiting review, or facilities with stale source data.</p>
+<p>A projection is disposable and rebuildable. It should record its input boundary, projection version, watermark, last successful rebuild, source gaps, and freshness state. If two projections disagree, neither wins because it rendered first.</p>
+<p>Separate at least three times:</p>
+<ul>
+<li><strong>occurrence time:</strong> when the source says the underlying occurrence happened;</li>
+<li><strong>ingestion time:</strong> when the spine received the record; and</li>
+<li><strong>effective time:</strong> when an operating rule or commanded state is intended to apply.</li>
+</ul>
+<p>Local time still matters for office hours, tenant access schedules, and staffing. Store the facility’s IANA timezone and the original offset-bearing timestamp. Use UTC for comparison and transport; do not discard the local-zone context that determines what “after hours” means.</p>
+
+<h3>6. Evidence and reconciliation plane</h3>
+<p>The evidence plane closes the distance between requested state and observed state. It links the command, receiver acknowledgment, execution record, governing-source readback, visible user-path verification, exception, rollback, and final disposition.</p>
+<p>W3C PROV-O offers a durable conceptual model for provenance: entities, activities, and agents, with relationships describing how records were generated, used, derived, or attributed. A facility spine need not implement the entire ontology. It should preserve the same practical questions: what record existed, what transformed it, who or what was responsible, and which new record resulted.</p>
+<p>Closure is a claim. It should name the exact evidence that supports it. A queue acknowledgment proves receipt by a queue. A provider response may prove acceptance. A work-order state may prove administrative closure. A fresh governing-source readback or physical inspection may be required to prove the intended operating result.</p>
+
+<h2>Four clocks, three identifiers, two kinds of order</h2>
+<p>Distributed facility work rarely arrives in a clean sequence. A controller may reconnect after a network interruption. A manager may enter an inspection after returning to the office. A provider webhook may arrive before a scheduled source readback. A projection may rebuild while new records continue to arrive.</p>
+<p>Design for that reality:</p>
+<ul>
+<li><strong>Event identity:</strong> use <code>source</code> plus <code>id</code> to detect a resent event envelope.</li>
+<li><strong>Business idempotency:</strong> use a separately governed key for a command whose side effect must occur at most once.</li>
+<li><strong>Aggregate version:</strong> use an expected version or sequence when a command must apply only to a known prior state.</li>
+<li><strong>Causal order:</strong> preserve the immediate cause even when delivery is delayed.</li>
+<li><strong>Processing order:</strong> record when a consumer handled the message without pretending that was when the occurrence happened.</li>
+</ul>
+<p>A late record should not automatically overwrite a newer governing state. The consumer should apply a declared rule: ignore for state but retain as evidence, rebuild a bounded projection window, open a conflict, or request human review. “Last message wins” is only valid when the relevant source owner approved that exact rule.</p>
+
+<h2>Schema evolution is an operating change</h2>
+<p>An event contract can be syntactically valid and still change business meaning. Renaming <code>closed</code> to <code>unavailable</code>, changing minutes to seconds, replacing local time with UTC, or expanding a facility-scope field can alter decisions without breaking JSON parsing.</p>
+<p>For each message type, govern:</p>
+<ul>
+<li>schema owner and semantic owner;</li>
+<li>schema URI and version;</li>
+<li>backward, forward, or full compatibility expectation;</li>
+<li>field units, enum meaning, null behavior, and default behavior;</li>
+<li>consumer inventory and retirement date;</li>
+<li>projection rebuild requirements;</li>
+<li>privacy and retention impact; and</li>
+<li>rollback or dual-publish window.</li>
+</ul>
+<p>CloudEvents <code>dataschema</code> can identify the payload schema and recommends a different URI for incompatible changes. The specification does not define the domain semantics or decide compatibility for the operator. That ownership remains local.</p>
+
+<h2>Replay must not become re-execution</h2>
+<p>Replaying an event history can rebuild a projection, test a consumer, or recover from a processing failure. It should not quietly repeat customer messages, access changes, refunds, public-content changes, vendor dispatches, or other side effects.</p>
+<p>Every consumer should declare one of three replay behaviors:</p>
+<ol>
+<li><strong>Projection-safe:</strong> may rebuild derived state without external side effects.</li>
+<li><strong>Dry-run only:</strong> may calculate proposed outcomes but cannot emit commands.</li>
+<li><strong>Side-effecting:</strong> requires a new authorized command through the gateway; historical events alone are insufficient.</li>
+</ol>
+<p>Replay records should carry a replay identifier, original envelope reference, reason, operator or service role, bounded range, and destination. The historical <code>occurred_at</code> remains unchanged; the new <code>received_at</code> and replay context explain why the record is being processed again.</p>
+
+<h2>Poison messages are operating exceptions</h2>
+<p>A malformed, unauthorized, unresolvable, or repeatedly failing message should not vanish into a dead-letter queue that only engineers can see. It represents incomplete operating work.</p>
+<p>The exception record should preserve:</p>
+<ul>
+<li>safe envelope metadata and payload checksum;</li>
+<li>facility and message type when resolvable;</li>
+<li>failure class and consumer version;</li>
+<li>first and latest failure times;</li>
+<li>retry count and next permitted action;</li>
+<li>accountable owner and response clock;</li>
+<li>whether a business side effect may already have occurred;</li>
+<li>reconciliation requirement; and</li>
+<li>final disposition: corrected, replayed, superseded, quarantined, or unresolved.</li>
+</ul>
+<p>Do not copy reusable credentials, gate codes, payment data, raw customer communications, or unnecessary personal data into the exception store. Preserve a protected evidence reference instead. A facility event spine can increase privacy risk by making data easy to distribute; minimization and access boundaries must be designed into the contract.</p>
+
+<h2>A fictional three-facility weather incident</h2>
+<p>The following tabletop is fictional. It describes no real facility, vendor, deployment, customer, or measured result.</p>
+<p>A severe-weather bulletin is observed near three demonstration facilities: <code>FAC-DEMO-101</code>, <code>FAC-DEMO-102</code>, and <code>FAC-DEMO-103</code>. The bulletin is an observation. It does not itself close any office, change tenant access, cancel an appointment, or publish new hours.</p>
+<p>An AI-assisted workflow extracts the affected area, compares it with the governed facility identity map, and recommends a review packet. One facility is outside the bulletin geometry. One has a current onsite inspection indicating normal conditions. One has no fresh inspection.</p>
+<p>The policy plane classifies public-hours changes and access-schedule changes separately. A regional reviewer authorizes a temporary office-hours notice for two facilities, requests an inspection for the third, and does not authorize a tenant-access change. The command gateway emits one command per facility and per requested effect, each with its own expiration, expected prior state, idempotency key, and rollback owner.</p>
+<p>The public-content system accepts both notice commands. Acceptance moves each case to <code>accepted_<wbr>not_<wbr>verified</code>. A fresh public-page readback confirms one notice, while the other page still shows normal hours. The first facility reaches <code>reconciled_<wbr>with_<wbr>expiration</code>. The second opens <code>public_<wbr>readback_<wbr>mismatch</code> and remains active. The third stays <code>awaiting_<wbr>inspection</code>.</p>
+<p>A portfolio dashboard can now show three different truthful states instead of one green “weather workflow completed” count. The spine did not make the operating decision. It preserved enough identity, authority, time, command, and evidence to make the decision reviewable.</p>
+
+<h2>Where AI helps—and where it must stop</h2>
+<p>In an event-driven portfolio, AI can usefully:</p>
+<ul>
+<li>classify unstructured observations into a governed candidate type;</li>
+<li>map a claimed location to possible facility references while exposing ambiguity;</li>
+<li>summarize related evidence into a review packet;</li>
+<li>recommend commands that remain behind the authority boundary;</li>
+<li>identify missing fields, stale sources, schema drift, or causal gaps;</li>
+<li>explain why a policy stopped a workflow; and</li>
+<li>help an operator reconstruct an unresolved case.</li>
+</ul>
+<p>It should stop when facility identity is ambiguous, a required source is stale or missing, the authority scope is absent, a high-consequence command lacks review, a schema cannot be interpreted, a replay could repeat a side effect, or closure evidence does not match the requested state.</p>
+<p>NIST AI RMF 1.0 is a voluntary, rights-preserving, non-sector-specific framework for managing AI risk. Its Govern, Map, Measure, and Manage functions are useful reminders that AI risk is organizational and contextual, not only a model test. It does not certify this architecture or prescribe a self-storage event spine.</p>
+
+<h2>Operational queries the spine should answer</h2>
+<p>Before calling the architecture useful, verify that an operator can answer:</p>
+<ol>
+<li>Which commands are accepted but not reconciled, by facility and consequence class?</li>
+<li>Which projections are operating beyond their freshness or completeness threshold?</li>
+<li>Which events were duplicated, late, out of order, or quarantined?</li>
+<li>Which commands were denied or stopped, under which policy version and reason?</li>
+<li>Which AI recommendations reached a command, and which were modified or rejected by a human reviewer?</li>
+<li>Which replay jobs touched side-effect-capable consumers?</li>
+<li>Which schema changes still have active consumers on the prior semantic version?</li>
+<li>Which closed cases lack a governing-source readback or declared limitation?</li>
+</ol>
+<p>Counts require definitions. Publish the period, population, numerator, denominator, exclusions, retry and duplicate rules, late-arrival window, and known instrumentation gaps. A message count is not automatically a facility count, occurrence count, command count, or completed-work count.</p>
+
+<h2>The release gate</h2>
+<p>Do not let a facility event spine govern consequential work until:</p>
+<ul>
+<li>stable facility identity and portfolio-scope versioning are in place;</li>
+<li>observation, command, policy decision, projection, and evidence roles are distinct;</li>
+<li>every message type has a technical and semantic owner;</li>
+<li>occurrence, ingestion, processing, and effective times are defined;</li>
+<li>delivery deduplication, business idempotency, and aggregate versioning are separate;</li>
+<li>correlation and direct causation are preserved;</li>
+<li>authority scope, consequence class, review, expiration, and rollback are enforceable;</li>
+<li>schema compatibility includes meaning, units, timezone, nulls, and enum behavior;</li>
+<li>late, duplicate, out-of-order, and poison-message paths are tested;</li>
+<li>replay-safe, dry-run, and side-effecting consumers are labeled;</li>
+<li>sensitive data is minimized before transport and exception storage;</li>
+<li>projections expose watermarks, gaps, and freshness;</li>
+<li>provider acceptance and governing-source reconciliation are separate states; and</li>
+<li>a second operator can reconstruct one case without reading source code.</li>
+</ul>
+
+<h2>Run the event-spine tabletop</h2>
+<p>Download the <a href="/downloads/facility-event-spine-contract-template.csv">facility event-spine contract template</a>. It contains six fictional records covering an observation, AI recommendation, policy decision, command, provider receipt, and reconciliation outcome for a demonstration facility within a fictional portfolio.</p>
+<ol>
+<li>Replace the fictional workflow with one bounded multi-location process.</li>
+<li>Assign a stable facility reference, message role, semantic owner, and governing policy to every record.</li>
+<li>Deliver the observation twice. Confirm the envelope is deduplicated without losing the retry evidence.</li>
+<li>Deliver an older observation after a newer one. Confirm the projection applies its late-arrival rule.</li>
+<li>Replay the history into a test projection. Confirm no external command can execute.</li>
+<li>Remove the authority scope from the command. Confirm the gateway rejects it.</li>
+<li>Return a successful provider receipt and a mismatched governing-source readback. Confirm the case remains open.</li>
+<li>Change a field’s unit or semantic meaning without changing its name. Confirm the compatibility review blocks release.</li>
+<li>Quarantine one malformed message. Confirm an operator—not only an engineer—can see the unresolved operating state.</li>
+</ol>
+<p>The exercise succeeds when the team can explain what was observed, what was requested, who was allowed to decide, what changed, and what evidence supports the final state.</p>
+
+<h2>Sources and limitations</h2>
+<p>Observed August 22, 2026:</p>
+<ul>
+<li><a href="https://github.com/cloudevents/spec/blob/main/cloudevents/spec.md">CloudEvents core specification main branch</a>, titled version 1.0.3-wip when observed, for the vendor-neutral event envelope, required context attributes, occurrence/event distinction, duplicate identity, schema reference, subject, and timestamp semantics.</li>
+<li><a href="https://www.asyncapi.com/docs/reference/specification/v3.0.0">AsyncAPI Specification 3.0.0</a>, for protocol-agnostic descriptions of message-driven APIs, including messages, channels, and operations.</li>
+<li><a href="https://www.w3.org/TR/prov-o/">W3C PROV-O</a>, W3C Recommendation dated April 30, 2013, for general provenance concepts and relations.</li>
+<li><a href="https://doi.org/10.6028/NIST.CSWP.29">NIST Cybersecurity Framework 2.0</a>, published February 26, 2024, for voluntary cybersecurity risk outcomes and governance.</li>
+<li><a href="https://doi.org/10.6028/NIST.AI.100-1">NIST AI Risk Management Framework 1.0</a>, published January 2023, for voluntary, non-sector-specific AI risk management.</li>
+</ul>
+<p>CloudEvents standardizes event context, not delivery guarantees, facility identity, policy authority, or business completion. The observed main specification is work in progress. AsyncAPI describes interfaces; it does not require a topology or determine operating truth. PROV-O is a general ontology, not a self-storage implementation profile. NIST CSF 2.0 and AI RMF 1.0 are voluntary, high-level frameworks; neither certifies this method or defines a self-storage architecture. The facility event spine, field set, state model, and tabletop are proposed here and require local technical, operational, privacy, legal, and security review.</p>
+
+<h2>Disclosure</h2>
+<p>I am Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. This paper is an authored reference architecture. It is not a Facily OS ownership or provider statement, a product-availability claim, a modSTORAGE facility or legal-relationship claim, a customer case study, or a measured performance result.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about" class="text-link">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert technical paper</p><h3><a href="/writing/observe-decision-chain-not-api-call">Observe the Decision Chain, Not Just the API Call</a></h3><p>Trace facility context, recommendation, authority, human review, provider acceptance, source readback, and reconciled closure as distinct operating states.</p><a href="/writing/observe-decision-chain-not-api-call" class="text-link">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Architecture playbook</p><h3><a href="/writing/source-of-truth-map-before-dashboard">Build a Source-of-Truth Map Before You Build a Dashboard</a></h3><p>Map authority, provenance, freshness, conflict ownership, reconciliation, and rollback before a derived view governs work.</p><a href="/writing/source-of-truth-map-before-dashboard" class="text-link">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert reference model</p><h3><a href="/writing/five-layer-operating-context-stack">The Five-Layer Operating Context Stack for Multi-Facility AI</a></h3><p>Preserve identity, authority, state, time, evidence, review, reconciliation, and rollback across facilities.</p><a href="/writing/five-layer-operating-context-stack" class="text-link">Read the article <span aria-hidden="true">→</span></a></article></div></div></section><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/contact">Contact</a><a href="/financial-profile-and-disclosures">Financial disclosures</a><a href="/media">Media kit</a><a href="/assets">Assets</a><a href="/publishing-principles">Publishing principles</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></main></body></html>
