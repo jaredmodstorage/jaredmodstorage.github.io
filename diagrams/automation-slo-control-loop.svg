@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Automation service-level objective control loop for self-storage operations</title>
+  <desc id="desc">A four-stage operating loop connects freshness before a decision, completion through a bounded workflow, reconciliation after a command, and recovery from an exception. Evidence integrity surrounds the loop, while a consequence floor can stop automation regardless of the aggregate score.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06151f"/><stop offset="1" stop-color="#17384a"/></linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6dd7c3"/><stop offset=".52" stop-color="#7fb1ea"/><stop offset="1" stop-color="#efb97e"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#000812" flood-opacity=".42"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#76d7c4"/></marker>
+    <style>
+      .eyebrow{font:600 18px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:3px;fill:#79dbc8}
+      .title{font:700 44px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#f7fbfd}
+      .subtitle{font:400 21px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#bfd1da}
+      .stage{font:700 24px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#f9fcfd}
+      .copy{font:400 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#d2e0e5}
+      .number{font:700 19px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#08212a}
+      .center-title{font:700 27px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#08212a}
+      .center-copy{font:600 15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#173b45}
+      .floor{font:700 18px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#3a210b}
+      .footer{font:600 16px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:2px;fill:#8ee0d0}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1500" cy="70" r="325" fill="#176777" opacity=".16"/><circle cx="90" cy="860" r="340" fill="#2e5186" opacity=".16"/>
+  <text x="82" y="70" class="eyebrow">ADVANCED SELF-STORAGE OPERATING METHOD</text>
+  <text x="82" y="126" class="title">Automation SLOs for operators</text>
+  <text x="82" y="166" class="subtitle">Availability is a dependency. Reliability is whether operating work is current, complete, reconciled, and recoverable.</text>
+
+  <circle cx="800" cy="503" r="274" fill="none" stroke="url(#ring)" stroke-width="5" stroke-dasharray="10 12" opacity=".9"/>
+  <path d="M800 257C977 257 1088 353 1092 485" fill="none" stroke="#76d7c4" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M1089 517C1080 671 965 748 823 750" fill="none" stroke="#7fb1ea" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M777 750C622 742 516 653 510 521" fill="none" stroke="#efb97e" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M512 483C528 343 636 260 776 257" fill="none" stroke="#76d7c4" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(610 203)"><rect width="380" height="126" rx="22" fill="#103d49" stroke="#4d8d94" stroke-width="2"/><circle cx="38" cy="38" r="22" fill="#72d7c3"/><text x="38" y="45" text-anchor="middle" class="number">1</text><text x="76" y="44" class="stage">Freshness</text><text x="26" y="83" class="copy">Required sources current at decision time</text><text x="26" y="108" class="copy">Missing and conflicted evidence stays visible</text></g>
+    <g transform="translate(1044 438)"><rect width="410" height="130" rx="22" fill="#173c61" stroke="#5b85b4" stroke-width="2"/><circle cx="38" cy="38" r="22" fill="#8db8e7"/><text x="38" y="45" text-anchor="middle" class="number">2</text><text x="76" y="44" class="stage">Completion</text><text x="26" y="84" class="copy">Due work reaches an allowed terminal state</text><text x="26" y="109" class="copy">Accepted and sent remain intermediate</text></g>
+    <g transform="translate(610 690)"><rect width="380" height="130" rx="22" fill="#3e345c" stroke="#8170ad" stroke-width="2"/><circle cx="38" cy="38" r="22" fill="#c4aaed"/><text x="38" y="45" text-anchor="middle" class="number">3</text><text x="76" y="44" class="stage">Reconciliation</text><text x="26" y="84" class="copy">Governing readback matches intended state</text><text x="26" y="109" class="copy">Mature commands define the denominator</text></g>
+    <g transform="translate(146 438)"><rect width="410" height="130" rx="22" fill="#56382a" stroke="#a66f4e" stroke-width="2"/><circle cx="38" cy="38" r="22" fill="#efba7f"/><text x="38" y="45" text-anchor="middle" class="number">4</text><text x="76" y="44" class="stage">Recovery</text><text x="26" y="84" class="copy">Contain · restore or limit · reconcile · own</text><text x="26" y="109" class="copy">Acknowledgment alone is not recovery</text></g>
+  </g>
+
+  <circle cx="800" cy="503" r="150" fill="#79d9c7" filter="url(#shadow)"/>
+  <text x="800" y="468" text-anchor="middle" class="center-title">Evidence integrity</text>
+  <text x="800" y="505" text-anchor="middle" class="center-copy">Known good · known bad · unknown</text>
+  <text x="800" y="533" text-anchor="middle" class="center-copy">Coverage · version · source · replay</text>
+  <text x="800" y="561" text-anchor="middle" class="center-copy">One score reconstructable from records</text>
+
+  <rect x="184" y="835" width="1232" height="45" rx="15" fill="#efb97e"/>
+  <text x="800" y="864" text-anchor="middle" class="floor">CONSEQUENCE FLOOR: ONE UNAUTHORIZED OR HIGH-HARM OUTCOME MAY STOP AUTOMATION EVEN WHEN THE AGGREGATE IS GREEN</text>
+  <text x="82" y="895" class="footer">JARED MASTROIANNI · PROPOSED METHOD · FICTIONAL EXERCISE DATA</text>
+</svg>
