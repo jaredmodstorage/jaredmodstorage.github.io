@@ -13,6 +13,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/self-storage-benchmark-research-protocol/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/research/">Research methods</category>
       <description>An advanced self-storage research protocol for defining establishments, frames, samples, metrics, dispositions, uncertainty, privacy, AI use, and release gates.</description>
     </item>
     <item>
@@ -21,6 +22,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/before-you-share-a-number/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/research/">Research methods</category>
       <description>A practical self-storage reporting control for naming source, period, population, unit, formula, corrections, and AI test conditions before using a metric.</description>
     </item>
     <item>
@@ -29,6 +31,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/human-review-queue-without-bottleneck/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
       <description>A capacity-bounded architecture for evidence-complete admission, consequence routing, qualified adjudication, visible aging, execution, reconciliation, and reopening.</description>
     </item>
     <item>
@@ -37,6 +40,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/automation-slos-for-operators/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
       <description>A self-storage reliability method built around freshness, completion, reconciliation, recovery, evidence integrity, and consequence-aware error budgets.</description>
     </item>
     <item>
@@ -45,6 +49,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-event-spine/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>A governed event-driven pattern that separates observations, commands, policy decisions, projections, and reconciliation evidence across a self-storage portfolio.</description>
     </item>
     <item>
@@ -53,6 +58,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/observe-decision-chain-not-api-call/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>An eight-stage trace model for separating AI recommendation, authority, human review, provider acceptance, source readback, reconciliation, and closure in self-storage operations.</description>
     </item>
     <item>
@@ -61,6 +67,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/source-of-truth-map-before-dashboard/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>A field-level map for governing sources, transformations, event evidence, freshness, conflict ownership, reconciliation, and rollback.</description>
     </item>
     <item>
@@ -69,6 +76,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>A proposed architecture for preserving identity, authority, state, time, evidence, human review, reconciliation, and rollback across facilities.</description>
     </item>
     <item>
@@ -77,6 +85,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/evidence-before-automation/</guid>
       <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
       <description>Why AI-assisted operating decisions need visible sources, freshness, approvals, and reconciliation boundaries.</description>
     </item>
     <item>
@@ -85,6 +94,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-identity-drift/</guid>
       <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
       <description>An 18-control register and eight-step workflow for keeping facility identities aligned across systems.</description>
     </item>
     <item>
@@ -93,6 +103,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/operating-system-not-dashboard/</guid>
       <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>The difference between displaying activity and governing work across a multi-facility operator.</description>
     </item>
     <item>
@@ -101,6 +112,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/structured-data-entity-boundary/</guid>
       <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
       <description>A five-layer entity map and seven-point release gate for accurate, maintainable structured data.</description>
     </item>
     <item>
@@ -109,6 +121,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/access-is-not-ownership/</guid>
       <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
       <description>A three-ledger method for separating public business facts, platform administration, and legal relationships.</description>
     </item>
     <item>
@@ -117,6 +130,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/case-study-that-survives-scrutiny/</guid>
       <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/research/">Research methods</category>
       <description>A reproducible path from operating question to source, intervention, reconciliation, limitations, and release.</description>
     </item>
     <item>
@@ -125,6 +139,7 @@
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-native-facility-management-standard/</guid>
       <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
       <description>Six tests for source-grounded, authority-aware, measurable, reviewable, and recoverable AI-assisted operations.</description>
     </item>
   </channel>
