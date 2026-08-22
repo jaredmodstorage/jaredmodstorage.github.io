@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CetCppFI.css" data-rsc-css-href="/_next/static/css/index.CetCppFI.css" data-precedence="vite-rsc/importer-resources"/><title>Build a Source-of-Truth Map Before You Build a Dashboard | Jared Mastroianni</title><meta name="description" content="An advanced field-level playbook for mapping authority, provenance, transformations, freshness, conflict ownership, reconciliation, and rollback before a dashboard governs work."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Build a Source-of-Truth Map Before You Build a Dashboard | Jared Mastroianni"/><meta property="og:description" content="An advanced field-level playbook for mapping authority, provenance, transformations, freshness, conflict ownership, reconciliation, and rollback before a dashboard governs work."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/source-of-truth-map-before-dashboard"/><meta property="og:type" content="article"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Build a Source-of-Truth Map Before You Build a Dashboard | Jared Mastroianni"/><meta name="twitter:description" content="An advanced field-level playbook for mapping authority, provenance, transformations, freshness, conflict ownership, reconciliation, and rollback before a dashboard governs work."/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/source-of-truth-map-before-dashboard"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><main><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Build a Source-of-Truth Map Before You Build a Dashboard","datePublished":"2026-08-22","dateModified":"2026-08-22","author":{"@id":"https://jaredmodstorage.github.io/#person"},"mainEntityOfPage":"https://jaredmodstorage.github.io/writing/source-of-truth-map-before-dashboard","description":"An advanced field-level playbook for mapping authority, provenance, transformations, freshness, conflict ownership, reconciliation, and rollback before a dashboard governs work."}</script><header class="site-header"><a href="/" class="wordmark" aria-label="Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav aria-label="Primary navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/facily">Facily</a><a href="/facily-os">Facily OS</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/assets">Assets</a><a href="/media" class="nav-cta">Media</a></nav></header><article class="essay"><header class="essay-header"><p class="eyebrow">Architecture playbook · 22 August 2026</p><h1>Build a Source-of-Truth Map Before You Build a Dashboard</h1><p class="lede">A dashboard is a derived view. This field-level map keeps governing records, observed sources, transformations, event evidence, freshness, conflict ownership, reconciliation, and rollback visible before the interface governs work.</p><div class="byline"><span>By Jared Mastroianni</span><span>11 min read</span></div></header><div class="essay-body"><p class="dropcap">A dashboard can make five systems look like one. That is useful for navigation. It is dangerous when the interface also makes five different kinds of evidence look equally authoritative.</p>
+<p>The chart did not become the source of truth because it was easier to read. The data warehouse did not become the source of truth because it joined the records. The most recent event did not become the source of truth because it arrived last. And a green status did not become proof that an action was authorized, accepted, or reconciled.</p>
+<p>Before a dashboard is built, the team needs a source-of-truth map.</p>
+<p>A source-of-truth map is a field-level control record showing which entity is being described, which decision the data will support, which source governs each field, how data is transformed, how fresh it must be, who resolves conflicts, and what evidence closes the loop. It is not a diagram of integrations alone. It is a map of authority.</p>
+<h2>“The system of record” is usually too broad</h2>
+<p>Teams often say that one application is <strong>the system of record</strong>. That phrase can hide more than it explains.</p>
+<p>One system may govern the customer’s contractual status. Another may govern the posted accounting result. A third may govern the configured access state. An event stream may prove that a command was emitted. A provider receipt may prove acceptance. A public page may prove what customers were shown. A dashboard may summarize all of them without governing any of them.</p>
+<p>The useful question is not:</p>
+<blockquote>
+<p>Which application is the source of truth?</p>
+</blockquote>
+<p>It is:</p>
+<blockquote>
+<p>For this exact field, entity, time, and decision, which record is authorized to decide the value?</p>
+</blockquote>
+<p>That question forces the map down to the level where operating errors occur.</p>
+<h2>Separate five source roles</h2>
+<p>Use distinct labels instead of calling every useful source authoritative.</p>
+<table>
+<thead>
+<tr>
+<th>Source role</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Governing source</td>
+<td>The record authorized to decide one defined field for one defined scope.</td>
+</tr>
+<tr>
+<td>Source of observation</td>
+<td>Where a signal, claim, or discrepancy was observed. It may be wrong.</td>
+</tr>
+<tr>
+<td>System of action</td>
+<td>Where an approved action is executed. Execution does not prove the intended result.</td>
+</tr>
+<tr>
+<td>Evidence source</td>
+<td>A receipt, event, export, revision, or visible readback that proves one state transition.</td>
+</tr>
+<tr>
+<td>Derived view</td>
+<td>A join, cache, report, model output, or dashboard assembled from other records.</td>
+</tr>
+</tbody></table>
+<p>A system can occupy more than one role, but only when the map says exactly which role applies. The default should not be “everything in this application is authoritative.”</p>
+<h2>Start with the decision</h2>
+<p>Do not begin the map with databases. Begin with the operating decision the dashboard is expected to support.</p>
+<p>Examples include:</p>
+<ul>
+<li>Which facilities have unresolved maintenance exceptions?</li>
+<li>Which customer-facing facility facts are in conflict?</li>
+<li>Which access changes were authorized but not reconciled?</li>
+<li>Which payment requests were initiated but not posted?</li>
+<li>Which automated messages lack a current governing source?</li>
+</ul>
+<p>For each decision, write:</p>
+<ol>
+<li>the exact question;</li>
+<li>who is allowed to decide;</li>
+<li>the consequence of a wrong answer;</li>
+<li>how current the evidence must be;</li>
+<li>what state the dashboard may display; and</li>
+<li>what the dashboard must never do automatically.</li>
+</ol>
+<p>If the decision is undefined, the dashboard will optimize for display density instead of operating truth.</p>
+<h2>The nine-part source-of-truth map</h2>
+<h3>1. Entity identity</h3>
+<p>Name the object being described and its stable identifier. A facility name, address label, customer name, provider label, or work-order title can change. The map needs an identifier that independent observers can repeat reliably.</p>
+<p>Current OpenTelemetry entity guidance makes the same architectural distinction: identifying attributes should remain stable over the entity’s lifetime, descriptive attributes may change, and an observer that cannot supply reliable identifiers should not emit that entity type. OpenTelemetry’s entity model is currently marked <strong>Development</strong>, so treat it as current technical guidance, not a settled facility-management standard.</p>
+<p>For a multi-location operating map, record the facility ID separately from its public name, address, region, lifecycle state, and third-party identifiers.</p>
+<h3>2. Field definition</h3>
+<p>Define the field’s name, type, permitted values, units, timezone, effective-date behavior, and null meaning.</p>
+<p>“Open” is not a sufficient definition. Does it mean office open, tenant access enabled, accepting rentals, staffed, available for support, or active in the portfolio? A field that cannot survive that question is not ready for a dashboard.</p>
+<h3>3. Governing source and owner</h3>
+<p>Assign one governing source for the field and one accountable source owner. Record the rule that grants authority: approved policy, configuration ownership, accounting control, content governance, or another explicit basis.</p>
+<p>If the field can be jointly governed, document the decision rule. Do not leave the join implicit.</p>
+<h3>4. Observation sources</h3>
+<p>List every place the value may be observed: application API, export, public page, provider portal, event stream, document, message, spreadsheet, sensor, or staff report.</p>
+<p>An observation source can trigger a review. It cannot silently replace the governing source.</p>
+<h3>5. Transformation path</h3>
+<p>Record every material transformation between source and dashboard:</p>
+<ul>
+<li>extraction method and timestamp;</li>
+<li>schema version;</li>
+<li>normalization rule;</li>
+<li>join key;</li>
+<li>filter and exclusion rule;</li>
+<li>timezone conversion;</li>
+<li>deduplication rule;</li>
+<li>aggregation window;</li>
+<li>model or classification step; and</li>
+<li>cache or materialization delay.</li>
+</ul>
+<p>The transformation path is where a correct source can become a misleading dashboard value.</p>
+<p>W3C PROV-O offers a durable vocabulary for this problem. Its starting point distinguishes an <strong>Entity</strong>, an <strong>Activity</strong> that uses or generates entities, and an <strong>Agent</strong> responsible for an activity or entity. A practical source map does not need to implement the ontology, but it should preserve the same questions: what record existed, what process transformed it, who or what performed the process, and what new record was derived.</p>
+<h3>6. Event and evidence envelope</h3>
+<p>For event-driven workflows, preserve enough context to distinguish occurrence from delivery.</p>
+<p>At minimum, capture:</p>
+<ul>
+<li>event ID;</li>
+<li>event source;</li>
+<li>entity or subject identifier;</li>
+<li>event type;</li>
+<li>occurrence time;</li>
+<li>ingestion time;</li>
+<li>schema version;</li>
+<li>correlation or causation reference;</li>
+<li>payload checksum or safe evidence reference; and</li>
+<li>processing result.</li>
+</ul>
+<p>The CloudEvents specification is a vendor-neutral reference for describing event data. Its released line identifies <code>id</code>, <code>source</code>, <code>specversion</code>, and <code>type</code> as core context, with <code>time</code> available for the occurrence timestamp. CloudEvents also warns that a single occurrence can generate more than one event and that <code>source</code> plus <code>id</code> is used to identify duplicates. That means “one event row” is not automatically “one business occurrence,” and delivery time is not automatically occurrence time.</p>
+<h3>7. Freshness and completeness</h3>
+<p>Define three separate thresholds:</p>
+<ul>
+<li><strong>freshness:</strong> how old the newest usable source observation may be;</li>
+<li><strong>latency:</strong> how long the pipeline may take to deliver it; and</li>
+<li><strong>completeness:</strong> which required sources or fields must be present before the value is usable.</li>
+</ul>
+<p>Record both occurrence time and observation or ingestion time. RFC 3339 provides an Internet timestamp profile with an explicit relationship to UTC. Use an offset or <code>Z</code>; do not store a bare local time and assume every system interprets it the same way.</p>
+<h3>8. Conflict and exception ownership</h3>
+<p>For every field, define what happens when:</p>
+<ul>
+<li>two sources disagree;</li>
+<li>the governing source is unavailable;</li>
+<li>the observation is stale;</li>
+<li>an identifier does not match;</li>
+<li>the event is duplicated or out of order;</li>
+<li>the transformation version changes;</li>
+<li>a required field is null; or</li>
+<li>a downstream action cannot be reconciled.</li>
+</ul>
+<p>The dashboard should display the conflict state and accountable owner. It should not resolve the conflict by selecting the newest, most convenient, highest-ranked, or most complete-looking value unless that exact rule is approved and recorded.</p>
+<h3>9. Visible result and rollback</h3>
+<p>Name what proves success. It may be a posted ledger result, a provider receipt, a live configuration readback, a public-page readback, a closed work order with verification, or another governing record.</p>
+<p>Also record how to reverse the transformation, dashboard release, or automated action. A source-of-truth map without rollback is a documentation artifact, not an operating control.</p>
+<h2>A fictional maintenance example</h2>
+<p>Assume a portfolio dashboard shows “open maintenance exceptions.” The following systems exist:</p>
+<ul>
+<li>a work-order application;</li>
+<li>an email inbox where vendors send updates;</li>
+<li>a facility manager’s inspection log;</li>
+<li>an event pipeline;</li>
+<li>a warehouse table; and</li>
+<li>the dashboard.</li>
+</ul>
+<p>The work-order application may govern the assigned owner and approved status. The inspection log may provide field evidence. A vendor email may be an observation or receipt, not proof of verified completion. The event pipeline may prove that a status change was emitted. The warehouse may normalize the records. The dashboard may count them.</p>
+<p>The map could define <code>verified_closed</code> as true only when:</p>
+<ol>
+<li>the work-order ID matches the stable facility ID;</li>
+<li>the governing work-order state is closed;</li>
+<li>the verification evidence reference is present;</li>
+<li>the evidence was observed after the completion event;</li>
+<li>no active exception supersedes it; and</li>
+<li>the dashboard pipeline processed the approved schema version within the freshness threshold.</li>
+</ol>
+<p>That definition is more work than coloring a card green. It is also the difference between reporting activity and governing closure.</p>
+<p>This example is fictional. It does not describe a modSTORAGE facility, vendor, software integration, or measured result.</p>
+<h2>The dashboard release gate</h2>
+<p>Do not release a dashboard field until all of these are true:</p>
+<ul>
+<li>□ Decision and accountable role are named.</li>
+<li>□ Entity identifier is stable and repeatable.</li>
+<li>□ Field definition, units, timezone, and null behavior are explicit.</li>
+<li>□ Governing source and source owner are approved.</li>
+<li>□ Observation sources are labeled without being promoted to authority.</li>
+<li>□ Transformation, join, filter, aggregation, and schema versions are recorded.</li>
+<li>□ Occurrence and ingestion times are separate.</li>
+<li>□ Freshness, latency, and completeness thresholds are defined.</li>
+<li>□ Conflict states route to an owner.</li>
+<li>□ Sensitive data is minimized and access is bounded.</li>
+<li>□ Visible reconciliation evidence is named.</li>
+<li>□ Rollback is tested in proportion to consequence.</li>
+<li>□ Desktop and narrow-screen controls are verified.</li>
+<li>□ Dashboard language does not overstate what the evidence proves.</li>
+</ul>
+<h2>A 30-minute mapping exercise</h2>
+<p>Choose one dashboard field—not an entire application—and complete the <a href="https://jaredmodstorage.github.io/downloads/source-of-truth-map-template.csv">companion source-of-truth map</a>.</p>
+<p>Then ask another operator to reconstruct the answer without verbal help:</p>
+<ol>
+<li>What entity does this row describe?</li>
+<li>Which source governs the field?</li>
+<li>What transformations occurred?</li>
+<li>How old can the data be?</li>
+<li>What happens when sources disagree?</li>
+<li>Who decides?</li>
+<li>What proves the final state?</li>
+<li>How is a bad release rolled back?</li>
+</ol>
+<p>If the reviewer cannot answer from the map, the dashboard is not yet self-explanatory enough to govern work.</p>
+<h2>Measure map quality</h2>
+<p>Useful measures include:</p>
+<ul>
+<li>mapped dashboard fields divided by total in-scope fields;</li>
+<li>fields with a governing source divided by mapped fields;</li>
+<li>fields with an accountable source owner divided by mapped fields;</li>
+<li>transformations with a version and test divided by total transformations;</li>
+<li>dashboard values inside freshness threshold divided by values displayed;</li>
+<li>conflicts with an assigned owner divided by conflicts detected;</li>
+<li>reconciled actions divided by actions executed; and</li>
+<li>releases with a tested rollback divided by releases made.</li>
+</ul>
+<p>Publish the numerator, denominator, period, source, and limitations. A dashboard quality score without those components is another derived view without a source map.</p>
+<h2>Sources and limitations</h2>
+<p>This playbook draws from current primary standards and official documentation:</p>
+<ul>
+<li><a href="https://doi.org/10.6028/NIST.CSWP.29">NIST Cybersecurity Framework 2.0</a>, published February 26, 2024</li>
+<li><a href="https://www.w3.org/TR/prov-o/">W3C PROV-O</a>, a W3C Recommendation dated April 30, 2013</li>
+<li><a href="https://github.com/cloudevents/spec">CloudEvents specification repository</a>, whose latest released core line is v1.0.2 while the main specification is a working draft</li>
+<li><a href="https://opentelemetry.io/docs/specs/otel/entities/data-model/">OpenTelemetry Entity Data Model</a>, currently marked Development</li>
+<li><a href="https://www.rfc-editor.org/info/rfc3339/">RFC 3339</a>, published July 2002</li>
+</ul>
+<p>NIST CSF 2.0 is voluntary and high-level; it does not prescribe this map or certify a system. PROV-O is a general provenance ontology. CloudEvents standardizes event context, not business authority or delivery guarantees. OpenTelemetry guidance is designed for telemetry and includes developing material. RFC 3339 standardizes timestamp representation, not operating schedules or retention policy.</p>
+<h2>Disclosure</h2>
+<p>I am CEO and Co-Founder of Facily.ai and Chief Operating Officer of modSTORAGE. This is a proposed architecture method. It is not a Facily OS release diagram, a product-availability statement, an integration claim, a customer case study, or a performance result.</p>
+</div></article><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/media">Media kit</a><a href="/assets">Assets</a><a href="/publishing-principles">Publishing principles</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></main></body></html>
