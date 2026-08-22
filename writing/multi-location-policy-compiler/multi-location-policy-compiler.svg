@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-location policy compiler architecture</title>
+  <desc id="desc">A portfolio policy, site capability manifest, local overlays, and bounded exceptions enter a deterministic compiler. The compiler validates shapes, authority, freshness, merge semantics, invariants, and conformance tests. It emits either a site-specific control artifact or an actionable refusal report. A passing artifact remains separate from authorization, bounded activation, independent readback, and rollback.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07172d"/>
+      <stop offset="1" stop-color="#0d2843"/>
+    </linearGradient>
+    <linearGradient id="compile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16b8a6"/>
+      <stop offset="1" stop-color="#0d7d8e"/>
+    </linearGradient>
+    <linearGradient id="artifact" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2b84b"/>
+      <stop offset="1" stop-color="#e88738"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020a13" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#84a8bf"/>
+    </marker>
+    <marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L12 6 L0 12 Z" fill="#f0b24b"/>
+    </marker>
+    <style>
+      .eyebrow{font:700 18px Inter,Arial,sans-serif;letter-spacing:3px;fill:#68d8cd}
+      .title{font:700 42px Inter,Arial,sans-serif;fill:#f6fbff}
+      .sub{font:400 20px Inter,Arial,sans-serif;fill:#b8ccda}
+      .card-title{font:700 21px Inter,Arial,sans-serif;fill:#f7fbfd}
+      .card-copy{font:400 16px Inter,Arial,sans-serif;fill:#bfd0dc}
+      .chip{font:700 13px Inter,Arial,sans-serif;letter-spacing:1px;fill:#082137}
+      .compile-title{font:700 28px Inter,Arial,sans-serif;fill:#062a33}
+      .compile-copy{font:600 16px Inter,Arial,sans-serif;fill:#07333c}
+      .output-title{font:700 22px Inter,Arial,sans-serif;fill:#25180c}
+      .output-copy{font:600 15px Inter,Arial,sans-serif;fill:#3b2714}
+      .gate-title{font:700 17px Inter,Arial,sans-serif;fill:#eef8fc}
+      .gate-copy{font:400 14px Inter,Arial,sans-serif;fill:#b9cedb}
+      .small{font:600 14px Inter,Arial,sans-serif;fill:#87a8bb}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1370" cy="72" r="260" fill="#0f3b57" opacity="0.45"/>
+  <circle cx="90" cy="850" r="280" fill="#0a314b" opacity="0.6"/>
+
+  <text x="90" y="75" class="eyebrow">JARED MASTROIANNI · PROPOSED OPERATING METHOD</text>
+  <text x="90" y="128" class="title">The multi-location policy compiler</text>
+  <text x="90" y="164" class="sub">One governed intent. Explicit local reality. No silent authority.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="230" width="285" height="118" rx="18" fill="#102e49" stroke="#2c5873"/>
+    <rect x="90" y="230" width="9" height="118" rx="4" fill="#68d8cd"/>
+    <text x="122" y="268" class="card-title">Portfolio policy</text>
+    <text x="122" y="299" class="card-copy">Version · intent · invariants</text>
+    <text x="122" y="325" class="card-copy">parameters · authority · expiry</text>
+
+    <rect x="90" y="370" width="285" height="118" rx="18" fill="#102e49" stroke="#2c5873"/>
+    <rect x="90" y="370" width="9" height="118" rx="4" fill="#7ab9ff"/>
+    <text x="122" y="408" class="card-title">Site manifest</text>
+    <text x="122" y="439" class="card-copy">Capabilities · sources · freshness</text>
+    <text x="122" y="465" class="card-copy">timezone · readback · rollback</text>
+
+    <rect x="90" y="510" width="285" height="118" rx="18" fill="#102e49" stroke="#2c5873"/>
+    <rect x="90" y="510" width="9" height="118" rx="4" fill="#c09cff"/>
+    <text x="122" y="548" class="card-title">Local overlays</text>
+    <text x="122" y="579" class="card-copy">Field path · operation · reason</text>
+    <text x="122" y="605" class="card-copy">scope · precedence · authority</text>
+
+    <rect x="90" y="650" width="285" height="118" rx="18" fill="#102e49" stroke="#2c5873"/>
+    <rect x="90" y="650" width="9" height="118" rx="4" fill="#ff8e81"/>
+    <text x="122" y="688" class="card-title">Bounded exceptions</text>
+    <text x="122" y="719" class="card-copy">Compensating control · expiry</text>
+    <text x="122" y="745" class="card-copy">exit condition · revert or refuse</text>
+  </g>
+
+  <g stroke="#84a8bf" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M375 289 C438 289 430 370 500 370"/>
+    <path d="M375 429 C438 429 430 430 500 430"/>
+    <path d="M375 569 C438 569 430 490 500 490"/>
+    <path d="M375 709 C438 709 430 550 500 550"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="500" y="260" width="400" height="400" rx="28" fill="url(#compile)"/>
+    <rect x="530" y="287" width="110" height="30" rx="15" fill="#d9fff8" opacity="0.9"/>
+    <text x="585" y="307" text-anchor="middle" class="chip">DETERMINISTIC</text>
+    <text x="540" y="359" class="compile-title">Compile or refuse</text>
+    <g class="compile-copy">
+      <text x="540" y="407">01  Pin every input identity</text>
+      <text x="540" y="447">02  Validate shape and freshness</text>
+      <text x="540" y="487">03  Verify field-level authority</text>
+      <text x="540" y="527">04  Apply explicit merge semantics</text>
+      <text x="540" y="567">05  Preserve non-overridable invariants</text>
+      <text x="540" y="607">06  Run conformance counterexamples</text>
+    </g>
+  </g>
+
+  <path d="M900 390 C955 390 955 324 1015 324" stroke="#f0b24b" stroke-width="4" fill="none" marker-end="url(#arrowGold)"/>
+  <path d="M900 530 C955 530 955 632 1015 632" stroke="#ff8e81" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1015" y="238" width="495" height="190" rx="22" fill="url(#artifact)"/>
+    <text x="1050" y="280" class="output-title">Site-specific control artifact</text>
+    <text x="1050" y="315" class="output-copy">Pinned inputs · resolved and omitted controls</text>
+    <text x="1050" y="344" class="output-copy">validation results · canonical hash · exact diff</text>
+    <text x="1050" y="373" class="output-copy">activation authority · readback · rollback target</text>
+    <rect x="1050" y="390" width="245" height="24" rx="12" fill="#fff4d6" opacity="0.84"/>
+    <text x="1172" y="407" text-anchor="middle" class="chip">CANDIDATE · NOT AUTHORIZATION</text>
+
+    <rect x="1015" y="548" width="495" height="170" rx="22" fill="#3c2431" stroke="#a95368"/>
+    <text x="1050" y="590" class="card-title">Actionable refusal report</text>
+    <text x="1050" y="624" class="card-copy">Site · field · source · failed constraint · severity</text>
+    <text x="1050" y="652" class="card-copy">conflicting input · remediation · required authority</text>
+    <text x="1050" y="690" class="small">A refusal is a governed output, not a missing result.</text>
+  </g>
+
+  <g stroke="#567a91" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M1110 428 L1110 472"/>
+    <path d="M1285 428 L1285 472"/>
+    <path d="M1445 428 L1445 472"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1030" y="472" width="160" height="62" rx="14" fill="#102e49" stroke="#2c5873"/>
+    <text x="1110" y="496" text-anchor="middle" class="gate-title">Authorize</text>
+    <text x="1110" y="519" text-anchor="middle" class="gate-copy">exact artifact</text>
+    <rect x="1205" y="472" width="160" height="62" rx="14" fill="#102e49" stroke="#2c5873"/>
+    <text x="1285" y="496" text-anchor="middle" class="gate-title">Activate</text>
+    <text x="1285" y="519" text-anchor="middle" class="gate-copy">bounded cell</text>
+    <rect x="1380" y="472" width="130" height="62" rx="14" fill="#102e49" stroke="#2c5873"/>
+    <text x="1445" y="496" text-anchor="middle" class="gate-title">Read back</text>
+    <text x="1445" y="519" text-anchor="middle" class="gate-copy">independent</text>
+  </g>
+
+  <text x="90" y="840" class="small">Compile-pass ≠ test-pass ≠ activation-authorized ≠ observed-conformant</text>
+  <text x="1510" y="840" text-anchor="end" class="small">All examples fictional · no product or performance claim</text>
+</svg>

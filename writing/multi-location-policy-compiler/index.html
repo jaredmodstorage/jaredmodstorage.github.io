@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DOFp2eoL.css" data-rsc-css-href="/_next/static/css/index.DOFp2eoL.css" data-precedence="vite-rsc/importer-resources"/><title>The Multi-Location Policy Compiler for Site-Specific Controls | Jared Mastroianni</title><meta name="description" content="An evidence-bounded method for compiling one versioned portfolio policy into site-specific controls while preserving local capabilities, authority, exceptions, conformance, activation, readback, and rollback."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Multi-Location Policy Compiler for Site-Specific Controls | Jared Mastroianni"/><meta property="og:description" content="An evidence-bounded method for compiling one versioned portfolio policy into site-specific controls while preserving local capabilities, authority, exceptions, conformance, activation, readback, and rollback."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/multi-location-policy-compiler.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A portfolio policy, site capability manifest, local overlays, and bounded exceptions enter a deterministic compiler that checks shapes, authority, freshness, merge semantics, invariants, and conformance tests before emitting either a site-specific control artifact or a refusal report; authorization, bounded activation, independent readback, and rollback remain separate gates."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Multi-Location Policy Compiler for Site-Specific Controls | Jared Mastroianni"/><meta name="twitter:description" content="An evidence-bounded method for compiling one versioned portfolio policy into site-specific controls while preserving local capabilities, authority, exceptions, conformance, activation, readback, and rollback."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/multi-location-policy-compiler.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/#article","url":"https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/multi-location-policy-compiler.png","description":"An evidence-bounded method for compiling one versioned portfolio policy into site-specific controls while preserving local capabilities, authority, exceptions, conformance, activation, readback, and rollback.","proficiencyLevel":"Expert","about":["Self-storage operations","Multi-location policy","Site capability manifests","Local operating controls","Conformance testing","Human authority","Readback","Rollback"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality","item":"https://jaredmodstorage.github.io/writing/multi-location-policy-compiler/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality</h1><p class="lede">Compile one versioned portfolio rule against explicit site capabilities, approved overlays, and bounded exceptions without collapsing candidate, authorization, activation, readback, or rollback.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>17 min read</span></div></header><div class="essay-body"><blockquote>
+<p><strong>Method and evidence boundary:</strong> This is an authored operating method. The portfolio, facilities, systems, people, schedules, and results in the example are fictional. The method is not evidence of a product deployment, customer result, legal conclusion, security posture, certification, or service level. A compiled control is a candidate artifact—not permission to activate it.</p>
+</blockquote>
+<p>Multi-location operators often write one rule and then discover that they operate many realities.</p>
+<p>The rule might be simple: after the office closes, route new access anomalies to a human before changing a tenant&#39;s access state. At one facility, the access system exposes a reliable event feed. At another, the only timely signal is a vendor report. A third uses a different timezone, has no after-hours reviewer, and cannot reverse the same action remotely. The portfolio policy is one sentence. The safe operational behavior is not.</p>
+<p>Most organizations solve this with either copy-and-paste or improvisation. Copy-and-paste produces site documents that drift. Improvisation leaves the policy in a handbook while each system, manager, and automation interprets it differently. Neither approach tells an operator exactly which source version, local facts, exception, and authority produced the control that is active at a facility.</p>
+<p>The better model is a <strong>policy compiler</strong>.</p>
+<p>A policy compiler takes a versioned portfolio rule, a versioned description of a site&#39;s capabilities, and explicitly governed local overlays. It validates those inputs, refuses forbidden combinations, and emits a site-specific control artifact plus a machine-readable explanation of how it was derived. That artifact still must pass tests, authorization, staged activation, readback, and rollback gates.</p>
+<p>The goal is not to make facility operations look like software engineering. The goal is to stop treating local variation as invisible prose.</p>
+<p><a href="multi-location-policy-compiler.svg"><img src="multi-location-policy-compiler.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A portfolio policy, site capability manifest, local overlays, and bounded exceptions enter a deterministic compiler that checks shapes, authority, freshness, merge semantics, invariants, and conformance tests before emitting either a site-specific control artifact or a refusal report; authorization, bounded activation, independent readback, and rollback remain separate gates."></a></p>
+<p><a href="multi-location-policy-compiler.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="multi-location-policy-compiler-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="multi-location-policy-compiler-downloads">Inspect the policy source, site manifest, and conformance gates.</h2>
+<p>These exact files contain an authored method and fictional or blank-contract examples. They do not establish a product deployment, customer result, source authority, activation decision, conformance outcome, performance level, certification, or independent validation.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="policy-source-and-site-manifest-template.csv" download>Download the policy source and site-manifest template <span aria-hidden="true">↓</span></a><a href="policy-compiler-conformance-suite.csv" download>Download the policy-compiler conformance suite <span aria-hidden="true">↓</span></a><a href="multi-location-policy-compiler.svg" download>Download the accessible policy-compiler SVG <span aria-hidden="true">↓</span></a><a href="multi-location-policy-compiler.png" download>Download the policy-compiler PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+
+<h2>The distinction that makes the model useful</h2>
+<p>A policy is not a configuration, and a configuration is not an observed operating state.</p>
+<ul>
+<li><strong>Policy</strong> says what must remain true and who may decide.</li>
+<li><strong>Site facts</strong> say what the location can actually observe, execute, reverse, and staff.</li>
+<li><strong>An overlay</strong> adapts an allowed parameter without rewriting the policy&#39;s invariant.</li>
+<li><strong>An exception</strong> is a governed, time-bounded departure with its own authority and exit condition.</li>
+<li><strong>A compiled control artifact</strong> is the exact site-specific result of combining pinned inputs.</li>
+<li><strong>Activation</strong> is a separate authorized change.</li>
+<li><strong>Readback</strong> is evidence of what the facility or downstream system actually accepted and did.</li>
+</ul>
+<p>Those states should never collapse into a single word such as <em>deployed</em>.</p>
+<p>This separation has strong technical precedents, although none is a facility standard. Google&#39;s configuration-design guidance recommends separating a high-level interface from generated static data, preserving ownership and version history, validating semantics, and distinguishing a configuration change from its application. It also emphasizes gradual application, the ability to stop, and rollback (<a href="https://sre.google/workbook/configuration-design/">Google SRE, 2018</a>). Open Policy Agent demonstrates the narrower architectural pattern of evaluating structured inputs against declarative policy while keeping decision-making separate from enforcement (<a href="https://www.openpolicyagent.org/docs">OPA documentation</a>).</p>
+<p>I am borrowing those patterns. I am not arguing that a self-storage operator must install OPA, use a particular language, or convert a property into a software project.</p>
+<h2>Start with invariants, not settings</h2>
+<p>The first mistake in a portfolio rule is to lead with a system field: <em>set review mode to manual after 6 p.m.</em> That is already an implementation choice. It may make sense at one site and be impossible or unsafe at another.</p>
+<p>Start with the invariant:</p>
+<blockquote>
+<p>A new access anomaly must not cause an irreversible access-state change when the evidence is incomplete or the required review authority is unavailable.</p>
+</blockquote>
+<p>The invariant describes what the operation must preserve. Parameters can vary around it:</p>
+<ul>
+<li>the local definition of after-hours;</li>
+<li>which anomaly classes require review;</li>
+<li>which evidence fields are mandatory;</li>
+<li>the reviewer role and escalation path;</li>
+<li>the allowed temporary state;</li>
+<li>the maximum exception window;</li>
+<li>the permitted rollback mechanism.</li>
+</ul>
+<p>Some variation is legitimate. Some would defeat the policy. The source rule has to declare the difference.</p>
+<h3>The 12-field policy source</h3>
+<p>I use a compact source object with twelve fields:</p>
+<ol>
+<li><strong>policy_id</strong> — a stable identity that does not change when wording changes.</li>
+<li><strong>policy_version</strong> — the exact approved version.</li>
+<li><strong>intent</strong> — the operational outcome the rule is trying to preserve.</li>
+<li><strong>scope</strong> — facilities, event classes, systems, and time windows to which it applies.</li>
+<li><strong>invariants</strong> — conditions no local overlay may weaken.</li>
+<li><strong>parameters</strong> — values that must be resolved for each site.</li>
+<li><strong>allowed_overlays</strong> — fields local authority may add, replace, or narrow.</li>
+<li><strong>prohibited_overrides</strong> — changes the compiler must refuse.</li>
+<li><strong>required_evidence</strong> — facts that must be fresh enough and traceable enough to compile.</li>
+<li><strong>authority</strong> — who may approve the policy, an overlay, an exception, and activation.</li>
+<li><strong>exception_contract</strong> — required reason, compensating control, expiry, review, and exit condition.</li>
+<li><strong>effective_window</strong> — when the version becomes eligible and when it is superseded or withdrawn.</li>
+</ol>
+<p>The source object should be readable by an operator and structured enough to validate. A rule that cannot say which fields are invariant is not ready for automated compilation.</p>
+<h2>Give each site a capability manifest</h2>
+<p>The compiler cannot safely infer a site&#39;s reality from its name, region, or software vendor. It needs a versioned capability manifest.</p>
+<p>The manifest should answer operational questions:</p>
+<ul>
+<li>Which source is authoritative for tenant identity, access state, unit identity, operating schedule, and staff availability?</li>
+<li>Which events can the site observe, and at what latency and confidence?</li>
+<li>Which actions are supported: notify, hold, queue, change, reverse, or only recommend?</li>
+<li>Which actions require a local person, a vendor console, a physical visit, or a second approval?</li>
+<li>Which device or integration versions are actually present?</li>
+<li>What is the site&#39;s timezone, and how are daylight-saving transitions handled?</li>
+<li>What is the independent readback path for each consequential action?</li>
+<li>What rollback target exists, and has that rollback path been tested for the exact control family?</li>
+<li>Which capabilities are unknown, stale, temporarily unavailable, or disputed?</li>
+</ul>
+<p>Unknown is a first-class value. It must not silently become false, unsupported, or safe.</p>
+<p>A manifest is not a marketing inventory. It is a dated assertion about what a site can support, with source, observer, confidence, and expiry. If a capability comes from a vendor document, the manifest should say so. If it comes from a local test, it should identify the test. If the test is old, the compiler should see the age.</p>
+<h2>Local overlays need a grammar</h2>
+<p>“Apply the local settings” is not an overlay contract. It is an invitation to ambiguity.</p>
+<p>An overlay should identify:</p>
+<ul>
+<li>overlay ID and version;</li>
+<li>target policy and version range;</li>
+<li>site or site class;</li>
+<li>exact field path;</li>
+<li>operation—add, replace, remove, narrow, or declare unsupported;</li>
+<li>old value and proposed value when relevant;</li>
+<li>reason and supporting evidence;</li>
+<li>approving authority;</li>
+<li>effective and expiry timestamps;</li>
+<li>conflict priority;</li>
+<li>required tests;</li>
+<li>rollback or removal instruction.</li>
+</ul>
+<p>The merge semantics must also be explicit. <a href="https://www.rfc-editor.org/rfc/rfc7396.html">RFC 7396</a> is useful precisely because it exposes how much a small word like <em>merge</em> can hide: in JSON Merge Patch, object members may be added, replaced, or removed with defined behavior, while a non-object patch replaces the target and arrays cannot be partially patched under that format. A facility policy system does not need to use JSON Merge Patch, but it does need equivalent precision.</p>
+<p>For example, if <code>required_evidence</code> is a list, does a local overlay append one item, replace the whole list, or remove one item? If the rule does not say, the compiler should refuse the overlay.</p>
+<h3>Overlays are not exceptions</h3>
+<p>An overlay stays inside the parent policy&#39;s allowed variation. An exception does not.</p>
+<p>Suppose the portfolio rule permits a facility to choose a review window between 15 and 45 minutes. Setting Site B to 30 minutes is an overlay. Operating for two days without the required second reviewer because that reviewer is unavailable is an exception. Calling both “local settings” destroys the audit trail.</p>
+<p>Exceptions should be rare, visible, expiring, and paired with a compensating control. Expiry must have behavior: revert, refuse, or escalate. “Review later” is not an expiry behavior.</p>
+<p>The IETF&#39;s YANG 1.1 model offers a useful analogy. It supports conditionally implemented features, revision-pinned imports, and explicit deviations when an implementation cannot faithfully support a model. It also says the resulting data model must remain valid after declared deviations (<a href="https://www.rfc-editor.org/rfc/rfc7950.html">RFC 7950</a>). That does not make YANG a facility standard. It illustrates a discipline worth preserving: variation should be declared, versioned, and validated rather than hidden.</p>
+<h2>The compile order must be deterministic</h2>
+<p>If the same inputs can produce different outputs depending on who clicks first, the process is not a compiler. It is a negotiation engine.</p>
+<p>Use one published order:</p>
+<ol>
+<li>Load the exact policy version.</li>
+<li>Load the exact site-manifest version.</li>
+<li>Load every eligible overlay and exception by identity and version.</li>
+<li>Verify signatures or recorded authorities and effective windows.</li>
+<li>Validate the structure and required fields of every input.</li>
+<li>Resolve site capabilities and explicitly mark unknown or stale facts.</li>
+<li>Apply overlays in a fixed precedence order.</li>
+<li>Reject conflicting overlays that address the same field without an explicit resolver.</li>
+<li>Evaluate non-overridable invariants.</li>
+<li>Evaluate exception conditions and expiries.</li>
+<li>Produce either a compiled artifact or a refusal report.</li>
+<li>Run the conformance suite against the exact artifact.</li>
+</ol>
+<p>The compiler should be deterministic: identical pinned inputs should produce identical canonical output and the same content hash. Time, live lookups, and model responses should not leak into compilation unnoticed. If current external data is required, fetch it before compilation, record it as a versioned input, and give it a freshness rule.</p>
+<p>This is the difference between <em>the weather API said something during the run</em> and <em>the compiler used observation OBS-204, captured at 14:02 UTC, valid for ten minutes, from source S-7</em>.</p>
+<h2>The output is a control artifact, not a verdict</h2>
+<p>A useful compiled artifact contains more than final settings. It should carry its derivation:</p>
+<ul>
+<li>artifact ID and canonical hash;</li>
+<li>policy ID and version;</li>
+<li>site-manifest ID and version;</li>
+<li>overlay and exception IDs and versions;</li>
+<li>compiler version;</li>
+<li>compiled timestamp;</li>
+<li>resolved values;</li>
+<li>inherited values;</li>
+<li>deliberately omitted controls;</li>
+<li>unresolved facts;</li>
+<li>invariant evaluations;</li>
+<li>test-suite version and results;</li>
+<li>required activation authority;</li>
+<li>activation mode and release cell;</li>
+<li>independent readback method;</li>
+<li>rollback target and trigger;</li>
+<li>expiry and supersession behavior.</li>
+</ul>
+<p>The artifact should also distinguish four outputs:</p>
+<ul>
+<li><strong>compile-pass</strong> — the inputs were structurally and semantically resolvable;</li>
+<li><strong>test-pass</strong> — the candidate passed its defined conformance cases;</li>
+<li><strong>activation-authorized</strong> — a named authority approved an exact artifact;</li>
+<li><strong>observed-conformant</strong> — post-activation readback matched the intended state within a declared window.</li>
+</ul>
+<p>None implies the next.</p>
+<p>A structured validation report is more useful than a red banner. The W3C&#39;s SHACL recommendation validates a data graph against explicit shapes and produces results that can identify a focus node, path, value, severity, and source constraint (<a href="https://www.w3.org/TR/shacl/">W3C SHACL</a>). A facility compiler can borrow that reporting shape without using RDF: say which site, field, input, constraint, severity, and remediation caused refusal.</p>
+<h2>The conformance suite should try to break the rule</h2>
+<p>Policy review usually asks whether the happy path sounds reasonable. A conformance suite asks whether the rule still holds at the edges.</p>
+<p>At minimum, test these cases:</p>
+<ol>
+<li><strong>Missing manifest version</strong> — compilation refuses rather than selecting “latest.”</li>
+<li><strong>Stale authority fact</strong> — an expired capability observation blocks the affected control.</li>
+<li><strong>Unsupported action</strong> — the site cannot execute or reverse the requested action.</li>
+<li><strong>Invariant override</strong> — a local overlay attempts to weaken a non-overridable condition.</li>
+<li><strong>Ambiguous merge</strong> — two overlays target the same field without a resolver.</li>
+<li><strong>Expired exception</strong> — the exception cannot leak past its end time.</li>
+<li><strong>Timezone edge</strong> — the rule is tested across midnight and daylight-saving transitions where applicable.</li>
+<li><strong>Partial evidence</strong> — missing or contradictory evidence produces a hold or refusal, not a guessed value.</li>
+<li><strong>Deterministic rebuild</strong> — recompiling the same pinned inputs produces the same canonical hash.</li>
+<li><strong>Version incompatibility</strong> — an overlay written for policy 2.x cannot silently apply to 3.x.</li>
+<li><strong>Activation without readback</strong> — the operational state remains unverified until the independent observation arrives.</li>
+<li><strong>Rollback dependency</strong> — the system refuses activation if the rollback target or authority is unavailable.</li>
+</ol>
+<p>OPA&#39;s official documentation is one concrete example of treating policy as testable and running positive, negative, and data-driven cases (<a href="https://www.openpolicyagent.org/docs/policy-testing">OPA policy testing</a>). The transferable lesson is not a command-line tool. It is that policy logic deserves executable counterexamples.</p>
+<h2>A fictional three-site compilation</h2>
+<p>Consider a fictional portfolio called Northline Storage. Its policy <code>ACCESS-ANOMALY/3.2</code> says:</p>
+<blockquote>
+<p>When an access anomaly has incomplete identity evidence, no automated process may make an irreversible access-state change. The system may create a review packet, notify an authorized reviewer, and place the case in a reversible temporary state only if the site manifest confirms that the state and rollback path are supported.</p>
+</blockquote>
+<p>The policy permits local overlays for review hours, reviewer roles, notification channels, and a temporary hold duration from 15 to 60 minutes. It prohibits removing the identity-evidence requirement or authorizing an irreversible change.</p>
+<h3>Site Alder</h3>
+<p>Alder&#39;s current manifest shows a structured anomaly feed, a reversible temporary hold, a tested remote rollback, and an after-hours reviewer. Its overlay selects a 20-minute hold and two notification channels.</p>
+<p>The compiler emits the review-packet and temporary-hold controls. Tests pass. That does not activate them; an authorized person still approves the exact artifact, a limited release cell receives it, and independent readback must confirm the accepted state.</p>
+<h3>Site Birch</h3>
+<p>Birch can observe the anomaly but cannot independently confirm a rollback after hours. The policy&#39;s invariant does not permit the compiler to pretend otherwise.</p>
+<p>The output is narrower: create the review packet and notify the on-call person, but do not emit the temporary-hold action. The artifact records the omitted action and the missing rollback capability. This is not a failed facility. It is an honest compilation.</p>
+<h3>Site Cedar</h3>
+<p>Cedar&#39;s manifest is expired, and two overlays disagree about the reviewer role. The compiler refuses to produce an activatable artifact. Its report identifies the stale manifest, the conflicting field, both overlay IDs, and the authorities needed to resolve the conflict.</p>
+<p>The refusal is the safe output. A system that always produces configuration is not necessarily more automated. It may simply be less truthful.</p>
+<h2>Where AI belongs—and where it does not</h2>
+<p>AI can help with the messy work around compilation:</p>
+<ul>
+<li>extracting candidate parameters from a policy draft;</li>
+<li>mapping site documents into a proposed capability manifest;</li>
+<li>detecting inconsistent terminology;</li>
+<li>proposing edge cases for the test suite;</li>
+<li>explaining a refusal report in operator language;</li>
+<li>comparing two compiled artifacts and summarizing the differences.</li>
+</ul>
+<p>Those are proposed uses, not evidence of deployed performance.</p>
+<p>AI should not silently decide which source is authoritative, invent a missing capability, approve its own exception, or transform a probabilistic answer into a deterministic policy fact. Model output belongs in a candidate lane with source references, confidence, and human disposition. If it becomes an input, that promotion should be explicit and attributable.</p>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">NIST AI RMF 1.0</a> is useful here because it treats AI risk as contextual and lifecycle-wide and describes separation between building or using AI and verification or validation as a best-practice pattern. It is voluntary and non-sector-specific. NIST&#39;s current program page also says version 1.0 is being revised, so any implementation should date the version it actually used rather than calling the framework permanently current (<a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF program page, checked August 22, 2026</a>).</p>
+<h2>Architecture controls that keep the compiler honest</h2>
+<p>An advanced implementation should preserve eight properties.</p>
+<h3>1. Pinned dependencies</h3>
+<p>Every policy, manifest, overlay, schema, test suite, and compiler build has an exact identity. “Latest” is a discovery convenience, not a reproducible input. YANG&#39;s revision-specific import behavior is a useful precedent: a dependency does not change merely because a newer revision appears.</p>
+<h3>2. Canonical serialization</h3>
+<p>The same resolved artifact must serialize the same way before hashing. Otherwise, harmless field ordering can look like an operational change, or a meaningful change can hide inside unstable output.</p>
+<h3>3. Hermetic compilation</h3>
+<p>Compilation should not depend on unrecorded live state. Google&#39;s configuration guidance notes that external resources which can change outside the versioned environment make rollback difficult. Capture required observations as governed inputs with freshness limits.</p>
+<h3>4. Authority-aware fields</h3>
+<p>Authority is scoped. The person allowed to set office hours may not be allowed to change an access-state invariant. The compiler should validate authority at the field and action level, not merely ask whether someone has an administrator account.</p>
+<h3>5. Refusal as a product feature</h3>
+<p>Unknown capability, unresolved conflict, expired exception, failed invariant, or missing rollback must produce a useful refusal artifact. Operators need a path to resolution, not a mysterious error code.</p>
+<h3>6. Diff before activation</h3>
+<p>Show the exact difference between the current active artifact and the candidate: changed values, added or removed actions, authority changes, newly stale inputs, and rollback implications. Review the consequence, not just the text.</p>
+<h3>7. Staged activation and independent readback</h3>
+<p>Compilation is offline reasoning. Activation affects a real facility. Use a bounded release cell, stop conditions, and a readback source independent enough to detect non-application or misapplication.</p>
+<h3>8. Rollback as a compiled dependency</h3>
+<p>Do not append rollback after approval. Resolve the rollback target, authority, supported mechanism, and confirmation method during compilation. If any is missing, the candidate should not be activatable for a consequential control.</p>
+<h2>A 60-minute operator-to-architect exercise</h2>
+<p>Use the companion <code>policy-source-and-site-manifest-template.csv</code> and <code>policy-compiler-conformance-suite.csv</code>.</p>
+<h3>Beginner — 10 minutes</h3>
+<p>Choose one portfolio rule. Rewrite it as an outcome and one invariant. Circle every word that is actually a local parameter: time, role, device, threshold, channel, or evidence source.</p>
+<p>Deliverable: one sentence that must remain true at every location.</p>
+<h3>Intermediate — 15 minutes</h3>
+<p>Pick two sites that differ. Complete their capability rows using only facts that have a source and check date. Use <code>unknown</code> where evidence is missing. Do not infer a capability from the vendor name.</p>
+<p>Deliverable: two versioned site manifests with at least one meaningful difference.</p>
+<h3>Advanced — 15 minutes</h3>
+<p>Write two overlays. Make one valid and make the other attempt to weaken an invariant. Define exact merge operations, authorities, effective windows, and expiry behavior.</p>
+<p>Deliverable: one compile-pass candidate and one deliberate refusal.</p>
+<h3>Architect — 20 minutes</h3>
+<p>Run twelve conformance cases. Produce a candidate artifact with pinned input identities, canonical hash placeholder, resolved and omitted controls, validation results, activation authority, readback method, and rollback target. Then change one manifest fact and predict the exact diff.</p>
+<p>Deliverable: an explainable artifact and a deterministic refusal report—not a live activation.</p>
+<h2>What this method does not solve</h2>
+<p>A policy compiler cannot prove that source facts are true, that a person has proper authority, that a downstream vendor will behave as documented, or that a physical mechanism will work when needed. It cannot replace legal review, security engineering, safety analysis, accessibility review, labor judgment, vendor validation, or local operational expertise.</p>
+<p>It can make the boundaries visible.</p>
+<p>It can show which rule version was used, what the facility was believed to support, where local variation entered, which exception was active, which tests ran, and why the system emitted or refused a control. That is a meaningful improvement over a policy PDF, a spreadsheet of undocumented settings, and a manager&#39;s memory.</p>
+<p>One policy across many facilities should not mean one undifferentiated configuration. It should mean one governed intent, compiled against explicit local reality, with variation made visible and authority kept intact.</p>
+<hr>
+<h2>Source and artifact note</h2>
+<p>The dated source register is available in <code>source-register.csv</code>. The companion tools are <code>policy-source-and-site-manifest-template.csv</code> and <code>policy-compiler-conformance-suite.csv</code>. The fictional examples in those files are exercises only.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/five-layer-operating-context-stack/">The Five-Layer Operating Context Stack for Multi-Facility AI</a></h3><p>Assemble identity, authority, event, governing state, and decision context for one bounded multi-facility operating question.</p><a href="/writing/five-layer-operating-context-stack/" class="text-link" aria-label="Read the article: The Five-Layer Operating Context Stack for Multi-Facility AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert governance paper</p><h3><a href="/writing/correction-propagation-contract/">The Correction Propagation Contract: When One Facility Fact Was Wrong, What Must Be Recomputed, Retracted, or Replayed?</a></h3><p>Govern how one corrected facility assertion propagates across data, workflow, AI context, communications, and real-world effects.</p><a href="/writing/correction-propagation-contract/" class="text-link" aria-label="Read the article: The Correction Propagation Contract: When One Facility Fact Was Wrong, What Must Be Recomputed, Retracted, or Replayed?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating method</p><h3><a href="/writing/portfolio-handoff-audit/">The Portfolio Handoff Audit: Where Work Loses Its Owner</a></h3><p>Separate routing, receipt, acceptance, execution, returned disposition, and sender reconciliation across portfolio boundaries.</p><a href="/writing/portfolio-handoff-audit/" class="text-link" aria-label="Read the article: The Portfolio Handoff Audit: Where Work Loses Its Owner">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
