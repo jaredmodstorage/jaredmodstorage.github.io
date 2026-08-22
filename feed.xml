@@ -8,6 +8,14 @@
     <lastBuildDate>Sat, 22 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Before You Share a Number: Name the Source, Period, Population, Unit, and Denominator</title>
+      <link>https://jaredmodstorage.github.io/writing/before-you-share-a-number/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/before-you-share-a-number/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <description>A practical self-storage reporting control for naming source, period, population, unit, formula, corrections, and AI test conditions before using a metric.</description>
+    </item>
+    <item>
       <title>Designing a Human Review Queue That Does Not Become a Bottleneck</title>
       <link>https://jaredmodstorage.github.io/writing/human-review-queue-without-bottleneck/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/human-review-queue-without-bottleneck/</guid>

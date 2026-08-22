@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.BethnUFc.css" data-rsc-css-href="/_next/static/css/index.BethnUFc.css" data-precedence="vite-rsc/importer-resources"/><title>Before You Share a Number: Define the Metric | Jared Mastroianni</title><meta name="description" content="A practical self-storage reporting control for naming source, period, population, unit, formula, corrections, and AI test conditions before using a metric."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Before You Share a Number: Define the Metric | Jared Mastroianni"/><meta property="og:description" content="A practical self-storage reporting control for naming source, period, population, unit, formula, corrections, and AI test conditions before using a metric."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/before-you-share-a-number/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Before You Share a Number: Define the Metric | Jared Mastroianni"/><meta name="twitter:description" content="A practical self-storage reporting control for naming source, period, population, unit, formula, corrections, and AI test conditions before using a metric."/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/before-you-share-a-number/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><main><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/before-you-share-a-number/#article","url":"https://jaredmodstorage.github.io/writing/before-you-share-a-number/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/before-you-share-a-number/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"Before You Share a Number: Name the Source, Period, Population, Unit, and Denominator","datePublished":"2026-08-22","dateModified":"2026-08-22","description":"A practical self-storage reporting control for naming source, period, population, unit, formula, corrections, and AI test conditions before using a metric.","proficiencyLevel":"Beginner to Advanced","about":["Self-storage operations","Metric governance","Data quality","Artificial intelligence evaluation","Operational reporting"]}</script><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><span class="content-anchor" id="site-content" tabindex="-1"></span><article class="essay"><header class="essay-header"><p class="eyebrow">Operator reporting control · 22 August 2026</p><h1>Before You Share a Number: Name the Source, Period, Population, Unit, and Denominator</h1><p class="lede">Turn occupancy, delinquency, lead, response-time, and AI-evaluation numbers into reproducible operating metrics before they enter a comparison, decision, or public claim.</p><div class="byline"><span>By Jared Mastroianni</span><span>15 min read</span></div></header><div class="essay-body">
+<p class="dropcap">A number can be calculated correctly and still be wrong for the decision in front of you.</p>
+<p>That is not a contradiction. A dashboard can divide the recorded numerator by the recorded denominator perfectly while using the wrong period, the wrong population, duplicate records, an incomplete source, or a definition that changed between locations. The arithmetic succeeds. The operating claim fails.</p>
+<p>Self-storage teams encounter this problem constantly. A regional report says occupancy is 92%. A marketing view says a facility received 180 leads. An aging report says delinquency improved. An AI evaluation says a model was 89% accurate. Each number looks precise. None is usable until the reader can answer five questions:</p>
+<ol>
+<li><strong>Source:</strong> Which record produced the data, and when was it observed?</li>
+<li><strong>Period:</strong> What dates, cutoff, and timezone does the number cover?</li>
+<li><strong>Population:</strong> Which facilities, units, accounts, contacts, or cases are included and excluded?</li>
+<li><strong>Unit:</strong> What exactly is being counted?</li>
+<li><strong>Formula:</strong> What are the numerator and denominator, and how are missing, duplicate, late, and corrected records handled?</li>
+</ol>
+<p>I call that the <strong>five-line reporting card</strong>. It is the smallest control I would require before a number is used in an operating review, portfolio comparison, public statement, vendor discussion, or AI-performance claim.</p>
+<p><a href="/diagrams/metric-definition-card.png"><img src="/diagrams/metric-definition-card.png" alt="Five-part self-storage metric-definition card showing source, period, population, unit of analysis, and numerator and denominator feeding one neutral reporting record."></a></p>
+
+<h2>A metric is a governed definition, not a dashboard label</h2>
+<p>Labels such as “occupancy,” “delinquency,” “leads,” “response time,” and “accuracy” are not definitions. Each label can represent several legitimate measures. Trouble begins when people assume they all mean the same thing.</p>
+<p>Suppose two managers report physical occupancy. One divides occupied rentable units by units currently available for rent. The other divides occupied units by every constructed unit, including units temporarily offline. Both calculations may be internally consistent. They are not comparable.</p>
+<p>The correction is not to declare one universal denominator in an article. The operator must choose a definition that fits its governing systems, policies, and decision, then use it consistently and state it clearly. If offline units are excluded, say which offline states qualify, who controls those states, and when the source was checked. If they are included, say that too.</p>
+<p>The same discipline applies across a portfolio. A metric definition should survive a reader asking, “Could another analyst reproduce this result from the named source?” If the answer is no, the result is an observation awaiting definition, not a governed metric.</p>
+
+<h2>The five-line reporting card</h2>
+<h3>1. Source</h3>
+<p>Name the system, table, report, export, or governed record that produced the data. “The dashboard” is usually not enough. The dashboard is a presentation layer; the source may be the property-management system, call platform, access system, accounting ledger, CRM, review queue, or a controlled reconciliation file.</p>
+<p>Record:</p>
+<ul>
+<li>source system and report or record name;</li>
+<li>source owner;</li>
+<li>extraction or observation timestamp;</li>
+<li>freshness rule;</li>
+<li>transformation version; and</li>
+<li>governing source used to reconcile the result.</li>
+</ul>
+<p>If data from two systems are joined, name both and state the join key. If one source governs identity and another governs payment status, preserve that authority boundary. Do not let a convenient export silently become the source of truth.</p>
+
+<h3>2. Period</h3>
+<p>A period needs more than a month name. State whether the measure is a snapshot or a flow.</p>
+<p>A snapshot answers a question at a defined moment: occupied units as of 11:59 p.m. on August 31 in the facility's approved timezone. A flow summarizes events between two boundaries: unique qualified inquiries received from August 1 through August 31.</p>
+<p>Record:</p>
+<ul>
+<li>start and end timestamps;</li>
+<li>inclusive or exclusive boundaries;</li>
+<li>timezone;</li>
+<li>cutoff time;</li>
+<li>treatment of late-arriving events; and</li>
+<li>whether prior periods will be restated after corrections.</li>
+</ul>
+<p>A multi-location report can be wrong by a day without any arithmetic error if facilities use different timezones and the portfolio job applies one unexamined cutoff.</p>
+
+<h3>3. Population</h3>
+<p>The population is the complete group the metric claims to describe. It might be every rentable unit at one facility, every active rental agreement in a portfolio, every eligible lead during a week, or every adjudicable AI-assisted case in a test set.</p>
+<p>State:</p>
+<ul>
+<li>facilities or operating scope;</li>
+<li>inclusion rules;</li>
+<li>exclusion rules;</li>
+<li>status criteria;</li>
+<li>segment or cohort; and</li>
+<li>the reason any record is out of scope.</li>
+</ul>
+<p>Exclusions should be defined before the result is examined whenever possible. Removing difficult cases after seeing the answer can make a metric look better without improving the operation.</p>
+
+<h3>4. Unit</h3>
+<p>The unit is the thing counted once.</p>
+<p>A lead metric can count messages, calls, contact records, people, households, opportunities, or rental intents. A delinquency metric can count accounts, leases, units, tenants, or dollars. A response-time metric can begin at the first inbound event or at the first qualified request. Those choices change the result.</p>
+<p>Name the grain explicitly: one row per facility-day, rental agreement, unique person, inquiry episode, payment obligation, review case, or another defined unit. Then define how duplicates are identified and which record survives.</p>
+<p>If a person calls, emails, and submits a form in one hour, the reporting rule must say whether that is three contact events, one person, or one inquiry episode. Each can be useful. None should masquerade as the others.</p>
+
+<h3>5. Formula</h3>
+<p>Write the numerator and denominator in words before writing the percentage.</p>
+<p>For a fictional physical-occupancy example:</p>
+<ul>
+<li><strong>Population:</strong> 402 units classified as rentable at the reporting cutoff.</li>
+<li><strong>Numerator:</strong> 370 of those units classified as occupied at that same cutoff.</li>
+<li><strong>Denominator:</strong> all 402 units in the defined rentable population.</li>
+<li><strong>Result:</strong> 370 divided by 402, or approximately 92.0%.</li>
+</ul>
+<p>If someone instead divides by 420 constructed units, the result is approximately 88.1%. The difference is not rounding. It is the population and denominator. The reporting card makes that visible before people argue about which dashboard is correct.</p>
+<p>The formula also needs rules for:</p>
+<ul>
+<li>null or missing values;</li>
+<li>duplicates;</li>
+<li>cancelled or reversed transactions;</li>
+<li>late-arriving records;</li>
+<li>corrected history;</li>
+<li>weighting;</li>
+<li>aggregation across facilities; and</li>
+<li>rounding.</li>
+</ul>
+<p>A portfolio percentage calculated from total occupied units divided by total eligible units is not necessarily the same as the simple average of facility percentages. State which aggregation was used and why it fits the decision.</p>
+
+<h2>Five self-storage examples that look simple until they are defined</h2>
+<h3>Occupancy</h3>
+<p>Questions to settle:</p>
+<ul>
+<li>Are units temporarily offline included?</li>
+<li>Are complimentary, model, maintenance, or company-use units treated separately?</li>
+<li>Is the measure physical, economic, or another locally defined occupancy concept?</li>
+<li>Is the report a month-end snapshot or an average of daily states?</li>
+<li>Which source governs unit status?</li>
+</ul>
+<p>Do not compare two occupancy figures until those answers match.</p>
+
+<h3>Delinquency</h3>
+<p>Questions to settle:</p>
+<ul>
+<li>Is the unit a tenant, rental agreement, unit, invoice, account, or dollar?</li>
+<li>What makes an amount delinquent: any open balance, a defined age, or a governed status?</li>
+<li>Is the measure a snapshot of outstanding obligations or a flow of newly delinquent accounts?</li>
+<li>How are credits, reversals, payment plans, disputes, and late postings handled?</li>
+<li>Does the denominator include every active agreement or only agreements with an amount due?</li>
+</ul>
+<p>A falling account count and a rising dollar balance can both be true. One number should not substitute for the other.</p>
+
+<h3>Leads</h3>
+<p>Questions to settle:</p>
+<ul>
+<li>Is a lead a contact event, unique person, qualified inquiry, or opportunity?</li>
+<li>What is the deduplication window and key?</li>
+<li>Are spam, tests, wrong numbers, vendor inquiries, and existing customers excluded?</li>
+<li>Which source owns channel and campaign attribution?</li>
+<li>What happens when the same person changes phone number or email?</li>
+</ul>
+<p>“More leads” is not a meaningful claim until the unit and population are stable.</p>
+
+<h3>Response time</h3>
+<p>Questions to settle:</p>
+<ul>
+<li>Which event starts the clock?</li>
+<li>Which response stops it: automated acknowledgment, first human reply, connected conversation, or resolved request?</li>
+<li>Are closed hours included?</li>
+<li>How are abandoned or never-answered inquiries represented?</li>
+<li>Is the summary a median, percentile, average, or share inside a defined window?</li>
+</ul>
+<p>An average can improve because slow unresolved cases disappeared from the dataset. The missing-case rule belongs beside the result.</p>
+
+<h3>AI-assisted review accuracy</h3>
+<p>An AI metric needs the same controls plus a documented test set and ground-truth process.</p>
+<p>Consider a fictional evaluation:</p>
+<ul>
+<li>200 cases were sampled under a written selection rule;</li>
+<li>16 lacked the evidence required for adjudication and were excluded under a predeclared rule;</li>
+<li>184 cases remained in the eligible evaluation population;</li>
+<li>the system acted on 160 and abstained on 24;</li>
+<li>authorized reviewers labeled 142 acted cases correct and 18 incorrect.</li>
+</ul>
+<p>“Accuracy was 88.75%” describes 142 correct actions divided by 160 acted cases. It does not describe all 200 sampled cases or all 184 eligible cases. The companion coverage measure is 160 divided by 184, approximately 87.0%. Both need the sampling rule, period, population, reviewer method, disagreement rule, deployment context, and limitations.</p>
+<p>Even then, one aggregate rate may hide different error types or consequences. A wrong internal tag and a wrong access recommendation should not inherit the same operating interpretation merely because both are counted as errors.</p>
+<p>This fictional example is a teaching device. It is not a modSTORAGE, Facily.ai, or Facily OS test, deployment, result, benchmark, or product claim.</p>
+
+<h2>Add three controls when the number can drive a consequential decision</h2>
+<h3>Definition identity</h3>
+<p>Assign the metric a stable ID and version. Changing an inclusion rule, source, join, denominator, timezone, aggregation, or correction policy creates a new definition version. Do not overwrite history in a way that makes unlike periods appear continuous.</p>
+<h3>Reconciliation</h3>
+<p>Record whether the reported result was reconciled to the governing source after transformation. A successfully generated dashboard tile proves that the query ran. It does not prove that the source was complete, that joins behaved as intended, or that late corrections were included.</p>
+<h3>Decision boundary</h3>
+<p>State what the metric may and may not support. A descriptive occupancy measure may support an operating discussion. By itself, it does not prove that a campaign, employee, vendor, price change, automation, or AI system caused the result.</p>
+<p>Correlation, timing, and intuition are not a causal design. If the organization wants to make a causal claim, it needs a separate method with a declared comparison, intervention, population, period, confounders, uncertainty, and review.</p>
+
+<h2>The 15-minute operator exercise</h2>
+<p>Choose one number that appeared in a recent meeting. Do not choose the most controversial number. Choose the one everyone assumed they understood.</p>
+<ol>
+<li>Write the exact decision the number is supposed to inform.</li>
+<li>Name the source record and extraction time.</li>
+<li>Write the start, end, cutoff, and timezone.</li>
+<li>Define the population and exclusions in one sentence.</li>
+<li>Name the unit counted once.</li>
+<li>Write the numerator and denominator in words.</li>
+<li>State the missing, duplicate, late, and correction rules.</li>
+<li>Name the definition version and owner.</li>
+<li>Record the reconciliation source and status.</li>
+<li>List one claim the metric does <strong>not</strong> support.</li>
+</ol>
+<p>If the team cannot complete the card, do not discard the number. Label it <code>provisional</code>, name the missing definition owner, and keep it out of consequential or public claims until the gap is resolved.</p>
+<p>Download the <a href="/downloads/metric-definition-card.csv">metric-definition card</a>. It contains fictional occupancy, delinquency, lead, response-time, and AI-review rows plus a blank template row and 43 governed fields. The separate <a href="/downloads/reporting-metric-source-register.csv">source register</a> records the current primary sources and their limitations.</p>
+
+<h2>What the primary sources contribute</h2>
+<p>The U.S. Census Bureau's Statistical Quality Standards, dated February 21, 2023, call for accessible descriptions of the target population, concepts, variables, classifications, geographic levels, reference dates, derived measures, and methodology. Those standards govern Census Bureau work, not private self-storage reporting, but the documentation principles are useful.</p>
+<p>The U.S. Government Accountability Office's 2019 data-reliability guide frames reliability for a purpose in terms of accuracy, completeness, and applicability. It is audit guidance, not a certification for an operator's dashboard.</p>
+<p>NIST AI RMF 1.0, published January 26, 2023, is voluntary, non-sector-specific, and currently under revision. Its Measure function calls for documented test sets, metrics, tools, methods, uncertainty, deployment conditions, and limitations. That is why an AI percentage without its evaluation population and method should not be treated as a complete performance statement.</p>
+<p>None of those sources defines a universal self-storage occupancy, delinquency, lead, response-time, or AI metric. The local owner must choose and govern the definition. The sources support transparency and fit-for-purpose measurement, not the specific fictional formulas in this article.</p>
+
+<h2>The operating rule</h2>
+<p>Before a number moves into a meeting, comparison, model evaluation, public statement, or decision, attach the five-line reporting card:</p>
+<ul>
+<li>source;</li>
+<li>period;</li>
+<li>population;</li>
+<li>unit; and</li>
+<li>numerator and denominator.</li>
+</ul>
+<p>Then add the definition version, reconciliation status, and claim boundary when the consequence is higher.</p>
+<p>Good reporting is not about adding footnotes to make a dashboard look rigorous. It is about making the number reproducible enough that another responsible operator can understand what it measures, what it excludes, and what decision it can support.</p>
+<p>The arithmetic is the easy part. The definition is the operating control.</p>
+
+<h2>Sources and limitations</h2>
+<ul>
+<li>U.S. Census Bureau, <a href="https://www2.census.gov/about/policies/quality/quality-standards.pdf">Statistical Quality Standards</a>, dated February 21, 2023.</li>
+<li>U.S. Government Accountability Office, <a href="https://www.gao.gov/products/gao-20-283g">Assessing Data Reliability</a>, GAO-20-283G, published December 16, 2019.</li>
+<li>National Institute of Standards and Technology, <a href="https://doi.org/10.6028/NIST.AI.100-1">Artificial Intelligence Risk Management Framework 1.0</a>, published January 26, 2023. NIST currently states that AI RMF 1.0 is being revised.</li>
+<li>National Institute of Standards and Technology, <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">AI RMF Core</a>, current official web presentation of AI RMF 1.0, observed August 22, 2026.</li>
+</ul>
+<p><strong>Disclosure:</strong> Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. This article presents a proposed reporting method and fictional examples. It does not report product performance, facility results, customer outcomes, staffing conclusions, legal advice, an industry benchmark, independent research, or a released Facily.ai or Facily OS capability.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/human-review-queue-without-bottleneck/">Designing a Human Review Queue That Does Not Become a Bottleneck</a></h3><p>Route consequential work through evidence-complete admission, qualified review, bounded capacity, visible aging, execution, reconciliation, and reopening.</p><a href="/writing/human-review-queue-without-bottleneck/" class="text-link">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Advanced operating method</p><h3><a href="/writing/automation-slos-for-operators/">Automation SLOs for Operators</a></h3><p>Measure freshness, completion, reconciliation, recovery, evidence integrity, and consequence-aware error budgets in operator terms.</p><a href="/writing/automation-slos-for-operators/" class="text-link">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert reference architecture</p><h3><a href="/writing/facility-event-spine/">The Facility Event Spine</a></h3><p>Separate observations, commands, policy decisions, projections, and reconciliation evidence across a multi-location self-storage operation.</p><a href="/writing/facility-event-spine/" class="text-link">Read the article <span aria-hidden="true">→</span></a></article></div></div></section><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></main></body></html>
