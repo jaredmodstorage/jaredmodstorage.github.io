@@ -32,7 +32,7 @@
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/writing</loc>
-<lastmod>2026-08-21T00:00:00.000Z</lastmod>
+<lastmod>2026-08-22T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -87,6 +87,12 @@
 <url>
 <loc>https://jaredmodstorage.github.io/writing/structured-data-entity-boundary</loc>
 <lastmod>2026-08-21T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://jaredmodstorage.github.io/writing/access-is-not-ownership</loc>
+<lastmod>2026-08-22T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
