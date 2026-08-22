@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.Cct_Kr4W.css" data-rsc-css-href="/_next/static/css/index.Cct_Kr4W.css" data-precedence="vite-rsc/importer-resources"/><title>Observe the Decision Chain, Not Just the API Call | Jared Mastroianni</title><meta name="description" content="An expert trace model for AI-assisted self-storage operations, separating facility context, recommendation, authority, human review, provider acceptance, source readback, reconciliation, and closure."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Observe the Decision Chain, Not Just the API Call | Jared Mastroianni"/><meta property="og:description" content="An expert trace model for AI-assisted self-storage operations, separating facility context, recommendation, authority, human review, provider acceptance, source readback, reconciliation, and closure."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/observe-decision-chain-not-api-call"/><meta property="og:type" content="article"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Observe the Decision Chain, Not Just the API Call | Jared Mastroianni"/><meta name="twitter:description" content="An expert trace model for AI-assisted self-storage operations, separating facility context, recommendation, authority, human review, provider acceptance, source readback, reconciliation, and closure."/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/observe-decision-chain-not-api-call"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><main><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Observe the Decision Chain, Not Just the API Call","datePublished":"2026-08-22","dateModified":"2026-08-22","author":{"@id":"https://jaredmodstorage.github.io/#person"},"mainEntityOfPage":"https://jaredmodstorage.github.io/writing/observe-decision-chain-not-api-call","description":"An expert trace model for AI-assisted self-storage operations, separating facility context, recommendation, authority, human review, provider acceptance, source readback, reconciliation, and closure.","proficiencyLevel":"Expert","about":["Self-storage operations","Artificial intelligence","Distributed tracing","Human-in-the-loop workflows"]}</script><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/facily">Facily</a><a href="/facily-os">Facily OS</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/contact">Contact</a><a href="/media" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/facily">Facily</a><a href="/facily-os">Facily OS</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/contact">Contact</a><a href="/financial-profile-and-disclosures">Financial disclosures</a><a href="/media">Media kit</a><a href="/assets">Assets</a><a href="/publishing-principles">Publishing principles</a></nav></details></header><span class="content-anchor" id="site-content" tabindex="-1"></span><article class="essay"><header class="essay-header"><p class="eyebrow">Expert technical paper · 22 August 2026</p><h1>Observe the Decision Chain, Not Just the API Call</h1><p class="lede">A trace model for following an AI-assisted self-storage decision from facility context and recommendation through authority, human review, provider receipt, governing-source readback, and reconciled closure.</p><div class="byline"><span>By Jared Mastroianni</span><span>16 min read</span></div></header><div class="essay-body">
+<p class="dropcap">A successful API call can be the least important fact in an AI-assisted operating decision.</p>
+<p>A model may answer. A policy service may return <code>allow</code>. A provider may accept a request. A queue may acknowledge a message. None of those observations, by itself, proves that a self-storage workflow used the right facility context, stayed within authority, produced the intended physical or financial effect, or reached a reconciled close.</p>
+<p>Traditional application tracing is excellent at showing how software executed. Operators need an additional view: how a decision moved from evidence to recommendation, from recommendation to authority, from authority to action, and from action to verified operating state.</p>
+<p>I call that view the <strong>decision chain</strong>.</p>
+<p>This article proposes a trace model for AI-assisted self-storage work. It is designed for consequential workflows such as access exceptions, delinquency reviews, refunds, maintenance dispatch, rate changes, lead follow-up, and facility-status corrections. It is a reference method, not a product architecture, customer case study, or performance claim.</p>
+<p><a href="/diagrams/decision-chain-observability.svg"><img src="/diagrams/decision-chain-observability.svg" alt="Eight-stage decision-chain trace for AI-assisted self-storage operations, moving from context assembly through recommendation, policy, human review, command, provider acceptance, source readback, and reconciled closure, with a separate stop path for missing authority or evidence."></a></p>
+<p><a href="/diagrams/decision-chain-observability.svg">Open the full-size decision-chain diagram.</a></p>
+
+<h2>The operating question is larger than the software question</h2>
+<p>A distributed trace can answer questions such as:</p>
+<ul>
+<li>Which services handled the request?</li>
+<li>How long did each operation take?</li>
+<li>Where did an error occur?</li>
+<li>Which upstream call created the downstream work?</li>
+</ul>
+<p>Those are necessary engineering questions. A self-storage operator also needs to ask:</p>
+<ul>
+<li>Which facility, unit, customer record, device, or work order did the decision concern?</li>
+<li>Which source governed each fact, and how fresh was it?</li>
+<li>What did the model recommend, using which model, prompt, retrieval snapshot, and rules?</li>
+<li>Was the recommendation informational, reviewable, or authorized to act?</li>
+<li>Who had the right to approve it for this facility and consequence class?</li>
+<li>What command was issued, what did the receiving system accept, and what actually changed?</li>
+<li>Which governing source was read back after the action?</li>
+<li>What evidence supports closure, limitation, escalation, or rollback?</li>
+</ul>
+<p>An API trace and a decision trace can share the same underlying telemetry. They are not the same assertion. Technical success should remain separate from operating completion.</p>
+
+<h2>One chain, eight stages</h2>
+<p>The reference chain has eight stages. A low-consequence workflow may combine stages. A high-consequence workflow may split them further. The important point is to preserve the boundaries.</p>
+
+<h3>1. Assemble facility context</h3>
+<p><code>facility.<wbr>context.<wbr>assemble</code> identifies the stable facility scope, actor scope, governing sources, current policy version, freshness rules, relevant events, sensitivity class, and unresolved conflicts. Display names are not enough. The trace should use a stable, opaque facility reference and retain the translation used when systems disagree about identifiers.</p>
+<p>If identity, scope, or a required source is ambiguous, the decision chain should stop here. The model should not choose the nearest facility name or silently fill a missing state.</p>
+
+<h3>2. Create the recommendation</h3>
+<p><code>ai.<wbr>recommendation.<wbr>create</code> records what the AI system was asked to do and the bounded recommendation it returned. Useful version fields include model, prompt, retrieval snapshot, tool configuration, rule set, and output schema. Evidence references should point to governed records or immutable snapshots; they should not copy unnecessary customer data into telemetry.</p>
+<p>A fluent answer is still only a recommendation unless the declared workflow grants a narrower authority. The trace must not collapse “the model said” into “the business decided.”</p>
+
+<h3>3. Evaluate policy</h3>
+<p><code>policy.<wbr>decision.<wbr>evaluate</code> records the applicable policy, version, effective time, authority scope, consequence class, decision, reason code, and enforcement point. A missing or conflicted policy should resolve to <code>stop</code> or <code>review_required</code>, never an implicit allow.</p>
+<p>Policy evaluation and policy enforcement may happen in different components. Both need identifiers. A trace showing an allow decision without showing that the enforcement point honored it is incomplete.</p>
+
+<h3>4. Adjudicate human review</h3>
+<p><code>human.<wbr>review.<wbr>adjudicate</code> records the reviewer role, facility scope, evidence packet, decision, limitations, and time. The trace should preserve whether the reviewer approved the recommendation, modified it, rejected it, or requested more evidence.</p>
+<p>The reviewer’s name is not always needed in broadly accessible telemetry. A role reference and protected audit record may be safer. What must remain visible is that a qualified human actually held the decision right at that moment.</p>
+
+<h3>5. Issue the operating command</h3>
+<p><code>operation.<wbr>command.<wbr>issue</code> describes the exact requested change, its idempotency key, target system, authorization reference, expiration, and rollback owner. This is where a recommendation becomes a request to change operating state.</p>
+<p>Commands should be narrow. “Resolve access problem” is not a good command. “Create a review task,” “dispatch an inspection,” and “apply this approved temporary access rule until this time” are distinguishable actions with different evidence and consequence.</p>
+
+<h3>6. Record provider or system acceptance</h3>
+<p><code>provider.<wbr>request.<wbr>accept</code> records whether the receiving boundary accepted, rejected, queued, or deduplicated the request. Preserve the provider receipt or source record reference when available.</p>
+<p>Acceptance is not execution. A 200 response, queue acknowledgment, or created work-order ID may prove that another system received work. It does not prove the gate moved, the refund settled, the repair occurred, the rate took effect, or the facility record became correct.</p>
+
+<h3>7. Read back governing state</h3>
+<p><code>source.<wbr>state.<wbr>reconcile</code> queries the source that governs the intended result after an appropriate interval. It records observed state, observation time, source freshness, expected state, and any mismatch. A webhook can trigger readback; it should not replace readback when the consequence warrants independent verification.</p>
+<p>When the receiving system is not the governing source, the trace should name both. A task system may show <code>closed</code> while the access system still shows the previous rule. The mismatch is the operating fact.</p>
+
+<h3>8. Close, limit, escalate, or roll back</h3>
+<p><code>case.<wbr>close_or_limit</code> gives the workflow its final operating state. Valid outcomes should include more than success and failure: <code>reconciled</code>, <code>limited</code>, <code>awaiting_evidence</code>, <code>escalated</code>, <code>rolled_back</code>, and <code>unresolved</code> are often more truthful.</p>
+<p>Closure should name the evidence reference, responsible owner, retention class, and any remaining limitation. If the workflow cannot reconstruct why it closed, it did not produce a durable operating record.</p>
+
+<h2>Use traces, links, events, and operating states deliberately</h2>
+<p>OpenTelemetry defines a span as a representation of a single operation within a trace. Spans can contain attributes, events, status, and links to other span contexts. That makes the model useful for a decision chain, but the business meaning must be defined explicitly.</p>
+<p><strong>Parent-child spans</strong> fit synchronous or causally nested work. Context assembly can be the parent of a policy evaluation executed within the same request.</p>
+<p><strong>Span links</strong> fit asynchronous work. A provider receipt arriving hours later, a maintenance record created in another system, or a reconciliation process running on a schedule can link back to the originating decision without pretending it occurred in one uninterrupted call stack.</p>
+<p><strong>Span events</strong> fit important observations within an operation: <code>source_conflict_detected</code>, <code>human_review_required</code>, <code>provider_receipt_observed</code>, <code>reconciliation_mismatch</code>, or <code>rollback_started</code>.</p>
+<p><strong>Technical status</strong> should report whether the operation executed as designed. <strong>Operating state</strong> should report whether the workflow reached a supportable business outcome. A reconciliation span can be technically <code>OK</code> while its operating state is <code>mismatch_detected</code>. That is not contradictory; it is precise.</p>
+<p>W3C Trace Context standardizes the <code>traceparent</code> and <code>tracestate</code> headers used to propagate trace context across systems. It helps connect work. It does not establish who had authority, whether the data was true, or whether the operating result was complete.</p>
+
+<h2>A minimum decision-trace envelope</h2>
+<p>A useful root record should carry a small, stable set of operating fields:</p>
+<ul>
+<li><code>decision.trace_id</code>: a random workflow identifier, not a customer or unit identifier;</li>
+<li><code>facility.ref</code>: an opaque stable facility reference;</li>
+<li><code>workflow.type</code>: a controlled vocabulary such as <code>access_exception</code> or <code>maintenance_dispatch</code>;</li>
+<li><code>consequence.class</code>: the declared risk or consequence tier;</li>
+<li><code>authority.<wbr>policy_ref</code> and <code>authority.<wbr>policy_version</code>;</li>
+<li><code>context.snapshot_ref</code> and its observation time;</li>
+<li><code>decision.<wbr>version_refs</code>: model, prompt, retrieval, rules, and tools as applicable;</li>
+<li><code>review.state</code> and qualified reviewer role when required;</li>
+<li><code>action.<wbr>request_ref</code>, <code>provider.<wbr>receipt_ref</code>, and <code>reconciliation.<wbr>evidence_ref</code>;</li>
+<li><code>operating.<wbr>state</code>, separate from technical status;</li>
+<li><code>sensitivity.<wbr>class</code> and <code>retention.<wbr>class</code>; and</li>
+<li><code>rollback.<wbr>owner</code> and closure limitation.</li>
+</ul>
+<p>Do not put names, email addresses, phone numbers, gate codes, payment details, reusable credentials, session tokens, raw prompts containing customer information, or token-bearing URLs into trace attributes or propagated baggage. OpenTelemetry’s security guidance places responsibility for sensitive-data handling on the implementer and recommends data minimization, filtering, redaction, and access controls. Hashing a predictable identifier does not necessarily anonymize it.</p>
+
+<h2>A fictional access exception</h2>
+<p>The following example is fictional. It describes no real facility, customer, vendor, deployment, or outcome.</p>
+<p>At <code>FAC-DEMO-021</code>, a demonstration workflow receives a report that an authorized renter cannot enter during the declared access window. The AI assistant finds a fresh facility-hours record, a recent access-policy version, an access-controller heartbeat, and a delinquency indicator that conflicts with the billing source.</p>
+<p>The context span records the conflict rather than choosing the more convenient value. The model recommends a billing-source readback and a limited human review. It does not recommend a permanent access change.</p>
+<p>The policy span classifies an access-rule change as consequential and requires an onsite or regional reviewer. A qualified reviewer authorizes a time-limited exception only after the billing source confirms the account state. The command span includes the facility reference, approved time window, idempotency key, and expiration.</p>
+<p>The access provider accepts the request and returns a receipt. That receipt changes the operating state to <code>accepted_not_verified</code>, not <code>access_restored</code>. A later source-state readback confirms the temporary rule is active. The case closes as <code>limited_and_reconciled</code> with an automatic expiration and named follow-up owner.</p>
+<p>If the provider had accepted the command but readback showed the old rule, the same technically successful API trace would produce a different operating outcome: <code>reconciliation_mismatch</code>, followed by escalation or rollback.</p>
+
+<h2>Six queries that expose weak automation</h2>
+<p>Once the fields are consistent, the trace store can support diagnostic questions that ordinary uptime monitoring misses:</p>
+<ol>
+<li>Which decisions reached a command without a current policy version?</li>
+<li>Which provider-accepted requests have no governing-source readback within the workflow’s declared interval?</li>
+<li>Which AI recommendations were modified or rejected by qualified reviewers, grouped by reason code and version set?</li>
+<li>Which facility workflows repeatedly stop because identity translation, freshness, or authority scope is missing?</li>
+<li>Which cases closed while the last reconciliation state was missing, stale, or mismatched?</li>
+<li>Which rollback paths exist on paper but have no exercised evidence for the current policy or integration version?</li>
+</ol>
+<p>These are control questions, not performance claims. Telemetry sampling, retention, missing instrumentation, clock skew, and inconsistent field adoption can distort counts. A sampled trace population is not a trustworthy denominator unless the sampling method and exclusions are declared.</p>
+
+<h2>Sampling and retention should follow consequence</h2>
+<p>Keeping every trace forever is neither necessary nor responsible. Keeping only the fastest or most successful traces is also misleading.</p>
+<p>A consequence-aware policy can retain:</p>
+<ul>
+<li>all traces that change access, money, customer status, facility identity, or safety-relevant state;</li>
+<li>all human overrides, policy stops, reconciliation mismatches, and rollbacks;</li>
+<li>a declared sample of low-consequence informational workflows;</li>
+<li>the minimum evidence required for the applicable operating and legal retention period; and</li>
+<li>aggregated metrics only when numerator, denominator, sampling, exclusions, and observation period are reconstructable.</li>
+</ul>
+<p>Tail sampling can be useful because it makes a keep-or-drop decision after more of the trace is visible. It can retain error or high-consequence paths that head sampling might discard. It still requires a declared policy, and it does not turn a sampled trace store into a complete operating ledger.</p>
+
+<h2>A release gate for decision-chain observability</h2>
+<p>Before an AI-assisted workflow is allowed to govern consequential self-storage work, verify:</p>
+<ul>
+<li>the workflow has a stable decision identifier that contains no customer data;</li>
+<li>facility identity and actor scope are explicit;</li>
+<li>governing sources, freshness rules, and conflicts are traceable;</li>
+<li>model, prompt, retrieval, rule, and tool versions are recorded when relevant;</li>
+<li>recommendation, policy decision, human adjudication, and enforcement are separate states;</li>
+<li>command, provider acceptance, execution evidence, and source reconciliation are separate states;</li>
+<li>technical status cannot overwrite operating state;</li>
+<li>asynchronous receipts and readbacks link to the originating decision;</li>
+<li>sensitive data is excluded or transformed before export;</li>
+<li>access to trace data follows least privilege;</li>
+<li>clock, retry, duplicate, timeout, and late-arrival behavior are tested;</li>
+<li>sampling and retention follow declared consequence and privacy rules;</li>
+<li>closure states include limitation, escalation, rollback, and unresolved outcomes; and</li>
+<li>an operator can reconstruct one fictional decision without reading application code.</li>
+</ul>
+
+<h2>Run the tabletop</h2>
+<p>Download the <a href="/downloads/decision-chain-observability-template.csv">decision-chain observability template</a>. It contains one eight-stage fictional access-exception exercise and no real customer, facility, vendor, or product data.</p>
+<p>With an operator, source owner, security reviewer, and engineer:</p>
+<ol>
+<li>Replace the fictional workflow with one bounded process.</li>
+<li>Assign each stage to its authoritative evidence source.</li>
+<li>Remove the policy version. Confirm the workflow stops.</li>
+<li>Return a successful provider receipt but an unchanged governing source. Confirm the case remains open.</li>
+<li>Delay the receipt until after the human review. Confirm the link preserves causality without rewriting time.</li>
+<li>Insert a customer name, gate code, or token into a test attribute. Confirm the telemetry control removes or blocks it.</li>
+<li>Ask a second reviewer to reconstruct the decision using only the retained trace and protected evidence references.</li>
+</ol>
+<p>The exercise succeeds when the team can explain not only what the software did, but what the business was allowed to decide and what the operation can prove.</p>
+
+<h2>Sources and limitations</h2>
+<p>Observed August 22, 2026:</p>
+<ul>
+<li><a href="https://opentelemetry.io/docs/specs/otel/trace/api/">OpenTelemetry Tracing API</a>, defining spans, attributes, events, links, status, and trace context.</li>
+<li><a href="https://opentelemetry.io/docs/security/handling-sensitive-data/">OpenTelemetry: Handling sensitive data</a>, modified January 14, 2026, describing implementer responsibility, data minimization, filtering, redaction, and access controls.</li>
+<li><a href="https://www.w3.org/TR/trace-context/">W3C Trace Context</a>, W3C Recommendation dated November 23, 2021.</li>
+<li><a href="https://github.com/cloudevents/spec">CloudEvents specification repository</a>, listing v1.0.2 as the latest released core specification while the main line remains work in progress.</li>
+<li><a href="https://www.w3.org/TR/prov-o/">W3C PROV-O</a>, W3C Recommendation dated April 30, 2013, for representing entities, activities, agents, and provenance.</li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework program page</a>, describing AI RMF 1.0 as voluntary and noting that it is being revised.</li>
+<li><a href="https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final">NIST Cybersecurity Framework 2.0</a>, published February 26, 2024, including the Govern function.</li>
+</ul>
+<p>These sources inform the transport, telemetry, provenance, cybersecurity, and AI-risk concepts used here. None defines this eight-stage self-storage decision chain, certifies an implementation, or proves an operating result. OpenTelemetry and W3C Trace Context describe observability and propagation mechanics; they do not establish business authority. CloudEvents describes interoperable event metadata; it does not guarantee delivery or operating completion. NIST frameworks are voluntary, cross-sectoral guidance.</p>
+
+<h2>Disclosure</h2>
+<p>I am CEO and Co-Founder of Facily.ai and Chief Operating Officer of modSTORAGE. This article presents a proposed operating and observability method. It is not a Facily OS release specification, a product-availability claim, a customer deployment, a measured modSTORAGE result, an industry standard, or independent validation.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about" class="text-link">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Architecture playbook</p><h3><a href="/writing/source-of-truth-map-before-dashboard">Build a Source-of-Truth Map Before You Build a Dashboard</a></h3><p>Map authority, provenance, freshness, conflict ownership, reconciliation, and rollback before a derived view governs work.</p><a href="/writing/source-of-truth-map-before-dashboard" class="text-link">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert reference model</p><h3><a href="/writing/five-layer-operating-context-stack">The Five-Layer Operating Context Stack for Multi-Facility AI</a></h3><p>Preserve identity, authority, state, time, evidence, review, reconciliation, and rollback across facilities.</p><a href="/writing/five-layer-operating-context-stack" class="text-link">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Founder essay</p><h3><a href="/writing/evidence-before-automation">Evidence Before Automation</a></h3><p>Keep source, authority, action, and reconciled outcome visible in AI-assisted operating work.</p><a href="/writing/evidence-before-automation" class="text-link">Read the article <span aria-hidden="true">→</span></a></article></div></div></section><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/contact">Contact</a><a href="/financial-profile-and-disclosures">Financial disclosures</a><a href="/media">Media kit</a><a href="/assets">Assets</a><a href="/publishing-principles">Publishing principles</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></main></body></html>
