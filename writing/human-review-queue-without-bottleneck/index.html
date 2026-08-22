@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.BethnUFc.css" data-rsc-css-href="/_next/static/css/index.BethnUFc.css" data-precedence="vite-rsc/importer-resources"/><title>Designing a Human Review Queue That Does Not Become a Bottleneck | Jared Mastroianni</title><meta name="description" content="An expert self-storage architecture for routing consequential AI-assisted decisions through evidence-complete, capacity-bounded, qualified, and reconciled human review."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Designing a Human Review Queue That Does Not Become a Bottleneck | Jared Mastroianni"/><meta property="og:description" content="An expert self-storage architecture for routing consequential AI-assisted decisions through evidence-complete, capacity-bounded, qualified, and reconciled human review."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/human-review-queue-without-bottleneck/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Designing a Human Review Queue That Does Not Become a Bottleneck | Jared Mastroianni"/><meta name="twitter:description" content="An expert self-storage architecture for routing consequential AI-assisted decisions through evidence-complete, capacity-bounded, qualified, and reconciled human review."/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/human-review-queue-without-bottleneck/"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><main><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Designing a Human Review Queue That Does Not Become a Bottleneck","datePublished":"2026-08-22","dateModified":"2026-08-22","author":{"@id":"https://jaredmodstorage.github.io/#person"},"mainEntityOfPage":"https://jaredmodstorage.github.io/writing/human-review-queue-without-bottleneck/","description":"An expert self-storage architecture for routing consequential AI-assisted decisions through evidence-complete, capacity-bounded, qualified, and reconciled human review.","proficiencyLevel":"Expert","about":["Self-storage operations","Human-in-the-loop workflows","Artificial intelligence governance","Queue architecture","Operational intelligence"]}</script><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><span class="content-anchor" id="site-content" tabindex="-1"></span><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper · 22 August 2026</p><h1>Designing a Human Review Queue That Does Not Become a Bottleneck</h1><p class="lede">Route consequential AI-assisted work through evidence-complete admission, transparent priority, qualified review, bounded capacity, visible aging, and reconciled closure.</p><div class="byline"><span>By Jared Mastroianni</span><span>19 min read</span></div></header><div class="essay-body">
+<p class="dropcap">“Send it to a human” is not an operating design.</p>
+<p>It is a routing instruction. The hard work begins after the handoff.</p>
+<p>If every uncertain recommendation, stale source, policy conflict, failed command, and customer-facing draft enters the same queue, review becomes the bottleneck. High-consequence work waits behind low-value cases. Reviewers open incomplete evidence packets. Reassignment resets the visible age. Approvals become a reflex. The automation appears controlled because a person clicked a button, while the underlying decision remains weak.</p>
+<p>A useful human-review queue must do more than collect tasks. It must decide what deserves review, preserve why the machine stopped, route the case to a qualified person, expose the consequence clock, constrain work in progress, record a reviewable decision, and keep the case open until execution is reconciled.</p>
+<p>This paper proposes that architecture for multi-location self-storage. It is a reference method and fictional exercise—not a description of a deployed product, customer workflow, staffing result, service level, or measured improvement.</p>
+<p><a href="/diagrams/human-review-queue-state-machine.svg"><img src="/diagrams/human-review-queue-state-machine.svg" alt="Human-review queue state machine for self-storage automation showing consequence-based admission, evidence completeness, qualified review, approval or denial, execution, reconciliation, escalation, expiration, and reopening, with queue-age and capacity controls surrounding the workflow."></a></p>
+<p><a href="/diagrams/human-review-queue-state-machine.svg">Open the full-size human-review queue state machine.</a></p>
+
+<h2>Human review is a service, not a safety label</h2>
+<p>NIST AI RMF 1.0 says organizations should define and differentiate roles and responsibilities for human-AI configurations and oversight. Its current Core also calls for processes for human oversight to be defined, assessed, and documented. Appendix C warns that human-AI interaction varies, human judgment carries bias, and explanations are interpreted differently by different people.</p>
+<p>Those points matter because the presence of a reviewer does not prove meaningful oversight. A reviewer may lack:</p>
+<ul>
+<li>the source evidence used by the automation;</li>
+<li>the authority to make the decision;</li>
+<li>the qualifications required for the consequence;</li>
+<li>enough time before the decision becomes unsafe or irrelevant;</li>
+<li>a visible alternative to approve or deny;</li>
+<li>the ability to request missing evidence;</li>
+<li>the ability to stop downstream execution; or</li>
+<li>feedback showing whether the approved action actually occurred.</li>
+</ul>
+<p>The queue should therefore be treated as an operating service with an explicit intake contract, state model, capacity boundary, decision authority, and reconciliation obligation.</p>
+
+<h2>Keep the queue distinct from the exception ledger</h2>
+<p>An exception ledger records work that stopped, conflicted, failed, or requires accountable follow-up. A human-review queue is narrower: it manages cases in which a qualified person must adjudicate a bounded decision.</p>
+<p>Some exceptions do not need adjudication. A provider timeout may need retry or incident response. A duplicate event may need idempotent suppression. A stale facility identity may need source-owner correction. Conversely, a review case may be created before anything fails: an access-rule change, a public-hours notice, a refund recommendation, or an AI-drafted customer response may require approval by policy.</p>
+<p>Link the two systems when needed, but do not collapse them. The exception ledger answers, “What needs accountable resolution?” The review queue answers, “Which decision must this qualified person make, from which evidence, by when, and what state follows?”</p>
+
+<h2>Define one reviewable unit</h2>
+<p>The reviewable unit is not a message, model output, or alert. It is one bounded decision case.</p>
+<p>Every case should identify:</p>
+<ul>
+<li>a stable review-case ID;</li>
+<li>the facility, entity, and actor scope;</li>
+<li>the decision the reviewer is being asked to make;</li>
+<li>the proposed action and prohibited alternatives;</li>
+<li>the policy and consequence class that require review;</li>
+<li>why the automation deferred;</li>
+<li>the evidence packet and its freshness limits;</li>
+<li>the required reviewer role and separation-of-duties rule;</li>
+<li>the decision deadline and escalation path;</li>
+<li>the allowable outcomes;</li>
+<li>the execution boundary; and</li>
+<li>the governing readback required for closure.</li>
+</ul>
+<p>If two proposed actions can be approved independently, they are two cases. If several model outputs support one indivisible decision, they belong in one evidence packet. The case boundary should follow the operating decision, not the number of technical events.</p>
+
+<h2>Admission control comes before prioritization</h2>
+<p>A queue cannot prioritize its way out of unlimited intake. Decide first which cases are allowed to enter.</p>
+<table class="event-role-table">
+<thead><tr><th>Route</th><th>Use when</th><th>Required behavior</th></tr></thead>
+<tbody>
+<tr><td data-label="Route">Automatic</td><td data-label="Use when">Policy permits a bounded, reversible action with complete evidence</td><td data-label="Behavior">Execute, retain evidence, reconcile, and sample for monitoring</td></tr>
+<tr><td data-label="Route">Human review</td><td data-label="Use when">A qualified decision is required and the packet is reviewable</td><td data-label="Behavior">Admit one bounded case with deadline and owner</td></tr>
+<tr><td data-label="Route">Needs evidence</td><td data-label="Use when">The decision is defined but required evidence is missing, stale, or conflicted</td><td data-label="Behavior">Do not occupy active reviewer capacity; route to the source owner</td></tr>
+<tr><td data-label="Route">Prohibited</td><td data-label="Use when">Policy disallows the action regardless of reviewer preference</td><td data-label="Behavior">Deny at enforcement and record the reason</td></tr>
+<tr><td data-label="Route">Incident or exception</td><td data-label="Use when">The workflow is failing rather than awaiting adjudication</td><td data-label="Behavior">Route to the incident or exception owner; create a review case only for a real decision</td></tr>
+</tbody></table>
+<p>“Low confidence” alone is not an admission rule. Confidence may be poorly calibrated, irrelevant to the consequence, or high even when a required source is stale. Admission should be based on policy, evidence completeness, consequence, reversibility, and the exact decision required.</p>
+
+<h2>Build an evidence packet, not a persuasion packet</h2>
+<p>The packet should help the reviewer test the proposal. It should not be arranged only to make approval easy.</p>
+<p>A balanced packet includes:</p>
+<ul>
+<li>the proposed decision in plain language;</li>
+<li>the machine's reason for deferring;</li>
+<li>the governing source references and observation times;</li>
+<li>missing, stale, conflicting, or excluded evidence;</li>
+<li>the applicable policy version and effective time;</li>
+<li>the consequence and reversibility assessment;</li>
+<li>the model, rule, prompt, retrieval, or workflow version when relevant;</li>
+<li>allowed decision outcomes;</li>
+<li>the effect of taking no action before the deadline;</li>
+<li>privacy or sensitivity markings;</li>
+<li>the execution and rollback boundaries; and</li>
+<li>links to the source records, not only a generated summary.</li>
+</ul>
+<p>Show contradictory evidence beside supporting evidence. Show an expired source as expired. If the automation cannot state why it stopped, the case is not ready for adjudication.</p>
+<p>W3C PROV-O provides general concepts for entities, activities, agents, derivation, attribution, association, plans, and delegation. Those concepts can help represent the packet's provenance. They do not determine which self-storage source is authoritative or which reviewer may approve an action.</p>
+
+<h2>Use a state machine that preserves waiting</h2>
+<p>A queue state should explain what the case is waiting for.</p>
+<p>The proposed core states are:</p>
+<ol>
+<li><code>received</code> — a candidate case exists but has not been routed;</li>
+<li><code>triaged</code> — consequence, policy, duplication, and destination were evaluated;</li>
+<li><code>needs_<wbr>evidence</code> — required evidence is missing, stale, or conflicted;</li>
+<li><code>ready</code> — the packet is complete and a qualified queue can accept it;</li>
+<li><code>claimed</code> — one qualified reviewer owns the decision;</li>
+<li><code>escalated</code> — the original queue cannot decide within authority or time;</li>
+<li><code>approved</code> or <code>denied</code> — the adjudication is recorded;</li>
+<li><code>expired</code> or <code>withdrawn</code> — the decision is no longer valid or required;</li>
+<li><code>executed_<wbr>pending_<wbr>reconciliation</code> — the approved action has a receipt but lacks governing readback;</li>
+<li><code>reconciled</code> — the governing source matches the authorized result; and</li>
+<li><code>reopened</code> — new evidence, an appeal, a mismatch, or a policy change invalidated closure.</li>
+</ol>
+<p>Do not reset the original <code>received_<wbr>at</code> time when a case moves between queues. Preserve every transition with actor, role, time, reason, and prior state. Reassignment changes ownership, not history.</p>
+
+<h2>Priority is a policy decision</h2>
+<p>First-in, first-out is simple, but it can let a low-consequence draft delay a time-sensitive access decision. A raw model score is worse: it makes the system's confidence a proxy for operating urgency.</p>
+<p>A transparent priority rule can consider:</p>
+<ul>
+<li>consequence class;</li>
+<li>time until consequence or opportunity expiry;</li>
+<li>reversibility;</li>
+<li>number and type of affected people, facilities, or records;</li>
+<li>financial, access, privacy, safety, or public-information sensitivity;</li>
+<li>whether an alternative safe state exists;</li>
+<li>current age and prior escalation; and</li>
+<li>the qualified reviewer pool available.</li>
+</ul>
+<p>Publish the rule as a versioned policy. Use arrival time as a tie-breaker inside a consequence class. Monitor whether one facility, language, customer cohort, or decision type is repeatedly delayed. A queue can be internally consistent and still produce unfair service.</p>
+
+<h2>Preserve four clocks</h2>
+<p>One average handling-time metric hides why work is late. Preserve four clocks:</p>
+<ul>
+<li><strong>Total age:</strong> from first receipt to the current time. This never resets.</li>
+<li><strong>Ready age:</strong> time spent with a complete packet waiting for a qualified reviewer.</li>
+<li><strong>Active review time:</strong> time a reviewer actually held the case, excluding a clearly recorded evidence wait.</li>
+<li><strong>Consequence deadline:</strong> the latest time at which the decision remains useful or safe under the governing policy.</li>
+</ul>
+<p>An evidence wait is not invisible. It has a source owner and its own timer. A case that spends two hours awaiting a missing facility-hours source and three minutes in active review did not have a three-minute cycle time.</p>
+<p>Use percentile distributions and oldest-case age by consequence class. A portfolio average can remain stable while one high-consequence case becomes dangerously old.</p>
+
+<h2>Capacity is part of the safety design</h2>
+<p>Review capacity is finite. The design should say what happens when intake exceeds qualified service capacity.</p>
+<p>John D. C. Little's 1961 queueing result relates the long-run average number of units in a stationary system, the effective arrival rate, and the average time in the system: <strong>L = λW</strong>. The result has conditions; it is not a staffing formula or a promise about a transient queue. It does provide a useful conservation check. If completed throughput remains roughly fixed while work in progress grows, average time in the system cannot remain unchanged indefinitely.</p>
+<p>For an operating queue:</p>
+<ul>
+<li>measure arrivals, exits, reopens, and active work in progress by class;</li>
+<li>set a work-in-process limit for each qualified reviewer pool;</li>
+<li>stop low-value admission before the queue is saturated;</li>
+<li>route incomplete cases out of active review capacity;</li>
+<li>reserve capacity for high-consequence or time-critical work;</li>
+<li>make upstream automation degrade safely when review capacity is exhausted; and</li>
+<li>rehearse overload, absence, reassignment, and provider-failure conditions.</li>
+</ul>
+<p>Google SRE guidance on cascading failures describes load shedding and queue-length controls as ways to prevent overload from consuming the service. A human-review queue is not a server, but the operating lesson transfers carefully: unbounded waiting is not graceful degradation. The safe degraded mode may be to stop proposing low-consequence work, preserve the current facility state, or require manual initiation.</p>
+
+<h2>A reviewer needs authority, qualification, and independence</h2>
+<p>Assign to a role, then verify the person currently satisfies it.</p>
+<p>The assignment check should answer:</p>
+<ul>
+<li>Is the reviewer authenticated?</li>
+<li>Is the reviewer scoped to this facility, region, or decision type?</li>
+<li>Is the policy and training current?</li>
+<li>Does the decision require a specialist qualification?</li>
+<li>Did this reviewer create the proposal or control the evidence source?</li>
+<li>Does separation of duties require a second person?</li>
+<li>Is a conflict, recusal, or temporary delegation recorded?</li>
+<li>Can the reviewer stop execution and request more evidence?</li>
+</ul>
+<p>NIST SP 800-53 Revision 5 includes general controls for separation of duties, least privilege, and audit review. These security and privacy controls can inform role design. They do not define self-storage business authority or make every decision a two-person approval.</p>
+
+<h2>The interface must make disagreement possible</h2>
+<p>A review screen should not present one large “Approve” button and a buried alternative.</p>
+<p>At minimum, expose:</p>
+<ul>
+<li>the decision and consequence at the top;</li>
+<li>the original queue age and deadline;</li>
+<li>supporting, contradictory, stale, and missing evidence;</li>
+<li>the policy and reviewer authority;</li>
+<li>approve, deny, request evidence, escalate, recuse, and withdraw paths when allowed;</li>
+<li>the effect of no decision;</li>
+<li>the exact action that approval authorizes;</li>
+<li>the rollback owner and limit;</li>
+<li>a required reason code plus bounded notes; and</li>
+<li>the post-decision receipt and reconciliation state.</li>
+</ul>
+<p>Do not use a default selection for a consequential decision. Do not let a generated explanation hide the original records. Do not present confidence as certainty. A mobile reviewer must see the same decision boundary and missing-evidence state as a desktop reviewer.</p>
+
+<h2>Decision, execution, and closure are three states</h2>
+<p>An approval authorizes an action. It does not prove that the action occurred.</p>
+<p>Preserve:</p>
+<ol>
+<li>the review decision and evidence packet version;</li>
+<li>the authorized action request;</li>
+<li>the receiving system's acceptance or rejection;</li>
+<li>execution evidence;</li>
+<li>governing-source or public-user-path readback;</li>
+<li>match, mismatch, missing, or stale reconciliation state; and</li>
+<li>reopen, rollback, or escalation when the result does not match.</li>
+</ol>
+<p>A queue that closes at approval optimizes the click, not the outcome. A queue that closes at provider acceptance optimizes the receipt. The operating case closes only at its declared terminal state.</p>
+
+<h2>Measure the queue without rewarding rubber stamps</h2>
+<p>A review dashboard should not rank people by approvals per hour. That encourages speed and agreement regardless of consequence.</p>
+<p>Use a balanced set of indicators:</p>
+<ul>
+<li>candidate cases by route: automatic, review, needs evidence, prohibited, incident;</li>
+<li>admitted cases by consequence and decision type;</li>
+<li>duplicate suppression and invalid-case rate;</li>
+<li>evidence-complete rate at admission;</li>
+<li>total age, ready age, active time, and oldest case;</li>
+<li>deadline breach and escalation rate;</li>
+<li>approve, deny, request-evidence, recuse, expire, and withdraw outcomes;</li>
+<li>reopen and appeal rate;</li>
+<li>execution and reconciliation completion;</li>
+<li>mismatch, rollback, and unresolved-result counts;</li>
+<li>work in progress, arrival rate, and completed throughput; and</li>
+<li>measurement coverage and unknown cases.</li>
+</ul>
+<p>Segment by consequence, facility, workflow, reviewer pool, and policy version. Do not publish an “accuracy” or “productivity” result unless the ground truth, population, period, exclusions, reviewer independence, and limitations are defined.</p>
+
+<h2>Five failure tests</h2>
+<ol>
+<li><strong>Evidence flood:</strong> remove one required source and generate 100 candidates. Do incomplete cases consume active reviewer capacity?</li>
+<li><strong>Priority inversion:</strong> place a low-consequence draft ahead of a time-sensitive access case. Does policy reorder them transparently?</li>
+<li><strong>Age reset:</strong> reassign an old case twice. Does the original receipt time remain visible?</li>
+<li><strong>Authority gap:</strong> assign a qualified reviewer outside the facility scope. Does enforcement reject the decision?</li>
+<li><strong>False closure:</strong> approve a public-hours change but make the public readback disagree. Does the case reopen instead of closing green?</li>
+</ol>
+
+<h2>A fictional multi-location tabletop</h2>
+<p>The worksheet includes five fictional cases. They describe no real customer, facility, provider, policy, deployment, or result.</p>
+<p>A temporary-hours notice has complete evidence and waits in a regional operations queue. An access-rule proposal is time-sensitive but lacks a current authority record, so it remains <code>needs_<wbr>evidence</code> rather than occupying an access reviewer. A duplicate refund recommendation collapses under one business case. A maintenance dispatch is approved but remains open pending governing work-order readback. A low-consequence response draft expires during a simulated capacity event without displacing higher-consequence work.</p>
+<p>Run the exercise with an operator, a source owner, a reviewer, and a technical owner:</p>
+<ol>
+<li>Validate the admission route for each case.</li>
+<li>Confirm the evidence packet supports disagreement.</li>
+<li>Calculate which clock is running.</li>
+<li>Apply the priority policy without reading the model confidence first.</li>
+<li>Remove one reviewer and enforce the work-in-progress limit.</li>
+<li>Approve one case, then fail execution.</li>
+<li>Execute another, then create a reconciliation mismatch.</li>
+<li>Reassign the oldest case and confirm its age does not reset.</li>
+<li>Ask another operator to reconstruct every state transition.</li>
+</ol>
+
+<h2>The queue contract</h2>
+<p>Before releasing a human-review queue, require a written contract that names:</p>
+<ul>
+<li>the decisions the queue may contain;</li>
+<li>the decisions that remain prohibited;</li>
+<li>admission and evidence-completeness rules;</li>
+<li>consequence classes and priority policy;</li>
+<li>qualified reviewer roles and separation of duties;</li>
+<li>state transitions and terminal states;</li>
+<li>the four clocks and escalation deadlines;</li>
+<li>work-in-progress and overload behavior;</li>
+<li>decision outcomes, reason codes, and appeal paths;</li>
+<li>execution, reconciliation, rollback, and reopening rules;</li>
+<li>privacy, retention, and audit access;</li>
+<li>measurement definitions and unknown-data treatment; and</li>
+<li>the owner authorized to change the contract.</li>
+</ul>
+
+<h2>Run the worksheet</h2>
+<p>Download the <a href="/downloads/human-review-queue-design-worksheet.csv">human-review queue design worksheet</a>. It contains five fictional cases and 56 governed fields from beginner intake through architect-level capacity, provenance, execution, and reconciliation controls.</p>
+<p>A beginner can start with the decision, facility, consequence, evidence state, deadline, reviewer role, and next action. An operator can add queue state, age, escalation, and source ownership. An architect can complete the policy, model, provenance, separation-of-duties, work-in-progress, execution, reconciliation, privacy, and retention fields.</p>
+
+<h2>Sources and limitations</h2>
+<p>Observed August 22, 2026:</p>
+<ul>
+<li><a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">NIST AI RMF Core</a>, excerpted from AI RMF 1.0, for documented human-AI roles, oversight, prioritization, monitoring, appeal, override, incident response, and recovery. NIST states that AI RMF 1.0 is being revised.</li>
+<li><a href="https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/">NIST AI RMF Appendix C</a>, for limitations and variability in human-AI interaction, role differentiation, context loss, and human bias.</li>
+<li><a href="https://doi.org/10.6028/NIST.AI.600-1">NIST AI 600-1, Generative AI Profile</a>, published July 26, 2024 and updated April 8, 2026, for cross-sectoral GAI risk actions including documented roles, monitoring, incident response, and ownership.</li>
+<li><a href="https://doi.org/10.6028/NIST.SP.800-53r5">NIST SP 800-53 Revision 5</a>, for general separation-of-duties, least-privilege, and audit-review control concepts.</li>
+<li><a href="https://sre.google/sre-book/addressing-cascading-failures/">Google SRE: Addressing Cascading Failures</a>, for technical queue-length control, overload, load shedding, and graceful degradation concepts.</li>
+<li><a href="https://doi.org/10.1287/opre.9.3.383">John D. C. Little, “A Proof for the Queuing Formula: L = λW”</a>, published in <em>Operations Research</em> in 1961, for the stationary-system relationship among average work in progress, effective arrival rate, and average time in the system.</li>
+<li><a href="https://www.w3.org/TR/prov-o/">W3C PROV-O</a>, a W3C Recommendation dated April 30, 2013, for general provenance relationships among entities, activities, agents, plans, roles, attribution, association, and delegation.</li>
+</ul>
+<p>These sources inform the proposed method but do not define a self-storage review queue, staffing level, decision deadline, service commitment, product architecture, or certification. NIST AI resources are voluntary and cross-sectoral; AI RMF 1.0 is under revision. SP 800-53 addresses security and privacy controls, not self-storage business authority. Google SRE describes software-service overload, not human staffing. Little's result has stationary and finite-mean conditions and does not by itself determine transient capacity or queue discipline. PROV-O represents provenance but does not choose authoritative sources or decision rights. The states, clocks, admission routes, metrics, worksheet, and fictional tabletop are proposed here and require local operational, technical, source-owner, privacy, security, legal, accessibility, and workforce review.</p>
+
+<h2>Disclosure</h2>
+<p>I am Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. This paper is an authored operating method. It is not a description of a live review queue, product capability, customer deployment, staffing result, service level, legal conclusion, certification, or measured operating outcome.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Advanced operating method</p><h3><a href="/writing/automation-slos-for-operators/">Automation SLOs for Operators</a></h3><p>Measure freshness, completion, reconciliation, recovery, evidence integrity, and consequence-aware error budgets in operator terms.</p><a href="/writing/automation-slos-for-operators/" class="text-link">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert reference architecture</p><h3><a href="/writing/facility-event-spine/">The Facility Event Spine</a></h3><p>Separate observations, commands, policy decisions, projections, and reconciliation evidence across a multi-location self-storage operation.</p><a href="/writing/facility-event-spine/" class="text-link">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert technical paper</p><h3><a href="/writing/observe-decision-chain-not-api-call/">Observe the Decision Chain, Not Just the API Call</a></h3><p>Trace facility context, recommendation, authority, human review, provider acceptance, source readback, and reconciled closure as distinct operating states.</p><a href="/writing/observe-decision-chain-not-api-call/" class="text-link">Read the article <span aria-hidden="true">→</span></a></article></div></div></section><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></main></body></html>

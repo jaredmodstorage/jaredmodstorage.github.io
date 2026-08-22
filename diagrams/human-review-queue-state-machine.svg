@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="980" viewBox="0 0 1440 980" role="img" aria-labelledby="title desc">
+  <title id="title">Human-review queue state machine for self-storage automation</title>
+  <desc id="desc">A consequence-based human-review workflow moves a bounded decision case through intake, triage, evidence completeness, qualified review, approval or denial, execution, reconciliation, escalation, expiration, and reopening. Queue age, consequence deadlines, qualified capacity, and work-in-progress limits surround every state.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f4f0e8}.ink{fill:#17211f}.muted{fill:#52615d}.navy{fill:#153b44}.green{fill:#1f6a5c}.blue{fill:#286f88}.gold{fill:#a76818}.red{fill:#9d3f36}.paper{fill:#fffdf8}.soft{fill:#e5ece8}.line{stroke:#25433e;stroke-width:4;fill:none;marker-end:url(#arrow)}.dash{stroke:#7a8985;stroke-width:3;stroke-dasharray:10 8;fill:none;marker-end:url(#arrowMuted)}.box{stroke:#25433e;stroke-width:3;rx:18}.title{font:700 40px Arial,sans-serif;letter-spacing:.2px}.subtitle{font:400 20px Arial,sans-serif}.label{font:700 20px Arial,sans-serif}.small{font:400 16px Arial,sans-serif}.tiny{font:700 14px Arial,sans-serif;letter-spacing:1.1px}.white{fill:#fff}.center{text-anchor:middle}.rail{fill:#dfe8e3;stroke:#57706a;stroke-width:2;rx:18}.badge{fill:#fff5df;stroke:#a76818;stroke-width:2;rx:13}
+    </style>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#25433e"/></marker>
+    <marker id="arrowMuted" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#7a8985"/></marker>
+  </defs>
+  <rect class="bg" width="1440" height="980"/>
+  <text class="title ink" x="72" y="72">Design the human-review queue as an operating service</text>
+  <text class="subtitle muted" x="72" y="108">One bounded decision · evidence-complete admission · qualified capacity · reconciled closure</text>
+
+  <rect class="rail" x="72" y="140" width="1296" height="86"/>
+  <text class="tiny muted" x="102" y="170">CONTROL RAIL</text>
+  <text class="label ink" x="102" y="201">Original age never resets</text>
+  <text class="small muted" x="360" y="201">Consequence deadline</text>
+  <text class="small muted" x="620" y="201">Qualified reviewer capacity</text>
+  <text class="small muted" x="930" y="201">Work-in-progress limits</text>
+  <text class="small muted" x="1165" y="201">Audit trail</text>
+
+  <rect class="box navy" x="72" y="288" width="180" height="104"/>
+  <text class="tiny white center" x="162" y="318">CANDIDATE</text>
+  <text class="label white center" x="162" y="349">Received</text>
+  <text class="small white center" x="162" y="375">One decision case</text>
+
+  <path class="line" d="M252 340H310"/>
+  <rect class="box blue" x="312" y="288" width="196" height="104"/>
+  <text class="tiny white center" x="410" y="318">ROUTE</text>
+  <text class="label white center" x="410" y="349">Triaged</text>
+  <text class="small white center" x="410" y="375">Policy + consequence</text>
+
+  <path class="line" d="M508 340H568"/>
+  <polygon points="658,276 748,340 658,404 568,340" fill="#fffdf8" stroke="#25433e" stroke-width="3"/>
+  <text class="label ink center" x="658" y="333">Evidence</text>
+  <text class="small muted center" x="658" y="357">complete?</text>
+
+  <path class="line" d="M748 340H806"/>
+  <text class="tiny green" x="763" y="327">YES</text>
+  <rect class="box green" x="808" y="288" width="196" height="104"/>
+  <text class="tiny white center" x="906" y="318">ADMIT</text>
+  <text class="label white center" x="906" y="349">Ready</text>
+  <text class="small white center" x="906" y="375">Qualified queue only</text>
+
+  <path class="line" d="M1004 340H1064"/>
+  <rect class="box navy" x="1066" y="288" width="222" height="104"/>
+  <text class="tiny white center" x="1177" y="318">OWNERSHIP</text>
+  <text class="label white center" x="1177" y="349">Claimed</text>
+  <text class="small white center" x="1177" y="375">Authority checked</text>
+
+  <path class="line" d="M658 404V472H520"/>
+  <text class="tiny red" x="670" y="433">NO</text>
+  <rect class="box red" x="312" y="472" width="208" height="104"/>
+  <text class="tiny white center" x="416" y="502">SOURCE OWNER</text>
+  <text class="label white center" x="416" y="533">Needs evidence</text>
+  <text class="small white center" x="416" y="559">Not active review WIP</text>
+
+  <path class="dash" d="M416 472V430H658V404"/>
+  <rect class="badge" x="72" y="478" width="188" height="90"/>
+  <text class="tiny gold center" x="166" y="508">OTHER ROUTES</text>
+  <text class="small ink center" x="166" y="534">Automatic · prohibited</text>
+  <text class="small ink center" x="166" y="556">incident · duplicate</text>
+
+  <path class="line" d="M1177 392V472"/>
+  <polygon points="1177,472 1272,536 1177,600 1082,536" fill="#fffdf8" stroke="#25433e" stroke-width="3"/>
+  <text class="label ink center" x="1177" y="529">Decision</text>
+  <text class="small muted center" x="1177" y="553">with reason</text>
+
+  <path class="line" d="M1082 536H936"/>
+  <text class="tiny red" x="986" y="522">DENY</text>
+  <rect class="box red" x="738" y="484" width="198" height="104"/>
+  <text class="tiny white center" x="837" y="514">TERMINAL</text>
+  <text class="label white center" x="837" y="545">Denied</text>
+  <text class="small white center" x="837" y="571">No execution</text>
+
+  <path class="line" d="M1177 600V662"/>
+  <text class="tiny green" x="1190" y="628">APPROVE</text>
+  <rect class="box blue" x="1036" y="664" width="282" height="104"/>
+  <text class="tiny white center" x="1177" y="694">AUTHORIZED ACTION</text>
+  <text class="label white center" x="1177" y="725">Executed · pending</text>
+  <text class="small white center" x="1177" y="751">Receipt is not closure</text>
+
+  <path class="line" d="M1036 716H926"/>
+  <polygon points="836,652 926,716 836,780 746,716" fill="#fffdf8" stroke="#25433e" stroke-width="3"/>
+  <text class="label ink center" x="836" y="709">Readback</text>
+  <text class="small muted center" x="836" y="733">matches?</text>
+
+  <path class="line" d="M746 716H630"/>
+  <text class="tiny green" x="683" y="702">YES</text>
+  <rect class="box green" x="422" y="664" width="208" height="104"/>
+  <text class="tiny white center" x="526" y="694">OPERATING CLOSE</text>
+  <text class="label white center" x="526" y="725">Reconciled</text>
+  <text class="small white center" x="526" y="751">Evidence retained</text>
+
+  <path class="line" d="M836 780V842H1036"/>
+  <text class="tiny red" x="850" y="810">NO / UNKNOWN</text>
+  <rect class="box red" x="1036" y="810" width="282" height="104"/>
+  <text class="tiny white center" x="1177" y="840">REOPEN</text>
+  <text class="label white center" x="1177" y="871">Mismatch or appeal</text>
+  <text class="small white center" x="1177" y="897">Rollback · escalate · repair</text>
+
+  <path class="dash" d="M1036 862H906V392"/>
+  <path class="dash" d="M1177 472V440H1328V340H1288"/>
+  <text class="tiny muted" x="1230" y="454">ESCALATE / REASSIGN</text>
+
+  <rect class="rail" x="72" y="824" width="700" height="90"/>
+  <text class="tiny muted" x="102" y="854">OVERLOAD BEHAVIOR</text>
+  <text class="label ink" x="102" y="884">Stop low-value admission · preserve current state · reserve qualified capacity</text>
+  <text class="small muted" x="102" y="907">No silent dropping, queue-age reset, or automatic approval</text>
+
+  <text class="small muted" x="72" y="954">Proposed reference method · fictional states · no product, staffing, facility, customer, service-level, or performance claim</text>
+</svg>
