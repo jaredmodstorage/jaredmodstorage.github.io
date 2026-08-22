@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Seven-gate release path for a reproducible self-storage benchmark</title>
+  <desc id="desc">A left-to-right research control path passes through claim, establishment, frame, measure, quality, privacy, and release gates. Any failed gate routes down to narrow the claim, repair the protocol, or hold publication.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071B2B"/>
+      <stop offset="1" stop-color="#0E3142"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#020A10" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B8E86B"/>
+    </marker>
+    <style>
+      .kicker { font: 700 20px ui-sans-serif, system-ui, -apple-system, sans-serif; letter-spacing: 4px; fill: #B8E86B; }
+      .headline { font: 800 52px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: #F6F3EA; }
+      .subhead { font: 400 24px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: #B9CBD2; }
+      .num { font: 800 20px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #071B2B; }
+      .gate { font: 800 24px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: #F6F3EA; }
+      .question { font: 500 17px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: #C8D8DD; }
+      .fail-title { font: 800 24px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: #071B2B; }
+      .fail-copy { font: 600 18px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: #25404A; }
+      .footer { font: 600 17px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: #9FB5BD; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1435" cy="110" r="210" fill="#0F4858" opacity="0.35"/>
+  <circle cx="136" cy="786" r="250" fill="#1B5460" opacity="0.23"/>
+
+  <text x="90" y="90" class="kicker">SELF-STORAGE RESEARCH CONTROL</text>
+  <text x="90" y="153" class="headline">Seven gates before a benchmark ships</text>
+  <text x="90" y="198" class="subhead">A result advances only when its claim, unit, evidence, and release boundary agree.</text>
+
+  <path d="M 160 390 H 1440" stroke="#B8E86B" stroke-width="5" marker-end="url(#arrow)" opacity="0.9"/>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(70 270)">
+      <rect width="185" height="240" rx="18" fill="#103B4C" stroke="#2E6572"/>
+      <circle cx="34" cy="36" r="20" fill="#B8E86B"/><text x="34" y="43" text-anchor="middle" class="num">01</text>
+      <text x="22" y="92" class="gate">Claim</text>
+      <text x="22" y="127" class="question"><tspan x="22">What may the</tspan><tspan x="22" dy="25">study actually</tspan><tspan x="22" dy="25">say?</tspan></text>
+    </g>
+    <g transform="translate(277 270)">
+      <rect width="185" height="240" rx="18" fill="#103B4C" stroke="#2E6572"/>
+      <circle cx="34" cy="36" r="20" fill="#B8E86B"/><text x="34" y="43" text-anchor="middle" class="num">02</text>
+      <text x="22" y="92" class="gate">Establishment</text>
+      <text x="22" y="127" class="question"><tspan x="22">Which facility,</tspan><tspan x="22" dy="25">operator, brand,</tspan><tspan x="22" dy="25">or period?</tspan></text>
+    </g>
+    <g transform="translate(484 270)">
+      <rect width="185" height="240" rx="18" fill="#103B4C" stroke="#2E6572"/>
+      <circle cx="34" cy="36" r="20" fill="#B8E86B"/><text x="34" y="43" text-anchor="middle" class="num">03</text>
+      <text x="22" y="92" class="gate">Frame</text>
+      <text x="22" y="127" class="question"><tspan x="22">Who is eligible,</tspan><tspan x="22" dy="25">covered, selected,</tspan><tspan x="22" dy="25">or missing?</tspan></text>
+    </g>
+    <g transform="translate(691 270)">
+      <rect width="185" height="240" rx="18" fill="#103B4C" stroke="#2E6572"/>
+      <circle cx="34" cy="36" r="20" fill="#B8E86B"/><text x="34" y="43" text-anchor="middle" class="num">04</text>
+      <text x="22" y="92" class="gate">Measure</text>
+      <text x="22" y="127" class="question"><tspan x="22">Are source, period,</tspan><tspan x="22" dy="25">unit, and formula</tspan><tspan x="22" dy="25">frozen?</tspan></text>
+    </g>
+    <g transform="translate(898 270)">
+      <rect width="185" height="240" rx="18" fill="#103B4C" stroke="#2E6572"/>
+      <circle cx="34" cy="36" r="20" fill="#B8E86B"/><text x="34" y="43" text-anchor="middle" class="num">05</text>
+      <text x="22" y="92" class="gate">Quality</text>
+      <text x="22" y="127" class="question"><tspan x="22">Are dispositions,</tspan><tspan x="22" dy="25">missingness, and</tspan><tspan x="22" dy="25">uncertainty visible?</tspan></text>
+    </g>
+    <g transform="translate(1105 270)">
+      <rect width="185" height="240" rx="18" fill="#103B4C" stroke="#2E6572"/>
+      <circle cx="34" cy="36" r="20" fill="#B8E86B"/><text x="34" y="43" text-anchor="middle" class="num">06</text>
+      <text x="22" y="92" class="gate">Privacy</text>
+      <text x="22" y="127" class="question"><tspan x="22">Are use, access,</tspan><tspan x="22" dy="25">aggregation, and</tspan><tspan x="22" dy="25">risk governed?</tspan></text>
+    </g>
+    <g transform="translate(1312 270)">
+      <rect width="185" height="240" rx="18" fill="#103B4C" stroke="#2E6572"/>
+      <circle cx="34" cy="36" r="20" fill="#B8E86B"/><text x="34" y="43" text-anchor="middle" class="num">07</text>
+      <text x="22" y="92" class="gate">Release</text>
+      <text x="22" y="127" class="question"><tspan x="22">Do methods, limits,</tspan><tspan x="22" dy="25">version, and repair</tspan><tspan x="22" dy="25">ship too?</tspan></text>
+    </g>
+  </g>
+
+  <path d="M 800 515 V 610" stroke="#F6C96B" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(280 630)" filter="url(#shadow)">
+    <rect width="1040" height="150" rx="24" fill="#F2EBDD"/>
+    <rect width="16" height="150" rx="8" fill="#F6C96B"/>
+    <text x="52" y="57" class="fail-title">If any gate fails, narrow the claim, repair the protocol, or hold publication.</text>
+    <text x="52" y="96" class="fail-copy">Participant snapshot ≠ population estimate · descriptive difference ≠ causal effect · de-identified ≠ risk-free</text>
+    <text x="52" y="126" class="fail-copy">A smaller truthful release is stronger than a larger unsupported leaderboard.</text>
+  </g>
+
+  <text x="90" y="848" class="footer">Proposed method by Jared Mastroianni · fictional teaching control · not an industry standard, certification, or published benchmark result</text>
+</svg>
