@@ -8,6 +8,33 @@
     <lastBuildDate>Sat, 22 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Five-Layer Operating Context Stack for Multi-Facility AI</title>
+      <link>https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>An evidence-bounded architecture for assembling identity, authority and policy, event and time, governing state, and decision and action context for one multi-facility operating question.</description>
+    </item>
+    <item>
+      <title>Where an Operations Agent Must Hand Back Control</title>
+      <link>https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>An evidence-bounded self-storage architecture pattern for binding agent actions to identity, authority, source, policy, consequence, reversibility, side-effect, handback, resumption, and governing-state reconciliation.</description>
+    </item>
+    <item>
+      <title>The Portfolio Handoff Audit: Where Work Loses Its Owner</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-handoff-audit/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-handoff-audit/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A practical self-storage operating method for separating routing, receipt, acceptance, execution, returned disposition, and reconciliation across facility, regional, central, vendor, system, and human-AI boundaries.</description>
+    </item>
+    <item>
       <title>A Self-Storage Benchmark Is a Research Protocol, Not a Leaderboard</title>
       <link>https://jaredmodstorage.github.io/writing/self-storage-benchmark-research-protocol/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/self-storage-benchmark-research-protocol/</guid>
@@ -69,15 +96,6 @@
       <dc:creator>Jared Mastroianni</dc:creator>
       <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>A field-level map for governing sources, transformations, event evidence, freshness, conflict ownership, reconciliation, and rollback.</description>
-    </item>
-    <item>
-      <title>The Five-Layer Operating Context Stack for Multi-Facility AI</title>
-      <link>https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</link>
-      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/</guid>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
-      <dc:creator>Jared Mastroianni</dc:creator>
-      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
-      <description>A proposed architecture for preserving identity, authority, state, time, evidence, human review, reconciliation, and rollback across facilities.</description>
     </item>
     <item>
       <title>Evidence Before Automation</title>

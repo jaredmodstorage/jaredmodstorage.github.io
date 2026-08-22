@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio handoff relay</title>
+  <desc id="desc">A fictional self-storage portfolio handoff moves an exact work item from a prior owner through routing and technical receipt to receiver acceptance, bounded execution, returned disposition, and sender reconciliation. Delivery without acceptance returns to the prior owner or escalation owner, while AI may assemble evidence but cannot assign ownership.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07151f"/>
+      <stop offset="1" stop-color="#102c3b"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173f55"/>
+      <stop offset="1" stop-color="#102f42"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#000" flood-opacity="0.26"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5fd8c2"/>
+    </marker>
+    <marker id="returnArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffb65a"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <circle cx="1470" cy="95" r="265" fill="#1c5366" opacity="0.25"/>
+  <circle cx="85" cy="840" r="235" fill="#08796c" opacity="0.16"/>
+
+  <text x="84" y="66" fill="#f4fbff" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">A handoff changes the owner of the next action—</text>
+  <text x="84" y="112" fill="#f4fbff" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">not the truth of the work.</text>
+  <text x="86" y="154" fill="#a7c3d3" font-family="Inter, Arial, sans-serif" font-size="22">Portfolio Handoff Audit · sender, receiver, receipt, acceptance, response clock, and reconciliation</text>
+
+  <g font-family="Inter, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(84 202)">
+      <rect width="288" height="160" rx="20" fill="#123f3c" stroke="#5fd8c2" stroke-width="3"/>
+      <text x="24" y="42" fill="#88f0dc" font-size="17" font-weight="700">PRIOR OWNER</text>
+      <text x="24" y="80" fill="#f4fbff" font-size="25" font-weight="700">Exact work identity</text>
+      <text x="24" y="113" fill="#c7e5df" font-size="17">Scope · version · authority</text>
+      <text x="24" y="138" fill="#c7e5df" font-size="17">Consequence · current state</text>
+    </g>
+    <g transform="translate(428 202)">
+      <rect width="288" height="160" rx="20" fill="url(#panel)" stroke="#588ca5" stroke-width="2"/>
+      <text x="24" y="42" fill="#5fd8c2" font-size="17" font-weight="700">ROUTED</text>
+      <text x="24" y="80" fill="#f4fbff" font-size="25" font-weight="700">Transfer attempted</text>
+      <text x="24" y="113" fill="#b8cfdb" font-size="17">Route · target · deadline</text>
+      <text x="24" y="138" fill="#b8cfdb" font-size="17">Failure returns immediately</text>
+    </g>
+    <g transform="translate(772 202)">
+      <rect width="288" height="160" rx="20" fill="url(#panel)" stroke="#588ca5" stroke-width="2"/>
+      <text x="24" y="42" fill="#5fd8c2" font-size="17" font-weight="700">RECEIPTED</text>
+      <text x="24" y="80" fill="#f4fbff" font-size="25" font-weight="700">Transport accepted</text>
+      <text x="24" y="113" fill="#b8cfdb" font-size="17">Mailbox · API · portal</text>
+      <text x="24" y="138" fill="#ffcb87" font-size="17">Not receiver acceptance</text>
+    </g>
+    <g transform="translate(1116 202)">
+      <rect width="400" height="160" rx="20" fill="#183552" stroke="#8a7be1" stroke-width="2"/>
+      <text x="24" y="42" fill="#c3b8ff" font-size="17" font-weight="700">RECEIVER DISPOSITION</text>
+      <text x="24" y="80" fill="#f4fbff" font-size="25" font-weight="700">Accept · reject · redirect · condition</text>
+      <text x="24" y="113" fill="#c8d5e2" font-size="17">Named actor · role · action · next update</text>
+      <text x="24" y="138" fill="#c8d5e2" font-size="17">Ownership moves only on valid acceptance</text>
+    </g>
+
+    <g transform="translate(1116 474)">
+      <rect width="400" height="150" rx="20" fill="url(#panel)" stroke="#588ca5" stroke-width="2"/>
+      <text x="24" y="40" fill="#5fd8c2" font-size="17" font-weight="700">BOUNDED EXECUTION</text>
+      <text x="24" y="77" fill="#f4fbff" font-size="25" font-weight="700">Started · blocked · partial · complete</text>
+      <text x="24" y="111" fill="#b8cfdb" font-size="17">Receiver owns only the accepted action</text>
+      <text x="24" y="134" fill="#b8cfdb" font-size="17">Return a typed disposition with evidence</text>
+    </g>
+    <g transform="translate(656 474)">
+      <rect width="400" height="150" rx="20" fill="url(#panel)" stroke="#588ca5" stroke-width="2"/>
+      <text x="24" y="40" fill="#5fd8c2" font-size="17" font-weight="700">RETURNED DISPOSITION</text>
+      <text x="24" y="77" fill="#f4fbff" font-size="25" font-weight="700">Correct item · version · result</text>
+      <text x="24" y="111" fill="#b8cfdb" font-size="17">Evidence · exception · successor handoff</text>
+      <text x="24" y="134" fill="#b8cfdb" font-size="17">Receiver completion is not portfolio closure</text>
+    </g>
+    <g transform="translate(84 474)">
+      <rect width="512" height="150" rx="20" fill="#123f3c" stroke="#5fd8c2" stroke-width="3"/>
+      <text x="24" y="40" fill="#88f0dc" font-size="17" font-weight="700">SENDER RECONCILIATION</text>
+      <text x="24" y="77" fill="#f4fbff" font-size="20" font-weight="700">Verify · clear dependencies · close or reopen</text>
+      <text x="24" y="111" fill="#c7e5df" font-size="17">The governing record ends with a named owner</text>
+      <text x="24" y="134" fill="#c7e5df" font-size="17">History preserves every state and exception</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#5fd8c2" stroke-width="5" marker-end="url(#arrow)">
+    <path d="M 378 282 L 418 282"/>
+    <path d="M 722 282 L 762 282"/>
+    <path d="M 1066 282 L 1106 282"/>
+    <path d="M 1316 370 L 1316 464"/>
+    <path d="M 1106 549 L 1066 549"/>
+    <path d="M 646 549 L 606 549"/>
+  </g>
+
+  <path d="M 916 370 C 916 420 715 420 715 449" fill="none" stroke="#ffb65a" stroke-width="4" stroke-dasharray="11 8" marker-end="url(#returnArrow)"/>
+  <text x="750" y="411" fill="#ffca85" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">NO ACCEPTANCE · PRIOR OWNER OR ESCALATION OWNER REMAINS</text>
+
+  <g transform="translate(84 700)" font-family="Inter, Arial, sans-serif">
+    <rect width="942" height="122" rx="20" fill="#0b2130" stroke="#376d85" stroke-width="2"/>
+    <text x="26" y="38" fill="#ffca85" font-size="18" font-weight="700">OWNER-OF-NEXT-ACTION RULE</text>
+    <text x="26" y="72" fill="#f4fbff" font-size="20" font-weight="700">Accepted receiver · prior owner after rejection or expiry</text>
+    <text x="26" y="101" fill="#f4fbff" font-size="20" font-weight="700">Named escalation owner · explicit unknown under recovery</text>
+  </g>
+  <g transform="translate(1066 700)" font-family="Inter, Arial, sans-serif">
+    <rect width="450" height="122" rx="20" fill="#192c48" stroke="#8a7be1" stroke-width="2"/>
+    <text x="24" y="38" fill="#c3b8ff" font-size="18" font-weight="700">AI HANDOFF EVIDENCE ASSEMBLER</text>
+    <text x="24" y="76" fill="#f4fbff" font-size="23" font-weight="700">Extract · compare · flag · draft</text>
+    <text x="24" y="103" fill="#aebed0" font-size="17">Human policy owns consequential transfer.</text>
+  </g>
+
+  <text x="84" y="868" fill="#7898aa" font-family="Inter, Arial, sans-serif" font-size="16">Authored proposed method · all facilities and records fictional · not a deployment, customer result, service level, legal conclusion, certification, or industry standard</text>
+</svg>

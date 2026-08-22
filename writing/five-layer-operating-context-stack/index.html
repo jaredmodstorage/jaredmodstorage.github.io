@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CenoMrSV.css" data-rsc-css-href="/_next/static/css/index.CenoMrSV.css" data-precedence="vite-rsc/importer-resources"/><title>The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni</title><meta name="description" content="A proposed five-layer architecture for preserving facility identity, policy authority, operational state, event time, decision evidence, human review, reconciliation, and rollback across multi-facility AI workflows."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni"/><meta property="og:description" content="A proposed five-layer architecture for preserving facility identity, policy authority, operational state, event time, decision evidence, human review, reconciliation, and rollback across multi-facility AI workflows."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-22"/><meta property="article:modified_time" content="2026-08-22"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/diagrams/five-layer-operating-context-stack.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="Five stacked operating-context layers for multi-facility AI with a stop path when a required layer is missing."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni"/><meta name="twitter:description" content="A proposed five-layer architecture for preserving facility identity, policy authority, operational state, event time, decision evidence, human review, reconciliation, and rollback across multi-facility AI workflows."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/diagrams/five-layer-operating-context-stack.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CUZRod3P.css" data-rsc-css-href="/_next/static/css/index.CUZRod3P.css" data-precedence="vite-rsc/importer-resources"/><title>The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni</title><meta name="description" content="An evidence-bounded architecture for assembling identity, authority and policy, event and time, governing state, and decision and action context for one multi-facility operating question."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni"/><meta property="og:description" content="An evidence-bounded architecture for assembling identity, authority and policy, event and time, governing state, and decision and action context for one multi-facility operating question."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-22"/><meta property="article:modified_time" content="2026-08-22"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/operating-context-stack.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="One bounded operating question passes through five identity, authority and policy, event and time, governing-state, and decision and action layers; each layer admits, limits, holds, or rejects context while a versioned manifest preserves evidence, exclusions, authority, and readback."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni"/><meta name="twitter:description" content="An evidence-bounded architecture for assembling identity, authority and policy, event and time, governing state, and decision and action context for one multi-facility operating question."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/operating-context-stack.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
 <link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
 <style data-vinext-fonts>/* cyrillic-ext */
@@ -128,212 +128,231 @@
 
 .__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
 </style>
-</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/#article","url":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Five-Layer Operating Context Stack for Multi-Facility AI","datePublished":"2026-08-22","dateModified":"2026-08-22","image":"https://jaredmodstorage.github.io/diagrams/five-layer-operating-context-stack.png","description":"A proposed five-layer architecture for preserving facility identity, policy authority, operational state, event time, decision evidence, human review, reconciliation, and rollback across multi-facility AI workflows."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Five-Layer Operating Context Stack for Multi-Facility AI","item":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Five-Layer Operating Context Stack for Multi-Facility AI</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert reference model<!-- --> · <time dateTime="2026-08-22">22 August 2026</time></p><h1>The Five-Layer Operating Context Stack for Multi-Facility AI</h1><p class="lede">Identity, authority, state, time, and evidence should be assembled before an AI-assisted workflow is allowed to govern work across facilities.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>13 min read</span></div></header><div class="essay-body"><p class="dropcap">An AI system can produce a fluent answer with almost no operating context. That is the problem.</p>
-<p>In a multi-facility operation, the same sentence can be correct for one location, prohibited at another, stale by the time it reaches a third, and outside the authority of the person asking. A model can recognize a maintenance note without knowing which facility it belongs to. It can recommend an action without knowing whether that action is allowed. It can summarize a status without knowing whether the source is current. It can cite an event without knowing whether the event was delivered, accepted, executed, or reconciled.</p>
-<p>The remedy is not a longer prompt. It is an operating context stack.</p>
-<p>This article proposes five layers that should be assembled before an AI-assisted workflow is allowed to govern work across facilities:</p>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/#article","url":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Five-Layer Operating Context Stack for Multi-Facility AI","datePublished":"2026-08-22","dateModified":"2026-08-22","image":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/operating-context-stack.png","description":"An evidence-bounded architecture for assembling identity, authority and policy, event and time, governing state, and decision and action context for one multi-facility operating question.","proficiencyLevel":"Expert","about":["Self-storage operations","Multi-location operating systems","Context engineering","Data governance","Responsible artificial intelligence","Provenance"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Five-Layer Operating Context Stack for Multi-Facility AI","item":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Five-Layer Operating Context Stack for Multi-Facility AI</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-22">22 August 2026</time></p><h1>The Five-Layer Operating Context Stack for Multi-Facility AI</h1><p class="lede">Assemble identity, authority and policy, event and time, governing state, and decision and action context for one bounded multi-facility operating question.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>15 min read</span></div></header><div class="essay-body"><p class="dropcap">An AI system can retrieve the correct sentence and still be wrong for the work.</p>
+<p>The sentence can describe another facility. It can come from a source that is authoritative for marketing but not access control. It can be current as of the observation time and already obsolete at the effective time. It can be accurate yet outside the actor&#39;s authority. It can support a recommendation without supporting the proposed action.</p>
+<p>That is the context problem in multi-facility operations.</p>
+<p>Context is often treated as extra prose placed around a prompt. For consequential work, context should be a typed operating object assembled for one question, at one time, under one authority boundary. It should expose what is known, what is conflicting, what is missing, and what the resulting decision is allowed to do.</p>
+<p>This paper proposes a five-layer operating context stack for self-storage portfolios:</p>
 <ol>
-<li>identity context;</li>
-<li>policy and authority context;</li>
-<li>operational state context;</li>
-<li>event and temporal context; and</li>
-<li>decision and evidence context.</li>
+<li>identity;</li>
+<li>authority and policy;</li>
+<li>event and time;</li>
+<li>governing state;</li>
+<li>decision and action.</li>
 </ol>
-<p><a href="/diagrams/five-layer-operating-context-stack.svg"><img src="/diagrams/five-layer-operating-context-stack.svg" width="1600" height="900" loading="lazy" decoding="async" alt="Five stacked operating-context layers for multi-facility AI: identity, policy and authority, operational state, events and time, and decision and evidence, enclosed by a versioned context envelope with a stop path when a required layer is missing."></a></p>
-<p><a href="/diagrams/five-layer-operating-context-stack.svg">Open the full-size SVG diagram.</a></p>
-<p>The stack is a reference model, not a product diagram. It does not describe a released Facily OS architecture, a modSTORAGE production system, a vendor integration, or a measured result.</p>
-<h2>Context is a governed input, not prompt decoration</h2>
-<p>“Add context” is often treated as a retrieval problem: find more documents, place them near the prompt, and let the model synthesize. That can improve relevance. It does not establish authority.</p>
-<p>Operating context must answer harder questions:</p>
-<ul>
-<li>Which real entity does this request concern?</li>
-<li>Which role is acting, and within what scope?</li>
-<li>Which policy version is effective?</li>
-<li>Which source governs each state field?</li>
-<li>When did the underlying occurrence happen?</li>
-<li>When was it observed by this system?</li>
-<li>What conflict or missing-data condition is active?</li>
-<li>What evidence supports the recommendation?</li>
-<li>Who approved the action?</li>
-<li>What receipt and reconciliation prove the final state?</li>
-</ul>
-<p>These questions belong in explicit fields with owners, timestamps, versions, and failure behavior. They should not depend on a model inferring the answer from prose.</p>
-<p>The five layers are ordered. A higher layer may reference a lower one, but it must not silently redefine it. A recommendation cannot invent the facility identity. An event cannot grant authority. A current-looking state cannot override policy. A human approval cannot erase the evidence trail that made the decision reviewable.</p>
+<p>The stack is not a larger prompt. It is a contract between source systems, policy owners, operators, models, tools, and the governing-state readback.</p>
+<p>The companion package includes a fictional <a href="operating-context-envelope-template.csv">operating-context envelope</a>, a <a href="operating-context-readiness-suite.csv">readiness suite</a>, a structural <a href="operating-context-stack.schema.json">JSON Schema</a>, a fictional <a href="fictional-operating-context-envelope.json">example envelope</a>, and an accessible <a href="operating-context-stack.svg">stack diagram</a>. The complete source and limitation record is in the <a href="source-register.csv">source register</a>.</p>
+<p>This is an authored reference pattern. It does not describe a deployed product, customer implementation, model capability, measured result, service level, certification, legal conclusion, safety procedure, or industry standard.</p>
+<p><a href="operating-context-stack.svg"><img src="operating-context-stack.svg" width="1600" height="900" loading="lazy" decoding="async" alt="One bounded operating question passes through five identity, authority and policy, event and time, governing-state, and decision and action layers; each layer admits, limits, holds, or rejects context while a versioned manifest preserves evidence, exclusions, authority, and readback."></a></p>
+<p><a href="operating-context-stack.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="five-layer-operating-context-stack-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="five-layer-operating-context-stack-downloads">Use the method. Test the failure paths.</h2>
+<p>These files contain fictional examples and structural tools. They do not establish a live facility fact, product capability, customer result, operating performance, certification, or independent validation.</p>
+<div><a href="operating-context-envelope-template.csv" download>Download the fictional operating-context envelope <span aria-hidden="true">↓</span></a><a href="operating-context-readiness-suite.csv" download>Download the operating-context readiness suite <span aria-hidden="true">↓</span></a><a href="operating-context-stack.schema.json" download>Download the Draft 2020-12 JSON Schema <span aria-hidden="true">↓</span></a><a href="fictional-operating-context-envelope.json" download>Download the fictional example envelope <span aria-hidden="true">↓</span></a><a href="operating-context-stack.svg" download>Download the accessible operating-context SVG <span aria-hidden="true">↓</span></a><a href="operating-context-stack.png" download>Download the operating-context PNG <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a></div>
+</section>
+<h2>Begin with one operating question</h2>
+<p>The smallest useful context object is built for one named question.</p>
+<p>“What do we know about Facility Cedar?” is too broad. It invites the system to mix public facts, operating schedules, customer records, work orders, incidents, forecasts, and model inferences without declaring which of them can govern the answer.</p>
+<p>A bounded question looks more like this:</p>
+<blockquote>
+<p>Which approved public Saturday office-hours value should be proposed for Facility Cedar&#39;s owned profile during the August 29 publishing window?</p>
+</blockquote>
+<p>The question declares a facility, field, destination, proposed use, and time. It gives the context builder something testable. The builder can now determine which identities must resolve, which source owns that field, which policy applies, which event changed the value, which state is current, and whether the result supports a proposal or an action.</p>
+<p>The context object should receive its own stable ID and version. If the facility, field, purpose, source version, policy version, value, consequence, or action scope changes materially, create a new version. Do not quietly update the context behind an already approved decision.</p>
 <h2>Layer 1: identity context</h2>
-<p>Identity context establishes what and who the workflow is about.</p>
-<p>At minimum, record:</p>
+<p>Identity answers <strong>what exact thing is this about?</strong></p>
+<p>At minimum, represent the portfolio, legal or operating entity when relevant, facility, resource, field, subject, current actor, and destination. Human-readable names remain display labels. They are not the join key.</p>
+<p>A multi-location operator can have similar street names, renamed locations, legacy web pages, vendor site codes, access-control panels with local identifiers, and finance entities that do not align one-to-one with facility brands. The context builder should resolve those identities before retrieving facts.</p>
+<p>The identity layer should include:</p>
 <ul>
-<li>stable facility ID;</li>
-<li>current facility label and lifecycle state;</li>
-<li>system or tenant boundary;</li>
-<li>actor ID and authenticated role;</li>
-<li>permitted facility, region, and portfolio scope;</li>
-<li>service or automation identity when software is acting; and</li>
-<li>the identifier translation used when two systems name the same entity differently.</li>
+<li>stable facility and entity IDs;</li>
+<li>external-system aliases and their source;</li>
+<li>resource and field identifiers;</li>
+<li>the subject on whose behalf the work exists;</li>
+<li>the current human or service actor;</li>
+<li>the requested destination and environment;</li>
+<li>identity resolution state: <code>resolved</code>, <code>conflict</code>, <code>unknown</code>, or <code>retired</code>;</li>
+<li>and the evidence supporting the resolution.</li>
 </ul>
-<p>The stable identifier matters more than the display name. Names change. Addresses can be formatted several ways. A legacy source may retain an old label. A platform login may administer an asset without establishing legal ownership, employment, operation, or provider status.</p>
-<p>Identity context must preserve those boundaries. “Can access this record” and “owns this facility” are different propositions. “Runs this workflow” and “is the authoritative source” are different propositions. The stack should carry only the relationship needed for the decision and should name the evidence for that relationship.</p>
-<p>Failure behavior: if facility identity, actor identity, or scope is ambiguous, stop before policy evaluation. Do not let the model choose the closest name.</p>
-<h2>Layer 2: policy and authority context</h2>
-<p>Policy context defines what may happen, who may decide, and where enforcement occurs.</p>
-<p>Record:</p>
-<ul>
-<li>policy ID, version, owner, and effective time;</li>
-<li>permitted and prohibited actions;</li>
-<li>consequence class;</li>
-<li>thresholds for human review;</li>
-<li>required approver role;</li>
-<li>separation-of-duties rules;</li>
-<li>enforcement point;</li>
-<li>exception and expiration behavior; and</li>
-<li>the rollback authority.</li>
-</ul>
-<p>This layer separates a policy decision from policy enforcement. A rule engine, application service, or human reviewer may decide that an action is allowed. A different component may enforce the result. Both steps need identifiers and evidence.</p>
-<p>NIST Special Publication 800-207 describes policy decision and enforcement concepts for zero-trust access architecture. That is a useful architectural distinction, but its scope is cybersecurity and access to enterprise resources. It does not define self-storage operating authority, employment roles, customer permissions, or the five-layer model proposed here.</p>
-<p>Failure behavior: if the policy is missing, expired, conflicted, or outside the actor’s scope, route to an accountable human owner. “No rule found” must never become “allowed.”</p>
-<h2>Layer 3: operational state context</h2>
-<p>State context describes what is currently believed to be true and why.</p>
-<p>For every state field used in a decision, record:</p>
-<ul>
-<li>field definition and allowed values;</li>
-<li>governing source and source owner;</li>
-<li>observed value;</li>
-<li>observation time;</li>
-<li>freshness threshold;</li>
-<li>transformation or projection version;</li>
-<li>conflict state;</li>
-<li>null behavior; and</li>
-<li>last reconciled reference.</li>
-</ul>
-<p>A dashboard is not automatically the source of truth. Neither is the newest record, the largest database, or the system with the cleanest interface. A derived state should identify the records and rules that produced it.</p>
-<p>Multi-facility systems also need explicit partitioning. A portfolio-wide view must not blend fields whose meanings, timezones, source owners, or update rhythms differ. <code>open</code>, for example, may mean assigned in one system, unverified completion in another, and an unresolved exception in a third.</p>
-<p>Failure behavior: stale, missing, or conflicting state remains visible as stale, missing, or conflicting. The model may explain the condition. It must not manufacture a clean state to keep the workflow moving.</p>
-<h2>Layer 4: event and temporal context</h2>
-<p>State answers “what is believed now.” Event context answers “what happened, according to whom, and when.”</p>
-<p>Record:</p>
-<ul>
-<li>event ID;</li>
-<li>event type and schema version;</li>
-<li>producer or source;</li>
-<li>subject;</li>
-<li>occurrence time;</li>
-<li>ingestion time;</li>
-<li>correlation or causation reference;</li>
-<li>payload sensitivity class;</li>
-<li>delivery and processing receipts; and</li>
-<li>supersession or replay status.</li>
-</ul>
-<p>Occurrence time and ingestion time are separate. A late-arriving event can be newer in the queue while describing an older occurrence. A repeated delivery may carry the same occurrence. A transport receipt proves that a message reached a boundary; it does not prove that the intended business action was authorized, executed, or reconciled.</p>
-<p>CloudEvents provides a vendor-neutral format for event metadata. Its released core line is v1.0.2, while the repository’s main specification is work in progress. CloudEvents improves event interoperability; it does not define business authority, a processing model, delivery guarantees, or operating completion. Its specification also warns against placing sensitive information in context attributes.</p>
-<p>Failure behavior: unknown schemas, impossible time order, duplicate identifiers, missing correlation, or sensitive context leakage should create an exception rather than a guessed timeline.</p>
-<h2>Layer 5: decision and evidence context</h2>
-<p>This layer makes the AI-assisted decision reconstructable.</p>
-<p>Record:</p>
-<ul>
-<li>decision ID and intended decision;</li>
-<li>model, system, prompt, retrieval, and rule versions;</li>
-<li>evidence references and their observation times;</li>
-<li>assumptions and limitations;</li>
-<li>recommendation and confidence language;</li>
-<li>human reviewer and adjudication;</li>
-<li>policy decision reference;</li>
-<li>action request and acceptance receipt;</li>
-<li>execution evidence;</li>
-<li>reconciliation evidence; and</li>
-<li>rollback owner and method.</li>
-</ul>
-<p>W3C PROV-O offers a general ontology for entities, activities, agents, and derivations. It can help represent where decision evidence came from. It does not decide whether a source is operationally authoritative, whether an action is allowed, or whether a self-storage workflow is complete.</p>
-<p>NIST AI RMF 1.0 organizes voluntary AI risk management through Govern, Map, Measure, and Manage. NIST’s current AI RMF page says version 1.0 is being revised. NIST AI 600-1 is a cross-sectoral generative-AI profile published July 26, 2024. These resources support risk identification, documentation, measurement, and human oversight; they do not prescribe this stack or certify an implementation.</p>
-<p>Failure behavior: if the evidence packet cannot be reconstructed, the system may offer an informational summary but must not present the result as an authorized operating decision.</p>
-<h2>The context envelope</h2>
-<p>The five layers should be assembled into a versioned context envelope for one decision or workflow instance. The envelope is not a copy of every record. It is the minimum evidence-bearing snapshot needed to evaluate, authorize, execute, and later audit the decision.</p>
-<p>One envelope should declare:</p>
-<ul>
-<li>its own version and creation time;</li>
-<li>the decision or workflow instance it supports;</li>
-<li>references to each layer;</li>
-<li>the rule for resolving conflicts between layers;</li>
-<li>sensitivity and retention controls;</li>
-<li>a hash or immutable reference when consequence warrants it; and</li>
-<li>the exact point at which the envelope expires and must be rebuilt.</li>
-</ul>
-<p>Do not propagate the full envelope everywhere. OpenTelemetry Baggage is one mechanism for carrying application-defined context through a distributed request. Its API is stable, but baggage can cross process boundaries, may be visible in network headers, and has no built-in integrity guarantee. Use opaque references where possible. Keep secrets, customer data, and sensitive policy facts out of broadly propagated context.</p>
-<h2>A fictional multi-facility incident</h2>
-<p>Consider a fictional workflow. It does not describe a real facility, vendor, integration, or result.</p>
-<p>An AI assistant receives three signals associated with a demonstration facility: a manager report that a gate is intermittently failing, a stale device heartbeat, and an open maintenance item. The assistant is asked what to do next.</p>
-<p>The five-layer envelope could contain:</p>
-<p><strong>Identity.</strong> <code>FAC-DEMO-014</code> is the stable facility ID. The requesting actor is a regional operations reviewer scoped to the demonstration region. The device and work-order systems both map to that facility through approved translation records.</p>
-<p><strong>Policy.</strong> Policy <code>ACCESS-INCIDENT-02</code>, version 4, permits the assistant to summarize and recommend. It prohibits automated unlock or access-rule changes. A safety- or access-impacting incident requires named human review. The application service is the enforcement point.</p>
-<p><strong>State.</strong> The incident is open in the governing work-order source. The heartbeat is outside its freshness threshold. No verified closure evidence exists. The visible state is therefore <code>open_with_stale_telemetry</code>, not <code>device_failed</code> and not <code>resolved</code>.</p>
-<p><strong>Events.</strong> The manager report occurred before the last heartbeat but was ingested after it. Both occurrence and ingestion times are retained. The maintenance-created event and telemetry event have separate IDs and share a correlation reference. Message delivery is recorded without being labeled execution.</p>
-<p><strong>Decision and evidence.</strong> The assistant recommends an onsite inspection and a controlled vendor-dispatch review. It states that the heartbeat alone does not prove physical failure. A named reviewer approves dispatch but does not authorize an unlock. The accepted work-order receipt is recorded. Closure remains blocked until verification evidence is attached and reconciled to the stable facility ID.</p>
-<p>Without the stack, the same signals could produce a confident but unsafe shortcut: “The gate is down; unlock it remotely and close the ticket.” The stack changes the question from “What does the model think?” to “What can this workflow support, authorize, and prove?”</p>
-<h2>Five omission tests</h2>
-<p>Use these tests during design review:</p>
+<p>Do not collapse subject, actor, and authorizer into “user.” A person may request a correction, a service may assemble it, another owner may approve it, and a different credential may execute it.</p>
+<p><a href="https://csrc.nist.gov/CSRC/media/Projects/risk-management/800-53%20Downloads/800-53r5/SP_800-53_v5_1-derived-OSCAL.pdf">NIST SP 800-53 Revision 5.1</a> includes access enforcement, least privilege, separation of duties, audit accountability, and controls for processes acting on behalf of users. It requires organizational selection and tailoring and is not an AI context standard. Its relevant constraint is simple: the identity of a process and the access assigned to it should remain inspectable.</p>
+<p>Identity resolution is necessary, not sufficient. A stable facility ID does not tell the system which source owns its access hours or whether the actor can change them.</p>
+<h2>Layer 2: authority and policy context</h2>
+<p>Authority answers <strong>who or what is allowed to supply, decide, approve, and execute this part of the work?</strong></p>
+<p>There are at least four kinds of authority:</p>
 <ol>
-<li><strong>Identity omission:</strong> Could the same request be routed to the wrong facility or acted on by the wrong scope?</li>
-<li><strong>Policy omission:</strong> Could a recommendation be mistaken for permission?</li>
-<li><strong>State omission:</strong> Could stale, conflicting, or derived data appear current and authoritative?</li>
-<li><strong>Event omission:</strong> Could delivery be mistaken for occurrence, execution, or completion?</li>
-<li><strong>Evidence omission:</strong> Could the result be impossible to reconstruct, challenge, or roll back?</li>
+<li><strong>source authority</strong> — which record and field govern the fact;</li>
+<li><strong>policy authority</strong> — which rule and version govern the decision;</li>
+<li><strong>decision authority</strong> — who may select among allowed dispositions;</li>
+<li><strong>execution authority</strong> — who or what may perform the exact action.</li>
 </ol>
-<p>If any answer is yes, the workflow is not ready for consequential automation.</p>
-<h2>Interface requirements</h2>
-<p>The operator should not have to inspect raw JSON to understand the stack. The interface should show:</p>
+<p>These authorities may belong to different owners. A facility information owner may govern public office hours. An access-control owner may govern physical entry schedules. A communications policy may govern message content. A credential scope may govern which profile field one service can update.</p>
+<p>The authority layer should record:</p>
 <ul>
-<li>facility and actor scope;</li>
-<li>effective policy and required reviewer;</li>
-<li>state source and freshness;</li>
-<li>event occurrence versus observation time;</li>
-<li>unresolved conflicts;</li>
-<li>evidence used and evidence withheld;</li>
-<li>recommendation versus authorized action;</li>
-<li>receipt, reconciliation, and rollback state; and</li>
-<li>a clear stop or hand-back-control path.</li>
+<li>source owner and field-level authority;</li>
+<li>policy ID, version, effective interval, and owner;</li>
+<li>subject, actor, authorizer, and delegation reference;</li>
+<li>approved resource, field, action, population, environment, and time scope;</li>
+<li>approval requirement and expiration;</li>
+<li>segregation-of-duties requirement;</li>
+<li>and an explicit authority result: <code>allowed</code>, <code>denied</code>, <code>unknown</code>, <code>expired</code>, or <code>conflict</code>.</li>
 </ul>
-<p>Every visible action should either work within the declared authority or be removed. Disabled controls should explain the missing layer. A mobile operator should see the same decision boundary as a desktop operator, even if the presentation is condensed.</p>
-<h2>A 45-field architecture exercise</h2>
-<p>Choose one consequential but bounded workflow. Download the <a href="https://jaredmodstorage.github.io/downloads/operating-context-stack-template.csv">operating-context-stack worksheet</a> and complete one row.</p>
-<p>Then run a tabletop with an operator, a source owner, and a technical reviewer:</p>
+<p><a href="https://www.rfc-editor.org/rfc/rfc9396.html">RFC 9396</a> defines a way to express fine-grained OAuth authorization details such as action, location, datatype, and identifier. It is a protocol mechanism, not a facility policy. The architectural lesson is that “write access” is too broad a context value for consequential work. The system should be able to reproduce the exact resource, field, operation, and boundary that were authorized.</p>
+<p>Policy context should not be inferred from what a tool technically permits. Tool capability, credential scope, operating policy, and human approval are separate facts.</p>
+<h2>Layer 3: event and time context</h2>
+<p>Event and time answer <strong>what changed, when did it happen, and which clock matters to this question?</strong></p>
+<p>A facility context can contain multiple valid times:</p>
+<ul>
+<li><code>occurred_at</code> — when the represented event happened;</li>
+<li><code>observed_at</code> — when a source or sensor noticed it;</li>
+<li><code>recorded_at</code> — when a system stored it;</li>
+<li><code>effective_from</code> and <code>effective_to</code> — when the fact governs operations;</li>
+<li><code>evaluated_at</code> — when policy or a model evaluated it;</li>
+<li><code>approved_at</code> and <code>expires_at</code> — when authority began and ended;</li>
+<li><code>executed_at</code> — when the tool attempted the action;</li>
+<li><code>readback_at</code> — when governing state was checked.</li>
+</ul>
+<p>Do not replace those clocks with one generic timestamp.</p>
+<p>The latest recorded fact is not automatically the current effective fact. A future schedule can be recorded before it is effective. A sensor observation can arrive late. A correction can invalidate a prior record without rewriting history. Two sources can be fresh and still disagree because they govern different fields.</p>
+<p>The pinned <a href="https://github.com/cloudevents/spec/blob/ce%40v1.0.2/cloudevents/spec.md">CloudEvents 1.0.2 specification</a> defines interoperable event context attributes such as <code>id</code>, <code>source</code>, <code>specversion</code>, <code>type</code>, <code>subject</code>, <code>time</code>, <code>datacontenttype</code>, and <code>dataschema</code>. It does not define facility truth, business authority, causation, completion, or reconciliation. Use it as event-envelope vocabulary, not as evidence that an event is correct.</p>
+<p>The pinned <a href="https://www.w3.org/TR/2017/REC-owl-time-20171019/">W3C Time Ontology Recommendation</a> provides vocabulary for instants, intervals, durations, temporal positions, reference systems, and temporal relations. It does not decide which timestamp should govern a facility action. The operator must still declare the clock meaning and admissible lateness or freshness rule.</p>
+<p>The event-and-time layer should expose missing clocks and conflicts. It should never manufacture a chronological story because the records are easier to read in that order.</p>
+<h2>Layer 4: governing-state context</h2>
+<p>Governing state answers <strong>what is the best evidence-bounded operational state for this exact question?</strong></p>
+<p>This layer is not a raw source dump. It is a field-level projection with provenance.</p>
+<p>For each admitted state field, record:</p>
+<ul>
+<li>value and datatype;</li>
+<li>source record and field;</li>
+<li>source version or validator;</li>
+<li>observed and effective time;</li>
+<li>state quality: <code>known</code>, <code>unknown</code>, <code>conflict</code>, <code>stale</code>, <code>not_applicable</code>, or <code>derived</code>;</li>
+<li>derivation reference when applicable;</li>
+<li>conflict set and resolution owner;</li>
+<li>and the question for which the state is admitted.</li>
+</ul>
+<p>Unknown, false, zero, empty, unavailable, and not applicable are not interchangeable. A system that turns them into the same blank value destroys operating meaning.</p>
+<p><a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV-O</a> provides general concepts for entities, activities, agents, attribution, association, delegation, generation, use, derivation, and invalidation. Those concepts help describe how a state field was assembled. They do not prove that the source is true, authoritative, complete, fresh, or appropriate for the decision.</p>
+<p>The governing-state layer needs an admission decision for every field:</p>
+<ul>
+<li><code>admitted</code> — sufficient for this exact question;</li>
+<li><code>admitted_with_limit</code> — usable only within a stated boundary;</li>
+<li><code>held_conflict</code> — competing values require an owner;</li>
+<li><code>held_stale</code> — freshness or effective-time rule failed;</li>
+<li><code>rejected_authority</code> — source does not own the field;</li>
+<li><code>rejected_scope</code> — field is outside the question;</li>
+<li><code>unknown_required</code> — the question cannot proceed without it.</li>
+</ul>
+<p>Retrieval rank should not determine admission. A highly relevant document can still be non-authoritative. A low-ranking source record can still be governing.</p>
+<h2>Layer 5: decision and action context</h2>
+<p>Decision and action answer <strong>what may be concluded or done with the admitted state?</strong></p>
+<p>This layer binds the context object to a decision question, candidate dispositions, consequence class, reversibility, approval rule, tool action, and reconciliation target.</p>
+<p>Record:</p>
+<ul>
+<li>decision ID and context version;</li>
+<li>exact question and allowed outcomes;</li>
+<li>policy input and result;</li>
+<li>model, rule, or human contribution with version;</li>
+<li>limitations and unresolved facts;</li>
+<li>consequence and reversibility classes;</li>
+<li>required reviewer qualification;</li>
+<li>proposed action envelope;</li>
+<li>idempotency key and attempt limit;</li>
+<li>approval state and expiry;</li>
+<li>authoritative readback target;</li>
+<li>and closure or handback state.</li>
+</ul>
+<p>The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a> supports mapping context, intended purpose, scope, risk tolerance, knowledge limits, human-AI roles, and lifecycle risk. It is voluntary, use-case agnostic, and currently under revision. It does not certify this stack. Its value here is the insistence that risk management depends on the actual context in which an AI system is used.</p>
+<p>The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST Generative AI Profile, AI 600-1</a>, describes risks including confabulation, automation bias, data privacy, and information integrity. A structured context stack does not eliminate those risks. It makes some of the inputs, omissions, and authority boundaries inspectable before a generated answer becomes operating work.</p>
+<p>The decision layer must never rewrite a model output as governing state. A recommendation remains a recommendation. If a human approves an action, the approval record should refer to the exact context version and action envelope. If the context changes materially, the prior approval should not silently follow it.</p>
+<h2>Assemble context as a contract</h2>
+<p>The context builder should produce three outputs:</p>
 <ol>
-<li>Remove one identity field. Can the workflow still prove the entity and scope?</li>
-<li>Expire the policy. Does the system stop?</li>
-<li>Make the governing state stale. Does the interface show the condition?</li>
-<li>Deliver an older event late. Does the timeline stay truthful?</li>
-<li>Withhold the reconciliation evidence. Does the workflow refuse to call the action complete?</li>
-<li>Replace the human reviewer with a role outside scope. Does enforcement reject the decision?</li>
-<li>Rebuild the context envelope. Can another reviewer reach the same bounded conclusion?</li>
+<li><strong>the admitted context</strong> — facts allowed for the exact question;</li>
+<li><strong>the rejection report</strong> — facts excluded with reason codes;</li>
+<li><strong>the context manifest</strong> — identities, sources, versions, clocks, policies, decisions, hashes, and limitations used to build both.</li>
 </ol>
-<p>The purpose is not to make every field mandatory in every workflow. The purpose is to force an explicit decision about what is required, who owns it, and what happens when it is absent.</p>
-<h2>Release gate</h2>
-<p>Before the workflow governs work, verify:</p>
+<p>The manifest needs a stable context ID and version. A deterministic digest can help detect byte changes, but a matching digest proves only that the bytes match. It does not prove their truth or authority.</p>
+<p>The companion <a href="operating-context-stack.schema.json">JSON Schema</a> demonstrates structural constraints for an example envelope. <a href="https://json-schema.org/draft/2020-12/json-schema-core.html">JSON Schema Core Draft 2020-12</a> defines the dialect, identifiers, references, vocabularies, and evaluation model; <a href="https://json-schema.org/draft/2020-12/json-schema-validation.html">JSON Schema Validation Draft 2020-12</a> defines validation keywords. Passing the schema proves only structural conformance. It does not prove facility identity, source authority, time coherence, policy correctness, or operational safety.</p>
+<p>For consequential use, context admission should fail closed when a required layer is incomplete. “Fail closed” does not always mean stop the entire workflow. The system can return a narrower answer:</p>
 <ul>
-<li>all five layers have named owners;</li>
-<li>stable IDs and translations are tested;</li>
-<li>policy versions and effective times are machine-readable;</li>
-<li>missing policy defaults to stop;</li>
-<li>governing state sources and freshness thresholds are explicit;</li>
-<li>occurrence and ingestion times are separate;</li>
-<li>schemas and transformations are versioned;</li>
-<li>context propagation excludes sensitive values;</li>
-<li>human review triggers are consequence-based;</li>
-<li>action receipts are distinct from execution and reconciliation;</li>
-<li>rollback is owned and exercised in proportion to risk;</li>
-<li>fictional tests cover stale, duplicate, conflicting, and out-of-scope inputs;</li>
-<li>desktop and narrow-screen interfaces preserve the decision boundary; and</li>
-<li>documentation names the standards used and their limitations.</li>
+<li>display known facts with conflicts visible;</li>
+<li>prepare a draft without permission to send;</li>
+<li>calculate a provisional result without calling it reconciled;</li>
+<li>request a qualified owner;</li>
+<li>or state that the decision is not supportable from current evidence.</li>
 </ul>
-<h2>Sources and limitations</h2>
-<p>Observed August 22, 2026:</p>
+<h2>Nine context failures worth testing</h2>
+<h3>1. Right value, wrong facility</h3>
+<p>The value is correct for another stable facility ID. Similarity is not identity resolution.</p>
+<h3>2. Right source, wrong field authority</h3>
+<p>An official marketing page can govern public copy without governing physical access behavior.</p>
+<h3>3. Mixed-time snapshot</h3>
+<p>Each field is individually plausible, but the combined state never existed at one admissible effective time.</p>
+<h3>4. Current state, expired authority</h3>
+<p>The facts are fresh, but the actor&#39;s approval or delegated scope expired.</p>
+<h3>5. Fresh event, stale policy</h3>
+<p>The event arrived now, but the decision used a superseded policy version.</p>
+<h3>6. Retrieval outranks authority</h3>
+<p>The model selects a highly relevant document over the field&#39;s governing source.</p>
+<h3>7. Inference becomes source</h3>
+<p>A generated summary is stored, retrieved later, and presented as if it were the originating record.</p>
+<h3>8. Context version changes after approval</h3>
+<p>The value, consequence, source, or facility changes while the old approval remains attached.</p>
+<h3>9. Provider response becomes governing state</h3>
+<p>A tool says accepted or queued, and the context marks the operating outcome complete without authoritative readback.</p>
+<p>The companion <a href="operating-context-readiness-suite.csv">readiness suite</a> turns these patterns into beginner-to-architect test cases.</p>
+<h2>A fictional portfolio example</h2>
+<p>Consider a fictional request: prepare an approved public notice about Saturday office hours for <code>FAC-CEDAR</code>.</p>
+<p>The identity layer resolves the stable facility and public-profile field. It also finds an old page with a similar display name and rejects that alias as retired.</p>
+<p>The authority layer identifies a facility information record as governing public office hours. It does not treat the access-control schedule as authority for public copy. It confirms that the communications actor may draft but not publish.</p>
+<p>The event-and-time layer shows that the new schedule was recorded today, becomes effective next Saturday, and was approved for a specific publication window. The prior value remains correct until that effective interval begins.</p>
+<p>The governing-state layer admits the new schedule as a future-effective public-information fact, holds a conflict with a stale public page, and excludes a different gate schedule because it is outside the question.</p>
+<p>The decision layer permits a draft that states the future effective date. It does not permit publication because execution authority is absent. It sets the owned profile as the later readback target.</p>
+<p>The AI can now produce useful work without pretending the entire facility has one universal “hours” value.</p>
+<p>The example is fictional. It is not a facility-hours claim, access-control instruction, customer communication, deployed workflow, or product capability.</p>
+<h2>Context minimization is an operating control</h2>
+<p>More context is not automatically better.</p>
+<p>Unbounded context can expose personal, financial, credential, security, legal, or customer information that the decision does not require. It can also increase the chance that a model will anchor on a plausible but non-governing detail.</p>
+<p>Minimize context by purpose:</p>
 <ul>
-<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a>, published January 26, 2023; NIST’s current program page says version 1.0 is being revised.</li>
-<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST AI 600-1, Generative AI Profile</a>, published July 26, 2024 and updated April 8, 2026.</li>
-<li><a href="https://csrc.nist.gov/pubs/sp/800/207/final">NIST SP 800-207, Zero Trust Architecture</a>, final August 11, 2020.</li>
-<li><a href="https://github.com/cloudevents/spec">CloudEvents specification repository</a>, listing v1.0.2 as the latest released core specification and the main line as work in progress.</li>
-<li><a href="https://www.w3.org/TR/prov-o/">W3C PROV-O</a>, a W3C Recommendation dated April 30, 2013.</li>
-<li><a href="https://opentelemetry.io/docs/specs/otel/baggage/api/">OpenTelemetry Baggage API</a>, currently marked Stable.</li>
+<li>include only the facilities, resources, fields, periods, and populations required;</li>
+<li>prefer references and bounded claims over full document copies;</li>
+<li>exclude reusable secrets and unrestricted personal data;</li>
+<li>record why each field was admitted;</li>
+<li>set retention and invalidation rules;</li>
+<li>and separate source evidence from generated narrative.</li>
 </ul>
-<p>These sources inform parts of the model; none defines this five-layer stack or a self-storage industry standard. NIST AI resources are voluntary and cross-sectoral. SP 800-207 addresses cybersecurity and enterprise-resource access. CloudEvents addresses event interoperability, not business authority or delivery guarantees. PROV-O is a general provenance ontology. OpenTelemetry Baggage is a propagation mechanism, not an authorization or integrity control.</p>
-<h2>Disclosure</h2>
-<p>I am CEO and Co-Founder of Facily.ai and Chief Operating Officer of modSTORAGE. This is a proposed reference architecture. It is not a Facily OS release diagram, a product-availability statement, an integration claim, a customer case study, an industry standard, or a performance result.</p>
-</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Product thesis</p><h3><a href="/writing/operating-system-not-dashboard/">An Operating System Is Not Another Dashboard</a></h3><p>Move from displaying activity to governing accountable work across a multi-facility operator.</p><a href="/writing/operating-system-not-dashboard/" class="text-link" aria-label="Read the article: An Operating System Is Not Another Dashboard">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating essay</p><h3><a href="/writing/evidence-before-automation/">Evidence Before Automation</a></h3><p>Keep source, authority, action, and reconciled outcome visible in AI-assisted operating work.</p><a href="/writing/evidence-before-automation/" class="text-link" aria-label="Read the article: Evidence Before Automation">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert reference architecture</p><h3><a href="/writing/facility-event-spine/">The Facility Event Spine</a></h3><p>Separate observations, commands, policy decisions, projections, and reconciliation evidence across a multi-location self-storage operation.</p><a href="/writing/facility-event-spine/" class="text-link" aria-label="Read the article: The Facility Event Spine">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
+<p>The authority layer should govern who can assemble and inspect the context itself. A context package can become more sensitive than any one source because it joins multiple systems.</p>
+<h2>The operator-to-architect exercise</h2>
+<p>Choose one proposed AI-assisted task: draft a facility notice, explain an exception, prioritize a work item, compare a metric, prepare a profile change, or assemble a vendor handoff.</p>
+<p>Use the <a href="operating-context-envelope-template.csv">operating-context envelope</a> and complete these steps:</p>
+<ol>
+<li>write one exact operating question;</li>
+<li>name the stable portfolio, facility, resource, field, subject, actor, and destination identities;</li>
+<li>assign source, policy, decision, and execution authority separately;</li>
+<li>record occurred, observed, recorded, effective, evaluated, approved, executed, and readback clocks where applicable;</li>
+<li>admit or reject every state field with a reason code;</li>
+<li>distinguish known, unknown, conflict, stale, not applicable, and derived;</li>
+<li>bind the decision and any approval to one context version;</li>
+<li>define the exact action envelope and authoritative readback target;</li>
+<li>replay the case with the wrong facility, stale source, expired authority, future-effective value, changed policy, provider timeout, and mismatched readback;</li>
+<li>verify that the system can return a narrower truthful answer instead of filling the gap.</li>
+</ol>
+<p>The architecture gate is:</p>
+<p><strong>Can another qualified operator reproduce why each fact entered the context, why each excluded fact stayed out, which authority governed the decision, what changed after approval, and what readback would close the work?</strong></p>
+<p>If not, the system has a prompt, not an operating context.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">Artificial Intelligence Risk Management Framework 1.0</a>, NIST, January 26, 2023; current page checked August 22, 2026 and notes that the framework is under revision.</li>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST AI 600-1</a>, NIST, July 26, 2024; page updated April 8, 2026.</li>
+<li><a href="https://csrc.nist.gov/CSRC/media/Projects/risk-management/800-53%20Downloads/800-53r5/SP_800-53_v5_1-derived-OSCAL.pdf">Security and Privacy Controls for Information Systems and Organizations, NIST SP 800-53 Revision 5.1</a>, official derived OSCAL publication checked August 22, 2026.</li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9396.html">OAuth 2.0 Rich Authorization Requests, RFC 9396</a>, IETF, May 2023.</li>
+<li><a href="https://github.com/cloudevents/spec/blob/ce%40v1.0.2/cloudevents/spec.md">CloudEvents Specification, stable release 1.0.2</a>, CloudEvents/CNCF, February 2022.</li>
+<li><a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV-O: The PROV Ontology</a>, W3C Recommendation, April 30, 2013.</li>
+<li><a href="https://www.w3.org/TR/2017/REC-owl-time-20171019/">Time Ontology in OWL</a>, W3C Recommendation, October 19, 2017.</li>
+<li><a href="https://json-schema.org/draft/2020-12/json-schema-core.html">JSON Schema Core, Draft 2020-12</a>, June 16, 2022.</li>
+<li><a href="https://json-schema.org/draft/2020-12/json-schema-validation.html">JSON Schema Validation, Draft 2020-12</a>, June 16, 2022.</li>
+</ul>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Operating method</p><h3><a href="/writing/portfolio-handoff-audit/">The Portfolio Handoff Audit: Where Work Loses Its Owner</a></h3><p>Separate routing, receipt, acceptance, execution, returned disposition, and sender reconciliation across portfolio boundaries.</p><a href="/writing/portfolio-handoff-audit/" class="text-link" aria-label="Read the article: The Portfolio Handoff Audit: Where Work Loses Its Owner">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/operations-agent-hand-back-control/">Where an Operations Agent Must Hand Back Control</a></h3><p>Bind agent actions to identity, authority, source, policy, consequence, reversibility, handback, resumption, and reconciliation.</p><a href="/writing/operations-agent-hand-back-control/" class="text-link" aria-label="Read the article: Where an Operations Agent Must Hand Back Control">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert reference architecture</p><h3><a href="/writing/facility-event-spine/">The Facility Event Spine</a></h3><p>Separate observations, commands, policy decisions, projections, and reconciliation evidence across a multi-location self-storage operation.</p><a href="/writing/facility-event-spine/" class="text-link" aria-label="Read the article: The Facility Event Spine">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

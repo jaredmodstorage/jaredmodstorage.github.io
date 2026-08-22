@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/fictional-self-storage-operating-context-v1.json",
+  "title": "Fictional self-storage operating context envelope",
+  "description": "Proposed structural contract for one evidence-bounded operating question. Schema validity does not prove identity, truth, authority, currentness, policy compliance, safety, or fitness for action.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contextId",
+    "contextVersion",
+    "decisionQuestion",
+    "assembledAt",
+    "identity",
+    "authorityPolicy",
+    "eventTime",
+    "governingState",
+    "decisionAction",
+    "evidenceBoundary"
+  ],
+  "properties": {
+    "contextId": { "type": "string", "pattern": "^CTX-[A-Z0-9-]+$" },
+    "contextVersion": { "type": "string", "pattern": "^v[1-9][0-9]*$" },
+    "decisionQuestion": { "type": "string", "minLength": 20 },
+    "assembledAt": { "type": "string", "format": "date-time" },
+    "identity": { "$ref": "#/$defs/identityLayer" },
+    "authorityPolicy": { "$ref": "#/$defs/authorityLayer" },
+    "eventTime": { "$ref": "#/$defs/eventTimeLayer" },
+    "governingState": { "$ref": "#/$defs/stateLayer" },
+    "decisionAction": { "$ref": "#/$defs/decisionLayer" },
+    "rejectedContext": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/rejection" },
+      "default": []
+    },
+    "evidenceBoundary": { "type": "string", "minLength": 30 }
+  },
+  "$defs": {
+    "stableId": { "type": "string", "minLength": 3, "maxLength": 160 },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stableId" },
+        "version": { "type": "string", "minLength": 1 },
+        "owner": { "type": "string", "minLength": 3 }
+      }
+    },
+    "identityLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["portfolioId", "facilityId", "resourceField", "subjectId", "actorId", "destinationId", "resolutionState"],
+      "properties": {
+        "portfolioId": { "$ref": "#/$defs/stableId" },
+        "facilityId": { "$ref": "#/$defs/stableId" },
+        "entityId": { "$ref": "#/$defs/stableId" },
+        "resourceField": { "type": "string", "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$" },
+        "subjectId": { "$ref": "#/$defs/stableId" },
+        "actorId": { "$ref": "#/$defs/stableId" },
+        "destinationId": { "$ref": "#/$defs/stableId" },
+        "resolutionState": { "enum": ["resolved", "conflict", "unknown", "retired"] },
+        "aliasEvidence": { "type": "array", "items": { "$ref": "#/$defs/reference" } }
+      }
+    },
+    "authorityLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceAuthority", "policy", "authorizerId", "allowedScope", "authorityState"],
+      "properties": {
+        "sourceAuthority": { "$ref": "#/$defs/reference" },
+        "policy": { "$ref": "#/$defs/reference" },
+        "authorizerId": { "$ref": "#/$defs/stableId" },
+        "delegationRef": { "$ref": "#/$defs/reference" },
+        "allowedScope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["facilityIds", "resourceFields", "actions", "environment"],
+          "properties": {
+            "facilityIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/stableId" } },
+            "resourceFields": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+            "actions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+            "environment": { "enum": ["training", "sandbox", "staging", "production"] },
+            "expiresAt": { "type": "string", "format": "date-time" }
+          }
+        },
+        "authorityState": { "enum": ["allowed", "denied", "unknown", "expired", "conflict", "draft_only"] }
+      }
+    },
+    "eventTimeLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eventId", "eventType", "eventSchemaVersion", "observedAt", "effectiveFrom", "clockState"],
+      "properties": {
+        "eventId": { "$ref": "#/$defs/stableId" },
+        "eventType": { "type": "string", "minLength": 3 },
+        "eventSchemaVersion": { "type": "string", "minLength": 1 },
+        "occurredAt": { "type": ["string", "null"], "format": "date-time" },
+        "observedAt": { "type": "string", "format": "date-time" },
+        "recordedAt": { "type": ["string", "null"], "format": "date-time" },
+        "effectiveFrom": { "type": "string", "format": "date-time" },
+        "effectiveTo": { "type": ["string", "null"], "format": "date-time" },
+        "clockState": { "enum": ["coherent", "late", "conflict", "unknown"] }
+      }
+    },
+    "stateField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "value", "source", "quality", "admissionState", "admissionReason"],
+      "properties": {
+        "field": { "type": "string", "minLength": 3 },
+        "value": {},
+        "source": { "$ref": "#/$defs/reference" },
+        "quality": { "enum": ["known", "unknown", "conflict", "stale", "not_applicable", "derived"] },
+        "admissionState": { "enum": ["admitted", "admitted_with_limit", "held_conflict", "held_stale", "rejected_authority", "rejected_scope", "unknown_required"] },
+        "admissionReason": { "type": "string", "minLength": 10 },
+        "derivationRef": { "$ref": "#/$defs/reference" }
+      }
+    },
+    "stateLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["snapshotVersion", "fields", "overallAdmission"],
+      "properties": {
+        "snapshotVersion": { "type": "string", "minLength": 1 },
+        "fields": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/stateField" } },
+        "overallAdmission": { "enum": ["admitted", "admitted_with_limit", "held", "rejected"] }
+      }
+    },
+    "decisionLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decisionId", "allowedOutcomes", "currentDisposition", "consequenceClass", "approvalState", "actionState", "readbackTarget"],
+      "properties": {
+        "decisionId": { "$ref": "#/$defs/stableId" },
+        "allowedOutcomes": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+        "currentDisposition": { "type": "string", "minLength": 3 },
+        "consequenceClass": { "enum": ["low", "medium", "high", "prohibited"] },
+        "reversibilityClass": { "enum": ["reversible", "conditionally_reversible", "irreversible", "unknown"] },
+        "approvalState": { "enum": ["not_required", "pending", "approved", "denied", "expired"] },
+        "actionId": { "type": ["string", "null"] },
+        "actionState": { "enum": ["not_proposed", "proposed", "approved", "attempted", "provider_accepted", "readback_pending", "reconciled", "mismatch", "denied"] },
+        "readbackTarget": { "$ref": "#/$defs/stableId" }
+      }
+    },
+    "rejection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["itemRef", "reasonCode", "owner"],
+      "properties": {
+        "itemRef": { "$ref": "#/$defs/stableId" },
+        "reasonCode": { "enum": ["IDENTITY_CONFLICT", "WRONG_FIELD_AUTHORITY", "STALE", "OUT_OF_SCOPE", "TIME_CONFLICT", "POLICY_UNKNOWN", "SENSITIVE_DATA", "UNTRUSTED_DERIVATION"] },
+        "owner": { "type": "string", "minLength": 3 }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "contextId": "CTX-FIC-CEDAR-001",
+  "contextVersion": "v1",
+  "decisionQuestion": "Which approved public Saturday office-hours value should be proposed for the owned profile?",
+  "assembledAt": "2026-08-22T13:03:00Z",
+  "identity": {
+    "portfolioId": "PORT-FICTIONAL-001",
+    "facilityId": "FAC-CEDAR",
+    "entityId": "ENTITY-FICTIONAL-001",
+    "resourceField": "public_profile.office_hours",
+    "subjectId": "SUBJECT-FACILITY-PUBLIC-INFO",
+    "actorId": "ACTOR-FICTIONAL-DRAFTING-AGENT",
+    "destinationId": "DEST-FICTIONAL-OWNED-PROFILE",
+    "resolutionState": "resolved",
+    "aliasEvidence": [
+      { "id": "FICTIONAL-FACILITY-IDENTITY-REGISTER", "version": "v8", "owner": "facility identity owner" }
+    ]
+  },
+  "authorityPolicy": {
+    "sourceAuthority": { "id": "FICTIONAL-APPROVED-SCHEDULE-RECORD", "version": "v4", "owner": "public-information field owner" },
+    "policy": { "id": "POL-PUBLIC-INFO", "version": "v3", "owner": "communications policy owner" },
+    "authorizerId": "AUTHORIZER-FICTIONAL-FACILITY-IDENTITY-OWNER",
+    "allowedScope": {
+      "facilityIds": ["FAC-CEDAR"],
+      "resourceFields": ["public_profile.office_hours"],
+      "actions": ["draft"],
+      "environment": "training",
+      "expiresAt": "2026-08-28T18:00:00Z"
+    },
+    "authorityState": "draft_only"
+  },
+  "eventTime": {
+    "eventId": "EVT-FIC-SCHEDULE-001",
+    "eventType": "facility.schedule.changed.v2",
+    "eventSchemaVersion": "v2",
+    "occurredAt": "2026-08-22T12:45:00Z",
+    "observedAt": "2026-08-22T12:45:09Z",
+    "recordedAt": "2026-08-22T12:46:00Z",
+    "effectiveFrom": "2026-08-29T00:00:00Z",
+    "effectiveTo": null,
+    "clockState": "coherent"
+  },
+  "governingState": {
+    "snapshotVersion": "snapshot-v1",
+    "fields": [
+      {
+        "field": "public_profile.office_hours",
+        "value": "Saturday 09:00-17:00 effective 2026-08-29",
+        "source": { "id": "FICTIONAL-APPROVED-SCHEDULE-RECORD", "version": "v4", "owner": "public-information field owner" },
+        "quality": "known",
+        "admissionState": "admitted_with_limit",
+        "admissionReason": "Future-effective value is admitted only for a draft that names the effective date."
+      }
+    ],
+    "overallAdmission": "admitted_with_limit"
+  },
+  "decisionAction": {
+    "decisionId": "DEC-FIC-001",
+    "allowedOutcomes": ["prepare_draft", "request_publish_authority", "deny"],
+    "currentDisposition": "prepare_draft",
+    "consequenceClass": "low",
+    "reversibilityClass": "reversible",
+    "approvalState": "pending",
+    "actionId": "ACT-FIC-001",
+    "actionState": "proposed",
+    "readbackTarget": "DEST-FICTIONAL-OWNED-PROFILE"
+  },
+  "rejectedContext": [
+    {
+      "itemRef": "FICTIONAL-ACCESS-CONTROL-SCHEDULE",
+      "reasonCode": "WRONG_FIELD_AUTHORITY",
+      "owner": "access-control owner"
+    }
+  ],
+  "evidenceBoundary": "Entire example is fictional training data. It is not a real facility, schedule, profile, approval, credential, source record, tool action, publication, or operating result."
+}

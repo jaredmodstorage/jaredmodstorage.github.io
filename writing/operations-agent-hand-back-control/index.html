@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CUZRod3P.css" data-rsc-css-href="/_next/static/css/index.CUZRod3P.css" data-precedence="vite-rsc/importer-resources"/><title>Where an Operations Agent Must Hand Back Control | Jared Mastroianni</title><meta name="description" content="An evidence-bounded self-storage architecture pattern for binding agent actions to identity, authority, source, policy, consequence, reversibility, side-effect, handback, resumption, and governing-state reconciliation."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Where an Operations Agent Must Hand Back Control | Jared Mastroianni"/><meta property="og:description" content="An evidence-bounded self-storage architecture pattern for binding agent actions to identity, authority, source, policy, consequence, reversibility, side-effect, handback, resumption, and governing-state reconciliation."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-22"/><meta property="article:modified_time" content="2026-08-22"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/agent-handback-control-plane.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A seven-stage agent action path from proposal through reconciliation, with eight identity, scope, source, policy, consequence, data, provider, and readback gates that can return one of six typed handback states and a bounded decision packet to an authorized owner."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Where an Operations Agent Must Hand Back Control | Jared Mastroianni"/><meta name="twitter:description" content="An evidence-bounded self-storage architecture pattern for binding agent actions to identity, authority, source, policy, consequence, reversibility, side-effect, handback, resumption, and governing-state reconciliation."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/agent-handback-control-plane.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/#article","url":"https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"Where an Operations Agent Must Hand Back Control","datePublished":"2026-08-22","dateModified":"2026-08-22","image":"https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/agent-handback-control-plane.png","description":"An evidence-bounded self-storage architecture pattern for binding agent actions to identity, authority, source, policy, consequence, reversibility, side-effect, handback, resumption, and governing-state reconciliation.","proficiencyLevel":"Expert","about":["Self-storage operations","Responsible artificial intelligence","Human-in-the-loop control","Authorization","Provenance","Recovery"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Accountable automation","item":"https://jaredmodstorage.github.io/writing/topics/automation/"},{"@type":"ListItem","position":3,"name":"Where an Operations Agent Must Hand Back Control","item":"https://jaredmodstorage.github.io/writing/operations-agent-hand-back-control/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/automation/">Accountable automation</a></li><li aria-current="page">Where an Operations Agent Must Hand Back Control</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-22">22 August 2026</time></p><h1>Where an Operations Agent Must Hand Back Control</h1><p class="lede">Bind every proposed agent action to identity, authority, source, policy, consequence, reversibility, side effects, resumption, and governing-state readback.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>14 min read</span></div></header><div class="essay-body"><p class="dropcap">An operations agent becomes dangerous before it becomes dramatic.</p>
+<p>The failure usually begins with a small substitution: a recommendation is treated as permission, a familiar field is treated as authoritative, a successful API response is treated as completed work, or a missing fact is filled with a plausible answer. Each substitution lets the workflow continue when it should have returned control.</p>
+<p>For self-storage operations, a useful agent is not one that continues as far as possible. It is one that can identify the exact boundary of its authority, stop with a complete packet, and transfer the decision to the right human or governing system without losing the work already done.</p>
+<p>That transfer is a <strong>handback</strong>.</p>
+<blockquote>
+<p>A handback is a typed operating state in which the agent stops proposing or acting, preserves the evidence and unresolved question, assigns the next decision to an authorized owner, and defines what would permit safe resumption.</p>
+</blockquote>
+<p>“Ask a human” is not enough. A handback needs identity, reason, consequence, deadline, evidence, next owner, allowed choices, and resumption criteria.</p>
+<p>This paper proposes an expert reference pattern. It does not describe a deployed product, autonomous capability, customer workflow, measured reliability, certification, or industry standard.</p>
+<p>The companion package includes an <a href="operations-agent-handback-decision-tree.md">operations-agent handback decision tree</a>, a fictional <a href="agent-action-envelope-register.csv">action-envelope register</a>, a fictional <a href="agent-handback-readiness-suite.csv">readiness suite</a>, and an accessible <a href="agent-handback-control-plane.svg">control-plane diagram</a>. The complete source and limitation record is in the <a href="source-register.csv">source register</a>.</p>
+<p><a href="agent-handback-control-plane.svg"><img src="agent-handback-control-plane.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A seven-stage agent action path from proposal through reconciliation, with eight identity, scope, source, policy, consequence, data, provider, and readback gates that can return one of six typed handback states and a bounded decision packet to an authorized owner."></a></p>
+<p><a href="agent-handback-control-plane.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="operations-agent-hand-back-control-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="operations-agent-hand-back-control-downloads">Use the method. Test the failure paths.</h2>
+<p>These files contain fictional examples and structural tools. They do not establish a live facility fact, product capability, customer result, operating performance, certification, or independent validation.</p>
+<div><a href="operations-agent-handback-decision-tree.md" download>Download the operations-agent handback decision tree <span aria-hidden="true">↓</span></a><a href="agent-action-envelope-register.csv" download>Download the action-envelope register <span aria-hidden="true">↓</span></a><a href="agent-handback-readiness-suite.csv" download>Download the agent handback readiness suite <span aria-hidden="true">↓</span></a><a href="agent-handback-control-plane.svg" download>Download the accessible handback control-plane SVG <span aria-hidden="true">↓</span></a><a href="agent-handback-control-plane.png" download>Download the handback control-plane PNG <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a></div>
+</section>
+<h2>The agent has three identities, not one</h2>
+<p>An agentic workflow can involve at least three identities:</p>
+<ol>
+<li><strong>Subject</strong> — the person, facility, account, work item, or organization on whose behalf the task exists.</li>
+<li><strong>Actor</strong> — the human or service currently attempting the step.</li>
+<li><strong>Authorizer</strong> — the person or policy authority permitted to approve the action.</li>
+</ol>
+<p>They may be different.</p>
+<p>A regional operator can request a facility-hours correction. An agent can assemble the proposed change. A facility-identity owner can approve the source and scope. A separate credentialed service can execute the update. The agent should not collapse those identities into “the user.”</p>
+<p><a href="https://www.rfc-editor.org/info/rfc8693/">RFC 8693</a> defines subject and actor token concepts for OAuth token exchange and describes actor claims that can represent delegation. It is a protocol mechanism, not a business-authorization model. It does not prove that an actor may change a facility record, and token exchange does not automatically revoke the input token or propagate every revocation. The architectural lesson is narrower: represent who the action concerns, who is acting, and how authority was delegated.</p>
+<p>Hand back control when the subject, actor, authorizer, or delegation chain is missing, ambiguous, expired, or inconsistent.</p>
+<h2>The action envelope</h2>
+<p>Before an agent can move from proposal to execution, bind the proposed action to an exact envelope:</p>
+<ul>
+<li>action ID and version;</li>
+<li>facility and entity IDs;</li>
+<li>subject identity;</li>
+<li>current actor identity;</li>
+<li>authorizer identity or approved policy;</li>
+<li>tool and operation;</li>
+<li>exact resource and field scope;</li>
+<li>proposed value or transition;</li>
+<li>governing source and version;</li>
+<li>observed time and effective time;</li>
+<li>policy version and result;</li>
+<li>consequence class;</li>
+<li>reversibility class;</li>
+<li>credential or delegated authority scope;</li>
+<li>approval requirement and expiry;</li>
+<li>execution window;</li>
+<li>reconciliation target;</li>
+<li>correction or rollback route.</li>
+</ul>
+<p>A broad permission such as <code>write</code> is insufficient for consequential work. <a href="https://www.rfc-editor.org/rfc/rfc9396.html">RFC 9396</a> defines a protocol mechanism for carrying fine-grained authorization details such as types, actions, locations, datatypes, and identifiers and requires rejection of invalid details. It does not define self-storage policy. It demonstrates why an action should be described as more than a generic scope string.</p>
+<p>For example, the proposed envelope might allow one approved actor to update one field for one facility during one window. It should not silently authorize every field, every facility, or a later retry after the source changed.</p>
+<h2>Twelve conditions that require handback</h2>
+<p>The following conditions are distinct. Each should have its own reason code, next owner, and resumption test.</p>
+<h3>1. Identity is unresolved</h3>
+<p>The agent cannot bind the request to one stable facility, account, unit, person, vendor, or work item. Similar names are not enough. Return the candidates and the conflict; do not guess.</p>
+<h3>2. Authority is absent or expired</h3>
+<p>The actor lacks the exact role, delegated grant, approved policy, resource scope, or valid time window. Authentication is not authorization. A previously approved action should not survive a material source, value, scope, or deadline change unless the approval contract permits it.</p>
+<p>The <a href="https://csrc.nist.gov/CSRC/media/Projects/risk-management/800-53%20Downloads/800-53r5/SP_800-53_v5_1-derived-OSCAL.pdf">NIST SP 800-53 Revision 5.1 control catalog</a> includes access enforcement, least privilege, separation of duties, and audit accountability for users and processes acting on behalf of users. It must be tailored and is not an agent standard. Its useful constraint is that a process should not receive more access than the assigned organizational task requires.</p>
+<h3>3. The requested scope exceeds the envelope</h3>
+<p>The tool call targets another facility, field, system, environment, customer population, or action type. Hand back with the exact difference between requested and approved scope.</p>
+<h3>4. Source authority is missing, stale, or conflicting</h3>
+<p>The agent has a value but cannot prove that the record and field are authoritative for this decision. A search result, dashboard cache, model memory, retrieved document, or prior answer can help locate evidence; it is not automatically the governing source.</p>
+<p>Return the observed values, sources, timestamps, conflicts, and owner needed to resolve them. Do not choose the newest value solely because it is newer.</p>
+<h3>5. Policy cannot decide</h3>
+<p>The exact policy version returns no match, multiple matches, an invalid input, an unsupported state, or a conflict between policies. “No rule found” must not become “allowed.”</p>
+<p>The handback packet should identify the policy, input facts, result, missing predicate, and decision owner. A human may interpret or amend policy; the agent may not invent the missing rule.</p>
+<h3>6. Consequence exceeds the approved class</h3>
+<p>The action can change customer access, money, legal or lifecycle state, safety-relevant configuration, public identity, credentials, deletion, or a large population. The consequence can arise from the action itself or from its scale.</p>
+<p>An agent approved to draft one notice is not thereby approved to send it to every account. An agent approved to propose a work order is not thereby approved to declare the underlying condition safe or resolved.</p>
+<h3>7. Reversibility is insufficient</h3>
+<p>The prior state is unknown, the proposed action is destructive, the provider offers no reliable rollback, or restoration cannot be tested. Handback can require a backup, snapshot, approval, dry run, narrower action, or qualified executor.</p>
+<h3>8. Sensitive data exceeds the permitted boundary</h3>
+<p>The workflow would expose, combine, retain, or transmit personal, financial, credential, security, legal, or facility-sensitive data outside the approved purpose and destination. Return a minimized packet that states what is needed without copying the protected data into the handback.</p>
+<h3>9. The human review would be ceremonial</h3>
+<p>The reviewer lacks time, qualifications, source access, alternatives, or the ability to reject. An “Approve” button is not meaningful oversight if the human cannot inspect what changed or what will happen.</p>
+<p>The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a> supports defining and documenting human-AI roles and human-oversight processes in context. It is voluntary and under revision. It does not certify this pattern. The handback method turns oversight into an operating state: the reviewer receives exact evidence, bounded choices, authority, and a deadline.</p>
+<h3>10. The workflow loops or repeatedly fails</h3>
+<p>The same tool, policy, or reconciliation step has failed beyond the approved attempt limit; the action alternates between states; or retries would duplicate consequences. Stop the loop. Return attempt history, idempotency key, provider receipts, current governing state, and the recovery owner.</p>
+<h3>11. Provider acceptance is ambiguous or partial</h3>
+<p>The target reports queued, accepted, pending, partially applied, or an opaque success while the operating outcome remains unknown. Do not promote transport or provider state to business completion.</p>
+<p>The next step may be wait, query by stable action ID, inspect a provider job, cancel, reconcile, or escalate. It should not be an unbounded retry.</p>
+<h3>12. Governing-state readback disagrees</h3>
+<p>After execution, the authoritative system does not show the intended value, shows a different version, or exposes a new conflict. Hand back with <code>reconciliation_mismatch</code>, not <code>complete</code>.</p>
+<p>The action may need correction, rollback, a new proposal, or qualified investigation. Preserve the original proposal, approval, execution receipt, readback, and difference.</p>
+<h2>Handback is not one queue</h2>
+<p>Different reasons require different owners and clocks.</p>
+<table class="event-role-table">
+<thead>
+<tr>
+<th>Handback class</th>
+<th>Example next owner</th>
+<th>Typical allowed disposition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Handback class">identity</td>
+<td data-label="Example next owner">facility data steward</td>
+<td data-label="Typical allowed disposition">select, merge, reject, remain unknown</td>
+</tr>
+<tr>
+<td data-label="Handback class">source authority</td>
+<td data-label="Example next owner">field owner</td>
+<td data-label="Typical allowed disposition">confirm source, resolve conflict, defer</td>
+</tr>
+<tr>
+<td data-label="Handback class">policy</td>
+<td data-label="Example next owner">policy owner</td>
+<td data-label="Typical allowed disposition">interpret, amend, deny, request facts</td>
+</tr>
+<tr>
+<td data-label="Handback class">consequence</td>
+<td data-label="Example next owner">qualified operations owner</td>
+<td data-label="Typical allowed disposition">approve, narrow, schedule, deny</td>
+</tr>
+<tr>
+<td data-label="Handback class">privacy or security</td>
+<td data-label="Example next owner">qualified control owner</td>
+<td data-label="Typical allowed disposition">minimize, restrict, redesign, deny</td>
+</tr>
+<tr>
+<td data-label="Handback class">provider state</td>
+<td data-label="Example next owner">system owner</td>
+<td data-label="Typical allowed disposition">wait, query, cancel, reconcile, escalate</td>
+</tr>
+<tr>
+<td data-label="Handback class">reconciliation</td>
+<td data-label="Example next owner">governing-source owner</td>
+<td data-label="Typical allowed disposition">correct, roll back, investigate, accept bounded variance</td>
+</tr>
+</tbody></table>
+<p>A single undifferentiated human-review queue hides the very information needed to route work. It also creates the illusion that any available human can make any decision.</p>
+<p>The handback record should set:</p>
+<ul>
+<li>required reviewer qualification;</li>
+<li>current owner and escalation owner;</li>
+<li>original-event age;</li>
+<li>response deadline;</li>
+<li>consequence and urgency;</li>
+<li>evidence completeness;</li>
+<li>allowed dispositions;</li>
+<li>approval expiry;</li>
+<li>resumption condition;</li>
+<li>and what happens if nobody responds.</li>
+</ul>
+<p>This makes the pattern compatible with a capacity-governed review queue without duplicating queue design. The handback answers <em>why control returned and what decision is required</em>. The queue governs <em>who reviews it, when, and under what capacity constraints</em>.</p>
+<h2>Six handback states</h2>
+<p>Use explicit states instead of a generic error.</p>
+<ol>
+<li><strong><code>needs_information</code></strong> — a named fact or source is missing.</li>
+<li><strong><code>needs_authority</code></strong> — identity, approval, permission, or delegation is insufficient.</li>
+<li><strong><code>needs_judgment</code></strong> — policy permits a human decision but does not determine it.</li>
+<li><strong><code>deferred</code></strong> — an external condition or approved window has not arrived.</li>
+<li><strong><code>denied</code></strong> — the action is not permitted under the current envelope.</li>
+<li><strong><code>reconciliation_mismatch</code></strong> — execution occurred but governing state disagrees.</li>
+</ol>
+<p>Each state must record whether the action is still merely proposed, whether any side effect occurred, and whether a correction or rollback is pending.</p>
+<h2>The minimum handback packet</h2>
+<p>A reviewer should receive:</p>
+<ul>
+<li>handback ID and version;</li>
+<li>action ID and idempotency key;</li>
+<li>exact state and reason code;</li>
+<li>subject, actor, and authorizer identities;</li>
+<li>facility and resource scope;</li>
+<li>proposed action and current operating state;</li>
+<li>governing source references and freshness;</li>
+<li>policy version, input, result, and unresolved predicate;</li>
+<li>consequence and reversibility classes;</li>
+<li>personal or sensitive-data classification;</li>
+<li>attempt and provider-receipt history;</li>
+<li>any side effects already observed;</li>
+<li>required reviewer qualification;</li>
+<li>allowed dispositions;</li>
+<li>deadline and escalation owner;</li>
+<li>resumption test;</li>
+<li>correction and rollback routes;</li>
+<li>evidence limitations.</li>
+</ul>
+<p>The record should not contain reusable secrets, unrestricted customer data, or an entire prompt transcript when a minimized claim-and-source packet is sufficient.</p>
+<p><a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV-O</a> provides general concepts for entities, activities, agents, attribution, association, delegation, generation, use, derivation, and invalidation. Those concepts can make the handback lineage inspectable. They do not prove that the source is true, the actor had authority, the action succeeded, or the human review was appropriate.</p>
+<h2>A fictional self-storage walkthrough</h2>
+<p>A fictional agent receives a request to change Saturday gate hours for <code>FAC-CEDAR</code>.</p>
+<ol>
+<li>It resolves the stable facility ID and freezes the request version.</li>
+<li>It reads a proposed schedule from an approved change record.</li>
+<li>The public profile still shows the old schedule.</li>
+<li>The internal access-control schedule shows a third value.</li>
+<li>The change record approves the public-information update but does not authorize an access-control change.</li>
+</ol>
+<p>The agent should not harmonize the systems. It should create two distinct states:</p>
+<ul>
+<li>public-profile action: <code>needs_authority</code> until the exact publishing actor and window are valid;</li>
+<li>access-control action: <code>needs_judgment</code> or <code>denied</code> because the source and authority contract do not cover a physical-access schedule.</li>
+</ul>
+<p>The handback packet preserves all three observed values, field owners, effective times, scopes, consequences, and allowed dispositions. A qualified human can approve one bounded action without accidentally authorizing the other.</p>
+<p>The example is fictional. It is not a facility-hours claim, safety instruction, product capability, or access-control diagnosis.</p>
+<h2>The resume token is a new decision, not a continuation</h2>
+<p>When a reviewer resolves a handback, issue a bounded resume record:</p>
+<ul>
+<li>handback ID and version;</li>
+<li>disposition and reviewer;</li>
+<li>facts resolved;</li>
+<li>exact action now allowed;</li>
+<li>source and policy versions;</li>
+<li>resource and field scope;</li>
+<li>consequence class;</li>
+<li>approval time and expiry;</li>
+<li>remaining limitations;</li>
+<li>one-time or replay rule.</li>
+</ul>
+<p>If the proposal, source, policy, value, scope, consequence, or execution window changed materially during review, do not resume the old action. Create a new proposal and evaluate it from the beginning.</p>
+<p>This is where automation bias matters. The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST Generative AI Profile, AI 600-1</a>, describes risks including confabulation, automation bias, and information integrity. A polished agent summary can make stale authorization or incomplete evidence feel settled. The reviewer should inspect the bounded facts and choices, not merely agree with the narrative.</p>
+<h2>Recovery belongs in the architecture</h2>
+<p>Handback is not only a pre-action safeguard. It is also the correct response to partial execution and inconsistent readback.</p>
+<p>The <a href="https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20">NIST Cybersecurity Framework 2.0</a> organizes cybersecurity outcomes across Govern, Identify, Protect, Detect, Respond, and Recover. It is voluntary, cross-sector, and not an agent workflow standard. Its outcome orientation reinforces a useful design rule: detection, response, and recovery paths should be planned alongside prevention.</p>
+<p>For each agent action type, design:</p>
+<ul>
+<li>a pre-execution denial path;</li>
+<li>a timeout and provider-ambiguity path;</li>
+<li>a post-execution reconciliation path;</li>
+<li>a correction or rollback path;</li>
+<li>an escalation path when rollback is not safe;</li>
+<li>and a final evidence-backed closure test.</li>
+</ul>
+<p>An agent that can call a tool but cannot return a partial result safely is not ready for consequential work.</p>
+<h2>The architect exercise</h2>
+<p>Choose one proposed agent action: update a facility field, prepare a customer message, route a work order, reconcile a document, or publish an approved artifact.</p>
+<p>Complete the companion <a href="agent-action-envelope-register.csv">action-envelope register</a> and <a href="agent-handback-readiness-suite.csv">readiness suite</a>. Use the <a href="operations-agent-handback-decision-tree.md">decision tree</a> and <a href="agent-handback-control-plane.svg">control-plane diagram</a> to trace the selected action:</p>
+<ol>
+<li>draw subject, actor, authorizer, policy, tool, resource, provider, and governing source;</li>
+<li>mark every decision that can return unknown, conflict, expired, denied, partial, or mismatch;</li>
+<li>assign a typed handback state and qualified next owner to each;</li>
+<li>define side-effect, deadline, resumption, correction, and rollback fields;</li>
+<li>replay the action with a stale source, expired approval, wrong facility, provider timeout, duplicate receipt, and mismatched readback;</li>
+<li>verify that no branch converts uncertainty into permission or provider success into operating completion.</li>
+</ol>
+<p>The release question is:</p>
+<p><strong>Can the agent explain exactly why it stopped, what it already did, who must decide next, which choices are allowed, when the decision expires, and what evidence would permit a new bounded action?</strong></p>
+<p>If not, the agent has not handed back control. It has only stopped.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">Artificial Intelligence Risk Management Framework 1.0</a>, NIST, January 26, 2023; current page checked August 22, 2026 and notes the framework is under revision.</li>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST AI 600-1</a>, NIST, July 26, 2024; page updated April 8, 2026.</li>
+<li><a href="https://csrc.nist.gov/CSRC/media/Projects/risk-management/800-53%20Downloads/800-53r5/SP_800-53_v5_1-derived-OSCAL.pdf">Security and Privacy Controls for Information Systems and Organizations, NIST SP 800-53 Revision 5.1</a>, official derived OSCAL publication checked August 22, 2026.</li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9396.html">OAuth 2.0 Rich Authorization Requests, RFC 9396</a>, IETF, May 2023.</li>
+<li><a href="https://www.rfc-editor.org/info/rfc8693/">OAuth 2.0 Token Exchange, RFC 8693</a>, IETF, January 2020.</li>
+<li><a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV-O: The PROV Ontology</a>, W3C Recommendation, April 30, 2013.</li>
+<li><a href="https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20">NIST Cybersecurity Framework 2.0</a>, NIST, February 26, 2024.</li>
+</ul>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/human-review-queue-without-bottleneck/">Designing a Human Review Queue That Does Not Become a Bottleneck</a></h3><p>Route consequential work through evidence-complete admission, qualified review, bounded capacity, visible aging, execution, reconciliation, and reopening.</p><a href="/writing/human-review-queue-without-bottleneck/" class="text-link" aria-label="Read the article: Designing a Human Review Queue That Does Not Become a Bottleneck">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating method</p><h3><a href="/writing/portfolio-handoff-audit/">The Portfolio Handoff Audit: Where Work Loses Its Owner</a></h3><p>Separate routing, receipt, acceptance, execution, returned disposition, and sender reconciliation across portfolio boundaries.</p><a href="/writing/portfolio-handoff-audit/" class="text-link" aria-label="Read the article: The Portfolio Handoff Audit: Where Work Loses Its Owner">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Advanced operating method</p><h3><a href="/writing/automation-slos-for-operators/">Automation SLOs for Operators</a></h3><p>Measure freshness, completion, reconciliation, recovery, evidence integrity, and consequence-aware error budgets in operator terms.</p><a href="/writing/automation-slos-for-operators/" class="text-link" aria-label="Read the article: Automation SLOs for Operators">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
