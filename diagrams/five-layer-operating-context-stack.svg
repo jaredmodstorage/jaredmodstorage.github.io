@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Five-layer operating context stack for multi-facility AI</title>
+  <desc id="desc">Five stacked operating-context layers for multi-facility AI: identity, policy and authority, operational state, events and time, and decision and evidence, enclosed by a versioned context envelope with a stop path when a required layer is missing.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07131f"/><stop offset="1" stop-color="#102c3b"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000814" flood-opacity=".32"/></filter>
+    <style>
+      .eyebrow{font:600 20px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:3px;fill:#76d7c4}
+      .title{font:700 46px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#f7fbfd}
+      .sub{font:400 22px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#b9ccd5}
+      .num{font:700 27px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#06151e}
+      .layer-title{font:700 26px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#f7fbfd}
+      .layer-copy{font:400 18px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#d8e5ea}
+      .rail-title{font:700 20px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#06212b}
+      .rail-copy{font:600 17px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#163b44}
+      .stop-title{font:700 18px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#fff3ee}
+      .stop-copy{font:400 17px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#ffd9ce}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1450" cy="80" r="260" fill="#0e5260" opacity=".22"/>
+  <circle cx="95" cy="835" r="310" fill="#173e68" opacity=".22"/>
+  <text x="110" y="92" class="eyebrow">PROPOSED REFERENCE ARCHITECTURE</text>
+  <text x="110" y="150" class="title">The operating context stack</text>
+  <text x="110" y="191" class="sub">One evidence-bearing envelope before AI is allowed to govern multi-facility work</text>
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="248" width="1120" height="108" rx="18" fill="#123f52" stroke="#2d7682" stroke-width="2"/>
+    <circle cx="170" cy="302" r="27" fill="#76d7c4"/><text x="170" y="311" text-anchor="middle" class="num">5</text>
+    <text x="220" y="289" class="layer-title">Decision and evidence</text>
+    <text x="220" y="324" class="layer-copy">Versions · evidence references · human adjudication · receipts · reconciliation · rollback</text>
+
+    <rect x="110" y="370" width="1120" height="108" rx="18" fill="#173a61" stroke="#3f6e9a" stroke-width="2"/>
+    <circle cx="170" cy="424" r="27" fill="#8db9e8"/><text x="170" y="433" text-anchor="middle" class="num">4</text>
+    <text x="220" y="411" class="layer-title">Events and time</text>
+    <text x="220" y="446" class="layer-copy">Event ID · source · subject · occurred at · ingested at · schema · correlation · replay</text>
+
+    <rect x="110" y="492" width="1120" height="108" rx="18" fill="#3d315c" stroke="#7762a0" stroke-width="2"/>
+    <circle cx="170" cy="546" r="27" fill="#c5a7f2"/><text x="170" y="555" text-anchor="middle" class="num">3</text>
+    <text x="220" y="533" class="layer-title">Operational state</text>
+    <text x="220" y="568" class="layer-copy">Governing source · observed value · freshness · conflict · null behavior · reconciliation</text>
+
+    <rect x="110" y="614" width="1120" height="108" rx="18" fill="#5a342b" stroke="#9a6553" stroke-width="2"/>
+    <circle cx="170" cy="668" r="27" fill="#f0b28f"/><text x="170" y="677" text-anchor="middle" class="num">2</text>
+    <text x="220" y="655" class="layer-title">Policy and authority</text>
+    <text x="220" y="690" class="layer-copy">Policy version · allow and deny · review trigger · approver role · enforcement point</text>
+
+    <rect x="110" y="736" width="1120" height="108" rx="18" fill="#24483f" stroke="#4b8673" stroke-width="2"/>
+    <circle cx="170" cy="790" r="27" fill="#92d3b8"/><text x="170" y="799" text-anchor="middle" class="num">1</text>
+    <text x="220" y="777" class="layer-title">Identity</text>
+    <text x="220" y="812" class="layer-copy">Stable facility ID · actor · role · scope · lifecycle · system boundary · ID translation</text>
+  </g>
+
+  <rect x="1260" y="248" width="230" height="474" rx="24" fill="#76d7c4"/>
+  <text x="1375" y="300" text-anchor="middle" class="rail-title">VERSIONED</text>
+  <text x="1375" y="327" text-anchor="middle" class="rail-title">CONTEXT ENVELOPE</text>
+  <line x1="1300" y1="352" x2="1450" y2="352" stroke="#205b62" stroke-width="2"/>
+  <text x="1298" y="391" class="rail-copy">• one workflow</text>
+  <text x="1298" y="427" class="rail-copy">• bounded snapshot</text>
+  <text x="1298" y="463" class="rail-copy">• named owners</text>
+  <text x="1298" y="499" class="rail-copy">• effective times</text>
+  <text x="1298" y="535" class="rail-copy">• sensitivity</text>
+  <text x="1298" y="571" class="rail-copy">• expiration</text>
+  <text x="1298" y="607" class="rail-copy">• conflict rule</text>
+  <text x="1298" y="643" class="rail-copy">• rollback path</text>
+  <path d="M1375 675 l0 18 m-9-9 9 9 9-9" fill="none" stroke="#164951" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="1260" y="736" width="230" height="108" rx="20" fill="#7d332b" stroke="#d87865" stroke-width="2"/>
+  <text x="1375" y="773" text-anchor="middle" class="stop-title">REQUIRED LAYER</text>
+  <text x="1375" y="798" text-anchor="middle" class="stop-title">MISSING</text>
+  <text x="1375" y="826" text-anchor="middle" class="stop-copy">Stop · explain · hand back</text>
+
+  <text x="110" y="875" class="eyebrow">JARED MASTROIANNI · EVIDENCE BEFORE AUTOMATION</text>
+</svg>

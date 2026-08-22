@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.sbTxTHOb.css" data-rsc-css-href="/_next/static/css/index.sbTxTHOb.css" data-precedence="vite-rsc/importer-resources"/><title>The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni</title><meta name="description" content="A proposed five-layer reference architecture for preserving facility identity, policy authority, operational state, event time, decision evidence, human review, reconciliation, and rollback in multi-facility AI workflows."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni"/><meta property="og:description" content="A proposed five-layer reference architecture for preserving facility identity, policy authority, operational state, event time, decision evidence, human review, reconciliation, and rollback in multi-facility AI workflows."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack"/><meta property="og:type" content="article"/><meta property="og:image" content="https://jaredmodstorage.github.io/diagrams/five-layer-operating-context-stack.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="Five stacked operating-context layers for multi-facility AI with a stop path when a required layer is missing."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Five-Layer Operating Context Stack for Multi-Facility AI | Jared Mastroianni"/><meta name="twitter:description" content="A proposed five-layer reference architecture for preserving facility identity, policy authority, operational state, event time, decision evidence, human review, reconciliation, and rollback in multi-facility AI workflows."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/diagrams/five-layer-operating-context-stack.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><main><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Five-Layer Operating Context Stack for Multi-Facility AI","datePublished":"2026-08-22","dateModified":"2026-08-22","author":{"@id":"https://jaredmodstorage.github.io/#person"},"mainEntityOfPage":"https://jaredmodstorage.github.io/writing/five-layer-operating-context-stack","image":"https://jaredmodstorage.github.io/diagrams/five-layer-operating-context-stack.png","description":"A proposed five-layer reference architecture for preserving facility identity, policy authority, operational state, event time, decision evidence, human review, reconciliation, and rollback in multi-facility AI workflows."}</script><header class="site-header"><a href="/" class="wordmark" aria-label="Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav aria-label="Primary navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/facily">Facily</a><a href="/facily-os">Facily OS</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/assets">Assets</a><a href="/media" class="nav-cta">Media</a></nav></header><article class="essay"><header class="essay-header"><p class="eyebrow">Expert reference model · 22 August 2026</p><h1>The Five-Layer Operating Context Stack for Multi-Facility AI</h1><p class="lede">Identity, authority, state, time, and evidence should be assembled before an AI-assisted workflow is allowed to govern work across facilities.</p><div class="byline"><span>By Jared Mastroianni</span><span>13 min read</span></div></header><div class="essay-body"><p class="dropcap">An AI system can produce a fluent answer with almost no operating context. That is the problem.</p>
+<p>In a multi-facility operation, the same sentence can be correct for one location, prohibited at another, stale by the time it reaches a third, and outside the authority of the person asking. A model can recognize a maintenance note without knowing which facility it belongs to. It can recommend an action without knowing whether that action is allowed. It can summarize a status without knowing whether the source is current. It can cite an event without knowing whether the event was delivered, accepted, executed, or reconciled.</p>
+<p>The remedy is not a longer prompt. It is an operating context stack.</p>
+<p>This article proposes five layers that should be assembled before an AI-assisted workflow is allowed to govern work across facilities:</p>
+<ol>
+<li>identity context;</li>
+<li>policy and authority context;</li>
+<li>operational state context;</li>
+<li>event and temporal context; and</li>
+<li>decision and evidence context.</li>
+</ol>
+<p><a href="/diagrams/five-layer-operating-context-stack.svg"><img src="/diagrams/five-layer-operating-context-stack.svg" alt="Five stacked operating-context layers for multi-facility AI: identity, policy and authority, operational state, events and time, and decision and evidence, enclosed by a versioned context envelope with a stop path when a required layer is missing."></a></p>
+<p><a href="/diagrams/five-layer-operating-context-stack.svg">Open the full-size SVG diagram.</a></p>
+<p>The stack is a reference model, not a product diagram. It does not describe a released Facily OS architecture, a modSTORAGE production system, a vendor integration, or a measured result.</p>
+<h2>Context is a governed input, not prompt decoration</h2>
+<p>“Add context” is often treated as a retrieval problem: find more documents, place them near the prompt, and let the model synthesize. That can improve relevance. It does not establish authority.</p>
+<p>Operating context must answer harder questions:</p>
+<ul>
+<li>Which real entity does this request concern?</li>
+<li>Which role is acting, and within what scope?</li>
+<li>Which policy version is effective?</li>
+<li>Which source governs each state field?</li>
+<li>When did the underlying occurrence happen?</li>
+<li>When was it observed by this system?</li>
+<li>What conflict or missing-data condition is active?</li>
+<li>What evidence supports the recommendation?</li>
+<li>Who approved the action?</li>
+<li>What receipt and reconciliation prove the final state?</li>
+</ul>
+<p>These questions belong in explicit fields with owners, timestamps, versions, and failure behavior. They should not depend on a model inferring the answer from prose.</p>
+<p>The five layers are ordered. A higher layer may reference a lower one, but it must not silently redefine it. A recommendation cannot invent the facility identity. An event cannot grant authority. A current-looking state cannot override policy. A human approval cannot erase the evidence trail that made the decision reviewable.</p>
+<h2>Layer 1: identity context</h2>
+<p>Identity context establishes what and who the workflow is about.</p>
+<p>At minimum, record:</p>
+<ul>
+<li>stable facility ID;</li>
+<li>current facility label and lifecycle state;</li>
+<li>system or tenant boundary;</li>
+<li>actor ID and authenticated role;</li>
+<li>permitted facility, region, and portfolio scope;</li>
+<li>service or automation identity when software is acting; and</li>
+<li>the identifier translation used when two systems name the same entity differently.</li>
+</ul>
+<p>The stable identifier matters more than the display name. Names change. Addresses can be formatted several ways. A legacy source may retain an old label. A platform login may administer an asset without establishing legal ownership, employment, operation, or provider status.</p>
+<p>Identity context must preserve those boundaries. “Can access this record” and “owns this facility” are different propositions. “Runs this workflow” and “is the authoritative source” are different propositions. The stack should carry only the relationship needed for the decision and should name the evidence for that relationship.</p>
+<p>Failure behavior: if facility identity, actor identity, or scope is ambiguous, stop before policy evaluation. Do not let the model choose the closest name.</p>
+<h2>Layer 2: policy and authority context</h2>
+<p>Policy context defines what may happen, who may decide, and where enforcement occurs.</p>
+<p>Record:</p>
+<ul>
+<li>policy ID, version, owner, and effective time;</li>
+<li>permitted and prohibited actions;</li>
+<li>consequence class;</li>
+<li>thresholds for human review;</li>
+<li>required approver role;</li>
+<li>separation-of-duties rules;</li>
+<li>enforcement point;</li>
+<li>exception and expiration behavior; and</li>
+<li>the rollback authority.</li>
+</ul>
+<p>This layer separates a policy decision from policy enforcement. A rule engine, application service, or human reviewer may decide that an action is allowed. A different component may enforce the result. Both steps need identifiers and evidence.</p>
+<p>NIST Special Publication 800-207 describes policy decision and enforcement concepts for zero-trust access architecture. That is a useful architectural distinction, but its scope is cybersecurity and access to enterprise resources. It does not define self-storage operating authority, employment roles, customer permissions, or the five-layer model proposed here.</p>
+<p>Failure behavior: if the policy is missing, expired, conflicted, or outside the actor’s scope, route to an accountable human owner. “No rule found” must never become “allowed.”</p>
+<h2>Layer 3: operational state context</h2>
+<p>State context describes what is currently believed to be true and why.</p>
+<p>For every state field used in a decision, record:</p>
+<ul>
+<li>field definition and allowed values;</li>
+<li>governing source and source owner;</li>
+<li>observed value;</li>
+<li>observation time;</li>
+<li>freshness threshold;</li>
+<li>transformation or projection version;</li>
+<li>conflict state;</li>
+<li>null behavior; and</li>
+<li>last reconciled reference.</li>
+</ul>
+<p>A dashboard is not automatically the source of truth. Neither is the newest record, the largest database, or the system with the cleanest interface. A derived state should identify the records and rules that produced it.</p>
+<p>Multi-facility systems also need explicit partitioning. A portfolio-wide view must not blend fields whose meanings, timezones, source owners, or update rhythms differ. <code>open</code>, for example, may mean assigned in one system, unverified completion in another, and an unresolved exception in a third.</p>
+<p>Failure behavior: stale, missing, or conflicting state remains visible as stale, missing, or conflicting. The model may explain the condition. It must not manufacture a clean state to keep the workflow moving.</p>
+<h2>Layer 4: event and temporal context</h2>
+<p>State answers “what is believed now.” Event context answers “what happened, according to whom, and when.”</p>
+<p>Record:</p>
+<ul>
+<li>event ID;</li>
+<li>event type and schema version;</li>
+<li>producer or source;</li>
+<li>subject;</li>
+<li>occurrence time;</li>
+<li>ingestion time;</li>
+<li>correlation or causation reference;</li>
+<li>payload sensitivity class;</li>
+<li>delivery and processing receipts; and</li>
+<li>supersession or replay status.</li>
+</ul>
+<p>Occurrence time and ingestion time are separate. A late-arriving event can be newer in the queue while describing an older occurrence. A repeated delivery may carry the same occurrence. A transport receipt proves that a message reached a boundary; it does not prove that the intended business action was authorized, executed, or reconciled.</p>
+<p>CloudEvents provides a vendor-neutral format for event metadata. Its released core line is v1.0.2, while the repository’s main specification is work in progress. CloudEvents improves event interoperability; it does not define business authority, a processing model, delivery guarantees, or operating completion. Its specification also warns against placing sensitive information in context attributes.</p>
+<p>Failure behavior: unknown schemas, impossible time order, duplicate identifiers, missing correlation, or sensitive context leakage should create an exception rather than a guessed timeline.</p>
+<h2>Layer 5: decision and evidence context</h2>
+<p>This layer makes the AI-assisted decision reconstructable.</p>
+<p>Record:</p>
+<ul>
+<li>decision ID and intended decision;</li>
+<li>model, system, prompt, retrieval, and rule versions;</li>
+<li>evidence references and their observation times;</li>
+<li>assumptions and limitations;</li>
+<li>recommendation and confidence language;</li>
+<li>human reviewer and adjudication;</li>
+<li>policy decision reference;</li>
+<li>action request and acceptance receipt;</li>
+<li>execution evidence;</li>
+<li>reconciliation evidence; and</li>
+<li>rollback owner and method.</li>
+</ul>
+<p>W3C PROV-O offers a general ontology for entities, activities, agents, and derivations. It can help represent where decision evidence came from. It does not decide whether a source is operationally authoritative, whether an action is allowed, or whether a self-storage workflow is complete.</p>
+<p>NIST AI RMF 1.0 organizes voluntary AI risk management through Govern, Map, Measure, and Manage. NIST’s current AI RMF page says version 1.0 is being revised. NIST AI 600-1 is a cross-sectoral generative-AI profile published July 26, 2024. These resources support risk identification, documentation, measurement, and human oversight; they do not prescribe this stack or certify an implementation.</p>
+<p>Failure behavior: if the evidence packet cannot be reconstructed, the system may offer an informational summary but must not present the result as an authorized operating decision.</p>
+<h2>The context envelope</h2>
+<p>The five layers should be assembled into a versioned context envelope for one decision or workflow instance. The envelope is not a copy of every record. It is the minimum evidence-bearing snapshot needed to evaluate, authorize, execute, and later audit the decision.</p>
+<p>One envelope should declare:</p>
+<ul>
+<li>its own version and creation time;</li>
+<li>the decision or workflow instance it supports;</li>
+<li>references to each layer;</li>
+<li>the rule for resolving conflicts between layers;</li>
+<li>sensitivity and retention controls;</li>
+<li>a hash or immutable reference when consequence warrants it; and</li>
+<li>the exact point at which the envelope expires and must be rebuilt.</li>
+</ul>
+<p>Do not propagate the full envelope everywhere. OpenTelemetry Baggage is one mechanism for carrying application-defined context through a distributed request. Its API is stable, but baggage can cross process boundaries, may be visible in network headers, and has no built-in integrity guarantee. Use opaque references where possible. Keep secrets, customer data, and sensitive policy facts out of broadly propagated context.</p>
+<h2>A fictional multi-facility incident</h2>
+<p>Consider a fictional workflow. It does not describe a real facility, vendor, integration, or result.</p>
+<p>An AI assistant receives three signals associated with a demonstration facility: a manager report that a gate is intermittently failing, a stale device heartbeat, and an open maintenance item. The assistant is asked what to do next.</p>
+<p>The five-layer envelope could contain:</p>
+<p><strong>Identity.</strong> <code>FAC-DEMO-014</code> is the stable facility ID. The requesting actor is a regional operations reviewer scoped to the demonstration region. The device and work-order systems both map to that facility through approved translation records.</p>
+<p><strong>Policy.</strong> Policy <code>ACCESS-INCIDENT-02</code>, version 4, permits the assistant to summarize and recommend. It prohibits automated unlock or access-rule changes. A safety- or access-impacting incident requires named human review. The application service is the enforcement point.</p>
+<p><strong>State.</strong> The incident is open in the governing work-order source. The heartbeat is outside its freshness threshold. No verified closure evidence exists. The visible state is therefore <code>open_with_stale_telemetry</code>, not <code>device_failed</code> and not <code>resolved</code>.</p>
+<p><strong>Events.</strong> The manager report occurred before the last heartbeat but was ingested after it. Both occurrence and ingestion times are retained. The maintenance-created event and telemetry event have separate IDs and share a correlation reference. Message delivery is recorded without being labeled execution.</p>
+<p><strong>Decision and evidence.</strong> The assistant recommends an onsite inspection and a controlled vendor-dispatch review. It states that the heartbeat alone does not prove physical failure. A named reviewer approves dispatch but does not authorize an unlock. The accepted work-order receipt is recorded. Closure remains blocked until verification evidence is attached and reconciled to the stable facility ID.</p>
+<p>Without the stack, the same signals could produce a confident but unsafe shortcut: “The gate is down; unlock it remotely and close the ticket.” The stack changes the question from “What does the model think?” to “What can this workflow support, authorize, and prove?”</p>
+<h2>Five omission tests</h2>
+<p>Use these tests during design review:</p>
+<ol>
+<li><strong>Identity omission:</strong> Could the same request be routed to the wrong facility or acted on by the wrong scope?</li>
+<li><strong>Policy omission:</strong> Could a recommendation be mistaken for permission?</li>
+<li><strong>State omission:</strong> Could stale, conflicting, or derived data appear current and authoritative?</li>
+<li><strong>Event omission:</strong> Could delivery be mistaken for occurrence, execution, or completion?</li>
+<li><strong>Evidence omission:</strong> Could the result be impossible to reconstruct, challenge, or roll back?</li>
+</ol>
+<p>If any answer is yes, the workflow is not ready for consequential automation.</p>
+<h2>Interface requirements</h2>
+<p>The operator should not have to inspect raw JSON to understand the stack. The interface should show:</p>
+<ul>
+<li>facility and actor scope;</li>
+<li>effective policy and required reviewer;</li>
+<li>state source and freshness;</li>
+<li>event occurrence versus observation time;</li>
+<li>unresolved conflicts;</li>
+<li>evidence used and evidence withheld;</li>
+<li>recommendation versus authorized action;</li>
+<li>receipt, reconciliation, and rollback state; and</li>
+<li>a clear stop or hand-back-control path.</li>
+</ul>
+<p>Every visible action should either work within the declared authority or be removed. Disabled controls should explain the missing layer. A mobile operator should see the same decision boundary as a desktop operator, even if the presentation is condensed.</p>
+<h2>A 45-field architecture exercise</h2>
+<p>Choose one consequential but bounded workflow. Download the <a href="https://jaredmodstorage.github.io/downloads/operating-context-stack-template.csv">operating-context-stack worksheet</a> and complete one row.</p>
+<p>Then run a tabletop with an operator, a source owner, and a technical reviewer:</p>
+<ol>
+<li>Remove one identity field. Can the workflow still prove the entity and scope?</li>
+<li>Expire the policy. Does the system stop?</li>
+<li>Make the governing state stale. Does the interface show the condition?</li>
+<li>Deliver an older event late. Does the timeline stay truthful?</li>
+<li>Withhold the reconciliation evidence. Does the workflow refuse to call the action complete?</li>
+<li>Replace the human reviewer with a role outside scope. Does enforcement reject the decision?</li>
+<li>Rebuild the context envelope. Can another reviewer reach the same bounded conclusion?</li>
+</ol>
+<p>The purpose is not to make every field mandatory in every workflow. The purpose is to force an explicit decision about what is required, who owns it, and what happens when it is absent.</p>
+<h2>Release gate</h2>
+<p>Before the workflow governs work, verify:</p>
+<ul>
+<li>all five layers have named owners;</li>
+<li>stable IDs and translations are tested;</li>
+<li>policy versions and effective times are machine-readable;</li>
+<li>missing policy defaults to stop;</li>
+<li>governing state sources and freshness thresholds are explicit;</li>
+<li>occurrence and ingestion times are separate;</li>
+<li>schemas and transformations are versioned;</li>
+<li>context propagation excludes sensitive values;</li>
+<li>human review triggers are consequence-based;</li>
+<li>action receipts are distinct from execution and reconciliation;</li>
+<li>rollback is owned and exercised in proportion to risk;</li>
+<li>fictional tests cover stale, duplicate, conflicting, and out-of-scope inputs;</li>
+<li>desktop and narrow-screen interfaces preserve the decision boundary; and</li>
+<li>documentation names the standards used and their limitations.</li>
+</ul>
+<h2>Sources and limitations</h2>
+<p>Observed August 22, 2026:</p>
+<ul>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a>, published January 26, 2023; NIST’s current program page says version 1.0 is being revised.</li>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST AI 600-1, Generative AI Profile</a>, published July 26, 2024 and updated April 8, 2026.</li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/207/final">NIST SP 800-207, Zero Trust Architecture</a>, final August 11, 2020.</li>
+<li><a href="https://github.com/cloudevents/spec">CloudEvents specification repository</a>, listing v1.0.2 as the latest released core specification and the main line as work in progress.</li>
+<li><a href="https://www.w3.org/TR/prov-o/">W3C PROV-O</a>, a W3C Recommendation dated April 30, 2013.</li>
+<li><a href="https://opentelemetry.io/docs/specs/otel/baggage/api/">OpenTelemetry Baggage API</a>, currently marked Stable.</li>
+</ul>
+<p>These sources inform parts of the model; none defines this five-layer stack or a self-storage industry standard. NIST AI resources are voluntary and cross-sectoral. SP 800-207 addresses cybersecurity and enterprise-resource access. CloudEvents addresses event interoperability, not business authority or delivery guarantees. PROV-O is a general provenance ontology. OpenTelemetry Baggage is a propagation mechanism, not an authorization or integrity control.</p>
+<h2>Disclosure</h2>
+<p>I am CEO and Co-Founder of Facily.ai and Chief Operating Officer of modSTORAGE. This is a proposed reference architecture. It is not a Facily OS release diagram, a product-availability statement, an integration claim, a customer case study, an industry standard, or a performance result.</p>
+</div></article><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about">About</a><a href="/modstorage">modSTORAGE</a><a href="/writing">Writing</a><a href="/research">Research</a><a href="/speaking">Speaking</a><a href="/media">Media kit</a><a href="/assets">Assets</a><a href="/publishing-principles">Publishing principles</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></main></body></html>
