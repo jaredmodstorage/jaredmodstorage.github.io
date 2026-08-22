@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Work-order closure state machine</title>
+  <desc id="desc">A two-row state machine moves a fictional self-storage maintenance record from reported through qualified, authorized, accepted, executed, verified, reconciled, and closed. Review and blocked exits preserve uncertainty, while an AI evidence assembler may prepare a packet but cannot authorize closure.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131f"/>
+      <stop offset="1" stop-color="#10283c"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#173b55"/>
+      <stop offset="1" stop-color="#102d43"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#62d5bf"/>
+    </marker>
+    <marker id="holdArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffb85c"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1450" cy="92" r="250" fill="#1a4861" opacity="0.28"/>
+  <circle cx="100" cy="820" r="220" fill="#0d6b65" opacity="0.18"/>
+
+  <text x="92" y="86" fill="#f5fbff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">A note can advance a record. It cannot close the evidence gap.</text>
+  <text x="94" y="129" fill="#a9c4d5" font-family="Inter, Arial, sans-serif" font-size="22">A proposed work-order closure contract for self-storage operations · all facility examples are fictional</text>
+
+  <g font-family="Inter, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(92 205)">
+      <rect width="300" height="132" rx="18" fill="url(#card)" stroke="#5b91ad" stroke-width="2"/>
+      <text x="24" y="38" fill="#62d5bf" font-size="17" font-weight="700">01 · REPORTED</text>
+      <text x="24" y="72" fill="#f5fbff" font-size="25" font-weight="700">A condition may exist</text>
+      <text x="24" y="103" fill="#b9ceda" font-size="17">Source, time, place, symptom</text>
+    </g>
+    <g transform="translate(458 205)">
+      <rect width="300" height="132" rx="18" fill="url(#card)" stroke="#5b91ad" stroke-width="2"/>
+      <text x="24" y="38" fill="#62d5bf" font-size="17" font-weight="700">02 · QUALIFIED</text>
+      <text x="24" y="72" fill="#f5fbff" font-size="22" font-weight="700">Identity and consequence</text>
+      <text x="24" y="103" fill="#b9ceda" font-size="17">Deduplicate, route, control</text>
+    </g>
+    <g transform="translate(824 205)">
+      <rect width="300" height="132" rx="18" fill="url(#card)" stroke="#5b91ad" stroke-width="2"/>
+      <text x="24" y="38" fill="#62d5bf" font-size="17" font-weight="700">03 · AUTHORIZED</text>
+      <text x="24" y="72" fill="#f5fbff" font-size="25" font-weight="700">Scope is approved</text>
+      <text x="24" y="103" fill="#b9ceda" font-size="17">Method, access, limit, window</text>
+    </g>
+    <g transform="translate(1190 205)">
+      <rect width="300" height="132" rx="18" fill="url(#card)" stroke="#5b91ad" stroke-width="2"/>
+      <text x="24" y="38" fill="#62d5bf" font-size="17" font-weight="700">04 · ACCEPTED</text>
+      <text x="24" y="72" fill="#f5fbff" font-size="25" font-weight="700">A named owner has it</text>
+      <text x="24" y="103" fill="#b9ceda" font-size="17">Assignment plus receipt</text>
+    </g>
+
+    <g transform="translate(1190 442)">
+      <rect width="300" height="132" rx="18" fill="url(#card)" stroke="#5b91ad" stroke-width="2"/>
+      <text x="24" y="38" fill="#62d5bf" font-size="17" font-weight="700">05 · EXECUTED</text>
+      <text x="24" y="72" fill="#f5fbff" font-size="25" font-weight="700">Work was attempted</text>
+      <text x="24" y="103" fill="#b9ceda" font-size="17">Result may be partial or blocked</text>
+    </g>
+    <g transform="translate(824 442)">
+      <rect width="300" height="132" rx="18" fill="url(#card)" stroke="#5b91ad" stroke-width="2"/>
+      <text x="24" y="38" fill="#62d5bf" font-size="17" font-weight="700">06 · VERIFIED</text>
+      <text x="24" y="72" fill="#f5fbff" font-size="25" font-weight="700">Declared test passed</text>
+      <text x="24" y="103" fill="#b9ceda" font-size="17">Expected vs. observed</text>
+    </g>
+    <g transform="translate(458 442)">
+      <rect width="300" height="132" rx="18" fill="url(#card)" stroke="#5b91ad" stroke-width="2"/>
+      <text x="24" y="38" fill="#62d5bf" font-size="17" font-weight="700">07 · RECONCILED</text>
+      <text x="24" y="72" fill="#f5fbff" font-size="22" font-weight="700">Dependencies resolved</text>
+      <text x="24" y="103" fill="#b9ceda" font-size="17">Or transferred to named records</text>
+    </g>
+    <g transform="translate(92 442)">
+      <rect width="300" height="132" rx="18" fill="#123f3d" stroke="#62d5bf" stroke-width="3"/>
+      <text x="24" y="38" fill="#8af2dc" font-size="17" font-weight="700">08 · CLOSED</text>
+      <text x="24" y="72" fill="#f5fbff" font-size="25" font-weight="700">Controlled transition</text>
+      <text x="24" y="103" fill="#c6e8df" font-size="17">Reason, authority, reopen path</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#62d5bf" stroke-width="5" marker-end="url(#arrow)">
+    <path d="M 397 271 L 448 271"/>
+    <path d="M 763 271 L 814 271"/>
+    <path d="M 1129 271 L 1180 271"/>
+    <path d="M 1340 344 L 1340 432"/>
+    <path d="M 1180 508 L 1134 508"/>
+    <path d="M 814 508 L 768 508"/>
+    <path d="M 448 508 L 402 508"/>
+  </g>
+
+  <g transform="translate(92 657)" font-family="Inter, Arial, sans-serif">
+    <rect width="916" height="150" rx="20" fill="#0b1f2e" stroke="#2f617b" stroke-width="2"/>
+    <text x="28" y="39" fill="#ffcc80" font-size="18" font-weight="700">REVIEW / BLOCKED EXIT</text>
+    <text x="28" y="76" fill="#f5fbff" font-size="23" font-weight="700">Unknown identity, authority, evidence, test, or dependency stays visible.</text>
+    <text x="28" y="111" fill="#b9ceda" font-size="18">Do not convert unknown to pass. Record the reason, owner, next action, and review time.</text>
+    <path d="M 370 -72 C 370 -18 458 -18 458 0" fill="none" stroke="#ffb85c" stroke-width="4" marker-end="url(#holdArrow)"/>
+  </g>
+
+  <g transform="translate(1044 657)" font-family="Inter, Arial, sans-serif">
+    <rect width="446" height="150" rx="20" fill="#16283d" stroke="#8b78dc" stroke-width="2"/>
+    <text x="26" y="39" fill="#c6b8ff" font-size="18" font-weight="700">AI EVIDENCE ASSEMBLER</text>
+    <text x="26" y="75" fill="#f5fbff" font-size="22" font-weight="700">Extract · link · flag · draft</text>
+    <text x="26" y="109" fill="#c7d4e2" font-size="18">Never invent a missing gate or authority.</text>
+    <text x="26" y="134" fill="#8fa8bb" font-size="15">Human policy owns consequential closure.</text>
+  </g>
+
+  <text x="92" y="858" fill="#7292a7" font-family="Inter, Arial, sans-serif" font-size="16">Authored proposed method · not a product deployment, safety instruction, certification, customer result, or industry standard</text>
+</svg>
