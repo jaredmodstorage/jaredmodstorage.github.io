@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Facility Change-Impact Graph: Test the Operational Blast Radius Before Release</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-change-impact-graph/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-change-impact-graph/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A self-storage change-governance method for tracing one policy, configuration, schema, model, connector, or identity change through its operational blast radius before release.</description>
+    </item>
+    <item>
       <title>The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On</title>
       <link>https://jaredmodstorage.github.io/writing/temporal-authority-envelope/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/temporal-authority-envelope/</guid>

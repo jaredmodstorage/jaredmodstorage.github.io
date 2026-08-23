@@ -1,0 +1,387 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.D30Z-FrU.css" data-rsc-css-href="/_next/static/css/index.D30Z-FrU.css" data-precedence="vite-rsc/importer-resources"/><title>The Facility Change-Impact Graph for Release Governance | Jared Mastroianni</title><meta name="description" content="A self-storage change-governance method for tracing one policy, configuration, schema, model, connector, or identity change through its operational blast radius before release."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Facility Change-Impact Graph for Release Governance | Jared Mastroianni"/><meta property="og:description" content="A self-storage change-governance method for tracing one policy, configuration, schema, model, connector, or identity change through its operational blast radius before release."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/facility-change-impact-graph/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/facility-change-impact-graph/facility-change-impact-graph.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A five-stage architecture diagram showing an exact facility change packet flowing through four dependency horizons, consequence classification, a bounded release cell, and independent readback. Unknown consequential edges stop release expansion."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Facility Change-Impact Graph for Release Governance | Jared Mastroianni"/><meta name="twitter:description" content="A self-storage change-governance method for tracing one policy, configuration, schema, model, connector, or identity change through its operational blast radius before release."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/facility-change-impact-graph/facility-change-impact-graph.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/facility-change-impact-graph/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/facility-change-impact-graph/#article","url":"https://jaredmodstorage.github.io/writing/facility-change-impact-graph/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/facility-change-impact-graph/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Facility Change-Impact Graph: Test the Operational Blast Radius Before Release","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/facility-change-impact-graph/facility-change-impact-graph.png","description":"A self-storage change-governance method for tracing one policy, configuration, schema, model, connector, or identity change through its operational blast radius before release.","proficiencyLevel":"Expert","about":["Self-storage operations","Facility change governance","Multi-location operating systems","Operational blast radius","Release engineering","Provenance","Responsible AI","Independent readback"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/facility-change-impact-graph/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Identity and governance","item":"https://jaredmodstorage.github.io/writing/topics/governance/"},{"@type":"ListItem","position":3,"name":"The Facility Change-Impact Graph: Test the Operational Blast Radius Before Release","item":"https://jaredmodstorage.github.io/writing/facility-change-impact-graph/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/governance/">Identity and governance</a></li><li aria-current="page">The Facility Change-Impact Graph: Test the Operational Blast Radius Before Release</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert governance paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Facility Change-Impact Graph: Test the Operational Blast Radius Before Release</h1><p class="lede">Trace one facility change from exact before-and-after identity through dependencies, consequence class, bounded release, rollback, and independent readback.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>18 min read</span></div></header><div class="essay-body"><blockquote>
+<p><strong>Method and evidence boundary:</strong> This is Jared Mastroianni&#39;s authored proposed method. Harbor Annex and every facility, record, dependency, consequence, threshold, action, test, and result in the examples are fictional. A complete-looking graph, canary, rollback plan, passing test, or readback record is not proof of authority, completeness, safety, compliance, performance, or outcome.</p>
+</blockquote>
+<p>Most facility changes are reviewed as isolated edits.</p>
+<p>A manager changes access hours. An analyst renames a unit type. A software team updates a prompt. A regional operator replaces a vendor mapping. Someone adds a field to an integration, edits a workflow rule, changes a user entitlement, or loads a new policy document into an AI retrieval index.</p>
+<p>The edit may be small. The operating effect may not be.</p>
+<p>The real question is not, “Did the configuration save?” It is, “Which people, locations, systems, decisions, messages, and physical actions can now behave differently?”</p>
+<p>That is a graph problem.</p>
+<p>A facility change-impact graph is an operating method for tracing a proposed change through the things it can affect before the change is released. It connects the exact change to its dependencies, consequence paths, tests, release cells, rollback target, and post-change evidence. It is not a prediction that nothing will go wrong. It is a disciplined way to expose what must be known, tested, held, or watched.</p>
+<p>This matters in self storage because one facility instruction can exist in many places at once: the property-management system, access-control platform, website, call-center script, tenant message template, internal knowledge base, reporting layer, and AI retrieval corpus. Those copies may update at different speeds and under different owners. A clean change in one system can therefore create an inconsistent operating state across the portfolio.</p>
+<p>The graph makes that inconsistency reviewable before it becomes an incident.</p>
+<p><a href="facility-change-impact-graph.svg"><img src="facility-change-impact-graph.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A five-stage architecture diagram showing an exact facility change packet flowing through four dependency horizons, consequence classification, a bounded release cell, and independent readback. Unknown consequential edges stop release expansion."></a></p>
+<p><a href="facility-change-impact-graph.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="facility-change-impact-graph-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="facility-change-impact-graph-downloads">Inspect the impact register and release gates.</h2>
+<p>These exact files contain an authored method and fictional or blank-contract examples. They do not establish factual authority, dependency completeness, product deployment, customer use, performance, safety, compliance, certification, or independent validation.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="facility-change-impact-register-template.csv" download>Download the change-impact register <span aria-hidden="true">↓</span></a><a href="facility-change-release-test-suite.csv" download>Download the release-test suite <span aria-hidden="true">↓</span></a><a href="facility-change-impact-graph.svg" download>Download the accessible change-impact SVG <span aria-hidden="true">↓</span></a><a href="facility-change-impact-graph.png" download>Download the change-impact PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+
+<h2>A diff is not an impact assessment</h2>
+<p>Traditional change review begins with the object being changed: a line of code, configuration value, policy paragraph, schema, model version, prompt, source file, or entitlement. The reviewer sees the before state, the after state, and perhaps a ticket explaining why the change is needed.</p>
+<p>That is necessary, but it is only the first node.</p>
+<p>Google’s current SRE guidance describes configuration as an interface for changing system behavior and recommends separating configuration from resulting data, preserving ownership and version history, validating meaning rather than syntax alone, and supporting gradual application, stop controls, and rollback. Its canary guidance defines a canary as a partial, time-limited deployment evaluated against a control and stresses representative populations, attributable measures, isolation, staged expansion, and rollback. These are useful foundations, but facility work needs an additional boundary: software-release methods do not automatically authorize experiments on tenants, building occupants, access, life-safety systems, financial transactions, or regulated workflows.</p>
+<p>In facility operations, the same apparent edit can have several classes of downstream effect:</p>
+<ol>
+<li><strong>Representation:</strong> a label, identifier, unit attribute, or facility name changes.</li>
+<li><strong>Information:</strong> a report, page, message, or answer presents different content.</li>
+<li><strong>Recommendation:</strong> a queue, score, or AI response changes what a person is asked to consider.</li>
+<li><strong>Authorization:</strong> a rule changes what a person or system is allowed to approve.</li>
+<li><strong>Execution:</strong> a system can change physical access, dispatch work, send a notice, post a charge, or alter another consequential state.</li>
+</ol>
+<p>The farther the path travels, the stronger the evidence and human authority should become. A typo correction in an internal label and an access-hours rule may both be “configuration,” but they do not belong in the same release class.</p>
+<p>The graph should make that difference visible.</p>
+<h2>Start with an exact change packet</h2>
+<p>The graph is only as reliable as its starting node. “Update the chatbot” is not a change packet. Neither is “fix access hours” or “deploy the new model.”</p>
+<p>Use an exact packet with at least these twelve fields:</p>
+<ol>
+<li><strong>Change ID:</strong> one immutable identifier for the proposal.</li>
+<li><strong>Change type:</strong> policy, configuration, code, schema, data, model, prompt, retrieval corpus, connector, identity mapping, entitlement, workflow, or other.</li>
+<li><strong>Before identity:</strong> the exact version, hash, record ID, effective interval, or source state being replaced.</li>
+<li><strong>After identity:</strong> the exact proposed version, hash, record ID, effective interval, or source state.</li>
+<li><strong>Business intent:</strong> the operating problem the change is supposed to address.</li>
+<li><strong>Facility scope:</strong> exact locations, portfolios, units, assets, channels, and user groups in scope.</li>
+<li><strong>Explicit exclusions:</strong> locations, objects, people, or actions that must not change.</li>
+<li><strong>Authority source:</strong> the person, policy, agreement, approved record, or governing system allowed to authorize the change.</li>
+<li><strong>Consequence ceiling:</strong> the most consequential action the changed state may influence or perform.</li>
+<li><strong>Release window and owner:</strong> who controls the release and when.</li>
+<li><strong>Rollback target and owner:</strong> the exact prior state and person allowed to restore it.</li>
+<li><strong>Readback plan:</strong> evidence that will show what actually changed after release.</li>
+</ol>
+<p>If any of those fields is unknown, record <code>unknown</code>. Do not silently convert missing information into an assumption. In the graph, unknown is a first-class state because it changes the release decision.</p>
+<p>The packet also needs a stable fingerprint. For a file or artifact, that may be a cryptographic hash. For a database or configuration object, it may be an immutable version or a canonical serialized snapshot. For a bundle of records, it may be a manifest of exact identities and values. The goal is simple: the team must be able to prove which change it reviewed, which change it released, and which prior state it can restore.</p>
+<h2>Build the graph from six node types</h2>
+<p>The graph should stay small enough to operate. Six node types cover most facility change paths.</p>
+<h3>1. Change nodes</h3>
+<p>The proposed policy, configuration, data, code, model, prompt, connector, entitlement, or identity change.</p>
+<h3>2. Source nodes</h3>
+<p>The records and authorities that justify or supply the change: an approved facility schedule, system-of-record value, signed instruction, documented policy, asset register, model card, source dataset, or access-control role.</p>
+<h3>3. Processing nodes</h3>
+<p>The systems and transformations that consume or alter the changed state: imports, rules, formulas, queues, APIs, retrieval pipelines, AI models, human review, scheduled jobs, and manual copying.</p>
+<h3>4. Presentation nodes</h3>
+<p>The places where people or systems see the result: websites, dashboards, call-center screens, notices, tenant portals, reports, work orders, mobile apps, AI answers, and exports.</p>
+<h3>5. Action nodes</h3>
+<p>The decisions or executions that can follow: approve, deny, dispatch, notify, charge, unlock, lock, escalate, publish, or update another source.</p>
+<h3>6. Evidence nodes</h3>
+<p>The records that demonstrate what happened: immutable logs, post-change exports, screenshots with provenance, acknowledgments, reconciliations, physical readback, exception records, and rollback receipts.</p>
+<p>These nodes are connected by labeled edges. <code>reads_from</code>, <code>transforms</code>, <code>copies_to</code>, <code>retrieves</code>, <code>recommends</code>, <code>authorizes</code>, <code>executes</code>, <code>notifies</code>, <code>writes_back</code>, and <code>proves</code> are useful starting labels. The label matters because adjacency alone is ambiguous. A dashboard that reads access hours and a controller that executes them are both connected to the same value, but they create different operational consequences.</p>
+<p>W3C PROV-O provides stable general concepts for entity, activity, agent, derivation, generation, attribution, revision, and invalidation. Those concepts can help structure lineage. They do not decide whether a record is true, whether a person has authority, or whether a facility change is safe. The change-impact graph adds those operating questions rather than treating lineage as approval.</p>
+<h2>Trace four dependency horizons</h2>
+<p>Do not attempt to map the whole enterprise for every change. Trace the graph outward in four bounded horizons.</p>
+<p><strong>Horizon 0 — the changed object.</strong> Verify the exact before and after state, syntax, schema, ownership, and intended scope.</p>
+<p><strong>Horizon 1 — direct consumers.</strong> Identify every known system, person, job, prompt, report, rule, or interface that directly reads the changed object.</p>
+<p><strong>Horizon 2 — operational decisions.</strong> Identify the recommendations, approvals, work orders, messages, financial actions, and physical controls that can change because a direct consumer behaves differently.</p>
+<p><strong>Horizon 3 — portfolio and external propagation.</strong> Identify copies, exports, caches, vendors, public channels, shared models, cross-location rules, and write-back paths that can preserve or spread the changed state.</p>
+<p>Each horizon should end with one of four labels:</p>
+<ul>
+<li><code>mapped</code>: the dependency and test are known;</li>
+<li><code>not_applicable</code>: the reviewer recorded why the path cannot apply;</li>
+<li><code>held</code>: the path exists but the change will not be allowed to reach it;</li>
+<li><code>unknown</code>: the dependency cannot yet be resolved.</li>
+</ul>
+<p>An unexplored path is not <code>not_applicable</code>. It is <code>unknown</code>.</p>
+<p>This gives the graph a useful stop rule: traversal may stop when all outward edges are mapped, explicitly held, or bounded as not applicable. If a consequential action remains reachable through an unknown edge, the release is not ready for that consequence class.</p>
+<h2>Classify consequence before choosing a release method</h2>
+<p>Use consequence classes to prevent a low-risk test from becoming authorization for a high-risk rollout.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Highest reachable effect</th>
+<th>Default release boundary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C0</td>
+<td>Internal representation only</td>
+<td>Peer review and exact readback</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>Informational display or report</td>
+<td>Audience-bounded release and content comparison</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>Recommendation or prioritization</td>
+<td>Shadow mode or human confirmation before action</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>Authorization, financial, tenant-facing, or physical workflow</td>
+<td>Named approver, reversible cell, live monitoring, manual stop</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>Life safety, emergency control, legal disposition, or another severe or irreversible outcome</td>
+<td>No autonomous canary on people or property; specialist governance and validated non-production evidence required</td>
+</tr>
+</tbody></table>
+<p>The class is the highest effect reachable through the graph, not the label attached to the changed object. A prompt edit that can only draft an internal note may be C1. The same prompt edit connected to automatic tenant notices or work-order dispatch may be C3.</p>
+<p>This is also where AI changes should be treated as system changes, not copy edits. A model, prompt, embedding, retrieval source, ranking rule, guardrail, tool permission, or entitlement can change which information is selected, how it is summarized, who can see it, what action is recommended, and whether the output is executed. NIST AI RMF 1.0 is voluntary, non-sector-specific, and use-case agnostic; NIST’s current program page notes that version 1.0 is being revised. NIST AI 600-1 is a voluntary Generative AI profile with suggested actions around human-AI configuration, information integrity, component integration, data and content lineage, testing, third-party effects, monitoring, override, recovery, and change management. Those documents support disciplined risk work, not a declaration that a particular facility AI system is trustworthy or compliant.</p>
+<h2>Convert every consequential edge into a test</h2>
+<p>A graph that only documents dependencies is a picture. An operating graph turns every consequential edge into a test.</p>
+<p>For each edge, record:</p>
+<ul>
+<li>the exact upstream and downstream node;</li>
+<li>the expected transformation;</li>
+<li>the facility and user scope;</li>
+<li>the consequence class;</li>
+<li>the test input and expected result;</li>
+<li>prohibited changes;</li>
+<li>the evidence source;</li>
+<li>the test owner;</li>
+<li>the pass, fail, hold, or unknown rule;</li>
+<li>whether the test is pre-release, canary, post-release, or rollback.</li>
+</ul>
+<p>Tests should cover more than the happy path. At minimum, include:</p>
+<ol>
+<li><strong>Scope test:</strong> only the named facilities, objects, and users are affected.</li>
+<li><strong>Exclusion test:</strong> explicitly excluded locations and roles remain unchanged.</li>
+<li><strong>Authority test:</strong> the change originates from the named authority source.</li>
+<li><strong>Version test:</strong> reviewed, released, and rollback identities match exactly.</li>
+<li><strong>Semantic test:</strong> the changed value means what the receiving system assumes it means.</li>
+<li><strong>Copy test:</strong> caches, replicas, exports, and derived records update or remain held as designed.</li>
+<li><strong>Entitlement test:</strong> users and automated tools can access only permitted state.</li>
+<li><strong>Negative-path test:</strong> missing, stale, conflicting, or malformed inputs stop safely.</li>
+<li><strong>Cross-location test:</strong> a local change cannot leak into another facility through defaults, shared groups, or reused identifiers.</li>
+<li><strong>Execution test:</strong> no recommendation becomes an action without the authority required by its consequence class.</li>
+<li><strong>Readback test:</strong> the actual resulting state can be observed independently of the release command.</li>
+<li><strong>Rollback test:</strong> the prior state can be restored and its propagation verified.</li>
+</ol>
+<p>NIST SP 800-218 provides a high-level secure software-development framework that can inform preparation, protection, production, and response practices. It is not a facility operations standard and does not certify this method. Its practical lesson here is that change evidence should be part of the development and release process, not improvised after an incident.</p>
+<h2>Release by consequence, not convenience</h2>
+<p>The safest release cell is not always “one location.” A location may share a call center, access-control group, website template, identity directory, data warehouse, integration credential, or AI corpus with the rest of the portfolio. A nominal one-site release can therefore have portfolio-wide edges.</p>
+<p>Define a release cell as the smallest group of nodes and edges that can be changed and observed without contaminating the control or exposing an unapproved consequence.</p>
+<p>A valid release cell records:</p>
+<ul>
+<li>exact location and object membership;</li>
+<li>shared dependencies;</li>
+<li>user population;</li>
+<li>time window;</li>
+<li>expected event or query volume;</li>
+<li>control population, if a comparison is valid;</li>
+<li>metrics and evidence attributable to the change;</li>
+<li>stop authority;</li>
+<li>rollback authority;</li>
+<li>consequence ceiling.</li>
+</ul>
+<p>Use production canaries only where the consequence is reversible, the population is appropriate, the test is attributable, and the affected people or property are not being used as an unapproved experiment. For tenant communications, access, financial workflows, physical controls, and other C3 or C4 paths, prefer non-production simulation, historical replay with protected data, shadow evaluation, manual confirmation, or a deliberately isolated test environment. A gradual rollout does not cure a bad authority model.</p>
+<p>Before release, freeze unrelated changes that would contaminate attribution. If two prompts, a pricing rule, an access schedule, and a connector all change together, a good or bad result cannot be assigned cleanly. The graph should either split the bundle or document why the bundle is inseparable and test it as one versioned unit.</p>
+<h2>Readback must be independent of the command</h2>
+<p>A successful API response, save button, deployment job, or configuration status proves only that a command was accepted or a process completed. It does not prove that the intended operating state exists everywhere it matters.</p>
+<p>Post-change readback should travel the graph in the forward direction and then reconcile backward:</p>
+<ol>
+<li>confirm the exact changed object;</li>
+<li>inspect every direct consumer in the release cell;</li>
+<li>exercise the defined decision or presentation paths;</li>
+<li>verify that prohibited paths did not change;</li>
+<li>collect action and evidence receipts;</li>
+<li>compare the resulting state with the change packet;</li>
+<li>record unexplained differences as exceptions;</li>
+<li>stop expansion until exceptions are resolved or accepted by named authority.</li>
+</ol>
+<p>The readback source should be as independent as practical from the mechanism that issued the change. If the deployment job says a configuration was applied, inspect the consumer’s effective configuration. If a message workflow says a notice was sent, inspect the exact message record and recipient scope. If an AI pipeline says a corpus was refreshed, test retrieval identity, entitlement, source version, and the output’s consequence path. If an access schedule was changed, verify both the system’s effective rule and a safe, authorized functional test.</p>
+<p>Rollback needs the same discipline. Restoring a prior value is not complete until the graph shows that caches, consumers, recommendations, messages, and action paths have returned to the governed prior state. A rollback receipt without operational readback is another command acknowledgment.</p>
+<h2>A fictional self-storage example</h2>
+<p>Harbor Annex is fictional. Its names, systems, timing, values, and outcomes are teaching data only.</p>
+<p>Suppose Harbor Annex changes tenant gate access from <code>06:00–22:00</code> to <code>05:00–23:00</code>. The approved facility schedule is the authority source. The property-management record is the intended system of record.</p>
+<p>A diff shows one field changing. The impact graph finds more:</p>
+<ul>
+<li>the access-control connector reads the field every fifteen minutes;</li>
+<li>the tenant portal copies the hours into an information panel;</li>
+<li>a call-center knowledge article contains a manually copied version;</li>
+<li>the website has a separately managed facility-hours field;</li>
+<li>an AI assistant retrieves both the system-of-record value and the stale call-center article;</li>
+<li>an exception rule prevents access for a specific held unit regardless of facility hours;</li>
+<li>a regional default can overwrite a facility-level value during nightly synchronization;</li>
+<li>the audit export records the effective controller rule one hour after change.</li>
+</ul>
+<p>The highest reachable effect is physical access, so the change is C3 even though the starting node is a text-like schedule field.</p>
+<p>The graph creates a release plan:</p>
+<ol>
+<li>verify the approved schedule, facility identity, and effective date;</li>
+<li>test the connector mapping in an isolated environment;</li>
+<li>confirm the held-unit exception still overrides the schedule;</li>
+<li>update or hold the manually copied article and website field;</li>
+<li>remove the stale article from AI retrieval until its source identity matches;</li>
+<li>prove the regional default cannot overwrite the facility value;</li>
+<li>schedule a named operator and rollback owner;</li>
+<li>perform a safe authorized access test at a boundary time;</li>
+<li>inspect the controller’s effective rule, portal, article, website, AI answer, and delayed audit export;</li>
+<li>record any mismatch in an exception ledger and stop portfolio expansion.</li>
+</ol>
+<p>This method does not predict that access will work, that the change is legally sufficient, or that the facility should adopt the hours. It exposes the dependencies and evidence needed for an authorized operator to decide.</p>
+<h2>The 45-minute facility change drill</h2>
+<p>The companion register and release-test suite support a practical review at four levels.</p>
+<h3>Beginner — 10 minutes</h3>
+<p>Choose one real but low-consequence pending change. Write the before state, after state, facility scope, exclusions, authority source, and rollback target. If the team cannot identify those six facts, stop there; the change is not ready.</p>
+<h3>Intermediate — 10 minutes</h3>
+<p>List every direct consumer. Include manual copies, scheduled jobs, exports, caches, shared defaults, AI retrieval sources, and human scripts. Mark each as mapped, held, not applicable, or unknown.</p>
+<h3>Advanced — 15 minutes</h3>
+<p>Trace each consumer to a recommendation, authorization, message, financial action, or physical effect. Assign the highest consequence class. Convert every C2–C4 edge into a named test with pass, fail, hold, and unknown criteria.</p>
+<h3>Architect — 10 minutes</h3>
+<p>Define the release cell, control or comparison boundary, stop authority, rollback owner, independent readback, propagation horizon, and evidence-retention rule. Ask one final question: “Which hidden shared dependency would make this apparently local change portfolio-wide?” Record the answer or record <code>unknown</code>.</p>
+<p>The output is not a score. It is a decision packet: release, release with holds, return for evidence, or do not release.</p>
+<h2>Five failure patterns to reject</h2>
+<p><strong>The save-button fallacy.</strong> The system accepted the edit, so the team assumes the operating state changed correctly.</p>
+<p><strong>The one-site illusion.</strong> A shared default, credential, corpus, or integration makes a facility-scoped change portfolio-wide.</p>
+<p><strong>The green-dashboard shortcut.</strong> Aggregate measures look normal while the affected path is too small, delayed, or mixed with control traffic to be visible.</p>
+<p><strong>The reversible-value myth.</strong> The configuration can be rolled back, but messages, exports, physical actions, or external copies cannot.</p>
+<p><strong>The AI copy-edit exception.</strong> A prompt or retrieval change is treated as prose even though it can alter recommendations, entitlements, disclosures, or execution.</p>
+<p>The common problem is not lack of documentation. It is failure to connect the exact change to the operational consequences it can reach.</p>
+<h2>The operating standard</h2>
+<p>No facility change should advance farther than its graph supports.</p>
+<p>If the team knows the change but not its consumers, stop at Horizon 0. If it knows the consumers but not the consequence paths, stop at Horizon 1. If a C3 or C4 path lacks named authority, rollback, or independent readback, hold that path. If the release cell shares an unmeasured dependency with the control, do not call the comparison a canary result. If an unknown edge can reach a consequential action, treat the unknown as part of the blast radius.</p>
+<p>This can feel slower than changing the field and watching the dashboard. It is faster than discovering after release that the field was never local, the dashboard was not attributable, the rollback did not propagate, or the AI answer was reading a stale source.</p>
+<p>The facility change-impact graph turns change management into an operational proof chain:</p>
+<p><strong>exact change → mapped dependency → consequence class → test → bounded release → independent readback → reconciled evidence</strong></p>
+<p>That chain does not eliminate risk. It gives operators a credible basis for deciding what may change, where, under whose authority, with what stop condition, and how they will know what actually happened.</p>
+<h2>Companion tools</h2>
+<ul>
+<li><a href="facility-change-impact-register-template.csv">Facility change-impact register template</a> — a 20-field fictional example spanning the exact change, sources, consumers, presentations, actions, evidence, horizons, consequence classes, release cells, tests, rollback, and unknowns.</li>
+<li><a href="facility-change-release-test-suite.csv">Facility change release-test suite</a> — 30 beginner-to-architect tests covering identity, scope, authority, dependencies, entitlement, conflict, shadowing, attribution, stop controls, rollback, independent readback, and closure.</li>
+<li><a href="facility-change-impact-graph.svg">Facility change-impact graph diagram</a> and <a href="facility-change-impact-graph.png">PNG rendering</a> — an accessible five-stage visual from exact change through reconciled evidence.</li>
+</ul>
+<h2>Primary sources and limitations</h2>
+<ul>
+<li><a href="https://sre.google/workbook/configuration-design/">Google SRE Workbook — Configuration Design and Best Practices</a> — general system-configuration guidance; not a self-storage control standard or facility deployment result.</li>
+<li><a href="https://sre.google/workbook/canarying-releases/">Google SRE Workbook — Canarying Releases</a> — general software-release and evaluation guidance; not authorization to experiment on people, property, access, life-safety, financial, or regulated workflows.</li>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST Artificial Intelligence Risk Management Framework 1.0</a> and <a href="https://www.nist.gov/itl/ai-risk-management-framework">current AI RMF program page</a> — voluntary, cross-sectoral risk-management guidance; version 1.0 is being revised and does not certify this method or any facility system.</li>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">NIST AI 600-1 — Generative Artificial Intelligence Profile</a> — voluntary suggested actions requiring contextual tailoring; not a deployment authorization, legal conclusion, or trustworthiness certificate.</li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/218/final">NIST SP 800-218 — Secure Software Development Framework 1.1</a> — general secure software-development practices; not a facility operations standard or compliance conclusion.</li>
+<li><a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">W3C PROV-O Recommendation</a> — stable general provenance vocabulary; lineage does not establish truth, authority, entitlement, safety, approval, or legal sufficiency.</li>
+</ul>
+<p>This is an authored proposed method by Jared Mastroianni. All facility examples are fictional. The paper does not report a modSTORAGE or Facily.ai deployment, customer result, product capability, performance result, service level, certification, legal conclusion, publication, indexing outcome, independent coverage, or recognition.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert governance paper</p><h3><a href="/writing/correction-propagation-contract/">The Correction Propagation Contract: When One Facility Fact Was Wrong, What Must Be Recomputed, Retracted, or Replayed?</a></h3><p>Govern how one corrected facility assertion propagates across data, workflow, AI context, communications, and real-world effects.</p><a href="/writing/correction-propagation-contract/" class="text-link" aria-label="Read the article: The Correction Propagation Contract: When One Facility Fact Was Wrong, What Must Be Recomputed, Retracted, or Replayed?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/temporal-authority-envelope/">The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On</a></h3><p>Decide whether one facility fact remains temporally admissible for one decision through evaluation, action, and independent readback.</p><a href="/writing/temporal-authority-envelope/" class="text-link" aria-label="Read the article: The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert governance paper</p><h3><a href="/writing/semantic-drift-register/">The Semantic Drift Register: When a Facility Field Keeps Its Name but Changes Its Meaning</a></h3><p>Detect and govern consequential changes in field meaning before downstream consumers act.</p><a href="/writing/semantic-drift-register/" class="text-link" aria-label="Read the article: The Semantic Drift Register: When a Facility Field Keeps Its Name but Changes Its Meaning">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
