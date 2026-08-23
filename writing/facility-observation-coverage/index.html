@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.K38vg5AS.css" data-rsc-css-href="/_next/static/css/index.K38vg5AS.css" data-precedence="vite-rsc/importer-resources"/><title>The Facility Observation Coverage Map for Facility Systems | Jared Mastroianni</title><meta name="description" content="A self-storage operating and AI architecture for proving whether a facility claim is directly observed, derived, inferred, declared, unknown, or indeterminate before a dashboard or automation acts."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Facility Observation Coverage Map for Facility Systems | Jared Mastroianni"/><meta property="og:description" content="A self-storage operating and AI architecture for proving whether a facility claim is directly observed, derived, inferred, declared, unknown, or indeterminate before a dashboard or automation acts."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/facility-observation-coverage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/facility-observation-coverage/facility-observation-coverage-map.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="Facility observation coverage architecture that starts with a bounded facility question, traces sources through acquisition, transport and transformation, preserves claim modes and blind spots, and admits a decision only when evidence passes an explicit coverage gate."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Facility Observation Coverage Map for Facility Systems | Jared Mastroianni"/><meta name="twitter:description" content="A self-storage operating and AI architecture for proving whether a facility claim is directly observed, derived, inferred, declared, unknown, or indeterminate before a dashboard or automation acts."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/facility-observation-coverage/facility-observation-coverage-map.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/facility-observation-coverage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/facility-observation-coverage/#article","url":"https://jaredmodstorage.github.io/writing/facility-observation-coverage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/facility-observation-coverage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/facility-observation-coverage/facility-observation-coverage-map.png","description":"A self-storage operating and AI architecture for proving whether a facility claim is directly observed, derived, inferred, declared, unknown, or indeterminate before a dashboard or automation acts.","proficiencyLevel":"Expert","about":["Self-storage operations","Facility observability","Operational technology","Responsible AI","Telemetry coverage","Missingness","Sensor evidence","Data quality","Privacy boundaries","Human oversight"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/facility-observation-coverage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish","item":"https://jaredmodstorage.github.io/writing/facility-observation-coverage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish</h1><p class="lede">Trace what one facility observation path can know, derive, infer, declare, or fail to establish before a dashboard or AI-assisted operation acts.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>17 min read</span></div></header><div class="essay-body"><p>Chief Operating Officer, modSTORAGE
+CEO and Co-Founder, Facily.ai</p>
+<p>Evidence boundary: This is an authored operating and architecture method. Every facility, device, person, record, value, and outcome in the examples and companion tools is fictional. The method is not evidence of a Facily.ai or Facily OS capability, a modSTORAGE deployment, sensor fitness, facility condition, customer result, performance level, legal conclusion, safety assurance, certification, or industry standard.</p>
+<p><a href="facility-observation-coverage-map.svg"><img src="facility-observation-coverage-map.svg" width="1600" height="900" loading="lazy" decoding="async" alt="Facility observation coverage architecture that starts with a bounded facility question, traces sources through acquisition, transport and transformation, preserves claim modes and blind spots, and admits a decision only when evidence passes an explicit coverage gate."></a></p>
+<p><a href="facility-observation-coverage-map.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="facility-observation-coverage-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="facility-observation-coverage-downloads">Inspect the observation coverage map and admission gates.</h2>
+<p>These exact files contain an authored method, blank controls, and entirely fictional examples. They do not establish source fitness, claim truth, physical coverage, privacy compliance, product deployment, customer use, performance, safety, security, certification, or independent validation.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="facility-observation-coverage-register-template.csv" download>Download the observation coverage register <span aria-hidden="true">↓</span></a><a href="facility-observation-readiness-suite.csv" download>Download the readiness suite <span aria-hidden="true">↓</span></a><a href="facility-observation-coverage.schema.json" download>Download the JSON Schema <span aria-hidden="true">↓</span></a><a href="fictional-facility-observation-record.json" download>Download the fictional JSON record <span aria-hidden="true">↓</span></a><a href="facility-observation-assessment-runbook.md" download>Download the assessment runbook <span aria-hidden="true">↓</span></a><a href="facility-observation-coverage-map.svg" download>Download the accessible coverage SVG <span aria-hidden="true">↓</span></a><a href="facility-observation-coverage-map.png" download>Download the coverage PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+
+<h2>The question before the dashboard</h2>
+<p>A self-storage operator opens a dashboard and sees green tiles: gate online, climate normal, leak sensors clear, cameras connected, no after-hours exceptions. The temptation is to read the screen as a complete account of the facility.</p>
+<p>It is not.</p>
+<p>Each tile is a claim assembled from an observation path. That path begins somewhere—a controller register, contact switch, environmental probe, message broker, application database, derived metric, human inspection, or model inference. It samples some property over some physical and temporal footprint. It can miss conditions outside that footprint. It can be stale, delayed, aggregated, transformed, disconnected, misidentified, unauthorized for the proposed use, or silent for reasons that look exactly like “nothing happened.”</p>
+<p>The first architecture question is therefore not <strong>What does the dashboard say?</strong> It is <strong>What could this observation system have known, for this exact operating question, at this exact time?</strong></p>
+<p>That is the purpose of a facility observation coverage map.</p>
+<p>The map ties a bounded operating claim to the sources, observation points, timing, semantics, failure detection, privacy constraints, corroboration, and decision rules required to support it. It does not reward the number of connected devices. It shows where evidence exists, what the evidence means, and where the facility remains intentionally or unintentionally unobservable.</p>
+<p>For AI-assisted operations, that distinction is foundational. A model can write a confident explanation from incomplete telemetry. It can correlate signals and propose a diagnosis. It cannot create observation coverage that the facility never had.</p>
+<h2>Coverage belongs to a claim, not a device</h2>
+<p>“We have gate telemetry” is too broad to govern an operating decision.</p>
+<p>An access system may expose a controller heartbeat, schedule version, relay command, motor current, open-limit switch, close-limit switch, safety loop, manual override, and event log. Those signals answer different questions. A current controller heartbeat does not establish that the gate is closed. A closed-limit switch does not establish that the vehicle lane is clear. A schedule record does not establish that a credential was denied. A successful API read does not establish that its cached value is fresh.</p>
+<p>The unit of coverage is one <strong>claim</strong>:</p>
+<blockquote>
+<p>For one identified facility and bounded physical or operational scope, is one defined property observable with sufficient time, quality, authority, and failure awareness for one named use?</p>
+</blockquote>
+<p>Examples include:</p>
+<ul>
+<li>the outbound gate leaf is physically in the closed position now;</li>
+<li>the north climate corridor remained between two defined temperatures during a named interval;</li>
+<li>a water-presence sensor reported active while its health channel remained current;</li>
+<li>the access controller produced no forced-door event during a complete, gap-free window;</li>
+<li>a customer-facing hours record matches the currently approved governing source;</li>
+<li>an alarm condition is isolated to one point rather than proven across an entire zone.</li>
+</ul>
+<p>Those claims need different observation paths and different evidence. A portfolio cannot honestly report one universal “telemetry coverage” percentage unless it defines the denominator as a set of claims, not merely a count of installed devices.</p>
+<p><a href="https://csrc.nist.gov/pubs/sp/800/82/r3/final">NIST SP 800-82 Rev. 3</a> describes operational technology as systems and devices that interact with or manage devices interacting with the physical environment, and it includes building automation, physical access control, and environmental monitoring among its examples. It also emphasizes OT&#39;s distinctive performance, reliability, and safety context. That is useful grounding for facility systems, but it does not declare any particular self-storage signal complete or safe.</p>
+<h2>The three records that must stay separate</h2>
+<p>An observation program often collapses three different things into one row. The coverage map preserves them separately.</p>
+<h3>1. The observation source</h3>
+<p>The source is the accountable producer or governing record: a specific device, controller point, service, database field, procedure, or person. It has an identity, owner, lifecycle state, location, configuration version, clock, access policy, and retention rule.</p>
+<h3>2. The observation event or value</h3>
+<p>The observation records what the source produced: value, unit, status, source time, observed time, received time, quality, sampling mode, sequence, transformation, and native evidence reference. It is one occurrence or bounded interval, not a timeless truth.</p>
+<h3>3. The operating claim</h3>
+<p>The claim is the statement an operator or AI wants to use. It names the property, physical scope, time interval, population, tolerance, consequence, and decision. The same observation can be admissible for one claim and inadequate for another.</p>
+<p>A temperature probe reading of 76°F may support “this probe sampled 76°F at 14:03.” It may not support “every unit in Building B remained below 78°F all afternoon.” The second statement changes the spatial footprint, duration, denominator, and missingness assumptions.</p>
+<p><a href="https://www.w3.org/TR/2013/REC-prov-dm-20130430/">W3C PROV-DM</a> supplies a durable vocabulary for entities, activities, agents, generation, use, derivation, attribution, and invalidation. It can link source, observation, transformation, and claim. Provenance helps an operator assess evidence; it does not make the observation true, complete, current, or authoritative.</p>
+<h2>Five claim modes</h2>
+<p>The coverage map requires every claim to carry one mode. The modes are descriptive, not a universal confidence ladder.</p>
+<h3>Directly observed</h3>
+<p>An identified observation point is configured to measure the stated property within a declared footprint. The record preserves sampling, quality, time, and missingness. “The identified water pad reported active” can be directly observed. “The building is flooding” is a different claim.</p>
+<h3>Derived</h3>
+<p>The claim is computed deterministically from identified observations under a versioned rule. A fifteen-minute maximum temperature derived from complete one-minute samples belongs here. The map retains the input set, transformation, aggregation window, and gap rule.</p>
+<h3>Inferred</h3>
+<p>The claim is estimated from observations using a statistical, causal, rules-based, or machine-learning method. A pattern of humidity, compressor runtime, and door events may suggest an HVAC issue. It remains an inference with a model or rule version, uncertainty, alternatives, and escalation threshold.</p>
+<h3>Declared</h3>
+<p>An identified human or system asserts the state without an eligible direct observation of the property. A manager may declare a lane clear after an inspection. A vendor portal may declare a device online. Declarations can be useful and accountable, but their procedure and limits belong in the record.</p>
+<h3>Unknown</h3>
+<p>The system lacks admissible evidence for the claim. Unknown is not a data defect to hide. It is a valid operating state. It may result from no observation point, an expired source, a gap, a quality failure, a conflict, a privacy prohibition, a common-mode dependency, or a use outside the source&#39;s approved purpose.</p>
+<p>AI may summarize any of these modes. It must not rewrite derived as direct, inferred as observed, declared as measured, or unknown as normal.</p>
+<h2>A coverage map has eight layers</h2>
+<p>The companion <a href="facility-observation-coverage-register-template.csv">observation coverage register</a> expresses eight layers for each governed claim.</p>
+<h3>1. Question and consequence</h3>
+<p>Name the exact question, decision, and consequence class. “Check climate” is not a question. “Should a manager inspect the north corridor after a sustained high-temperature alert?” is bounded enough to test.</p>
+<p>Consequence affects sufficiency. A signal can be useful for prioritizing an inspection while remaining insufficient for changing access, suppressing an alarm, sending a customer message, or making a safety, legal, financial, or security conclusion.</p>
+<h3>2. Target and property</h3>
+<p>Resolve the facility, zone, system, device, point, and measured property. Preserve lifecycle and configuration versions. “Door 12” is inadequate if identifiers were reused after a controller replacement.</p>
+<h3>3. Footprint and denominator</h3>
+<p>Declare what the source can see: one threshold pad, one door contact, one corridor, one controller, one data partition, one inspection route. Then declare the population the claim covers. A sensor count is not a denominator unless the expected inventory and lifecycle state are governed.</p>
+<h3>4. Acquisition and transformation</h3>
+<p>Record whether the path is event-driven, polled, streamed, manually inspected, or batch imported. Preserve sampling interval, change filter, queue depth, aggregation, unit conversion, derived rule, and software version.</p>
+<p><a href="https://www.rfc-editor.org/rfc/rfc9232.html">RFC 9232</a> provides an informational framework for telemetry generation, export, collection, correlation, and consumption and explicitly discusses coverage viewpoints and data quality. It is network-focused and not an Internet Standards Track specification. This paper uses its separation of the telemetry path as an analogy, not as a facility standard.</p>
+<h3>5. Time and continuity</h3>
+<p>Preserve source time, observation time, receipt time, evaluation time, freshness, allowed lateness, and required duration. Define how the system detects a gap or restart.</p>
+<p>The <a href="https://opentelemetry.io/docs/specs/otel/metrics/data-model/">OpenTelemetry Metrics Data Model</a> describes timestamps, delta and cumulative temporality, transformations, gaps, and the difference between defined and absent values. Its page is mutable and carries mixed section stability. More importantly, software metric semantics do not prove the physical meaning or fitness of a facility sensor. They are useful for making aggregation and absence explicit.</p>
+<h3>6. Quality and failure awareness</h3>
+<p>Record native quality codes, calibration or inspection status when applicable, queue overflow, sequence gaps, clock uncertainty, stuck-value tests, out-of-range values, and the health of the observation path itself.</p>
+<p>The pinned <a href="https://reference.opcfoundation.org/specs/OPC-10000-4/5.13">OPC UA v1.05 MonitoredItems section</a> describes sampling intervals, queues, monitoring modes, notifications, revised parameters, status, and overflow behavior. That protocol evidence is bounded. A good service status cannot prove correct sensor placement, calibration, physical coverage, or suitability for an operating decision.</p>
+<h3>7. Authority, privacy, and allowed use</h3>
+<p>Name who owns the source, who may view it, which uses are permitted, how long evidence is retained, and which observations are intentionally not collected.</p>
+<p>The <a href="https://www.nist.gov/privacy-framework/privacy-framework">NIST Privacy Framework 1.0</a> is a voluntary tool for identifying and managing privacy risk in data processing. It does not authorize surveillance or replace legal review. In a facility context, an intentional privacy boundary is not “missing coverage” to be automatically eliminated. It is a governed design constraint.</p>
+<h3>8. Decision and degradation rule</h3>
+<p>State what evidence admits the claim, what corroboration is required, what conflict blocks it, and what happens when coverage degrades. A mature rule does not say “use best available data.” It says, for example: route a manager inspection when the water pad is active and current; do not declare the extent of water; do not trigger a physical shutoff; escalate if the health channel is stale or observations conflict.</p>
+<h2>Silence requires its own proof</h2>
+<p>“No event” is often the most dangerous facility claim because several conditions produce the same empty screen:</p>
+<ul>
+<li>the condition did not occur;</li>
+<li>the producer did not sample it;</li>
+<li>the producer was offline;</li>
+<li>the observation point was disabled;</li>
+<li>the value did not cross a change filter;</li>
+<li>the broker retained an old value;</li>
+<li>the session expired;</li>
+<li>the queue overflowed;</li>
+<li>the collector dropped the record;</li>
+<li>the timestamp fell outside the query window;</li>
+<li>a transformation removed the identifying attribute;</li>
+<li>the event was stored in a different partition;</li>
+<li>access policy hid the record;</li>
+<li>the dashboard query failed.</li>
+</ul>
+<p>The absence of an observation supports absence of the condition only when the contract defines the expected producer, active inventory, sampling or event behavior, heartbeat or path-health evidence, delivery deadline, queue and overflow behavior, time window, retention, filter, and completeness test.</p>
+<p><a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html">OASIS MQTT 5.0</a> defines keep-alive, retained messages, session expiry, and quality-of-service delivery semantics. Those features help describe a message path. They do not prove that a sensor was healthy, that a retained value is current, that an application processed it, or that no physical condition existed.</p>
+<p><a href="https://csrc.nist.gov/pubs/sp/800/137/final">NIST SP 800-137</a> describes continuous monitoring as ongoing awareness at a frequency sufficient to support risk-based decisions. “Continuous” therefore should not become a marketing synonym for gap-free. The facility map states the actual frequency and the decision it can support.</p>
+<h2>The blind-spot register</h2>
+<p>Every covered claim should carry explicit blind spots. The authored method uses nine types:</p>
+<ol>
+<li><strong>Spatial</strong> — the source cannot see part of the claimed physical area.</li>
+<li><strong>Temporal</strong> — sampling, lateness, retention, or downtime leaves an interval uncovered.</li>
+<li><strong>Semantic</strong> — the field, unit, threshold, lifecycle state, or status code is ambiguous.</li>
+<li><strong>Identity</strong> — facility, zone, device, point, tenant, or record identity is unresolved or reused.</li>
+<li><strong>Transport</strong> — messages can be delayed, duplicated, lost, retained, reordered, or hidden by a failed path.</li>
+<li><strong>Quality</strong> — calibration, inspection, clock, overflow, stuck-value, or source-quality evidence is inadequate.</li>
+<li><strong>Common mode</strong> — the primary and “independent” corroborating paths share power, network, controller, clock, cache, or software.</li>
+<li><strong>Authority and use</strong> — the source is not governing or permitted for the claim, audience, or consequence.</li>
+<li><strong>Intentional privacy</strong> — collection, precision, access, or retention is deliberately limited.</li>
+</ol>
+<p>Blind spots are not all defects. Some are necessary. The control is to name them, decide who accepts them, set an expiry, and prevent downstream systems from silently broadening the claim.</p>
+<p><a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">NIST SP 800-53 Rev. 5, current Release 5.2.0</a> provides audit, accountability, monitoring, configuration, integrity, and physical-environment control families that can inform this discipline. The catalog is flexible. Referencing it does not establish control implementation, assessment, or certification.</p>
+<p><a href="https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20">NIST CSF 2.0</a> organizes cybersecurity outcomes across Govern, Identify, Protect, Detect, Respond, and Recover. An observation coverage map can support those conversations by exposing inventory, monitoring, exceptions, response, and restoration evidence. It is an internal design aid, not a conformity claim.</p>
+<h2>A fictional water-presence walkthrough</h2>
+<p>Harbor Annex is a fictional self-storage facility used only for teaching.</p>
+<p>At 02:14, a fictional water-presence pad in the north climate corridor reports active. An AI assistant is asked: “Is Building B flooding, and should the water supply be shut off?”</p>
+<p>The observation coverage map prevents that broad question from collapsing into one alert.</p>
+<p>The pad directly observes its local contact state, not the depth, source, extent, or cause of water. Its device-health path reports a current heartbeat. A separate corridor humidity probe shows a rise, but humidity is only corroborating context and cannot establish liquid water. The floor plan shows the pad&#39;s intended footprint but does not prove installation position. No flow meter covers the branch. The shutoff valve has no governed remote-control authority in this fictional package.</p>
+<p>The admissible claims are narrow:</p>
+<ul>
+<li>the identified pad produced an active observation at 02:14;</li>
+<li>its health channel was current at evaluation time;</li>
+<li>a separately sourced humidity observation changed during the same interval;</li>
+<li>the extent, source, and operational consequence remain unknown.</li>
+</ul>
+<p>The decision rule allows the AI to assemble an incident packet and route a named manager inspection. It prohibits declaring a flood, notifying customers, suppressing the alert, or initiating a physical shutoff. If the pad heartbeat becomes stale, the state changes from active-and-current to indeterminate; it does not change to clear.</p>
+<p>That is operational intelligence: not a bigger claim, but a better-bounded one.</p>
+<h2>AI can reason over coverage without inventing it</h2>
+<p>AI is useful when it works inside the map. It can:</p>
+<ul>
+<li>resolve a question into required claims;</li>
+<li>identify missing observation points or lifecycle records;</li>
+<li>distinguish direct, derived, inferred, declared, and unknown statements;</li>
+<li>compare source time, receipt time, freshness, lateness, and continuity;</li>
+<li>flag unit, aggregation, population, and footprint mismatches;</li>
+<li>detect contradictory or common-mode corroboration;</li>
+<li>assemble an operator packet with native evidence links;</li>
+<li>state which broader conclusions remain unsupported;</li>
+<li>route an indeterminate case to the accountable person.</li>
+</ul>
+<p>AI should not infer that silence means normal, treat connectivity as sensor health, promote a model estimate into a direct observation, widen one point into a building, or recommend collection that violates a privacy boundary.</p>
+<p><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a> is a voluntary, use-case-agnostic framework organized around Govern, Map, Measure, and Manage, and NIST states that version 1.0 is under revision. <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST AI 600-1</a> adds a voluntary cross-sector profile for generative-AI risks. They support disciplined context, documentation, measurement, monitoring, and human oversight. They do not validate this method, a model, or a self-storage deployment.</p>
+<h2>Structural validity is not observation validity</h2>
+<p>The companion <a href="facility-observation-coverage.schema.json">Draft 2020-12 schema</a> makes the record machine-checkable. The <a href="https://json-schema.org/draft/2020-12/json-schema-core">JSON Schema Core specification</a> defines the structural vocabulary used for the contract.</p>
+<p>A conforming JSON document can still be wrong. Schema validation can establish that required fields and types are present. It cannot establish that the sensor exists, the source is authorized, the clock is accurate, the footprint is complete, the privacy purpose is permitted, the inference is calibrated, or the claim is safe to use.</p>
+<p>That boundary belongs in every test result.</p>
+<h2>Measures that expose coverage honestly</h2>
+<p>Useful measures focus on claim admissibility and blind spots rather than raw telemetry volume:</p>
+<ul>
+<li>governed claims by facility, consequence, and mode;</li>
+<li>claims with resolved target, property, footprint, and denominator;</li>
+<li>claims with current source identity and lifecycle evidence;</li>
+<li>paths with explicit sampling, lateness, gap, queue, overflow, and retention rules;</li>
+<li>observations with native quality, unit, and timestamps preserved;</li>
+<li>directly observed, derived, inferred, declared, unknown, and indeterminate counts;</li>
+<li>claims blocked by spatial, temporal, semantic, identity, transport, quality, common-mode, authority, or privacy limits;</li>
+<li>time from coverage failure to accountable-owner acknowledgement;</li>
+<li>decisions that correctly degraded when evidence became incomplete;</li>
+<li>intentional blind spots with current owner, rationale, and review date;</li>
+<li>corroborating paths that are genuinely independent for the named failure mode.</li>
+</ul>
+<p>Do not publish a portfolio coverage percentage without the claim inventory and denominator. Do not convert these controls into safety, reliability, savings, occupancy, customer, or model-performance claims without a separately designed and executed evaluation.</p>
+<h2>A practical adoption sequence</h2>
+<h3>Beginner: replace the green tile with a sentence</h3>
+<p>Choose one dashboard tile. Write the exact sentence it supports, including facility, property, footprint, and time. Then write one sentence it does not support. If the team cannot do that, the tile is not yet governed.</p>
+<h3>Intermediate: map one observation path</h3>
+<p>Use the <a href="facility-observation-coverage-register-template.csv">coverage register</a> and <a href="facility-observation-assessment-runbook.md">assessment runbook</a>. Trace source, sample, transform, transport, storage, query, and display. Record how each layer fails and who owns the failure.</p>
+<h3>Advanced: test silence and contradiction</h3>
+<p>Run the <a href="facility-observation-readiness-suite.csv">readiness suite</a>. Disable the producer, delay a sample, reuse an identity, change a unit, overflow a queue, replay a retained value, break the clock, remove an attribute, conflict two observations, and restrict access. The system should return a typed degraded state instead of normal.</p>
+<h3>Architect: make coverage a versioned interface</h3>
+<p>Adopt a contract such as the companion <a href="facility-observation-coverage.schema.json">schema</a> and <a href="fictional-facility-observation-record.json">fictional instance</a>. Version claim definitions, observation points, transformations, decision rules, and privacy purposes together. Require release tests when a sensor, controller, field, sampling rate, topology, aggregation, model, policy, or facility lifecycle state changes.</p>
+<p>Use the <a href="facility-observation-coverage-map.svg">architecture diagram</a> to review where data is generated, where meaning changes, and where a blind spot can be detected—or hidden.</p>
+<h2>The operator-to-architect exercise</h2>
+<p>Take one facility question and answer these without referring to a dashboard color:</p>
+<ol>
+<li>What is the exact claim, target property, physical footprint, interval, and denominator?</li>
+<li>Is the claim directly observed, derived, inferred, declared, or unknown?</li>
+<li>Which source produced each input, and is its identity and lifecycle current?</li>
+<li>What are the sampling, filtering, queue, transformation, and aggregation semantics?</li>
+<li>How does the system detect silence, a gap, overflow, restart, stale value, or stuck value?</li>
+<li>Which timestamps exist, which clock produced them, and what lateness is admissible?</li>
+<li>What native quality, calibration, inspection, or device-health evidence is preserved?</li>
+<li>What physical area, state, or population remains outside the observation footprint?</li>
+<li>Do corroborating paths share power, network, controller, clock, cache, or software?</li>
+<li>Is the source authorized for this use, audience, consequence, and retention period?</li>
+<li>What intentional privacy boundary must remain unobserved?</li>
+<li>What precise evidence moves the claim to decision-ready, and what evidence degrades it?</li>
+<li>Who owns the unknown or indeterminate state, and when is it reviewed?</li>
+</ol>
+<p>If the system cannot answer these questions, the solution is not a more confident AI summary. It is an explicit observation gap with a bounded operating response.</p>
+<h2>The operating principle</h2>
+<p>Connected, reporting, observed, derived, inferred, corroborated, and decision-ready are different states.</p>
+<p>A mature self-storage operating system preserves those distinctions. It makes silence testable. It records the physical and temporal footprint of each source. It treats privacy limits as governed boundaries. It refuses to turn one sensor into a building-wide conclusion. It lets AI organize evidence and uncertainty without allowing AI to manufacture coverage.</p>
+<p>The facility observation coverage map answers the question that should precede every automated diagnosis and every confident dashboard: <strong>What could we actually know, how could we know it, what could have hidden the truth, and what must remain unknown?</strong></p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/facility-intervention-contract/">The Facility Intervention Contract: Prove What an AI-Requested Action Actually Changed</a></h3><p>Bind one proposed real-world change to authority, command identity, delivery, execution, independent observation, reconciliation, and safe reversal.</p><a href="/writing/facility-intervention-contract/" class="text-link" aria-label="Read the article: The Facility Intervention Contract: Prove What an AI-Requested Action Actually Changed">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/operational-memory-contract/">The Operational Memory Contract: Why Retrieval Is Not Authority in Self-Storage AI</a></h3><p>Govern which retrieved assertions may support a particular actor, purpose, time, and consequence without granting relevance operating authority.</p><a href="/writing/operational-memory-contract/" class="text-link" aria-label="Read the article: The Operational Memory Contract: Why Retrieval Is Not Authority in Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/temporal-authority-envelope/">The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On</a></h3><p>Decide whether one facility fact remains temporally admissible for one decision through evaluation, action, and independent readback.</p><a href="/writing/temporal-authority-envelope/" class="text-link" aria-label="Read the article: The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

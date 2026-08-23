@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "coverage_contract_id": "FOC-FICTION-001",
+  "fictional": true,
+  "question": {
+    "question_id": "Q-WATER-01",
+    "facility_id": "FIC-HARBOR-ANNEX",
+    "decision_use": "Decide whether to route a manager inspection after a water-presence alert without declaring its extent or actuating a physical control.",
+    "consequence_class": "C2_material_operational",
+    "evaluated_at": "2026-08-23T00:15:30Z"
+  },
+  "claim": {
+    "claim_id": "C-WATER-PAD-ACTIVE",
+    "text": "The identified north-corridor water pad produced a current active observation.",
+    "mode": "directly_observed",
+    "target_scope": "building_b_north_corridor_pad_03",
+    "property": "water_contact_state",
+    "spatial_footprint": "one identified threshold pad",
+    "population_denominator": "one active expected pad"
+  },
+  "observation_paths": [
+    {
+      "path_id": "PATH-PAD-03",
+      "source_id": "PAD-03",
+      "source_owner": "fictional-facilities-manager",
+      "source_lifecycle": "active",
+      "acquisition_mode": "event_driven",
+      "sampling_or_trigger": "on state change plus five-minute health pulse",
+      "change_filter": null,
+      "source_time": "2026-08-23T00:14:02Z",
+      "observed_at": "2026-08-23T00:14:02Z",
+      "received_at": "2026-08-23T00:14:04Z",
+      "freshness_limit": "PT5M",
+      "allowed_lateness": "PT1M",
+      "expected_continuity": "one health pulse every five minutes",
+      "gap_detection": "two missing health pulses mark the observation path stale",
+      "transport_semantics": "fictional MQTT application message with retained flag and native packet metadata preserved",
+      "queue_or_overflow": "broker queue state recorded; no completeness claim extends beyond the recorded path",
+      "unit_or_encoding": "boolean-wet-or-dry",
+      "native_quality": "good",
+      "transformation_id": null,
+      "corroborating_source": "HUM-07",
+      "common_mode_dependencies": [
+        "fictional-building-power"
+      ],
+      "blind_spots": [
+        "spatial",
+        "quality",
+        "common_mode"
+      ]
+    },
+    {
+      "path_id": "PATH-HUM-07",
+      "source_id": "HUM-07",
+      "source_owner": "fictional-facilities-manager",
+      "source_lifecycle": "active",
+      "acquisition_mode": "polled",
+      "sampling_or_trigger": "one-minute sample",
+      "change_filter": null,
+      "source_time": "2026-08-23T00:15:00Z",
+      "observed_at": "2026-08-23T00:15:00Z",
+      "received_at": "2026-08-23T00:15:09Z",
+      "freshness_limit": "PT3M",
+      "allowed_lateness": "PT1M",
+      "expected_continuity": "one observation per minute",
+      "gap_detection": "a minute without a covering observation opens a gap",
+      "transport_semantics": "fictional polled controller value",
+      "queue_or_overflow": "one-value controller queue",
+      "unit_or_encoding": "percent-relative-humidity",
+      "native_quality": "good",
+      "transformation_id": "DERIVE-DELTA-15M",
+      "corroborating_source": "PAD-03",
+      "common_mode_dependencies": [
+        "fictional-building-power",
+        "fictional-controller-network"
+      ],
+      "blind_spots": [
+        "spatial",
+        "semantic",
+        "common_mode"
+      ]
+    }
+  ],
+  "decision_gate": {
+    "coverage_state": "C3_decision_admissible",
+    "admission_rule": "Route a bounded inspection packet only when PAD-03 identity, lifecycle, source time, health pulse, native quality, and receipt deadline pass.",
+    "prohibited_promotions": [
+      "building-is-flooding",
+      "water-source-is-known",
+      "remote-shutoff-is-authorized",
+      "customer-impact-is-established"
+    ],
+    "degradation_rule": "If PAD-03 health is stale, identity conflicts, or quality is not good, mark the claim indeterminate and route the accountable manager without declaring a dry or wet facility state.",
+    "exception_owner": "fictional-on-call-manager"
+  },
+  "privacy": {
+    "purpose": "Fictional property-protection incident triage for one bounded corridor observation.",
+    "allowed_audience": [
+      "fictional-on-call-manager",
+      "fictional-facilities-engineer"
+    ],
+    "retention_rule": "Fictional thirty-day observation retention subject to accountable-owner review.",
+    "intentional_gaps": [
+      "no tenant-unit interior observation",
+      "no person identification",
+      "no customer behavior inference"
+    ]
+  },
+  "evidence_boundary": "Fictional teaching record for structural conformance only; it proves no facility, device, water condition, model capability, deployment, privacy compliance, safety result, customer outcome, or operating performance."
+}
