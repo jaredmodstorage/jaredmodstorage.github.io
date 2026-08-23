@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jaredmodstorage.github.io/schemas/facility-intervention-contract.schema.json",
+  "title": "Facility Intervention Contract",
+  "description": "Structural schema for one evidence-bounded facility intervention record. Conformance does not establish truth, authority, physical effect, safety, deployment, or closure.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "intervention_id",
+    "fictional",
+    "proposal",
+    "authority",
+    "target",
+    "preconditions",
+    "command",
+    "receipt",
+    "observation",
+    "reconciliation",
+    "evidence_boundary"
+  ],
+  "$defs": {
+    "identity": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "intervention_id": { "$ref": "#/$defs/identity" },
+    "fictional": { "const": true },
+    "proposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["proposal_id", "version", "generating_actor", "purpose", "requested_action", "requested_value", "evidence_snapshot"],
+      "properties": {
+        "proposal_id": { "$ref": "#/$defs/identity" },
+        "version": { "type": "integer", "minimum": 1 },
+        "generating_actor": { "$ref": "#/$defs/identity" },
+        "ai_assisted": { "type": "boolean" },
+        "purpose": { "type": "string", "minLength": 1 },
+        "requested_action": { "type": "string", "minLength": 1 },
+        "requested_value": {},
+        "unit": { "type": ["string", "null"] },
+        "evidence_snapshot": { "$ref": "#/$defs/identity" }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["consequence_class", "authority_id", "approving_principal", "delegated_role", "policy_version", "authorized_at", "expires_at"],
+      "properties": {
+        "consequence_class": { "enum": ["C0", "C1", "C2", "C3"] },
+        "authority_id": { "$ref": "#/$defs/identity" },
+        "approving_principal": { "$ref": "#/$defs/identity" },
+        "delegated_role": { "$ref": "#/$defs/identity" },
+        "policy_version": { "$ref": "#/$defs/identity" },
+        "authorized_at": { "$ref": "#/$defs/timestamp" },
+        "expires_at": { "$ref": "#/$defs/timestamp" }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["facility_id", "system_id", "device_id", "point_id"],
+      "properties": {
+        "facility_id": { "$ref": "#/$defs/identity" },
+        "system_id": { "$ref": "#/$defs/identity" },
+        "device_id": { "$ref": "#/$defs/identity" },
+        "point_id": { "$ref": "#/$defs/identity" }
+      }
+    },
+    "preconditions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["expected_state_version", "freshness_state", "checked_at", "command_expires_at"],
+      "properties": {
+        "expected_state_version": { "type": "string", "minLength": 1 },
+        "freshness_state": { "enum": ["current", "stale", "unknown", "conflict"] },
+        "checked_at": { "$ref": "#/$defs/timestamp" },
+        "command_expires_at": { "$ref": "#/$defs/timestamp" },
+        "manual_override_absent": { "type": "boolean" }
+      }
+    },
+    "command": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command_id", "attempt_id", "correlation_id", "idempotency_key", "protocol", "payload_sha256", "dispatched_at"],
+      "properties": {
+        "command_id": { "$ref": "#/$defs/identity" },
+        "attempt_id": { "$ref": "#/$defs/identity" },
+        "correlation_id": { "$ref": "#/$defs/identity" },
+        "idempotency_key": { "$ref": "#/$defs/identity" },
+        "protocol": { "type": "string", "minLength": 1 },
+        "payload_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "dispatched_at": { "$ref": "#/$defs/timestamp" }
+      }
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grade", "native_status", "producer", "recorded_at", "execution_state"],
+      "properties": {
+        "grade": { "enum": ["R0", "R1", "R2", "R3", "R4"] },
+        "native_status": { "type": "string", "minLength": 1 },
+        "producer": { "$ref": "#/$defs/identity" },
+        "recorded_at": { "$ref": "#/$defs/timestamp" },
+        "execution_state": { "enum": ["not_dispatched", "accepted", "scheduled", "applied", "clamped", "partial", "rejected", "unknown"] }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observation_id", "source", "independence_grade", "observed_at", "quality", "expected_value", "observed_value", "tolerance"],
+      "properties": {
+        "observation_id": { "$ref": "#/$defs/identity" },
+        "source": { "$ref": "#/$defs/identity" },
+        "independence_grade": { "enum": ["I0", "I1", "I2", "I3", "I4"] },
+        "observed_at": { "$ref": "#/$defs/timestamp" },
+        "quality": { "enum": ["good", "uncertain", "bad", "unknown"] },
+        "expected_value": {},
+        "observed_value": {},
+        "tolerance": { "type": "string", "minLength": 1 }
+      }
+    },
+    "reconciliation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "terminal_state", "reconciled_at", "owner"],
+      "properties": {
+        "state": { "enum": ["pending", "matched", "mismatch", "restoration_pending", "restored", "conflict", "residual"] },
+        "terminal_state": { "enum": ["verified_closed", "compensated", "accepted_residual", "cancelled_before_dispatch", "expired_before_execution", "unresolved"] },
+        "reconciled_at": { "$ref": "#/$defs/timestamp" },
+        "owner": { "$ref": "#/$defs/identity" },
+        "reversal_intervention_id": { "oneOf": [{ "$ref": "#/$defs/identity" }, { "type": "null" }] }
+      }
+    },
+    "evidence_boundary": { "type": "string", "minLength": 40 }
+  }
+}

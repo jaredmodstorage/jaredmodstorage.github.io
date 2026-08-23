@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Facility Intervention Contract: Prove What an AI-Requested Action Actually Changed</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-intervention-contract/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-intervention-contract/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A self-storage AI architecture for separating intent, authority, command delivery, controller execution, physical effect, independent readback, reconciliation, and safe reversal.</description>
+    </item>
+    <item>
       <title>The Operational Memory Contract: Why Retrieval Is Not Authority in Self-Storage AI</title>
       <link>https://jaredmodstorage.github.io/writing/operational-memory-contract/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/operational-memory-contract/</guid>

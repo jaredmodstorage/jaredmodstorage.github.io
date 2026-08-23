@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Facility intervention contract</title>
+  <desc id="desc">Architecture showing a facility intervention moving from AI intent through qualification, human authority, command delivery, controller execution, physical effect, independent readback, reconciliation, and a separately authorized reversal path. Receipts and evidence remain distinct at every boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071425"/>
+      <stop offset="1" stop-color="#102942"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".22"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#74d7f2"/>
+    </marker>
+    <marker id="arrowGold" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f4bd5d"/>
+    </marker>
+    <style>
+      text{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+      .eyebrow{font-size:18px;font-weight:700;letter-spacing:3px;fill:#74d7f2}
+      .title{font-size:48px;font-weight:760;fill:#f7fbff}
+      .subtitle{font-size:23px;font-weight:450;fill:#b9cde0}
+      .num{font-size:18px;font-weight:800;fill:#061726}
+      .boxTitle{font-size:24px;font-weight:750;fill:#f7fbff}
+      .boxText{font-size:17px;font-weight:450;fill:#c9d8e6}
+      .label{font-size:17px;font-weight:700;letter-spacing:1px;fill:#0b2033}
+      .small{font-size:16px;font-weight:500;fill:#c9d8e6}
+      .railTitle{font-size:20px;font-weight:750;fill:#f7fbff}
+      .railText{font-size:16px;font-weight:500;fill:#b9cde0}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1450" cy="80" r="230" fill="#133b57" opacity=".35"/>
+  <circle cx="80" cy="880" r="250" fill="#0c5263" opacity=".24"/>
+
+  <text x="96" y="78" class="eyebrow">SELF-STORAGE AI • CYBER-PHYSICAL EVIDENCE</text>
+  <text x="96" y="137" class="title">The Facility Intervention Contract</text>
+  <text x="96" y="178" class="subtitle">A command receipt is not proof of physical effect.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="96" y="225" width="216" height="188" rx="20" fill="#12324e" stroke="#2f6d93" stroke-width="2"/>
+    <circle cx="128" cy="261" r="18" fill="#74d7f2"/><text x="122" y="268" class="num">1</text>
+    <text x="158" y="270" class="boxTitle">Intent</text>
+    <text x="120" y="309" class="boxText"><tspan x="120">Proposal • purpose</tspan><tspan x="120" dy="27">evidence • limits</tspan><tspan x="120" dy="27">immutable version</tspan></text>
+
+    <rect x="336" y="225" width="216" height="188" rx="20" fill="#12324e" stroke="#2f6d93" stroke-width="2"/>
+    <circle cx="368" cy="261" r="18" fill="#74d7f2"/><text x="362" y="268" class="num">2</text>
+    <text x="398" y="270" class="boxTitle">Qualify</text>
+    <text x="360" y="309" class="boxText"><tspan x="360">Identity • source</tspan><tspan x="360" dy="27">freshness • conflict</tspan><tspan x="360" dy="27">preconditions</tspan></text>
+
+    <rect x="576" y="225" width="216" height="188" rx="20" fill="#26384b" stroke="#f4bd5d" stroke-width="2"/>
+    <circle cx="608" cy="261" r="18" fill="#f4bd5d"/><text x="602" y="268" class="num">3</text>
+    <text x="638" y="270" class="boxTitle">Authorize</text>
+    <text x="600" y="309" class="boxText"><tspan x="600">Principal • role</tspan><tspan x="600" dy="27">scope • consequence</tspan><tspan x="600" dy="27">window • expiry</tspan></text>
+
+    <rect x="816" y="225" width="216" height="188" rx="20" fill="#12324e" stroke="#2f6d93" stroke-width="2"/>
+    <circle cx="848" cy="261" r="18" fill="#74d7f2"/><text x="842" y="268" class="num">4</text>
+    <text x="878" y="270" class="boxTitle">Dispatch</text>
+    <text x="840" y="309" class="boxText"><tspan x="840">Command • attempt</tspan><tspan x="840" dy="27">idempotency • TTL</tspan><tspan x="840" dy="27">payload hash</tspan></text>
+
+    <rect x="1056" y="225" width="216" height="188" rx="20" fill="#12324e" stroke="#2f6d93" stroke-width="2"/>
+    <circle cx="1088" cy="261" r="18" fill="#74d7f2"/><text x="1082" y="268" class="num">5</text>
+    <text x="1118" y="270" class="boxTitle">Receipt</text>
+    <text x="1080" y="309" class="boxText"><tspan x="1080">Transport • service</tspan><tspan x="1080" dy="27">operation • native</tspan><tspan x="1080" dy="27">R0–R3 boundary</tspan></text>
+
+    <rect x="1296" y="225" width="208" height="188" rx="20" fill="#12324e" stroke="#2f6d93" stroke-width="2"/>
+    <circle cx="1328" cy="261" r="18" fill="#74d7f2"/><text x="1322" y="268" class="num">6</text>
+    <text x="1358" y="270" class="boxTitle">Execute</text>
+    <text x="1320" y="309" class="boxText"><tspan x="1320">Applied • clamped</tspan><tspan x="1320" dy="27">partial • rejected</tspan><tspan x="1320" dy="27">target-reported</tspan></text>
+  </g>
+
+  <g stroke="#74d7f2" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M312 319 H330"/><path d="M552 319 H570"/><path d="M792 319 H810"/><path d="M1032 319 H1050"/><path d="M1272 319 H1290"/>
+  </g>
+
+  <rect x="96" y="458" width="1408" height="118" rx="24" fill="#0c2639" stroke="#1f6d77" stroke-width="2"/>
+  <rect x="116" y="478" width="267" height="78" rx="16" fill="#0f5664"/>
+  <text x="144" y="510" class="boxTitle">Physical effect</text>
+  <text x="144" y="538" class="small">Physical state changes—or not.</text>
+  <path d="M1400 413 V449 H383" stroke="#74d7f2" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="420" y="478" width="316" height="78" rx="16" fill="#153f58"/>
+  <text x="446" y="510" class="boxTitle">Independent readback</text>
+  <text x="446" y="538" class="small">I0 echo → I4 qualified human observation</text>
+
+  <rect x="772" y="478" width="318" height="78" rx="16" fill="#153f58"/>
+  <text x="798" y="510" class="boxTitle">Reconcile</text>
+  <text x="798" y="538" class="small">Expected • observed • governing state</text>
+
+  <rect x="1126" y="478" width="356" height="78" rx="16" fill="#3c3525" stroke="#f4bd5d"/>
+  <text x="1152" y="510" class="boxTitle">Close honestly</text>
+  <text x="1152" y="538" class="small">Verified • compensated • residual • unresolved</text>
+
+  <g stroke="#74d7f2" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M383 517 H414"/><path d="M736 517 H766"/><path d="M1090 517 H1120"/>
+  </g>
+
+  <rect x="96" y="622" width="882" height="174" rx="22" fill="#0b2033" stroke="#2a4e68" stroke-width="2"/>
+  <text x="122" y="661" class="railTitle">Evidence rails remain separate</text>
+  <g>
+    <rect x="122" y="684" width="148" height="42" rx="10" fill="#74d7f2"/><text x="146" y="711" class="label">DECISION</text>
+    <rect x="286" y="684" width="148" height="42" rx="10" fill="#f4bd5d"/><text x="308" y="711" class="label">AUTHORITY</text>
+    <rect x="450" y="684" width="148" height="42" rx="10" fill="#67d7ad"/><text x="477" y="711" class="label">EXECUTION</text>
+    <rect x="614" y="684" width="148" height="42" rx="10" fill="#b4a2ff"/><text x="651" y="711" class="label">EFFECT</text>
+    <rect x="778" y="684" width="172" height="42" rx="10" fill="#f39191"/><text x="799" y="711" class="label">RESTORATION</text>
+  </g>
+  <text x="122" y="764" class="railText">Correlation connects claims; it never promotes one receipt into the next proof state.</text>
+
+  <rect x="1010" y="622" width="494" height="174" rx="22" fill="#2f2a20" stroke="#f4bd5d" stroke-width="2"/>
+  <text x="1038" y="661" class="railTitle">Reversal is another intervention</text>
+  <text x="1038" y="697" class="railText"><tspan x="1038">Re-check current state, authority, safety, conflicts,</tspan><tspan x="1038" dy="27">and preconditions. Create a new command, receipt,</tspan><tspan x="1038" dy="27">readback, and reconciliation chain.</tspan></text>
+  <path d="M1254 622 V592 H933" stroke="#f4bd5d" stroke-width="4" fill="none" marker-end="url(#arrowGold)"/>
+
+  <text x="96" y="850" class="small">Authored proposed method • fictional teaching records • no product, deployment, performance, safety, certification, or customer-result claim</text>
+  <text x="1504" y="850" text-anchor="end" class="small">Jared Mastroianni</text>
+</svg>

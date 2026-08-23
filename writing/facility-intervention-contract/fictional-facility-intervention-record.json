@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "intervention_id": "FIC-FICTION-001",
+  "fictional": true,
+  "proposal": {
+    "proposal_id": "FIC-PROP-001",
+    "version": 1,
+    "generating_actor": "fictional-ai-assistant",
+    "ai_assisted": true,
+    "purpose": "Allow one delayed fictional moving truck to leave Harbor Annex.",
+    "requested_action": "set temporary outbound access expiry",
+    "requested_value": "2026-08-23T18:15:00-04:00",
+    "unit": "local-time",
+    "evidence_snapshot": "FIC-SNAP-001"
+  },
+  "authority": {
+    "consequence_class": "C2",
+    "authority_id": "FIC-AUTH-001",
+    "approving_principal": "fictional-site-manager",
+    "delegated_role": "site-access-schedule-approver",
+    "policy_version": "POL-ACCESS-7",
+    "authorized_at": "2026-08-23T17:48:00-04:00",
+    "expires_at": "2026-08-23T18:00:00-04:00"
+  },
+  "target": {
+    "facility_id": "HARBOR-ANNEX-FIC",
+    "system_id": "GATE-SCHEDULER",
+    "device_id": "GATE-OUT-01",
+    "point_id": "access-window"
+  },
+  "preconditions": {
+    "expected_state_version": "45",
+    "freshness_state": "current",
+    "checked_at": "2026-08-23T17:48:30-04:00",
+    "command_expires_at": "2026-08-23T18:00:00-04:00",
+    "manual_override_absent": true
+  },
+  "command": {
+    "command_id": "FIC-CMD-001",
+    "attempt_id": "FIC-ATT-001",
+    "correlation_id": "FIC-CORR-001",
+    "idempotency_key": "FIC-IDEM-001",
+    "protocol": "fictional-versioned-command",
+    "payload_sha256": "8d6b9580dca7a2d2e4ee2856f64abbf4669c56144a296748cb9ae44be64a393e",
+    "dispatched_at": "2026-08-23T17:49:00-04:00"
+  },
+  "receipt": {
+    "grade": "R3",
+    "native_status": "fictional-controller-active-version-46",
+    "producer": "fictional-gate-controller",
+    "recorded_at": "2026-08-23T17:49:05-04:00",
+    "execution_state": "applied"
+  },
+  "observation": {
+    "observation_id": "FIC-OBS-001",
+    "source": "fictional-separate-gate-state-path",
+    "independence_grade": "I2",
+    "observed_at": "2026-08-23T17:49:09-04:00",
+    "quality": "good",
+    "expected_value": "2026-08-23T18:15:00-04:00",
+    "observed_value": "2026-08-23T18:15:00-04:00",
+    "tolerance": "0 minutes"
+  },
+  "reconciliation": {
+    "state": "restored",
+    "terminal_state": "verified_closed",
+    "reconciled_at": "2026-08-23T18:16:10-04:00",
+    "owner": "fictional-site-manager",
+    "reversal_intervention_id": null
+  },
+  "evidence_boundary": "Fictional teaching record for structural conformance only; it proves no facility, device, deployment, product, safety, performance, customer, or operating result."
+}
