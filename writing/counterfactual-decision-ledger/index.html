@@ -1,0 +1,455 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.BcwqUcaW.css" data-rsc-css-href="/_next/static/css/index.BcwqUcaW.css" data-precedence="vite-rsc/importer-resources"/><title>The Counterfactual Decision Ledger for AI Recommendations | Jared Mastroianni</title><meta name="description" content="An evidence-bounded method for evaluating AI recommendations through factual actions, unobserved counterfactuals, logged propensities, overlap, uncertainty, and explicit evidence-level gates."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Counterfactual Decision Ledger for AI Recommendations | Jared Mastroianni"/><meta property="og:description" content="An evidence-bounded method for evaluating AI recommendations through factual actions, unobserved counterfactuals, logged propensities, overlap, uncertainty, and explicit evidence-level gates."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/counterfactual-decision-ledger.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A facility decision moves from a frozen context and candidate set through recommendation, human or governed system choice, execution readback, and one factual observed outcome. Unchosen actions end at counterfactual not observed. A four-level evaluation gate separates replay, shadow description, off-policy estimation, and controlled experiment evidence."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Counterfactual Decision Ledger for AI Recommendations | Jared Mastroianni"/><meta name="twitter:description" content="An evidence-bounded method for evaluating AI recommendations through factual actions, unobserved counterfactuals, logged propensities, overlap, uncertainty, and explicit evidence-level gates."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/counterfactual-decision-ledger.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/#article","url":"https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/counterfactual-decision-ledger.png","description":"An evidence-bounded method for evaluating AI recommendations through factual actions, unobserved counterfactuals, logged propensities, overlap, uncertainty, and explicit evidence-level gates.","proficiencyLevel":"Expert","about":["Self-storage operations","AI recommendations","Counterfactual evaluation","Shadow mode","Logged propensities","Human authority","Uncertainty","Controlled experiments"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Research methods","item":"https://jaredmodstorage.github.io/writing/topics/research/"},{"@type":"ListItem","position":3,"name":"The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken","item":"https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/research/">Research methods</a></li><li aria-current="page">The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken</li></ol></nav><article class="essay essay-counterfactual-ledger"><header class="essay-header"><p class="eyebrow">Expert research paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken</h1><p class="lede">Preserve the exact context, eligible actions, recommendation exposure, chosen and executed action, factual outcome, propensity, overlap, uncertainty, and evaluation level before drawing a causal conclusion.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>20 min read</span></div></header><div class="essay-body"><blockquote>
+<p><strong>Method and evidence boundary:</strong> This is an authored operating method. Every facility, person, system, decision, action, score, probability, and result in the examples is fictional. The method is not evidence of a product deployment, customer result, legal conclusion, certification, service level, or causal effect. Any operational experiment needs an appropriate owner and review for safety, privacy, fairness, employment, consumer, contractual, and other applicable requirements.</p>
+</blockquote>
+<p>An AI system recommends that a self-storage manager call one rental lead first, inspect one maintenance item sooner, or move one access anomaly to the top of a review queue. The manager takes a different action. A week later, the team looks at the outcome and says the model would have done better.</p>
+<p>That conclusion is usually unsupported.</p>
+<p>The team observed what happened after the action it took. It did not observe what would have happened, for the same decision in the same circumstances, after the unchosen action. The missing outcome is not hiding in a dashboard. It is the road not taken.</p>
+<p>This is the core difficulty of evaluating decision systems. Predictive accuracy asks whether a forecast matched a later observation. Policy evaluation asks what outcomes would occur if one decision rule were used instead of another. The second question is causal. It requires more than recording model scores beside business results.</p>
+<p>A <strong>counterfactual decision ledger</strong> makes that boundary operational. It preserves exactly what was known, which actions were eligible, what the system recommended, what a person saw and chose, what was actually executed, what outcome was observed, and why a row is—or is not—eligible for a particular evaluation method. It turns shadow mode from a demo into an evidence-producing process without pretending that shadow mode proves impact.</p>
+<p><a href="counterfactual-decision-ledger.svg"><img src="counterfactual-decision-ledger.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A facility decision moves from a frozen context and candidate set through recommendation, human or governed system choice, execution readback, and one factual observed outcome. Unchosen actions end at counterfactual not observed. A four-level evaluation gate separates replay, shadow description, off-policy estimation, and controlled experiment evidence."></a></p>
+<p><a href="counterfactual-decision-ledger.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="counterfactual-decision-ledger-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="counterfactual-decision-ledger-downloads">Inspect the decision ledger and evaluation gates.</h2>
+<p>These exact files contain an authored method and fictional or blank-contract examples. They do not establish a product deployment, customer result, causal effect, model validity, source authority, experimental approval, performance level, certification, or independent validation.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="counterfactual-decision-ledger-template.csv" download>Download the counterfactual decision-ledger template <span aria-hidden="true">↓</span></a><a href="counterfactual-evaluation-readiness-suite.csv" download>Download the evaluation-readiness suite <span aria-hidden="true">↓</span></a><a href="counterfactual-decision-ledger.svg" download>Download the accessible decision-ledger SVG <span aria-hidden="true">↓</span></a><a href="counterfactual-decision-ledger.png" download>Download the decision-ledger PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+
+<h2>Start with the one-outcome rule</h2>
+<p>For a single decision, imagine two potential outcomes:</p>
+<ul>
+<li>the outcome if action A were taken; and</li>
+<li>the outcome if action B were taken.</li>
+</ul>
+<p>Only one action is taken, so only one of those outcomes can ordinarily be observed for that decision. This is a foundational idea in the potential-outcomes framework. Hernán and Robins describe causal effects using hypothetical interventions and make clear that, in observed data, the factual treatment and outcome are known while the alternative potential outcome is not (<a href="https://miguelhernan.org/whatifbook"><em>Causal Inference: What If</em></a>).</p>
+<p>In a self-storage operation, the decision might be which maintenance issue to inspect first. If the manager inspects a reported door problem at 10:00 a.m., the operation can observe the subsequent facts for that choice: what the inspection found, how long the issue remained open, whether a temporary control was applied, and when verified closure occurred. It cannot also observe what would have happened to that exact issue had the inspection waited until 3:00 p.m.</p>
+<p>The unobserved outcome is not zero. It is not blank because someone forgot to enter it. It is counterfactual.</p>
+<p>This yields the first ledger rule:</p>
+<blockquote>
+<p>An observed outcome may be attached only to the action that was actually executed and independently read back. Every unchosen action must remain explicitly marked <strong>counterfactual—not observed</strong>.</p>
+</blockquote>
+<p>That label prevents a common analytical error: scoring the model by comparing its recommendation with the outcome produced by somebody else&#39;s action.</p>
+<h2>Shadow mode has value, but it does not prove value</h2>
+<p>Shadow mode runs a candidate decision system without granting it operating authority. The system can receive the same eligible context, generate recommendations, and record them while the existing human or rule-based process remains in control.</p>
+<p>This can answer useful questions:</p>
+<ul>
+<li>Does the system receive the required inputs at the decision time?</li>
+<li>Does it identify the same unit, event, tenant, lead, work item, and facility as the operator?</li>
+<li>Are candidate actions within policy and site capabilities?</li>
+<li>Are scores stable enough to inspect and reproduce?</li>
+<li>How often is the recommendation late, missing, ineligible, or internally contradictory?</li>
+<li>How often would the proposed policy disagree with the current policy?</li>
+<li>Are disagreements concentrated at particular facilities, times, event classes, or data-quality states?</li>
+<li>Can reviewers understand the decision packet and identify unsafe or nonsensical proposals?</li>
+</ul>
+<p>Those are compatibility, integrity, and disagreement measurements. They are valuable. They are not causal outcome measurements.</p>
+<p>A shadow recommendation does not cause the operation&#39;s observed outcome when the recommendation was never executed. If the current policy chose a same-day inspection and the shadow system proposed next-day inspection, the same-day result cannot be counted as the shadow system&#39;s success. If the shadow recommendation matches the chosen action, the row may be more informative, but matching alone still does not solve selection bias, confounding, changing context, or the absence of an evaluation design.</p>
+<p>The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a> is a voluntary, non-sector-specific framework for managing AI risk across the lifecycle. Its <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">Core</a> supports testing under conditions similar to deployment, documenting methods and uncertainty, monitoring in production, and recording limits to generalizability. Those practices strengthen evaluation. They do not convert unexecuted recommendations into observed effects. NIST&#39;s <a href="https://www.nist.gov/itl/ai-risk-management-framework">current program page</a> says version 1.0 is being revised, so the exact source version and check date should travel with the method.</p>
+<h2>Six states must remain separate</h2>
+<p>Many failed evaluations collapse an entire decision into one row called <em>recommendation</em>. A defensible ledger separates at least six states.</p>
+<h3>1. Eligible context</h3>
+<p>The exact facts available before the decision: facility, time, source versions, event identity, candidate unit, data freshness, missing fields, active policy, capacity, and relevant operational constraints.</p>
+<p>Context must be frozen by identity or content hash. An after-the-fact database export may contain corrections and fields that were not available to the decision maker. Using those later facts as if they were known at decision time creates leakage.</p>
+<h3>2. Candidate action set</h3>
+<p>The actions that were genuinely available at that moment. A model cannot be fairly evaluated for choosing an action that local policy prohibited, the facility could not execute, the tenant had not consented to, or staffing made impossible.</p>
+<p>The ledger should record exclusions and their authority. “Not selected” is different from “not eligible.”</p>
+<h3>3. Recommendation and exposure</h3>
+<p>The model or rule output, including version, score, rank, score meaning, generation timestamp, and policy filters. The ledger must also record what a person actually saw. A recommendation generated in a backend but never displayed cannot explain a human choice.</p>
+<p>Exposure is more than a yes/no flag when formal evaluation is contemplated. If a randomized or stochastic logging policy decides which action is presented or selected, the probability assigned by that policy may be essential. A probability reconstructed later from a different model is not the same evidence.</p>
+<h3>4. Choice and authority</h3>
+<p>The action selected by the responsible person or system, the time of selection, the authority used, and a bounded reason code. Free text can add context, but it should not replace structured reasons such as <code>insufficient_identity</code>, <code>site_capability_unavailable</code>, <code>customer_contact_preference</code>, <code>safety_hold</code>, or <code>operator_judgment</code>.</p>
+<p>An override is neither automatically good nor automatically bad. It is a decision that needs a reason, authority, and outcome path.</p>
+<h3>5. Execution and readback</h3>
+<p>Selection is not execution. The ledger should record whether the action was attempted, accepted by the downstream system, independently observed, partially completed, reversed, or never carried out.</p>
+<p>Only the executed action can be linked to a factual outcome. If a work order was queued but never dispatched, the system should not evaluate the recommendation as if the inspection occurred.</p>
+<h3>6. Outcome and observation window</h3>
+<p>The outcome definition must exist before analysts inspect results. It needs a unit, numerator, denominator, observation window, censoring rule, source, and direction of preference.</p>
+<p>“Resolved quickly” is not an outcome contract. A better definition might be: <code>verified_closure_within_48h</code>, measured from qualified work-item creation to independent closure readback, excluding rows censored by facility closure under a declared rule.</p>
+<p>The ledger also records co-interventions: a storm, staffing change, vendor outage, manager call, rate change, marketing campaign, or policy update that may affect the outcome. Recording a co-intervention does not automatically adjust for it. It makes the limitation visible.</p>
+<h2>The 26-field minimum decision packet</h2>
+<p>The exact storage format can vary, but the semantic contract should not. I use twenty-six minimum fields grouped into seven blocks.</p>
+<p><strong>Decision identity</strong></p>
+<ol>
+<li><code>decision_id</code></li>
+<li><code>facility_id</code></li>
+<li><code>decision_type</code></li>
+<li><code>decision_time_utc</code></li>
+<li><code>context_snapshot_id</code></li>
+</ol>
+<p><strong>Candidate and policy context</strong></p>
+<ol start="6">
+<li><code>candidate_action_id</code></li>
+<li><code>eligibility_state</code></li>
+<li><code>eligibility_reason</code></li>
+<li><code>policy_id_and_version</code></li>
+</ol>
+<p><strong>Recommendation provenance</strong></p>
+<ol start="10">
+<li><code>recommender_id_and_version</code></li>
+<li><code>recommendation_generated_at_utc</code></li>
+<li><code>rank_or_score</code></li>
+<li><code>score_semantics</code></li>
+<li><code>display_state</code></li>
+</ol>
+<p><strong>Logging policy</strong></p>
+<ol start="15">
+<li><code>logging_policy_id_and_version</code></li>
+<li><code>action_probability</code></li>
+<li><code>probability_provenance</code></li>
+</ol>
+<p><strong>Human or system disposition</strong></p>
+<ol start="18">
+<li><code>chosen_action</code></li>
+<li><code>choice_authority</code></li>
+<li><code>choice_reason_code</code></li>
+</ol>
+<p><strong>Execution truth</strong></p>
+<ol start="21">
+<li><code>execution_state</code></li>
+<li><code>execution_receipt_or_readback</code></li>
+</ol>
+<p><strong>Outcome and analysis boundary</strong></p>
+<ol start="23">
+<li><code>outcome_definition_id</code></li>
+<li><code>outcome_observation_state</code></li>
+<li><code>censoring_and_co_interventions</code></li>
+<li><code>analysis_eligibility_and_limitations</code></li>
+</ol>
+<p>In practice, a production schema will expand several of these fields. The accompanying template uses one row per candidate action so the chosen and unchosen branches cannot overwrite one another.</p>
+<p>The provenance structure has a direct precedent in <a href="https://www.w3.org/TR/prov-o/">W3C PROV-O</a>, which models entities, activities, and agents and supports qualified attribution, association, use, and derivation. PROV-O does not define this ledger. It demonstrates why “the model said” is an inadequate provenance statement.</p>
+<h2>Distinguish display probability from action propensity</h2>
+<p>One of the most dangerous fields in an evaluation ledger is a number labeled <code>probability</code> without a contract.</p>
+<p>It might mean:</p>
+<ul>
+<li>the model&#39;s estimated probability of an event;</li>
+<li>a normalized score across candidate actions;</li>
+<li>the chance an action was displayed;</li>
+<li>the chance the logging policy selected an action;</li>
+<li>a calibration estimate;</li>
+<li>a human confidence judgment.</li>
+</ul>
+<p>Those quantities are not interchangeable.</p>
+<p>Off-policy methods often rely on the probability that the historical logging policy chose an action in a given context. Research on learning from logged bandit feedback treats those propensities and the variance they create as central, not optional metadata (<a href="https://jmlr.org/papers/v16/swaminathan15a.html">Swaminathan and Joachims, 2015</a>). If the past process was an undocumented human choice, entering <code>0.5</code> because there were two visible buttons does not recover the propensity.</p>
+<p>The ledger should therefore store both the numeric value and its provenance:</p>
+<ul>
+<li>computed by which policy version;</li>
+<li>before or after eligibility filtering;</li>
+<li>over which candidate set;</li>
+<li>with what randomization mechanism;</li>
+<li>logged at what time;</li>
+<li>whether the probability was actually used to select the action;</li>
+<li>whether the record was altered or imputed later.</li>
+</ul>
+<p>When that evidence is absent, the honest value is <code>unknown</code>, and the row is not eligible for an estimator that requires known propensities.</p>
+<h2>Four evaluation levels</h2>
+<p>The ledger should assign each analysis to the strongest level its evidence actually supports.</p>
+<h3>Level 0 — replay integrity</h3>
+<p>Can the system reproduce the recommendation from the pinned context, model, policy, and candidate set? Can it explain missing or changed output? This tests determinism, version identity, input completeness, and provenance.</p>
+<p>It says nothing about operational benefit.</p>
+<h3>Level 1 — shadow compatibility</h3>
+<p>How often was a recommendation generated on time, eligible, exposed, understandable, and executable? Where did it disagree with the active policy? What data-quality or site-capability problems appeared?</p>
+<p>This level supports descriptive rates with exact denominators. It does not support “would have improved.”</p>
+<h3>Level 2 — counterfactual or off-policy estimation</h3>
+<p>Under a suitable design, logged data may support estimates of how a different policy would perform. The technical literature provides several approaches, including direct outcome models, inverse-propensity weighting, and doubly robust estimators. Bottou and colleagues give a broader account of counterfactual reasoning for learning systems and controlled experiments in computational advertising (<a href="https://www.jmlr.org/papers/v14/bottou13a.html">JMLR, 2013</a>). The domain is not facility operations, and its results should not be transplanted without a valid operational design.</p>
+<p>These methods are not spreadsheet formulas to apply after the fact. They depend on conditions such as:</p>
+<ul>
+<li><strong>consistency:</strong> the action being analyzed is well defined and corresponds to the intervention represented in the data;</li>
+<li><strong>exchangeability or adequate control of confounding:</strong> conditional comparisons are not driven by unmeasured reasons for action selection;</li>
+<li><strong>positivity or overlap:</strong> each action the target policy might choose had a nonzero chance of being chosen in relevant contexts;</li>
+<li>accurate treatment of time, interference, censoring, missingness, and changing policies;</li>
+<li>correct propensity or outcome models where the estimator requires them;</li>
+<li>enough effective sample size after weighting;</li>
+<li>an outcome definition that is measured consistently.</li>
+</ul>
+<p><a href="https://icml.cc/2011/papers/554_icmlpaper.pdf">Dudík, Langford, and Li</a> address the partial-feedback setting in which rewards are observed only for chosen actions and develop a doubly robust approach combining outcome and past-policy models. The phrase <em>doubly robust</em> is easy to misuse. It does not mean twice as trustworthy, immune to poor overlap, safe under arbitrary hidden confounding, or valid when both component models are wrong.</p>
+<p>Any Level 2 estimate needs a named method owner, diagnostics, uncertainty, sensitivity work, and an explicit statement of which assumptions remain unverified. If the team cannot explain why a row is eligible, it should remain at Level 1.</p>
+<h3>Level 3 — controlled operational experiment</h3>
+<p>A bounded randomized or otherwise defensible prospective design can create more direct evidence, provided the action is appropriate to experiment on and the design has the necessary operational, ethical, privacy, legal, and safety review.</p>
+<p>The experiment must define:</p>
+<ul>
+<li>the decision unit and randomization unit;</li>
+<li>eligibility and exclusion rules;</li>
+<li>treatment versions and contamination controls;</li>
+<li>primary outcome and observation window;</li>
+<li>guardrails and stop conditions;</li>
+<li>power or precision target;</li>
+<li>analysis plan;</li>
+<li>operator override and appeal paths;</li>
+<li>incident response and rollback;</li>
+<li>who may start, pause, expand, and end the experiment.</li>
+</ul>
+<p>Not every action belongs in an experiment. Access-state changes, tenant rights, employment decisions, emergency response, life-safety work, and legally sensitive communications need especially conservative treatment. A low-consequence queue-ordering or information-presentation question may be more suitable than an action that changes a person&#39;s rights or physical access.</p>
+<h2>A fictional self-storage example</h2>
+<p>Consider three fictional maintenance items at Site Alder:</p>
+<ul>
+<li><code>WORK-101</code>: a unit-door alignment concern reported by a tenant;</li>
+<li><code>WORK-102</code>: an office light flicker reported by staff; and</li>
+<li><code>WORK-103</code>: debris observed near a drive aisle.</li>
+</ul>
+<p>The current policy gives the manager a governed queue with safety and access-related exclusions already applied. A shadow model ranks <code>WORK-101</code> first. The manager chooses <code>WORK-103</code> because a local delivery is scheduled and the aisle must be inspected before the vehicle arrives.</p>
+<p>The ledger records all three eligible actions as candidate rows. It records the shadow rank, what the manager saw, the structured reason, and the actual dispatch. The outcome for <code>WORK-103</code> is observed under the chosen action. The outcome for <code>WORK-101</code> under “inspect first” remains counterfactual—not observed.</p>
+<p>What can the team learn?</p>
+<ul>
+<li>whether the shadow model received the delivery schedule in its context;</li>
+<li>whether that schedule should have affected eligibility or ranking;</li>
+<li>whether the manager&#39;s reason code identifies a recurring missing signal;</li>
+<li>whether the recommendation was early enough to use;</li>
+<li>whether the model&#39;s candidate set matched the governed queue;</li>
+<li>how often similar disagreements occur.</li>
+</ul>
+<p>What can it not honestly claim from this row?</p>
+<ul>
+<li>that the model would have reduced closure time;</li>
+<li>that the manager made the wrong choice;</li>
+<li>that ranking <code>WORK-101</code> first would have improved tenant experience;</li>
+<li>that the shadow system saved labor or prevented a loss.</li>
+</ul>
+<p>The row is operationally useful precisely because it refuses to fabricate those conclusions.</p>
+<h2>Define the outcome before looking</h2>
+<p>An outcome selected after results are visible can make almost any policy look favorable. The outcome contract should be versioned before the evaluation window begins.</p>
+<p>For a maintenance-prioritization use case, the contract might include:</p>
+<ul>
+<li>decision unit: qualified work item at first eligible queue entry;</li>
+<li>primary outcome: verified closure within 48 hours;</li>
+<li>safety guardrail: no missed emergency-class escalation;</li>
+<li>quality guardrail: reopen within seven days;</li>
+<li>start event: governed work-item creation;</li>
+<li>end event: independent closure readback;</li>
+<li>censoring: facility inaccessible due to declared emergency closure;</li>
+<li>exclusion: duplicate or identity-unresolved work item;</li>
+<li>direction: higher verified-closure rate is preferred only when guardrails remain within bounds;</li>
+<li>evaluation window and analysis version.</li>
+</ul>
+<p>This prevents the team from quietly switching from closure quality to response time, or from excluding inconvenient rows after inspecting outcomes.</p>
+<p>The NIST AI RMF Playbook&#39;s <a href="https://airc.nist.gov/airmf-resources/playbook/measure/">Measure suggestions</a> encourage documenting assumptions, comparing predeployment and production behavior, tracking drift and feedback loops, and comparing AI with simpler or human baselines. Those are sound habits. The Playbook is voluntary, not a certification checklist, and NIST says it will be updated after the AI RMF revision.</p>
+<h2>The feedback-loop trap</h2>
+<p>Once people see recommendations, the system can change the data it later learns from.</p>
+<p>A manager may investigate an item because it was ranked highly, add notes that would not otherwise exist, or change how work is coded. Staff may learn which reason codes preserve their discretion. A model may suppress a candidate action that then disappears from downstream records. These are not merely model-drift problems. They are policy-induced changes to observation.</p>
+<p>The ledger should record:</p>
+<ul>
+<li>whether the recommendation was hidden, displayed, selected, or merely generated;</li>
+<li>when the operator first saw it;</li>
+<li>whether the display changed the information-gathering process;</li>
+<li>whether the model or policy was retrained during the window;</li>
+<li>whether outcome capture depends on the chosen action;</li>
+<li>whether decisions at one facility affect capacity or outcomes at another;</li>
+<li>whether the same tenant, unit, work item, or staff member appears across decisions.</li>
+</ul>
+<p>Ignoring these relationships can understate uncertainty and overstate sample size. Ten thousand rows are not ten thousand independent decisions when they come from repeated interactions with the same small set of facilities and people.</p>
+<h2>Human review needs its own measurement</h2>
+<p>Human-in-the-loop is not an evaluation method. A person can add context and authority, but can also introduce inconsistent thresholds, automation bias, fatigue, delay, or selective documentation.</p>
+<p>Measure the human-system configuration:</p>
+<ul>
+<li>exposure rate and display latency;</li>
+<li>agreement, override, and abstention with exact denominators;</li>
+<li>reason-code completeness;</li>
+<li>time to disposition;</li>
+<li>distribution by facility and decision class;</li>
+<li>escalation and appeal rate;</li>
+<li>post-choice execution mismatch;</li>
+<li>whether reviewers had the required evidence;</li>
+<li>whether disagreement review is independent of model developers;</li>
+<li>whether a recommendation changes later labeling.</li>
+</ul>
+<p>Do not interpret agreement as correctness. A high agreement rate may mean the model learned the old policy, reviewers defer to it, or both are responding to the same incomplete data. A low agreement rate may reveal missing context, poor recommendations, different objectives, or an unclear policy. The ledger makes the disagreement investigable without assigning credit prematurely.</p>
+<h2>The architecture</h2>
+<p>A durable counterfactual ledger has six layers.</p>
+<ol>
+<li><strong>Decision clock and identity</strong> — assigns a stable decision ID and freezes the eligible context at the decision time.</li>
+<li><strong>Candidate-set and policy resolver</strong> — records what actions were available and why others were excluded.</li>
+<li><strong>Recommendation observer</strong> — captures model version, output, timing, score semantics, and display state without granting authority.</li>
+<li><strong>Choice and execution reconciler</strong> — joins human or system selection to downstream acceptance and independent readback.</li>
+<li><strong>Outcome observer</strong> — applies a versioned definition and window, preserving censoring and co-interventions.</li>
+<li><strong>Evaluation gate</strong> — assigns replay, descriptive, off-policy, or experiment eligibility and refuses analyses whose assumptions or provenance are missing.</li>
+</ol>
+<p>Each layer should be append-oriented. A correction creates a new attributed assertion rather than silently rewriting what was supposedly known at decision time. The ledger should distinguish event time, observation time, decision time, execution time, and outcome-window closure.</p>
+<p>This architecture does not require a particular database or AI platform. It requires stable identity, provenance, versioning, immutability or equivalent history, access controls, and a governed correction path.</p>
+<h2>Acceptance tests before analysis</h2>
+<p>Before a dashboard reports policy value, run a conformance suite against the ledger.</p>
+<p>At minimum, refuse or downgrade analysis when:</p>
+<ul>
+<li>decision or candidate identity is missing;</li>
+<li>the context snapshot was captured after the choice without a trustworthy historical source;</li>
+<li>the candidate set is incomplete;</li>
+<li>score meaning is undocumented;</li>
+<li>generation and display are conflated;</li>
+<li>chosen action and executed action differ;</li>
+<li>no independent readback exists for a consequential action;</li>
+<li>an observed outcome appears on an unchosen branch;</li>
+<li>the outcome definition changed after inspection;</li>
+<li>censoring or co-interventions are blank where required;</li>
+<li>the logging policy or action propensity is reconstructed without provenance;</li>
+<li>target-policy actions have insufficient overlap;</li>
+<li>extreme weights collapse the effective sample size;</li>
+<li>a doubly robust result is presented without both component-model diagnostics;</li>
+<li>repeated units or cross-facility interference are ignored;</li>
+<li>the production policy changed during the evaluation without segmentation;</li>
+<li>a Level 1 shadow analysis is labeled causal;</li>
+<li>uncertainty, sensitivity, and generalizability limits are absent.</li>
+</ul>
+<p>The accompanying suite contains beginner, intermediate, advanced, and architect cases. It deliberately tests false conclusions, not only missing fields.</p>
+<h2>What AI may do inside this method</h2>
+<p>AI can help:</p>
+<ul>
+<li>propose candidate reason-code groupings for human review;</li>
+<li>detect impossible timestamps or state transitions;</li>
+<li>compare context schemas across facilities;</li>
+<li>identify missing provenance;</li>
+<li>summarize disagreement clusters without assigning causal credit;</li>
+<li>draft test cases from a governed outcome contract;</li>
+<li>flag possible overlap and weight-instability problems for a qualified analyst;</li>
+<li>explain why a row was downgraded from Level 2 to Level 1.</li>
+</ul>
+<p>These are proposed uses, not deployment or performance claims.</p>
+<p>AI should not invent a propensity, infer an unobserved outcome, approve its own experiment, erase an override, redefine the outcome after seeing results, or label an association causal. A language model&#39;s confidence is not an action probability under the historical logging policy.</p>
+<h2>A 30-day operator exercise</h2>
+<p>An operator can learn from this method without running an experiment.</p>
+<h3>Week 1 — choose one bounded decision</h3>
+<p>Select a low-consequence, repeatable decision such as the order in which already-qualified maintenance items enter a human review queue. Write the decision unit, candidate actions, eligibility rules, authority, and exclusions.</p>
+<h3>Week 2 — freeze context and outcome contracts</h3>
+<p>Define the context snapshot and source versions. Choose one primary outcome and guardrails, with numerator, denominator, start, stop, window, censoring, and readback rules. Do not activate a new policy.</p>
+<h3>Week 3 — run hidden and visible shadow checks</h3>
+<p>First capture recommendations without showing them to operators to test input and output integrity. If authorized, run a separate visible-shadow phase and record exposure. Keep the phases distinct because visibility can change behavior.</p>
+<h3>Week 4 — audit evidence eligibility</h3>
+<p>Run the conformance suite. Report replay integrity, coverage, latency, eligibility, disagreement, missing context, and reason-code completeness. Mark counterfactual outcomes as unobserved. Do not publish an estimated causal effect unless a qualified method owner has approved the design, assumptions, diagnostics, and uncertainty.</p>
+<p>The most valuable result may be a refusal: <em>the historical process did not record propensities, candidate-set overlap is unknown, and outcome capture depends on the chosen action; therefore this dataset supports Level 1 descriptive analysis only.</em></p>
+<p>That is not a failed project. It is a truthful finding that tells the operator what evidence must be designed into the next phase.</p>
+<h2>The standard to hold</h2>
+<p>Applied AI authority will not come from placing a model score beside an operational KPI and calling the difference impact. It will come from knowing which question the evidence can answer.</p>
+<p>A counterfactual decision ledger gives a self-storage operator that discipline. It preserves the recommendation without granting it credit, preserves human judgment without romanticizing it, preserves the factual outcome without assigning it to an unchosen action, and preserves the assumptions required for more advanced evaluation.</p>
+<p>The standard is simple to state and demanding to follow:</p>
+<blockquote>
+<p>Record the decision that existed, the action that happened, and the outcome that was observed. Treat every other path as a question until an appropriate design makes it evidence.</p>
+</blockquote>
+<p>That is how shadow mode becomes an operating instrument instead of a retrospective story machine.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Advanced research governance</p><h3><a href="/writing/self-storage-benchmark-research-protocol/">A Self-Storage Benchmark Is a Research Protocol</a></h3><p>Define the claim, establishment, frame, sample, measure, disposition, uncertainty, privacy boundary, AI use, and release gates before publishing a benchmark.</p><a href="/writing/self-storage-benchmark-research-protocol/" class="text-link" aria-label="Read the article: A Self-Storage Benchmark Is a Research Protocol">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/multi-location-policy-compiler/">The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality</a></h3><p>Compile one governed portfolio rule against explicit site capabilities, overlays, exceptions, authorization, activation, readback, and rollback.</p><a href="/writing/multi-location-policy-compiler/" class="text-link" aria-label="Read the article: The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operator reporting control</p><h3><a href="/writing/before-you-share-a-number/">Before You Share a Number</a></h3><p>Name source, period, population, unit, numerator, denominator, corrections, and AI test conditions before using a metric.</p><a href="/writing/before-you-share-a-number/" class="text-link" aria-label="Read the article: Before You Share a Number">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

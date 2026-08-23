@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Counterfactual decision ledger architecture for facility AI evaluation</title>
+  <desc id="desc">A facility decision moves from a frozen context and candidate set through recommendation, human or governed system choice, execution readback, and one factual observed outcome. Unchosen actions end at counterfactual not observed. A four-level evaluation gate separates replay, shadow description, off-policy estimation, and controlled experiment evidence.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071522"/>
+      <stop offset="1" stop-color="#102b38"/>
+    </linearGradient>
+    <linearGradient id="actual" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#16a085"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5eead4"/>
+    </marker>
+    <marker id="arrowMuted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .eyebrow { font: 700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 2.5px; fill: #5eead4; }
+      .title { font: 750 44px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; }
+      .subtitle { font: 400 21px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; }
+      .cardTitle { font: 700 20px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; }
+      .cardBody { font: 400 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #dbeafe; }
+      .small { font: 500 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; }
+      .pill { font: 750 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .8px; fill: #052e2b; }
+      .levelTitle { font: 750 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; }
+      .levelBody { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; }
+      .actualLabel { font: 750 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 1px; fill: #ccfbf1; }
+      .counterLabel { font: 750 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 1px; fill: #e2e8f0; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1515" cy="50" r="215" fill="#0f766e" opacity="0.10"/>
+  <circle cx="75" cy="850" r="250" fill="#2563eb" opacity="0.08"/>
+
+  <text x="70" y="58" class="eyebrow">JARED MASTROIANNI · AUTHORED OPERATING METHOD</text>
+  <text x="70" y="112" class="title">The counterfactual decision ledger</text>
+  <text x="70" y="150" class="subtitle">One decision creates one factual path. Every unchosen path remains a question.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="205" width="235" height="150" rx="20" fill="#17384a" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="90" y="225" width="108" height="26" rx="13" fill="#93c5fd"/>
+    <text x="107" y="243" class="pill">DECISION TIME</text>
+    <text x="90" y="285" class="cardTitle">Freeze context</text>
+    <text x="90" y="316" class="cardBody">Identity · source versions</text>
+    <text x="90" y="340" class="cardBody">freshness · missing facts</text>
+  </g>
+
+  <path d="M305 280 H350" stroke="#5eead4" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="355" y="205" width="235" height="150" rx="20" fill="#17384a" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="375" y="225" width="128" height="26" rx="13" fill="#93c5fd"/>
+    <text x="391" y="243" class="pill">CANDIDATE SET</text>
+    <text x="375" y="285" class="cardTitle">Resolve eligibility</text>
+    <text x="375" y="316" class="cardBody">Available · excluded · why</text>
+    <text x="375" y="340" class="cardBody">policy + site capability</text>
+  </g>
+
+  <path d="M590 280 H635" stroke="#5eead4" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="640" y="205" width="260" height="150" rx="20" fill="#17384a" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="660" y="225" width="162" height="26" rx="13" fill="#93c5fd"/>
+    <text x="676" y="243" class="pill">RECOMMENDATION</text>
+    <text x="660" y="285" class="cardTitle">Observe; do not authorize</text>
+    <text x="660" y="316" class="cardBody">Model · policy · rank · score</text>
+    <text x="660" y="340" class="cardBody">generated ≠ displayed</text>
+  </g>
+
+  <path d="M900 280 H945" stroke="#5eead4" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="950" y="205" width="250" height="150" rx="20" fill="#17384a" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="970" y="225" width="126" height="26" rx="13" fill="#fcd34d"/>
+    <text x="987" y="243" class="pill">DISPOSITION</text>
+    <text x="970" y="285" class="cardTitle">Choose with authority</text>
+    <text x="970" y="316" class="cardBody">Action · reason · actor</text>
+    <text x="970" y="340" class="cardBody">override is a decision</text>
+  </g>
+
+  <path d="M1200 280 H1245" stroke="#5eead4" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1250" y="205" width="280" height="150" rx="20" fill="url(#actual)" stroke="#5eead4" stroke-width="2"/>
+    <rect x="1270" y="225" width="118" height="26" rx="13" fill="#99f6e4"/>
+    <text x="1287" y="243" class="pill">FACTUAL PATH</text>
+    <text x="1270" y="285" class="cardTitle">Execute + read back</text>
+    <text x="1270" y="316" class="cardBody">Selected ≠ accepted ≠ observed</text>
+    <text x="1270" y="340" class="cardBody">Only this path gets an outcome</text>
+  </g>
+
+  <path d="M1390 355 V405" stroke="#5eead4" stroke-width="4" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="1250" y="410" width="280" height="118" rx="20" fill="#0b5f57" stroke="#99f6e4" stroke-width="2"/>
+    <text x="1270" y="442" class="actualLabel">OBSERVED OUTCOME</text>
+    <text x="1270" y="474" class="cardBody">Versioned definition · window</text>
+    <text x="1270" y="499" class="cardBody">censoring · co-interventions</text>
+  </g>
+
+  <path d="M1075 355 V435 H980" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="9 8" marker-end="url(#arrowMuted)"/>
+  <path d="M1075 355 V515 H980" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="9 8" marker-end="url(#arrowMuted)"/>
+
+  <g>
+    <rect x="720" y="390" width="255" height="92" rx="18" fill="#263746" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 7"/>
+    <text x="740" y="423" class="counterLabel">UNCHOSEN ACTION A</text>
+    <text x="740" y="453" class="cardBody">Counterfactual — not observed</text>
+  </g>
+  <g>
+    <rect x="720" y="490" width="255" height="92" rx="18" fill="#263746" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 7"/>
+    <text x="740" y="523" class="counterLabel">UNCHOSEN ACTION B</text>
+    <text x="740" y="553" class="cardBody">Counterfactual — not observed</text>
+  </g>
+
+  <text x="70" y="626" class="eyebrow">EVALUATION GATE · CLAIM ONLY THE STRONGEST LEVEL SUPPORTED</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="655" width="340" height="152" rx="20" fill="#142c3b" stroke="#64748b" stroke-width="2"/>
+    <text x="92" y="692" class="levelTitle">LEVEL 0 · REPLAY</text>
+    <text x="92" y="723" class="levelBody">Can exact inputs reproduce output?</text>
+    <text x="92" y="747" class="levelBody">Identity · versions · determinism</text>
+    <text x="92" y="779" class="small">No operational-benefit claim</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="430" y="655" width="340" height="152" rx="20" fill="#142c3b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="452" y="692" class="levelTitle">LEVEL 1 · SHADOW</text>
+    <text x="452" y="723" class="levelBody">Coverage · latency · disagreement</text>
+    <text x="452" y="747" class="levelBody">Eligibility · display · data quality</text>
+    <text x="452" y="779" class="small">Descriptive, not causal</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="790" y="655" width="340" height="152" rx="20" fill="#142c3b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="812" y="692" class="levelTitle">LEVEL 2 · OFF-POLICY</text>
+    <text x="812" y="723" class="levelBody">Propensity · overlap · assumptions</text>
+    <text x="812" y="747" class="levelBody">Diagnostics · uncertainty · sensitivity</text>
+    <text x="812" y="779" class="small">Requires qualified method review</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1150" y="655" width="380" height="152" rx="20" fill="#142c3b" stroke="#5eead4" stroke-width="2"/>
+    <text x="1172" y="692" class="levelTitle">LEVEL 3 · CONTROLLED</text>
+    <text x="1172" y="723" class="levelBody">Prospective design · guardrails</text>
+    <text x="1172" y="747" class="levelBody">stop authority · analysis plan</text>
+    <text x="1172" y="779" class="small">Only for appropriate governed actions</text>
+  </g>
+
+  <text x="70" y="856" class="subtitle">Record the action that happened. Treat every other path as a question until an appropriate design makes it evidence.</text>
+  <text x="1515" y="856" text-anchor="end" class="small">Fictional architecture · not deployment evidence</text>
+</svg>
