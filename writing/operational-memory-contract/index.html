@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.K38vg5AS.css" data-rsc-css-href="/_next/static/css/index.K38vg5AS.css" data-precedence="vite-rsc/importer-resources"/><title>The Operational Memory Contract for Self-Storage AI | Jared Mastroianni</title><meta name="description" content="A self-storage AI architecture for deciding which retrieved assertions may support which actor, purpose, time, and consequence without confusing relevance with operating authority."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Operational Memory Contract for Self-Storage AI | Jared Mastroianni"/><meta property="og:description" content="A self-storage AI architecture for deciding which retrieved assertions may support which actor, purpose, time, and consequence without confusing relevance with operating authority."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/operational-memory-contract/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/operational-memory-contract/operational-memory-contract.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="Architecture diagram showing source capture, quarantine, admission, versioned assertions, entitlement filtering, semantic retrieval, evidence assembly, generation, consequence policy, human review, authorized action, readback, and continuous evaluation. Retrieval supplies candidate evidence but does not grant operating authority."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Operational Memory Contract for Self-Storage AI | Jared Mastroianni"/><meta name="twitter:description" content="A self-storage AI architecture for deciding which retrieved assertions may support which actor, purpose, time, and consequence without confusing relevance with operating authority."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/operational-memory-contract/operational-memory-contract.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/operational-memory-contract/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/operational-memory-contract/#article","url":"https://jaredmodstorage.github.io/writing/operational-memory-contract/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/operational-memory-contract/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Operational Memory Contract: Why Retrieval Is Not Authority in Self-Storage AI","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/operational-memory-contract/operational-memory-contract.png","description":"A self-storage AI architecture for deciding which retrieved assertions may support which actor, purpose, time, and consequence without confusing relevance with operating authority.","proficiencyLevel":"Expert","about":["Self-storage operations","Operational memory","Retrieval governance","Responsible AI","Human review","Data provenance","Entitlement","Temporal authority","Operational intelligence"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/operational-memory-contract/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Operational Memory Contract: Why Retrieval Is Not Authority in Self-Storage AI","item":"https://jaredmodstorage.github.io/writing/operational-memory-contract/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Operational Memory Contract: Why Retrieval Is Not Authority in Self-Storage AI</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Operational Memory Contract: Why Retrieval Is Not Authority in Self-Storage AI</h1><p class="lede">Separate retrieval relevance from identity, source authority, effective time, entitlement, purpose, consequence, human review, and readback before a facility assertion supports action.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>17 min read</span></div></header><div class="essay-body"><blockquote>
+<p><strong>Method and evidence boundary:</strong> This is Jared Mastroianni&#39;s authored proposed method. Harbor Annex and every facility, record, source state, entitlement, query, action, test, and result in the examples are fictional. Retrieval, citation, provenance, schema conformance, or a current-looking record does not establish factual authority, accuracy, completeness, entitlement, safety, compliance, performance, or outcome.</p>
+</blockquote>
+<p>A retrieval system can find the right sentence and still support the wrong action.</p>
+<p>That is the central design problem for AI-assisted self-storage operations. The model may retrieve a facility page that names gate hours, a policy document that describes after-hours access, a vendor record for the gate controller, and a manager note about a temporary exception. Every passage may be authentic. Every passage may also have a different scope, effective time, audience, and authority.</p>
+<p>Putting those passages into a prompt does not reconcile them. It only makes them available to a model.</p>
+<p>Retrieval-augmented generation is useful because it connects generation to external information. The original 2020 NeurIPS paper describes a model architecture combining parametric and non-parametric memory for knowledge-intensive tasks. That research does not define an operating control for a storage facility. A facility operator still has to decide which content is admissible, which source governs each fact, which version was effective, who may see it, what question it may answer, and whether the result may inform or authorize work.</p>
+<p>This paper proposes an <strong>operational memory contract</strong> for that purpose. It is a self-storage-specific method for governing the material an AI system may retrieve and the evidence packet it must return. The contract is not a model, vector database, product specification, legal rule, security certification, or claim of deployment. It is an authored design method for keeping retrieval useful without confusing relevance with authority.</p>
+<p><a href="operational-memory-contract.svg"><img src="operational-memory-contract.svg" width="1600" height="900" loading="lazy" decoding="async" alt="Architecture diagram showing source capture, quarantine, admission, versioned assertions, entitlement filtering, semantic retrieval, evidence assembly, generation, consequence policy, human review, authorized action, readback, and continuous evaluation. Retrieval supplies candidate evidence but does not grant operating authority."></a></p>
+<p><a href="operational-memory-contract.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="operational-memory-contract-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="operational-memory-contract-downloads">Inspect the admission register and acceptance tests.</h2>
+<p>These exact files contain an authored method and fictional or blank-contract examples. They do not establish factual authority, source accuracy, entitlement, product deployment, customer use, performance, safety, compliance, certification, or independent validation.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="operational-memory-admission-register-template.csv" download>Download the memory-admission register <span aria-hidden="true">↓</span></a><a href="operational-memory-acceptance-tests.csv" download>Download the acceptance-test suite <span aria-hidden="true">↓</span></a><a href="operational-memory-contract.svg" download>Download the accessible operational-memory SVG <span aria-hidden="true">↓</span></a><a href="operational-memory-contract.png" download>Download the operational-memory PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+
+<h2>Operational memory is not a folder of documents</h2>
+<p>Most organizations already have several kinds of memory:</p>
+<ul>
+<li>an archive preserves records;</li>
+<li>a search index helps people find material;</li>
+<li>a system of record governs a particular transaction or field;</li>
+<li>a reporting store supports analysis;</li>
+<li>a knowledge base organizes reusable information;</li>
+<li>a model retains patterns in parameters;</li>
+<li>a retrieval index selects passages for a query.</li>
+</ul>
+<p>These are not interchangeable.</p>
+<p>An archive can preserve a superseded policy correctly. A search engine can rank an old page highly. A data warehouse can retain a historical facility name for accurate period reporting. A model can reproduce language learned before a policy changed. None of those behaviors establishes what an operator should treat as current and governing at 9:00 a.m. today.</p>
+<p>Operational memory is the governed layer that answers a narrower question:</p>
+<blockquote>
+<p>Which approved assertions may be presented, to which actor, for which purpose, about which entity, as of which time, with what source and limitation?</p>
+</blockquote>
+<p>That definition deliberately uses <strong>assertions</strong>, not documents. One document can contain several claims with different owners and effective periods. A facility page may govern public address and office hours while saying nothing authoritative about legal ownership, rentable square footage, gate programming, or current vendor responsibility. A lease, alarm report, policy, work order, invoice, and customer message may all mention the same facility while governing different facts.</p>
+<p>The unit of operational memory therefore needs to be small enough to carry an explicit scope and large enough to preserve context.</p>
+<h2>Relevance is only the first gate</h2>
+<p>Vector similarity answers something like: <em>Which stored passages are close to this query in the embedding space?</em></p>
+<p>An operator needs several additional answers:</p>
+<ol>
+<li>Does the passage describe the correct facility, asset, unit, person, policy, or event?</li>
+<li>Is the source allowed to govern the fact being asked about?</li>
+<li>Was the assertion effective at the requested time?</li>
+<li>Is the requesting actor permitted to see and use it?</li>
+<li>Is the content approved for this purpose?</li>
+<li>Has it been superseded, revoked, quarantined, or challenged?</li>
+<li>Can the system cite the exact source version and passage?</li>
+<li>Does another admitted source conflict with it?</li>
+<li>Is the answer informative, recommendatory, or eligible to enter an authorization workflow?</li>
+<li>What must happen when one of those answers is unknown?</li>
+</ol>
+<p>A high similarity score cannot answer those questions. Neither can a model confidence score.</p>
+<p>This is why a retrieval pipeline needs two different kinds of filtering. <strong>Semantic retrieval</strong> finds material that may be relevant. <strong>Operational admission</strong> determines whether that material may be used for the specific request. The order matters: entitlement and purpose filters should constrain the candidate set before sensitive content reaches generation, while authority, time, conflict, and consequence gates should continue through evidence assembly and response review.</p>
+<h2>The twelve-field memory contract</h2>
+<p>Every admitted memory item should carry at least twelve fields. The exact schema can vary, but the distinctions should survive implementation.</p>
+<h3>1. Memory item identity</h3>
+<p>Assign an immutable identifier to the admitted assertion or passage. Do not use a filename or vector position as the only identity. Files move, chunks change, and indexes are rebuilt.</p>
+<h3>2. Subject identity</h3>
+<p>Name the facility, asset, zone, unit, policy, vendor record, event, work item, or other entity the assertion describes. Use the governed entity identifier, not only the source system&#39;s label.</p>
+<h3>3. Claim type and scope</h3>
+<p>State the fact the source is allowed to support: public address, office hours, access hours, equipment model, invoice amount, work status, policy condition, or another defined type. “Facility data” is not a scope.</p>
+<h3>4. Source authority</h3>
+<p>Record the source owner and the precise authority it has for that claim type. A public facility page may govern public-facing hours. A controller log may be evidence of a gate event. A technician note may describe observed condition. None should inherit authority for the others&#39; fields.</p>
+<h3>5. Effective time</h3>
+<p>Record when the assertion became and ceased to be applicable in the real operation. Effective time is different from upload time, modification time, observation time, and retrieval time.</p>
+<h3>6. Observation and ingestion time</h3>
+<p>Preserve when the fact was observed, when the source version was captured, and when it entered the memory pipeline. These timestamps make staleness and pipeline lag visible.</p>
+<h3>7. Audience and entitlement</h3>
+<p>Classify who may retrieve the content. Public, portfolio, facility, regional, finance, people, security, legal, restricted, and synthetic are examples—not a universal taxonomy. Authorization must be evaluated for the requesting actor and task, not inferred from access to the chat interface.</p>
+<h3>8. Allowed purpose</h3>
+<p>Specify what the item may support: answer a public-hours question, prepare a maintenance briefing, reconcile a work order, draft an internal summary, or test a fictional workflow. Content admitted for one purpose should not silently migrate to another.</p>
+<h3>9. Provenance and transformation</h3>
+<p>Retain the source URI or record key, captured version, checksum where appropriate, extraction method, chunking rule, transformation history, and responsible agent. W3C PROV-O offers general Entity, Activity, and Agent concepts for representing lineage. It does not determine operational authority by itself.</p>
+<h3>10. Supersession and challenge state</h3>
+<p>Link revisions, withdrawals, corrections, and unresolved conflicts. Never overwrite the prior assertion without preserving why it stopped governing. A challenged item can remain visible for investigation without remaining eligible for routine answers.</p>
+<h3>11. Citation address</h3>
+<p>Preserve a stable way to recover the exact source and passage presented to the model. A generic link to a 90-page manual is not enough when the answer depends on one paragraph from one version.</p>
+<h3>12. Consequence class</h3>
+<p>Name the maximum use permitted for the item: informational, draft-only, recommendation support, human-review required, or prohibited from action. A retrieved assertion should not grant itself authority to trigger a gate command, customer communication, vendor dispatch, financial posting, public correction, access change, or legal conclusion.</p>
+<h2>A lifecycle for memory, not a binary upload</h2>
+<p>“Indexed” is not a sufficient state. A practical memory lifecycle separates at least seven states:</p>
+<ol>
+<li><strong>Candidate</strong> — discovered or submitted, not yet trusted.</li>
+<li><strong>Quarantined</strong> — isolated for malware, prompt injection, hidden content, source, rights, privacy, or integrity review.</li>
+<li><strong>Admitted</strong> — approved for named audiences, purposes, claim types, and time bounds.</li>
+<li><strong>Active</strong> — currently eligible under those constraints.</li>
+<li><strong>Challenged</strong> — a conflict or possible defect is under review; routine use is restricted.</li>
+<li><strong>Superseded</strong> — preserved for lineage or historical questions but not presented as current.</li>
+<li><strong>Revoked</strong> — withdrawn from use because authority, rights, integrity, privacy, or safety conditions failed.</li>
+</ol>
+<p>Deletion and retention remain separate decisions. A revoked item may need to be retained as evidence, or it may need to be securely deleted. The operational state alone does not answer that question.</p>
+<p>The 2025 joint AI data-security guidance authored by NSA, CISA, FBI, and international partners emphasizes provenance, integrity, access controls, secure storage, supply-chain risk, maliciously modified data, and data drift across the AI lifecycle. It is broad security guidance, not a self-storage implementation standard. Its useful design implication here is that corpus governance begins before embedding and continues after deployment.</p>
+<h2>The query needs a contract too</h2>
+<p>The corpus cannot make a query safe if the request has no operating context.</p>
+<p>A query packet should carry:</p>
+<ul>
+<li>requesting actor and current role;</li>
+<li>facility, asset, portfolio, customer, policy, or event scope;</li>
+<li>stated purpose;</li>
+<li>as-of time;</li>
+<li>permitted data classes;</li>
+<li>consequence class;</li>
+<li>required source types;</li>
+<li>conflict behavior;</li>
+<li>freshness threshold;</li>
+<li>abstention and escalation route.</li>
+</ul>
+<p>“What are the gate hours?” is incomplete. The system needs to know which facility, whether the question concerns public posted hours or programmed controller state, whether the answer is for a customer draft or an internal diagnostic, and what date the user means.</p>
+<p>The model should not invent those missing qualifiers from conversation tone. It should ask, restrict, or stop according to the declared rule.</p>
+<h2>The response should be an evidence packet</h2>
+<p>The output of operational retrieval should be more than prose. A minimum response packet contains:</p>
+<ul>
+<li>normalized question and scope;</li>
+<li>answer or explicit abstention;</li>
+<li>subject identifier;</li>
+<li>as-of time;</li>
+<li>exact cited assertions;</li>
+<li>source owner and captured version;</li>
+<li>effective periods;</li>
+<li>access and purpose decision;</li>
+<li>conflicts and excluded sources;</li>
+<li>missing facts;</li>
+<li>consequence classification;</li>
+<li>next required human or system action;</li>
+<li>retrieval, model, prompt, policy, and memory-index versions.</li>
+</ul>
+<p>This packet makes an important separation visible: a system can have enough evidence to <strong>explain</strong> a condition without having authority to <strong>change</strong> it.</p>
+<p>NIST&#39;s Generative AI Profile suggests reviewing and verifying sources and citations, verifying that retrieval data is grounded, documenting retrieval approaches, and reassessing risk after retrieval-augmented generation is introduced. The profile is voluntary and cross-sectoral. It does not declare that cited output is correct or authorize any facility action.</p>
+<h2>A fictional access-hours conflict</h2>
+<p>Consider a fictional facility called Harbor Annex.</p>
+<p>The retrieval corpus contains four authentic items:</p>
+<ol>
+<li>A public facility page captured August 1 says gate access is 6:00 a.m. to 10:00 p.m.</li>
+<li>A controller configuration export captured August 18 shows a 6:00 a.m. to 9:00 p.m. schedule.</li>
+<li>A manager memo effective August 20 authorizes a temporary 24-hour access exception for one approved contractor through August 23.</li>
+<li>A year-old marketing brochure says “access anytime.”</li>
+</ol>
+<p>A tenant asks, “Can I enter at 11 tonight?”</p>
+<p>All four items are relevant to access. None can be combined by majority vote.</p>
+<p>The brochure is superseded and not authoritative for current access. The temporary memo applies to one contractor, not tenants. The controller export describes programmed state but may not govern what was publicly promised. The public page governs the current public statement but conflicts with the controller state.</p>
+<p>The correct response is not a confident yes or no. The evidence packet should say that the current public statement ends access at 10:00 p.m., the observed controller configuration ends at 9:00 p.m., the 24-hour exception does not apply to the tenant, and an unresolved one-hour conflict requires facility confirmation before promising entry.</p>
+<p>For an internal operator asking why a tenant was denied at 9:35 p.m., the same corpus produces a different permitted answer: it can explain the public-versus-programmed mismatch and open a reconciliation item. It still cannot modify the controller or send a customer notice without the required authorization path.</p>
+<p>That is the operational memory contract working. The model is useful precisely because it does not collapse four authentic sources into one invented fact.</p>
+<h2>Six stop conditions</h2>
+<p>An AI-assisted facility workflow should stop or abstain when:</p>
+<ol>
+<li>the subject cannot be resolved to a governed identity;</li>
+<li>no admitted source has authority for the requested claim type;</li>
+<li>the required effective time is missing or outside the admitted interval;</li>
+<li>the requesting actor or purpose is not entitled to the retrieved content;</li>
+<li>governing sources conflict and the use case does not define a safe conflict policy;</li>
+<li>the requested consequence exceeds the maximum permitted use of the evidence.</li>
+</ol>
+<p>Other controls may add more stop conditions. These six define a useful minimum because each protects a different boundary: identity, authority, time, access, reconciliation, and consequence.</p>
+<h2>Evaluation must test the memory system, not just the model</h2>
+<p>A polished answer is not the acceptance criterion.</p>
+<p>Build an evaluation set from approved, synthetic, or carefully de-identified scenarios. Include ordinary questions, adversarial items, stale sources, conflicting sources, missing qualifiers, entitlement changes, temporary exceptions, corrected identities, and requests that should stop.</p>
+<p>Measure at least:</p>
+<ul>
+<li><strong>authority precision</strong> — how often cited assertions are authorized for the claim type;</li>
+<li><strong>temporal correctness</strong> — whether the answer uses the version effective at the requested time;</li>
+<li><strong>entitlement enforcement</strong> — whether restricted items are excluded before generation;</li>
+<li><strong>citation fidelity</strong> — whether each material answer statement is supported by the cited passage;</li>
+<li><strong>conflict surfacing</strong> — whether admitted disagreements are exposed rather than averaged away;</li>
+<li><strong>abstention quality</strong> — whether the system stops when a required identity, source, time, entitlement, or authority is missing;</li>
+<li><strong>supersession behavior</strong> — whether historical material is preserved without appearing current;</li>
+<li><strong>poisoning resistance</strong> — whether hidden instructions, unverified uploads, and unauthorized revisions remain quarantined;</li>
+<li><strong>change sensitivity</strong> — whether corpus, policy, identity, permission, embedding, retrieval, or model changes trigger appropriate retesting;</li>
+<li><strong>action containment</strong> — whether an informative answer remains unable to execute higher-consequence work without a separate authorization.</li>
+</ul>
+<p>Do not compress those measures into one accuracy percentage. A system can score well on ordinary questions and still fail every access-control test. Report the test population, versions, pass criteria, exceptions, and unmeasured risks.</p>
+<p>OWASP&#39;s 2025 vector and embedding guidance highlights unauthorized access, cross-context leakage, knowledge conflict, embedding inversion, data poisoning, source validation, classification, partitioning, and retrieval logging. It is community security guidance and not a certification. It is especially useful as a reminder that a vector store is a security boundary, not merely a search component.</p>
+<h2>The architecture boundary</h2>
+<p>A production design will vary, but the responsibilities should remain legible:</p>
+<ol>
+<li><strong>Source connectors</strong> capture approved content and source metadata.</li>
+<li><strong>Quarantine</strong> isolates new or changed material before routine retrieval.</li>
+<li><strong>Admission service</strong> applies source, rights, integrity, privacy, scope, time, and purpose rules.</li>
+<li><strong>Versioned assertion store</strong> preserves approved items and their supersession graph.</li>
+<li><strong>Entitlement filter</strong> constrains the candidate corpus before semantic retrieval.</li>
+<li><strong>Retriever</strong> selects potentially relevant assertions.</li>
+<li><strong>Evidence assembler</strong> applies authority, time, conflict, and citation rules.</li>
+<li><strong>Generator</strong> produces bounded language from the eligible evidence packet.</li>
+<li><strong>Policy gate</strong> classifies consequence and decides answer, ask, review, or stop.</li>
+<li><strong>Human review</strong> handles designated uncertainty and consequence classes.</li>
+<li><strong>Action connector</strong> accepts only a separately authorized decision packet.</li>
+<li><strong>Readback and provenance</strong> preserve what was requested, executed, observed, and reconciled.</li>
+</ol>
+<p>The generator is one component in this sequence. It does not own corpus admission, user entitlement, source authority, policy, authorization, execution, or verification.</p>
+<p>NIST SP 800-53 Rev. 5.1 provides a current general catalog of security and privacy control families including access control, audit and accountability, configuration management, system and information integrity, and supply-chain risk management. Those controls can inform implementation. They do not make this proposed architecture compliant, complete, or appropriate for a particular organization.</p>
+<p>The companion package includes an <a href="operational-memory-contract.svg">accessible architecture diagram</a>, a <a href="operational-memory-contract.png">PNG rendering</a>, a <a href="operational-memory-acceptance-tests.csv">32-test operator-to-architect acceptance suite</a>, and a <a href="operational-memory-admission-register-template.csv">fictional admission-register template</a>. The sample identifiers, records, checksums, sources, and events are teaching data only.</p>
+<h2>Beginner-to-architect implementation ladder</h2>
+<h3>Beginner: govern one answer</h3>
+<p>Pick one recurring low-consequence question, such as public office hours. Name the governing page, facility identity, owner, review date, and fallback. Require the answer to cite the exact page. Do not ingest private material.</p>
+<h3>Intermediate: build the admission register</h3>
+<p>List each source, claim scope, effective period, audience, purpose, owner, review trigger, and supersession rule. Add explicit candidate, quarantined, active, challenged, superseded, and revoked states.</p>
+<h3>Advanced: separate retrieval from authority</h3>
+<p>Apply entitlement before retrieval. Build the evidence packet. Test conflicting and stale sources. Introduce an explicit abstention route. Keep the action connector disconnected until the information boundary is reliable.</p>
+<h3>Architect: version and evaluate the full contract</h3>
+<p>Version the corpus snapshot, assertions, source captures, chunking, embeddings, retrieval policy, prompts, models, identity mapping, entitlement rules, evaluation set, and consequence policy. Run regression tests after each material change. Preserve the ability to reconstruct why a source was admitted and why a response was allowed.</p>
+<h2>A 30-minute operator exercise</h2>
+<p>Choose one question that staff answer from memory today.</p>
+<p>For example: “Is this unit eligible for after-hours access?”</p>
+<p>In the first ten minutes, list every source someone might consult. In the second ten minutes, assign each source a claim scope, owner, effective time, audience, and purpose. In the final ten minutes, write three conditions under which the answer must stop.</p>
+<p>If the team cannot name the governing source, do not solve the problem by adding more documents to a chatbot. First resolve the operating contract.</p>
+<h2>What the contract does not solve</h2>
+<p>An operational memory contract does not make a weak source accurate. It does not determine legal rights, create consent, satisfy privacy or security obligations, repair a broken identity register, define customer policy, validate a vendor claim, or prove an AI system trustworthy.</p>
+<p>It also does not eliminate model limitations. A model may still misread a passage, omit a conflict, generate unsupported text, or behave differently after a change. That is why citations, structured evidence, consequence gates, tests, monitoring, human review, and reconciliation remain necessary.</p>
+<p>The method should be adapted through security, privacy, legal, operational, records, and technical review appropriate to the specific use case. Sensitive facility, customer, employee, security, access, financial, and contractual material should not be placed in a retrieval system merely because the system can store it.</p>
+<h2>Retrieval becomes useful when its limits are operational</h2>
+<p>Self-storage operators do not need an AI system that remembers everything. They need one that can show what it is allowed to use, what the source actually governs, when the assertion applies, who may see it, where sources disagree, and when the system must stop.</p>
+<p>The design principle is simple:</p>
+<blockquote>
+<p>Retrieval supplies candidate evidence. Authority comes from the operating system around it.</p>
+</blockquote>
+<p>When that distinction is preserved, AI can help a manager find the right record, compare current and historical assertions, surface a conflict, prepare a review packet, and explain why an action is blocked. When the distinction is erased, the organization has not created operational memory. It has created a faster way to make an old, unauthorized, or cross-context statement sound certain.</p>
+<p>This is a proposed educational method authored by Jared Mastroianni. The example is fictional. The paper does not establish product capability, deployment, customer use, performance, savings, legal or security sufficiency, compliance, certification, industry adoption, publication, indexing, coverage, recognition, endorsement, or expert-status outcome.</p>
+<h2>Primary sources</h2>
+<ul>
+<li>Patrick Lewis et al., “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,” NeurIPS 2020: <a href="https://proceedings.nips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html">https://proceedings.nips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html</a></li>
+<li>NIST, <em>Artificial Intelligence Risk Management Framework 1.0</em>, January 26, 2023: <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10</a></li>
+<li>NIST, <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>, NIST AI 600-1, July 2024: <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf</a></li>
+<li>NSA, CISA, FBI, ASD&#39;s ACSC, NCSC-NZ, and NCSC-UK, <em>AI Data Security: Best Practices for Securing Data Used to Train &amp; Operate AI Systems</em>, May 2025: <a href="https://www.cyber.gov.au/sites/default/files/2025-05/CSI_AI_Data_Security.pdf">https://www.cyber.gov.au/sites/default/files/2025-05/CSI_AI_Data_Security.pdf</a></li>
+<li>OWASP GenAI Security Project, <em>LLM08:2025 Vector and Embedding Weaknesses</em>: <a href="https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/">https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/</a></li>
+<li>W3C, <em>PROV-O: The PROV Ontology</em>, Recommendation, April 30, 2013: <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">https://www.w3.org/TR/2013/REC-prov-o-20130430/</a></li>
+<li>NIST, <em>SP 800-53 Rev. 5.1 Security and Privacy Controls for Information Systems and Organizations</em>: <a href="https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/downloads">https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/downloads</a></li>
+</ul>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/temporal-authority-envelope/">The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On</a></h3><p>Decide whether one facility fact remains temporally admissible for one decision through evaluation, action, and independent readback.</p><a href="/writing/temporal-authority-envelope/" class="text-link" aria-label="Read the article: The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert governance paper</p><h3><a href="/writing/facility-change-impact-graph/">The Facility Change-Impact Graph: Test the Operational Blast Radius Before Release</a></h3><p>Trace one facility change through sources, consumers, decisions, actions, tests, rollback, and independent readback before release.</p><a href="/writing/facility-change-impact-graph/" class="text-link" aria-label="Read the article: The Facility Change-Impact Graph: Test the Operational Blast Radius Before Release">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/multi-location-policy-compiler/">The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality</a></h3><p>Compile one governed portfolio rule against explicit site capabilities, overlays, exceptions, authorization, activation, readback, and rollback.</p><a href="/writing/multi-location-policy-compiler/" class="text-link" aria-label="Read the article: The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

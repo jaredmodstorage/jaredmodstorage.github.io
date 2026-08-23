@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Operational Memory Contract: Why Retrieval Is Not Authority in Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/operational-memory-contract/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/operational-memory-contract/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A self-storage AI architecture for deciding which retrieved assertions may support which actor, purpose, time, and consequence without confusing relevance with operating authority.</description>
+    </item>
+    <item>
       <title>The Facility Change-Impact Graph: Test the Operational Blast Radius Before Release</title>
       <link>https://jaredmodstorage.github.io/writing/facility-change-impact-graph/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-change-impact-graph/</guid>
