@@ -6,7 +6,7 @@ Last verified: 23 August 2026
 
 This package contains only assets whose source, derivation, public URL, dimensions, checksum, and current use boundary are recorded in `brand-asset-manifest.csv`:
 
-- Jared Mastroianni approved navy-blazer profile portrait v2 in web and high-resolution sizes;
+- Jared Mastroianni approved navy-blazer profile portrait v2 in square, four-by-three, and sixteen-by-nine high-resolution sizes;
 - the approved Facily.ai light logo;
 - normalized light and dark Facily.ai logo variants;
 - light and dark 512-pixel Facily.ai marks;
@@ -23,6 +23,7 @@ This package contains only assets whose source, derivation, public URL, dimensio
 6. Verify every downloaded file against the SHA-256 value in the manifest when exact-file identity matters.
 7. Use the separate public image library for contextual professional, facility, golf, and AI-development imagery. Those images are editorial likeness assets, not documentary evidence of a depicted event or result.
 8. The prior black-turtleneck portrait is retired from current use. Its image-library record and checksum remain only for provenance and must not be used as a profile, author, editorial, or promotional image.
+9. The portrait aspect-ratio set is a deterministic crop family from the same approved v2 master. Use the square file for avatars, the four-by-three file for conventional editorial layouts, and the sixteen-by-nine file for wide placements; do not recrop faces or change identity pixels.
 
 ## Entity boundary
 
