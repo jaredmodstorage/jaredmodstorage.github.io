@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On</title>
+      <link>https://jaredmodstorage.github.io/writing/temporal-authority-envelope/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/temporal-authority-envelope/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A self-storage operating method for deciding whether one facility fact remains temporally admissible for one decision through action and readback.</description>
+    </item>
+    <item>
       <title>The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken</title>
       <link>https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/counterfactual-decision-ledger/</guid>

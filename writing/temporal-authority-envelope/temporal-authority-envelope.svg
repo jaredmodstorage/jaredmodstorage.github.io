@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Temporal authority envelope for facility decisions</title>
+  <desc id="desc">A six-layer architecture flows from authoritative facility facts through temporal normalization, dual effective and recording histories, decision-specific envelope evaluation, action admission, and execution readback with late corrections. A red stop path handles facts that are stale, conflicting, invalidated, or outside the execution horizon.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#10243a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#31d6c4"/>
+      <stop offset="1" stop-color="#66a7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#66a7ff"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff7f7f"/>
+    </marker>
+    <style>
+      .eyebrow { font: 600 20px Inter, Arial, sans-serif; letter-spacing: 3px; fill: #31d6c4; }
+      .heading { font: 700 42px Inter, Arial, sans-serif; fill: #f4f8ff; }
+      .sub { font: 400 21px Inter, Arial, sans-serif; fill: #b8c8dc; }
+      .layer { font: 700 22px Inter, Arial, sans-serif; fill: #f4f8ff; }
+      .body { font: 400 17px Inter, Arial, sans-serif; fill: #cbd7e6; }
+      .small { font: 500 14px Inter, Arial, sans-serif; fill: #9db0c7; }
+      .code { font: 600 15px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #d7f9f5; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1430" cy="100" r="210" fill="#173556" opacity="0.45"/>
+  <circle cx="120" cy="820" r="180" fill="#0d4c50" opacity="0.28"/>
+
+  <text x="86" y="75" class="eyebrow">SELF-STORAGE OPERATIONAL ARCHITECTURE</text>
+  <text x="86" y="126" class="heading">The Temporal Authority Envelope</text>
+  <text x="86" y="164" class="sub">A fact is admissible for a decision only inside its declared time, authority, and execution boundary.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="220" width="215" height="205" rx="20" fill="#142a42" stroke="#2e5477" stroke-width="2"/>
+    <rect x="327" y="220" width="215" height="205" rx="20" fill="#142a42" stroke="#2e5477" stroke-width="2"/>
+    <rect x="568" y="220" width="215" height="205" rx="20" fill="#142a42" stroke="#2e5477" stroke-width="2"/>
+    <rect x="809" y="220" width="280" height="205" rx="20" fill="#123c47" stroke="#31d6c4" stroke-width="3"/>
+    <rect x="1115" y="220" width="185" height="205" rx="20" fill="#142a42" stroke="#2e5477" stroke-width="2"/>
+    <rect x="1326" y="220" width="188" height="205" rx="20" fill="#142a42" stroke="#2e5477" stroke-width="2"/>
+  </g>
+
+  <text x="108" y="257" class="small">LAYER 1</text>
+  <text x="108" y="292" class="layer">Authoritative</text>
+  <text x="108" y="319" class="layer">facility facts</text>
+  <text x="108" y="355" class="body">Identity · policy</text>
+  <text x="108" y="382" class="body">state · capability</text>
+  <text x="108" y="409" class="small">Source + version</text>
+
+  <text x="349" y="257" class="small">LAYER 2</text>
+  <text x="349" y="292" class="layer">Temporal</text>
+  <text x="349" y="319" class="layer">normalization</text>
+  <text x="349" y="355" class="body">Meaning · zone</text>
+  <text x="349" y="382" class="body">precision · error</text>
+  <text x="349" y="409" class="small">Unknown stays unknown</text>
+
+  <text x="590" y="257" class="small">LAYER 3</text>
+  <text x="590" y="292" class="layer">Dual-history</text>
+  <text x="590" y="319" class="layer">fact record</text>
+  <text x="590" y="355" class="body">Effective time</text>
+  <text x="590" y="382" class="body">Recording time</text>
+  <text x="590" y="409" class="small">No silent overwrite</text>
+
+  <text x="835" y="257" class="small" fill="#8aeee3">LAYER 4 · DECISION GATE</text>
+  <text x="835" y="292" class="layer">Envelope evaluation</text>
+  <text x="835" y="329" class="code">identity ∧ authority</text>
+  <text x="835" y="355" class="code">∧ effective interval</text>
+  <text x="835" y="381" class="code">∧ age ∧ lateness</text>
+  <text x="835" y="407" class="code">∧ clock ∧ horizon</text>
+
+  <text x="1137" y="257" class="small">LAYER 5</text>
+  <text x="1137" y="292" class="layer">Action</text>
+  <text x="1137" y="319" class="layer">admission</text>
+  <text x="1137" y="355" class="body">Admit · refresh</text>
+  <text x="1137" y="382" class="body">degrade · stop</text>
+  <text x="1137" y="409" class="small">Recheck at start</text>
+
+  <text x="1348" y="257" class="small">LAYER 6</text>
+  <text x="1348" y="292" class="layer">Execution</text>
+  <text x="1348" y="319" class="layer">and evidence</text>
+  <text x="1348" y="355" class="body">Receipt · readback</text>
+  <text x="1348" y="382" class="body">correction · replay</text>
+  <text x="1348" y="409" class="small">Close narrowly</text>
+
+  <g fill="none" stroke="#66a7ff" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M301 322 H317"/>
+    <path d="M542 322 H558"/>
+    <path d="M783 322 H799"/>
+    <path d="M1089 322 H1105"/>
+    <path d="M1300 322 H1316"/>
+  </g>
+
+  <rect x="86" y="474" width="1003" height="130" rx="18" fill="#0e2135" stroke="#284b6d" stroke-width="2"/>
+  <text x="110" y="507" class="small">THE ENVELOPE BELONGS TO A FACT + DECISION + EVALUATION TIME</text>
+  <line x1="110" y1="528" x2="1065" y2="528" stroke="#284b6d" stroke-width="2"/>
+  <text x="110" y="560" class="code">envelope_end = min(effective_to, observed_at + max_age, source_progress_limit, execution_deadline)</text>
+  <text x="110" y="590" class="body">The slowest required input controls the join. Ages and confidence scores are never averaged into permission.</text>
+
+  <rect x="1115" y="474" width="399" height="130" rx="18" fill="#3a202a" stroke="#ff7f7f" stroke-width="2"/>
+  <text x="1139" y="507" class="small" fill="#ffb1b1">STOP / REVIEW PATH</text>
+  <text x="1139" y="541" class="body">Stale · late · conflicting</text>
+  <text x="1139" y="569" class="body">invalidated · unknown clock</text>
+  <text x="1139" y="594" class="small">Preserve evidence; never guess.</text>
+  <path d="M949 425 V450 H1315 V466" fill="none" stroke="#ff7f7f" stroke-width="4" marker-end="url(#arrowRed)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="86" y="653" width="1428" height="159" rx="22" fill="#f5f8fc"/>
+  </g>
+  <text x="116" y="695" style="font:700 21px Inter,Arial,sans-serif;fill:#13253a">THE SIX CLOCKS THAT MUST NOT COLLAPSE</text>
+  <g>
+    <rect x="116" y="721" width="201" height="61" rx="12" fill="#e5f5f3"/>
+    <rect x="343" y="721" width="201" height="61" rx="12" fill="#eaf1ff"/>
+    <rect x="570" y="721" width="201" height="61" rx="12" fill="#e5f5f3"/>
+    <rect x="797" y="721" width="201" height="61" rx="12" fill="#eaf1ff"/>
+    <rect x="1024" y="721" width="201" height="61" rx="12" fill="#e5f5f3"/>
+    <rect x="1251" y="721" width="233" height="61" rx="12" fill="#eaf1ff"/>
+    <text x="216" y="749" text-anchor="middle" style="font:700 16px Inter,Arial,sans-serif;fill:#17324d">1 · EFFECTIVE</text>
+    <text x="216" y="771" text-anchor="middle" style="font:500 13px Inter,Arial,sans-serif;fill:#426178">When it applies</text>
+    <text x="443" y="749" text-anchor="middle" style="font:700 16px Inter,Arial,sans-serif;fill:#17324d">2 · MEASURED</text>
+    <text x="443" y="771" text-anchor="middle" style="font:500 13px Inter,Arial,sans-serif;fill:#426178">When it happened</text>
+    <text x="670" y="749" text-anchor="middle" style="font:700 16px Inter,Arial,sans-serif;fill:#17324d">3 · RECORDED</text>
+    <text x="670" y="771" text-anchor="middle" style="font:500 13px Inter,Arial,sans-serif;fill:#426178">When system knew</text>
+    <text x="897" y="749" text-anchor="middle" style="font:700 16px Inter,Arial,sans-serif;fill:#17324d">4 · EVALUATED</text>
+    <text x="897" y="771" text-anchor="middle" style="font:500 13px Inter,Arial,sans-serif;fill:#426178">When admitted</text>
+    <text x="1124" y="749" text-anchor="middle" style="font:700 16px Inter,Arial,sans-serif;fill:#17324d">5 · EXECUTED</text>
+    <text x="1124" y="771" text-anchor="middle" style="font:500 13px Inter,Arial,sans-serif;fill:#426178">When action ran</text>
+    <text x="1367" y="749" text-anchor="middle" style="font:700 16px Inter,Arial,sans-serif;fill:#17324d">6 · READ BACK</text>
+    <text x="1367" y="771" text-anchor="middle" style="font:500 13px Inter,Arial,sans-serif;fill:#426178">When result was observed</text>
+  </g>
+
+  <text x="86" y="856" class="small">Proposed method by Jared Mastroianni · Fictional examples · No deployment, performance, service-level, legal, or certification claim</text>
+</svg>

@@ -1,0 +1,486 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.D30Z-FrU.css" data-rsc-css-href="/_next/static/css/index.D30Z-FrU.css" data-precedence="vite-rsc/importer-resources"/><title>The Temporal Authority Envelope for Facility Facts | Jared Mastroianni</title><meta name="description" content="A self-storage operating method for deciding whether one facility fact remains temporally admissible for one decision through action and readback."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Temporal Authority Envelope for Facility Facts | Jared Mastroianni"/><meta property="og:description" content="A self-storage operating method for deciding whether one facility fact remains temporally admissible for one decision through action and readback."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/temporal-authority-envelope/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/temporal-authority-envelope/temporal-authority-envelope.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A six-layer architecture flows from authoritative facility facts through temporal normalization, dual effective and recording histories, decision-specific envelope evaluation, action admission, and execution readback with late corrections. A red stop path handles facts that are stale, conflicting, invalidated, or outside the execution horizon."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Temporal Authority Envelope for Facility Facts | Jared Mastroianni"/><meta name="twitter:description" content="A self-storage operating method for deciding whether one facility fact remains temporally admissible for one decision through action and readback."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/temporal-authority-envelope/temporal-authority-envelope.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/temporal-authority-envelope/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/temporal-authority-envelope/#article","url":"https://jaredmodstorage.github.io/writing/temporal-authority-envelope/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/temporal-authority-envelope/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/temporal-authority-envelope/temporal-authority-envelope.png","description":"A self-storage operating method for deciding whether one facility fact remains temporally admissible for one decision through action and readback.","proficiencyLevel":"Expert","about":["Self-storage operations","Temporal data governance","Fact authority","Bitemporal history","Event time","Execution horizons","Independent readback","AI safety"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/temporal-authority-envelope/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On","item":"https://jaredmodstorage.github.io/writing/temporal-authority-envelope/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Temporal Authority Envelope: When a Facility Fact Is Still Safe to Act On</h1><p class="lede">Evaluate identity, authority, effective time, observation age, recording history, clock quality, conflict state, and execution horizon before admitting one fact to one facility decision.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>18 min read</span></div></header><div class="essay-body"><blockquote>
+<p><strong>Method and evidence boundary:</strong> This is an authored operating method. Every facility, system, record, threshold, time, action, and result in the examples is fictional. The method is not evidence of a product deployment, customer result, service level, legal conclusion, certification, or industry standard. Each operator must set decision-specific thresholds with the people responsible for operations, safety, privacy, security, contracts, and other applicable requirements.</p>
+</blockquote>
+<p>A self-storage manager asks an AI assistant whether a gate can be placed into a temporary service mode. The assistant retrieves four facts:</p>
+<ul>
+<li>the gate controller was reachable six minutes ago;</li>
+<li>the access schedule was approved yesterday;</li>
+<li>a maintenance note was entered three hours ago;</li>
+<li>the facility identifier was mapped last month.</li>
+</ul>
+<p>Are those facts fresh?</p>
+<p>There is no honest single answer. Six minutes may be too old for controller state and unnecessarily strict for an approved schedule. The maintenance note may describe a condition that existed before a repair. The facility mapping may still be correct, or it may have been superseded by a move, rename, or system migration. A green “data updated” badge cannot resolve those differences.</p>
+<p>The usual approach assigns each record a time to live. After fifteen minutes, refresh it. After one day, mark it stale. That is useful cache behavior. It is not an operating-control model.</p>
+<p>A fact is safe to use only inside a <strong>temporal authority envelope</strong>: the bounded interval and decision context in which its identity, authority, effective time, observation age, recording history, clock quality, conflict state, and expected action duration make it admissible. The envelope belongs to a fact-and-decision pair, not to the fact alone.</p>
+<p>This distinction matters whenever software—or a person using software—joins facts that change at different speeds. An AI system can retrieve the right rows and still assemble an operationally impossible present.</p>
+<p><a href="temporal-authority-envelope.svg"><img src="temporal-authority-envelope.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A six-layer architecture flows from authoritative facility facts through temporal normalization, dual effective and recording histories, decision-specific envelope evaluation, action admission, and execution readback with late corrections. A red stop path handles facts that are stale, conflicting, invalidated, or outside the execution horizon."></a></p>
+<p><a href="temporal-authority-envelope.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="temporal-authority-envelope-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="temporal-authority-envelope-downloads">Inspect the fact-admission register and readiness gates.</h2>
+<p>These exact files contain an authored method and fictional or blank-contract examples. They do not establish factual authority, a product deployment, customer result, service level, legal or cybersecurity conclusion, compliance, certification, performance, or independent validation.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="temporal-fact-admission-register-template.csv" download>Download the temporal fact-admission register <span aria-hidden="true">↓</span></a><a href="temporal-authority-readiness-suite.csv" download>Download the temporal-authority readiness suite <span aria-hidden="true">↓</span></a><a href="temporal-authority-envelope.svg" download>Download the accessible temporal-envelope SVG <span aria-hidden="true">↓</span></a><a href="temporal-authority-envelope.png" download>Download the temporal-envelope PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+
+<h2>Freshness is a predicate, not a color</h2>
+<p>Most dashboards reduce temporal state to a colored badge:</p>
+<ul>
+<li>green: current;</li>
+<li>yellow: aging;</li>
+<li>red: stale.</li>
+</ul>
+<p>The color hides the question that matters: <strong>current enough for what decision?</strong></p>
+<p>An address used to label a monthly report and a controller-state observation used to change physical access should not share one freshness rule. Even the same fact may have different admissibility limits. A controller observation might be acceptable for opening a diagnostic screen but not for issuing a remote command.</p>
+<p>For a fact <code>f</code>, decision <code>d</code>, and evaluation time <code>t</code>, the admission test can be expressed conceptually as:</p>
+<pre><code class="language-text">admissible(f, d, t) =
+  identity_matches(f, d)
+  AND authority_is_allowed(f.source, d)
+  AND effective_interval(f) contains t
+  AND observed_age(f, t) &lt;= d.maximum_observation_age
+  AND source_lateness(f) &lt;= d.maximum_source_lateness
+  AND clock_quality(f) &gt;= d.minimum_clock_quality
+  AND invalidation_state(f) is clear
+  AND conflict_state(f) is allowed
+  AND expected_completion(d) &lt;= envelope_end(f, d)
+</code></pre>
+<p>This is not a proposed universal formula or a probability score. It is a control pattern. A production implementation needs explicit field definitions, units, comparison rules, owners, and failure behavior.</p>
+<p>The important shift is from “the record is fresh” to “the record passed the declared admission contract for this decision at this time.”</p>
+<h2>Keep six kinds of time separate</h2>
+<p>One timestamp cannot carry the full temporal meaning of an operational fact. A minimum useful contract separates six clocks.</p>
+<h3>1. Effective time</h3>
+<p>When is the assertion intended to be true in the operating world?</p>
+<p>An access schedule approved Tuesday may take effect Friday. A vendor credential may be recorded today but apply only through a declared expiration date. A facility name may have a future effective date. Effective time is sometimes called valid time or business time.</p>
+<p>IBM&#39;s current Db2 documentation distinguishes an application period, which records when data is valid or in effect, from a system period, which records when a row version was current in the database. Its bitemporal table model combines both. That product documentation does not define a self-storage architecture, but the distinction is essential: <em>when the system knew</em> is not the same as <em>when the fact applied</em>.</p>
+<h3>2. Occurrence or measurement time</h3>
+<p>When did the underlying event happen, or when was the condition measured?</p>
+<p>A controller heartbeat may be received at 10:05 for a device observation made at 10:03. A photograph may upload at noon but depict a condition recorded at 9:30. A work-order state change can occur before a delayed integration reports it.</p>
+<p>The facility event spine uses <code>occurred_at</code> and <code>observed_at</code> to keep those facts apart. The temporal authority envelope builds on that separation and asks whether the delay is tolerable for a particular decision.</p>
+<h3>3. Recording time</h3>
+<p>When did the governing system store this version?</p>
+<p>Recording time supports history, correction analysis, and replay. It helps answer, “What could the system have known at 10:04?” A later correction should not silently overwrite the decision-time view.</p>
+<p>System-period history is not proof that a business assertion was correct. It is evidence of what a particular system recorded during a particular interval.</p>
+<h3>4. Evaluation time</h3>
+<p>When did the person or system test the fact for admission?</p>
+<p>Age must be measured at the decision boundary, not when a dashboard page happened to render. A fact admitted at 10:00 may no longer be admissible when a queued action starts at 10:20.</p>
+<h3>5. Execution time</h3>
+<p>When did the operational action actually begin and end?</p>
+<p>Approval at 10:00 does not grant indefinite temporal authority. If a remote action waits in a queue, the source facts may need to be revalidated immediately before execution. Long-running work may require an envelope that remains valid through completion, or an interrupt when a critical fact changes.</p>
+<h3>6. Readback time</h3>
+<p>When did an independent source confirm the resulting state?</p>
+<p>A provider receipt, accepted command, or database write is not necessarily the operating result. The decision chain remains incomplete until the relevant state is observed and reconciled. Readback time also defines how long the operation remains uncertain after action.</p>
+<h2>Two histories prevent retrospective fiction</h2>
+<p>Suppose a regional team corrects a facility&#39;s approved access schedule at 2:00 p.m. and makes the correction effective from 8:00 a.m. A system that stores only the latest row may later show the corrected schedule as if it were the value available to a 10:00 a.m. decision.</p>
+<p>That rewrites history.</p>
+<p>The fact needs two independent histories:</p>
+<ul>
+<li><strong>effective history:</strong> the interval in which the assertion applies to the operating world; and</li>
+<li><strong>recording history:</strong> the interval in which a particular system held that assertion.</li>
+</ul>
+<p>At 3:00 p.m., the team may correctly say, “The schedule should have been X since 8:00.” It must not automatically say, “The 10:00 decision system knew X.” The first is an effective-time claim. The second is a recording-time claim.</p>
+<p>This separation is especially important for AI evaluation. If an analyst reconstructs an old prompt from today&#39;s corrected database rather than the versions available at the original decision time, the replay gains information that the original system never had. The result is leakage, not a fair reproduction.</p>
+<p>A temporal store can help preserve these histories. It does not decide which source was authoritative, whether a correction was justified, or whether the original action was appropriate. Those remain governance questions.</p>
+<h2>A timestamp format is not a time contract</h2>
+<p><a href="https://www.rfc-editor.org/info/rfc3339/">RFC 3339</a> provides an Internet timestamp profile with an explicit relationship to UTC. It is a strong interchange choice for representing instants. It does not tell an operator:</p>
+<ul>
+<li>what the timestamp means;</li>
+<li>which clock produced it;</li>
+<li>whether the device clock was synchronized;</li>
+<li>how accurate or precise it was;</li>
+<li>whether the source copied a timestamp from another system;</li>
+<li>whether a local civil-time rule affected a schedule;</li>
+<li>whether the record was delayed, backfilled, or corrected.</li>
+</ul>
+<p>Every time field therefore needs semantics in addition to syntax. <code>2026-08-22T10:05:00Z</code> is unambiguous as an encoded instant. It may still be the wrong instant, an ingestion instant mislabeled as occurrence time, or a value copied from an untrusted clock.</p>
+<p>For local operating schedules, store the governing time-zone identifier and rule context as well as normalized instants where appropriate. A recurring “6:00 a.m.” rule is not fully represented by a fixed UTC offset because civil-time rules can change. <a href="https://www.rfc-editor.org/rfc/rfc9557.html">RFC 9557</a> defines optional additional timestamp information, including time-zone names, for Internet use. It is an encoding tool, not a substitute for schedule authority or business logic.</p>
+<h2>Clock quality belongs in the decision packet</h2>
+<p>Distributed systems do not share a perfect clock. Devices drift. Mobile clients operate offline. integrations retry. Operators enter facts after the event. Some sources provide second-level precision; others provide only a date.</p>
+<p>NIST SP 800-53 Rev. 5 includes AU-8 controls concerning timestamp generation and comparison to Coordinated Universal Time. NIST&#39;s current publication page also identifies Release 5.2.0, issued August 27, 2025, as a minor catalog update; the listed changes do not include AU-8. The publication is a security-and-privacy control catalog, not a facility AI design or a certification. It supports the narrower lesson that timestamp granularity and authoritative-time comparison are explicit controls, not invisible assumptions.</p>
+<p>A practical clock-quality record can include:</p>
+<ul>
+<li><code>clock_source</code>;</li>
+<li><code>clock_sync_state</code>;</li>
+<li><code>estimated_error_bound</code>;</li>
+<li><code>timestamp_precision</code>;</li>
+<li><code>device_time_zone_context</code>;</li>
+<li><code>last_sync_at</code>;</li>
+<li><code>timestamp_semantics</code>;</li>
+<li><code>time_quality_state</code> such as <code>verified</code>, <code>bounded</code>, <code>unknown</code>, or <code>untrusted</code>.</li>
+</ul>
+<p>Do not invent precision. A date-only certificate expiration should not be converted into a fabricated millisecond. A manual note entered at 2:00 p.m. about a condition seen “this morning” has uncertain occurrence time even though its entry time is exact.</p>
+<p>An uncertain clock can still support some decisions. The admission rule should account for the uncertainty. If an observation may be off by five minutes, a decision with a two-minute maximum age cannot treat that observation as safely current.</p>
+<h2>The slowest input controls the join</h2>
+<p>Operational decisions rarely depend on one fact. They join identity, policy, current state, permissions, site capability, open work, and human availability.</p>
+<p>The joined packet is not as fresh as its average input. Its temporal confidence is constrained by the input that fails first.</p>
+<p>Consider a fictional decision packet:</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th align="right">Observed or effective state</th>
+<th align="right">Decision-specific limit</th>
+<th>Admission</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gate controller reachability</td>
+<td align="right">70 seconds old</td>
+<td align="right">120 seconds</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Approved service window</td>
+<td align="right">effective now</td>
+<td align="right">must cover action plus rollback</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Facility identity mapping</td>
+<td align="right">21 days old</td>
+<td align="right">revalidate on source change, not fixed age</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>Open safety hold</td>
+<td align="right">source delayed 14 minutes</td>
+<td align="right">maximum delay 5 minutes</td>
+<td>fail</td>
+</tr>
+</tbody></table>
+<p>Three green rows do not outvote the failed safety-hold input. The decision packet is inadmissible.</p>
+<p>This produces three implementation rules:</p>
+<ol>
+<li>Evaluate each required fact independently.</li>
+<li>Do not average ages, confidence scores, or source delays.</li>
+<li>Fail according to consequence: block, degrade to read-only, request human review, refresh synchronously, or use a specifically approved fallback.</li>
+</ol>
+<p>The fallback must be designed before the failure. “Ask the AI to make its best guess” is not a temporal control.</p>
+<h2>Late and out-of-order facts need a correction path</h2>
+<p>In streaming systems, event order and arrival order often differ. Apache Flink&#39;s versioned 2.3 <a href="https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/concepts/time/">time concepts</a> distinguish event time from processing time, describe watermarks as the mechanism that signals event-time progress, and explain that finite waiting for out-of-order data limits how deterministic an event-time application can be. Its versioned <a href="https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/dev/datastream/event-time/generating_watermarks/">watermark guidance</a> also covers bounded out-of-orderness, idle sources, alignment, and multi-input progress.</p>
+<p>The facility lesson is not that every operator should deploy Flink. It is that <strong>completion is a declared assumption about lateness</strong>, not proof that all earlier facts have arrived.</p>
+<p>For each event class, define:</p>
+<ul>
+<li>expected arrival delay;</li>
+<li>tolerated lateness;</li>
+<li>idle-source behavior;</li>
+<li>correction window;</li>
+<li>whether late facts revise a projection;</li>
+<li>whether an already executed decision needs review;</li>
+<li>whether notification or remediation is required;</li>
+<li>when the system may consider a window operationally complete.</li>
+</ul>
+<p>A late fact should not disappear because a dashboard already rendered. It should enter a correction path with a link to the projection, decision, or action it may affect.</p>
+<p>The correction path also needs an end. Unlimited retroactive recomputation can destabilize reports and operating state. A bounded process can distinguish:</p>
+<ul>
+<li><strong>open window:</strong> late facts update the active projection;</li>
+<li><strong>closed but correctable:</strong> changes require governed revision and notice;</li>
+<li><strong>frozen record:</strong> original evidence remains immutable, with a linked correction rather than overwrite;</li>
+<li><strong>expired operational consequence:</strong> the old decision cannot be undone, but the exception can inform review and future controls.</li>
+</ul>
+<h2>The nineteen-field temporal fact contract</h2>
+<p>The accompanying template uses nineteen fields. The exact storage format can vary, but the meanings should remain explicit.</p>
+<p><strong>Identity and assertion</strong></p>
+<ol>
+<li><code>fact_id</code></li>
+<li><code>facility_id</code></li>
+<li><code>fact_type</code></li>
+<li><code>assertion_value_or_reference</code></li>
+</ol>
+<p><strong>Authority and provenance</strong></p>
+<ol start="5">
+<li><code>governing_source_id</code></li>
+<li><code>source_record_id</code></li>
+<li><code>source_version_or_hash</code></li>
+<li><code>authority_scope</code></li>
+</ol>
+<p><strong>Effective history</strong></p>
+<ol start="9">
+<li><code>effective_from</code></li>
+<li><code>effective_to</code></li>
+</ol>
+<p><strong>Observation and recording history</strong></p>
+<ol start="11">
+<li><code>occurred_or_measured_at</code></li>
+<li><code>observed_at</code></li>
+<li><code>recorded_at</code></li>
+<li><code>record_version_valid_to</code></li>
+</ol>
+<p><strong>Time quality and state</strong></p>
+<ol start="15">
+<li><code>clock_quality_and_error_bound</code></li>
+<li><code>invalidation_or_supersession_state</code></li>
+<li><code>conflict_state</code></li>
+</ol>
+<p><strong>Decision admission</strong></p>
+<ol start="18">
+<li><code>decision_contract_id</code></li>
+<li><code>admission_result_reason_and_expiry</code></li>
+</ol>
+<p>The template expands several composite fields to make review easier, including separate maximum-age, lateness, execution-horizon, and readback requirements. It uses one row per fact-decision evaluation rather than turning a fact into a permanently green object.</p>
+<h2>A four-level operating ladder</h2>
+<p>Temporal governance can start without a streaming platform or an AI architecture team.</p>
+<h3>Beginner — name the timestamp</h3>
+<p>Take one report or queue. For every displayed time, write what it means: occurred, measured, observed, entered, effective, approved, executed, or read back. Mark unknown semantics as defects. Do not rename them by assumption.</p>
+<h3>Intermediate — define decision-specific age limits</h3>
+<p>Choose one low-consequence decision. List its required facts and assign:</p>
+<ul>
+<li>source owner;</li>
+<li>effective interval rule;</li>
+<li>maximum observation age;</li>
+<li>maximum source delay;</li>
+<li>refresh path;</li>
+<li>stale-state behavior.</li>
+</ul>
+<p>Test the boundary values. If the maximum age is five minutes, decide whether exactly five minutes passes and document the comparison.</p>
+<h3>Advanced — preserve both histories and corrections</h3>
+<p>Retain the decision-time versions of facts. Separate effective time from recording time. Route late facts, corrections, invalidations, and conflicts to explicit processes. Make it possible to replay what the system knew without substituting today&#39;s corrected data.</p>
+<h3>Architect — enforce an envelope through action and readback</h3>
+<p>Treat temporal admission as a runtime policy. Re-evaluate facts immediately before consequential execution. Interrupt or degrade safely when an envelope closes. Link the admission packet, action receipt, independent readback, and any later correction through durable provenance.</p>
+<h2>A fictional Harbor Annex exercise</h2>
+<p>Harbor Annex is a fictional facility used only to test the method. A proposed assistant prepares a maintenance-priority recommendation at 10:00.</p>
+<p>It uses five inputs:</p>
+<ol>
+<li>a door-position observation measured at 9:57 and received at 9:58;</li>
+<li>an active work-order record entered at 8:20;</li>
+<li>a technician-availability roster effective from 8:00 to 12:00;</li>
+<li>a local access window approved the prior week and effective today;</li>
+<li>a facility identity mapping recorded thirty days ago.</li>
+</ol>
+<p>At first glance, the work-order record is the oldest. It may not be the limiting fact. If work orders remain authoritative until changed and the source provides change notifications, its age may be acceptable. The door observation has a much shorter decision horizon. The roster becomes invalid at noon. The identity mapping uses a change-triggered revalidation rule rather than a universal TTL.</p>
+<p>Now add one complication: a safety-hold event occurred at 9:54 but reached the central event processor at 10:03. The 10:00 packet did not include it.</p>
+<p>The exercise should not ask whether the assistant made the “right” recommendation. It should ask:</p>
+<ul>
+<li>Was the safety source within its declared lateness budget at 10:00?</li>
+<li>Did the 10:00 decision contract permit action before completeness?</li>
+<li>Was the recommendation merely displayed, or did execution begin?</li>
+<li>Did the late hold invalidate the recommendation, interrupt execution, or create a review case?</li>
+<li>Can the system reconstruct the exact 10:00 evidence without erasing the later correction?</li>
+<li>Did an independent readback confirm any resulting operational state?</li>
+</ul>
+<p>Those questions produce evidence. A retrospective opinion about what “probably would have happened” does not.</p>
+<h2>Test the envelope before trusting it</h2>
+<p>A temporal contract should ship with adversarial cases. The accompanying readiness suite includes forty tests across beginner, intermediate, advanced, and architect levels. The most important classes are:</p>
+<ul>
+<li>missing or ambiguous timestamp semantics;</li>
+<li>effective dates in the future or past;</li>
+<li>exact-boundary age comparisons;</li>
+<li>clock error larger than the allowed age;</li>
+<li>source delay within and beyond tolerance;</li>
+<li>late facts after a projection closes;</li>
+<li>conflicting authoritative sources;</li>
+<li>a fact corrected retroactively;</li>
+<li>a queued action whose envelope expires before execution;</li>
+<li>a long-running action crossing an effective-period boundary;</li>
+<li>daylight-saving transitions and local schedule ambiguity;</li>
+<li>provider receipt without independent readback;</li>
+<li>replay attempted with today&#39;s corrected rows;</li>
+<li>unknown invalidation state;</li>
+<li>required source idle or disconnected.</li>
+</ul>
+<p>A test should include the input state, expected admission result, expected operating behavior, evidence required, and owner. “Handle stale data” is not a test case.</p>
+<h2>Measure the control, not a promised benefit</h2>
+<p>Early metrics should show whether the temporal control works. Useful candidates include:</p>
+<ul>
+<li>percentage of decision packets with complete time semantics;</li>
+<li>percentage of required facts admitted, rejected, refreshed, or unknown;</li>
+<li>observation-age distribution by fact type and decision contract;</li>
+<li>source-lateness distribution and late-event count;</li>
+<li>decisions blocked because a critical envelope closed;</li>
+<li>queued actions revalidated before execution;</li>
+<li>corrections linked to affected decisions;</li>
+<li>readback latency and unresolved readback count;</li>
+<li>records with unknown clock quality;</li>
+<li>replays using exact decision-time versions.</li>
+</ul>
+<p>These are control-performance measures. They do not prove occupancy, revenue, savings, safety, customer satisfaction, or AI effectiveness. Any operational outcome claim needs its own denominator, comparison design, period, provenance, limitations, and permission.</p>
+<p>Avoid one portfolio-wide “freshness percentage.” It can conceal the precise failures that matter. Report by decision type, fact class, source, facility context, and consequence band where appropriate.</p>
+<h2>The architecture in one sentence</h2>
+<p>The architecture is straightforward to describe and demanding to implement:</p>
+<blockquote>
+<p>Bind each assertion to identity, authority, effective and recording histories, clock quality, and invalidation state; evaluate it against a decision-specific time contract; preserve the admission packet; revalidate before execution; and reconcile the result with independent readback and late corrections.</p>
+</blockquote>
+<p>The accompanying diagram shows six layers:</p>
+<ol>
+<li>authoritative fact sources;</li>
+<li>temporal normalization without semantic collapse;</li>
+<li>dual-history fact records;</li>
+<li>decision-specific envelope evaluation;</li>
+<li>action admission, refresh, degrade, or stop;</li>
+<li>execution, readback, correction, and replay evidence.</li>
+</ol>
+<p>No layer should silently manufacture missing time. Unknown stays unknown until an authorized source resolves it.</p>
+<h2>Twelve questions for an architecture review</h2>
+<ol>
+<li>What does every timestamp mean?</li>
+<li>Which clock produced it, with what known error?</li>
+<li>When was the assertion effective in the operating world?</li>
+<li>When did each system record and supersede the row?</li>
+<li>Which source governs this fact for this decision?</li>
+<li>What observation age and source delay are allowed?</li>
+<li>What happens at the exact time boundary?</li>
+<li>Can a queued action outlive its evidence?</li>
+<li>How are late facts and corrections linked to affected decisions?</li>
+<li>Can replay recover only what was known at decision time?</li>
+<li>Does a provider receipt have an independent readback path?</li>
+<li>Who may change the temporal contract, and how is that change tested and rolled back?</li>
+</ol>
+<p>If the system cannot answer those questions, it does not have a freshness model. It has timestamps.</p>
+<h2>Start with one consequential join</h2>
+<p>Do not begin by assigning arbitrary TTLs to every table. Choose one bounded decision where facts arrive from more than one source and a stale join has a clear operating consequence.</p>
+<p>Then:</p>
+<ol>
+<li>name the decision and responsible authority;</li>
+<li>list the exact facts it requires;</li>
+<li>define each time field&#39;s semantics;</li>
+<li>preserve effective and recording histories;</li>
+<li>set decision-specific admission and execution limits;</li>
+<li>design refresh, degrade, stop, correction, and readback paths;</li>
+<li>run the readiness suite at boundaries and under late data;</li>
+<li>record what remains unknown.</li>
+</ol>
+<p>The goal is not to make every fact real time. Real time is expensive, sometimes impossible, and often unnecessary. The goal is to make the time assumptions explicit enough that software cannot quietly act on a past that no longer governs the present.</p>
+<p>That is the temporal authority envelope: not a fresher dashboard, but a defensible answer to a harder question—<em>was this fact still authorized to support this action when the action actually happened?</em></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.rfc-editor.org/info/rfc3339/">RFC 3339: Date and Time on the Internet: Timestamps</a>, RFC Editor, July 2002.</li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9557.html">RFC 9557: Date and Time on the Internet: Timestamps with Additional Information</a>, RFC Editor, April 2024.</li>
+<li><a href="https://www.w3.org/TR/2017/REC-owl-time-20171019/">Time Ontology in OWL</a>, W3C Recommendation, October 2017.</li>
+<li><a href="https://www.w3.org/TR/prov-o/">PROV-O: The PROV Ontology</a>, W3C Recommendation, April 2013.</li>
+<li><a href="https://www.ibm.com/docs/en/db2/12.1.x?topic=tables-application-period-temporal">Application-period temporal tables</a>, IBM Db2 12.1 documentation, checked August 22, 2026.</li>
+<li><a href="https://www.ibm.com/docs/en/db2/12.1.x?topic=tables-system-period-temporal">System-period temporal tables</a>, IBM Db2 12.1 documentation, checked August 22, 2026.</li>
+<li><a href="https://www.ibm.com/docs/en/db2/12.1.x?topic=tables-bitemporal">Bitemporal tables</a>, IBM Db2 12.1 documentation, checked August 22, 2026.</li>
+<li><a href="https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/concepts/time/">Timely Stream Processing</a>, Apache Flink 2.3 documentation; 2.3.0 was the latest stable release on the official downloads page when checked August 22, 2026.</li>
+<li><a href="https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/dev/datastream/event-time/generating_watermarks/">Generating Watermarks</a>, Apache Flink 2.3 documentation, checked August 22, 2026.</li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">NIST SP 800-53 Rev. 5</a>, National Institute of Standards and Technology, September 2020 with updates through December 10, 2020; current page notes Release 5.2.0 issued August 27, 2025.</li>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">Artificial Intelligence Risk Management Framework 1.0</a>, National Institute of Standards and Technology, January 2023.</li>
+</ul>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/multi-location-policy-compiler/">The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality</a></h3><p>Compile one governed portfolio rule against explicit site capabilities, overlays, exceptions, authorization, activation, readback, and rollback.</p><a href="/writing/multi-location-policy-compiler/" class="text-link" aria-label="Read the article: The Multi-Location Policy Compiler: Turn One Operating Rule Into Site-Specific Controls Without Erasing Local Reality">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert research paper</p><h3><a href="/writing/counterfactual-decision-ledger/">The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken</a></h3><p>Evaluate AI recommendations without assigning outcomes to unchosen actions or overstating what shadow mode proves.</p><a href="/writing/counterfactual-decision-ledger/" class="text-link" aria-label="Read the article: The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/five-layer-operating-context-stack/">The Five-Layer Operating Context Stack for Multi-Facility AI</a></h3><p>Assemble identity, authority, event, governing state, and decision context for one bounded multi-facility operating question.</p><a href="/writing/five-layer-operating-context-stack/" class="text-link" aria-label="Read the article: The Five-Layer Operating Context Stack for Multi-Facility AI">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
