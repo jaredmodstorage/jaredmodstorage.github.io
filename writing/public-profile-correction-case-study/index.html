@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.K38vg5AS.css" data-rsc-css-href="/_next/static/css/index.K38vg5AS.css" data-precedence="vite-rsc/importer-resources"/><title>A Public Profile Correction Case Study | Jared Mastroianni</title><meta name="description" content="A connected first-party case study showing how a modSTORAGE LinkedIn Page correction defined 30 targets, closed 17, preserved 13 open items, and separated access, source truth, saves, and public readback."/><meta name="robots" content="index, follow"/><meta property="og:title" content="A Public Profile Correction Case Study | Jared Mastroianni"/><meta property="og:description" content="A connected first-party case study showing how a modSTORAGE LinkedIn Page correction defined 30 targets, closed 17, preserved 13 open items, and separated access, source truth, saves, and public readback."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/modstorage-linkedin-page-correction-case-study.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A four-stage public-profile correction flow showing a 30-field baseline, evidence-gated edits, provider readback, and a reconciled result of 17 closed fields and 13 open fields."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="A Public Profile Correction Case Study | Jared Mastroianni"/><meta name="twitter:description" content="A connected first-party case study showing how a modSTORAGE LinkedIn Page correction defined 30 targets, closed 17, preserved 13 open items, and separated access, source truth, saves, and public readback."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/modstorage-linkedin-page-correction-case-study.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/#article","url":"https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"A Public Profile Correction Case Study: 17 Closed Fields, 13 Still Open","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/modstorage-linkedin-page-correction-case-study.png","description":"A connected first-party case study showing how a modSTORAGE LinkedIn Page correction defined 30 targets, closed 17, preserved 13 open items, and separated access, source truth, saves, and public readback.","about":["Public profile governance","LinkedIn company pages","Evidence reconciliation","Digital identity","Operational case studies"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Research methods","item":"https://jaredmodstorage.github.io/writing/topics/research/"},{"@type":"ListItem","position":3,"name":"A Public Profile Correction Case Study: 17 Closed Fields, 13 Still Open","item":"https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/research/">Research methods</a></li><li aria-current="page">A Public Profile Correction Case Study: 17 Closed Fields, 13 Still Open</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">First-party case study<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>A Public Profile Correction Case Study: 17 Closed Fields, 13 Still Open</h1><p class="lede">What the modSTORAGE LinkedIn Page correction actually changed, what remained open, and why a failed save belonged in the result.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>11 min read</span></div></header><div class="essay-body"><p>This is a connected, first-party case study about a real correction program on the modSTORAGE LinkedIn company Page. Jared Mastroianni is Chief Operating Officer of modSTORAGE and participated through the verified company administrator route. The evidence is useful because the baseline, authorized actions, failed saves, public readbacks, and remaining work were all recorded. It is not independent coverage or a customer, financial, search-ranking, or reputation-performance study.</p>
+<p>The narrow operating question was: can a company correct a public business profile without letting platform access, public facts, and legal or organizational claims collapse into one uncontrolled update?</p>
+<p>The answer was measured against 30 field-level targets: four narrative fields, 21 specialty entries, four location defects, and one official call-to-action destination. Seventeen targets reached a provider-verified closed state. Thirteen remained open. The open items were not averaged away, and a concurrent-administrator warning stopped rather than accelerated the work.</p>
+<p><a href="modstorage-linkedin-page-correction-case-study.svg"><img src="modstorage-linkedin-page-correction-case-study.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A four-stage public-profile correction flow showing a 30-field baseline, evidence-gated edits, provider readback, and a reconciled result of 17 closed fields and 13 open fields."></a></p>
+<p><a href="modstorage-linkedin-page-correction-case-study.svg">Open the accessible case-study diagram.</a></p>
+<section class="method-downloads" aria-labelledby="profile-correction-case-downloads">
+<p class="eyebrow">Governed evidence package</p>
+<h2 id="profile-correction-case-downloads">Inspect the baseline, reconciliation, and release boundary.</h2>
+<p>The files expose the exact target population, closed and open states, source classes, and connected-party limitations. They contain no tenant, customer, payment, credential, security, private contact, or administrator-secret data.</p>
+<div><a href="source-register.csv" download>Download the source register <span aria-hidden="true">↓</span></a><a href="linkedin-page-correction-evidence-register.csv" download>Download the correction evidence register <span aria-hidden="true">↓</span></a><a href="case-study-release-checklist.csv" download>Download the release checklist <span aria-hidden="true">↓</span></a><a href="modstorage-linkedin-page-correction-case-study.svg" download>Download the accessible SVG <span aria-hidden="true">↓</span></a><a href="modstorage-linkedin-page-correction-case-study.png" download>Download the PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+<h2>Why this qualifies as a case study</h2>
+<p>A case study needs more than screenshots and a success story. It needs a defined population, a baseline, an authorized intervention, a result with a denominator, negative or incomplete outcomes, reconciliation evidence, limitations, and a relationship disclosure.</p>
+<p>This program satisfies that narrower standard. The population was defined before the result was calculated. Every completed change was tied to an authenticated save and either an administrator or member-facing readback. Rejected changes were discarded. The final count was reconciled from the same evidence register that preserves the unresolved records.</p>
+<p>It does not show that LinkedIn visibility, search ranking, leads, customer trust, reputation, revenue, coverage, or a Knowledge Panel changed. Those outcomes were not measured and are not inferred.</p>
+<h2>The baseline was 30 targets</h2>
+<p>The correction register grouped the Page into four operating populations.</p>
+<p>The narrative population contained four fields: the tagline, the overview, an unsupported founding-year value, and a custom testimonial without governed provenance.</p>
+<p>The specialty population contained 21 entries. The release rule was not “make the list shorter.” It was to remove only entries that had been classified as unsupported and then read the resulting list back from the member-facing Page.</p>
+<p>The location population contained four defects: three street-label corrections and one legacy location record. The public modSTORAGE directory was the governing current-location source. LinkedIn's member and administrator views exposed different levels of address detail, so those readbacks were not treated as interchangeable.</p>
+<p>The destination population contained one call-to-action link. Its eligible value was the official all-locations directory, not an inferred facility, partner, or ownership relationship.</p>
+<p>Together those groups produced a denominator of 30. That denominator matters because reporting only the successful saves would have hidden nearly half of the defined work.</p>
+<h2>Authority was reacquired before mutation</h2>
+<p>The exact company Page identifier and the Jared administrator identity were checked before edits. That proved a current ability to use the Page controls. It did not prove legal ownership of modSTORAGE, ownership of every facility, or authority to make unrelated corporate claims.</p>
+<p>This distinction shaped the correction scope. The work could replace or remove unsupported presentation fields and normalize values against current official sources. It could not use Page access to establish a founding date, parent organization, legal owner, operator, customer relationship, or portfolio-wide service claim.</p>
+<p>Every later save inherited the same rule: platform permission is an execution condition, not the source of truth for the fact being published.</p>
+<h2>Four narrative fields closed</h2>
+<p>The Page received an evidence-bounded tagline and overview describing the current eight-location, six-state public footprint without turning that scope into an ownership or uniform-service claim.</p>
+<p>The unsupported <code>Founded 1960</code> value was removed. The correction proves that the unsupported field is no longer presented; it does not establish a different founding date.</p>
+<p>The custom testimonial was disabled because its exact source and release boundary were not governed. That is a provenance decision, not a judgment about any customer or underlying experience.</p>
+<p>Fresh member-facing readback verified the current tagline and overview and the absence of the founding-year and custom-testimonial presentations. This group closed four of four targets.</p>
+<h2>Nine of 21 specialties closed</h2>
+<p>The specialty list was handled through bounded saves rather than a bulk rewrite.</p>
+<p>The first verified batch removed five unsupported entries. A later uncontested sequence removed three more. One final isolated save removed <code>Locker Storage - Small Item Security | modSTORAGE Monterey</code>. After that save, the member-facing list exposed 12 remaining specialties and the expected first visible entry.</p>
+<p>The result for this group was therefore nine closed out of 21 defined targets. Twelve remained open.</p>
+<p>That is not a 43 percent improvement claim. It is a workflow-state count. The study does not measure whether a visitor noticed the change, whether LinkedIn or Google refreshed a snippet, or whether the Page performed better.</p>
+<h2>Three of four location defects closed</h2>
+<p>The primary Long Island City street field changed from <code>4730 29th St</code> to the official <code>47-30 29th Street</code>. The Airport Way and Sky Park Way records were also corrected one field at a time to <code>1118 Airport Way</code> and <code>401 Sky Park Way</code>.</p>
+<p>The administrator table displayed those exact values after save. LinkedIn's member-facing About summary exposes the primary location only at city and state level, so the study classifies the exact street results as authenticated administrator readback rather than pretending the full values were publicly visible there.</p>
+<p>One legacy location record remained. A later removal attempt returned LinkedIn's <code>Another admin is trying to make changes to this page at the same time as you</code> warning. The unsaved edit was discarded. The record stayed open, and no deletion was claimed.</p>
+<p>The location group therefore closed three of four targets.</p>
+<h2>The official destination closed</h2>
+<p>The Page's call-to-action destination was set to the current official modSTORAGE all-locations directory. Member-facing readback verified the destination.</p>
+<p>This closes one link target. It does not establish that every listed facility shares the same hours, services, features, ownership, management, or operating conditions. The directory itself preserves location-specific facts.</p>
+<h2>The stop condition was part of the result</h2>
+<p>The strongest control in this case was not a successful save. It was the decision to stop.</p>
+<p>The provider displayed a concurrent-administrator conflict during later specialty and location work. Every rejected edit was discarded. No failed attempt was counted as a correction, and repeated retries were not used to force a result through an unstable state.</p>
+<p>That behavior preserved a truthful open queue: 12 specialty entries and one legacy location record. The exact concurrent actor and cause remain unknown. The case study does not speculate about either.</p>
+<p>Operationally, a correction system that cannot preserve failure states is not a correction system. It is an overwrite interface.</p>
+<h2>Reconciliation produced 17 closed and 13 open</h2>
+<p>The arithmetic is deliberately simple and reproducible:</p>
+<ul><li>four of four narrative targets closed;</li><li>nine of 21 specialty targets closed;</li><li>three of four location targets closed;</li><li>one of one destination target closed.</li></ul>
+<p>That totals 17 closed targets out of 30. The remaining 13 are the 12 specialty entries and one legacy location record.</p>
+<p>The counts are not weighted. Removing a specialty is not treated as equivalent in consequence to correcting a location, and the aggregate is not a quality score. The total exists only to prevent selective reporting.</p>
+<p>The <a href="linkedin-page-correction-evidence-register.csv">evidence register</a> exposes every group, target population, action, readback class, closure state, limitation, and public claim boundary. The <a href="case-study-release-checklist.csv">release checklist</a> shows why the study is publishable despite its incomplete outcome.</p>
+<h2>What the case study does not establish</h2>
+<p>This case study does not establish a customer result, financial result, causal reputation change, conversion effect, traffic increase, search ranking, Google snippet refresh, independent editorial coverage, recognition, Wikipedia eligibility, or Knowledge Panel creation.</p>
+<p>It does not establish that LinkedIn's company Page is a legal corporate register. It does not infer ownership from administrator access. It does not publish private account, security, billing, or contact information. It does not claim that the open fields are false merely because they remain unsupported in the governed evidence set.</p>
+<p>The public subject is a connected company. The author relationship is disclosed. The evidence is therefore classified as first-party operating evidence, not independent validation.</p>
+<h2>A reusable correction protocol</h2>
+<p>Another operator can reproduce the method without copying these exact fields.</p>
+<ol><li>Define the target population before editing. Count every field that is in scope, including the difficult and uncertain records.</li><li>Assign a governing source for each target. A platform field, an official location directory, a legal record, and an administrator list may each answer different questions.</li><li>Reacquire the exact actor, surface, and authority immediately before mutation.</li><li>Save one bounded change or one deliberately small batch. Capture the provider response.</li><li>Read the result back through the presentation that matters. If administrator and public views differ, record both.</li><li>Preserve rejected, conflicted, or uncertain items as open. Do not count an attempt as an outcome.</li><li>Publish the denominator, open queue, relationship disclosure, and outcomes that were not measured.</li></ol>
+<h2>The operating lesson</h2>
+<p>The modSTORAGE Page did not become “complete” because 17 fields changed. It became more governable because every defined target had a state, every completed state had readback evidence, and every incomplete state remained visible.</p>
+<p>That distinction is the practical value of the case. Public-profile correction is not copywriting followed by a save button. It is a small operating system for identity, authority, source selection, mutation, readback, exception handling, and future reconciliation.</p>
+<p>The credible result is not that every issue disappeared. It is that the program can say exactly what changed, what did not, and why.</p>
+<h2>Sources and connected-party disclosure</h2>
+<ul><li><a href="https://www.linkedin.com/company/justmodit/">modSTORAGE LinkedIn company Page</a></li><li><a href="https://www.modstorage.com/all-locations">modSTORAGE official all-locations directory</a></li><li><a href="https://www.linkedin.com/feed/update/urn:li:share:7496746708463198208/?actorCompanyId=100531736">modSTORAGE location-fact LinkedIn publication</a></li><li><a href="https://jaredmodstorage.github.io/about/">Jared Mastroianni authority profile</a></li></ul>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and participated in the correction program. This article is a first-party operational case study. It is not independent reporting, an audit, a certification, a customer testimonial, or evidence of a search or reputation outcome.</p></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Advanced operating note</p><h3><a href="/writing/initiated-accepted-posted-reconciled/">Initiated, Accepted, Posted, Reconciled: Four Different Financial States</a></h3><p>Keep initiation, receiver acceptance, ledger posting, independent evidence, and governed reconciliation as distinct operating states.</p><a href="/writing/initiated-accepted-posted-reconciled/" class="text-link" aria-label="Read the article: Initiated, Accepted, Posted, Reconciled: Four Different Financial States">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/facility-work-graph/">The Facility Work Graph: An Operational Ontology for Self-Storage</a></h3><p>Separate facilities, source records, observations, events, decisions, authorizations, work, evidence, authority, and time before automation acts.</p><a href="/writing/facility-work-graph/" class="text-link" aria-label="Read the article: The Facility Work Graph: An Operational Ontology for Self-Storage">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Advanced research note</p><h3><a href="/writing/missing-denominator-test-self-storage-metrics/">The Missing Denominator Test for Self-Storage Metrics</a></h3><p>Make every operating metric disclose its eligible population, exclusions, time, lineage, coverage, uncertainty, and release authority.</p><a href="/writing/missing-denominator-test-self-storage-metrics/" class="text-link" aria-label="Read the article: The Missing Denominator Test for Self-Storage Metrics">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

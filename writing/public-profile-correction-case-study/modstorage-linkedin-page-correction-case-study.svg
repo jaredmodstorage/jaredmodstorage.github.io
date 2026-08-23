@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="pcs-title pcs-desc">
+  <title id="pcs-title">Public profile correction case-study flow</title>
+  <desc id="pcs-desc">A four-stage flow shows a 30-field baseline, evidence-gated edits, exact provider readback, and a reconciled result of 17 closed fields and 13 open fields.</desc>
+  <rect width="1600" height="900" fill="#f5f2e9"/>
+  <rect x="70" y="70" width="1460" height="760" rx="32" fill="#111f1b"/>
+  <text x="120" y="150" fill="#d8ff5b" font-family="Arial, sans-serif" font-size="34" font-weight="700">A verifiable public-profile correction</text>
+  <text x="120" y="202" fill="#f5f2e9" font-family="Arial, sans-serif" font-size="25">Count the defined targets. Preserve failed saves. Separate public and administrator readback.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="120" y="280" width="300" height="360" rx="24" fill="#20352e"/>
+    <text x="150" y="335" fill="#d8ff5b" font-size="22" font-weight="700">1 · BASELINE</text>
+    <text x="150" y="400" fill="#ffffff" font-size="42" font-weight="700">30 targets</text>
+    <text x="150" y="452" fill="#dce5df" font-size="22">4 narrative fields</text>
+    <text x="150" y="490" fill="#dce5df" font-size="22">21 specialties</text>
+    <text x="150" y="528" fill="#dce5df" font-size="22">4 location defects</text>
+    <text x="150" y="566" fill="#dce5df" font-size="22">1 official CTA</text>
+
+    <path d="M445 460h60" stroke="#d8ff5b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M490 440l25 20-25 20" fill="none" stroke="#d8ff5b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="520" y="280" width="300" height="360" rx="24" fill="#20352e"/>
+    <text x="550" y="335" fill="#d8ff5b" font-size="22" font-weight="700">2 · CONTROL</text>
+    <text x="550" y="400" fill="#ffffff" font-size="30" font-weight="700">One scoped save</text>
+    <text x="550" y="446" fill="#dce5df" font-size="22">Exact actor and Page</text>
+    <text x="550" y="484" fill="#dce5df" font-size="22">Governing source</text>
+    <text x="550" y="522" fill="#dce5df" font-size="22">Discard on conflict</text>
+    <text x="550" y="560" fill="#dce5df" font-size="22">No inferred success</text>
+
+    <path d="M845 460h60" stroke="#d8ff5b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M890 440l25 20-25 20" fill="none" stroke="#d8ff5b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="920" y="280" width="260" height="360" rx="24" fill="#20352e"/>
+    <text x="950" y="335" fill="#d8ff5b" font-size="22" font-weight="700">3 · READBACK</text>
+    <text x="950" y="400" fill="#ffffff" font-size="30" font-weight="700">Verify twice</text>
+    <text x="950" y="446" fill="#dce5df" font-size="22">Administrator table</text>
+    <text x="950" y="484" fill="#dce5df" font-size="22">Member-facing Page</text>
+    <text x="950" y="522" fill="#dce5df" font-size="22">Exact destination</text>
+    <text x="950" y="560" fill="#dce5df" font-size="22">Open-item ledger</text>
+
+    <path d="M1205 460h60" stroke="#d8ff5b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1250 440l25 20-25 20" fill="none" stroke="#d8ff5b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="1280" y="280" width="200" height="360" rx="24" fill="#d8ff5b"/>
+    <text x="1310" y="335" fill="#111f1b" font-size="22" font-weight="700">4 · RESULT</text>
+    <text x="1310" y="410" fill="#111f1b" font-size="50" font-weight="700">17</text>
+    <text x="1310" y="446" fill="#111f1b" font-size="21">closed</text>
+    <text x="1310" y="520" fill="#111f1b" font-size="50" font-weight="700">13</text>
+    <text x="1310" y="556" fill="#111f1b" font-size="21">open</text>
+  </g>
+  <text x="120" y="735" fill="#f5f2e9" font-family="Arial, sans-serif" font-size="23">First-party operational case study · No customer, financial, causal, search-ranking, coverage, or recognition claim.</text>
+</svg>

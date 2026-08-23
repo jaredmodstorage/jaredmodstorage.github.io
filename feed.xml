@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>A Public Profile Correction Case Study: 17 Closed Fields, 13 Still Open</title>
+      <link>https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/research/">Research methods</category>
+      <description>A connected first-party case study showing how a modSTORAGE LinkedIn Page correction defined 30 targets, closed 17, preserved 13 open items, and separated access, source truth, saves, and public readback.</description>
+    </item>
+    <item>
       <title>The Facility Work Graph: An Operational Ontology for Self-Storage</title>
       <link>https://jaredmodstorage.github.io/writing/facility-work-graph/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-work-graph/</guid>
