@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.K38vg5AS.css" data-rsc-css-href="/_next/static/css/index.K38vg5AS.css" data-precedence="vite-rsc/importer-resources"/><title>Four Financial States for Transaction Control | Jared Mastroianni</title><meta name="description" content="A practical self-storage control method separating transaction initiation, receiver acceptance, ledger posting, independent evidence, and governed reconciliation without letting one system status stand in for another."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Four Financial States for Transaction Control | Jared Mastroianni"/><meta property="og:description" content="A practical self-storage control method separating transaction initiation, receiver acceptance, ledger posting, independent evidence, and governed reconciliation without letting one system status stand in for another."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/financial-state-evidence-map.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="Four distinct financial workflow states—initiated, accepted, posted, and reconciled—are linked by a transaction-family identity while each retains its own authority, evidence, exception, reversal, and reopening rules; AI may assemble candidate evidence but may not grant authority or close the record."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Four Financial States for Transaction Control | Jared Mastroianni"/><meta name="twitter:description" content="A practical self-storage control method separating transaction initiation, receiver acceptance, ledger posting, independent evidence, and governed reconciliation without letting one system status stand in for another."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/financial-state-evidence-map.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/#article","url":"https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"Initiated, Accepted, Posted, Reconciled: Four Different Financial States","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/financial-state-evidence-map.png","description":"A practical self-storage control method separating transaction initiation, receiver acceptance, ledger posting, independent evidence, and governed reconciliation without letting one system status stand in for another.","proficiencyLevel":"Advanced","about":["Self-storage operations","Financial workflow control","Transaction states","Reconciliation","Provenance","Responsible AI"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Research methods","item":"https://jaredmodstorage.github.io/writing/topics/research/"},{"@type":"ListItem","position":3,"name":"Initiated, Accepted, Posted, Reconciled: Four Different Financial States","item":"https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/research/">Research methods</a></li><li aria-current="page">Initiated, Accepted, Posted, Reconciled: Four Different Financial States</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Advanced operating note<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>Initiated, Accepted, Posted, Reconciled: Four Different Financial States</h1><p class="lede">Separate transaction initiation, receiver acceptance, ledger posting, independent evidence, and governed reconciliation so one status never stands in for another.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>15 min read</span></div></header><div class="essay-body"><blockquote>
+<p><strong>Method and evidence boundary:</strong> This is an authored financial-workflow control method, not accounting, tax, legal, banking, payment-network, or compliance advice. Every facility, person, vendor, account, transaction, amount, date, system, and result in the examples is fictional. An operator must have its qualified financial, legal, security, and system owners define the governing records, accounting treatment, authority, timing, evidence, segregation, and retention rules.</p>
+</blockquote>
+<p>A facility manager clicks <strong>Submit</strong> on a refund request. The payment service accepts the request. An accounting system posts an entry. A bank statement later shows a movement. A monthly reconciliation links the records and clears the difference.</p>
+<p>Which moment means the transaction is complete?</p>
+<p>None of them by itself.</p>
+<p>Each moment answers a different question. Submission proves an attempt. Provider acceptance proves a bounded system response. Posting proves a ledger action under a particular rule and period. Reconciliation proves that defined records were compared and their difference reached a governed disposition.</p>
+<p>Self-storage operators do not need to become payment engineers or accountants to respect those boundaries. They do need an operating model that prevents a single green badge from standing in for four separate facts.</p>
+<p><a href="financial-state-evidence-map.svg"><img src="financial-state-evidence-map.svg" width="1600" height="900" loading="lazy" decoding="async" alt="Four distinct financial workflow states—initiated, accepted, posted, and reconciled—are linked by a transaction-family identity while each retains its own authority, evidence, exception, reversal, and reopening rules; AI may assemble candidate evidence but may not grant authority or close the record."></a></p>
+<p><a href="financial-state-evidence-map.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="financial-state-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="financial-state-downloads">Inspect the financial-state register and readiness gates.</h2>
+<p>These exact files contain an authored operating method and fictional records. They do not establish accounting treatment, a transaction outcome, reconciliation attestation, savings, a product or provider relationship, compliance, certification, external review, coverage, or recognition.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="financial-state-control-register-template.csv" download>Download the financial-state control register <span aria-hidden="true">↓</span></a><a href="financial-completion-readiness-suite.csv" download>Download the completion readiness suite <span aria-hidden="true">↓</span></a><a href="financial-state-evidence-map.svg" download>Download the accessible evidence-map SVG <span aria-hidden="true">↓</span></a><a href="financial-state-evidence-map.png" download>Download the evidence-map PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+<h2>Financial workflows tell the truth in plural</h2>
+<p>Most operating screens simplify. A button says <strong>Refunded</strong>. A work queue says <strong>Paid</strong>. A tenant account says <strong>Complete</strong>. An invoice view says <strong>Posted</strong>. A bank feed shows a line.</p>
+<p>The simplification becomes dangerous when one label is copied into another system without preserving what it actually means.</p>
+<p>Consider a fictional refund:</p>
+<ul>
+<li>the site initiates <code>RF-F001</code> for USD 125.00;</li>
+<li>the provider accepts request <code>prv_701</code> for processing;</li>
+<li>the provider later reports a terminal payment-flow state;</li>
+<li>accounting posts journal <code>J-9004</code> in period <code>2026-08</code>;</li>
+<li>the relevant bank or settlement evidence appears under reference <code>BK-411</code>;</li>
+<li>a reconciler matches the governed records and clears or explains every difference.</li>
+</ul>
+<p>The IDs may be linked. The states should not be merged.</p>
+<p>That distinction protects ordinary operations. It prevents a customer communication from promising a bank outcome when only a request exists. It prevents a ledger entry from being treated as independent cash evidence. It prevents a provider status from closing an accounting exception. It prevents a reconciliation label from hiding an unmatched or manually adjusted item.</p>
+<h2>The four-state gate</h2>
+<p>The labels are deliberately plain. An operator can map them to its actual systems only after the responsible owners approve the mapping.</p>
+<h3>1. Initiated</h3>
+<p>An authorized actor or governed automation created a transaction request.</p>
+<p>Record:</p>
+<ul>
+<li>transaction-family ID and version;</li>
+<li>facility, legal-entity, customer, vendor, or account scope as permitted;</li>
+<li>action type and signed amount with currency;</li>
+<li>source document or approved reason;</li>
+<li>initiating actor, role, and authority reference;</li>
+<li>request time and idempotency key;</li>
+<li>intended destination;</li>
+<li>approval evidence when required;</li>
+<li>current owner of the next action.</li>
+</ul>
+<p>Initiation does not prove delivery, provider acceptance, authorization by another party, movement of funds, ledger posting, settlement, bank receipt, reconciliation, or customer receipt.</p>
+<p>A button click without a durable request ID is weak initiation evidence. A durable ID without a valid actor and approved source can still be unauthorized.</p>
+<h3>2. Accepted</h3>
+<p>The destination system or accountable receiver accepted a specific request version under a defined meaning.</p>
+<p>Acceptance may be technical, operational, or financial. Those meanings must not share one unlabeled field.</p>
+<p>For example, an API may accept a request for processing while the underlying transaction remains pending or requires another action. Current <a href="https://docs.stripe.com/payments/paymentintents/lifecycle">Stripe lifecycle documentation</a> uses product-specific states including <code>requires_payment_method</code>, <code>requires_confirmation</code>, <code>requires_action</code>, <code>processing</code>, <code>succeeded</code>, and <code>canceled</code>. It notes that asynchronous methods can remain in processing before their outcome is known. That does not create a universal payment model, and it does not prove any relationship with modSTORAGE. It demonstrates why a system-specific accepted or processing state cannot be silently promoted into posting or reconciliation.</p>
+<p>Record:</p>
+<ul>
+<li>destination and response ID;</li>
+<li>exact request ID, version, amount, and currency echoed or correlated;</li>
+<li>response state and its source-system definition;</li>
+<li>response time and source clock;</li>
+<li>remaining conditions or required action;</li>
+<li>whether the response is provisional, reversible, or terminal;</li>
+<li>next status source and expected update rule;</li>
+<li>exception owner.</li>
+</ul>
+<p>An HTTP response, automatic message, portal receipt, or webhook is evidence of the thing it actually says. It is not evidence of a stronger state.</p>
+<h3>3. Posted</h3>
+<p>A governed ledger or subledger recorded an entry under a defined accounting rule and period.</p>
+<p>Posting is not the same as initiation. It is not necessarily the same as provider success, payout, settlement, bank movement, invoice settlement, or reconciliation. A system may post an accrual, reclassification, fee, reserve, reversal, correction, or cash-related entry for different reasons and at different times.</p>
+<p>Record:</p>
+<ul>
+<li>ledger and legal entity;</li>
+<li>journal, document, line, and batch identities;</li>
+<li>account and dimension references appropriate for governed use;</li>
+<li>debit and credit amounts with currency;</li>
+<li>posting date, accounting period, and source date;</li>
+<li>posting rule and rule version;</li>
+<li>preparer and approver where required;</li>
+<li>source transaction-family ID;</li>
+<li>reversal or correcting-entry relationship;</li>
+<li>posting evidence and current close state.</li>
+</ul>
+<p>Current <a href="https://learn.microsoft.com/en-us/dynamics365/finance/cash-bank-management/reconcile-bank-statements-advanced-bank-reconciliation">Microsoft Dynamics 365 Finance documentation</a> gives a product-specific example of why these concepts differ. Its bank-reconciliation workflow separates statement import, validation, matching, unmatched items, posting certain new transactions, and marking a reconciliation complete. Configuration changes the flow. The documentation does not define universal accounting treatment; it shows that mature financial software can preserve distinct workflow states rather than treating every line as posted and reconciled at once.</p>
+<h3>4. Reconciled</h3>
+<p>Defined records were compared for a defined period and population, differences were identified, and each difference reached an approved disposition with evidence and ownership.</p>
+<p>Reconciliation is not “both totals look close.” It is a controlled comparison contract.</p>
+<p>Record:</p>
+<ul>
+<li>reconciliation ID and version;</li>
+<li>accounts, facilities, currencies, periods, and sources in scope;</li>
+<li>source extracts and immutable locators;</li>
+<li>opening balance, in-period activity, transfers, adjustments, and ending balance as applicable;</li>
+<li>matched items and match rules;</li>
+<li>unmatched items by reason, age, amount, consequence, and owner;</li>
+<li>manual matches and adjustments with authority;</li>
+<li>cutoff and timing differences;</li>
+<li>reversals, disputes, fees, netting, or batch relationships;</li>
+<li>preparer, reviewer, completion time, and reopen rule;</li>
+<li>final status: reconciled, reconciled_with_open_items, blocked, superseded, or reopened.</li>
+</ul>
+<p>The <a href="https://fiscal.treasury.gov/accounting/central-accounting-reporting-system-cars/fund-balance-with-treasury/reconciliation-procedures">Bureau of the Fiscal Service reconciliation guidance</a> is written for federal Fund Balance with Treasury work, not private self-storage accounting. Within that boundary, it gives a useful control lesson: compare transaction logs with independent support, list unmatched items, preserve causes, resolve discrepancies, and do not create unsupported entries merely to force agreement.</p>
+<p>The 2025 <a href="https://www.gao.gov/greenbook">GAO Green Book</a> is also a federal internal-control framework, effective beginning in fiscal year 2026. It describes management's role in designing internal control for operations, reporting, and compliance and includes preventive and detective control examples. Nonfederal organizations may adopt the framework, but it does not prescribe this method or an operator's accounting treatment. The bounded takeaway is that reliable reporting depends on designed control activities and evidence, not a reassuring interface color.</p>
+<h2>Add the states that your risk requires</h2>
+<p>The four-state gate is a minimum lens, not a universal state machine.</p>
+<p>Depending on the transaction, the governed workflow may also need:</p>
+<ul>
+<li><code>drafted</code> before authority exists;</li>
+<li><code>approved</code> before initiation;</li>
+<li><code>delivered</code> before receiver handling;</li>
+<li><code>authorized</code> before capture or release;</li>
+<li><code>processing</code> while an outcome is nonterminal;</li>
+<li><code>settled</code> under an exact network or provider definition;</li>
+<li><code>available</code> under an exact balance definition;</li>
+<li><code>paid_out</code> under a payout identity;</li>
+<li><code>received_at_bank</code> under independent bank evidence;</li>
+<li><code>matched</code> before the reconciliation as a whole closes;</li>
+<li><code>disputed</code>, <code>returned</code>, <code>reversed</code>, or <code>refunded</code> as linked events;</li>
+<li><code>written_off</code> only under qualified authority and policy;</li>
+<li><code>unknown</code> when the authoritative source cannot be read.</li>
+</ul>
+<p>Do not add states merely to make a diagram impressive. Add a state when it changes what an operator may say, do, release, recognize, close, or escalate.</p>
+<h2>One transaction family, several source records</h2>
+<p>The operating model needs a stable transaction-family identity that links records without pretending they are one object.</p>
+<pre><code class="language-text">transaction_family_id: TF-FICTION-0042
+  initiation: request RF-F001 v2
+  provider: response prv_701 and later events
+  ledger: journal J-9004 lines 12-13
+  settlement_or_payout: batch PB-81 when applicable
+  bank: statement line BK-411
+  reconciliation: REC-2026-08-07 item 44
+  adjustments: none or separately identified records
+</code></pre>
+<p>The family is a correlation device. It does not erase source ownership. The provider governs its status definitions. The ledger governs posted entries. The bank or independent statement governs its line. The reconciliation record governs the comparison and disposition.</p>
+<p>The pinned <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">W3C PROV-O Recommendation</a> defines general concepts for entities, activities, agents, generation, use, derivation, association, attribution, and delegation. Those concepts can describe which record was generated by which activity and linked to which actor. Provenance still does not prove authority, transaction validity, ledger correctness, settlement, or reconciliation. It makes the evidence chain inspectable; qualified controls decide what that chain means.</p>
+<h2>Amount identity is more than a number</h2>
+<p>“125” is not a financial identity.</p>
+<p>At minimum, bind every amount to:</p>
+<ul>
+<li>signed value;</li>
+<li>currency;</li>
+<li>amount type: gross, net, tax, fee, reserve, discount, refund, payout, or another governed class;</li>
+<li>scale and rounding rule;</li>
+<li>source record and line;</li>
+<li>facility and legal-entity scope;</li>
+<li>event and accounting dates;</li>
+<li>transaction-family ID;</li>
+<li>status under the source's vocabulary.</li>
+</ul>
+<p>A USD 125.00 refund request should not be matched to a USD 125.00 bank debit by amount alone. The same amount can occur many times. Match rules should use the strongest available identity and preserve whether the match was deterministic, rule-based, or manually approved.</p>
+<p>Net amounts create another trap. A payout may combine collections, refunds, disputes, fees, reserves, timing differences, and adjustments. Current <a href="https://docs.stripe.com/reports/select-a-report">Stripe reporting guidance</a> describes product-specific balance and payout-reconciliation reports that group transactions differently and use different relevant dates. The page notes that a payout report can help reconcile a batch after it settles, while a balance report answers a different account-activity question. That does not tell an operator how to account for anything. It shows why one payout amount cannot safely stand in for every underlying transaction state.</p>
+<h2>Reversals do not delete history</h2>
+<p>A reversal is a new governed event linked to the record it offsets or changes. It should not overwrite the original as if it never happened.</p>
+<p>Preserve:</p>
+<ul>
+<li>original identity, state, amount, and evidence;</li>
+<li>reversal or correction identity;</li>
+<li>reason and authority;</li>
+<li>effective and recorded times;</li>
+<li>affected provider, ledger, bank, and reconciliation records;</li>
+<li>any remaining open item;</li>
+<li>corrected customer or vendor communication state;</li>
+<li>whether the prior reconciliation must reopen.</li>
+</ul>
+<p>The same rule applies to retries. An idempotency key can prevent a duplicate request in one system, but it does not prove that every downstream system applied the same duplicate rule. A retry should return the prior bounded disposition when appropriate or create a separately linked attempt. It should never create an indistinguishable second financial event.</p>
+<h2>The owner of each next action</h2>
+<p>Every state has an owner. Those owners can differ.</p>
+<ul>
+<li>Site or central operations may own source-document completeness.</li>
+<li>A configured integration may own delivery monitoring.</li>
+<li>A processor queue may own provider exception handling.</li>
+<li>Accounting may own posting or exception classification.</li>
+<li>Treasury or a qualified financial owner may own bank evidence and settlement interpretation.</li>
+<li>A reconciler may own matching and difference disposition.</li>
+<li>A reviewer may own approval to close or reopen.</li>
+</ul>
+<p>“Finance” is not enough if no accountable queue, scope, response rule, and escalation owner exist. “The system” is not enough if its failure path returns no one to the record.</p>
+<p>Segregation requirements should be defined by qualified owners. The method does not assume that every transaction needs different people at every stage. It does require the workflow to reveal when the same actor initiated, approved, posted, matched, adjusted, and closed a consequential item so the governing policy can evaluate that fact.</p>
+<h2>What AI can safely do</h2>
+<p>An AI assistant can help assemble financial workflow evidence. It may:</p>
+<ul>
+<li>extract candidate IDs, amounts, currencies, dates, and status phrases;</li>
+<li>compare a source record with structured fields;</li>
+<li>flag a provider receipt that was labeled reconciled;</li>
+<li>identify a ledger line without a transaction-family link;</li>
+<li>propose candidate matches with cited evidence;</li>
+<li>group unmatched items by reason and age;</li>
+<li>draft an exception summary;</li>
+<li>detect missing review or reversal links.</li>
+</ul>
+<p>It should not:</p>
+<ul>
+<li>create transaction authority;</li>
+<li>infer bank receipt from provider success;</li>
+<li>decide accounting treatment;</li>
+<li>invent a match from amount and date similarity;</li>
+<li>clear an unexplained difference;</li>
+<li>change a closed period;</li>
+<li>communicate a financial result without approved source evidence;</li>
+<li>promote <code>unknown</code> into success because a status check failed.</li>
+</ul>
+<p>For consequential work, AI should remain a <strong>candidate evidence assembler</strong>. A deterministic control or qualified human applies the governing decision.</p>
+<h2>A fictional daily review</h2>
+<p>At fictional Harbor Annex, an operator reviews four transaction families.</p>
+<p><strong>TF-F001 — refund request</strong>&lt;br&gt;
+Initiated with approved source evidence. Provider status is <code>processing</code>. No ledger or bank evidence exists yet. Current label: <code>accepted_processing</code>; next owner: provider-exception monitor. The customer communication may state that the request was submitted and is processing only if approved policy permits that wording.</p>
+<p><strong>TF-F002 — vendor payment</strong>&lt;br&gt;
+The accounting system posted journal <code>J-F002</code>. The independent bank feed has no corresponding line inside the current cutoff. Current label: <code>posted_unmatched</code>; next owner: reconciler. The item is not relabeled paid merely because the ledger contains an entry.</p>
+<p><strong>TF-F003 — automatic payout batch</strong>&lt;br&gt;
+The payout record and bank deposit share a strong reference. Two underlying adjustments remain unclassified. Current label: <code>bank_received_reconciliation_open</code>; next owner: accounting exception queue. The deposit does not close the underlying classification work.</p>
+<p><strong>TF-F004 — duplicate request attempt</strong>&lt;br&gt;
+The retry reused the same idempotency key and returned the prior provider response. No second ledger or bank record exists. Current label: <code>duplicate_attempt_same_disposition</code>; next owner: workflow monitor. The audit history preserves both attempts without counting two transactions.</p>
+<p>No case proves a real product behavior or company result. The exercise shows how a four-state gate prevents premature closure.</p>
+<h2>Metrics that do not flatten the workflow</h2>
+<p>Useful measures include:</p>
+<ul>
+<li>initiated requests without bounded acceptance;</li>
+<li>accepted or processing items without a next-check rule;</li>
+<li>provider-terminal items without governed posting disposition;</li>
+<li>posted items without independent match evidence;</li>
+<li>bank lines without transaction-family correlation;</li>
+<li>reconciliations closed with open items, by reason and consequence;</li>
+<li>manual matches by rule, reviewer, and later reopen rate;</li>
+<li>reversals without original-record links;</li>
+<li>duplicate attempts by idempotency outcome;</li>
+<li>unknown-source states by age and owner;</li>
+<li>AI-proposed matches changed or rejected by reviewers.</li>
+</ul>
+<p>Every rate needs a numerator, denominator, population, period, source, exclusions, and limitations. A “reconciliation rate” is not meaningful if the denominator mixes pending, ineligible, canceled, reversed, outside-period, and unclassified items.</p>
+<p>Do not reward a team for forcing differences to zero. A visible, owned exception can be more truthful than an unsupported adjustment.</p>
+<h2>The operator exercise</h2>
+<p>Choose one recurring financial workflow: a refund, vendor payment, automatic collection, deposit, payout, fee, or another approved transaction class.</p>
+<p>Sample ten transaction families and answer:</p>
+<ol>
+<li>What proves initiation and authority?</li>
+<li>What exact system accepted what exact version?</li>
+<li>What remaining conditions existed after acceptance?</li>
+<li>What ledger or subledger record was posted, under which period and rule?</li>
+<li>What independent source supports movement or receipt when relevant?</li>
+<li>What match rule linked the records?</li>
+<li>Which items remain unmatched or disputed?</li>
+<li>Who owns every next action?</li>
+<li>What reversal, retry, reopening, and correction paths exist?</li>
+<li>What can the operation truthfully communicate at each state?</li>
+</ol>
+<p>Classify evidence as <code>present</code>, <code>missing</code>, <code>ambiguous</code>, <code>contradictory</code>, or <code>not_applicable</code>. Classify state as <code>initiated</code>, <code>accepted_nonterminal</code>, <code>accepted_terminal</code>, <code>posted</code>, <code>matched</code>, <code>reconciled</code>, <code>reconciled_with_open_items</code>, <code>reversed</code>, <code>reopened</code>, or <code>unknown</code> only after the responsible owner approves the vocabulary.</p>
+<p>Use the companion <a href="financial-state-control-register-template.csv">financial-state control register</a> and <a href="financial-completion-readiness-suite.csv">36-scenario readiness suite</a> to test ordinary, delayed, duplicated, reversed, netted, unmatched, inaccessible-source, and AI-assisted cases. The <a href="financial-state-evidence-map.svg">financial-state evidence map</a> gives teams a visual prompt for keeping authority, provider, ledger, independent-source, exception, and AI roles separate. The tools are fictional teaching records and require qualified adaptation.</p>
+<h2>Four states, four questions</h2>
+<p>Initiated asks: <strong>Was an authorized request created?</strong></p>
+<p>Accepted asks: <strong>What did the receiver agree to process or do?</strong></p>
+<p>Posted asks: <strong>What did the governed ledger record, under which rule and period?</strong></p>
+<p>Reconciled asks: <strong>Which independent records were compared, and what happened to every difference?</strong></p>
+<p>When an operator keeps those questions separate, a financial workflow can be observed without exaggerating what any one system knows.</p>
+<h2>Sources</h2>
+<p>The package-level <a href="source-register.csv">source register</a> preserves publication or version dates, exact claim support, retrieval time, and limitations for every external source used below.</p>
+<ul>
+<li><a href="https://docs.stripe.com/payments/paymentintents/lifecycle">How Payment Intents and Setup Intents work</a>, Stripe official product documentation, current page checked August 22, 2026.</li>
+<li><a href="https://docs.stripe.com/reports/select-a-report">How to select a report</a>, Stripe official product documentation, current page checked August 22, 2026.</li>
+<li><a href="https://fiscal.treasury.gov/accounting/central-accounting-reporting-system-cars/fund-balance-with-treasury/reconciliation-procedures">Reconciliation Procedures</a>, Bureau of the Fiscal Service, last updated January 31, 2023.</li>
+<li><a href="https://www.gao.gov/greenbook">The Green Book</a>, U.S. Government Accountability Office, 2025 edition effective beginning fiscal year 2026.</li>
+<li><a href="https://learn.microsoft.com/en-us/dynamics365/finance/cash-bank-management/reconcile-bank-statements-advanced-bank-reconciliation">Reconcile bank statements by using advanced bank reconciliation</a>, Microsoft Learn, current page checked August 22, 2026.</li>
+<li><a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV-O: The PROV Ontology</a>, W3C Recommendation, April 30, 2013.</li>
+</ul>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Advanced research note</p><h3><a href="/writing/missing-denominator-test-self-storage-metrics/">The Missing Denominator Test for Self-Storage Metrics</a></h3><p>Make every operating metric disclose its eligible population, exclusions, time, lineage, coverage, uncertainty, and release authority.</p><a href="/writing/missing-denominator-test-self-storage-metrics/" class="text-link" aria-label="Read the article: The Missing Denominator Test for Self-Storage Metrics">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert research paper</p><h3><a href="/writing/counterfactual-decision-ledger/">The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken</a></h3><p>Evaluate AI recommendations without assigning outcomes to unchosen actions or overstating what shadow mode proves.</p><a href="/writing/counterfactual-decision-ledger/" class="text-link" aria-label="Read the article: The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Advanced research governance</p><h3><a href="/writing/self-storage-benchmark-research-protocol/">A Self-Storage Benchmark Is a Research Protocol</a></h3><p>Define the claim, establishment, frame, sample, measure, disposition, uncertainty, privacy boundary, AI use, and release gates before publishing a benchmark.</p><a href="/writing/self-storage-benchmark-research-protocol/" class="text-link" aria-label="Read the article: A Self-Storage Benchmark Is a Research Protocol">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
