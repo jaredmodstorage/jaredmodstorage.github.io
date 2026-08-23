@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Policy as code reference model with visible human authority</title>
+  <desc id="desc">An authority record governs policy administration. Admissible facts flow to a policy decision point, whose bounded result is validated by an enforcement point and translated by a consequence adapter. Human review owns exceptions. Evidence and governance observe each separate disposition. AI is limited to candidate evidence, tests, explanations, and exception summaries.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07192A"/>
+      <stop offset="1" stop-color="#142B3B"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020A11" flood-opacity="0.38"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#78E0CF"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8CBFE8"/>
+    </marker>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .eyebrow { font-size: 17px; font-weight: 780; letter-spacing: 3px; fill: #78E0CF; }
+      .title { font-size: 42px; font-weight: 780; fill: #F4F8FB; }
+      .subtitle { font-size: 19px; font-weight: 440; fill: #BFD0DA; }
+      .plane { font-size: 14px; font-weight: 800; letter-spacing: 1.4px; fill: #78E0CF; }
+      .card-title { font-size: 24px; font-weight: 770; fill: #091B2A; }
+      .card-sub { font-size: 15px; font-weight: 650; fill: #214457; }
+      .card-item { font-size: 14px; font-weight: 520; fill: #2B4D60; }
+      .dark-title { font-size: 21px; font-weight: 760; fill: #F1F6F9; }
+      .dark-item { font-size: 14px; font-weight: 520; fill: #C0D1DC; }
+      .chip { font-size: 13px; font-weight: 800; letter-spacing: 1.1px; fill: #092034; }
+      .footer-title { font-size: 18px; font-weight: 760; fill: #F1F6F9; }
+      .footer-item { font-size: 14px; font-weight: 520; fill: #C6D6DF; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <circle cx="1485" cy="88" r="195" fill="#154F62" opacity="0.22"/>
+  <circle cx="70" cy="856" r="210" fill="#116254" opacity="0.16"/>
+
+  <g class="sans">
+    <text x="72" y="62" class="eyebrow">FACILITY POLICY-AS-CODE REFERENCE MODEL</text>
+    <text x="72" y="116" class="title">Executable rules must not hide human authority.</text>
+    <text x="72" y="154" class="subtitle">Decision, enforcement, consequence, review, and observed outcome remain separate evidence states.</text>
+
+    <rect x="72" y="184" width="1456" height="84" rx="20" fill="#0A2738" stroke="#2E6670"/>
+    <text x="98" y="216" class="plane">AUTHORITY RECORD</text>
+    <text x="98" y="246" class="dark-item">owner • approver • purpose • scope • consequence • prohibited uses • effective time • exception authority • suspension • retirement</text>
+    <rect x="1300" y="204" width="202" height="44" rx="22" fill="#78E0CF"/>
+    <text x="1330" y="231" class="chip">HUMAN AUTHORITY</text>
+
+    <path d="M800 268 V300" stroke="#78E0CF" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="72" y="320" width="286" height="238" rx="22" fill="#DEF5EF"/>
+      <rect x="390" y="320" width="286" height="238" rx="22" fill="#E2F0FA"/>
+      <rect x="708" y="320" width="286" height="238" rx="22" fill="#FAEED1"/>
+      <rect x="1026" y="320" width="286" height="238" rx="22" fill="#F2E5F1"/>
+    </g>
+
+    <text x="96" y="352" class="plane">ADMINISTER</text>
+    <text x="96" y="390" class="card-title">Policy plane</text>
+    <text x="96" y="420" class="card-sub">Approved intent → exact artifact</text>
+    <text x="96" y="458" class="card-item">• version + scope + hash</text>
+    <text x="96" y="486" class="card-item">• tests + release channel</text>
+    <text x="96" y="514" class="card-item">• activation + rollback</text>
+    <text x="96" y="540" class="card-item">No self-approval by default.</text>
+
+    <text x="414" y="352" class="plane">ADMIT FACTS</text>
+    <text x="414" y="390" class="card-title">Context plane</text>
+    <text x="414" y="420" class="card-sub">Source-bound decision packet</text>
+    <text x="414" y="458" class="card-item">• identity + authority</text>
+    <text x="414" y="486" class="card-item">• observed/effective time</text>
+    <text x="414" y="514" class="card-item">• conflict + unknown state</text>
+    <text x="414" y="540" class="card-item">No convenient fill-ins.</text>
+
+    <text x="732" y="352" class="plane">DECIDE</text>
+    <text x="732" y="390" class="card-title">Decision point</text>
+    <text x="732" y="420" class="card-sub">Policy + facts → bounded result</text>
+    <text x="732" y="458" class="card-item">• decision ID + reasons</text>
+    <text x="732" y="486" class="card-item">• obligations + expiry</text>
+    <text x="732" y="514" class="card-item">• allow / deny / review</text>
+    <text x="732" y="540" class="card-item">A decision is not an action.</text>
+
+    <text x="1050" y="352" class="plane">ENFORCE</text>
+    <text x="1050" y="390" class="card-title">Enforcement point</text>
+    <text x="1050" y="420" class="card-sub">Validate scope before effect</text>
+    <text x="1050" y="458" class="card-item">• target + action + time</text>
+    <text x="1050" y="486" class="card-item">• enforced / failed / partial</text>
+    <text x="1050" y="514" class="card-item">• retry + reversal links</text>
+    <text x="1050" y="540" class="card-item">Never broaden consequence.</text>
+
+    <path d="M358 440 H382" stroke="#78E0CF" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M676 440 H700" stroke="#78E0CF" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M994 440 H1018" stroke="#78E0CF" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="1344" y="320" width="184" height="238" rx="22" fill="#143548" stroke="#456B7D"/>
+    <text x="1368" y="352" class="plane">ADAPT</text>
+    <text x="1368" y="390" class="dark-title">Consequence</text>
+    <text x="1368" y="418" class="dark-title">adapter</text>
+    <text x="1368" y="458" class="dark-item">Narrow command</text>
+    <text x="1368" y="484" class="dark-item">Exact target</text>
+    <text x="1368" y="510" class="dark-item">Correlation key</text>
+    <text x="1368" y="536" class="dark-item">Response identity</text>
+    <path d="M1312 440 H1336" stroke="#78E0CF" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="72" y="600" width="714" height="132" rx="20" fill="#0B2638" stroke="#31566C"/>
+    <text x="98" y="634" class="dark-title">Evidence and observability plane</text>
+    <text x="98" y="664" class="dark-item">policy • input • decision • enforcement • observed state • review • reversal</text>
+    <text x="98" y="693" class="dark-item">Mask sensitive data. A log is evidence of an event—not proof of authority or effect.</text>
+
+    <rect x="814" y="600" width="714" height="132" rx="20" fill="#153247" stroke="#745C83"/>
+    <text x="840" y="634" class="dark-title">Human review and exception plane</text>
+    <text x="840" y="664" class="dark-item">approved • denied • modified • returned for evidence • expired</text>
+    <text x="840" y="693" class="dark-item">Reviewer scope, reasons, authority, expiry, rollback, and next owner remain visible.</text>
+
+    <path d="M850 558 V590" stroke="#8CBFE8" stroke-width="4" marker-end="url(#arrowBlue)"/>
+    <path d="M1170 600 C1170 570 1090 570 1090 558" fill="none" stroke="#D6A9D2" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#arrowBlue)"/>
+
+    <rect x="72" y="770" width="1456" height="78" rx="20" fill="#083245" stroke="#1C7867"/>
+    <text x="98" y="801" class="footer-title">AI is a bounded contributor, never the authority layer.</text>
+    <text x="98" y="828" class="footer-item">Candidate facts • draft rules • test cases • explanations • exception summaries — no activation, self-approval, silent fact completion, or consequence expansion.</text>
+  </g>
+</svg>

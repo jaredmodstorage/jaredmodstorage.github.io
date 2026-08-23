@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Policy as Code for Facility Operations Without Hiding Human Authority</title>
+      <link>https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>An expert self-storage reference model that separates policy authority, administration, fact admission, decision, enforcement, consequence adaptation, evidence, human review, and governance across facility workflows.</description>
+    </item>
+    <item>
       <title>The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish</title>
       <link>https://jaredmodstorage.github.io/writing/facility-observation-coverage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-observation-coverage/</guid>

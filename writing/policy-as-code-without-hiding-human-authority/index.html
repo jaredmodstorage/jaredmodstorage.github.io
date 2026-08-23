@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.K38vg5AS.css" data-rsc-css-href="/_next/static/css/index.K38vg5AS.css" data-precedence="vite-rsc/importer-resources"/><title>Policy as Code for Facility Operations | Jared Mastroianni</title><meta name="description" content="An expert self-storage reference model that separates policy authority, administration, fact admission, decision, enforcement, consequence adaptation, evidence, human review, and governance across facility workflows."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Policy as Code for Facility Operations | Jared Mastroianni"/><meta property="og:description" content="An expert self-storage reference model that separates policy authority, administration, fact admission, decision, enforcement, consequence adaptation, evidence, human review, and governance across facility workflows."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/policy-authority-reference-model.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="An authority record governs policy administration; admissible facts flow to a policy decision point, a bounded result moves to an enforcement point and consequence adapter, human review owns exceptions, and evidence and governance observe each separate disposition while AI remains a candidate contributor."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Policy as Code for Facility Operations | Jared Mastroianni"/><meta name="twitter:description" content="An expert self-storage reference model that separates policy authority, administration, fact admission, decision, enforcement, consequence adaptation, evidence, human review, and governance across facility workflows."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/policy-authority-reference-model.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/#article","url":"https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"Policy as Code for Facility Operations Without Hiding Human Authority","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/policy-authority-reference-model.png","description":"An expert self-storage reference model that separates policy authority, administration, fact admission, decision, enforcement, consequence adaptation, evidence, human review, and governance across facility workflows.","proficiencyLevel":"Expert","about":["Self-storage operations","Policy as code","Human authority","Policy administration","Fact admission","Decision and enforcement","Evidence","Responsible AI"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Accountable automation","item":"https://jaredmodstorage.github.io/writing/topics/automation/"},{"@type":"ListItem","position":3,"name":"Policy as Code for Facility Operations Without Hiding Human Authority","item":"https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/automation/">Accountable automation</a></li><li aria-current="page">Policy as Code for Facility Operations Without Hiding Human Authority</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>Policy as Code for Facility Operations Without Hiding Human Authority</h1><p class="lede">Separate policy authority, administration, fact admission, decision, enforcement, evidence, human review, and governance before a facility workflow acts.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>15 min read</span></div></header><div class="essay-body"><blockquote>
+<p><strong>Method and evidence boundary:</strong> This is an authored reference model for testing policy-driven facility workflows. It is not legal, safety, security, accounting, employment, insurance, accessibility, payment, or compliance advice. Every facility, person, vendor, system, policy, identifier, time, threshold, decision, and result in the examples is fictional. Qualified owners must define the actual authority, source, consequence, review, enforcement, evidence, retention, and rollback rules for each use case.</p>
+</blockquote>
+<p>Policy as code is often introduced as a way to make rules executable. That description is incomplete.</p>
+<p>The difficult part is not translating a sentence into syntax. The difficult part is preserving who had authority to create the rule, which facts the rule was allowed to use, what decision vocabulary it could return, where the decision was enforced, what happened when a dependency failed, and who remained accountable for the consequence.</p>
+<p>A self-storage portfolio can automate a policy decision and still lose the policy's meaning. A rule may be technically valid but use stale facility hours. A decision service may return <code>allow</code> while the gate controller never applies it. An AI assistant may explain a result in polished language while citing a policy version that is no longer active. A human may appear to approve an exception without holding authority for that facility, transaction, or period.</p>
+<p>Policy as code should make those boundaries more visible, not less.</p>
+<p><a href="policy-authority-reference-model.svg"><img src="policy-authority-reference-model.svg" width="1600" height="900" loading="lazy" decoding="async" alt="An authority record governs policy administration; admissible facts flow to a policy decision point, a bounded result moves to an enforcement point and consequence adapter, human review owns exceptions, and evidence and governance observe each separate disposition while AI remains a candidate contributor."></a></p>
+<p><a href="policy-authority-reference-model.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="policy-as-code-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="policy-as-code-downloads">Inspect the policy contract and readiness gates.</h2>
+<p>These exact files contain an authored reference method and fictional examples. They do not establish a product architecture, deployment, customer result, service level, legal or security conclusion, compliance, certification, performance, external review, or recognition.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="policy-contract-register-template.csv" download>Download the policy contract register <span aria-hidden="true">↓</span></a><a href="policy-as-code-readiness-suite.csv" download>Download the policy readiness suite <span aria-hidden="true">↓</span></a><a href="policy-authority-reference-model.svg" download>Download the accessible reference-model SVG <span aria-hidden="true">↓</span></a><a href="policy-authority-reference-model.png" download>Download the reference-model PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+<h2>Policy is not the same as authority</h2>
+<p>A policy is an approved expression of what should happen under defined conditions. Code is one possible representation of that policy. Neither the file nor the engine grants organizational authority by itself.</p>
+<p>Authority has to arrive through a governed chain:</p>
+<ol>
+<li>a qualified owner approves a policy purpose and consequence;</li>
+<li>an authorized policy steward translates that approval into a versioned rule;</li>
+<li>independent tests verify the rule against ordinary and adversarial cases;</li>
+<li>an approved release process activates an exact version for an exact scope;</li>
+<li>a decision point evaluates the rule against admissible facts;</li>
+<li>an enforcement point applies only the permitted consequence;</li>
+<li>an evidence record preserves the decision and enforcement dispositions;</li>
+<li>a human or deterministic recovery path owns exceptions, reversals, and rollback.</li>
+</ol>
+<p>If one of those links is missing, “the policy engine decided” is an evasion. The engine evaluated inputs under loaded instructions. People and governed systems remain responsible for whether those instructions were authorized, appropriate, deployed, enforced, and reviewed.</p>
+<p>The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI Risk Management Framework 1.0</a> is voluntary, non-sector-specific, and use-case agnostic. Within that boundary, it provides a useful governance principle: AI risk work spans the lifecycle and needs defined roles, documentation, and management rather than a one-time technical check. NIST also states that AI RMF 1.0 is under revision. A reference to the framework is therefore not a certification and does not make a facility workflow trustworthy.</p>
+<p>The current <a href="https://airc.nist.gov/airmf-resources/playbook/">NIST AI RMF Playbook</a> makes the human boundary more explicit. Its voluntary suggestions include differentiating roles and responsibilities for human-AI configurations and oversight and tracking relevant risk information. The Playbook is mutable and is not a checklist. The operational lesson is bounded but strong: human oversight must be designed as a role and workflow, not added as a decorative approval button.</p>
+<h2>The nine-part facility policy stack</h2>
+<p>The reference model separates nine responsibilities. A small operation may implement several of them in one system or one team. The logical boundaries should remain visible even when the deployment is compact.</p>
+<h3>1. Authority record</h3>
+<p>The authority record answers who may establish, approve, change, suspend, or retire the policy.</p>
+<p>Record:</p>
+<ul>
+<li>policy owner and approving authority;</li>
+<li>facility, legal-entity, system, workflow, and consequence scope;</li>
+<li>source policy, procedure, contract, or other approved basis;</li>
+<li>effective and expiration times;</li>
+<li>required reviewers and segregation conditions;</li>
+<li>emergency suspension authority;</li>
+<li>prohibited uses;</li>
+<li>version and supersession relationship.</li>
+</ul>
+<p>A code repository can prove that a person committed a file. It does not prove that the person had authority to change a tenant-access rule, release a refund, alter an account restriction, or direct physical work.</p>
+<h3>2. Policy administration plane</h3>
+<p>The administration plane turns approved intent into a controlled policy artifact.</p>
+<p>It owns:</p>
+<ul>
+<li>policy syntax and schema;</li>
+<li>version-controlled change requests;</li>
+<li>peer and qualified-owner review;</li>
+<li>test cases and expected decisions;</li>
+<li>signing or integrity checks where selected;</li>
+<li>release channels and facility targeting;</li>
+<li>rollback package;</li>
+<li>retirement and archive rules.</li>
+</ul>
+<p>The policy steward may prepare a change. The approving authority approves the consequence. Those roles may be held by the same person only when the governing control permits it.</p>
+<p>The separation has precedent in access-control architecture. The 2013 <a href="https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html">OASIS XACML 3.0 Standard</a> distinguishes policy administration, policy information, policy decision, and policy enforcement roles. XACML is an access-control standard, not a self-storage operating recipe. Its value here is architectural: authoring a policy, supplying attributes, deciding, and enforcing are different functions.</p>
+<h3>3. Context and fact-admission plane</h3>
+<p>A policy decision is only as bounded as its inputs.</p>
+<p>Each input should carry:</p>
+<ul>
+<li>semantic field name and version;</li>
+<li>value and unit;</li>
+<li>facility and entity scope;</li>
+<li>source system and record identity;</li>
+<li>observed and effective times;</li>
+<li>freshness horizon;</li>
+<li>authority to supply the field;</li>
+<li>confidence or validation state where applicable;</li>
+<li>conflict and missing-data disposition;</li>
+<li>privacy and retention class.</li>
+</ul>
+<p>“Current manager,” “after hours,” “balance due,” “approved vendor,” and “emergency” are not primitive facts. Each depends on a definition, source, time, scope, and owner. A policy engine should receive a governed fact packet, not an unlabeled collection of convenient values.</p>
+<h3>4. Policy decision point</h3>
+<p>The decision point evaluates an exact policy version against an exact input packet and returns a bounded result.</p>
+<p>A useful result is richer than a Boolean:</p>
+<pre><code class="language-text">decision_id: DEC-FICTION-0042
+policy_id: PAC-FICTION-ACCESS-07
+policy_version: 12
+input_packet_hash: sha256:fictional
+decision: REQUIRE_REVIEW
+reason_codes:
+  - FACILITY_HOURS_SOURCE_STALE
+  - ACTOR_ROLE_CURRENT
+allowed_consequence: NONE
+review_queue: FACILITY-AUTHORITY-REVIEW
+evaluated_at: 2026-08-22T14:31:04Z
+expires_at: 2026-08-22T14:36:04Z
+</code></pre>
+<p>The result separates the policy decision from enforcement. <code>REQUIRE_REVIEW</code> is not a denial, an approval, a work completion, or a human decision. It is a routing instruction under an exact rule version.</p>
+<p>Current <a href="https://www.openpolicyagent.org/docs/deploy">Open Policy Agent deployment documentation</a> describes OPA as a general-purpose policy decision point serving application enforcement points. It also separates policy loading, external data, and decision logging responsibilities. OPA is one mutable product example, not a required provider or evidence of any Facily or modSTORAGE architecture.</p>
+<h3>5. Policy enforcement point</h3>
+<p>The enforcement point is the component able to apply the allowed consequence.</p>
+<p>Examples might include:</p>
+<ul>
+<li>showing or withholding a next-step control;</li>
+<li>routing a work item to a qualified queue;</li>
+<li>refusing to release a message or transaction;</li>
+<li>requiring an additional approval;</li>
+<li>limiting a credential to a defined scope and duration;</li>
+<li>placing a candidate action in observe-only mode.</li>
+</ul>
+<p>The enforcement point must validate that the decision is intended for its facility, action, resource, subject, policy version, and time window. It should record <code>enforced</code>, <code>not_enforced</code>, <code>partially_enforced</code>, <code>expired</code>, <code>superseded</code>, or <code>failed</code> separately.</p>
+<p>The <a href="https://csrc.nist.gov/pubs/sp/800/207/final">NIST Zero Trust Architecture publication</a> separates policy decision mechanisms, administration, and enforcement and rejects implicit trust based solely on network location or ownership. It is a cybersecurity architecture, not a complete facility operating model. The bounded design lesson is that a decision and the component enforcing it should be separately identifiable and observable.</p>
+<h3>6. Consequence adapter</h3>
+<p>The consequence adapter converts a permitted policy result into the narrow command a downstream system understands.</p>
+<p>This layer matters because policy language and device or application commands rarely share the same vocabulary. <code>ALLOW_CREDENTIAL_ISSUE</code> does not tell a specific controller how to create a credential, which doors it affects, when it starts, when it expires, or how revocation works.</p>
+<p>The adapter must not broaden the result. It should bind:</p>
+<ul>
+<li>decision ID;</li>
+<li>exact target and action;</li>
+<li>command version;</li>
+<li>permitted parameters;</li>
+<li>idempotency and correlation keys;</li>
+<li>time window;</li>
+<li>retry behavior;</li>
+<li>reversal command where available;</li>
+<li>downstream response identity.</li>
+</ul>
+<p>If the adapter cannot represent the policy consequence without losing meaning, the workflow should hold rather than improvise.</p>
+<h3>7. Evidence and observability plane</h3>
+<p>The evidence plane records what was proposed, decided, attempted, enforced, observed, reviewed, and reversed.</p>
+<p>Current <a href="https://www.openpolicyagent.org/docs/management-decision-logs">OPA decision-log documentation</a> describes product-specific events that can include a decision ID, policy query input, result, bundle revision, trace fields, and masking behavior. Those fields can support audit and offline debugging. They do not prove that the policy was authorized, the enforcement succeeded, or the outcome was correct. Inputs may also contain sensitive data, so logging must be intentionally minimized, masked, access-controlled, and retained under approved rules.</p>
+<p>For a facility workflow, preserve at least:</p>
+<ul>
+<li>policy and bundle version;</li>
+<li>input packet identity and admissibility result;</li>
+<li>decision, reasons, obligations, and expiry;</li>
+<li>enforcement request and response;</li>
+<li>observed real-world or downstream state where available;</li>
+<li>human review and override record;</li>
+<li>exception, retry, reversal, and rollback links;</li>
+<li>current owner and next action.</li>
+</ul>
+<p>An audit log is evidence about an event. It is not the event's meaning, authority, success, or business outcome.</p>
+<h3>8. Human review and exception plane</h3>
+<p>Human review should exist where judgment, consequence, law, safety, ambiguity, or policy requires it. The reviewer needs more than a red or green recommendation.</p>
+<p>Show:</p>
+<ul>
+<li>the proposed action and consequence;</li>
+<li>exact policy and input versions;</li>
+<li>source citations and freshness;</li>
+<li>conflicts, missing fields, and unknowns;</li>
+<li>deterministic reason codes;</li>
+<li>AI contribution, if any;</li>
+<li>available decisions and their authority requirements;</li>
+<li>time window and expiration;</li>
+<li>rollback or reversal path;</li>
+<li>reviewer identity, scope, and decision record.</li>
+</ul>
+<p>The queue should return a bounded disposition: <code>approved</code>, <code>denied</code>, <code>modified</code>, <code>returned_for_evidence</code>, <code>expired</code>, or another approved state. “Reviewed” alone says only that someone looked.</p>
+<h3>9. Governance and assurance plane</h3>
+<p>Governance decides which policies deserve to exist and whether they continue to work as intended.</p>
+<p>It owns:</p>
+<ul>
+<li>policy inventory and risk tier;</li>
+<li>current and target profiles;</li>
+<li>control mapping without equivalence claims;</li>
+<li>change, testing, deployment, and exception metrics;</li>
+<li>drift and stale-dependency review;</li>
+<li>sampling of decisions and enforcement;</li>
+<li>incident and harm escalation;</li>
+<li>periodic recertification or retirement;</li>
+<li>independent assessment where warranted.</li>
+</ul>
+<p>The <a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework 2.0 resource center</a> supports organization-selected cybersecurity outcomes, governance, risk context, and profiles. It does not prescribe this architecture. Similarly, <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">NIST SP 800-53 Rev. 5</a> offers a flexible, customizable control catalog spanning access, audit, configuration, assessment, monitoring, and other families. Its current page notes a 2025 Release 5.2.0. Selecting or mapping a control does not prove the control was implemented or effective.</p>
+<h2>A decision vocabulary designed for uncertainty</h2>
+<p>Binary <code>allow</code> and <code>deny</code> results are sometimes appropriate. Facility operations often need additional states.</p>
+<p>A proposed vocabulary might include:</p>
+<ul>
+<li><code>ALLOW</code> — the bounded action may proceed within the decision scope;</li>
+<li><code>DENY</code> — the bounded action may not proceed under the current policy;</li>
+<li><code>REQUIRE_REVIEW</code> — a qualified human disposition is required;</li>
+<li><code>NOT_APPLICABLE</code> — the policy does not govern this input;</li>
+<li><code>INDETERMINATE</code> — an error or missing dependency prevented evaluation;</li>
+<li><code>EXPIRED</code> — the decision is outside its permitted time window;</li>
+<li><code>OBSERVE_ONLY</code> — calculate and log without enforcement;</li>
+<li><code>ADVISE</code> — present a recommendation without action authority.</li>
+</ul>
+<p>XACML's standard result vocabulary includes <code>Permit</code>, <code>Deny</code>, <code>Indeterminate</code>, and <code>NotApplicable</code>. A self-storage method should not copy those terms carelessly, but it should preserve the same core insight: a decision engine needs an honest state for “the rule does not apply” and “the rule could not determine a result.”</p>
+<p>Do not convert <code>INDETERMINATE</code> into <code>ALLOW</code> or <code>DENY</code> by accident. The responsible owner must define fail behavior for each consequence class. A low-consequence display preference may use a different fallback from a credential change, payment release, customer notice, physical-work authorization, or account restriction.</p>
+<h2>A fictional access-credential example</h2>
+<p>At fictional Juniper Storage, a role-transition workflow proposes issuing a temporary facility credential.</p>
+<p>The policy input says:</p>
+<ul>
+<li>actor role source: current and authoritative;</li>
+<li>facility assignment: current;</li>
+<li>approved access profile: present;</li>
+<li>requested start and end: within the profile limit;</li>
+<li>training field: source unavailable;</li>
+<li>emergency flag: false;</li>
+<li>policy version: 12;</li>
+<li>evaluation mode: enforce.</li>
+</ul>
+<p>The policy returns <code>REQUIRE_REVIEW</code>, reason <code>TRAINING_SOURCE_UNAVAILABLE</code>, allowed consequence <code>NONE</code>, review queue <code>FACILITY-AUTHORITY-REVIEW</code>, expiry five minutes.</p>
+<p>The enforcement point does not issue a credential. The review queue displays the missing source, policy reason, requested scope, and reviewer authority requirement. A qualified reviewer may return the item for evidence or apply an approved exception. The access system's eventual response is recorded separately from the policy and review records.</p>
+<p>This is a fictional control walkthrough. It does not prescribe an access or training rule, demonstrate a deployed product, or claim a safety or security outcome.</p>
+<h2>What AI may and may not do</h2>
+<p>AI can help at the edges of the policy stack. It may:</p>
+<ul>
+<li>extract candidate facts with citations;</li>
+<li>classify a request into a candidate policy scope;</li>
+<li>identify missing or contradictory inputs;</li>
+<li>translate a human-readable rule into a draft for review;</li>
+<li>generate test cases and counterexamples;</li>
+<li>explain a deterministic decision in plain language;</li>
+<li>group exceptions by reason and age;</li>
+<li>compare policy versions and flag changed consequences;</li>
+<li>propose a review summary.</li>
+</ul>
+<p>AI should not:</p>
+<ul>
+<li>create organizational authority;</li>
+<li>decide which source is authoritative without an approved rule;</li>
+<li>silently fill a missing fact;</li>
+<li>transform a suggestion into executable policy;</li>
+<li>activate a policy version;</li>
+<li>broaden an allowed consequence;</li>
+<li>approve its own exception;</li>
+<li>claim enforcement from a decision response;</li>
+<li>claim effectiveness from log volume;</li>
+<li>convert uncertainty into success.</li>
+</ul>
+<p>Keep the AI output in its own evidence class: <code>candidate</code>, <code>proposed</code>, <code>explained</code>, or <code>flagged</code>. A deterministic rule, qualified human, or governed downstream system supplies the next authoritative disposition.</p>
+<h2>The minimum policy contract</h2>
+<p>Before an operator allows a policy to influence a facility action, require a contract that names:</p>
+<ol>
+<li>policy ID, title, owner, approver, and version;</li>
+<li>purpose, facility scope, entity scope, and prohibited uses;</li>
+<li>consequence class and allowed decision vocabulary;</li>
+<li>exact input schema, sources, clocks, freshness, and missing-data behavior;</li>
+<li>decision logic and reason codes;</li>
+<li>enforcement target and permitted command shape;</li>
+<li>human review and exception authority;</li>
+<li>observe, advise, or enforce mode;</li>
+<li>tests, coverage expectations, and adversarial cases;</li>
+<li>activation, expiration, rollback, and retirement rules;</li>
+<li>logging, masking, access, retention, and replay rules;</li>
+<li>monitoring, sampling, incident, and reassessment owners.</li>
+</ol>
+<p>Then test the contract at beginner, intermediate, advanced, and architect levels. Can a manager explain the difference between a decision and an enforcement? Can an administrator identify the active version? Can a reviewer see an unknown source? Can an architect replay a decision using the exact policy and admissible facts without silently reusing current state?</p>
+<p>The companion <a href="policy-contract-register-template.csv">policy contract register</a> provides 38 fields for authority, scope, fact admission, decisions, enforcement, review, logging, activation, rollback, and monitoring. The <a href="policy-as-code-readiness-suite.csv">40-case policy readiness suite</a> tests the reference model from basic state separation through distributed version skew, historical replay, semantic migration, AI-derived inputs, emergency change, and decommissioning. The <a href="policy-authority-reference-model.svg">policy-authority reference model</a> gives teams a visual walkthrough. Every row is fictional and requires qualified adaptation.</p>
+<h2>The architecture test</h2>
+<p>A policy-as-code system is not mature because its rules compile.</p>
+<p>It is mature when an operator can answer:</p>
+<ul>
+<li>Who authorized this rule?</li>
+<li>Which exact version evaluated which exact facts?</li>
+<li>What was unknown, stale, conflicting, or outside scope?</li>
+<li>What bounded decision was returned?</li>
+<li>Which component could enforce it?</li>
+<li>What did that component actually do?</li>
+<li>Which human owned the exception?</li>
+<li>How could the action be stopped, reversed, or reopened?</li>
+<li>What evidence would allow an independent reviewer to reconstruct the chain?</li>
+</ul>
+<p>Policy as code earns trust by making authority inspectable. When it hides the human decision behind a technical result, it has automated ambiguity instead of control.</p>
+<h2>Sources</h2>
+<p>The package-level <a href="source-register.csv">source register</a> records the date, exact claim supported, and limitations for every official source used below.</p>
+<ul>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">Artificial Intelligence Risk Management Framework 1.0</a>, NIST, January 26, 2023; current page checked August 22, 2026 and notes the framework is under revision.</li>
+<li><a href="https://airc.nist.gov/airmf-resources/playbook/">NIST AI RMF Playbook</a>, NIST AI Resource Center, mutable companion checked August 22, 2026.</li>
+<li><a href="https://www.nist.gov/cyberframework">Cybersecurity Framework 2.0</a>, NIST, CSF 2.0 released February 26, 2024; current resource center checked August 22, 2026.</li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">Security and Privacy Controls for Information Systems and Organizations, SP 800-53 Rev. 5</a>, NIST, final December 10, 2020; current page checked August 22, 2026 and notes Release 5.2.0 from August 27, 2025.</li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/207/final">Zero Trust Architecture, SP 800-207</a>, NIST, August 2020.</li>
+<li><a href="https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html">eXtensible Access Control Markup Language Version 3.0</a>, OASIS Standard, January 22, 2013.</li>
+<li><a href="https://www.openpolicyagent.org/docs/deploy">How to Deploy OPA</a>, Open Policy Agent official documentation, current mutable page checked August 22, 2026.</li>
+<li><a href="https://www.openpolicyagent.org/docs/management-decision-logs">Decision Logs</a>, Open Policy Agent official documentation, current mutable page checked August 22, 2026.</li>
+</ul>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/operations-agent-hand-back-control/">Where an Operations Agent Must Hand Back Control</a></h3><p>Bind agent actions to identity, authority, source, policy, consequence, reversibility, handback, resumption, and reconciliation.</p><a href="/writing/operations-agent-hand-back-control/" class="text-link" aria-label="Read the article: Where an Operations Agent Must Hand Back Control">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/facility-observation-coverage/">The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish</a></h3><p>Trace one facility claim through its sources, timing, transformations, missingness, privacy limits, blind spots, and explicit evidence gate.</p><a href="/writing/facility-observation-coverage/" class="text-link" aria-label="Read the article: The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/human-review-queue-without-bottleneck/">Designing a Human Review Queue That Does Not Become a Bottleneck</a></h3><p>Route consequential work through evidence-complete admission, qualified review, bounded capacity, visible aging, execution, reconciliation, and reopening.</p><a href="/writing/human-review-queue-without-bottleneck/" class="text-link" aria-label="Read the article: Designing a Human Review Queue That Does Not Become a Bottleneck">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
