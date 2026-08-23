@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Anatomy of a governed one-page facility fact sheet</title>
+  <desc id="desc">A facility fact sheet begins with a stable facility identity and version, then separates approved names, physical and postal location, customer contact routes, hours and time zone, lifecycle and features, source and change control, and destination reconciliation. Every field carries a source, state, owner, and review time. AI may propose candidates but cannot publish or decide authority.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071A2B"/>
+      <stop offset="1" stop-color="#102F43"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#020B12" flood-opacity="0.4"/>
+    </filter>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .eyebrow { font-size: 17px; font-weight: 780; letter-spacing: 3px; fill: #78E2CF; }
+      .title { font-size: 42px; font-weight: 780; fill: #F5F9FB; }
+      .subtitle { font-size: 19px; font-weight: 440; fill: #C3D2DB; }
+      .paper-title { font-size: 24px; font-weight: 780; fill: #0A2030; }
+      .paper-sub { font-size: 14px; font-weight: 650; fill: #345369; }
+      .section-no { font-size: 14px; font-weight: 830; letter-spacing: 1.2px; fill: #092135; }
+      .section-title { font-size: 20px; font-weight: 760; fill: #0A2030; }
+      .section-item { font-size: 14px; font-weight: 520; fill: #315266; }
+      .side-title { font-size: 20px; font-weight: 760; fill: #F3F7FA; }
+      .side-label { font-size: 14px; font-weight: 830; letter-spacing: 1.2px; fill: #78E2CF; }
+      .side-item { font-size: 14px; font-weight: 520; fill: #C1D3DD; }
+      .chip { font-size: 13px; font-weight: 820; letter-spacing: 1.1px; fill: #092135; }
+      .footer { font-size: 15px; font-weight: 620; fill: #D1DFE6; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <circle cx="1505" cy="85" r="195" fill="#18536B" opacity="0.24"/>
+  <circle cx="55" cy="865" r="215" fill="#146458" opacity="0.17"/>
+
+  <g class="sans">
+    <text x="72" y="62" class="eyebrow">FACILITY IDENTITY CONTROL</text>
+    <text x="72" y="116" class="title">The one-page fact sheet is a control surface.</text>
+    <text x="72" y="154" class="subtitle">Compact enough for a manager. Structured enough for every destination to cite.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="72" y="194" width="1016" height="626" rx="24" fill="#F4F8F8"/>
+    </g>
+
+    <rect x="96" y="218" width="968" height="96" rx="18" fill="#DDF5EF"/>
+    <text x="120" y="252" class="paper-title">Stable facility identity + current version</text>
+    <text x="120" y="282" class="paper-sub">facility_id • fact_sheet_version • effective_at • reviewed_at • next_review_at • current_state</text>
+    <rect x="850" y="240" width="188" height="42" rx="21" fill="#78E2CF"/>
+    <text x="880" y="266" class="chip">CITE THIS VERSION</text>
+
+    <rect x="96" y="338" width="300" height="194" rx="18" fill="#E4F0F8"/>
+    <text x="118" y="370" class="section-no">01</text>
+    <text x="118" y="405" class="section-title">Identity names</text>
+    <text x="118" y="436" class="section-item">customer • sign • internal</text>
+    <text x="118" y="462" class="section-item">platform • legal reference</text>
+    <text x="118" y="488" class="section-item">current • prior • conflict</text>
+    <text x="118" y="514" class="section-item">Never infer relationships.</text>
+
+    <rect x="430" y="338" width="300" height="194" rx="18" fill="#F9EDD5"/>
+    <text x="452" y="370" class="section-no">02</text>
+    <text x="452" y="405" class="section-title">Location</text>
+    <text x="452" y="436" class="section-item">postal components • display</text>
+    <text x="452" y="462" class="section-item">map pin • precision • source</text>
+    <text x="452" y="488" class="section-item">arrival note • conflict</text>
+    <text x="452" y="514" class="section-item">Mailing ≠ legal ≠ entrance.</text>
+
+    <rect x="764" y="338" width="300" height="194" rx="18" fill="#F3E5F0"/>
+    <text x="786" y="370" class="section-no">03</text>
+    <text x="786" y="405" class="section-title">Contact routes</text>
+    <text x="786" y="436" class="section-item">phone • email • canonical URL</text>
+    <text x="786" y="462" class="section-item">purpose • technical check</text>
+    <text x="786" y="488" class="section-item">operational handling • owner</text>
+    <text x="786" y="514" class="section-item">Connection ≠ handling.</text>
+
+    <rect x="96" y="558" width="300" height="226" rx="18" fill="#EAF3E3"/>
+    <text x="118" y="590" class="section-no">04</text>
+    <text x="118" y="625" class="section-title">Hours + time zone</text>
+    <text x="118" y="656" class="section-item">office • gate • support</text>
+    <text x="118" y="682" class="section-item">named zone • valid interval</text>
+    <text x="118" y="708" class="section-item">holiday / special overlay</text>
+    <text x="118" y="734" class="section-item">source • review • destination</text>
+    <text x="118" y="766" class="section-item">Hours are never one field.</text>
+
+    <rect x="430" y="558" width="300" height="226" rx="18" fill="#EDEAF8"/>
+    <text x="452" y="590" class="section-no">05</text>
+    <text x="452" y="625" class="section-title">Lifecycle + features</text>
+    <text x="452" y="656" class="section-item">current • pending • unknown</text>
+    <text x="452" y="682" class="section-item">verified • limited • held</text>
+    <text x="452" y="708" class="section-item">approved public wording</text>
+    <text x="452" y="734" class="section-item">open dependency • next owner</text>
+    <text x="452" y="766" class="section-item">Do not copy across locations.</text>
+
+    <rect x="764" y="558" width="300" height="226" rx="18" fill="#DDEFF3"/>
+    <text x="786" y="590" class="section-no">06</text>
+    <text x="786" y="625" class="section-title">Source + sync</text>
+    <text x="786" y="656" class="section-item">source • owner • observed time</text>
+    <text x="786" y="682" class="section-item">website • profile • routing</text>
+    <text x="786" y="708" class="section-item">submitted • applied • readback</text>
+    <text x="786" y="734" class="section-item">discrepancy • rollback</text>
+    <text x="786" y="766" class="section-item">Every destination has a state.</text>
+
+    <rect x="1130" y="194" width="398" height="626" rx="24" fill="#0D2B3D" stroke="#3B6075"/>
+    <text x="1158" y="236" class="side-title">Every field carries four controls</text>
+
+    <rect x="1158" y="268" width="342" height="92" rx="18" fill="#14394C"/>
+    <text x="1180" y="300" class="side-label">SOURCE</text>
+    <text x="1180" y="330" class="side-item">Exact record, locator, and authority</text>
+
+    <rect x="1158" y="380" width="342" height="92" rx="18" fill="#14394C"/>
+    <text x="1180" y="412" class="side-label">STATE</text>
+    <text x="1180" y="442" class="side-item">Current, pending, conflict, unknown, held</text>
+
+    <rect x="1158" y="492" width="342" height="92" rx="18" fill="#14394C"/>
+    <text x="1180" y="524" class="side-label">OWNER</text>
+    <text x="1180" y="554" class="side-item">Named queue, authority, and next action</text>
+
+    <rect x="1158" y="604" width="342" height="92" rx="18" fill="#14394C"/>
+    <text x="1180" y="636" class="side-label">TIME</text>
+    <text x="1180" y="666" class="side-item">Observed, effective, checked, review due</text>
+
+    <rect x="1158" y="724" width="342" height="64" rx="18" fill="#78E2CF"/>
+    <text x="1180" y="750" class="chip">AI OUTPUT = CANDIDATE</text>
+    <text x="1180" y="772" class="chip">NO AUTHORITY • NO PUBLISH</text>
+
+    <text x="72" y="864" class="footer">Prepared ≠ approved • Submitted ≠ applied • Applied ≠ public readback • Public readback ≠ indexing, ranking, coverage, or recognition</text>
+  </g>
+</svg>
