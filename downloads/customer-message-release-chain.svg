@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI-drafted customer message release chain</title>
+  <desc id="desc">An AI draft becomes a candidate message with a stable identity. Claims are extracted and linked to current sources. Recipient scope, authority, consequence, privacy, accessibility, channel, and correction controls are reviewed before a human can approve an exact message and population for an exact queue. Queue, provider acceptance, delivery, response, and customer action remain separate outcome states.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071A2B"/>
+      <stop offset="1" stop-color="#143044"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020B12" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#78E2CF"/>
+    </marker>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .eyebrow { font-size: 17px; font-weight: 780; letter-spacing: 3px; fill: #78E2CF; }
+      .title { font-size: 42px; font-weight: 780; fill: #F4F8FA; }
+      .subtitle { font-size: 19px; font-weight: 440; fill: #C2D2DC; }
+      .step { font-size: 14px; font-weight: 830; letter-spacing: 1.2px; fill: #0A2132; }
+      .card-title { font-size: 22px; font-weight: 770; fill: #0A2132; }
+      .card-item { font-size: 14px; font-weight: 520; fill: #315165; }
+      .panel-title { font-size: 19px; font-weight: 760; fill: #F1F6F9; }
+      .panel-item { font-size: 14px; font-weight: 520; fill: #C3D4DE; }
+      .gate { font-size: 15px; font-weight: 820; letter-spacing: 1.2px; fill: #092034; }
+      .state { font-size: 13px; font-weight: 720; fill: #D4E0E7; }
+      .footer { font-size: 15px; font-weight: 650; fill: #D6E2E8; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <circle cx="1490" cy="82" r="195" fill="#175469" opacity="0.23"/>
+  <circle cx="70" cy="860" r="210" fill="#136456" opacity="0.17"/>
+
+  <g class="sans">
+    <text x="72" y="62" class="eyebrow">CUSTOMER MESSAGE RELEASE CONTROL</text>
+    <text x="72" y="116" class="title">A polished AI draft is still only a candidate.</text>
+    <text x="72" y="154" class="subtitle">Release requires exact claims, sources, recipients, authority, consequences, and a correction path.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="72" y="208" width="252" height="248" rx="22" fill="#DDF5EF"/>
+      <rect x="372" y="208" width="252" height="248" rx="22" fill="#E2F0FA"/>
+      <rect x="672" y="208" width="252" height="248" rx="22" fill="#F9EDD4"/>
+      <rect x="972" y="208" width="252" height="248" rx="22" fill="#F2E5F1"/>
+      <rect x="1272" y="208" width="256" height="248" rx="22" fill="#E8ECF8"/>
+    </g>
+
+    <text x="96" y="240" class="step">01 • IDENTIFY</text>
+    <text x="96" y="278" class="card-title">Candidate message</text>
+    <text x="96" y="312" class="card-item">message ID + version</text>
+    <text x="96" y="339" class="card-item">purpose + facility</text>
+    <text x="96" y="366" class="card-item">channel + send window</text>
+    <text x="96" y="393" class="card-item">AI contribution labeled</text>
+    <text x="96" y="430" class="card-item">Not approval. Not a send.</text>
+
+    <text x="396" y="240" class="step">02 • DECOMPOSE</text>
+    <text x="396" y="278" class="card-title">Claim ledger</text>
+    <text x="396" y="312" class="card-item">exact text spans</text>
+    <text x="396" y="339" class="card-item">identity • amount • date</text>
+    <text x="396" y="366" class="card-item">status • feature • action</text>
+    <text x="396" y="393" class="card-item">transformation + limitation</text>
+    <text x="396" y="430" class="card-item">One sentence can hold many claims.</text>
+
+    <text x="696" y="240" class="step">03 • SOURCE</text>
+    <text x="696" y="278" class="card-title">Fact packet</text>
+    <text x="696" y="312" class="card-item">record + field + owner</text>
+    <text x="696" y="339" class="card-item">observed + effective time</text>
+    <text x="696" y="366" class="card-item">freshness + conflict</text>
+    <text x="696" y="393" class="card-item">unknown stays unknown</text>
+    <text x="696" y="430" class="card-item">A locator is not source authority.</text>
+
+    <text x="996" y="240" class="step">04 • REVIEW</text>
+    <text x="996" y="278" class="card-title">Human gate</text>
+    <text x="996" y="312" class="card-item">recipient + population</text>
+    <text x="996" y="339" class="card-item">authority + consequence</text>
+    <text x="996" y="366" class="card-item">privacy + accessibility</text>
+    <text x="996" y="393" class="card-item">channel + correction</text>
+    <text x="996" y="430" class="card-item">Exact disposition + expiry.</text>
+
+    <text x="1296" y="240" class="step">05 • RELEASE</text>
+    <text x="1296" y="278" class="card-title">Exact queue only</text>
+    <text x="1296" y="312" class="card-item">message version</text>
+    <text x="1296" y="339" class="card-item">query version</text>
+    <text x="1296" y="366" class="card-item">channel + window</text>
+    <text x="1296" y="393" class="card-item">pause + cancel control</text>
+    <text x="1296" y="430" class="card-item">Approval is not delivery.</text>
+
+    <path d="M324 332 H364" stroke="#78E2CF" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M624 332 H664" stroke="#78E2CF" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M924 332 H964" stroke="#78E2CF" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M1224 332 H1264" stroke="#78E2CF" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="72" y="504" width="710" height="160" rx="22" fill="#0C2A3B" stroke="#3A5F73"/>
+    <text x="98" y="540" class="panel-title">Review packet must show</text>
+    <text x="98" y="575" class="panel-item">Audience • purpose • claims • sources • authority</text>
+    <text x="98" y="604" class="panel-item">Consequence • privacy • channel • accessibility • final disposition</text>
+    <rect x="98" y="624" width="276" height="28" rx="14" fill="#78E2CF"/>
+    <text x="120" y="643" class="gate">AI OUTPUT = CANDIDATE</text>
+
+    <rect x="818" y="504" width="710" height="160" rx="22" fill="#143247" stroke="#6D5A79"/>
+    <text x="844" y="540" class="panel-title">Return states are control states</text>
+    <text x="844" y="575" class="panel-item">source • population • wording • privacy • accessibility • authority</text>
+    <text x="844" y="604" class="panel-item">A visible hold is more truthful than a fast unsupported send.</text>
+    <rect x="844" y="624" width="356" height="28" rx="14" fill="#D7A8D0"/>
+    <text x="866" y="643" class="gate">CORRECTION PLAN BEFORE RELEASE</text>
+
+    <rect x="72" y="706" width="1456" height="100" rx="22" fill="#0A2637" stroke="#267361"/>
+    <text x="98" y="738" class="panel-title">Outcome ladder — never collapse these states</text>
+    <text x="98" y="775" class="state">APPROVED</text>
+    <text x="232" y="775" class="state">→ QUEUED</text>
+    <text x="374" y="775" class="state">→ PROVIDER ACCEPTED</text>
+    <text x="596" y="775" class="state">→ DELIVERY REPORTED</text>
+    <text x="816" y="775" class="state">→ OPENED / VIEWED</text>
+    <text x="1018" y="775" class="state">→ RESPONSE</text>
+    <text x="1150" y="775" class="state">→ CUSTOMER ACTION</text>
+    <text x="1360" y="775" class="state">→ CORRECTED</text>
+
+    <text x="72" y="858" class="footer">Every state requires its own source. No send state proves reading, understanding, causation, compliance, coverage, or recognition.</text>
+  </g>
+</svg>
