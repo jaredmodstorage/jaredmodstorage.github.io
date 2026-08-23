@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.K38vg5AS.css" data-rsc-css-href="/_next/static/css/index.K38vg5AS.css" data-precedence="vite-rsc/importer-resources"/><title>The Missing Denominator Test for Self-Storage Metrics | Jared Mastroianni</title><meta name="description" content="A practical self-storage diagnostic for making occupancy, conversion, delinquency, work-order, response, building, and AI metrics disclose their population, exclusions, time, source, coverage, uncertainty, and authority."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Missing Denominator Test for Self-Storage Metrics | Jared Mastroianni"/><meta property="og:description" content="A practical self-storage diagnostic for making occupancy, conversion, delinquency, work-order, response, building, and AI metrics disclose their population, exclusions, time, source, coverage, uncertainty, and authority."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/missing-denominator-test.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A metric release diagram showing a numerator above a governed denominator, seven questions for count, eligibility, time, facility scope, lineage, quality, and authority, a complete compact display, and four sensitivity challenges before separate approval states."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Missing Denominator Test for Self-Storage Metrics | Jared Mastroianni"/><meta name="twitter:description" content="A practical self-storage diagnostic for making occupancy, conversion, delinquency, work-order, response, building, and AI metrics disclose their population, exclusions, time, source, coverage, uncertainty, and authority."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/missing-denominator-test.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/#article","url":"https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Missing Denominator Test for Self-Storage Metrics","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/missing-denominator-test.png","description":"A practical self-storage diagnostic for making occupancy, conversion, delinquency, work-order, response, building, and AI metrics disclose their population, exclusions, time, source, coverage, uncertainty, and authority.","proficiencyLevel":"Advanced","about":["Self-storage operations","Metric governance","Denominators","Data quality","Benchmarking","Operational intelligence","Responsible AI"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Research methods","item":"https://jaredmodstorage.github.io/writing/topics/research/"},{"@type":"ListItem","position":3,"name":"The Missing Denominator Test for Self-Storage Metrics","item":"https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/research/">Research methods</a></li><li aria-current="page">The Missing Denominator Test for Self-Storage Metrics</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Advanced research note<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Missing Denominator Test for Self-Storage Metrics</h1><p class="lede">Require every rate, ratio, average, benchmark, or comparison to disclose its eligible population, exclusions, time, source, coverage, uncertainty, and authority.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>12 min read</span></div></header><div class="essay-body"><p>A percentage can look precise while concealing the most important part of the claim.</p>
+<p>“Conversion rose to 42 percent.” “Occupancy reached 91 percent.” “The automation handled 87 percent of requests.” Each statement invites a decision. None is ready to support one until the reader can reconstruct what entered the denominator, what stayed out, when the population existed, and which source held authority.</p>
+<p>The denominator is not merely the number below the line. It is the operating population a metric claims to describe.</p>
+<p>That population can change when a unit goes offline, a lead is duplicated, a move-in crosses midnight, an account leaves the active set, a work order is canceled, an AI case is never sampled, or one facility stops sending data. If those changes are hidden, the percentage may improve while the operation does not.</p>
+<p>This is the missing denominator test: <strong>before using a rate, ratio, average, benchmark, or comparison, require enough evidence to reproduce the eligible population and its exclusions.</strong></p>
+<p>The method is designed for self-storage operators. It is an authored operating control, not a mandatory industry standard or a claim that one formula fits every portfolio.</p>
+<p><a href="missing-denominator-test.svg"><img src="missing-denominator-test.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A metric release diagram showing a numerator above a governed denominator, seven questions for count, eligibility, time, facility scope, lineage, quality, and authority, a complete compact display, and four sensitivity challenges before separate approval states."></a></p>
+<p><a href="missing-denominator-test.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="missing-denominator-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="missing-denominator-downloads">Inspect the claim card, denominator register, and readiness gates.</h2>
+<p>These exact files contain an authored diagnostic and fictional metrics. They do not establish a company KPI, benchmark, product or model performance, causal result, accounting or legal conclusion, certification, external review, coverage, or recognition.</p>
+<div><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="metric-claim-card-template.md" download>Download the metric claim-card template <span aria-hidden="true">↓</span></a><a href="denominator-control-register.csv" download>Download the denominator control register <span aria-hidden="true">↓</span></a><a href="missing-denominator-readiness-suite.csv" download>Download the readiness suite <span aria-hidden="true">↓</span></a><a href="missing-denominator-test.svg" download>Download the accessible test SVG <span aria-hidden="true">↓</span></a><a href="missing-denominator-test.png" download>Download the test PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+<h2>A metric is a governed statement, not a dashboard tile</h2>
+<p>The familiar expression is:</p>
+<blockquote>
+<p>metric value = numerator ÷ denominator</p>
+</blockquote>
+<p>An operationally useful expression is closer to:</p>
+<blockquote>
+<p>metric value = function(numerator rule, denominator rule, facility set, cohort, time window, source state, exclusions, transformation, and uncertainty)</p>
+</blockquote>
+<p>Two teams can calculate “occupancy” correctly and still calculate different things. One may use occupied units divided by all physical units. Another may use occupied rentable units divided by units available for rent. One may exclude company units, damaged units, or units under construction. Another may leave them in. The resulting percentages are not comparable merely because their labels match.</p>
+<p>The <a href="https://www.census.gov/naics/?details=531130&amp;input=531130&amp;year=2022">U.S. Census Bureau's 2022 NAICS definition for 531130</a> identifies establishments primarily engaged in renting or leasing self-storage space and distinguishes the category from general warehousing and coin-operated lockers. That classification is useful for scope. It does not turn every self-storage facility into a valid peer for every metric. Climate control, unit mix, maturity, channel strategy, lifecycle, data system, and operating rules can still make populations materially different.</p>
+<h2>Run the seven-question test</h2>
+<p>A decision-grade metric should answer seven questions without relying on tribal knowledge.</p>
+<h3>1. What exactly is being counted?</h3>
+<p>Name the record type and the qualifying event. “Leads” is not enough. Does the numerator count signed leases, completed move-ins, paid reservations, or any record moved to a won stage? Are reversals removed? Can one person create several lead records?</p>
+<h3>2. What population was eligible?</h3>
+<p>State the denominator rule in executable language. A lead-conversion denominator might include unique inquiries received during the period that met a documented qualification rule. It might exclude spam, employee tests, exact duplicates, unsupported markets, and inquiries received after a cutoff. The rule should not change silently to improve the result.</p>
+<h3>3. When did membership begin and end?</h3>
+<p>Declare the observation window, cohort rule, cutoff, named time zone, and late-arrival policy. A same-month conversion rate asks a different question from a cohort rate that follows July inquiries for 30 days. Neither is inherently superior. They are not substitutes.</p>
+<h3>4. Which facility set does the claim cover?</h3>
+<p>Identify every included facility by stable identifier and version the set. “Portfolio” is not a stable population when facilities open, close, change systems, enter renovation, or fail to report. A comparison should show whether it uses all facilities, a fixed cohort, a same-store cohort, or only facilities with complete data.</p>
+<h3>5. Which source and query produced it?</h3>
+<p>Record the source system, record and field authority, extraction time, query or semantic-model version, transformations, and known conflicts. A dashboard cache is a locator, not necessarily the authoritative source. The <a href="https://www.gao.gov/products/GAO-20-283G">GAO data-reliability guide</a> frames reliability through accuracy, completeness, and applicability for the intended purpose. Its guidance is written for audits, but the discipline transfers: a field that is accurate for billing can still be inapplicable to a marketing cohort.</p>
+<h3>6. What is missing or uncertain?</h3>
+<p>Report excluded records, unknown states, missing facilities, late events, sample size, coverage, and material limitations. Do not silently treat unknown as false or missing as zero. The <a href="https://www2.census.gov/about/policies/quality/quality-standards.pdf">Census Bureau Statistical Quality Standards</a> address coverage, nonresponse, comparisons, uncertainty, and reproducible documentation in federal statistics. A private operator is not bound by those standards, but they are a useful reminder that a number's quality depends on how the population was observed.</p>
+<h3>7. Who may approve the definition and release the claim?</h3>
+<p>Name the metric owner, source owner, reviewer, decision use, audience, expiry, and correction path. A data analyst may implement a definition without holding authority to change the operating policy it represents. An AI system may compute or explain a metric without having authority to approve its population or publish the result.</p>
+<p>If any answer is missing, the metric should be labeled <strong>held</strong>, <strong>diagnostic only</strong>, or <strong>not comparable</strong>—not rounded into confidence.</p>
+<h2>Six self-storage metrics that fail differently</h2>
+<p>The test becomes practical when applied to familiar measures.</p>
+<h3>Physical occupancy</h3>
+<p>Possible numerator: occupied rentable units at an as-of time.</p>
+<p>Possible denominator: rentable units available within the same facility snapshot.</p>
+<p>Questions: Are offline, damaged, company-use, model, combined, overlocked, reserved, or under-construction units included? Does a move-out at 10:00 and move-in at 15:00 count once, twice, or only at the snapshot? Is the value unit-weighted or area-weighted?</p>
+<p>The word “possible” matters. The owner must approve the definition appropriate to the decision.</p>
+<h3>Economic occupancy</h3>
+<p>This label is especially dangerous because teams may divide different revenue concepts by different potential-revenue concepts. Earned, billed, collected, discounted, waived, tax-inclusive, insurance-inclusive, and bad-debt-adjusted amounts are not interchangeable. The denominator requires an approved rate basis, time basis, unit eligibility rule, and treatment of concessions and offline inventory.</p>
+<p>Do not compare economic occupancy until both sides disclose the same contract.</p>
+<h3>Lead conversion</h3>
+<p>A 40 percent conversion rate could mean 40 move-ins from 100 unique qualified inquiries. It could also mean 40 signed leases from 100 form submissions, including duplicates and spam, or 40 move-ins divided by the 100 leads still visible after records were deleted.</p>
+<p>Show the cohort and counts: <code>40 / 100</code>, not only <code>40%</code>. Then show the qualification, deduplication, attribution, maturity, and reversal rules.</p>
+<h3>Delinquency</h3>
+<p>An account rate and a dollar rate answer different questions. The account denominator might be active accounts at a defined as-of time; the dollar denominator might be charges due under a defined ledger policy. Grace periods, disputed charges, partial payments, credits, write-offs, autopay retries, and move-out state can change either population.</p>
+<p>A delinquency trend is not reproducible without the aging rule and snapshot time.</p>
+<h3>Work-order completion</h3>
+<p>“Ninety percent completed on time” requires a denominator of eligible work orders with a defined due-time rule. Were canceled, duplicate, reopened, waiting-on-vendor, safety-held, or no-access cases excluded? Was the clock paused? Did the denominator include only closed work, allowing an unresolved backlog to disappear?</p>
+<p>Publish the open eligible backlog next to the completion rate when the decision depends on both.</p>
+<h3>AI-assisted handling</h3>
+<p>“The AI handled 85 percent” is not a performance measure until “handled” is defined. Did the system draft, classify, recommend, route, answer, execute, or close? Was the denominator all received cases, supported cases, cases passing a confidence threshold, or only cases sampled for review? Were human corrections counted?</p>
+<p>The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a> describes context-sensitive measurement, documented test details, benchmarks, uncertainty, and evaluation in conditions similar to deployment. Its current <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">Measure-function presentation</a> also says metric appropriateness should be reassessed. Neither source defines a self-storage automation rate. The operator still has to expose the denominator, affected population, human baseline, review coverage, error classes, and consequences.</p>
+<h2>The denominator can move without the operation moving</h2>
+<p>Consider a fictional two-facility portfolio.</p>
+<table>
+<thead>
+<tr>
+  <th>Facility</th>
+  <th style="text-align:right">Prior conversions</th>
+  <th style="text-align:right">Prior qualified leads</th>
+  <th style="text-align:right">Current conversions</th>
+  <th style="text-align:right">Current qualified leads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Cedar Lock</td>
+  <td style="text-align:right">36</td>
+  <td style="text-align:right">90</td>
+  <td style="text-align:right">38</td>
+  <td style="text-align:right">95</td>
+</tr>
+<tr>
+  <td>Harbor Stack</td>
+  <td style="text-align:right">14</td>
+  <td style="text-align:right">35</td>
+  <td style="text-align:right">13</td>
+  <td style="text-align:right">20</td>
+</tr>
+<tr>
+  <td>Total</td>
+  <td style="text-align:right">50</td>
+  <td style="text-align:right">125</td>
+  <td style="text-align:right">51</td>
+  <td style="text-align:right">115</td>
+</tr>
+</tbody>
+</table>
+<p>The fictional portfolio conversion rate rises from 40.0 percent to about 44.3 percent. Conversions rose by one, while the denominator fell by ten. Harbor Stack's apparent rate rises sharply because its qualified-lead population contracts.</p>
+<p>That may reflect a real improvement, a channel shift, stricter qualification, missing source records, or a broken intake. The percentage alone cannot decide which.</p>
+<p>The correct response is not to reject the metric. It is to decompose the change:</p>
+<ul>
+<li>numerator change;</li>
+<li>denominator change;</li>
+<li>definition change;</li>
+<li>facility-set change;</li>
+<li>source-coverage change;</li>
+<li>cohort-maturity change;</li>
+<li>and unresolved unknowns.</li>
+</ul>
+<h2>A comparison needs a comparison contract</h2>
+<p>Before stating that one facility, period, channel, or model is “better,” record:</p>
+<ul>
+<li>metric definition and version;</li>
+<li>exact numerator and denominator counts;</li>
+<li>unit of analysis;</li>
+<li>facility-set version;</li>
+<li>observation window and named time zone;</li>
+<li>cohort entry, exit, maturity, and late-event rules;</li>
+<li>inclusions and exclusions;</li>
+<li>source and query versions;</li>
+<li>completeness and unknown-state counts;</li>
+<li>weighting and aggregation method;</li>
+<li>uncertainty or sensitivity analysis;</li>
+<li>comparator identity and comparability decision;</li>
+<li>owner, reviewer, release state, and expiry.</li>
+</ul>
+<p>This contract also matters for building metrics. The <a href="https://www.energy.gov/cmei/femp/screening-building-re-tuning-potential-0">Department of Energy's building re-tuning guidance</a> explains energy use intensity as energy consumption normalized by building square footage and notes that weather, climate, activity, and construction affect the measure. Even a familiar denominator such as square footage requires a defined area, period, source, and comparison context.</p>
+<p>At the expert level, test whether a conclusion survives reasonable alternate denominators. Recalculate with and without disputed exclusions. Separate fixed-cohort from rolling-population results. Show both facility-weighted and unit-weighted portfolio values when they answer different questions. If the conclusion flips, report the sensitivity instead of choosing the friendliest view.</p>
+<p>The <a href="https://www.nist.gov/pml/nist-technical-note-1297">NIST Technical Note 1297</a> concerns NIST measurement results, not self-storage dashboards. Its core discipline is still instructive: define what is being measured, identify uncertainty components, and report uncertainty rather than pretending a measured value is exact. Applying that discipline here is an analogy, not a claim of formal metrological conformity.</p>
+<h2>A minimum display standard</h2>
+<p>A decision-facing metric should display more than one large number. A compact standard is:</p>
+<blockquote>
+<p><strong>44.3% (51 / 115)</strong> · July qualified-lead cohort · 2 facilities · 30-day maturity · 7 duplicate/spam records excluded · source coverage 98.4% · definition v3.2 · calculated 2026-08-22 14:00 America/Denver · owner: Revenue Operations · status: diagnostic</p>
+</blockquote>
+<p>That line is fictional, but its structure is useful. It lets a reviewer challenge the population without reverse-engineering the dashboard.</p>
+<p>For executive rollups, keep the compact display and link it to a metric claim card containing the full contract. For customer-facing, investor-facing, or public claims, add the audience permission, substantiation, review, and correction controls appropriate to that release. Internal approval does not establish external eligibility.</p>
+<h2>What AI can and cannot do</h2>
+<p>AI can help:</p>
+<ul>
+<li>inventory candidate definitions across reports;</li>
+<li>identify missing denominator fields;</li>
+<li>compare query versions;</li>
+<li>flag facility-set drift;</li>
+<li>generate alternate-denominator sensitivity runs;</li>
+<li>trace claim text to a metric contract;</li>
+<li>and draft a limitation note for human review.</li>
+</ul>
+<p>AI should not:</p>
+<ul>
+<li>invent an eligible population;</li>
+<li>treat missing as zero;</li>
+<li>choose exclusions that make a result look better;</li>
+<li>infer source authority from field names;</li>
+<li>declare cohorts comparable because labels match;</li>
+<li>approve its own benchmark;</li>
+<li>suppress uncertainty or conflicting results;</li>
+<li>or publish a metric without the exact authorized release gate.</li>
+</ul>
+<p>The model's confidence is not the metric's coverage, and fluent explanation is not evidence that the denominator is correct.</p>
+<h2>The operator exercise</h2>
+<p>Choose six metrics currently used in meetings: one inventory metric, one revenue or delinquency metric, one demand metric, one facility-work metric, one customer-communication metric, and one AI or automation metric.</p>
+<p>For each metric:</p>
+<ol>
+<li>Write the exact decision it supports.</li>
+<li>Record the displayed value and reconstruct numerator and denominator counts.</li>
+<li>Define the eligible population without using the metric's label.</li>
+<li>List every exclusion, unknown, missing facility, and late event.</li>
+<li>Identify source, field, query, facility-set, and definition versions.</li>
+<li>Recalculate using one reasonable alternate denominator.</li>
+<li>Mark whether the conclusion survives.</li>
+<li>Assign an owner, reviewer, release state, expiry, and correction path.</li>
+</ol>
+<p>Use the companion <a href="metric-claim-card-template.md">metric claim card</a>, <a href="denominator-control-register.csv">denominator control register</a>, <a href="missing-denominator-readiness-suite.csv">readiness suite</a>, and <a href="missing-denominator-test.svg">visual test</a>. Hold any claim whose denominator cannot be reproduced.</p>
+<h2>The release question</h2>
+<p>Before a metric drives a decision, the owner should be able to say:</p>
+<p><strong>I can identify the population this number describes, reproduce who entered and left it, explain the time and facility scope, show the source and transformation, disclose what is missing or uncertain, and name who approved this definition for this decision.</strong></p>
+<p>If that sentence is not supported, the metric is not decision-grade yet.</p>
+<h2>Sources</h2>
+<p>The companion <a href="source-register.csv">source register</a> records source owner, publication or version date, retrieval date, durable locator, claim supported, limitation, and provenance note.</p>
+<ul>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">Artificial Intelligence Risk Management Framework 1.0</a>, NIST, January 26, 2023; current page checked August 22, 2026 and notes that the framework is under revision.</li>
+<li><a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">AI RMF Core: Measure</a>, NIST AI Resource Center, mutable presentation of AI RMF 1.0 checked August 22, 2026.</li>
+<li><a href="https://www.gao.gov/products/GAO-20-283G">Assessing Data Reliability, GAO-20-283G</a>, U.S. Government Accountability Office, December 16, 2019.</li>
+<li><a href="https://www2.census.gov/about/policies/quality/quality-standards.pdf">Statistical Quality Standards</a>, U.S. Census Bureau, February 21, 2023.</li>
+<li><a href="https://www.nist.gov/pml/nist-technical-note-1297">NIST Technical Note 1297</a>, 1994 edition; current page updated May 6, 2026.</li>
+<li><a href="https://www.energy.gov/cmei/femp/screening-building-re-tuning-potential-0">Screening a Building for Re-tuning Potential</a>, U.S. Department of Energy, current page checked August 22, 2026.</li>
+<li><a href="https://www.census.gov/naics/?details=531130&amp;input=531130&amp;year=2022">2022 NAICS definition 531130: Lessors of Miniwarehouses and Self-Storage Units</a>, U.S. Census Bureau, 2022 edition; page revised June 11, 2026.</li>
+</ul>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert research paper</p><h3><a href="/writing/counterfactual-decision-ledger/">The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken</a></h3><p>Evaluate AI recommendations without assigning outcomes to unchosen actions or overstating what shadow mode proves.</p><a href="/writing/counterfactual-decision-ledger/" class="text-link" aria-label="Read the article: The Counterfactual Decision Ledger: Evaluate AI Recommendations Without Inventing the Road Not Taken">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/policy-as-code-without-hiding-human-authority/">Policy as Code for Facility Operations Without Hiding Human Authority</a></h3><p>Keep authority, admitted facts, decisions, enforcement, evidence, human review, and rollback explicit when policy becomes executable.</p><a href="/writing/policy-as-code-without-hiding-human-authority/" class="text-link" aria-label="Read the article: Policy as Code for Facility Operations Without Hiding Human Authority">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Advanced research governance</p><h3><a href="/writing/self-storage-benchmark-research-protocol/">A Self-Storage Benchmark Is a Research Protocol</a></h3><p>Define the claim, establishment, frame, sample, measure, disposition, uncertainty, privacy boundary, AI use, and release gates before publishing a benchmark.</p><a href="/writing/self-storage-benchmark-research-protocol/" class="text-link" aria-label="Read the article: A Self-Storage Benchmark Is a Research Protocol">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Missing Denominator Test for Self-Storage Metrics</title>
+      <link>https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/missing-denominator-test-self-storage-metrics/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/research/">Research methods</category>
+      <description>A practical self-storage diagnostic for making occupancy, conversion, delinquency, work-order, response, building, and AI metrics disclose their population, exclusions, time, source, coverage, uncertainty, and authority.</description>
+    </item>
+    <item>
       <title>Policy as Code for Facility Operations Without Hiding Human Authority</title>
       <link>https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/policy-as-code-without-hiding-human-authority/</guid>

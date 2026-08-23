@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">The missing denominator test for self-storage metrics</title>
+  <desc id="desc">A metric release diagram showing a numerator above a governed denominator, seven population questions, a complete compact display, four sensitivity challenges, and separate candidate, diagnostic, internal approval, and external approval states.</desc>
+  <defs>
+    <style>
+      .bg { fill: #071D2B; }
+      .eyebrow { font: 700 17px Arial, sans-serif; letter-spacing: 4px; fill: #77E2CF; }
+      .headline { font: 700 42px Arial, sans-serif; fill: #F4F7FB; }
+      .subhead { font: 400 20px Arial, sans-serif; fill: #C8D6E2; }
+      .formula-label { font: 700 15px Arial, sans-serif; letter-spacing: 2px; fill: #153047; }
+      .formula-main { font: 700 25px Arial, sans-serif; fill: #10283A; }
+      .formula-note { font: 400 15px Arial, sans-serif; fill: #31556E; }
+      .operator { font: 700 54px Arial, sans-serif; fill: #77E2CF; }
+      .gate-num { font: 700 13px Arial, sans-serif; letter-spacing: 1px; fill: #77E2CF; }
+      .gate-title { font: 700 18px Arial, sans-serif; fill: #F4F7FB; }
+      .gate-copy { font: 400 14px Arial, sans-serif; fill: #C8D6E2; }
+      .panel-title { font: 700 20px Arial, sans-serif; fill: #F4F7FB; }
+      .metric-value { font: 700 29px Arial, sans-serif; fill: #10283A; }
+      .metric-copy { font: 700 14px Arial, sans-serif; fill: #31556E; }
+      .challenge { font: 700 15px Arial, sans-serif; fill: #10283A; }
+      .challenge-copy { font: 400 13px Arial, sans-serif; fill: #31556E; }
+      .state { font: 700 13px Arial, sans-serif; fill: #D7E1EA; }
+      .foot { font: 700 15px Arial, sans-serif; fill: #C8D6E2; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="900" rx="28"/>
+  <circle cx="1500" cy="70" r="200" fill="#12384B" opacity="0.65"/>
+  <circle cx="90" cy="875" r="200" fill="#0D413F" opacity="0.6"/>
+
+  <text x="72" y="61" class="eyebrow">OPERATIONAL INTELLIGENCE</text>
+  <text x="72" y="115" class="headline">A percentage is a claim about a population.</text>
+  <text x="72" y="154" class="subhead">If the eligible population cannot be reconstructed, the metric is not decision-grade.</text>
+
+  <rect x="72" y="204" width="500" height="118" rx="22" fill="#D7F1EB"/>
+  <text x="98" y="238" class="formula-label">NUMERATOR</text>
+  <text x="98" y="274" class="formula-main">The qualifying records or events</text>
+  <text x="98" y="303" class="formula-note">exact rule • count • reversals • unknowns</text>
+
+  <text x="602" y="284" class="operator">÷</text>
+
+  <rect x="672" y="204" width="856" height="118" rx="22" fill="#F7EBCF"/>
+  <text x="698" y="238" class="formula-label">DENOMINATOR</text>
+  <text x="698" y="274" class="formula-main">The governed population the claim describes</text>
+  <text x="698" y="303" class="formula-note">eligibility • scope • time • exclusions • coverage • authority</text>
+
+  <g>
+    <rect x="72" y="354" width="194" height="126" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="92" y="382" class="gate-num">01 • COUNT</text>
+    <text x="92" y="412" class="gate-title">What is counted?</text>
+    <text x="92" y="440" class="gate-copy">record • event • unit</text>
+    <text x="92" y="462" class="gate-copy">dedupe • reversal</text>
+
+    <rect x="282" y="354" width="194" height="126" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="302" y="382" class="gate-num">02 • ELIGIBILITY</text>
+    <text x="302" y="412" class="gate-title">Who could enter?</text>
+    <text x="302" y="440" class="gate-copy">include • exclude</text>
+    <text x="302" y="462" class="gate-copy">entry • exit • unknown</text>
+
+    <rect x="492" y="354" width="194" height="126" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="512" y="382" class="gate-num">03 • TIME</text>
+    <text x="512" y="412" class="gate-title">When did it exist?</text>
+    <text x="512" y="440" class="gate-copy">window • snapshot</text>
+    <text x="512" y="462" class="gate-copy">maturity • late events</text>
+
+    <rect x="702" y="354" width="194" height="126" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="722" y="382" class="gate-num">04 • SCOPE</text>
+    <text x="722" y="412" class="gate-title">Which facilities?</text>
+    <text x="722" y="440" class="gate-copy">stable IDs • lifecycle</text>
+    <text x="722" y="462" class="gate-copy">fixed or rolling set</text>
+
+    <rect x="912" y="354" width="194" height="126" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="932" y="382" class="gate-num">05 • LINEAGE</text>
+    <text x="932" y="412" class="gate-title">Which source?</text>
+    <text x="932" y="440" class="gate-copy">field • query • version</text>
+    <text x="932" y="462" class="gate-copy">extract • transformation</text>
+
+    <rect x="1122" y="354" width="194" height="126" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="1142" y="382" class="gate-num">06 • QUALITY</text>
+    <text x="1142" y="412" class="gate-title">What is missing?</text>
+    <text x="1142" y="440" class="gate-copy">coverage • sample</text>
+    <text x="1142" y="462" class="gate-copy">uncertainty • conflict</text>
+
+    <rect x="1332" y="354" width="196" height="126" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="1352" y="382" class="gate-num">07 • AUTHORITY</text>
+    <text x="1352" y="412" class="gate-title">Who may release?</text>
+    <text x="1352" y="440" class="gate-copy">owner • audience</text>
+    <text x="1352" y="462" class="gate-copy">expiry • correction</text>
+  </g>
+
+  <rect x="72" y="518" width="1456" height="110" rx="22" fill="#E2E9F7"/>
+  <text x="98" y="550" class="formula-label">MINIMUM DISPLAY</text>
+  <text x="98" y="589" class="metric-value">44.3% (51 / 115)</text>
+  <text x="400" y="572" class="metric-copy">July qualified-lead cohort • 2 facilities • 30-day maturity • 7 exclusions</text>
+  <text x="400" y="600" class="metric-copy">98.4% source coverage • definition v3.2 • calculated time + zone • owner • DIAGNOSTIC</text>
+
+  <text x="72" y="676" class="panel-title">Challenge the conclusion before releasing it</text>
+
+  <rect x="72" y="698" width="344" height="82" rx="18" fill="#D7F1EB"/>
+  <text x="94" y="728" class="challenge">ALTERNATE DENOMINATOR</text>
+  <text x="94" y="754" class="challenge-copy">Does a reasonable inclusion rule flip the decision?</text>
+
+  <rect x="442" y="698" width="344" height="82" rx="18" fill="#DDEAF5"/>
+  <text x="464" y="728" class="challenge">COHORT BRIDGE</text>
+  <text x="464" y="754" class="challenge-copy">Did facilities, channels, definitions, or maturity move?</text>
+
+  <rect x="812" y="698" width="344" height="82" rx="18" fill="#F7EBCF"/>
+  <text x="834" y="728" class="challenge">COVERAGE DROP</text>
+  <text x="834" y="754" class="challenge-copy">Did missing evidence improve the percentage?</text>
+
+  <rect x="1184" y="698" width="344" height="82" rx="18" fill="#F0DFF0"/>
+  <text x="1206" y="728" class="challenge">WEIGHTING SWITCH</text>
+  <text x="1206" y="754" class="challenge-copy">Do unit, facility, area, or dollar weights disagree?</text>
+
+  <text x="72" y="833" class="state">CANDIDATE</text>
+  <text x="174" y="833" class="state">→ DIAGNOSTIC</text>
+  <text x="312" y="833" class="state">→ APPROVED INTERNAL</text>
+  <text x="505" y="833" class="state">→ APPROVED EXTERNAL</text>
+  <text x="708" y="833" class="state">→ PUBLISHED</text>
+  <text x="822" y="833" class="state">→ CORRECTED</text>
+  <text x="954" y="833" class="state">Each state needs its own evidence.</text>
+  <text x="72" y="870" class="foot">A polished percentage does not prove population validity, comparability, causation, performance, compliance, coverage, or recognition.</text>
+</svg>
