@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Access grant envelope</title>
+  <desc id="desc">An access review diagram showing identity, role, scope, purpose, authority, time, dependencies, and revocation surrounding one grant, plus distinct requested, approved, invited, active, exercised, revoked, dependencies-cleared, and recovery-verified states.</desc>
+  <defs>
+    <style>
+      .bg { fill: #071D2B; }
+      .eyebrow { font: 700 17px Arial, sans-serif; letter-spacing: 4px; fill: #77E2CF; }
+      .headline { font: 700 42px Arial, sans-serif; fill: #F4F7FB; }
+      .subhead { font: 400 20px Arial, sans-serif; fill: #C8D6E2; }
+      .core-label { font: 700 14px Arial, sans-serif; letter-spacing: 2px; fill: #31556E; }
+      .core-main { font: 700 30px Arial, sans-serif; fill: #10283A; }
+      .core-copy { font: 400 15px Arial, sans-serif; fill: #31556E; }
+      .card-num { font: 700 13px Arial, sans-serif; letter-spacing: 1px; fill: #77E2CF; }
+      .card-title { font: 700 20px Arial, sans-serif; fill: #F4F7FB; }
+      .card-copy { font: 400 14px Arial, sans-serif; fill: #C8D6E2; }
+      .panel-title { font: 700 20px Arial, sans-serif; fill: #F4F7FB; }
+      .path { font: 700 13px Arial, sans-serif; fill: #D7E1EA; }
+      .warning { font: 700 15px Arial, sans-serif; fill: #10283A; }
+      .warning-copy { font: 400 14px Arial, sans-serif; fill: #31556E; }
+      .foot { font: 700 15px Arial, sans-serif; fill: #C8D6E2; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="900" rx="28"/>
+  <circle cx="1490" cy="80" r="205" fill="#12384B" opacity="0.65"/>
+  <circle cx="80" cy="890" r="205" fill="#0D413F" opacity="0.6"/>
+
+  <text x="72" y="61" class="eyebrow">ACCESS GOVERNANCE</text>
+  <text x="72" y="115" class="headline">“Has access” is not an access record.</text>
+  <text x="72" y="154" class="subhead">One grant needs an identity, role, resource boundary, purpose, authority, clock, dependencies, and exit.</text>
+
+  <rect x="72" y="194" width="1456" height="112" rx="24" fill="#DDEAF5"/>
+  <text x="98" y="228" class="core-label">THE ACCESS GRANT</text>
+  <text x="98" y="267" class="core-main">subject → exact platform role → exact resource scope</text>
+  <text x="866" y="246" class="core-copy">purpose • approver • active-from • expiry</text>
+  <text x="866" y="276" class="core-copy">credential class • revocation • continuity</text>
+
+  <g>
+    <rect x="72" y="346" width="344" height="112" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="94" y="374" class="card-num">01 • IDENTITY</text>
+    <text x="94" y="405" class="card-title">Who or what receives it?</text>
+    <text x="94" y="433" class="card-copy">person • team • service • app • key</text>
+
+    <rect x="442" y="346" width="344" height="112" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="464" y="374" class="card-num">02 • ROLE</text>
+    <text x="464" y="405" class="card-title">What can it actually do?</text>
+    <text x="464" y="433" class="card-copy">label • capabilities • inheritance</text>
+
+    <rect x="812" y="346" width="344" height="112" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="834" y="374" class="card-num">03 • SCOPE</text>
+    <text x="834" y="405" class="card-title">Which exact resources?</text>
+    <text x="834" y="433" class="card-copy">facility • profile • site • repo • data</text>
+
+    <rect x="1184" y="346" width="344" height="112" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="1206" y="374" class="card-num">04 • PURPOSE</text>
+    <text x="1206" y="405" class="card-title">Which operating task?</text>
+    <text x="1206" y="433" class="card-copy">need • lower role • narrower scope</text>
+
+    <rect x="72" y="476" width="344" height="112" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="94" y="504" class="card-num">05 • AUTHORITY</text>
+    <text x="94" y="535" class="card-title">Who may approve?</text>
+    <text x="94" y="563" class="card-copy">decision owner • evidence • separation</text>
+
+    <rect x="442" y="476" width="344" height="112" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="464" y="504" class="card-num">06 • TIME</text>
+    <text x="464" y="535" class="card-title">When does it end?</text>
+    <text x="464" y="563" class="card-copy">start • expiry • review • trigger</text>
+
+    <rect x="812" y="476" width="344" height="112" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="834" y="504" class="card-num">07 • DEPENDENCIES</text>
+    <text x="834" y="535" class="card-title">What can restore it?</text>
+    <text x="834" y="563" class="card-copy">group • parent • token • key • recovery</text>
+
+    <rect x="1184" y="476" width="344" height="112" rx="18" fill="#103247" stroke="#2C6478"/>
+    <text x="1206" y="504" class="card-num">08 • REVOCATION</text>
+    <text x="1206" y="535" class="card-title">How is removal proven?</text>
+    <text x="1206" y="563" class="card-copy">assignment • session • readback • continuity</text>
+  </g>
+
+  <rect x="72" y="628" width="940" height="112" rx="22" fill="#0E3043" stroke="#267361"/>
+  <text x="98" y="660" class="panel-title">Never collapse the states</text>
+  <text x="98" y="700" class="path">REQUESTED → APPROVED → INVITED → ACCEPTED → ACTIVE → EXERCISED</text>
+  <text x="98" y="725" class="path">→ EXPIRED / REVOKED → DEPENDENCIES CLEARED → RECOVERY VERIFIED</text>
+
+  <rect x="1040" y="628" width="488" height="112" rx="22" fill="#F7EBCF"/>
+  <text x="1066" y="660" class="core-label">LANGUAGE BOUNDARY</text>
+  <text x="1066" y="695" class="warning">Platform administration ≠ legal ownership</text>
+  <text x="1066" y="721" class="warning-copy">Record the product label. Do not broaden the claim.</text>
+
+  <text x="72" y="792" class="panel-title">Final review states</text>
+  <rect x="72" y="814" width="182" height="34" rx="17" fill="#77E2CF"/>
+  <text x="104" y="837" class="warning">APPROVED</text>
+  <rect x="270" y="814" width="182" height="34" rx="17" fill="#DDEAF5"/>
+  <text x="317" y="837" class="warning">REDUCE</text>
+  <rect x="468" y="814" width="182" height="34" rx="17" fill="#F7EBCF"/>
+  <text x="519" y="837" class="warning">EXPIRE</text>
+  <rect x="666" y="814" width="182" height="34" rx="17" fill="#F0DFF0"/>
+  <text x="713" y="837" class="warning">REVOKE</text>
+  <rect x="864" y="814" width="216" height="34" rx="17" fill="#E2E9F7"/>
+  <text x="909" y="837" class="warning">INVESTIGATE</text>
+  <rect x="1096" y="814" width="182" height="34" rx="17" fill="#C9D3E6"/>
+  <text x="1144" y="837" class="warning">UNKNOWN</text>
+  <text x="1304" y="837" class="foot">Each needs evidence.</text>
+
+  <text x="72" y="881" class="foot">Do not store reusable secrets in the review packet. A user-list change does not prove every token, group, session, or recovery path is cleared.</text>
+</svg>
