@@ -1,0 +1,141 @@
+@prefix ops: <https://example.org/facility-work/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Proposed educational validation shapes. Conformance means only that a data
+# graph meets these declared structural constraints; it does not prove truth,
+# authority, safety, privacy, legal sufficiency, or operational acceptance.
+
+ops:FacilityShape
+    a sh:NodeShape ;
+    sh:targetClass ops:Facility ;
+    sh:property [
+        sh:path ops:stableId ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "A facility requires exactly one stable string identifier." ;
+    ] .
+
+ops:ExternalRecordShape
+    a sh:NodeShape ;
+    sh:targetClass ops:ExternalRecord ;
+    sh:property [
+        sh:path ops:externalId ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "An external record requires one source-scoped identifier." ;
+    ] ;
+    sh:property [
+        sh:path ops:issuedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "An external record requires its issuing source." ;
+    ] ;
+    sh:property [
+        sh:path ops:describes ;
+        sh:minCount 1 ;
+        sh:message "An external record must name the entity it is approved to describe." ;
+    ] .
+
+ops:ObservationShape
+    a sh:NodeShape ;
+    sh:targetClass ops:Observation ;
+    sh:property [
+        sh:path ops:aboutAsset ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ops:assertedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ops:observedAt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+    ] .
+
+ops:OperationalEventShape
+    a sh:NodeShape ;
+    sh:targetClass ops:OperationalEvent ;
+    sh:property [
+        sh:path ops:occurredAt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path ops:occurredAtFacility ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+ops:DecisionShape
+    a sh:NodeShape ;
+    sh:targetClass ops:Decision ;
+    sh:property [
+        sh:path ops:decidedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ops:usedEvidence ;
+        sh:minCount 1 ;
+    ] .
+
+ops:AuthorizationShape
+    a sh:NodeShape ;
+    sh:targetClass ops:Authorization ;
+    sh:property [
+        sh:path ops:authorizedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ops:underPolicy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ops:authorizationScope ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ops:authorizedAt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+    ] .
+
+ops:WorkRecordShape
+    a sh:NodeShape ;
+    sh:targetClass ops:WorkRecord ;
+    sh:property [
+        sh:path ops:affected ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ops:authorizedByRecord ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ops:workState ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "requested" "scheduled" "in_progress" "performed" "verified" "closed" "cancelled" ) ;
+    ] .
+
+ops:EvidenceArtifactShape
+    a sh:NodeShape ;
+    sh:targetClass ops:EvidenceArtifact ;
+    sh:property [
+        sh:path ops:generatedAt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+    ] .

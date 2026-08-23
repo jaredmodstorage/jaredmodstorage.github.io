@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.K38vg5AS.css" data-rsc-css-href="/_next/static/css/index.K38vg5AS.css" data-precedence="vite-rsc/importer-resources"/><title>The Facility Work Graph for Self-Storage Operations | Jared Mastroianni</title><meta name="description" content="A self-storage-specific operating model for separating facilities, records, observations, events, decisions, authorizations, work, evidence, source authority, and effective time before automation or AI acts."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Facility Work Graph for Self-Storage Operations | Jared Mastroianni"/><meta property="og:description" content="A self-storage-specific operating model for separating facilities, records, observations, events, decisions, authorizations, work, evidence, source authority, and effective time before automation or AI acts."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/facility-work-graph/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-23"/><meta property="article:modified_time" content="2026-08-23"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/facility-work-graph/facility-work-graph.png"/><meta property="og:image:width" content="1600"/><meta property="og:image:height" content="900"/><meta property="og:image:alt" content="A facility work graph separating facility identity, external records, observations, events, decisions, authorizations, work records, evidence, source authority, and effective time so operational relationships remain explicit before automation or AI acts."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Facility Work Graph for Self-Storage Operations | Jared Mastroianni"/><meta name="twitter:description" content="A self-storage-specific operating model for separating facilities, records, observations, events, decisions, authorizations, work, evidence, source authority, and effective time before automation or AI acts."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/facility-work-graph/facility-work-graph.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/facility-work-graph/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/facility-work-graph/#article","url":"https://jaredmodstorage.github.io/writing/facility-work-graph/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/facility-work-graph/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Facility Work Graph: An Operational Ontology for Self-Storage","datePublished":"2026-08-23","dateModified":"2026-08-23","image":"https://jaredmodstorage.github.io/writing/facility-work-graph/facility-work-graph.png","description":"A self-storage-specific operating model for separating facilities, records, observations, events, decisions, authorizations, work, evidence, source authority, and effective time before automation or AI acts.","proficiencyLevel":"Expert / Architect","about":["Self-storage operations","Operational ontology","Facility identity","Provenance","Source authority","Responsible AI"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/facility-work-graph/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Facility Work Graph: An Operational Ontology for Self-Storage","item":"https://jaredmodstorage.github.io/writing/facility-work-graph/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Facility Work Graph: An Operational Ontology for Self-Storage</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-23">23 August 2026</time></p><h1>The Facility Work Graph: An Operational Ontology for Self-Storage</h1><p class="lede">Keep facilities, records, observations, events, decisions, authorizations, work, evidence, source authority, and effective time distinct before automation or AI acts.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>17 min read</span></div></header><div class="essay-body"><p>A self-storage operator can have clean tables and still have a broken operating model.</p>
+<p>The facility table says “location.” The access system says “site.” The work-order platform says “property.” The utility portal identifies a meter account. The rental system identifies units. The camera platform identifies channels and zones. A reporting layer joins the records by name and address, then an artificial intelligence system recommends work against the joined result.</p>
+<p>The data may be syntactically valid. The meaning may still be wrong.</p>
+<p>An operational ontology addresses that failure at a deeper level than a field map. It defines the kinds of things the business is talking about, the relationships that may connect them, the states and times that qualify those relationships, the sources allowed to assert them, and the tests that determine whether a graph is usable for a particular operation.</p>
+<p>This article proposes a self-storage-specific facility work graph. It is an authored design method, not an industry standard, a product description, or evidence of a deployed system. Its purpose is to help operators make facility work intelligible before they ask automation or AI to act on it.</p>
+<p><a href="facility-work-graph.svg"><img src="facility-work-graph.svg" width="1600" height="900" loading="lazy" decoding="async" alt="A facility work graph separating facility identity, external records, observations, events, decisions, authorizations, work records, evidence, source authority, and effective time so operational relationships remain explicit before automation or AI acts."></a></p>
+<p><a href="facility-work-graph.svg">Open the full-size accessible diagram.</a></p>
+<section class="method-downloads" aria-labelledby="facility-work-graph-downloads">
+<p class="eyebrow">Governed companion package</p>
+<h2 id="facility-work-graph-downloads">Inspect the ontology, shapes, and acceptance tests.</h2>
+<p>These exact files contain an authored proposed ontology and fictional teaching artifacts. They do not establish an industry standard, product deployment, customer implementation, interoperability result, certification, external review, coverage, recognition, or operational truth.</p>
+<div><a href="owned-source-register.csv" download>Download the owned source and limitations register <span aria-hidden="true">↓</span></a><a href="facility-work-ontology-acceptance-tests.csv" download>Download the ontology acceptance tests <span aria-hidden="true">↓</span></a><a href="facility-work-starter-model.ttl" download>Download the Turtle starter model <span aria-hidden="true">↓</span></a><a href="facility-work-starter-shapes.ttl" download>Download the Turtle SHACL shapes <span aria-hidden="true">↓</span></a><a href="facility-work-graph.svg" download>Download the accessible facility-work SVG <span aria-hidden="true">↓</span></a><a href="facility-work-graph.png" download>Download the facility-work PNG <span aria-hidden="true">↓</span></a></div>
+</section>
+<h2>A graph is not automatically an ontology</h2>
+<p>A graph can connect anything to anything. That flexibility is useful, but it is not governance.</p>
+<p>The W3C Resource Description Framework defines a graph as a set of subject-predicate-object triples. A statement such as “Gate 2 serves Facility 104” can be represented as a subject, a relationship, and an object. RDF also supports named graphs, which can keep statements from different sources separate. Its identifiers, called IRIs, have global scope. Its graphs are atemporal snapshots even though a vocabulary can describe events and time. Those are strong foundations, but RDF does not decide whether “Gate 2” is a gate lane, a controller, a door group, a vendor record, or a label reused in four systems.</p>
+<p>An ontology adds meaning. It says that a Facility is not a StorageUnit, a PhysicalAsset is not the SystemRecord that describes it, an Observation is not a Decision, and a Decision is not an Authorization. It states which relationships are legitimate and which distinctions the operation must preserve.</p>
+<p>An operational ontology goes one step further. It makes those distinctions enforceable at the points where work, access, money, safety, customer impact, or public reporting can change.</p>
+<p>That final step matters because semantic-web reasoning and operating controls answer different questions. The OWL 2 Primer explains that OWL follows an open-world assumption: a missing fact may simply be unknown. It also does not assume that two different names identify two different individuals. Those properties are appropriate for distributed knowledge. They are dangerous if an operator interprets “no authorization found” as “authorization was unnecessary” or allows a similarity model to treat two records as one facility.</p>
+<p>For operational use, open-world representation needs explicit closed-world acceptance tests.</p>
+<h2>Start with twelve types, not twelve thousand fields</h2>
+<p>The first version of a facility work ontology should be small enough to explain on one page. The following twelve types cover a useful operating core.</p>
+<table>
+<thead>
+<tr>
+  <th>Type</th>
+  <th>What it represents</th>
+  <th>Self-storage example</th>
+  <th>What it must not be confused with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Organization</td>
+  <td>An accountable organization or operating unit</td>
+  <td>An operating company or approved service provider</td>
+  <td>A software account or display brand</td>
+</tr>
+<tr>
+  <td>Facility</td>
+  <td>A governed operating location</td>
+  <td>One self-storage facility</td>
+  <td>A parcel, building, mailing address, or vendor location record</td>
+</tr>
+<tr>
+  <td>SpatialZone</td>
+  <td>A physical or logical area within a facility</td>
+  <td>Building, floor, drive aisle, access zone, climate zone</td>
+  <td>A rentable unit or access-control group</td>
+</tr>
+<tr>
+  <td>StorageUnit</td>
+  <td>A rentable physical unit identity</td>
+  <td>Unit B-214</td>
+  <td>A rental agreement, tenant, door, or current occupancy state</td>
+</tr>
+<tr>
+  <td>PhysicalAsset</td>
+  <td>A maintained physical thing</td>
+  <td>Gate operator, keypad, camera, HVAC unit, meter</td>
+  <td>The system record, sensor point, or work order describing it</td>
+</tr>
+<tr>
+  <td>ExternalRecord</td>
+  <td>A provider- or source-scoped record</td>
+  <td>Vendor location 101 or access panel record 44</td>
+  <td>The enterprise facility or asset itself</td>
+</tr>
+<tr>
+  <td>RoleAssignment</td>
+  <td>A dated assignment of authority or responsibility</td>
+  <td>Regional manager for Facility 104 from May through August</td>
+  <td>A person identity or timeless job title</td>
+</tr>
+<tr>
+  <td>Observation</td>
+  <td>A recorded signal or assertion</td>
+  <td>Gate current exceeded threshold at an observed time</td>
+  <td>A root cause, decision, authorization, or completed repair</td>
+</tr>
+<tr>
+  <td>OperationalEvent</td>
+  <td>A bounded occurrence relevant to work</td>
+  <td>Access lane failed to open</td>
+  <td>The raw observation or the later response</td>
+</tr>
+<tr>
+  <td>Decision</td>
+  <td>A chosen course based on evidence</td>
+  <td>Inspect controller before dispatching vendor</td>
+  <td>Permission to execute the work</td>
+</tr>
+<tr>
+  <td>Authorization</td>
+  <td>An explicit grant under a role and policy</td>
+  <td>Approve after-hours vendor entry for a named scope</td>
+  <td>A recommendation, confidence score, or work result</td>
+</tr>
+<tr>
+  <td>WorkRecord</td>
+  <td>Requested, scheduled, performed, verified, or closed work</td>
+  <td>Inspect, repair, test, and close the gate issue</td>
+  <td>Evidence that the work succeeded</td>
+</tr>
+</tbody>
+</table>
+<p>Two supporting types should be added early even if they sit outside the twelve-type core:</p>
+<ul>
+<li>an EvidenceArtifact, such as a photograph, reading, invoice, call log, test result, or signed attestation;</li>
+<li>a PolicyOrRule, which defines an allowed transition, required evidence, decision right, or validation constraint.</li>
+</ul>
+<p>This is not an exhaustive model of self-storage. It intentionally omits legal conclusions, customer identity, payment logic, rental terms, insurance, accounting, and jurisdiction-specific obligations. Those domains require their own owners, sources, privacy controls, and review.</p>
+<h2>The crucial separation: thing, record, assertion, and authority</h2>
+<p>Most damaging integration errors begin by collapsing four layers.</p>
+<p>The <strong>thing</strong> is the facility, unit, gate operator, camera, meter, or other entity in the operating world.</p>
+<p>The <strong>record</strong> is one system's representation of that thing. It has a provider, namespace, identifier, schema, and effective period.</p>
+<p>The <strong>assertion</strong> is a claim about the thing or record. It has a source, time, method, and confidence or evidence boundary.</p>
+<p>The <strong>authority</strong> determines whether that source is allowed to make that claim for that purpose.</p>
+<p>Consider a utility portal that calls a service point “River Campus.” The portal can be authoritative for its account number and perhaps for billed consumption within its published scope. It is not automatically authoritative for the enterprise facility name, rentable square footage, unit inventory, ownership, operating status, or physical containment of the meter.</p>
+<p>A field map often copies the label. An ontology records the relationship:</p>
+<blockquote>
+<p>Utility account U-883 is an ExternalRecord issued by Source S. It is asserted to serve Meter M during Interval T. Meter M is located within Facility F under an approved source and effective-dated mapping.</p>
+</blockquote>
+<p>The longer statement is not bureaucracy. It is the minimum structure needed to decide which conclusions are permitted.</p>
+<h2>Names are labels; identity is a governed decision</h2>
+<p>An operator should adopt two identity rules that appear contradictory until both are enforced:</p>
+<ol>
+<li>the same label does not prove the same entity;</li>
+<li>different labels do not prove different entities.</li>
+</ol>
+<p>“Main Gate” might refer to a lane, a gate leaf, a motor, a controller, a keypad group, or an entire entry system. Conversely, “North Annex,” “River Campus,” and vendor location “101” may refer to one facility across different periods and sources.</p>
+<p>OWL's lack of a unique-names assumption is useful here: two names are not automatically two things. But equivalence must not be guessed. A merge should be a first-class decision with:</p>
+<ul>
+<li>both candidate identifiers;</li>
+<li>match evidence;</li>
+<li>source authority;</li>
+<li>effective time;</li>
+<li>approver and role;</li>
+<li>systems affected;</li>
+<li>confidence if a model assisted;</li>
+<li>rollback or separation path;</li>
+<li>preserved prior records.</li>
+</ul>
+<p>AI can rank candidates. It should not silently promote similarity into identity authority.</p>
+<p>For public structured data, Schema.org provides useful descriptions such as <code>Place</code>, <code>containedInPlace</code>, <code>branchCode</code>, and <code>identifier</code>. That vocabulary can help describe an evidence-supported public location. It is not a master-data system and should not be used to infer internal ownership, legal relationships, source precedence, or equivalence among operating records.</p>
+<h2>Relationships carry more risk than classes</h2>
+<p>Teams often spend too much time debating names for classes and too little time governing edges. In operations, the edge is where the decision usually hides.</p>
+<p>The facility work graph needs a controlled relationship vocabulary. A practical first set is:</p>
+<ul>
+<li><code>contains</code> and <code>containedBy</code> for spatial hierarchy;</li>
+<li><code>serves</code> for an asset, meter, or system relationship with explicit scope;</li>
+<li><code>describedBy</code> for a physical thing and its source record;</li>
+<li><code>identifiedBy</code> for a source-scoped identifier;</li>
+<li><code>observedBy</code> for a signal and its producer;</li>
+<li><code>occurredAt</code> for an event and facility, zone, unit, or asset;</li>
+<li><code>affected</code> for work or an event and the impacted entity;</li>
+<li><code>derivedFrom</code> for a transformed assertion and its inputs;</li>
+<li><code>decidedBy</code> and <code>authorizedBy</code> for distinct decision-right records;</li>
+<li><code>usedEvidence</code> for a decision or verification and its evidence packet;</li>
+<li><code>supersedes</code> for a correction that preserves history;</li>
+<li><code>distributedTo</code> for an approved change and a downstream consumer;</li>
+<li><code>hasBeginning</code> and <code>hasEnd</code> for the effective period of a relationship.</li>
+</ul>
+<p>Brick is relevant but narrower. Its current documentation models building entities such as equipment, points, locations, and logical collections as nodes connected by relationships in an RDF graph. The current official distribution page lists version 1.4.4, released May 1, 2025, separately from a nightly build. That makes Brick a useful alignment candidate for building equipment and location metadata. It does not by itself represent self-storage rental operations, approval rights, work evidence, customer impact, or the decision boundary proposed here.</p>
+<p>The right design is often alignment, not replacement: reuse stable external concepts where they fit, then define a small operational layer for the distinctions the business must enforce.</p>
+<h2>Time has two clocks</h2>
+<p>A reliable facility graph needs at least two times for changing facts.</p>
+<p><strong>Effective time</strong> answers: when was this true in the operating world?</p>
+<p><strong>Recorded time</strong> answers: when did this system learn or store it?</p>
+<p>Suppose a gate controller was replaced on August 4, but the asset register was corrected on August 9. A single timestamp forces the system to choose between two truths. A two-clock record can say:</p>
+<ul>
+<li>controller B became effective on August 4;</li>
+<li>the replacement assertion was recorded on August 9;</li>
+<li>controller A remains the prior identity and is not reused;</li>
+<li>work and readings from August 4 onward attach to controller B after reconciliation;</li>
+<li>reports produced before August 9 remain reproducible from the earlier recorded state.</li>
+</ul>
+<p>The stable 2017 OWL-Time Recommendation supplies general concepts for instants, intervals, beginnings, ends, duration, and ordering. The current <code>/TR/owl-time/</code> page observed in 2026 is a Candidate Recommendation Draft, so durable public claims should cite the dated stable Recommendation unless a draft feature is explicitly required and labeled.</p>
+<p>Time alone is not enough. Every timestamp also needs a timezone or declared temporal reference, precision, and a rule for unknown or approximate values. Midnight without a zone is not an auditable operating boundary.</p>
+<h2>Provenance is not a source URL pasted into a note</h2>
+<p>The W3C PROV-O Recommendation begins with three classes: Entity, Activity, and Agent. It connects them with relationships for use, generation, derivation, attribution, association, and time. That pattern is useful because it distinguishes a report from the activity that generated it and from the agent responsible for the activity.</p>
+<p>For facility work, a provenance packet should answer:</p>
+<ul>
+<li>What assertion or artifact exists?</li>
+<li>Which activity generated or changed it?</li>
+<li>Which inputs did that activity use?</li>
+<li>Which human, organization, system, model, or rule participated?</li>
+<li>Which version was active?</li>
+<li>When did the activity occur and when was it observed?</li>
+<li>What authority allowed the resulting assertion to become operational?</li>
+</ul>
+<p>This prevents an AI summary, derived metric, vendor export, and source-system record from appearing equally authoritative merely because all four are visible on one dashboard.</p>
+<p>Provenance also makes correction possible. If a released metric was derived from a broken facility crosswalk, the operator can identify affected versions, recompute from corrected inputs, issue a correction note, and preserve the prior result. Without lineage, a correction becomes an unexplained overwrite.</p>
+<h2>Validation should test the graph, not repair it in place</h2>
+<p>An ontology without validation becomes an illustrated glossary.</p>
+<p>SHACL, the W3C Shapes Constraint Language, provides a useful model: a data graph and a shapes graph enter validation, and a validation report comes out. The specification requires those input graphs to remain unchanged during validation. That separation is operationally sound. A validator should detect a missing authorization, invalid state, ambiguous identifier, or broken effective period. It should not silently rewrite the evidence it is judging.</p>
+<p>A starter facility graph should fail validation when:</p>
+<ul>
+<li>a Facility lacks a stable identifier;</li>
+<li>a source-scoped external identifier lacks its issuing source;</li>
+<li>an effective-dated relationship has no beginning;</li>
+<li>a current relationship has two conflicting authoritative values without an exception state;</li>
+<li>a WorkRecord affects an entity that cannot be resolved;</li>
+<li>an Authorization lacks actor, role, policy, scope, or time;</li>
+<li>an AI-proposed assertion lacks model version, evidence, confidence, and disposition;</li>
+<li>a correction has no superseded assertion;</li>
+<li>a closed work item lacks the required verification artifact;</li>
+<li>a public export includes a relationship classified as internal or sensitive.</li>
+</ul>
+<p>Passing those tests does not prove that the real-world fact is true, safe, current, or legally sufficient. Validation establishes conformance to declared rules. Source accuracy, operational acceptance, privacy, security, and legal review remain separate gates.</p>
+<p>The companion package includes a <a href="facility-work-starter-model.ttl">small Turtle data graph</a>, a separate <a href="facility-work-starter-shapes.ttl">SHACL shapes graph</a>, an <a href="facility-work-graph.svg">accessible SVG relationship diagram</a>, a <a href="facility-work-graph.png">PNG rendering</a>, and the <a href="facility-work-ontology-acceptance-tests.csv">operator-to-architect acceptance tests</a>. They are teaching artifacts, not a production schema. A conforming validation run proves only that this sample meets the declared structural shapes; the included negative check removes an observation time and confirms that the validator reports the resulting failure.</p>
+<h2>A fictional gate incident, represented correctly</h2>
+<p>Consider a fictional self-storage facility with a vehicle gate that fails to open at 6:42 a.m.</p>
+<p>A conventional ticket might contain one row:</p>
+<blockquote>
+<p>Main gate — failed — vendor called — fixed.</p>
+</blockquote>
+<p>The facility work graph represents a chain of distinct facts:</p>
+<ol>
+<li><strong>Facility F-104</strong> contains <strong>Access Zone Z-2</strong>.</li>
+<li><strong>Gate Operator A-17</strong> serves Z-2 during an effective interval.</li>
+<li><strong>Access Record R-44</strong> is one provider's description of A-17.</li>
+<li><strong>Observation O-901</strong> records a fault code from R-44 at the observed time.</li>
+<li><strong>Event E-310</strong> states that entry through Z-2 did not complete at the occurred time.</li>
+<li><strong>Decision D-88</strong> selects local inspection before vendor dispatch and cites O-901 plus a staff report.</li>
+<li><strong>Authorization A-55</strong> grants the on-duty manager permission under Policy P-7 to inspect and, if needed, dispatch a named vendor within a defined scope.</li>
+<li><strong>Work W-600</strong> records requested, scheduled, performed, tested, and closed states separately.</li>
+<li><strong>Evidence V-72</strong> preserves the post-work functional test.</li>
+<li><strong>Verification Q-19</strong> concludes that the defined acceptance test passed; it is not the same thing as the photograph or vendor note.</li>
+</ol>
+<p>Now imagine a model proposes that R-44 refers to Gate Operator A-17 with 0.94 confidence. That proposal becomes another assertion with a model version and evidence. It does not replace the approved crosswalk, authorize dispatch, or prove repair.</p>
+<p>The example is intentionally fictional. It demonstrates a representation pattern, not a product feature, operating result, staffing recommendation, safety procedure, or customer case.</p>
+<h2>The six competency questions</h2>
+<p>An ontology should be designed against questions, not aesthetics. Before adding a class or relationship, the team should be able to name the query it enables.</p>
+<p>A minimum facility work graph should answer:</p>
+<ol>
+<li>Which open work affects assets that currently serve a named access zone?</li>
+<li>Which work was authorized by a role that was valid at the authorization time?</li>
+<li>Which closed work lacks the evidence required by the policy version then in force?</li>
+<li>Which facility metrics depend on assertions derived from a superseded identity mapping?</li>
+<li>Which external records probably describe the same physical asset but remain unapproved match candidates?</li>
+<li>Which approved master-data changes have not been reconciled to every required downstream system?</li>
+</ol>
+<p>If the graph cannot answer these questions, adding more types will not make it operational.</p>
+<h2>Beginner to architect: an implementation ladder</h2>
+<h3>Beginner: name the things</h3>
+<p>Choose one facility and one recurring workflow. Create stable identifiers for the facility, one zone, one unit, and one maintained asset. Separate each physical thing from the records that describe it. Record current and legacy labels without deleting either.</p>
+<p>The beginner outcome is not a knowledge graph platform. It is a small identity register that no longer joins work by display name.</p>
+<h3>Intermediate: name the edges and authority</h3>
+<p>Add effective-dated containment, service, source-record, role, decision, authorization, evidence, and correction relationships. Publish a source-authority matrix that says which role or system may assert each critical fact.</p>
+<p>The intermediate outcome is a trace that distinguishes what happened, what was observed, what was decided, what was authorized, what work occurred, and what evidence supports closure.</p>
+<h3>Advanced: make conformance executable</h3>
+<p>Write validation shapes or equivalent rules for identity, cardinality, time, authority, provenance, state transitions, and correction. Store validation results separately. Add a bitemporal query that can reproduce what was effective and what was recorded at a past checkpoint.</p>
+<p>The advanced outcome is a release gate. Invalid graphs enter an exception queue rather than production joins.</p>
+<h3>Architect: govern evolution</h3>
+<p>Separate ontology version, validation version, data snapshot, inference rules, and source schema. Define namespace ownership. Run competency queries before release. Test migration and rollback. Preserve asserted and inferred graphs separately. Create public, internal, restricted, and synthetic graph views.</p>
+<p>The architect outcome is not a universal vocabulary. It is a controlled semantic contract that can evolve without rewriting history.</p>
+<h2>AI belongs at the assertion layer</h2>
+<p>The ontology creates several productive places for AI:</p>
+<ul>
+<li>propose candidate identity matches;</li>
+<li>classify unstructured work descriptions into controlled types;</li>
+<li>extract possible assets, locations, times, and evidence references;</li>
+<li>identify missing provenance or contradictory relationships;</li>
+<li>explain validation failures in operator language;</li>
+<li>prioritize a reconciliation queue.</li>
+</ul>
+<p>It also creates a hard stop. A model output is a proposed assertion. Promotion to an authoritative fact requires the authority, evidence, and review defined for that fact type.</p>
+<p>At minimum, a model-assisted assertion should retain:</p>
+<ul>
+<li>model and prompt or rule version;</li>
+<li>input references and allowed-use status;</li>
+<li>generated time;</li>
+<li>confidence or other uncertainty representation;</li>
+<li>proposed subject, relationship, and object;</li>
+<li>reviewer and decision;</li>
+<li>resulting authoritative assertion, if approved;</li>
+<li>rollback or correction path;</li>
+<li>excluded sensitive or synthetic inputs.</li>
+</ul>
+<p>NIST AI RMF 1.0 is a useful governance anchor because it is voluntary, use-case agnostic, and organized around Govern, Map, Measure, and Manage. NIST also states that version 1.0 is being updated. The framework does not certify this ontology, prescribe self-storage workflow, or prove that a model is safe or effective.</p>
+<h2>The practical acceptance test</h2>
+<p>The companion <strong>Facility Work Ontology Acceptance Tests</strong> file contains 32 checks across beginner, intermediate, advanced, and architect levels. Each test names:</p>
+<ul>
+<li>the acceptance question;</li>
+<li>pass criteria;</li>
+<li>required evidence;</li>
+<li>a self-storage failure example;</li>
+<li>the first remediation;</li>
+<li>a suggested owner;</li>
+<li>the trigger for re-review.</li>
+</ul>
+<p>The file is diagnostic, not a maturity score. An operator should mark a test Passed only when the named evidence exists. Partial, unknown, and not-applicable states should remain explicit. A failed test should create a bounded remediation item; it should not be averaged away by unrelated passes.</p>
+<p>Start with one workflow. A gate-access exception, climate-control alert, unit-door repair, delinquency handoff, vendor invoice exception, or facility rename is enough. Run the first sixteen tests manually. The gaps will usually reveal which distinctions the current systems are erasing.</p>
+<h2>What not to centralize</h2>
+<p>The facility work graph should not become a copy of every source field.</p>
+<p>Keep source-specific detail in the source when the enterprise does not need to govern it. Do not centralize secrets, credentials, raw access histories, personal data, camera footage, payment data, or legal documents merely because a graph can link them. Represent the minimum reference, classification, retention rule, and access boundary needed for the operating purpose.</p>
+<p>Do not publish the internal graph as public structured data. A public <code>Place</code> description and an internal authorization graph serve different audiences and carry different risks.</p>
+<p>Do not allow ontology work to postpone known operational corrections. If a facility is mapped incorrectly today, correct it through the current governed process. The ontology should make future corrections safer; it is not a reason to wait for architectural perfection.</p>
+<h2>The design test</h2>
+<p>A facility work ontology is ready for a pilot when a manager can inspect one fictional or approved workflow and explain, without opening five systems:</p>
+<ul>
+<li>which real-world entities are involved;</li>
+<li>which records describe them;</li>
+<li>which source asserted each fact;</li>
+<li>when each relationship was effective and recorded;</li>
+<li>what was observed;</li>
+<li>what occurred;</li>
+<li>what was decided;</li>
+<li>who or what authorized action;</li>
+<li>which work was performed;</li>
+<li>which evidence supports the outcome;</li>
+<li>what changed after a correction;</li>
+<li>which downstream systems reconciled the change.</li>
+</ul>
+<p>If those answers remain compressed into one status field, the operation does not have a shared model of work. It has a collection of labels.</p>
+<p>The point of the facility work graph is not to make self-storage sound more technical. It is to prevent technical systems from erasing the distinctions operators need to remain accountable.</p>
+<h2>Limitations and release boundary</h2>
+<p>This is a proposed educational method authored by Jared Mastroianni. All operating examples are fictional. The paper does not establish an industry standard, product capability, customer implementation, deployment, adoption, performance result, legal conclusion, safety procedure, compliance status, certification, interoperability guarantee, staffing requirement, publication, indexing, coverage, recognition, or expert-status outcome.</p>
+<p>The companion tests require adaptation by the relevant operational, data, security, privacy, records, finance, legal, and technical owners before use in a live environment.</p>
+<h2>Primary and authoritative sources</h2>
+<ul>
+<li><a href="https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/">RDF 1.1 Concepts and Abstract Syntax — W3C Recommendation, 25 February 2014</a></li>
+<li><a href="https://www.w3.org/TR/2012/REC-owl2-primer-20121211/">OWL 2 Web Ontology Language Primer, Second Edition — W3C Recommendation, 11 December 2012</a></li>
+<li><a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV-O: The PROV Ontology — W3C Recommendation, 30 April 2013</a></li>
+<li><a href="https://www.w3.org/TR/2017/REC-shacl-20170720/">Shapes Constraint Language — W3C Recommendation, 20 July 2017</a></li>
+<li><a href="https://www.w3.org/TR/2017/REC-owl-time-20171019/">Time Ontology in OWL — W3C Recommendation, 19 October 2017</a></li>
+<li><a href="https://docs.brickschema.org/brick/concepts.html">Brick core concepts</a> and <a href="https://brickschema.org/resources/">numbered distributions</a></li>
+<li><a href="https://schema.org/Place">Schema.org Place</a> and <a href="https://schema.org/identifier">identifier</a></li>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST Artificial Intelligence Risk Management Framework 1.0</a></li>
+</ul>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/facility-observation-coverage/">The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish</a></h3><p>Trace one facility claim through its sources, timing, transformations, missingness, privacy limits, blind spots, and explicit evidence gate.</p><a href="/writing/facility-observation-coverage/" class="text-link" aria-label="Read the article: The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Advanced operating note</p><h3><a href="/writing/initiated-accepted-posted-reconciled/">Initiated, Accepted, Posted, Reconciled: Four Different Financial States</a></h3><p>Keep initiation, receiver acceptance, ledger posting, independent evidence, and governed reconciliation as distinct operating states.</p><a href="/writing/initiated-accepted-posted-reconciled/" class="text-link" aria-label="Read the article: Initiated, Accepted, Posted, Reconciled: Four Different Financial States">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/facility-intervention-contract/">The Facility Intervention Contract: Prove What an AI-Requested Action Actually Changed</a></h3><p>Bind one proposed real-world change to authority, command identity, delivery, execution, independent observation, reconciliation, and safe reversal.</p><a href="/writing/facility-intervention-contract/" class="text-link" aria-label="Read the article: The Facility Intervention Contract: Prove What an AI-Requested Action Actually Changed">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

@@ -1,0 +1,127 @@
+@prefix ops: <https://example.org/facility-work/> .
+@prefix ex: <https://example.org/facility-work/example/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Fictional educational data graph. The example.org namespace is intentionally
+# non-production and does not identify an operating facility, product, or customer.
+
+ex:facility-f104
+    a ops:Facility, prov:Entity ;
+    ops:stableId "F-104" ;
+    rdfs:label "Fictional River Campus" ;
+    ops:contains ex:zone-z2 .
+
+ex:zone-z2
+    a ops:SpatialZone, prov:Entity ;
+    ops:stableId "Z-2" ;
+    rdfs:label "Fictional vehicle access zone" ;
+    ops:containedBy ex:facility-f104 .
+
+ex:gate-a17
+    a ops:PhysicalAsset, prov:Entity ;
+    ops:stableId "A-17" ;
+    rdfs:label "Fictional vehicle gate operator" ;
+    ops:serves ex:zone-z2 .
+
+ex:provider-s1
+    a prov:Agent ;
+    rdfs:label "Fictional access-system source" .
+
+ex:record-r44
+    a ops:ExternalRecord, prov:Entity ;
+    ops:externalId "R-44" ;
+    ops:issuedBy ex:provider-s1 ;
+    ops:describes ex:gate-a17 ;
+    ops:effectiveDuring ex:record-r44-interval .
+
+ex:record-r44-interval
+    a time:Interval ;
+    time:hasBeginning ex:record-r44-start .
+
+ex:record-r44-start
+    a time:Instant ;
+    time:inXSDDateTimeStamp "2026-08-01T00:00:00Z"^^xsd:dateTimeStamp .
+
+ex:observation-o901
+    a ops:Observation, prov:Entity ;
+    ops:stableId "O-901" ;
+    ops:aboutAsset ex:gate-a17 ;
+    ops:assertedBy ex:record-r44 ;
+    ops:observedAt "2026-08-22T06:42:08Z"^^xsd:dateTime ;
+    ops:observationCode "gate_open_cycle_incomplete" .
+
+ex:event-e310
+    a ops:OperationalEvent, prov:Activity ;
+    ops:stableId "E-310" ;
+    ops:occurredAt "2026-08-22T06:42:00Z"^^xsd:dateTime ;
+    ops:occurredAtFacility ex:facility-f104 ;
+    ops:affected ex:zone-z2 ;
+    prov:used ex:observation-o901 .
+
+ex:evidence-report-v11
+    a ops:EvidenceArtifact, prov:Entity ;
+    ops:stableId "V-11" ;
+    rdfs:label "Fictional staff observation report" ;
+    ops:generatedAt "2026-08-22T06:44:00Z"^^xsd:dateTime .
+
+ex:role-on-duty-manager
+    a ops:RoleAssignment, prov:Entity ;
+    ops:stableId "ROLE-7" ;
+    rdfs:label "Fictional on-duty manager assignment" ;
+    ops:effectiveDuring ex:role-interval .
+
+ex:role-interval
+    a time:Interval ;
+    time:hasBeginning ex:role-start .
+
+ex:role-start
+    a time:Instant ;
+    time:inXSDDateTimeStamp "2026-08-22T06:00:00Z"^^xsd:dateTimeStamp .
+
+ex:decision-d88
+    a ops:Decision, prov:Entity ;
+    ops:stableId "D-88" ;
+    ops:decidedAt "2026-08-22T06:46:00Z"^^xsd:dateTime ;
+    ops:decidedBy ex:role-on-duty-manager ;
+    ops:usedEvidence ex:observation-o901, ex:evidence-report-v11 ;
+    ops:decisionCode "inspect_before_dispatch" .
+
+ex:policy-p7
+    a ops:PolicyOrRule, prov:Entity ;
+    ops:stableId "P-7" ;
+    rdfs:label "Fictional after-hours inspection policy" .
+
+ex:authorization-a55
+    a ops:Authorization, prov:Entity ;
+    ops:stableId "A-55" ;
+    ops:authorizedAt "2026-08-22T06:47:00Z"^^xsd:dateTime ;
+    ops:authorizedBy ex:role-on-duty-manager ;
+    ops:underPolicy ex:policy-p7 ;
+    ops:authorizationScope ex:gate-a17 ;
+    prov:wasDerivedFrom ex:decision-d88 .
+
+ex:work-w600
+    a ops:WorkRecord, prov:Activity ;
+    ops:stableId "W-600" ;
+    ops:workState "verified" ;
+    ops:affected ex:gate-a17 ;
+    ops:authorizedByRecord ex:authorization-a55 ;
+    prov:used ex:observation-o901 .
+
+ex:evidence-v72
+    a ops:EvidenceArtifact, prov:Entity ;
+    ops:stableId "V-72" ;
+    rdfs:label "Fictional post-work functional test" ;
+    ops:generatedAt "2026-08-22T07:25:00Z"^^xsd:dateTime ;
+    prov:wasGeneratedBy ex:work-w600 .
+
+ex:verification-q19
+    a ops:Verification, prov:Entity ;
+    ops:stableId "Q-19" ;
+    ops:verificationResult "passed_defined_test" ;
+    ops:usedEvidence ex:evidence-v72 ;
+    ops:verifiedAt "2026-08-22T07:28:00Z"^^xsd:dateTime .

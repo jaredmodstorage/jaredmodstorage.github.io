@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Facility Work Graph: An Operational Ontology for Self-Storage</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-work-graph/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-work-graph/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A self-storage-specific operating model for separating facilities, records, observations, events, decisions, authorizations, work, evidence, source authority, and effective time before automation or AI acts.</description>
+    </item>
+    <item>
       <title>Initiated, Accepted, Posted, Reconciled: Four Different Financial States</title>
       <link>https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/initiated-accepted-posted-reconciled/</guid>
