@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Three facility-hours controls</title>
+  <desc id="desc">Office hours, access hours, and named service hours remain separate, while each is governed by a source owner, effective date, exception rule, and visible verification.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12273b"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".24"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1400" cy="118" r="210" fill="#91b83b" opacity=".10"/>
+  <circle cx="160" cy="780" r="250" fill="#56b7c7" opacity=".08"/>
+
+  <text x="100" y="96" fill="#a8cc4a" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="4">FACILITY IDENTITY CONTROL</text>
+  <text x="100" y="158" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">One facility. Three different clocks.</text>
+  <text x="100" y="204" fill="#b9c6d0" font-family="Arial, Helvetica, sans-serif" font-size="24">Do not compress office, authorized access, and named service availability into one field called “hours.”</text>
+
+  <g filter="url(#shadow)">
+    <rect x="100" y="274" width="430" height="280" rx="28" fill="#ffffff"/>
+    <rect x="585" y="274" width="430" height="280" rx="28" fill="#ffffff"/>
+    <rect x="1070" y="274" width="430" height="280" rx="28" fill="#ffffff"/>
+  </g>
+
+  <circle cx="164" cy="338" r="34" fill="#a8cc4a"/>
+  <text x="164" y="348" text-anchor="middle" fill="#102234" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">01</text>
+  <text x="215" y="346" fill="#102234" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Office hours</text>
+  <text x="140" y="407" fill="#425466" font-family="Arial, Helvetica, sans-serif" font-size="24">When the facility office is</text>
+  <text x="140" y="441" fill="#425466" font-family="Arial, Helvetica, sans-serif" font-size="24">scheduled for in-person activity.</text>
+  <line x1="140" y1="480" x2="490" y2="480" stroke="#d9e1e6" stroke-width="2"/>
+  <text x="140" y="522" fill="#6c7d8a" font-family="Arial, Helvetica, sans-serif" font-size="20">Not proof of every service or employee.</text>
+
+  <circle cx="649" cy="338" r="34" fill="#56b7c7"/>
+  <text x="649" y="348" text-anchor="middle" fill="#102234" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">02</text>
+  <text x="700" y="346" fill="#102234" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Access hours</text>
+  <text x="625" y="407" fill="#425466" font-family="Arial, Helvetica, sans-serif" font-size="24">When an authorized customer is</text>
+  <text x="625" y="441" fill="#425466" font-family="Arial, Helvetica, sans-serif" font-size="24">scheduled to reach the property or unit.</text>
+  <line x1="625" y1="480" x2="975" y2="480" stroke="#d9e1e6" stroke-width="2"/>
+  <text x="625" y="522" fill="#6c7d8a" font-family="Arial, Helvetica, sans-serif" font-size="20">Not proof of office staffing or support.</text>
+
+  <circle cx="1134" cy="338" r="34" fill="#f0b95c"/>
+  <text x="1134" y="348" text-anchor="middle" fill="#102234" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">03</text>
+  <text x="1185" y="346" fill="#102234" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Service hours</text>
+  <text x="1110" y="407" fill="#425466" font-family="Arial, Helvetica, sans-serif" font-size="24">When one named service is offered</text>
+  <text x="1110" y="441" fill="#425466" font-family="Arial, Helvetica, sans-serif" font-size="24">through one named channel.</text>
+  <line x1="1110" y1="480" x2="1460" y2="480" stroke="#d9e1e6" stroke-width="2"/>
+  <text x="1110" y="522" fill="#6c7d8a" font-family="Arial, Helvetica, sans-serif" font-size="20">Record each named service separately.</text>
+
+  <path d="M315 554 V620 H800" fill="none" stroke="#a8cc4a" stroke-width="5"/>
+  <path d="M800 554 V620" fill="none" stroke="#56b7c7" stroke-width="5"/>
+  <path d="M1285 554 V620 H800" fill="none" stroke="#f0b95c" stroke-width="5"/>
+
+  <rect x="180" y="620" width="1240" height="176" rx="30" fill="#152f45" stroke="#31526b" stroke-width="2"/>
+  <text x="800" y="678" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Every clock needs the same governance envelope</text>
+  <g fill="#dbe5eb" font-family="Arial, Helvetica, sans-serif" font-size="23">
+    <text x="260" y="742">● source owner</text>
+    <text x="545" y="742">● effective date</text>
+    <text x="830" y="742">● exception rule</text>
+    <text x="1115" y="742">● visible verification</text>
+  </g>
+  <text x="800" y="840" text-anchor="middle" fill="#8fa2b1" font-family="Arial, Helvetica, sans-serif" font-size="20">A public match is evidence of publication—not proof of internal configuration, staffing, or actual performance.</text>
+</svg>
