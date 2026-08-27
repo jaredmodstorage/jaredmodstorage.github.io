@@ -4,7 +4,7 @@ Last reviewed: 21 August 2026
 
 ## Speaker identification
 
-Jared Mastroianni is the Chief Operating Officer of modSTORAGE and CEO and Co-Founder of Facily.ai. His work connects self-storage operations with the development of accountable, operator-focused software. He writes and speaks about multi-facility execution, facility identity governance, artificial intelligence, and the shift from disconnected tools to governed operating systems.
+Jared Mastroianni is the Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. His work connects self-storage operations with the development of accountable, operator-focused software. He writes and speaks about multi-facility execution, facility identity governance, artificial intelligence, and the shift from disconnected tools to governed operating systems.
 
 ## Session 1 — Governing Facility Identity as an Operating Control
 
