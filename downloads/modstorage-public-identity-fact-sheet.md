@@ -1,7 +1,7 @@
 # modSTORAGE public identity fact sheet
 
 Status: evidence-bounded public record  
-Reviewed: 21 August 2026
+Reviewed: 30 August 2026
 
 ## Verified public identity
 
@@ -9,9 +9,10 @@ Reviewed: 21 August 2026
 - Official website: https://modstorage.com/
 - Official location directory: https://modstorage.com/all-locations
 - Verified LinkedIn Page: https://www.linkedin.com/company/justmodit/
+- Official Facebook Page: https://www.facebook.com/modSTORAGE/
 - Public operating context: self-storage
 
-The official location directory links to the modSTORAGE LinkedIn Page. The public LinkedIn Page displays the modSTORAGE name, a verified-page marker, and the official modstorage.com website. Together, these reciprocal identity signals support treating the two pages as authoritative public surfaces for the same organization identity.
+The official modSTORAGE website links to the LinkedIn Page and the Facebook Page. The public LinkedIn Page displays the modSTORAGE name, a verified-page marker, and the official modstorage.com website. The Facebook destination uses the canonical modSTORAGE username and exact governed Page identity. Together, these signals support treating all three destinations as public surfaces for the same organization identity. They do not prove legal ownership, portfolio ownership, or full administrative control.
 
 ## Current public footprint
 
@@ -38,6 +39,6 @@ Those fields should be added only when a governing record and a current public s
 
 ## Citation guidance
 
-For the organization identity, cite the official website or verified LinkedIn Page. For the location count and names, cite the official location directory and include an access date because the directory can change.
+For the organization identity, cite the official website, verified LinkedIn Page, or official Facebook Page. For the location count and names, cite the official location directory and include an access date because the directory can change.
 
 This fact sheet is published by Jared Mastroianni’s evidence-bounded authority site under its publishing principles: https://jaredmodstorage.github.io/publishing-principles
