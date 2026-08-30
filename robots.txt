@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://jaredmodstorage.github.io/sitemap.xml
+Sitemap: https://jaredmodstorage.github.io/sitemap-index.xml
