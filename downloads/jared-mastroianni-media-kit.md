@@ -1,6 +1,6 @@
 # Jared Mastroianni media fact sheet
 
-Last reviewed: 22 August 2026
+Last reviewed: 30 August 2026
 
 ## Identification
 
@@ -16,6 +16,11 @@ Jared Mastroianni is the Chief Operating Officer of modSTORAGE and CEO and Found
 ## Approved one-sentence identification
 
 Jared Mastroianni is the Chief Operating Officer of modSTORAGE and the CEO and Founder of Facily.ai.
+
+## Confirmed editorial production
+
+- IFMA's *FMJ*: *From Dashboard Ranking to Defensible Facility Comparison: The Eight-Field Comparison Contract* is scheduled for editorial production during the week of 2 November 2026. IFMA staff is editing the submitted article for style, clarity, and conciseness. It is not yet publicly verified as published.
+- Modern Storage Media, *Messenger*: *The Oversight Load Test: Choose a Management Model by Workload, Not Door Count* received human editorial acceptance for planned placement in the November issue. Final production, issue release, and a public article link remain pending.
 
 ## Topics
 
