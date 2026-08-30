@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.ExzOGgfW.css" data-rsc-css-href="/_next/static/css/index.ExzOGgfW.css" data-precedence="vite-rsc/importer-resources"/><title>Command Arbitration for Self-Storage AI | Jared Mastroianni</title><meta name="description" content="An AI workflow can be individually well governed and still collide with another workflow acting on the same facility. Responsible architecture needs one place that decides which command, if any, may proceed."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Command Arbitration for Self-Storage AI | Jared Mastroianni"/><meta property="og:description" content="An AI workflow can be individually well governed and still collide with another workflow acting on the same facility. Responsible architecture needs one place that decides which command, if any, may proceed."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/one-facility-two-agents/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-08-30"/><meta property="article:modified_time" content="2026-08-30"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/one-facility-two-agents/054-ai-development-computer-vision-pilot-inspection.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni and a facility team review a camera and laptop during an illustrated responsible-AI operations discussion."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Command Arbitration for Self-Storage AI | Jared Mastroianni"/><meta name="twitter:description" content="An AI workflow can be individually well governed and still collide with another workflow acting on the same facility. Responsible architecture needs one place that decides which command, if any, may proceed."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/one-facility-two-agents/054-ai-development-computer-vision-pilot-inspection.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/one-facility-two-agents/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/one-facility-two-agents/#article","url":"https://jaredmodstorage.github.io/writing/one-facility-two-agents/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/one-facility-two-agents/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"One Facility, Two Agents: The Command-Arbitration Layer for Self-Storage AI","datePublished":"2026-08-30","dateModified":"2026-08-30","image":{"@id":"https://jaredmodstorage.github.io/writing/one-facility-two-agents/#lead-image"},"description":"An AI workflow can be individually well governed and still collide with another workflow acting on the same facility. Responsible architecture needs one place that decides which command, if any, may proceed.","proficiencyLevel":"Expert / Architect","about":["Self-storage operations","Multi-agent systems","Command arbitration","Concurrency control","Operating authority","Responsible AI"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/one-facility-two-agents/#lead-image","name":"Responsible-AI operations discussion","caption":"Responsible facility AI needs a governed arbitration path when separate workflows can issue competing commands. Editorial illustration; no deployment is depicted.","description":"Jared Mastroianni and a facility team review a camera and laptop during an illustrated responsible-AI operations discussion. AI-generated editorial illustration; not documentary evidence of a customer, deployment, product capability, facility system, partnership, pilot, result, or adoption.","contentUrl":"https://jaredmodstorage.github.io/writing/one-facility-two-agents/054-ai-development-computer-vision-pilot-inspection.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni public image library, governed image 054","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/one-facility-two-agents/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"One Facility, Two Agents: The Command-Arbitration Layer for Self-Storage AI","item":"https://jaredmodstorage.github.io/writing/one-facility-two-agents/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">One Facility, Two Agents: The Command-Arbitration Layer for Self-Storage AI</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert architecture paper<!-- --> · <time dateTime="2026-08-30">30 August 2026</time></p><h1>One Facility, Two Agents: The Command-Arbitration Layer for Self-Storage AI</h1><p class="lede">An AI workflow can be individually well governed and still collide with another workflow acting on the same facility. Responsible architecture needs one place that decides which command, if any, may proceed.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>12 min read</span></div></header><div class="essay-body"><p>A maintenance agent proposes a temporary gate restriction so a technician can work safely. At nearly the same moment, a customer-service agent proposes extending access after a weather-related closure. Both workflows have a valid source. Both pass their own approval rules. Both target the same access schedule.</p>
+<p>If each workflow can write directly to the operating system, the winner may be whichever request arrives last.</p>
+<p>That is not a decision policy. It is a race.</p>
+<p>Self-storage operators adding AI-assisted workflows need a command-arbitration layer between approved proposals and consequential facility systems. Its job is not to pick the most confident model. Its job is to prevent independently reasonable automations from producing an incoherent operating state.</p>
+<p>The distinction becomes important as one portfolio adds more specialized agents. A maintenance workflow, leasing assistant, access workflow, collections process, messaging agent and reporting process may each have narrow permissions. Narrow permissions reduce risk inside one workflow. They do not resolve two workflows competing for the same resource, acting from different state versions or producing effects that cannot coexist.</p>
+<figure class="article-photo"><img src="054-ai-development-computer-vision-pilot-inspection.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni and a facility team review a camera and laptop during an illustrated responsible-AI operations discussion."><figcaption>Responsible facility AI needs a governed arbitration path when separate workflows can issue competing commands. <strong>AI-generated editorial illustration; no deployment is depicted.</strong></figcaption></figure>
+<section class="method-downloads" aria-labelledby="command-arbitration-downloads"><p class="eyebrow">Governed companion package</p><h2 id="command-arbitration-downloads">Inspect the command-arbitration checklist and its evidence boundaries.</h2><p>These files contain Jared Mastroianni's authored proposed method, a 20-control checklist, current source limitations, and an entirely fictional facility example. They do not establish a product capability, deployment, customer result, performance, safety, certification, standard, or independent validation.</p><div><a href="agent-command-arbitration-checklist.csv" download>Download the command-arbitration checklist <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="one-facility-two-agents.md" download>Download the exact publication source <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="054-ai-development-computer-vision-pilot-inspection.png" download>Download the governed editorial illustration <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a></div></section>
+
+<h2>Concurrency becomes an authority problem</h2>
+<p>Software engineers recognize the technical form of this problem as concurrent modification. Facility operators should recognize the operating form: two sources of work are trying to exercise authority over the same subject at the same time.</p>
+<p>The subject may be an access schedule, customer message, work order, refund case, vendor dispatch, rate proposal, unit availability record or public facility fact. A collision does not require identical commands. One workflow may attempt to change the gate schedule while another starts work that requires the gate to remain locked. One may queue a service-restored message while another keeps the incident open. One may propose a refund while another places the account in a different exception state.</p>
+<p>Model confidence cannot settle those conflicts. A 94 percent confidence score for one classification and an 89 percent score for another say nothing about which actor has operational authority, which source is current or whether both effects are permitted together. A vote among agents has the same weakness. More proposals do not create decision rights.</p>
+<p>NIST’s AI Risk Management Framework places governance, roles, accountability, monitoring and risk response around AI systems.<sup><a href="#fn-1" id="fnref-1" aria-label="Source 1">1</a></sup> It is voluntary, cross-sector guidance, is currently being revised and is not a self-storage command protocol. The useful implication here is organizational: conflict policy belongs to the operating system and its accountable owners, not to an improvised conversation among models.</p>
+<h2>Keep four objects separate</h2>
+<p>An arbitration design starts by separating four objects that are often collapsed into one status.</p>
+<p>An <strong>observation</strong> reports something received or measured: a work-order update, access alert, customer request or current system value. It may be incomplete or wrong.</p>
+<p>A <strong>proposal</strong> is a generated or rules-based recommendation about what should happen. It remains a proposal even when a human has reviewed it.</p>
+<p>An <strong>authorized command</strong> is a bounded instruction that has passed the applicable identity, authority, policy, state and conflict gates. Authorization binds to an exact command version and expires.</p>
+<p>An <strong>observed effect</strong> is the result read from the source that governs the operating outcome. A provider receipt can show acceptance without proving that the facility state changed as intended.</p>
+<p>The arbiter operates between proposal and command. It does not turn an observation into fact, approve its own policy or mark a command complete. It decides whether the exact proposed effect may enter execution now, must wait, has become stale, conflicts with other work or needs a qualified person.</p>
+<h2>Put every proposed effect in a command envelope</h2>
+<p>Free-form agent messages are poor concurrency controls. Before arbitration, every proposed effect should be converted into a typed command envelope. At minimum, the envelope should carry:</p>
+<ul>
+<li>a unique proposal ID and trace ID;</li>
+<li>the proposing actor, workflow and build version;</li>
+<li>the exact facility, account, asset or other resource key;</li>
+<li>the command type, parameters and intended effect;</li>
+<li>the governing source and the state version the proposal relied on;</li>
+<li>the policy version, authority class and approval identity;</li>
+<li>the effective time, expiration and consequence tier;</li>
+<li>an idempotency key and intent hash;</li>
+<li>any resource lease, ownership claim or exclusion window;</li>
+<li>the expected provider receipt, governing readback and reconciliation owner; and</li>
+<li>the conflict class and handback route if execution is denied.</li>
+</ul>
+<p>This is deliberately more precise than “Agent A wants to update access.” The resource key should identify the collision domain: for example, facility, gate, access-calendar interval and customer audience. If keys are too broad, unrelated work waits unnecessarily. If they are too narrow, two commands can miss each other even though their effects collide.</p>
+<p>CloudEvents provides a standardized event envelope in which <code>source</code> plus <code>id</code> identifies a distinct event and repeated delivery can retain the same identity.<sup><a href="#fn-2" id="fnref-2" aria-label="Source 2">2</a></sup> That helps identify messages. It does not define business authority, command compatibility or exactly-once real-world effects. A command envelope can borrow the discipline of stable identity while adding the facility-specific controls an event format does not supply.</p>
+<h2>Reject work built on a stale state</h2>
+<p>The first arbitration question is not which command came first. It is whether the proposal still describes the resource that exists now.</p>
+<p>Record an expected state version when the workflow builds the proposal. Immediately before commitment, compare that version with the governing source. If the access calendar, incident, account or work order changed, the command fails its precondition. The system should not silently refresh the version and preserve the old recommendation. It should return the new state to the proposal stage because the evidence, policy result or human approval may no longer apply.</p>
+<p>HTTP’s <code>If-Match</code> precondition illustrates this control. RFC 9110 explains that a state-changing request can be conditioned on a current entity tag to prevent accidental overwrites when multiple actors operate in parallel.<sup><a href="#fn-3" id="fnref-3" aria-label="Source 3">3</a></sup> An entity tag is not a facility-control design, and many operating systems do not expose one. The broader pattern still holds: compare the approved version with the current governing version, and reject the write when they differ.</p>
+<p>“Last write wins” can be acceptable for an inconsequential display preference. It is a weak default for access, money, customer communication, vendor work or a state that drives other automation. In those paths, a lost update can also erase evidence that another owner was already acting.</p>
+<h2>Coordinate who may act without confusing a lease with authority</h2>
+<p>Some collision domains need temporary exclusive control. A workflow may acquire a short lease on a resource key before it prepares or executes a change. The lease names the holder, purpose, acquisition time, renewal time and expiration. It prevents two workers from believing they are the active executor.</p>
+<p>Kubernetes uses Lease objects for coordination, including node heartbeats and leader election, and its documentation describes workloads using leases so one leader performs operations while peers remain inactive.<sup><a href="#fn-4" id="fnref-4" aria-label="Source 4">4</a></sup> That is an implementation reference, not evidence that Kubernetes should run a facility workflow. It also exposes an important limitation: a lease coordinates technical ownership; it does not grant business authority.</p>
+<p>The arbiter therefore checks both. The actor needs a valid lease where exclusivity is required and a separate authorization that permits the effect. A messaging agent holding the technical lease for a customer-notice resource cannot override an incident owner’s hold merely because it acquired the lock first.</p>
+<p>Use an increasing execution epoch or fencing value when a downstream system can retain work from an expired holder. Every accepted command carries the current epoch. A destination that later receives a command from an older epoch rejects it. Without that check, an agent paused by a network delay can wake after its lease expires and still apply stale work.</p>
+<p>Lease loss should be treated as a handback condition. The workflow stops issuing effects, records which calls may be in flight and reconciles provider and governing state before another executor resumes.</p>
+<h2>Make retries repeat intent, not effects</h2>
+<p>Distributed workflows retry. A request may succeed while its response is lost, leaving the caller uncertain. Blindly issuing the command again can create a duplicate message, dispatch, charge, credit or schedule change.</p>
+<p>An idempotency key gives repeated attempts at the same intended command one stable identity. The arbiter stores the key with an intent hash, command parameters, resource version and first result. A retry with the same key and same intent can receive the prior result or safely continue the original operation. The same key with different parameters is a conflict, not a retry.</p>
+<p>The AWS Builders’ Library describes this caller-provided request-identifier pattern, including the need to distinguish duplicate delivery from a new intent and to address late-arriving requests.<sup><a href="#fn-5" id="fnref-5" aria-label="Source 5">5</a></sup> The article documents an AWS design approach, not a universal guarantee. For facility operations, idempotency at the API boundary still does not prove that the business effect occurred once. A provider can accept one message request while downstream delivery remains unresolved, or accept one schedule request while the controller retains the old state.</p>
+<p>That is why the command record stays open after technical acceptance.</p>
+<h2>Resolve conflicts by policy, not model negotiation</h2>
+<p>The arbiter needs explicit dispositions for at least five collision classes.</p>
+<p><strong>Duplicate intent</strong> means the same authorized effect arrived again. Return the existing command state; do not create new work.</p>
+<p><strong>Stale-state conflict</strong> means the governing version changed after proposal or approval. Reject execution and rebuild the proposal from current evidence.</p>
+<p><strong>Incompatible-effect conflict</strong> means two commands cannot safely coexist, such as extending access during an active maintenance restriction. Hold both effects that have not executed and route the decision to the named authority.</p>
+<p><strong>Scope-overlap conflict</strong> means the effects may coexist only after their facility, asset, interval or audience is narrowed. Re-scope through an authorized rule or human decision; do not let an agent invent the boundary.</p>
+<p><strong>Authority conflict</strong> means two valid roles assert different decisions within an overlapping scope. The policy must name precedence, joint approval or escalation. Confidence, arrival time and system seniority are not substitutes.</p>
+<p>Some conflicts can be decided mechanically because the policy is precise: an expired proposal is denied, an exact duplicate is suppressed, and a stale version is rejected. Consequential ambiguity should create a decision packet. The packet shows both proposals, governing state, source versions, policies, approvals, in-flight effects, deadlines and the smallest decision a qualified person must make.</p>
+<p>NIST SP 800-53 includes separation-of-duties and audit-record controls among a broad catalog of security and privacy controls.<sup><a href="#fn-6" id="fnref-6" aria-label="Source 6">6</a></sup> It does not prescribe this arbiter or certify an implementation. The relevant design lesson is to keep proposal, authorization, execution and review responsibilities visible enough to inspect rather than allowing one opaque agent to create and resolve its own conflict.</p>
+<h2>A fictional access collision</h2>
+<p>Harbor Pine Storage is entirely fictional. Every facility, person, record, system, command, event and outcome in this example is invented to test the architecture.</p>
+<p>At 1:40 p.m., a fictional maintenance workflow receives a technician’s proposed service window for Gate 2. It generates a command to restrict tenant access from 2:00 to 3:00 p.m. The proposal uses access-calendar version 412, receives the fictional maintenance owner’s approval and acquires lease epoch 88 for the Gate 2 calendar.</p>
+<p>At 1:43 p.m., a fictional customer-recovery workflow uses the same calendar version 412 to propose extended access until 10:00 p.m. for customers affected by an earlier closure. Its approval covers customer recovery but not active maintenance windows.</p>
+<p>At 1:44 p.m., the maintenance command commits. The access system returns a provider receipt, and a fresh governing readback produces calendar version 413 with the restriction present.</p>
+<p>The recovery command reaches the arbiter next. Its expected version is stale, its interval overlaps the active restriction and its authority does not permit overriding maintenance. The arbiter does not compare model scores or allow the second write to replace the first. It rejects the stale precondition, records the incompatible-effect conflict and creates a handback packet for the fictional incident owner.</p>
+<p>The incident owner may choose a non-overlapping extension after the service window, keep standard hours or issue a different authorized plan. Whatever the choice, it becomes a new proposal against version 413. The earlier approval cannot be recycled because its evidence and operating context changed.</p>
+<p>This scenario does not claim that any real facility uses this architecture or that the controls prevent every failure. It demonstrates the state transitions and evidence an implementation should be able to show.</p>
+<h2>Observe the decision path and close on readback</h2>
+<p>Tracing makes arbitration explainable across services. OpenTelemetry’s trace API defines trace and span identifiers, links and timestamped events that can connect distributed operations.<sup><a href="#fn-7" id="fnref-7" aria-label="Source 7">7</a></sup> Those records can link proposals, arbitration decisions, provider calls and readbacks. Telemetry does not enforce authority, prevent a collision or prove a physical result.</p>
+<p>The operational trace should record the proposal identity, expected version, current version, resource key, lease epoch, conflict checks, policy result, authorization, idempotency result, execution attempt, provider receipt, governing readback and final reconciliation state. Sampling rules should preserve consequential and conflict traces according to an approved retention policy; an unrecorded conflict is difficult to audit later.</p>
+<p>Close the command only when the declared evidence is present. “Authorized,” “sent,” “accepted,” “applied,” “read back” and “reconciled” are separate states. If the provider times out, first determine whether the effect occurred under the existing idempotency key. If readback disagrees with the intended result, stop dependent automation and route recovery. If another command changed the resource after successful execution, record that later transition instead of rewriting history.</p>
+<h2>Start with one collision domain</h2>
+<p>Do not begin by building a universal agent parliament. Choose one consequential resource that two workflows can touch. Map its exact key, governing source, version signal, authorized roles, incompatible effects, lease rule, idempotency contract, expiration, readback and handback owner. Run tests for simultaneous proposals, delayed requests, duplicate delivery, expired leases, stale approvals, partial provider success and a failed readback.</p>
+<p>The operator standard is straightforward: one facility state should not be decided independently in two automation lanes. Specialized agents can propose useful work. They can even hold narrow permissions. Before any consequential command executes, one governed arbitration path must establish that the proposal is current, authorized, compatible, singular in intent and observable through reconciliation.</p>
+<p>Otherwise, a portfolio has not created coordinated intelligence. It has created faster disagreement.</p>
+<section class="article-sources" aria-labelledby="command-arbitration-sources"><h2 id="command-arbitration-sources">Primary sources and limitations</h2><ol><li id="fn-1">National Institute of Standards and Technology, <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>, NIST AI 100-1, January 2023; current official framework page noting that AI RMF 1.0 is being revised; accessed August 30, 2026: <a href="https://www.nist.gov/itl/ai-risk-management-framework">https://www.nist.gov/itl/ai-risk-management-framework</a> <a href="#fnref-1" aria-label="Back to source 1">↩</a></li><li id="fn-2">Cloud Native Computing Foundation, <em>CloudEvents Specification</em>, version 1.0.2; accessed August 30, 2026: <a href="https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md">https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md</a> <a href="#fnref-2" aria-label="Back to source 2">↩</a></li><li id="fn-3">Internet Engineering Task Force, <em>HTTP Semantics</em>, RFC 9110, June 2022, Sections 9.2.2 and 13.1.1; accessed August 30, 2026: <a href="https://www.rfc-editor.org/rfc/rfc9110.html">https://www.rfc-editor.org/rfc/rfc9110.html</a> <a href="#fnref-3" aria-label="Back to source 3">↩</a></li><li id="fn-4">Kubernetes Documentation, <em>Leases</em>, current official page; accessed August 30, 2026: <a href="https://kubernetes.io/docs/concepts/architecture/leases/">https://kubernetes.io/docs/concepts/architecture/leases/</a> <a href="#fnref-4" aria-label="Back to source 4">↩</a></li><li id="fn-5">Malcolm Featonby, Amazon Web Services, <em>Making retries safe with idempotent APIs</em>, Amazon Builders’ Library; accessed August 30, 2026: <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/</a> <a href="#fnref-5" aria-label="Back to source 5">↩</a></li><li id="fn-6">National Institute of Standards and Technology, <em>Security and Privacy Controls for Information Systems and Organizations</em>, NIST SP 800-53 Rev. 5, current page for Release 5.2.0; accessed August 30, 2026: <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final</a> <a href="#fnref-6" aria-label="Back to source 6">↩</a></li><li id="fn-7">OpenTelemetry, <em>Tracing API</em>, current specification; accessed August 30, 2026: <a href="https://opentelemetry.io/docs/specs/otel/trace/api/">https://opentelemetry.io/docs/specs/otel/trace/api/</a> <a href="#fnref-7" aria-label="Back to source 7">↩</a></li></ol></section>
+<aside class="article-disclosure"><strong>Evidence boundary</strong><p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. This article presents his proposed architecture and an entirely fictional scenario. It does not describe a released Facily.ai or Facily OS capability, a customer deployment, measured performance, legal advice, a security certification, or an industry standard. Provider acceptance, telemetry, schema conformance, and source availability remain separate from operating authority and real-world effect.</p></aside></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/facility-work-graph/">The Facility Work Graph: An Operational Ontology for Self-Storage</a></h3><p>Separate facilities, source records, observations, events, decisions, authorizations, work, evidence, authority, and time before automation acts.</p><a href="/writing/facility-work-graph/" class="text-link" aria-label="Read the article: The Facility Work Graph: An Operational Ontology for Self-Storage">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operator safety playbook</p><h3><a href="/writing/when-gate-wont-open-self-storage-access-incident-playbook/">When the Gate Won’t Open: A Safety-Bounded Access-Incident Playbook for Self-Storage Managers</a></h3><p>Protect people, separate access authorization from physical passage, preserve one incident record, and reopen only after technical and operational evidence agree.</p><a href="/writing/when-gate-wont-open-self-storage-access-incident-playbook/" class="text-link" aria-label="Read the article: When the Gate Won’t Open: A Safety-Bounded Access-Incident Playbook for Self-Storage Managers">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/facility-observation-coverage/">The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish</a></h3><p>Trace one facility claim through its sources, timing, transformations, missingness, privacy limits, blind spots, and explicit evidence gate.</p><a href="/writing/facility-observation-coverage/" class="text-link" aria-label="Read the article: The Facility Observation Coverage Map: What Your Systems Can Observe, Infer, and Fail to Establish">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

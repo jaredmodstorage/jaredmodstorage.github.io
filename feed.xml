@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sat, 29 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>One Facility, Two Agents: The Command-Arbitration Layer for Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/one-facility-two-agents/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/one-facility-two-agents/</guid>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>An AI workflow can be individually well governed and still collide with another workflow acting on the same facility. Responsible architecture needs one place that decides which command, if any, may proceed.</description>
+    </item>
     <item>
       <title>When the Gate Won’t Open: A Safety-Bounded Access-Incident Playbook for Self-Storage Managers</title>
       <link>https://jaredmodstorage.github.io/writing/when-gate-wont-open-self-storage-access-incident-playbook/</link>
