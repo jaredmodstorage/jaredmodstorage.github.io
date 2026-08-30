@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>When the Gate Won’t Open: A Safety-Bounded Access-Incident Playbook for Self-Storage Managers</title>
+      <link>https://jaredmodstorage.github.io/writing/when-gate-wont-open-self-storage-access-incident-playbook/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/when-gate-wont-open-self-storage-access-incident-playbook/</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A practical self-storage gate-access incident playbook for protecting the movement zone, separating credential and passage states, preserving evidence, escalating qualified work, and governing return to service.</description>
+    </item>
     <item>
       <title>A Public Profile Correction Case Study: 17 Closed Fields, 13 Still Open</title>
       <link>https://jaredmodstorage.github.io/writing/public-profile-correction-case-study/</link>
