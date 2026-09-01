@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CKaluYum.css" data-rsc-css-href="/_next/static/css/index.CKaluYum.css" data-precedence="vite-rsc/importer-resources"/><title>AI Score Calibration Across Self-Storage Facilities | Jared Mastroianni</title><meta name="description" content="A practical self-storage calibration record for deciding whether one AI score or threshold means the same thing across facilities."/><meta name="robots" content="index, follow"/><meta property="og:title" content="AI Score Calibration Across Self-Storage Facilities | Jared Mastroianni"/><meta property="og:description" content="A practical self-storage calibration record for deciding whether one AI score or threshold means the same thing across facilities."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-01"/><meta property="article:modified_time" content="2026-09-01"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/052-ai-development-ai-engineering-design-review.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni listens with two colleagues during an editorially constructed AI design-review meeting."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AI Score Calibration Across Self-Storage Facilities | Jared Mastroianni"/><meta name="twitter:description" content="A practical self-storage calibration record for deciding whether one AI score or threshold means the same thing across facilities."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/052-ai-development-ai-engineering-design-review.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/#article","url":"https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"A High Score Is Not a Shared Standard: How Self-Storage Teams Should Calibrate AI Across Facilities","datePublished":"2026-09-01","dateModified":"2026-09-01","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/#lead-image"},"description":"A practical self-storage calibration record for deciding whether one AI score or threshold means the same thing across facilities.","proficiencyLevel":"Advanced / Expert","about":["Self-storage operations","AI score calibration","Cross-facility comparability","Classification thresholds","Human authority","Responsible AI"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/#lead-image","name":"AI engineering design review","caption":"A shared AI threshold should follow a review of the decision, outcome definition, local evidence, error costs and human authority. Editorial illustration; not a documentary record of a deployment, model result or customer outcome.","description":"Jared Mastroianni listens with two colleagues during an editorially constructed AI design-review meeting. Jared-owned AI-generated editorial illustration; not documentary evidence of a real meeting, team, customer, facility, product, deployment, model result, or adoption.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/052-ai-development-ai-engineering-design-review.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni public image library, governed image 052","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Research methods","item":"https://jaredmodstorage.github.io/writing/topics/research/"},{"@type":"ListItem","position":3,"name":"A High Score Is Not a Shared Standard: How Self-Storage Teams Should Calibrate AI Across Facilities","item":"https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/research/">Research methods</a></li><li aria-current="page">A High Score Is Not a Shared Standard: How Self-Storage Teams Should Calibrate AI Across Facilities</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Advanced AI calibration note<!-- --> · <time dateTime="2026-09-01">1 September 2026</time></p><h1>A High Score Is Not a Shared Standard: How Self-Storage Teams Should Calibrate AI Across Facilities</h1><p class="lede">Before one AI threshold controls staffing, maintenance, collections or customer communication, an operator needs to know what the score means at each facility.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><p>A portfolio review shows two self-storage facilities with the same AI score: 0.82. At the first site, the score points to a work order that is likely to reopen within two weeks. At the second, it points to a task that is merely more urgent than the others in that site's queue.</p>
+<p>The numbers look comparable. They may not even mean the same thing.</p>
+<p>An AI score is often treated as a portable fact. It is placed beside a facility name, sorted from high to low and converted into a common threshold. The clean dashboard creates the impression that 0.82 at one property carries the same meaning, evidence and consequence as 0.82 everywhere else.</p>
+<p>That assumption is safe only when the portfolio has proved it.</p>
+<p>A useful score needs a calibration record: the decision it supports, the outcome it predicts, the population and period used to test it, the model and feature version, the observed error pattern, the threshold, and the owner who can release or stop the resulting action. Without that record, a portfolio may be ranking interface numbers rather than comparable operating risk.</p>
+<figure class="article-photo"><img src="052-ai-development-ai-engineering-design-review.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni listens with two colleagues during an editorially constructed AI design-review meeting."><figcaption>A shared AI threshold should follow a review of the decision, outcome definition, local evidence, error costs and human authority. <strong>AI-generated editorial illustration; not a documentary record of a deployment, model result or customer outcome.</strong></figcaption></figure>
+<section class="method-downloads" aria-labelledby="score-calibration-downloads"><p class="eyebrow">Governed companion package</p><h2 id="score-calibration-downloads">Inspect the site calibration review and its evidence boundaries.</h2><p>These files contain Jared Mastroianni's authored proposed method, a 12-gate review, current source limitations and an entirely fictional nine-site example. They do not establish a product capability, deployment, customer result, performance, fairness, safety, certification, standard or independent validation.</p><div><a href="site-ai-score-calibration-review.csv" download>Download the Site AI Score Calibration Review <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="a-high-score-is-not-a-shared-standard.md" download>Download the exact publication source <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="052-ai-development-ai-engineering-design-review.png" download>Download the governed editorial illustration <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a></div></section>
+
+<h2>Begin With the Decision, Not the Decimal</h2>
+<p>The first question is not whether the score is high. It is what the score is allowed to do.</p>
+<p>A maintenance-priority score might reorder a manager's review queue. A collections score might determine which accounts receive an internal review. A customer-message classifier might route a draft to an employee. A safety-related signal might only create an observation request for qualified personnel. Those are different uses with different costs when the model is wrong.</p>
+<p>Google's machine-learning guidance explains that precision, recall and accuracy change with the classification threshold, and that the useful metric depends on the costs, benefits and risks of the problem.<sup id="ref-1"><a href="#source-1" aria-label="Source 1">1</a></sup> Its thresholding guide separately shows that a raw probability becomes an operating class only after a threshold is chosen.<sup id="ref-2"><a href="#source-2" aria-label="Source 2">2</a></sup> These are educational materials, not self-storage rules. They establish a practical point: a score does not choose its own action.</p>
+<p>Record the permitted decision and consequence before reviewing model performance. “Prioritize for manager review” is materially different from “send a customer message,” “dispatch a vendor” or “change access.” If the action is not named, the number has no defensible operating boundary.</p>
+<h2>Define the Outcome the Model Is Trying to Predict</h2>
+<p>The same label can hide different events.</p>
+<p>Consider <strong>repeat service</strong>. One facility may count any new work order on the same unit within 14 days. Another may count only a reopening of the original ticket. A third may exclude vendor callbacks, tenant-caused conditions or administrative duplicates. Each definition could be locally deliberate. They cannot support one portfolio score until the differences are exposed and resolved.</p>
+<p>The outcome record should name:</p>
+<ul>
+<li>the positive event;</li>
+<li>the unit of analysis, such as a unit, work order, account, message or facility-day;</li>
+<li>the observation window;</li>
+<li>exclusions and cancellations;</li>
+<li>who establishes the final label; and</li>
+<li>how corrections are applied after the fact.</li>
+</ul>
+<p>This is the ground-truth contract. It does not prove that the label is perfect. It makes the intended meaning testable. When two sites use different definitions, the honest state is <strong>not comparable</strong>, not an averaged compromise.</p>
+<h2>Test the Population Behind the Score</h2>
+<p>Even a shared label can behave differently across facilities. A climate pattern, unit mix, access configuration, staffing model, customer-contact channel, vendor process or local operating rule can change the population seen by the model. A rare event at one site may be common enough to evaluate at another. A new property may have too little settled history for a local conclusion.</p>
+<p>NIST's Artificial Intelligence Risk Management Framework describes trustworthy AI in terms that include validity, reliability, transparency and accountability, and it treats risk management as voluntary, use-case specific and continuous.<sup id="ref-3"><a href="#source-3" aria-label="Source 3">3</a></sup> The framework's Measure function calls for performance or assurance criteria to be demonstrated under conditions similar to deployment settings and informed by domain experts.<sup id="ref-4"><a href="#source-4" aria-label="Source 4">4</a></sup> It does not certify a model or prescribe a facility threshold.</p>
+<p>For a portfolio review, preserve the test population for each facility or relevant site group:</p>
+<ul>
+<li>start and end dates;</li>
+<li>number of eligible records;</li>
+<li>number of confirmed positive and negative outcomes;</li>
+<li>excluded, unresolved and corrected records;</li>
+<li>feature coverage;</li>
+<li>major operating conditions; and</li>
+<li>the latest period that was not used to fit the model.</li>
+</ul>
+<p>Small or unstable samples belong in an <strong>insufficient evidence</strong> state. They should not be forced into a green score simply because a dashboard expects one number per facility.</p>
+<h2>Separate Ranking From Probability</h2>
+<p>Some models are good at ordering cases without producing probabilities that can be read literally. A score of 0.82 may mean “higher than most other cases” rather than “an 82 percent chance of the event.”</p>
+<p>The scikit-learn probability-calibration guide defines a well-calibrated binary classifier as one where cases receiving a predicted probability near 0.8 produce the positive event about 80 percent of the time. It also explains that calibration should be evaluated on data separate from the data used to fit the model.<sup id="ref-5"><a href="#source-5" aria-label="Source 5">5</a></sup> That documentation describes software methods, not a universal operating requirement or proof that any particular model is calibrated.</p>
+<p>The operator does not need to choose a calibration algorithm. The operator does need an answer to a simpler question: is the number a probability, a rank, a distance from a boundary, a rules score or a vendor-defined index?</p>
+<p>If the answer is unknown, display the number as an opaque score and restrict its use. Do not add a percent sign. Do not tell a manager that the event is “82 percent likely.” Do not compare it across facilities until the score meaning and evaluation evidence are aligned.</p>
+<h2>Put the Threshold Beside Its Error Costs</h2>
+<p>A threshold converts a score into work. That conversion needs an owner.</p>
+<p>Suppose an AI-assisted maintenance queue has two possible mistakes. A false positive sends a manager to review a work order that would not have reopened. A false negative leaves a likely repeat problem lower in the queue. The costs are not equal, and they may change with the consequence.</p>
+<p>For a low-risk review queue, the portfolio might tolerate more false positives to find more possible problems. For a customer-facing communication, access change or safety-related escalation, the release rule may require different evidence and mandatory human authority. The model score should not silently broaden the action.</p>
+<p>NIST Special Publication 1270 notes that bias can enter across technical and human processes and can produce harmful outcomes even without harmful intent.<sup id="ref-6"><a href="#source-6" aria-label="Source 6">6</a></sup> The publication is broad and not a finding about self-storage. It reinforces why a portfolio should inspect who and what is helped, delayed, over-selected or missed by a threshold rather than relying on one average metric.</p>
+<p>Record, for each permitted use:</p>
+<ul>
+<li>threshold and model version;</li>
+<li>precision, recall or other relevant measures at that threshold;</li>
+<li>false-positive and false-negative consequences;</li>
+<li>groups or site conditions reviewed;</li>
+<li>human review requirement;</li>
+<li>release owner; and</li>
+<li>rollback or stop condition.</li>
+</ul>
+<h2>A Fictional Nine-Site Review</h2>
+<p>The following example is fictional and demonstrates the method only.</p>
+<p>Ridgefield Storage Group tests a model that prioritizes completed maintenance work orders for possible repeat service within 14 days. The output is advisory; a manager reviews the underlying work order before any assignment changes.</p>
+<p>At the portfolio meeting, three facilities appear to have many scores above 0.80. The calibration review finds three different problems.</p>
+<p>At Site A, <strong>repeat service</strong> includes every later work order on the same unit, even when the issue is unrelated. The label contract is not aligned with the other sites.</p>
+<p>At Site B, the model version is current, but the last evaluation period includes only a small number of confirmed repeat events. The evidence is insufficient for a site-specific threshold.</p>
+<p>At Site C, scores rank work correctly enough for review, but the values were never tested as probabilities. A score of 0.82 cannot be described as an 82 percent likelihood.</p>
+<p>The team does not manufacture one portfolio result. Site A returns to label reconciliation. Site B remains in shadow review while more outcomes mature. Site C may use the score for bounded queue ordering, but the interface removes probability language. The other six sites continue only under their recorded model, threshold and human-review rules.</p>
+<p>No deployment, customer result, performance improvement or model accuracy is claimed. Every facility, score, threshold and outcome in the example is fictional.</p>
+<h2>Use a Site-Level Calibration Record</h2>
+<p>A calibration review can fit into one operating table. The companion checklist for this article contains 12 gates, from decision scope through correction and revalidation.</p>
+<p>At minimum, each row should preserve:</p>
+<ol>
+<li><strong>Decision and consequence:</strong> What can the score change?</li>
+<li><strong>Outcome contract:</strong> What exact event is positive, over what window?</li>
+<li><strong>Population:</strong> Which records and operating conditions were evaluated?</li>
+<li><strong>Model identity:</strong> Which model, features and version produced the score?</li>
+<li><strong>Score meaning:</strong> Probability, rank, rules score or another defined output?</li>
+<li><strong>Threshold evidence:</strong> Which measures apply at the chosen cut point?</li>
+<li><strong>Local sufficiency:</strong> Is there enough settled evidence for this site or group?</li>
+<li><strong>Human authority:</strong> Who reviews and who can release the action?</li>
+<li><strong>Channel language:</strong> Does the interface describe the score accurately?</li>
+<li><strong>Drift trigger:</strong> What change forces revalidation?</li>
+<li><strong>Correction path:</strong> How are labels, thresholds and prior decisions corrected?</li>
+<li><strong>Stop state:</strong> What makes the score advisory-only, shadow-only or unavailable?</li>
+</ol>
+<p>The record should be revalidated after a model or feature change, a label-definition change, a material shift in operating conditions, a threshold change, a sustained performance change or a correction that affects the evaluation set. Routine reports that do not use model scores to compare facilities or trigger consequential work do not need this control.</p>
+<h2>Make the Portfolio Earn the Shared Threshold</h2>
+<p>One threshold across every facility may eventually be appropriate. It should be the result of evidence, not the default created by a dashboard.</p>
+<p>The portfolio has earned a shared threshold when the decision, outcome, population, model version, score meaning, evaluation window, error costs and release authority are aligned—or when documented grouping evidence supports the remaining differences. Until then, the interface should preserve the narrower truth: locally calibrated, ranking-only, insufficient evidence, shadow review, or not comparable.</p>
+<p>That restraint does not make AI less useful. It keeps a clean number from outrunning its meaning.</p>
+<h2>Sources and notes</h2>
+<ol class="article-sources">
+<li id="source-1">Google for Developers, “Classification: Accuracy, recall, precision, and related metrics,” current page checked September 1, 2026. <a href="https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall">https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall</a> <a href="#ref-1" aria-label="Return to source callout 1">↩</a></li>
+<li id="source-2">Google for Developers, “Thresholds and the confusion matrix,” current page checked September 1, 2026. <a href="https://developers.google.com/machine-learning/crash-course/classification/thresholding">https://developers.google.com/machine-learning/crash-course/classification/thresholding</a> <a href="#ref-2" aria-label="Return to source callout 2">↩</a></li>
+<li id="source-3">National Institute of Standards and Technology, <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>, NIST AI 100-1, January 2023; current publication page checked September 1, 2026. NIST states that AI RMF 1.0 is being revised. <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10</a> <a href="#ref-3" aria-label="Return to source callout 3">↩</a></li>
+<li id="source-4">NIST AI Resource Center, “AI RMF Core,” current page checked September 1, 2026. <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">https://airc.nist.gov/airmf-resources/airmf/5-sec-core/</a> <a href="#ref-4" aria-label="Return to source callout 4">↩</a></li>
+<li id="source-5">scikit-learn, “Probability calibration,” stable documentation checked September 1, 2026. <a href="https://scikit-learn.org/stable/modules/calibration.html">https://scikit-learn.org/stable/modules/calibration.html</a> <a href="#ref-5" aria-label="Return to source callout 5">↩</a></li>
+<li id="source-6">National Institute of Standards and Technology, <em>Towards a Standard for Identifying and Managing Bias in Artificial Intelligence</em>, NIST SP 1270, March 2022; publication page checked September 1, 2026. <a href="https://www.nist.gov/publications/towards-standard-identifying-and-managing-bias-artificial-intelligence">https://www.nist.gov/publications/towards-standard-identifying-and-managing-bias-artificial-intelligence</a> <a href="#ref-6" aria-label="Return to source callout 6">↩</a></li>
+</ol>
+<aside class="article-disclosure"><strong>Evidence boundary</strong><p>This is Jared Mastroianni's proposed operating method. Ridgefield Storage Group and every facility, model, score, threshold, record, person, decision and outcome in the example are fictional. The article does not describe a Facily.ai or Facily OS product capability, a modSTORAGE deployment, customer result, measured accuracy, certification, legal or safety conclusion or industry standard. Score meaning, calibration, cross-site comparability, operating authority and real-world outcomes remain separate questions.</p></aside></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">First-party case study</p><h3><a href="/writing/public-profile-correction-case-study/">A Public Profile Correction Case Study: 17 Closed Fields, 13 Still Open</a></h3><p>A connected first-party case study with 30 defined Page-correction targets, 17 provider-verified closures, 13 preserved open items, and a reproducible evidence boundary.</p><a href="/writing/public-profile-correction-case-study/" class="text-link" aria-label="Read the article: A Public Profile Correction Case Study: 17 Closed Fields, 13 Still Open">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/rollback-not-undo-self-storage-ai-compensation-contract/">Rollback Is Not Undo: The Compensation Contract for Self-Storage AI</a></h3><p>Classify consequential AI actions before execution, separate cancellation from compensation, preserve concurrent truth, and verify residual consequence.</p><a href="/writing/rollback-not-undo-self-storage-ai-compensation-contract/" class="text-link" aria-label="Read the article: Rollback Is Not Undo: The Compensation Contract for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Advanced operating note</p><h3><a href="/writing/initiated-accepted-posted-reconciled/">Initiated, Accepted, Posted, Reconciled: Four Different Financial States</a></h3><p>Keep initiation, receiver acceptance, ledger posting, independent evidence, and governed reconciliation as distinct operating states.</p><a href="/writing/initiated-accepted-posted-reconciled/" class="text-link" aria-label="Read the article: Initiated, Accepted, Posted, Reconciled: Four Different Financial States">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

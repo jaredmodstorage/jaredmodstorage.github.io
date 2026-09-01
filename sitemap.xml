@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://jaredmodstorage.github.io/</loc>
-<lastmod>2026-08-30T00:00:00.000Z</lastmod>
+<lastmod>2026-09-01T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/about/</loc>
-<lastmod>2026-08-30T00:00:00.000Z</lastmod>
+<lastmod>2026-09-01T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -32,13 +32,13 @@
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/writing/</loc>
-<lastmod>2026-08-31T00:00:00.000Z</lastmod>
+<lastmod>2026-09-01T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/research/</loc>
-<lastmod>2026-08-31T00:00:00.000Z</lastmod>
+<lastmod>2026-09-01T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -128,7 +128,13 @@
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/writing/topics/research/</loc>
-<lastmod>2026-08-23T00:00:00.000Z</lastmod>
+<lastmod>2026-09-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/</loc>
+<lastmod>2026-09-01T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>

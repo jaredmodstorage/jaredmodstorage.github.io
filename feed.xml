@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Mon, 31 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A High Score Is Not a Shared Standard: How Self-Storage Teams Should Calibrate AI Across Facilities</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-score-calibration-across-self-storage-facilities/</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/research/">Research methods</category>
+      <description>A practical self-storage calibration record for deciding whether one AI score or threshold means the same thing across facilities.</description>
+    </item>
     <item>
       <title>Rollback Is Not Undo: The Compensation Contract for Self-Storage AI</title>
       <link>https://jaredmodstorage.github.io/writing/rollback-not-undo-self-storage-ai-compensation-contract/</link>
