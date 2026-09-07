@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CKaluYum.css" data-rsc-css-href="/_next/static/css/index.CKaluYum.css" data-precedence="vite-rsc/importer-resources"/><title>Dead-Letter Queue Recovery for Self-Storage AI | Jared Mastroianni</title><meta name="description" content="Build a controlled recovery path for failed AI work across self-storage systems without replaying obsolete, duplicated or unauthorized actions."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Dead-Letter Queue Recovery for Self-Storage AI | Jared Mastroianni"/><meta property="og:description" content="Build a controlled recovery path for failed AI work across self-storage systems without replaying obsolete, duplicated or unauthorized actions."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-06"/><meta property="article:modified_time" content="2026-09-06"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/060-ai-development-ai-product-retrospective.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni listens during an AI-generated cross-functional discussion in a self-storage setting."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Dead-Letter Queue Recovery for Self-Storage AI | Jared Mastroianni"/><meta name="twitter:description" content="Build a controlled recovery path for failed AI work across self-storage systems without replaying obsolete, duplicated or unauthorized actions."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/060-ai-development-ai-product-retrospective.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/#article","url":"https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"A Dead-Letter Queue Is Not a Resolution: Recovering Failed AI Work in Self-Storage","datePublished":"2026-09-06","dateModified":"2026-09-06","image":{"@id":"https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/#lead-image"},"description":"Build a controlled recovery path for failed AI work across self-storage systems without replaying obsolete, duplicated or unauthorized actions.","proficiencyLevel":"Expert / Architect","about":["Self-storage operations","Responsible AI","Dead-letter queues","Workflow recovery","Message replay","Operating reconciliation"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/#lead-image","name":"AI failed-work recovery discussion","caption":"Failed AI work needs an operating disposition, not just a cleared technical queue. Jared-owned AI-generated editorial illustration; not documentary evidence of a facility, team, system, incident, deployment or result.","description":"Jared Mastroianni listens during an AI-generated cross-functional discussion in a self-storage setting. Jared-owned AI-generated editorial material; non-documentary and not evidence of a facility, team, system, incident, model, provider, deployment, result or adoption.","contentUrl":"https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/060-ai-development-ai-product-retrospective.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni public image library, governed image 060","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"A Dead-Letter Queue Is Not a Resolution: Recovering Failed AI Work in Self-Storage","item":"https://jaredmodstorage.github.io/writing/dead-letter-queue-not-resolution-self-storage-ai/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">A Dead-Letter Queue Is Not a Resolution: Recovering Failed AI Work in Self-Storage</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert AI architecture paper<!-- --> · <time dateTime="2026-09-06">6 September 2026</time></p><h1>A Dead-Letter Queue Is Not a Resolution: Recovering Failed AI Work in Self-Storage</h1><p class="lede">A failed record is contained, not resolved. Safe recovery preserves its history, classifies the failure, rechecks current authority, and reconciles any business effect.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>10 min read</span></div></header><div class="essay-body"><p>A self-storage workflow receives a facility record, asks a model to classify it, and tries to pass the result to the next system. The consumer rejects the message. After several retries, the record lands in a dead-letter queue.</p>
+<p>The dashboard turns green because the main queue is moving again.</p>
+<p>That is a technical recovery, not an operating resolution. The failed record may still represent an unreviewed maintenance condition, an access change that never reached its governing system, a duplicate request, or an action whose outcome is unknown. Moving it out of the live path prevents one bad record from blocking other work. It does not determine what the business now owes.</p>
+<p>This distinction matters more as AI enters multi-location operations. Model output adds versions, source selections, prompts, tool calls and uncertainty to a message path that already has facility identity, policy, permissions, provider behavior and human decisions. If a team treats every failure as “retry later,” it can repeat an obsolete recommendation, apply a corrected record twice, or act on evidence that no longer reflects the facility.</p>
+<p>A dead-letter queue should be governed as a quarantine boundary. It holds failed work while the organization decides whether to repair, replace, supersede, deny or safely replay it. Resolution happens only when the underlying operating obligation has a named disposition and any resulting state has been read back from the appropriate source.</p>
+<figure class="article-photo"><img src="060-ai-development-ai-product-retrospective.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni listens during an AI-generated cross-functional discussion in a self-storage setting."><figcaption>Failed AI work needs an operating disposition, not just a cleared technical queue. <strong>Jared-owned AI-generated editorial illustration; not documentary evidence of a facility, team, system, incident, deployment or result.</strong></figcaption></figure>
+<section class="method-downloads" aria-labelledby="dead-letter-recovery-downloads"><p class="eyebrow">Governed companion package</p><h2 id="dead-letter-recovery-downloads">Inspect the recovery register and its evidence boundaries.</h2><p>These exact files contain Jared Mastroianni's proposed recovery method, one blank operator row, five entirely fictional teaching records, source limitations, editorial review records and the governed image disclosure. They do not establish a product feature, deployment, customer result, performance, provider relationship, privacy or security compliance, certification, external validation or industry standard.</p><div><a href="ai-dead-letter-recovery-register.csv" download>Download the dead-letter recovery register <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="a-dead-letter-queue-is-not-a-resolution.md" download>Download the exact publication source <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="060-ai-development-ai-product-retrospective.png" download>Download the governed editorial illustration <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a></div></section>
+<h2>Containment is a useful first move</h2>
+<p>Dead-letter queues are a standard messaging pattern. Amazon SQS describes them as destinations for messages that were not processed successfully and notes their value for isolating failures for diagnosis.<sup><a href="#fn-1" id="fnref-1" aria-label="Source 1">1</a></sup> Azure Service Bus likewise provides a dead-letter subqueue for messages that cannot be delivered or processed, with reason and description fields available for dead-lettered records.<sup><a href="#fn-2" id="fnref-2" aria-label="Source 2">2</a></sup></p>
+<p>Those are infrastructure behaviors. They do not define a self-storage operating policy.</p>
+<p>The queue can tell a technical owner that a consumer rejected an event after five receives. It cannot decide whether the event still represents valid work, whether another path already completed the action, whether a human corrected the condition, or whether replay is still authorized. Even the phrase “poison message” can mislead an operating team. The record may be technically malformed while describing a legitimate obligation. The payload may be valid while the requested action is prohibited. The failure may have occurred after a provider accepted the request but before the caller received the response.</p>
+<p>Containment therefore needs an explicit state name: <code>quarantined_pending_disposition</code>. Do not label the work closed, fixed or safely failed merely because it left the primary queue.</p>
+<h2>Separate the message failure from the business state</h2>
+<p>Every quarantined record carries at least two questions:</p>
+<ol>
+<li>Why could the workflow not continue?</li>
+<li>What is now true in the facility or governing business system?</li>
+</ol>
+<p>The first question is technical. The second is operational. They often require different evidence and different owners.</p>
+<p>A schema error can be established from validation logs. It does not establish that the underlying door condition was addressed. A timeout can be established from a client trace. It does not establish that the provider rejected the action. A model-service outage can explain why no classification was produced. It does not establish that the input was harmless.</p>
+<p>Build the recovery workflow around five failure classes:</p>
+<ul>
+<li><strong>Transient delivery failure:</strong> the request is still valid and the dependency may recover, but retries must remain finite and bounded.</li>
+<li><strong>Deterministic data or schema failure:</strong> the same bytes will fail again until the record, mapping, contract or consumer changes.</li>
+<li><strong>Authority or policy failure:</strong> the workflow lacks permission, required approval, applicable policy or allowed consequence scope. A retry cannot grant authority.</li>
+<li><strong>Ambiguous side effect:</strong> the caller lacks a reliable response, but the receiving system may have acted. Repeating the request could duplicate the effect.</li>
+<li><strong>Expired or superseded work:</strong> the original record has been overtaken by a correction, later observation, manual decision, policy change or completed action.</li>
+</ul>
+<p>Microsoft&#39;s retry guidance makes the same narrower technical distinction between transient faults and failures that should be canceled or treated as exceptions. It also warns that retrying a non-idempotent operation can produce the action more than once.<sup><a href="#fn-3" id="fnref-3" aria-label="Source 3">3</a></sup> The operator consequence is straightforward: failure class must be known before the replay control is enabled.</p>
+<h2>Freeze the failed-work packet</h2>
+<p>A team cannot investigate a failure if the evidence changes while it is being reviewed. Preserve an immutable failed-work packet when the message enters quarantine.</p>
+<p>At minimum, retain:</p>
+<ul>
+<li>original message bytes or a protected reference and cryptographic hash;</li>
+<li>source, destination, message identifier and correlation chain;</li>
+<li>facility, asset, unit or workflow identity used at failure time;</li>
+<li>event type, schema version and transformation history;</li>
+<li>model, prompt, retrieval, rule, tool and workflow versions when applicable;</li>
+<li>policy version, authority scope and consequence class;</li>
+<li>occurrence, enqueue, receive, processing and quarantine times;</li>
+<li>attempt count, backoff history, error code and error text;</li>
+<li>exact processing stage and last completed checkpoint;</li>
+<li>provider receipts, tool responses and known side effects;</li>
+<li>sensitive-data class, access restriction and retention rule; and</li>
+<li>current owner, disposition deadline and permitted next states.</li>
+</ul>
+<p>CloudEvents provides a vendor-neutral event envelope with required context attributes such as <code>id</code>, <code>source</code>, <code>specversion</code> and <code>type</code>.<sup><a href="#fn-4" id="fnref-4" aria-label="Source 4">4</a></sup> That is useful interoperability plumbing. Its own primer leaves processing semantics, error handling and domain meaning to the producer and consumer. A compliant envelope therefore does not establish that a failed event is complete, authorized, current or safe to replay.</p>
+<p>The failed-work packet closes that gap for the operator&#39;s workflow. It preserves the original event and adds the decision evidence needed for recovery. If the payload contains customer or access information, the packet should point to protected evidence rather than spreading sensitive details through queue labels, alerts and exported spreadsheets.</p>
+<h2>Do not send every dead letter to a human review queue</h2>
+<p>Human review is for a bounded decision, not for every technical exception.</p>
+<p>A malformed JSON document may belong with the integration owner. An expired facility mapping may belong with the identity steward. A prohibited action should be denied by policy. A provider outage may belong in incident response. A record with an ambiguous side effect may require a qualified operator to choose between reconcile, compensate and escalate.</p>
+<p>Putting all five into one review queue creates two problems. Technical defects consume decision capacity, and reviewers are asked to approve work before the evidence is ready.</p>
+<p>Route quarantined records by both processing stage and consequence:</p>
+<table>
+<thead>
+<tr>
+<th>Quarantine lane</th>
+<th>What failed</th>
+<th>Default owner</th>
+<th>Permitted next move</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Input admission</td>
+<td>Identity, schema, required field or source eligibility</td>
+<td>Data or integration owner</td>
+<td>Repair source or mapping; rebuild candidate</td>
+</tr>
+<tr>
+<td>Recommendation build</td>
+<td>Retrieval, model, rule or transformation</td>
+<td>AI workflow owner</td>
+<td>Rebuild under a declared version; retain old output</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Policy, permission, role or consequence boundary</td>
+<td>Decision authority or policy owner</td>
+<td>Deny, obtain valid authority, or redesign scope</td>
+</tr>
+<tr>
+<td>Execution</td>
+<td>Tool or provider request</td>
+<td>System owner plus operating owner</td>
+<td>Reconcile first; retry only if duplicate effect is controlled</td>
+</tr>
+<tr>
+<td>Readback</td>
+<td>Result cannot be independently confirmed</td>
+<td>Operating owner</td>
+<td>Hold closure; inspect governing source and escalate mismatch</td>
+</tr>
+</tbody></table>
+<p>The queue lane is not the final status. It is a routing control. A record can move from an execution lane to an incident path, or from input admission to <code>superseded</code>, without ever becoming a human approval case.</p>
+<h2>Replay is a new release decision</h2>
+<p>Redrive tools make it easy to move messages back into processing. Amazon SQS, for example, supports redrive to a source or compatible destination queue and recommends starting at a low velocity so the destination is not overwhelmed.<sup><a href="#fn-5" id="fnref-5" aria-label="Source 5">5</a></sup> Its documentation also notes that redriven messages receive a new message identifier and enqueue time, and that redriven and newly produced messages can interleave.<sup><a href="#fn-5" aria-label="Source 5">5</a></sup></p>
+<p>That means replay is not restoration of the old moment. It is a new processing event in the current operating world.</p>
+<p>Before replay, verify seven conditions:</p>
+<ol>
+<li><strong>The failure cause is understood.</strong> A changed symptom is not proof that the cause was corrected.</li>
+<li><strong>The original intent is still valid.</strong> The work has not expired, been canceled, completed manually or replaced by a later decision.</li>
+<li><strong>Current facility state supports the action.</strong> Recheck the governing sources required by the consequence.</li>
+<li><strong>Versions remain compatible.</strong> Identify the schema, mapping, model, prompt, policy and consumer versions that will process the record now.</li>
+<li><strong>Prior side effects are known.</strong> Reconcile the destination before repeating an ambiguous request.</li>
+<li><strong>Duplicate execution is controlled.</strong> Use an idempotency or deduplication design appropriate to the receiving system; do not invent protection the provider does not offer.</li>
+<li><strong>The replay is bounded.</strong> Name the batch, velocity, stop conditions, observer, rollback or compensation path and post-run readback.</li>
+</ol>
+<p>Bulk redrive should be treated like a production release. Start with representative records across failure families and consequence classes. Stop if the same defect repeats, a new mismatch appears, the destination slows, or the governing state cannot be confirmed. A falling queue count is not sufficient evidence.</p>
+<h2>A fictional record that should not be replayed</h2>
+<p>North Hollow Storage is an entirely fictional operator. The facility, systems, records, people, times and outcomes below are invented for instruction and do not describe modSTORAGE, Facily.ai or any deployment.</p>
+<p>In the fictional workflow, an inspection note enters an AI-assisted maintenance classifier. The record names a facility identifier retired during a prior migration. The classifier produces a recommendation to isolate a roll-up door from rental availability, but the authorization consumer rejects the message because it cannot resolve the facility identity. After the retry limit, the record is quarantined.</p>
+<p>Two days later, an integration owner repairs the identifier crosswalk and proposes replaying every failed record. The original message now validates. That does not make replay correct.</p>
+<p>The recovery owner finds a later manual inspection tied to the governing facility identifier. It documents that the door note belonged to a different unit and that the affected unit was already placed into the appropriate operating state through the approved manual workflow. The original AI recommendation is both mis-scoped and superseded.</p>
+<p>The correct disposition is <code>resolved_without_replay</code>. The packet links the identity defect, the governing later inspection, the manual operating-state record and the crosswalk correction. The team also tests other messages that used the retired identifier. It does not rewrite the original event, delete the model output or pretend the workflow completed automatically.</p>
+<p>This is why queue depth is a poor measure of resolution. North Hollow could empty the queue by replaying the record and create a new error. Keeping one record with a proved superseded disposition is better than producing a technically successful duplicate action.</p>
+<h2>Close the obligation, not the queue entry</h2>
+<p>A failed-work record needs a small, explicit set of terminal states:</p>
+<ul>
+<li><code>replayed_and_reconciled</code>;</li>
+<li><code>resolved_without_replay</code>;</li>
+<li><code>superseded_with_evidence</code>;</li>
+<li><code>duplicate_with_governing_match</code>;</li>
+<li><code>invalid_or_prohibited</code>;</li>
+<li><code>compensated_and_reconciled</code>; or</li>
+<li><code>escalated_to_named_owner</code> when closure belongs to another controlled process.</li>
+</ul>
+<p>None of those states should be assigned from the message broker alone. Closure requires the disposition decision, the person or policy authorized to make it, the evidence used, and the governing readback where an operating effect was possible.</p>
+<p>Measure the recovery system accordingly. Track age by consequence, oldest unresolved ambiguous side effect, repeated failure family, records missing a complete packet, replay recurrence rate, superseded-work rate and time from quarantine to operating disposition. Keep technical throughput and business closure as separate measures.</p>
+<p>NIST&#39;s AI Risk Management Framework is voluntary guidance and is currently being revised. Its governance and management functions emphasize documented roles, ongoing monitoring and treatment of identified risks; the Generative AI Profile adds suggested actions around incident communication and response roles.<sup><a href="#fn-6" id="fnref-6" aria-label="Source 6">6</a></sup><sup><a href="#fn-7" id="fnref-7" aria-label="Source 7">7</a></sup> Those sources do not prescribe a dead-letter design or certify an implementation. They support the broader obligation to make responsibility, monitoring and response explicit when AI components participate in operational work.</p>
+<p>The design principle is simpler than the infrastructure: a failed message must not disappear, and it must not regain authority merely because a retry button exists. Preserve what failed. Establish what happened. Decide what remains valid now. Re-enter only the work that is still authorized, then verify the result from the system that governs it.</p>
+<p>A dead-letter queue can protect the live workflow. Only a controlled disposition can protect the operation.</p>
+
+<section class="article-sources" aria-labelledby="dead-letter-recovery-sources"><h2 id="dead-letter-recovery-sources">References</h2><p>Primary and authoritative sources are listed with their bounded use in the accompanying source and limitations register.</p><ol>
+<li id="fn-1">Amazon Web Services, “Using dead-letter queues in Amazon SQS,” accessed September 4, 2026. <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html</a> <a href="#fnref-1" aria-label="Back to source 1">↩</a></li>
+<li id="fn-2">Microsoft, “Service Bus dead-letter queues,” accessed September 4, 2026. <a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues">https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues</a> <a href="#fnref-2" aria-label="Back to source 2">↩</a></li>
+<li id="fn-3">Microsoft Azure Architecture Center, “Retry pattern,” accessed September 4, 2026. <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/retry">https://learn.microsoft.com/en-us/azure/architecture/patterns/retry</a> <a href="#fnref-3" aria-label="Back to source 3">↩</a></li>
+<li id="fn-4">Cloud Native Computing Foundation, “CloudEvents Specification v1.0.2,” accessed September 4, 2026. <a href="https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md">https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md</a> <a href="#fnref-4" aria-label="Back to source 4">↩</a></li>
+<li id="fn-5">Amazon Web Services, “Learn how to configure a dead-letter queue redrive in Amazon SQS,” accessed September 4, 2026. <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-dead-letter-queue-redrive.html">https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-dead-letter-queue-redrive.html</a> <a href="#fnref-5" aria-label="Back to source 5">↩</a></li>
+<li id="fn-6">National Institute of Standards and Technology, “AI Risk Management Framework,” accessed September 4, 2026. <a href="https://www.nist.gov/itl/ai-risk-management-framework">https://www.nist.gov/itl/ai-risk-management-framework</a> <a href="#fnref-6" aria-label="Back to source 6">↩</a></li>
+<li id="fn-7">National Institute of Standards and Technology, “Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1),” accessed September 4, 2026. <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf</a> <a href="#fnref-7" aria-label="Back to source 7">↩</a></li>
+</ol></section>
+<aside class="article-disclosure"><h2>Assistance and claim disclosure</h2><strong>Evidence boundary</strong><p>AI assistance supported research synthesis, drafting and editorial QA. This article presents Jared Mastroianni's proposed recovery method and an entirely fictional North Hollow Storage scenario. It does not describe a released Facily.ai or Facily OS capability, a modSTORAGE deployment, a customer result, measured performance, legal advice, privacy or security compliance, certification, or an industry standard. Queue containment, operating disposition, replay, execution and governing readback remain separate states.</p></aside></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Expert AI architecture paper</p><h3><a href="/writing/ai-model-alias-runtime-identity-self-storage/">The Alias Is Not the Model: Prove Which AI Runtime Touched Facility Work</a></h3><p>Bind requested, resolved, and approved model identities to each consequential inference, then reduce authority when the serving runtime cannot be established.</p><a href="/writing/ai-model-alias-runtime-identity-self-storage/" class="text-link" aria-label="Read the article: The Alias Is Not the Model: Prove Which AI Runtime Touched Facility Work">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Multi-location systems note</p><h3><a href="/writing/facility-data-freshness-contract-self-storage/">A Quiet Dashboard Is Not a Healthy Portfolio: Build a Data-Freshness Contract for Every Facility</a></h3><p>Define signal identity, four clocks, freshness limits, degraded behavior, ownership, recovery, and reconciliation before a quiet dashboard becomes operational evidence.</p><a href="/writing/facility-data-freshness-contract-self-storage/" class="text-link" aria-label="Read the article: A Quiet Dashboard Is Not a Healthy Portfolio: Build a Data-Freshness Contract for Every Facility">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/rollback-not-undo-self-storage-ai-compensation-contract/">Rollback Is Not Undo: The Compensation Contract for Self-Storage AI</a></h3><p>Classify consequential AI actions before execution, separate cancellation from compensation, preserve concurrent truth, and verify residual consequence.</p><a href="/writing/rollback-not-undo-self-storage-ai-compensation-contract/" class="text-link" aria-label="Read the article: Rollback Is Not Undo: The Compensation Contract for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
