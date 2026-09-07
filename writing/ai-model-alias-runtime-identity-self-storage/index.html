@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CKaluYum.css" data-rsc-css-href="/_next/static/css/index.CKaluYum.css" data-precedence="vite-rsc/importer-resources"/><title>AI Runtime Identity for Self-Storage Operations | Jared Mastroianni</title><meta name="description" content="Model aliases can hide runtime changes. Bind requested, resolved and approved model identities to every consequential self-storage AI decision."/><meta name="robots" content="index, follow"/><meta property="og:title" content="AI Runtime Identity for Self-Storage Operations | Jared Mastroianni"/><meta property="og:description" content="Model aliases can hide runtime changes. Bind requested, resolved and approved model identities to every consequential self-storage AI decision."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-06"/><meta property="article:modified_time" content="2026-09-06"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/052-ai-development-ai-engineering-design-review.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni listens with two colleagues during an AI-generated engineering design review."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AI Runtime Identity for Self-Storage Operations | Jared Mastroianni"/><meta name="twitter:description" content="Model aliases can hide runtime changes. Bind requested, resolved and approved model identities to every consequential self-storage AI decision."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/052-ai-development-ai-engineering-design-review.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Alias Is Not the Model: Prove Which AI Runtime Touched Facility Work","datePublished":"2026-09-06","dateModified":"2026-09-06","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/#lead-image"},"description":"Model aliases can hide runtime changes. Bind requested, resolved and approved model identities to every consequential self-storage AI decision.","proficiencyLevel":"Expert / Architect","about":["Self-storage operations","Responsible AI","Model runtime identity","Model routing","AI observability","Operating authority"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/#lead-image","name":"AI runtime-identity design review","caption":"A model route is ready only when the team can connect the requested runtime, the runtime that answered and the authority it was evaluated to hold. Jared-owned AI-generated editorial image; not documentary evidence of a team, facility, model, provider, deployment or result.","description":"Jared Mastroianni listens with two colleagues during an AI-generated engineering design review. Jared-owned AI-generated editorial material; non-documentary and not evidence of a team, facility, model, provider, system, deployment, result or adoption.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/052-ai-development-ai-engineering-design-review.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni public image library, governed image 052","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Alias Is Not the Model: Prove Which AI Runtime Touched Facility Work","item":"https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Alias Is Not the Model: Prove Which AI Runtime Touched Facility Work</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Expert AI architecture paper<!-- --> · <time dateTime="2026-09-06">6 September 2026</time></p><h1>The Alias Is Not the Model: Prove Which AI Runtime Touched Facility Work</h1><p class="lede">Model aliases can hide runtime changes. Bind requested, resolved and approved model identities to every consequential self-storage AI decision.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>11 min read</span></div></header><div class="essay-body"><p>An AI workflow can keep the same name while the system answering underneath it changes.</p>
+<p>The application may still call <code>operations-assistant</code>. The screen may still show the same icon. Yet a model alias may have been reassigned, a router may have selected another provider, a fallback may have activated after a timeout, or a vendor may have served a different model revision. If the workflow records only the friendly name, the operator cannot establish which runtime produced the recommendation.</p>
+<p>That is not merely a technical inventory problem. It is a decision-authority problem.</p>
+<p>Suppose an AI-supported maintenance workflow may summarize open items, rank follow-up work and hand uncertain cases to a regional operator. The team tested those behaviors against one model version. If another model silently replaces it, the interface contract may remain valid while the operating behavior changes. The new runtime may interpret “no technician confirmation” as unresolved, resolved or not worth mentioning. Each output can be polished. Only one preserves the intended operating boundary.</p>
+<p>Responsible architecture therefore needs a runtime-identity control: compare the model requested with the model actually reported, bind that identity to the complete decision packet, and reduce authority when the resolved runtime cannot be proved.</p>
+<figure class="article-photo"><img src="052-ai-development-ai-engineering-design-review.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni listens with two colleagues during an AI-generated engineering design review."><figcaption>A model route is ready only when the team can connect the requested runtime, the runtime that answered and the authority it was evaluated to hold. <strong>Jared-owned AI-generated editorial image; not documentary evidence of a team, facility, model, provider, deployment or result.</strong></figcaption></figure>
+<section class="method-downloads" aria-labelledby="runtime-identity-downloads"><p class="eyebrow">Governed companion package</p><h2 id="runtime-identity-downloads">Inspect the 45-field runtime receipt and its evidence boundaries.</h2><p>These files contain Jared Mastroianni's proposed runtime-identity method, one blank operator row, five entirely fictional teaching records, current source limitations, editorial review records and the governed image disclosure. They do not establish a product feature, deployment, customer result, performance, provider relationship, privacy or security compliance, certification, external validation or industry standard.</p><div><a href="ai-runtime-identity-receipt.csv" download>Download the runtime-identity receipt <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="the-alias-is-not-the-model.md" download>Download the exact publication source <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="052-ai-development-ai-engineering-design-review.png" download>Download the governed editorial illustration <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a></div></section>
+<h2>A stable name is useful, but it is not evidence</h2>
+<p>Aliases and routers solve real engineering problems. They keep application code from depending on every provider or version change. They allow controlled traffic shifts and simplify rollback. The problem begins when teams mistake that useful indirection for a fixed identity.</p>
+<p>MLflow's current Model Registry documentation makes the distinction concrete. A model alias can be reassigned to another version independently of production code, and the next execution that resolves the alias can receive the new version.<sup><a href="#fn-4" id="fnref-4" aria-label="Source 4">4</a></sup> That is a feature. It is also why an alias must be governed as a mutable pointer.</p>
+<p>Write down three identities for every consequential inference:</p>
+<ol><li><strong>Requested identity:</strong> the provider, endpoint and alias or model name the application asked for.</li><li><strong>Resolved identity:</strong> the provider-reported model, snapshot, deployment, variant or serving revision that actually answered, when the service exposes it.</li><li><strong>Approved identity:</strong> the exact runtime or bounded family currently eligible for that task, consequence class and authority mode.</li></ol>
+<p>If those identities do not align, the workflow has a runtime mismatch. It should not hide that mismatch behind the same application label.</p>
+<p>Some providers will expose only part of the resolved identity. Record that limitation rather than filling the field from configuration. A configured route shows what should have happened. A response attribute, provider receipt or serving trace shows what the system reports did happen. Neither alone proves that the output is correct, but collapsing them destroys the ability to investigate change.</p>
+<h2>Pin the operating contract around the model</h2>
+<p>The runtime is only one component in an AI-assisted decision. A defensible comparison keeps the rest of the operating contract fixed or records every intentional difference:</p>
+<ul><li>task and consequence class;</li><li>facility and work-object identity rules;</li><li>input fields and source eligibility;</li><li>prompt and system-instruction version;</li><li>retrieval build and context window;</li><li>tool definitions and output schema;</li><li>policy version and prohibited actions;</li><li>human-review and handback triggers;</li><li>latency and freshness limits; and</li><li>required readback after any authorized action.</li></ul>
+<p>This is where model documentation helps but does not finish the job. The model-cards research proposed documenting intended use, evaluation conditions and performance characteristics so a model is not assumed suitable outside the contexts in which it was evaluated.<sup><a href="#fn-3" id="fnref-3" aria-label="Source 3">3</a></sup> A self-storage operator still has to translate that general discipline into its own task: which records were used, what errors matter, which facilities or operating conditions were represented, and what the workflow is allowed to do.</p>
+<p>Do not define equivalence as identical prose. Two models can word a safe recommendation differently. Define it as preservation of the operating contract.</p>
+<p>For a maintenance-priority workflow, the substitution test might require both runtimes to:</p>
+<ul><li>preserve every unresolved source record;</li><li>keep a missing facility or asset identity visible;</li><li>distinguish observed condition from inferred priority;</li><li>return <code>unknown</code> when required evidence is absent;</li><li>produce tool arguments that pass deterministic validation;</li><li>refrain from creating or closing work without separate authority; and</li><li>hand back the same high-consequence cases to qualified people.</li></ul>
+<p>An overall quality score cannot substitute for those floors. A candidate that improves average categorization but suppresses one critical handback class has not preserved the operating contract.</p>
+<h2>Validate structure, then evaluate meaning</h2>
+<p>Schema validation belongs at the model boundary. JSON Schema 2020-12 provides a vocabulary for describing and validating the structure of JSON instances.<sup><a href="#fn-5" id="fnref-5" aria-label="Source 5">5</a></sup> Use it to reject missing identifiers, illegal states, unexpected fields and malformed tool arguments before an output reaches policy or execution services.</p>
+<p>Then be precise about what a schema pass means. A record can be structurally valid and operationally wrong. It may name the wrong facility, cite a stale source, infer a condition that was never observed or choose <code>complete</code> where the governing system still says <code>open</code>.</p>
+<p>The substitution gate therefore needs two layers:</p>
+<p><strong>Deterministic conformance.</strong> Validate the envelope, required fields, enumerations, tool arguments, policy inputs, identifiers and prohibited states. These checks should produce reproducible pass or fail evidence.</p>
+<p><strong>Behavioral evaluation.</strong> Compare the baseline and candidate across approved cases, edge cases and known failure families. Evaluate task completion, unsupported assertions, unknown-state handling, handback, source use, tool selection, latency and any error categories material to the workflow.</p>
+<p>The National Institute of Standards and Technology describes its AI Risk Management Framework as voluntary guidance for incorporating trustworthiness considerations into AI design, development, use and evaluation; NIST also says version 1.0 is being revised.<sup><a href="#fn-1" id="fnref-1" aria-label="Source 1">1</a></sup> The framework does not certify a model or define a self-storage release test. It supports the broader requirement to make evaluation, monitoring and risk treatment explicit instead of assuming that a successful API call is a safe operating result.</p>
+<h2>Use shadow traffic to see real conditions without granting authority</h2>
+<p>Offline cases are necessary, but they rarely reproduce the full shape of live work: sparse notes, uneven facility identifiers, unusual schedules, seasonal patterns, incomplete integrations and the human shorthand that accumulates inside operating records.</p>
+<p>A shadow comparison sends a copy of eligible live requests to a candidate while the current production path remains authoritative. Amazon SageMaker's official documentation describes this pattern: copied requests reach a shadow variant, but only the production variant's response is returned to the calling application.<sup><a href="#fn-6" id="fnref-6" aria-label="Source 6">6</a></sup> The implementation is vendor-specific, and the documented feature has endpoint exclusions. The architectural value is broader: observe candidate behavior under current traffic without allowing the candidate to influence the operation.</p>
+<p>Shadowing still needs controls. Remove or tokenize data that the candidate is not authorized to receive. Keep retention bounded. Do not treat raw customer, payment, access or employee content as free evaluation material. Compare structured decisions and protected evidence references when possible. A shadow run should have a declared population, time window, sampling rule, owner and stop condition.</p>
+<p>Most importantly, score disagreement by consequence. A different sentence order is noise. A changed facility identity, suppressed uncertainty, broadened tool call, missed handback or invented completion state is a release issue.</p>
+<h2>Promote by authority mode, not only by traffic percentage</h2>
+<p>After offline and shadow evaluation, a candidate may be eligible for limited live use. Infrastructure platforms support gradual traffic shifts and rollback. AWS documents canary and linear deployment modes, alarm windows and rollback safeguards for supported SageMaker endpoints.<sup><a href="#fn-7" id="fnref-7" aria-label="Source 7">7</a></sup> Those controls can limit technical exposure. They do not decide what operating authority the candidate deserves.</p>
+<p>Release in authority stages:</p>
+<ol><li><strong>Observe only:</strong> candidate output is retained for evaluation and never shown as an operating recommendation.</li><li><strong>Draft only:</strong> candidate may prepare a summary, but a person must rebuild or verify the decision from governing records.</li><li><strong>Recommend:</strong> candidate may produce a bounded recommendation with sources and unknowns visible.</li><li><strong>Propose tool input:</strong> candidate may draft structured arguments, but deterministic policy and a named approval gate remain required.</li><li><strong>Execute within scope:</strong> allowed only for explicitly qualified, reversible, low-consequence actions with independent readback and a proved stop path.</li></ol>
+<p>A model can advance through traffic stages without advancing through authority stages. Ten percent of live requests is not automatically low risk if that ten percent can change access, customer communication, money or unit availability.</p>
+<p>Promotion criteria should be task-specific. Require zero prohibited-action attempts, complete runtime identity where the provider supports it, no critical handback regressions, acceptable latency and an independently approved comparison. If the candidate misses a floor, keep the baseline active or reduce the workflow to a safer mode.</p>
+<h2>Record the runtime at the moment of decision</h2>
+<p>The system needs more than a deployment spreadsheet. Each inference should emit a compact runtime receipt linked to the decision or recommendation it helped produce.</p>
+<p>OpenTelemetry's current generative-AI semantic-conventions project distinguishes the model name requested from the model name reported as having generated the response.<sup><a href="#fn-8" id="fnref-8" aria-label="Source 8">8</a></sup> The work is explicitly marked as under development, so treat it as an evolving telemetry reference, not a fixed business-control standard. The separation is still valuable.</p>
+<p>A practical runtime receipt should contain:</p>
+<ul><li>request, trace and decision identifiers;</li><li>requested provider, endpoint and model alias;</li><li>reported provider, model and serving revision when available;</li><li>task, prompt, retrieval, tool-schema and policy versions;</li><li>evaluation-suite version and eligible authority mode;</li><li>fallback or routing reason;</li><li>release state and traffic cohort;</li><li>stop condition and rollback target; and</li><li>protected evidence reference plus governing readback.</li></ul>
+<p>Avoid logging sensitive prompts and responses merely because telemetry supports them. Store approved hashes, classifications and controlled references when full content is not necessary. The goal is reconstructability, not indiscriminate retention.</p>
+<p>If the response does not disclose a usable model identity, set <code>resolved_identity_state=unavailable</code>. The workflow may still be suitable for low-consequence drafting, depending on policy, but it should not claim exact runtime provenance. For higher-consequence work, the absence may require handback or a provider route that offers the evidence the operator needs.</p>
+<h2>Treat automatic fallback as a new eligibility decision</h2>
+<p>Fallback is where many runtime controls disappear. A primary call times out, so the router sends the same packet to another model. The customer sees a response, the uptime chart stays green and the substitution never reaches a release meeting.</p>
+<p>Design the fallback matrix before the outage. For every task and consequence class, name the permitted alternate runtime and its maximum authority mode. If the approved substitute is unavailable, degrade the function. Return a source list without a recommendation, save a draft without sending it, route the case to a person, or mark the decision pending. Availability is not a license to widen authority.</p>
+<p>Do not reuse approval across a hidden substitution. If a person approved a specific proposal generated from a bound packet, a later retry under another runtime should create a new proposal identity. Material change invalidates the prior approval.</p>
+<h2>A fictional runtime mismatch</h2>
+<p>Copper Vale Storage is entirely fictional. Every facility, model, system, person, record, time, test and outcome in this example is invented for instruction and does not describe modSTORAGE, Facily.ai or a deployment.</p>
+<p>In the fictional portfolio, an AI-assisted workflow reviews maintenance notes and proposes one of three states: <code>monitor</code>, <code>qualified_review</code> or <code>operating_restriction_review</code>. It cannot create, close or modify a work order.</p>
+<p>The application requests the alias <code>maintenance-triage</code>. The approved mapping points to <code>model-candidate-17</code>, which passed the current evaluation suite and is eligible for recommendation mode. During a provider disruption, the router sends one request to <code>model-general-9</code>. The response is valid JSON and arrives within the latency target. It classifies a note as <code>monitor</code>.</p>
+<p>The runtime receipt shows the mismatch. The fictional note contains a roll-up-door observation with no unit identifier and no technician finding. The approved candidate was tested to return <code>qualified_review</code> when either identity or qualified evidence is missing. The fallback model was approved only for draft summaries.</p>
+<p>The workflow does not publish the recommendation. It records <code>resolved_runtime_not_eligible</code>, hands the note to the operating owner and keeps the governing work-order state unchanged. The incident owner removes the fallback from that route, adds the failure case to the evaluation suite and reviews other requests served during the same interval.</p>
+<p>Nothing in that sequence proves a real failure or a better model. It demonstrates the control: correct structure and fast response did not compensate for an ineligible runtime.</p>
+<h2>Close the substitution as an operating change</h2>
+<p>NIST's 2026 report on post-deployment AI monitoring notes that predeployment evaluations cannot account for all real-world dynamics and organizes monitoring across functionality, operations, human factors, security, compliance and large-scale impacts.<sup><a href="#fn-2" id="fnref-2" aria-label="Source 2">2</a></sup> It also describes the field's best practices and terminology as still developing. That is a useful warning against treating release approval as permanent proof.</p>
+<p>After promotion, monitor the actual resolved-runtime population, not only the configured alias. Compare behavior by task, facility cohort, consequence class and authority mode. Watch unknown and handback rates, schema failures, tool-argument rejections, critical disagreement, latency, fallback use and runtime mismatches. Reopen the gate when the model, provider, router, prompt, retrieval build, tool schema, policy or operating population materially changes.</p>
+<p>The engineering principle is straightforward: an alias can route work, but it cannot prove who did the work. Preserve the requested identity, capture the resolved identity, compare both with the approved identity and bind the result to the operating record.</p>
+<p>The model does not earn authority from its name. It earns a bounded role from current evidence.</p>
+<section class="article-sources" aria-labelledby="runtime-identity-sources"><h2 id="runtime-identity-sources">References</h2><p>Primary sources are listed with their bounded use in the accompanying source and limitations register.</p><ol>
+<li id="fn-1">National Institute of Standards and Technology, “AI Risk Management Framework,” accessed September 6, 2026. <a href="https://www.nist.gov/itl/ai-risk-management-framework">https://www.nist.gov/itl/ai-risk-management-framework</a> <a href="#fnref-1" aria-label="Back to source 1">↩</a></li>
+<li id="fn-2">National Institute of Standards and Technology, <em>Challenges to the Monitoring of Deployed AI Systems</em>, NIST AI 800-4, March 2026, accessed September 6, 2026. <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf">https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf</a> <a href="#fnref-2" aria-label="Back to source 2">↩</a></li>
+<li id="fn-3">Margaret Mitchell et al., “Model Cards for Model Reporting,” FAT* 2019, Google Research publication page, accessed September 6, 2026. <a href="https://research.google/pubs/model-cards-for-model-reporting/">https://research.google/pubs/model-cards-for-model-reporting/</a> <a href="#fnref-3" aria-label="Back to source 3">↩</a></li>
+<li id="fn-4">MLflow, “Model Registry Workflows,” accessed September 6, 2026. <a href="https://mlflow.org/docs/latest/ml/model-registry/workflow">https://mlflow.org/docs/latest/ml/model-registry/workflow</a> <a href="#fnref-4" aria-label="Back to source 4">↩</a></li>
+<li id="fn-5">JSON Schema, “A Media Type for Describing JSON Documents,” Draft 2020-12 Core, accessed September 6, 2026. <a href="https://json-schema.org/draft/2020-12/json-schema-core">https://json-schema.org/draft/2020-12/json-schema-core</a> <a href="#fnref-5" aria-label="Back to source 5">↩</a></li>
+<li id="fn-6">Amazon Web Services, “Shadow Tests — Amazon SageMaker AI,” accessed September 6, 2026. <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html">https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html</a> <a href="#fnref-6" aria-label="Back to source 6">↩</a></li>
+<li id="fn-7">Amazon Web Services, “Deployment Guardrails for Updating Models in Production — Amazon SageMaker AI,” accessed September 6, 2026. <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-guardrails.html">https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-guardrails.html</a> <a href="#fnref-7" aria-label="Back to source 7">↩</a></li>
+<li id="fn-8">OpenTelemetry, “Generative AI Spans,” commit <code>94f432d7126f5884d30a2cdde6f4e89908ebb6fd</code>, accessed September 6, 2026. <a href="https://github.com/open-telemetry/semantic-conventions-genai/blob/94f432d7126f5884d30a2cdde6f4e89908ebb6fd/docs/gen-ai/gen-ai-spans.md">https://github.com/open-telemetry/semantic-conventions-genai/blob/94f432d7126f5884d30a2cdde6f4e89908ebb6fd/docs/gen-ai/gen-ai-spans.md</a> <a href="#fnref-8" aria-label="Back to source 8">↩</a></li>
+</ol></section>
+<aside class="article-disclosure"><h2>Assistance and claim disclosure</h2><strong>Evidence boundary</strong><p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. This article presents his proposed runtime-identity method and an entirely fictional scenario. It does not describe a released Facily.ai or Facily OS capability, a modSTORAGE deployment, a customer result, measured performance, legal advice, privacy or security compliance, certification, or an industry standard. Requested configuration, provider-reported runtime metadata, schema conformance, evaluation, approval, execution and governing readback remain separate states. AI assistance supported research synthesis, drafting and editorial QA.</p></aside></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Multi-location systems note</p><h3><a href="/writing/facility-data-freshness-contract-self-storage/">A Quiet Dashboard Is Not a Healthy Portfolio: Build a Data-Freshness Contract for Every Facility</a></h3><p>Define signal identity, four clocks, freshness limits, degraded behavior, ownership, recovery, and reconciliation before a quiet dashboard becomes operational evidence.</p><a href="/writing/facility-data-freshness-contract-self-storage/" class="text-link" aria-label="Read the article: A Quiet Dashboard Is Not a Healthy Portfolio: Build a Data-Freshness Contract for Every Facility">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/rollback-not-undo-self-storage-ai-compensation-contract/">Rollback Is Not Undo: The Compensation Contract for Self-Storage AI</a></h3><p>Classify consequential AI actions before execution, separate cancellation from compensation, preserve concurrent truth, and verify residual consequence.</p><a href="/writing/rollback-not-undo-self-storage-ai-compensation-contract/" class="text-link" aria-label="Read the article: Rollback Is Not Undo: The Compensation Contract for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Expert architecture paper</p><h3><a href="/writing/one-facility-two-agents/">One Facility, Two Agents: The Command-Arbitration Layer for Self-Storage AI</a></h3><p>Arbitrate competing facility commands through current state, explicit authority, conflict policy, singular intent, readback, and reconciliation.</p><a href="/writing/one-facility-two-agents/" class="text-link" aria-label="Read the article: One Facility, Two Agents: The Command-Arbitration Layer for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

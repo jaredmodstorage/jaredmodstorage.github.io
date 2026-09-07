@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 06 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Alias Is Not the Model: Prove Which AI Runtime Touched Facility Work</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-model-alias-runtime-identity-self-storage/</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>Model aliases can hide runtime changes. Bind requested, resolved and approved model identities to every consequential self-storage AI decision.</description>
+    </item>
+    <item>
       <title>A Quiet Dashboard Is Not a Healthy Portfolio: Build a Data-Freshness Contract for Every Facility</title>
       <link>https://jaredmodstorage.github.io/writing/facility-data-freshness-contract-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-data-freshness-contract-self-storage/</guid>
