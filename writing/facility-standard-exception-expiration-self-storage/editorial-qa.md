@@ -1,0 +1,40 @@
+# Final editorial QA — midday systems lane
+
+**Status:** Publication-ready local article package completed September 8, 2026. No unresolved editorial, data-integrity, image-provenance or responsive-layout defect remained after final review.
+
+## Four-part release scorecard
+
+- **Self-storage trade editor — 9.7/10.** The headline and opening establish a specific portfolio problem immediately; the middle advances from scope and time boundaries through lifecycle, review order and downstream reconciliation without becoming a product pitch. The article is distinct from the exception-ledger, policy-compiler, change-impact and handoff pieces. Source qualifications stay proportional and the conclusion returns cleanly to the operating thesis. No unsupported customer, deployment, performance or recognition claim appears.
+- **Multi-location facility operator — 9.7/10.** The article answers a real Monday-morning decision: whether one facility may keep operating differently from one named standard. It names the minimum operating owners, evidence, checkpoints, expiry dispositions and closeout steps; distinguishes an exception from its compensating control; explains when a row needs attention before expiry; and supplies a blank reusable row plus four fictional states. The 37-field register is substantial, but each field supports authorization, monitoring, restoration or reconciliation rather than administrative decoration.
+- **Controls and evidence reviewer — 9.8/10.** Baseline identity, authority basis, local timestamps and time zone, control evidence, assumption status, deterministic expiry behavior, current disposition and reconciliation evidence are separately represented. The prose correctly prevents the register from manufacturing legal, safety, technical, privacy, financial or employment authority. NIST and GAO concepts are used as bounded analogies, not as self-storage mandates or validation of the authored method.
+- **Rendered visual and tool review — 9.7/10.** The 1280-, 390- and corrected 320-pixel article renders preserve hierarchy, image crop, links, source readability and complete tool content with no clipping or horizontal overflow. All six operator-tool groups remain legible at each width. A first-pass 320-pixel full-page proof exceeded Chrome's reliable single-image height and wrapped the opening pixels into the bottom of the capture; the preview-only narrow-screen type and spacing were tightened, the capture fell from 16,954 to 15,159 pixels, and the regenerated proof was visually rechecked from all four edges. Article, CSV, source and image bytes were unaffected by that proof correction.
+
+**Aggregate:** 9.725/10. All four independent release scores exceed the required 9.5 threshold.
+
+- **One-article rule:** The current-date midday slot was absent at preflight. Exactly one complete article was created in this slot.
+- **Article:** *Temporary Is Not a Portfolio Standard: Put an Expiration Date on Every Facility Exception*, by Jared Mastroianni.
+- **Length:** 1,712 body words under the documented body-marker Unicode-token rule with bracketed numeric reference markers excluded. The requested 1,600–2,200-word range is met.
+- **Lane fit:** Intermediate-to-advanced treatment of multi-location standard deviations, authority, compensating controls, lifecycle states, expiry behavior and downstream reconciliation.
+- **Voice:** Direct professional operating argument. No fake quotation, generic product pitch, invented customer story, repetitive disclaimer cadence or self-aware drafting language appears in the body.
+- **Practical value:** The 37-field Facility Standard Exception Register answers whether one facility may continue operating differently from one named portfolio standard. It records exact scope, authority, control evidence, time boundaries, restoration or replacement tests, expiry behavior, downstream consumers and the current decision.
+- **Fictional data:** One blank row and four Copper Ridge teaching rows validate active, attention-required, closed-and-reconciled and expired-or-held states. Copper Ridge Storage Group, its sites, people, dates, systems, evidence and results are explicitly fictional.
+- **CSV integrity:** Both CSV files parse with uniform row widths and unique headers. The practical tool contains five data rows at 37 columns and unique exception IDs; the source register contains four records at ten columns.
+- **Source integrity:** Article references 1–4 map one-to-one to SRC-01 through SRC-04. All four are current official NIST or GAO records. Three URLs returned direct HTTP 200; the official GAO page was verified through current web retrieval while direct automated requests returned HTTP 403, and that limitation is recorded.
+- **Source scope:** The sources support bounded baseline, change-control, policy, role, monitoring and remediation concepts. They do not define a self-storage exception standard, validate this tool, or establish legal, technical, safety, financial, privacy or employment authority.
+- **Duplicate control:** Current `main` editorial, asset, submission, media and evidence registers; today's other lanes; prior packages; active or submitted manuscripts; live owned-site sitemaps; both proposed canonicals; the WordPress exact-slug endpoint; and exact web searches were refreshed. No unrelated title, slug, Copper Ridge example or tool collision was found.
+- **Nearest-work boundary:** The automation exception ledger routes stopped work; the policy compiler generates site-specific controls; the change-impact graph tests a planned release; the handoff audit transfers work between owners. This article governs a facility-specific deviation after proposal or activation through expiry and reconciled close.
+- **Originality:** A 402-file local screen found zero normalized sentence matches of 14 or more words and zero shared unique six-word shingles.
+- **Image:** Governed image 027 was visually inspected at 3,840 × 2,560 and copied byte-identically at SHA-256 `be9d756c08ced1ab754ee7a6367475b247340df8f6dec1025c9023437f5c30e0`. Alt text, caption, crop, AI-generated classification, contextual-use boundary and provenance are recorded. No prior daily article-package use was found. The approved navy-blazer v2 author portrait was not needed; the rejected black-turtleneck portrait was not used.
+- **Destination:** Jared's personal authority site only. `destination-assignment.md` preceded the publisher manifest. The modSTORAGE WordPress blog is explicitly excluded from receiving the same complete article, title, slug, body or tool.
+- **Claim state:** Local draft, publisher handoff, repository or CMS creation, publication, canonical activation, sitemap/feed inclusion, crawling, indexing, ranking, independent coverage and recognition remain separate.
+- **Assistance:** Research synthesis, drafting and QA were AI-assisted. No assertion of Jared's personal review or approval is made.
+
+## Rendered visual and tool QA
+
+- `render-preview.mjs` generated a complete local publication preview from the exact Markdown, image notes and CSV.
+- Full article renders were generated at 1280, 390 and 320 pixels; the Facility Standard Exception Register was also captured independently at each width.
+- Automated checks found document width equal to viewport width, tool scroll width equal to client width, all images loaded and zero page errors at all three widths.
+- Visual inspection confirmed a complete 3:2 feature image, readable body hierarchy, legible linked sources, a prominent CSV download and full field/value containment in the one-column mobile register.
+- The preview uses fictional record `EXC-FIC-001` and accurately preserves its active state, dates, controls and expiry behavior. Empty values are labeled “Not set in fictional example,” not converted into evidence.
+
+No email, provider submission, CMS mutation, repository publication, search submission, payment, deletion or other irreversible action occurred. The exact package is a publication-ready local draft only.
