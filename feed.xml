@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 07 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Answer Needs a Retrieval Receipt: Prove What Facility AI Was Allowed to Know</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-ai-retrieval-evidence-receipt/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-ai-retrieval-evidence-receipt/</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A facility AI citation is not enough. Record eligible sources, retrieval coverage, missing evidence and the bounded use each answer can support.</description>
+    </item>
+    <item>
       <title>Midnight Is Not a Portfolio Cutoff: Build a Business-Time Contract for Every Facility</title>
       <link>https://jaredmodstorage.github.io/writing/facility-business-time-contract-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-business-time-contract-self-storage/</guid>
