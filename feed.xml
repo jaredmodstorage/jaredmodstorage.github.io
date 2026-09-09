@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Tue, 08 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A Login Is Not an Admission: Build a Systems Gate Before a New Facility Joins the Portfolio</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-systems-admission-gate/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-systems-admission-gate/</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A practical systems-admission gate helps multi-site self-storage operators prove identity, authority, timing, meaning, coverage, access and test readiness before a new facility joins portfolio reporting or automation.</description>
+    </item>
     <item>
       <title>Temporary Is Not a Portfolio Standard: Put an Expiration Date on Every Facility Exception</title>
       <link>https://jaredmodstorage.github.io/writing/facility-standard-exception-expiration-self-storage/</link>
