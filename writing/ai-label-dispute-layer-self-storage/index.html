@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CgInf__Z.css" data-rsc-css-href="/_next/static/css/index.CgInf__Z.css" data-precedence="vite-rsc/importer-resources"/><title>AI Label-Dispute Layers for Self-Storage | Jared Mastroianni</title><meta name="description" content="A label-dispute layer lets self-storage operators act on human overrides immediately while keeping verified labels, evaluation evidence and training eligibility under separate control."/><meta name="robots" content="index, follow"/><meta property="og:title" content="AI Label-Dispute Layers for Self-Storage | Jared Mastroianni"/><meta property="og:description" content="A label-dispute layer lets self-storage operators act on human overrides immediately while keeping verified labels, evaluation evidence and training eligibility under separate control."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-09"/><meta property="article:modified_time" content="2026-09-09"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/059-ai-development-predictive-maintenance-pilot.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni listens as a technician reviews equipment evidence beside a self-storage roll-up door."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AI Label-Dispute Layers for Self-Storage | Jared Mastroianni"/><meta name="twitter:description" content="A label-dispute layer lets self-storage operators act on human overrides immediately while keeping verified labels, evaluation evidence and training eligibility under separate control."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/059-ai-development-predictive-maintenance-pilot.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"An Override Is Not Ground Truth: Build a Label-Dispute Layer for Self-Storage AI","datePublished":"2026-09-09","dateModified":"2026-09-09","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/#lead-image"},"description":"A label-dispute layer lets self-storage operators act on human overrides immediately while keeping verified labels, evaluation evidence and training eligibility under separate control.","proficiencyLevel":"Expert / Architect","about":["Self-storage operations","Responsible artificial intelligence","Human overrides","AI evaluation","Training-data governance","Data provenance","Label disputes"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/#lead-image","name":"Self-storage AI label-dispute review","caption":"Human intervention can protect current work immediately while a separate review determines whether the original AI label was wrong, incomplete or changed by later evidence.","description":"Jared Mastroianni listens as a technician reviews equipment evidence beside a self-storage roll-up door. Jared-owned AI-generated editorial material; non-documentary and not evidence of a named property, customer, deployment, model result or historical event.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/059-ai-development-predictive-maintenance-pilot.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni public image library, governed image 059","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"An Override Is Not Ground Truth: Build a Label-Dispute Layer for Self-Storage AI","item":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">An Override Is Not Ground Truth: Build a Label-Dispute Layer for Self-Storage AI</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Responsible AI architecture note<!-- --> · <time dateTime="2026-09-09">9 September 2026</time></p><h1>An Override Is Not Ground Truth: Build a Label-Dispute Layer for Self-Storage AI</h1><p class="lede">A label-dispute layer lets self-storage operators act on human overrides immediately while keeping verified labels, evaluation evidence and training eligibility under separate control.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>7 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="059-ai-development-predictive-maintenance-pilot.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni listens as a technician reviews equipment evidence beside a self-storage roll-up door."><figcaption>Human intervention can protect current work immediately while a separate review determines whether the original AI label was wrong, incomplete or changed by later evidence. <strong>Jared-owned AI-generated editorial material; non-documentary and not evidence of a named property, customer, deployment, model result or historical event.</strong></figcaption></figure>
+<p>Imagine a maintenance model marks a fictional roll-up door report as routine. A technician reviews the note, sees additional evidence and moves the work to urgent. The operating correction is appropriate: access is restricted and the work receives immediate attention.</p>
+<p>Later, an analytics process collects every human override as a “correct answer” for the next training set. It records routine as the model’s error and urgent as ground truth. That shortcut may be wrong. The technician may have seen a later photo, applied a safety rule that was unavailable to the model, responded to a temporary condition or made a conservative decision while evidence remained incomplete. The override changed the work. It did not necessarily establish the label the model should have predicted from its earlier inputs.</p>
+<p>That distinction needs its own architecture. A <strong>label-dispute layer</strong> separates the immediate operating disposition from the verified label that may be used for evaluation or learning. It keeps the facility moving without allowing every correction, escalation or exception to rewrite the meaning of the data.</p>
+
+<section class="method-downloads" aria-labelledby="label-dispute-downloads"><p class="eyebrow">Governed companion package</p><h2 id="label-dispute-downloads">Use the 50-field AI Label-Dispute Register and inspect its evidence boundaries.</h2><p>These exact files contain Jared Mastroianni's proposed label-dispute method, one blank template and four entirely fictional teaching records, plus the source, editorial and image-governance records. They do not establish a product feature, facility deployment, customer result, performance, certification, external validation or industry standard.</p><div><a href="ai-label-dispute-register.csv" download>Download the AI Label-Dispute Register <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="an-override-is-not-ground-truth.md" download>Download the exact publication source <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="059-ai-development-predictive-maintenance-pilot.png" download>Download the governed editorial illustration <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a></div></section>
+<h2>One event can produce three different answers</h2>
+<p>A mature record keeps three questions separate.</p>
+<ol>
+<li><strong>What did the model propose from the evidence it received?</strong> Preserve the input snapshot, task, model build, prompt or feature version, proposed label and time.</li>
+<li><strong>What did the operator decide should happen now?</strong> Record the operating disposition, authority, reason and any restriction or escalation.</li>
+<li><strong>What label was later verified for the defined evaluation task?</strong> Identify the reviewer, verification evidence, final label, scope and whether it is eligible for training.</li>
+</ol>
+<p>Those answers can legitimately differ. A model can make the best prediction available at 9:02 a.m.; an operator can choose a safer response at 9:05; and a qualified review can determine at 2:00 p.m. that the original label was reasonable given the original evidence. The decision to act conservatively does not retroactively make the earlier evidence more complete.</p>
+<p>The National Institute of Standards and Technology Artificial Intelligence Risk Management Framework notes that information about how often and why people overrule AI output can be useful to collect and analyze.<sup id="note-1"><a href="#source-1" aria-label="Source 1">1</a></sup> The framework is voluntary and cross-industry. It does not prescribe a self-storage label-dispute system. It does support a key discipline: human intervention carries information that should be examined, not flattened into a binary score.</p>
+<h2>Classify the reason before changing the label</h2>
+<p>An override becomes useful learning evidence only after its cause is understood. Six reason classes prevent most false feedback.</p>
+<h3>Model error</h3>
+<p>The original evidence supported a defined label, but the model produced a different one. If a qualified reviewer confirms the evidence and task definition, the verified label may be eligible for evaluation or training.</p>
+<h3>Source-data error</h3>
+<p>The model received an incorrect facility, asset, timestamp, status or measurement. The operating correction belongs upstream first. Training on the corrected answer without fixing the source can teach the model to compensate for a data defect that still exists.</p>
+<h3>Missing evidence</h3>
+<p>The operator saw information that was not available at inference time. The later disposition can be right while the original prediction remains unscorable. The record should identify the missing evidence and preserve the gap as a coverage problem.</p>
+<h3>Policy or authority override</h3>
+<p>The model’s label may be accurate, but policy requires a different response. A low-risk observation might still receive manager review because of a customer complaint, active incident or local restriction. The operating decision should not be converted into a contradictory descriptive label.</p>
+<h3>Temporary operating constraint</h3>
+<p>Capacity, weather, vendor availability, access conditions or staffing may change what the team can do. Those conditions belong in scheduling and exception records. They do not redefine the underlying maintenance or customer state.</p>
+<h3>Unresolved dispute</h3>
+<p>Two qualified reviewers may interpret the evidence differently, or the governing evidence may be unavailable. The right training state is not “majority wins.” It is <strong>held</strong> until the label authority, evidence and task definition support a decision.</p>
+<h2>Put the dispute between workflow and learning</h2>
+<p>The safest architecture does not slow the operating correction. It inserts a controlled boundary after the current work is protected and before the override enters a metric, evaluation set or training set.</p>
+<p>At inference time, the application creates an immutable reference to the model input and output. When a person changes the disposition, the workflow records the new operating state and the authority used. A separate dispute object links the original proposal, the operating action and the evidence available to each actor.</p>
+<p>The review service then decides whether the original example is scorable. A verified label can be approved for one named task and versioned label definition. Training eligibility remains a separate decision. Some records are valuable for incident analysis but inappropriate for learning because they contain unresolved identity, missing evidence, protected information or a policy-only override.</p>
+<p>The World Wide Web Consortium provenance model distinguishes entities, activities and agents and allows responsibility and derivation to be recorded across versions.<sup id="note-2"><a href="#source-2" aria-label="Source 2">2</a></sup> A facility operator does not need to implement the full PROV model. The practical lesson is to preserve the original evidence, the intervention activity, the resulting record and the people or systems responsible for each step.</p>
+<h2>Measure intervention without punishing caution</h2>
+<p>A single “override rate” is a weak performance measure. It can rise because the model deteriorated, because employees became more attentive, because a new policy required review, because evidence coverage changed or because staff learned to record corrections that previously stayed invisible.</p>
+<p>Useful measures keep the denominator and reason visible:</p>
+<ul>
+<li>proposals by task, facility, model build and evidence-coverage state;</li>
+<li>operating overrides by reason and consequence;</li>
+<li>disputes awaiting verification, including age and owner;</li>
+<li>scorable records by label definition and evaluation window;</li>
+<li>verified model errors separated from source, policy and coverage issues;</li>
+<li>training-eligible records compared with all interventions;</li>
+<li>corrections propagated to evaluation sets, training sets and published metrics.</li>
+</ul>
+<p>The NIST AI Risk Management Framework connects trustworthy AI to the datasets, models, organizational behavior and human interactions around the system.<sup id="note-1b"><a href="#source-1" aria-label="Source 1">1</a></sup> Its Playbook provides voluntary suggestions across Govern, Map, Measure and Manage and warns that the material is not a one-size-fits-all checklist.<sup id="note-3"><a href="#source-3" aria-label="Source 3">3</a></sup> For a self-storage portfolio, the local implication is simple: a human click is part of a socio-technical process, not an infallible label oracle.</p>
+<h2>A fictional door-review dispute</h2>
+<p>In a fictional portfolio, model build <code>maint-7.3</code> reviews a manager note for Door D-14 at Harbor Pine Storage. From the evidence available at 9:02 a.m., it proposes <code>routine_inspection</code>. At 9:05, a technician sees a new image and reports heat plus an unusual odor near the motor housing. The technician restricts access and changes the operating disposition to <code>urgent_qualified_review</code>.</p>
+<p>The label-dispute layer preserves both evidence times. It records <code>missing_evidence_at_inference</code> rather than immediately calling the model wrong. A qualified maintenance reviewer later confirms that the original note alone supported <code>routine_inspection</code>, while the later image and observation supported the urgent operating decision. The record is useful for testing evidence-arrival handling, but it is not eligible as a mislabeled original example.</p>
+<p>A second fictional case is different. Model build <code>access-4.1</code> classifies an access event against the wrong facility because an upstream mapping carries a retired site identifier. The manager corrects the facility and disposition. Review classifies the intervention as <code>source_data_error</code>, opens an identity correction and excludes the record from model evaluation. Again, the operating correction is real; the model-quality conclusion would be unsupported.</p>
+<p>No facility, person, asset, model, deployment or result in these examples is real. The labels and times are teaching data, not evidence of industry performance.</p>
+<h2>The minimum review packet</h2><p class="tool-intro">The downloadable register keeps the inference, operating intervention, verification decision, eligibility and correction state in one reviewable record. This preview uses fictional record LABEL-FIC-001.</p><div class="field-groups" id="operator-tool"><section class="field-group"><h3>1. Identify the task and inference</h3><dl><div><dt>Dispute Id</dt><dd>LABEL-FIC-001</dd></div><div><dt>Record State</dt><dd>teaching_record</dd></div><div><dt>Fictional Example</dt><dd>yes</dd></div><div><dt>Facility Id</dt><dd>FIC-HARBOR-PINE</dd></div><div><dt>Facility Name</dt><dd>Harbor Pine Storage</dd></div><div><dt>Task Id</dt><dd>FIC-MAINT-TRIAGE</dd></div><div><dt>Task Definition Version</dt><dd>maint-label-v3</dd></div><div><dt>Work Object Id</dt><dd>DOOR-D14</dd></div><div><dt>Inference Id</dt><dd>FIC-INF-1001</dd></div><div><dt>Inference At</dt><dd>2026-09-09T09:02:00-04:00</dd></div></dl></section><section class="field-group"><h3>2. Preserve original evidence and proposal</h3><dl><div><dt>Evidence Snapshot Ref</dt><dd>evidence://fictional/maint/1001</dd></div><div><dt>Evidence Available At Inference</dt><dd>Manager note: door slows during close</dd></div><div><dt>Model Provider Label</dt><dd>Fictional Model Provider</dd></div><div><dt>Model Build</dt><dd>maint-7.3</dd></div><div><dt>Prompt Or Feature Version</dt><dd>prompt-maint-18</dd></div><div><dt>Proposed Label</dt><dd>routine_inspection</dd></div><div><dt>Reported Confidence</dt><dd>0.78</dd></div><div><dt>Operating Disposition</dt><dd>urgent_qualified_review</dd></div><div><dt>Operating Changed At</dt><dd>2026-09-09T09:05:00-04:00</dd></div></dl></section><section class="field-group"><h3>3. Record the operating intervention</h3><dl><div><dt>Operating Actor Role</dt><dd>fictional technician</dd></div><div><dt>Operating Authority Basis</dt><dd>fictional maintenance escalation procedure</dd></div><div><dt>Operating Reason</dt><dd>New image and direct observation changed the operating evidence</dd></div><div><dt>Immediate Consequence</dt><dd>Access restricted pending qualified review</dd></div><div><dt>Evidence Added After Inference</dt><dd>New image; technician reports heat and unusual odor</dd></div><div><dt>Dispute Class</dt><dd>missing_evidence_at_inference</dd></div><div><dt>Dispute Opened At</dt><dd>2026-09-09T09:06:00-04:00</dd></div><div><dt>Dispute Owner</dt><dd>fictional AI quality owner</dd></div><div><dt>Scorable State</dt><dd>scorable_original_only</dd></div></dl></section><section class="field-group"><h3>4. Verify the label and eligibility</h3><dl><div><dt>Label Definition Version</dt><dd>maint-label-v3</dd></div><div><dt>Verification Source</dt><dd>Fictional qualified maintenance review</dd></div><div><dt>Verification Evidence Time</dt><dd>2026-09-09T14:00:00-04:00</dd></div><div><dt>Reviewer Role</dt><dd>fictional qualified maintenance reviewer</dd></div><div><dt>Verified Label</dt><dd>routine_inspection</dd></div><div><dt>Verified At</dt><dd>2026-09-09T14:10:00-04:00</dd></div><div><dt>Evaluation Eligible</dt><dd>yes</dd></div><div><dt>Training Eligible</dt><dd>no</dd></div><div><dt>Eligibility Reason</dt><dd>Original label was reasonable for original evidence; use for evidence-arrival evaluation not training correction</dd></div><div><dt>Evaluation Dataset Version</dt><dd>eval-maint-2026Q3</dd></div></dl></section><section class="field-group"><h3>5. Propagate the correction</h3><dl><div><dt>Training Candidate Version</dt><dd>Not set in fictional example</dd></div><div><dt>Correction Required</dt><dd>yes</dd></div><div><dt>Correction Target</dt><dd>evidence coverage and late-arrival handling</dd></div><div><dt>Correction Reference</dt><dd>FIC-CORR-1001</dd></div><div><dt>Propagation State</dt><dd>approved_pending_propagation</dd></div><div><dt>Metric Recompute State</dt><dd>pending</dd></div></dl></section><section class="field-group"><h3>6. Bound retention and closure</h3><dl><div><dt>Retention Class</dt><dd>operational_90_days</dd></div><div><dt>Access Boundary</dt><dd>maintenance review team</dd></div><div><dt>Privacy Or Sensitivity Boundary</dt><dd>Contains fictional operational detail only</dd></div><div><dt>Closed At</dt><dd>2026-09-09T14:12:00-04:00</dd></div><div><dt>Final State</dt><dd>closed_with_coverage_correction</dd></div><div><dt>Notes</dt><dd>Fictional teaching data; no real facility model deployment incident or result</dd></div></dl></section></div><p>The downloadable AI Label-Dispute Register makes the separation operational. Each record includes:</p>
+<ul>
+<li>task and facility identity;</li>
+<li>the original evidence snapshot and inference time;</li>
+<li>model, prompt or feature versions;</li>
+<li>proposed label and confidence when the system exposes one;</li>
+<li>operating disposition, reason, authority and consequence;</li>
+<li>evidence added after inference;</li>
+<li>dispute class and scorable state;</li>
+<li>reviewer, verification source and verified label;</li>
+<li>evaluation and training eligibility as separate fields;</li>
+<li>dataset versions, propagation state and correction references;</li>
+<li>retention, access and privacy boundaries.</li>
+</ul>
+<p>The register includes a blank template and four fictional teaching rows. A small operator can use the same structure in a controlled spreadsheet. A larger program can represent it as linked, immutable records. The architecture matters more than the storage format.</p>
+<p>The NIST Generative Artificial Intelligence Profile recommends evaluating data quality and integrity, using structured feedback and considering the provenance of generated content.<sup id="note-4"><a href="#source-4" aria-label="Source 4">4</a></sup> That profile is also voluntary and is not validation of this method. It reinforces the need to govern feedback as evidence with origin and scope rather than treating every response as a direct route into future behavior.</p>
+<h2>Close the correction loop deliberately</h2>
+<p>A verified dispute is not closed when the reviewer chooses a label. The owner must decide where the correction belongs. A model error may update an evaluation set and enter a governed training candidate. A source error belongs in the facility map or upstream system. A policy override may require no model change. Missing evidence may trigger a coverage improvement. An unresolved dispute stays excluded.</p>
+<p>After an approved dataset change, record the new version, affected records, reviewer and effective time. Recompute only the metrics whose denominators or labels changed. Preserve the superseded result rather than silently rewriting history. If the example entered more than one dataset, propagate the correction to every governed descendant or mark the remaining copies as known stale.</p>
+<p>The control is unnecessary when no AI label, score or recommendation is being evaluated or reused. It becomes important when an override can influence model performance reporting, future training, employee evaluation or consequential facility action.</p>
+<p>Facility teams should be free to correct work quickly. Learning systems should be required to explain what they learned from that correction—and why they were allowed to learn it.</p>
+<section class="article-sources" aria-labelledby="label-dispute-references"><h2 id="label-dispute-references">References</h2><p>The accompanying source register records the exact supported use and material limits for each current primary or official source.</p><ol><li id="source-1">National Institute of Standards and Technology, <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>, NIST AI 100-1, January 2023. <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf</a> <a href="#note-1" aria-label="Back to source 1">↩</a></li><li id="source-2">World Wide Web Consortium, <em>PROV Model Primer</em>, W3C Working Group Note, April 30, 2013. <a href="https://www.w3.org/TR/prov-primer/">https://www.w3.org/TR/prov-primer/</a> <a href="#note-2" aria-label="Back to source 2">↩</a></li><li id="source-3">National Institute of Standards and Technology, <em>NIST AI RMF Playbook</em>, updated June 10, 2026. <a href="https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook">https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook</a> <a href="#note-3" aria-label="Back to source 3">↩</a></li><li id="source-4">National Institute of Standards and Technology, <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>, NIST AI 600-1, July 2024. <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf</a> <a href="#note-4" aria-label="Back to source 4">↩</a></li></ol></section>
+<aside class="article-disclosure"><h2>Assistance and claim disclosure</h2><strong>Evidence boundary</strong><p>Research synthesis, drafting and editorial QA were AI-assisted. This article presents Jared Mastroianni's proposed label-dispute method and entirely fictional teaching records. It does not describe a released Facily.ai or Facily OS capability, a modSTORAGE deployment, a customer result, measured performance, legal advice, security or compliance certification, independent validation or an industry standard. A human override records an operating intervention; it does not by itself establish ground truth, model error, evaluation eligibility or training eligibility.</p></aside></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Multi-location systems note</p><h3><a href="/writing/facility-systems-admission-gate/">A Login Is Not an Admission: Build a Systems Gate Before a New Facility Joins the Portfolio</a></h3><p>Prove facility identity, authority, business time, record meaning, observation coverage, access and test evidence before portfolio use.</p><a href="/writing/facility-systems-admission-gate/" class="text-link" aria-label="Read the article: A Login Is Not an Admission: Build a Systems Gate Before a New Facility Joins the Portfolio">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture note</p><h3><a href="/writing/facility-ai-retrieval-evidence-receipt/">The Answer Needs a Retrieval Receipt: Prove What Facility AI Was Allowed to Know</a></h3><p>Expose eligible sources, retrieval coverage, missing evidence, conflicts and permitted use before an AI answer reaches facility work.</p><a href="/writing/facility-ai-retrieval-evidence-receipt/" class="text-link" aria-label="Read the article: The Answer Needs a Retrieval Receipt: Prove What Facility AI Was Allowed to Know">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Multi-location systems note</p><h3><a href="/writing/facility-business-time-contract-self-storage/">Midnight Is Not a Portfolio Cutoff: Build a Business-Time Contract for Every Facility</a></h3><p>Assign events, schedules and deadlines to the right facility clock, business date and versioned calendar before automation acts.</p><a href="/writing/facility-business-time-contract-self-storage/" class="text-link" aria-label="Read the article: Midnight Is Not a Portfolio Cutoff: Build a Business-Time Contract for Every Facility">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

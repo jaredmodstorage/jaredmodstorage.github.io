@@ -8,6 +8,15 @@
     <lastBuildDate>Wed, 09 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>An Override Is Not Ground Truth: Build a Label-Dispute Layer for Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A label-dispute layer lets self-storage operators act on human overrides immediately while keeping verified labels, evaluation evidence and training eligibility under separate control.</description>
+    </item>
+    <item>
       <title>A Login Is Not an Admission: Build a Systems Gate Before a New Facility Joins the Portfolio</title>
       <link>https://jaredmodstorage.github.io/writing/facility-systems-admission-gate/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-systems-admission-gate/</guid>
