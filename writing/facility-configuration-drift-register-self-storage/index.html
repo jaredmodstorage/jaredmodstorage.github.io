@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CgInf__Z.css" data-rsc-css-href="/_next/static/css/index.CgInf__Z.css" data-precedence="vite-rsc/importer-resources"/><title>Facility Configuration Drift Registers for Self-Storage | Jared Mastroianni</title><meta name="description" content="A self-storage configuration-drift method that separates approved portfolio standards, facility baselines, observed settings, effective state and verified behavior."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Facility Configuration Drift Registers for Self-Storage | Jared Mastroianni"/><meta property="og:description" content="A self-storage configuration-drift method that separates approved portfolio standards, facility baselines, observed settings, effective state and verified behavior."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-10"/><meta property="article:modified_time" content="2026-09-10"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/010-professional-charcoal-suit-executive-desk.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni seated at a desk in a neutral office setting for an editorial article about portfolio configuration review."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Facility Configuration Drift Registers for Self-Storage | Jared Mastroianni"/><meta name="twitter:description" content="A self-storage configuration-drift method that separates approved portfolio standards, facility baselines, observed settings, effective state and verified behavior."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/010-professional-charcoal-suit-executive-desk.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register","datePublished":"2026-09-10","dateModified":"2026-09-10","image":{"@id":"https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/#lead-image"},"description":"A self-storage configuration-drift method that separates approved portfolio standards, facility baselines, observed settings, effective state and verified behavior.","proficiencyLevel":"Expert / Architect","about":["Self-storage operations","Multi-location systems","Configuration management","Facility baselines","Configuration drift","Change control","Evidence governance"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/#lead-image","name":"Portfolio configuration review","caption":"Configuration control starts by separating the approved standard from the facility setting that can actually be observed.","description":"Jared Mastroianni seated at a desk in a neutral office setting for an editorial article about portfolio configuration review. Jared-owned AI-generated editorial material; non-documentary and not evidence of a real configuration review, facility, provider, customer, product, meeting, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/010-professional-charcoal-suit-executive-desk.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni public image library, governed image 010","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register","item":"https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Multi-location systems note<!-- --> · <time dateTime="2026-09-10">10 September 2026</time></p><h1>A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register</h1><p class="lede">One approved standard, twelve facilities and one green dashboard can still produce twelve different operating realities.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>8 min read</span></div></header><div class="essay-body"><p>A regional manager changes the gate schedule for a holiday. A vendor replaces a controller and loads its default settings. A new property inherits the prior operator&#39;s camera-retention policy. Someone corrects a tax rule in the facility-management system but not in the online rental channel. Weeks later, the portfolio report says every site is “on standard.”</p>
+<p>The report may be describing intent, not fact.</p>
+<p>Multi-location operators often store the portfolio standard in a policy document, an implementation spreadsheet or a platform template. Those records matter, but none proves what is configured at a specific facility now. A standard is what the organization approved. A baseline is the versioned configuration that should apply to a defined facility and system. An observed setting is what an authorized source reported at a particular time. The effective state is what the service is actually using. Service behavior is what an approved test or operating event demonstrates.</p>
+<p>Collapse those five things into one status and configuration drift becomes almost impossible to see.</p>
+<figure class="article-photo"><img src="010-professional-charcoal-suit-executive-desk.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni seated at a desk in a neutral office setting for an editorial article about portfolio configuration review."><figcaption>Configuration control starts by separating the approved standard from the facility setting that can actually be observed. <strong>AI-generated editorial image; not documentary evidence.</strong></figcaption></figure>
+<section class="method-downloads" aria-labelledby="configuration-drift-downloads"><p class="eyebrow">Governed companion package</p><h2 id="configuration-drift-downloads">Use the Facility Configuration Drift Register and inspect its evidence boundaries.</h2><p>These exact files contain Jared Mastroianni's authored proposed method, one blank template and four entirely fictional teaching records, plus current source, editorial and image-governance records. They do not establish a product feature, facility deployment, customer result, compliance finding, certification, external validation or industry standard.</p><div><a href="facility-configuration-drift-register.csv" download>Download the Facility Configuration Drift Register <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="a-portfolio-standard-is-not-a-facility-setting.md" download>Download the exact publication source <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="010-professional-charcoal-suit-executive-desk.png" download>Download the governed editorial illustration <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a></div></section>
+<h2>Treat configuration as an operating record</h2>
+<p>Configuration management is sometimes treated as an IT specialty. The operating idea is broader: establish an agreed state, control changes to it and monitor whether the current state still matches. NIST describes configuration management as a set of activities for establishing and maintaining the integrity of systems through controlled initialization, change and monitoring.<sup id="note-1"><a href="#source-1" aria-label="Source 1">1</a></sup> Its security-focused configuration-management guide organizes the work around baselines, change control, monitoring and supporting evidence.<sup id="note-2"><a href="#source-2" aria-label="Source 2">2</a></sup></p>
+<p>A self-storage portfolio can apply that discipline without pretending a federal cybersecurity publication is a facility standard. The useful translation is simple: if a setting can change customer access, a fee, a notice, a rental offer, a work-order route, a camera-retention period or a manager&#39;s authority, it deserves a named source, an approved value, an observed value and a reconciliation path.</p>
+<p>Do not start by copying every field from every platform. Start with consequential settings. Ask which values can alter money, access, safety boundaries, customer commitments, record retention or the ability to recover from failure. A small controlled register of those settings is more useful than a giant export no one can explain.</p>
+<h2>Keep five layers separate</h2>
+<p>The first design decision is to stop using “configured” as a complete answer. Record five layers for each consequential setting:</p>
+<ol>
+<li><strong>Portfolio standard:</strong> the approved rule, its owner, version and effective period.</li>
+<li><strong>Facility baseline:</strong> the value authorized for this facility, system and environment, including any approved local exception.</li>
+<li><strong>Observed setting:</strong> the value collected from a named source, with collection time, method and evidence.</li>
+<li><strong>Effective state:</strong> the value the governing service confirms it is currently enforcing.</li>
+<li><strong>Verified behavior:</strong> the result of an approved test or real operating readback, bounded to what that evidence can establish.</li>
+</ol>
+<p>The layers may agree. They may also expose different problems.</p>
+<p>If the standard says customer access ends at 10 p.m. but the facility baseline contains an approved 11 p.m. exception, the site is not drifting merely because it differs from the portfolio default. If the platform displays 10 p.m. while an edge controller still enforces 11 p.m., the display is not proof of effective state. If a normal test succeeds once, that does not prove the entire weekly schedule is correct. Each statement needs its own scope.</p>
+<p>This separation protects the facility team from a familiar mistake: being blamed for “noncompliance” when the central record is stale, the provider applies a hidden default or the local variation was properly approved but never attached to the comparison.</p>
+<h2>Define identity before calculating a difference</h2>
+<p>A diff is only meaningful when both sides describe the same thing.</p>
+<p>The register should identify the portfolio, facility, system, environment, component and setting key. It should also preserve the provider account or tenant, configuration schema and applicable baseline version. “Gate hours” is too vague if one value controls tenant entry, another controls office access and a third belongs to a marketing listing.</p>
+<p>Time matters too. Compare an observed value against the baseline that was effective at the observation time, not whichever standard is current when the analyst opens the report. A planned change that takes effect next Monday should not make Friday&#39;s correct setting look obsolete. An expired exception should not continue to legitimize a variance after its end time.</p>
+<p>NIST SP 800-53&#39;s configuration-management family separates baseline configuration, change control and configuration settings, among other controls.<sup id="note-3"><a href="#source-3" aria-label="Source 3">3</a></sup> The publication is not evidence that a self-storage operator complies with those controls. It is a useful reminder that “what should exist,” “who may change it” and “what value is set” are distinct governance questions.</p>
+<h2>Classify the variance before touching the system</h2>
+<p>Once identity and time align, the comparison should produce a variance class—not an automatic overwrite.</p>
+<p>Use classes such as:</p>
+<ul>
+<li><strong>Matched:</strong> observed and effective values agree with the applicable baseline.</li>
+<li><strong>Approved local variation:</strong> the difference is supported by a current exception with an owner and expiration or review condition.</li>
+<li><strong>Pending controlled change:</strong> approval exists, but implementation or readback is incomplete.</li>
+<li><strong>Stale observation:</strong> the collected value is too old to support a current comparison.</li>
+<li><strong>Provider-managed difference:</strong> the provider controls the value or translation, and the portfolio lacks direct configuration authority.</li>
+<li><strong>Unexplained drift:</strong> the effective value differs and no current authority explains it.</li>
+<li><strong>Conflict:</strong> authoritative sources disagree about the effective state.</li>
+<li><strong>Not evaluated:</strong> required evidence is missing or the collection method failed.</li>
+</ul>
+<p>That last state matters. A failed query is not a match. A blank field is not a default. A site omitted from the export is not compliant. Reporting “not evaluated” keeps the evidence gap visible.</p>
+<p>Automatic normalization is tempting, especially when a central platform can push one template across the portfolio. Do not let detection silently become authorization. A system may identify a possible variance, but the correction still needs scope, authority, a tested plan, a stop condition and a rollback path. The configuration may be protecting a local operating restriction that the central template does not know.</p>
+<h2>Store the change as evidence, not just a new value</h2>
+<p>For machine-readable configuration, a precise change record can be more informative than a new full snapshot. JSON Patch, for example, defines operations including add, remove, replace, move, copy and test.<sup id="note-4"><a href="#source-4" aria-label="Source 4">4</a></sup> A self-storage operator does not need to adopt JSON Patch to gain the design lesson: record what changed, from which known version, under whose authority and with what precondition.</p>
+<p>A controlled change packet should name:</p>
+<ul>
+<li>the approved before and after values;</li>
+<li>the setting and exact facility scope;</li>
+<li>the current version or fingerprint expected before execution;</li>
+<li>the person or system authorized to act;</li>
+<li>the maintenance or operating window;</li>
+<li>the stop and rollback conditions;</li>
+<li>the provider receipt, if a third party performs the change;</li>
+<li>the governing readback after execution; and</li>
+<li>any dependent channels that must be reconciled.</li>
+</ul>
+<p>The expected-version check is important. If the current value changed after approval, the old instruction should pause rather than overwrite the newer state. “Set it to 10” is not safe enough when the reviewer approved that change against version 17 and the site is now on version 19.</p>
+<h2>A fictional portfolio example</h2>
+<p>The following scenario and every value in it are fictional. They do not describe a real facility, provider, deployment, result or customer.</p>
+<p>Mariner Ridge Storage Group adopts a standard tenant-access end time of 10 p.m. local facility time. Its portfolio team reviews four invented sites.</p>
+<p>At Mariner Ridge North, the facility baseline, controller readback and approved weekly test all show 10 p.m. The result is <strong>matched</strong>.</p>
+<p>At Mariner Ridge Harbor, the controller shows 11 p.m. The facility has a current, approved event exception through Saturday night. The result is <strong>approved local variation</strong>, with a scheduled reversion and Sunday readback. The site is not labeled drifted simply because it differs from the default.</p>
+<p>At Mariner Ridge Central, the management console shows 10 p.m., but the controller readback shows 11 p.m. No current exception appears in the authority record. The result is <strong>conflict</strong> and then <strong>unexplained drift</strong> only if the evidence review confirms the controller as the governing source. The team holds any automated correction until it identifies the last authorized change and verifies the safe operating window.</p>
+<p>At Mariner Ridge West, the last observation is 45 days old and the collection agent is offline. The result is <strong>not evaluated due to stale observation</strong>, not matched. The owner must restore a trustworthy readback before including the site in a current portfolio rate.</p>
+<p>The example shows why a one-column “standard status” cannot carry the decision. Two sites may display the same value for entirely different reasons. Two sites may display different values and both be correct.</p>
+<h2>Measure coverage before conformity</h2>
+<p>Portfolio reporting should begin with the population and evidence coverage.</p>
+<p>For each metric, publish the eligible facilities and settings, the observation window, the freshness limit, the number successfully evaluated, the number matched, the number operating under approved variation, the number in unexplained drift and the number not evaluated. Keep conflicts separate until resolved.</p>
+<p>Do not calculate a “percent on standard” using only facilities that returned data unless that restricted denominator is explicit. A 100% match across eight responding sites does not establish anything about four silent sites. It establishes eight evaluated matches out of twelve eligible sites, with four evidence gaps.</p>
+<p>NIST&#39;s Cybersecurity Framework 2.0 uses organizational profiles to describe current and target outcomes and to support prioritized improvement.<sup id="note-5"><a href="#source-5" aria-label="Source 5">5</a></sup> It is voluntary risk-management guidance, not a self-storage scoring method. The transferable principle is that current and target states should be explicit enough to compare, prioritize and revisit.</p>
+<p>Useful operating measures include observation coverage, observation age, unexplained-drift age, approved exceptions nearing expiration, controlled changes awaiting readback, conflicts without an owner and corrected settings awaiting dependent-channel reconciliation. Those measures expose the work still needed. A single green percentage often hides it.</p>
+<h2>Close on effective state and dependent readback</h2>
+<p>A configuration ticket should not close when someone clicks Save.</p>
+<p>First, confirm the provider or system accepted the change. Next, collect a fresh governing readback. Then perform the approved bounded behavior test. Finally, reconcile dependent records and channels. A corrected gate schedule may also require a customer notice, website hours update, call-center script change or removal of a temporary sign. A tax-setting correction may require downstream invoice or reporting review. The exact dependencies vary, but they should not disappear when the primary screen looks right.</p>
+<p>W3C&#39;s PROV-O recommendation provides a model for representing provenance among entities, activities and agents.<sup id="note-6"><a href="#source-6" aria-label="Source 6">6</a></sup> It does not validate a facility record or require a particular software design. It supports a useful discipline: preserve where a configuration assertion came from, what activity changed it and who or what was responsible.</p>
+<p>The accompanying <code>facility-configuration-drift-register.csv</code> turns that discipline into a practical operator record. It includes one blank template and four fully fictional teaching rows. Adapt the fields to approved systems, contracts, policies and local requirements before use.</p>
+<p>The goal is not perfect sameness across every property. It is controlled explainability. For every consequential setting, the portfolio should be able to say what standard applies, what baseline was approved, what the facility is actually enforcing, why any difference exists, who owns the next action and what evidence will close it.</p>
+<p>A portfolio standard is a decision. A facility setting is a fact to be observed. Configuration control begins when the organization stops pretending those are the same record.</p>
+<section class="article-sources" aria-labelledby="configuration-drift-sources"><h2 id="configuration-drift-sources">Sources</h2><ol><li id="source-1"><a href="https://csrc.nist.gov/glossary/term/configuration_management">NIST CSRC Glossary, “configuration management”</a>, accessed September 10, 2026. Official definition used only for the general configuration-management concept. <a href="#note-1" aria-label="Back to source 1">↩</a></li><li id="source-2"><a href="https://csrc.nist.gov/pubs/sp/800/128/upd1/final">NIST SP 800-128, <em>Guide for Security-Focused Configuration Management of Information Systems</em></a>, August 2011 with updates through October 10, 2019; accessed September 10, 2026. Federal information-system guidance used by analogy, not a self-storage requirement or compliance finding. <a href="#note-2" aria-label="Back to source 2">↩</a></li><li id="source-3"><a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">NIST SP 800-53 Rev. 5, Release 5.2.0, <em>Security and Privacy Controls for Information Systems and Organizations</em></a>, updated August 27, 2025; accessed September 10, 2026. Control-family structure used as a governance reference, not evidence of implementation or compliance. <a href="#note-3" aria-label="Back to source 3">↩</a></li><li id="source-4"><a href="https://www.rfc-editor.org/rfc/rfc6902.html">IETF RFC 6902, <em>JavaScript Object Notation (JSON) Patch</em></a>, April 2013; accessed September 10, 2026. Internet Standards Track specification used only to illustrate precise machine-readable change operations. <a href="#note-4" aria-label="Back to source 4">↩</a></li><li id="source-5"><a href="https://www.nist.gov/cyberframework">NIST, <em>Cybersecurity Framework 2.0</em></a>, February 26, 2024; accessed September 10, 2026. Voluntary cybersecurity risk-management guidance; it does not define self-storage configuration or portfolio scoring. <a href="#note-5" aria-label="Back to source 5">↩</a></li><li id="source-6"><a href="https://www.w3.org/TR/prov-o/">W3C, <em>PROV-O: The PROV Ontology</em></a>, W3C Recommendation, April 30, 2013; accessed September 10, 2026. Provenance representation standard used as a design reference, not proof that any facility record is complete or authentic. <a href="#note-6" aria-label="Back to source 6">↩</a></li></ol></section>
+<aside class="article-disclosure"><strong>Evidence boundary</strong><p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. This article presents his proposed configuration-drift method and entirely fictional teaching records. It does not describe a released product capability, a facility or customer deployment, measured performance, a compliance conclusion, a certification, or an industry standard. Approved standards, observed settings, effective states, verified behavior, publication, crawling, indexing, coverage and recognition remain separate states.</p></aside></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture note</p><h3><a href="/writing/ai-label-dispute-layer-self-storage/">An Override Is Not Ground Truth: Build a Label-Dispute Layer for Self-Storage AI</a></h3><p>Separate immediate human intervention from verified labels, evaluation evidence, training eligibility and correction propagation.</p><a href="/writing/ai-label-dispute-layer-self-storage/" class="text-link" aria-label="Read the article: An Override Is Not Ground Truth: Build a Label-Dispute Layer for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Multi-location systems note</p><h3><a href="/writing/facility-systems-admission-gate/">A Login Is Not an Admission: Build a Systems Gate Before a New Facility Joins the Portfolio</a></h3><p>Prove facility identity, authority, business time, record meaning, observation coverage, access and test evidence before portfolio use.</p><a href="/writing/facility-systems-admission-gate/" class="text-link" aria-label="Read the article: A Login Is Not an Admission: Build a Systems Gate Before a New Facility Joins the Portfolio">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture note</p><h3><a href="/writing/facility-ai-retrieval-evidence-receipt/">The Answer Needs a Retrieval Receipt: Prove What Facility AI Was Allowed to Know</a></h3><p>Expose eligible sources, retrieval coverage, missing evidence, conflicts and permitted use before an AI answer reaches facility work.</p><a href="/writing/facility-ai-retrieval-evidence-receipt/" class="text-link" aria-label="Read the article: The Answer Needs a Retrieval Receipt: Prove What Facility AI Was Allowed to Know">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

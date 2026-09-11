@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>One approved standard, twelve facilities and one green dashboard can still produce twelve different operating realities.</description>
+    </item>
     <item>
       <title>An Override Is Not Ground Truth: Build a Label-Dispute Layer for Self-Storage AI</title>
       <link>https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/</link>
