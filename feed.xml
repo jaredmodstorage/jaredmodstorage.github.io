@@ -8,6 +8,15 @@
     <lastBuildDate>Thu, 10 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Below the Fold Is Still a Decision: Audit the AI Priority Queue in Self-Storage</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-ai-priority-queue/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-ai-priority-queue/</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>An AI system does not need permission to change a facility record to change what the team works on. Ranking, suppression and screen position already allocate attention.</description>
+    </item>
+    <item>
       <title>A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register</title>
       <link>https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-configuration-drift-register-self-storage/</guid>
