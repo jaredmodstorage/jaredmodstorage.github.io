@@ -8,6 +8,15 @@
     <lastBuildDate>Fri, 11 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>When Guardrails Disagree: Build a Decision Lattice for Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/when-guardrails-disagree/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/when-guardrails-disagree/</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A system with several guardrails still needs one governed way to resolve their results. Otherwise the easiest policy to satisfy can quietly become the only policy that matters.</description>
+    </item>
+    <item>
       <title>Keep, Hold, Delete, Prove: A Portfolio Evidence-Retention Map for Self-Storage</title>
       <link>https://jaredmodstorage.github.io/writing/self-storage-portfolio-evidence-retention-map/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/self-storage-portfolio-evidence-retention-map/</guid>

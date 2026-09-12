@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CgInf__Z.css" data-rsc-css-href="/_next/static/css/index.CgInf__Z.css" data-precedence="vite-rsc/importer-resources"/><title>Decision Lattices for Self-Storage AI | Jared Mastroianni</title><meta name="description" content="A self-storage AI architecture for preserving policy results, combining rules, obligations, bounded review, enforcement and readback when guardrails disagree."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Decision Lattices for Self-Storage AI | Jared Mastroianni"/><meta property="og:description" content="A self-storage AI architecture for preserving policy results, combining rules, obligations, bounded review, enforcement and readback when guardrails disagree."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/when-guardrails-disagree/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-11"/><meta property="article:modified_time" content="2026-09-11"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/when-guardrails-disagree/052-ai-development-ai-engineering-design-review.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni listens to two colleagues during an AI-generated engineering-review scene about reconciling policy decisions for facility operations."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Decision Lattices for Self-Storage AI | Jared Mastroianni"/><meta name="twitter:description" content="A self-storage AI architecture for preserving policy results, combining rules, obligations, bounded review, enforcement and readback when guardrails disagree."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/when-guardrails-disagree/052-ai-development-ai-engineering-design-review.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/when-guardrails-disagree/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/when-guardrails-disagree/#article","url":"https://jaredmodstorage.github.io/writing/when-guardrails-disagree/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/when-guardrails-disagree/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"When Guardrails Disagree: Build a Decision Lattice for Self-Storage AI","datePublished":"2026-09-11","dateModified":"2026-09-11","image":{"@id":"https://jaredmodstorage.github.io/writing/when-guardrails-disagree/#lead-image"},"description":"A self-storage AI architecture for preserving policy results, combining rules, obligations, bounded review, enforcement and readback when guardrails disagree.","proficiencyLevel":"Expert / Architect","about":["Self-storage operations","Responsible AI architecture","Policy decision points","Decision lattices","XACML decision semantics","Human review","Operating authority","Evidence governance"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/when-guardrails-disagree/#lead-image","name":"Policy decision reconciliation review","caption":"Several controls can evaluate the same request differently. Preserve every result, combine them under a declared rule and limit review to the authority actually assigned.","description":"Jared Mastroianni listens to two colleagues during an AI-generated engineering-review scene about reconciling policy decisions for facility operations. Jared-owned AI-generated editorial material; non-documentary and not evidence of a real facility, employee, customer, meeting, policy review, Facily feature, deployment, decision or result.","contentUrl":"https://jaredmodstorage.github.io/writing/when-guardrails-disagree/052-ai-development-ai-engineering-design-review.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni public image library, governed image 052","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/when-guardrails-disagree/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"When Guardrails Disagree: Build a Decision Lattice for Self-Storage AI","item":"https://jaredmodstorage.github.io/writing/when-guardrails-disagree/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">When Guardrails Disagree: Build a Decision Lattice for Self-Storage AI</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Responsible AI architecture note<!-- --> · <time dateTime="2026-09-11">11 September 2026</time></p><h1>When Guardrails Disagree: Build a Decision Lattice for Self-Storage AI</h1><p class="lede">An AI workflow can satisfy several controls and still fail another. A responsible architecture preserves each result, combines it under a declared rule, carries obligations forward, and limits review to the authority actually assigned.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><p>A self-storage AI assistant proposes an after-hours access update. The identity control confirms that the employee is signed in. The role policy permits that employee to prepare a draft. The communications policy allows a service notice. The privacy policy blocks one field in the proposed message. The facility-state check cannot establish whether the gate is back in normal service. The safety policy requires a named person to review any statement about restored access.</p>
+<p>Did the request pass?</p>
+<p>It passed three evaluations, failed one, could not complete another and triggered a human obligation. Reducing that record to <code>approved: true</code> would erase the most important facts in it. Reducing it to <code>approved: false</code> would be safer, but still incomplete: the operator would not know whether to correct the message, refresh facility state, request a qualified review or abandon the action.</p>
+<p>This is the policy-combination problem. It appears as soon as an AI workflow has more than one real control. Identity, authorization, privacy, safety, customer communication, financial approval and local operating state may each have a legitimate decision to make. Those decisions will not always agree, and some controls will occasionally be unavailable. The architecture needs an explicit method for combining results before a model recommendation becomes visible work or an executable command.</p>
+<p>The answer is not a longer system prompt. It is a typed decision lattice: a governed structure that preserves each policy result, applies a declared combining rule, carries required obligations forward and identifies the policy that controlled the final outcome.</p>
+<figure class="article-photo"><img src="052-ai-development-ai-engineering-design-review.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni listens to two colleagues during an AI-generated engineering-review scene about reconciling policy decisions for facility operations."><figcaption>Several controls can evaluate the same request differently. Preserve every result, combine them under a declared rule and limit review to the authority actually assigned. <strong>AI-generated editorial image; not documentary evidence.</strong></figcaption></figure>
+<section class="method-downloads" aria-labelledby="policy-reconciliation-downloads"><p class="eyebrow">Governed companion package</p><h2 id="policy-reconciliation-downloads">Practical tool</h2><p>Use the accompanying Policy Decision Reconciliation Register to document one request, each independent policy evaluation, the combination rule, controlling result, obligations, bounded review, enforcement receipt and governing readback. It includes one blank template row and six explicitly fictional teaching rows. These exact files do not establish XACML compliance, a product feature, facility deployment, customer result, certification, external validation or industry standard.</p><div><a href="policy-decision-reconciliation-register.csv" download>Download the Policy Decision Reconciliation Register <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="when-guardrails-disagree.md" download>Download the exact publication source <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="052-ai-development-ai-engineering-design-review.png" download>Download the governed editorial illustration <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a></div></section>
+<h2>One Boolean cannot represent an operating decision</h2>
+<p>Authorization systems already recognize that policy evaluation is richer than yes or no. NIST defines attribute-based access control as evaluating attributes about the subject, object, requested operation and sometimes the environment against policy.<sup id="note-1"><a href="#source-1" aria-label="Source 1">1</a></sup> OASIS XACML goes further: an authorization result can be <code>Permit</code>, <code>Deny</code>, <code>Indeterminate</code> or <code>NotApplicable</code>, and separate policies can be combined under a declared algorithm.<sup id="note-2"><a href="#source-2" aria-label="Source 2">2</a></sup></p>
+<p>That distinction matters outside traditional access control.</p>
+<ul>
+<li><code>PERMIT</code> means the policy evaluated the exact request and allows it within its scope.</li>
+<li><code>DENY</code> means the request violates a rule that is applicable now.</li>
+<li><code>INDETERMINATE</code> means the policy could not produce a reliable decision because required data, evaluation logic or a dependency failed.</li>
+<li><code>NOT_APPLICABLE</code> means the policy does not govern this request.</li>
+<li><code>REVIEW</code> is a proposed operating extension for cases that policy deliberately reserves for a qualified person. It is not an XACML result and should not be mislabeled as one.</li>
+</ul>
+<p>These states have different operator consequences. <code>NOT_APPLICABLE</code> does not mean safe. <code>INDETERMINATE</code> does not mean denied on the merits, and it certainly does not mean permitted. <code>REVIEW</code> is not an invitation for any nearby user to click through. It identifies a bounded question, the role qualified to answer it and the evidence that person must receive.</p>
+<p>If the application converts all five states into a Boolean before combination, the strongest control can disappear without an obvious error. A timed-out privacy check may become false and be ignored. A policy that did not apply may be counted as a pass. A review requirement may be rendered as a warning under an active Submit button.</p>
+<h2>Evaluate first; combine second</h2>
+<p>Each policy should evaluate the same decision envelope before any result is combined. At minimum, that envelope should bind:</p>
+<ul>
+<li>the requesting human or service identity and any delegated role;</li>
+<li>the exact facility, account-safe reference, asset or work object;</li>
+<li>the proposed action, fields and destination;</li>
+<li>the declared purpose and consequence class;</li>
+<li>the governing state version and observation time;</li>
+<li>the applicable policy-set identity and revision; and</li>
+<li>the decision time and expiration.</li>
+</ul>
+<p>The model may propose this envelope. It should not decide which identity, facility or authority applies by itself. Those values need to come from governed application state or be confirmed through the proper workflow.</p>
+<p>Each control then returns its own typed result, reason code, policy version and obligations. Keeping evaluations separate makes disagreement inspectable. A privacy policy can deny inclusion of a customer field while a communications policy permits a notice. That is not a broken system; it is a request that must be narrowed before it becomes eligible.</p>
+<p>Combining happens only after the individual results exist. XACML specifies several combining algorithms, including deny-overrides, permit-overrides, first-applicable and only-one-applicable. Under deny-overrides, a denial takes priority; the specification also preserves different forms of indeterminate results so an evaluation error with possible denying effect is not casually lost.<sup id="note-2-2"><a href="#source-2" aria-label="Source 2">2</a></sup></p>
+<p>Self-storage operators do not need to implement XACML to learn from that precision. They do need to declare what combination means for each consequence class.</p>
+<p>For an internal, low-consequence draft, the rule may permit content generation while masking a prohibited field and holding delivery. For a financial change, customer communication, access decision or physical-control command, any applicable deny should block the prohibited effect. An indeterminate result from a control that could deny should normally stop the action until the input is restored or a qualified authority follows a documented exception path. A missing rule should not be reclassified as permission.</p>
+<p>“Use the strictest policy” sounds sensible but is still underspecified. Strictest by what measure? A safety policy may require immediate notification while a privacy policy forbids including personal details. The correct result may be “send a limited internal alert with mandatory fields removed,” not “send everything” or “send nothing.” The combining layer must resolve effects and obligations, not merely pick the most alarming label.</p>
+<h2>A useful lattice preserves both outcome and work</h2>
+<p>For facility AI, the combined result should be an object, not a flag:</p>
+<pre><code class="language-text">decision = {
+  result,
+  controlling_policy,
+  applicable_policy_results,
+  unresolved_inputs,
+  prohibited_effects,
+  mandatory_obligations,
+  permitted_scope,
+  reviewer_role,
+  expires_at,
+  decision_id
+}
+</code></pre>
+<p>The final <code>result</code> controls what the system may do. The other fields tell the operator why, what remains possible and how the case can move.</p>
+<p>Consider four common outcomes.</p>
+<p><strong>Permit with obligations.</strong> The assistant may create an internal draft, but it must exclude a protected field, attach the current source record and remain unsent until a named role reviews it. The obligations are part of the decision. If the enforcement point cannot fulfill them, the permit is unusable.</p>
+<p><strong>Deny with a narrower eligible action.</strong> The request to change a gate schedule is denied, but the same user may open a maintenance exception and request review. This is not a model improvising a workaround. The alternative action must have its own policy path and new decision identity.</p>
+<p><strong>Indeterminate with repair work.</strong> The system cannot establish facility state because the governing source is unavailable. The action stays blocked. The queue records the missing attribute, source owner and refresh path. It does not ask the model to infer normal operation from yesterday’s summary.</p>
+<p><strong>Review with a bounded question.</strong> The policy allows a regional operator to decide whether a factual service notice may be prepared from verified fields. The reviewer cannot use that task to approve a financial adjustment, alter access or waive an unrelated privacy rule.</p>
+<p>This design turns a refusal into routable work without converting review into a universal override.</p>
+<h2>Human review cannot repair an architecture that hid the conflict</h2>
+<p>NIST’s AI Risk Management Framework treats governance as a continuous, cross-cutting function and calls for transparent policies, documented roles and clear accountability across the AI lifecycle.<sup id="note-3"><a href="#source-3" aria-label="Source 3">3</a></sup> Its Generative AI Profile is a voluntary, cross-sector companion for identifying and managing risks in generative systems; it does not certify a particular workflow or prescribe this lattice.<sup id="note-4"><a href="#source-4" aria-label="Source 4">4</a></sup></p>
+<p>The practical implication is that human involvement needs structure. Showing a reviewer a green banner that says “four of five checks passed” is not meaningful oversight. The reviewer needs the exact request, every applicable result, the unavailable or conflicting input, the effects already prohibited and the narrow question assigned to that role.</p>
+<p>Some conditions are not reviewable in the moment. A mismatched facility identity, expired delegation, absent customer-safe reference, unavailable safety control or unknown governing state may require the request to stop. A person should not be invited to manufacture missing evidence by clicking an override.</p>
+<p>Every override or exception also needs its own authority, reason, scope and expiration. It must not overwrite the original policy results. Otherwise the record will later suggest that the controls agreed when they did not.</p>
+<h2>Version the combination, not only the policies</h2>
+<p>Teams often version individual policies and forget the logic that combines them. That logic can change an operating outcome even when every policy stays the same.</p>
+<p>Moving from deny-overrides to first-applicable may make list order decisive. Changing a default from indeterminate to deny alters routing and workload. Adding a new privacy obligation may turn a usable permit into an unenforceable one. Reordering policy bundles can change which reason is shown to a reviewer.</p>
+<p>The release artifact should therefore bind:</p>
+<ul>
+<li>each policy and its owner;</li>
+<li>the complete policy-set revision;</li>
+<li>the combining algorithm and version;</li>
+<li>the obligation-merging rule;</li>
+<li>consequence-specific defaults;</li>
+<li>expected results for conflict cases; and</li>
+<li>the prior known-good bundle and rollback condition.</li>
+</ul>
+<p>Open Policy Agent provides one implementation reference, not a universal operating answer. Its bundle manifest can carry a revision, and its decision logs can include input, result, decision path and the revisions of bundles used.<sup id="note-5"><a href="#source-5" aria-label="Source 5">5</a></sup> Those features can support replay and audit. They do not decide which facility policies should apply, whether logged data is appropriate to retain or whether an operational action was correct.</p>
+<p>Before release, replay a fixed suite of conflict cases through the complete bundle. Test at least: explicit deny plus permit; permit plus indeterminate; no applicable policy; missing subject attribute; stale facility state; conflicting obligations; expired review authority; duplicate decision ID; policy-bundle mismatch; and enforcement unable to satisfy an obligation. Compare the full decision object, not only the final label.</p>
+<h2>Log enough to explain, not enough to create a new exposure</h2>
+<p>A decision record should preserve the request identity, policy revisions, results, reason codes, controlling policy, obligations, reviewer disposition, enforcement receipt and governing readback. That gives the operator a path from proposal to outcome.</p>
+<p>It does not follow that every prompt, customer field or retrieved document belongs in the log. OPA’s documentation explicitly treats policy-query inputs and decisions as potentially sensitive and supports masking or erasing selected fields in decision logs.<sup id="note-5-2"><a href="#source-5" aria-label="Source 5">5</a></sup> The same discipline belongs in any architecture: retain identifiers and evidence references where possible, minimize payloads, separate restricted details and define retention by purpose.</p>
+<p>The decision log is also not proof of effect. It can show that policy returned <code>PERMIT</code>. The enforcement receipt can show that a connector accepted a bounded command. Only an appropriate readback can establish the resulting governing state, and some physical conditions still require a qualified observation.</p>
+<h2>A fictional facility conflict</h2>
+<p>The following case is entirely fictional. Alder Bend Storage, its people, systems, records, times and outcomes do not represent a real facility or product.</p>
+<p>At 7:42 p.m., a fictional assistant proposes a customer service notice stating that normal gate access has been restored. The employee is authenticated and has permission to draft notices. The communications policy permits a factual service update. The privacy policy denies inclusion of the customer’s unit number in a bulk notice. The facility-state policy is indeterminate because the last governing controller read is outside the action’s freshness limit. The operating policy assigns restoration language to a regional reviewer after current state is established.</p>
+<p>The lattice returns <code>INDETERMINATE_BLOCKED</code>, controlled by the facility-state policy. It preserves the privacy denial as a prohibited-field obligation and the review requirement as pending, not completed. The system may save a restricted internal draft with no customer delivery path. It assigns one task to refresh governing state and names the source owner. It does not let the reviewer approve around the missing controller read.</p>
+<p>At 7:49 p.m., a new state record shows only partial restoration. The assistant generates a new request with a new decision ID. The communications policy now permits a limited notice describing the verified access window. Privacy still blocks the unit field. The regional reviewer confirms only the allowed wording. The enforcement point sends the approved text through the authorized channel, records provider acceptance, then reads back the sent-message record. The case closes as “message sent and read back; facility restoration remains partial.” It does not become “gate restored.”</p>
+<p>The useful result is not that every policy said yes. It is that disagreement remained visible long enough to produce a narrower, supportable action.</p>
+<h2>The operator’s release test</h2>
+<p>Before an AI-supported workflow can use multiple guardrails in production, an accountable owner should be able to answer ten questions:</p>
+<ol>
+<li>What exact decision envelope does every policy evaluate?</li>
+<li>Which typed results can each policy return?</li>
+<li>Which policy set and combination version produced the outcome?</li>
+<li>What happens when a control is unavailable or data is missing?</li>
+<li>Which denies block the whole action, and which prohibit only a field or effect?</li>
+<li>How are mandatory obligations merged and enforced?</li>
+<li>What question, evidence and authority does human review actually receive?</li>
+<li>What new identity is created when a denied request is narrowed or retried?</li>
+<li>Can the complete conflict suite be replayed against the release candidate and rollback bundle?</li>
+<li>How are decision, enforcement, readback and reconciliation recorded without exposing unnecessary data?</li>
+</ol>
+<p>If those answers live only in prompt text or team memory, the guardrails are not yet an operating control system.</p>
+<p>Multiple policies are a strength only when their disagreement has semantics. Preserve the separate results. Combine them under a versioned rule. Carry obligations to enforcement. Limit what review can resolve. Read the governing state back. That is how a facility AI system stops treating “mostly approved” as permission and starts producing decisions an operator can defend.</p>
+<section class="article-sources" aria-labelledby="policy-reconciliation-sources"><h2 id="policy-reconciliation-sources">Sources</h2><ol><li id="source-1">National Institute of Standards and Technology, <a href="https://csrc.nist.gov/pubs/sp/800/162/upd2/final"><em>Guide to Attribute Based Access Control (ABAC) Definition and Considerations</em>, NIST SP 800-162</a>, updated August 2, 2019; accessed September 11, 2026. <a href="#note-1" aria-label="Back to source 1">↩</a></li><li id="source-2">OASIS Open, <a href="https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-en.html"><em>eXtensible Access Control Markup Language (XACML) Version 3.0 Plus Errata 01</em></a>, OASIS Standard; accessed September 11, 2026. <a href="#note-2" aria-label="Back to source 2">↩</a></li><li id="source-3">National Institute of Standards and Technology, <a href="https://www.nist.gov/itl/ai-risk-management-framework"><em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em></a>, released January 26, 2023; page accessed September 11, 2026. NIST’s page states that AI RMF 1.0 is being revised. <a href="#note-3" aria-label="Back to source 3">↩</a></li><li id="source-4">National Institute of Standards and Technology, <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"><em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST AI 600-1</em></a>, published July 26, 2024, page updated April 8, 2026; accessed September 11, 2026. <a href="#note-4" aria-label="Back to source 4">↩</a></li><li id="source-5">Open Policy Agent, <a href="https://www.openpolicyagent.org/docs/management-decision-logs"><em>Decision Logs</em></a> and <a href="https://www.openpolicyagent.org/docs/management-bundles"><em>Bundles</em></a>, current documentation accessed September 11, 2026. <a href="#note-5" aria-label="Back to source 5">↩</a></li></ol></section>
+<aside class="article-disclosure"><h2>Author</h2><p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. This article presents his proposed decision-lattice method and entirely fictional teaching records. REVIEW is an authored operating extension, not an XACML result. The article does not describe a released product capability, a facility or customer deployment, measured performance, legal or compliance advice, certification, or an industry standard. Policy evaluation, combination, review, enforcement, readback, publication, crawling, indexing, coverage and recognition remain separate states.</p></aside></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture note</p><h3><a href="/writing/facility-ai-priority-queue/">Below the Fold Is Still a Decision: Audit the AI Priority Queue in Self-Storage</a></h3><p>Govern candidate admission, ordering, screen exposure and correction—not only the model score.</p><a href="/writing/facility-ai-priority-queue/" class="text-link" aria-label="Read the article: Below the Fold Is Still a Decision: Audit the AI Priority Queue in Self-Storage">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio systems note</p><h3><a href="/writing/self-storage-portfolio-evidence-retention-map/">Keep, Hold, Delete, Prove: A Portfolio Evidence-Retention Map for Self-Storage</a></h3><p>Separate record purpose, source copies, retention triggers, holds, disposition approval, deletion proof and residual exceptions.</p><a href="/writing/self-storage-portfolio-evidence-retention-map/" class="text-link" aria-label="Read the article: Keep, Hold, Delete, Prove: A Portfolio Evidence-Retention Map for Self-Storage">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Multi-location systems note</p><h3><a href="/writing/facility-configuration-drift-register-self-storage/">A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register</a></h3><p>Separate the approved portfolio standard from facility baselines, observed settings, effective state and verified behavior.</p><a href="/writing/facility-configuration-drift-register-self-storage/" class="text-link" aria-label="Read the article: A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
