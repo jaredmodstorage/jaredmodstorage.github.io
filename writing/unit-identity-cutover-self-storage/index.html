@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CgInf__Z.css" data-rsc-css-href="/_next/static/css/index.CgInf__Z.css" data-precedence="vite-rsc/importer-resources"/><title>Unit Identity Cutovers for Self-Storage | Jared Mastroianni</title><meta name="description" content="A practical self-storage systems method for retiring one unit identity, creating successors and reconciling every release-critical surface after a split, merge or renumbering."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Unit Identity Cutovers for Self-Storage | Jared Mastroianni"/><meta property="og:description" content="A practical self-storage systems method for retiring one unit identity, creating successors and reconciling every release-critical surface after a split, merge or renumbering."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-13"/><meta property="article:modified_time" content="2026-09-13"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/052-ai-development-ai-engineering-design-review.jpg"/><meta property="og:image:width" content="1800"/><meta property="og:image:height" content="1200"/><meta property="og:image:alt" content="An editorial image of Jared Mastroianni reviewing a systems design with colleagues at a conference table."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Unit Identity Cutovers for Self-Storage | Jared Mastroianni"/><meta name="twitter:description" content="A practical self-storage systems method for retiring one unit identity, creating successors and reconciling every release-critical surface after a split, merge or renumbering."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/052-ai-development-ai-engineering-design-review.jpg"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"When Unit 214 Becomes Two: The Identity Cutover for Self-Storage Inventory","datePublished":"2026-09-13","dateModified":"2026-09-13","image":{"@id":"https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/#lead-image"},"description":"A practical self-storage systems method for retiring one unit identity, creating successors and reconciling every release-critical surface after a split, merge or renumbering.","proficiencyLevel":"Advanced / Expert","about":["Self-storage operations","Unit identity governance","Inventory systems","Data provenance","Effective time","Predecessor and successor records","Multi-system reconciliation","Release governance"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/#lead-image","name":"Unit identity cutover design review","caption":"A unit-identity change is ready only when the physical definition, system relationships and release evidence agree. Editorial illustration; not a documented implementation.","description":"An editorial image of Jared Mastroianni reviewing a systems design with colleagues at a conference table. Jared-owned AI-generated editorial material; not documentary evidence of a unit split, renovation, system cutover, customer record, deployment or operating result.","contentUrl":"https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/052-ai-development-ai-engineering-design-review.jpg","width":1800,"height":1200,"encodingFormat":"image/jpeg","representativeOfPage":true,"creditText":"Image courtesy of Jared Mastroianni; public image library JM-IMG-052","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"When Unit 214 Becomes Two: The Identity Cutover for Self-Storage Inventory","item":"https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">When Unit 214 Becomes Two: The Identity Cutover for Self-Storage Inventory</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Multi-location systems note<!-- --> · <time dateTime="2026-09-13">13 September 2026</time></p><h1>When Unit 214 Becomes Two: The Identity Cutover for Self-Storage Inventory</h1><p class="lede">A practical self-storage systems method for retiring one unit identity, creating successors and reconciling every release-critical surface after a split, merge or renumbering.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>6 min read</span></div></header><div class="essay-body"><p>Unit 214 looks permanent right up until a renovation turns it into 214A and 214B.</p>
+<p>The physical work may take a day. The information change can spread much farther. A property-management system still knows 214. The access platform has a zone mapped to the old door. A marketplace is advertising the former size. A work order remains attached to the retired space. A report compares this month&#39;s rentable-unit count with last month&#39;s total as if the underlying inventory never changed.</p>
+<p>Renaming a row is not an identity cutover. A controlled cutover retires one operating object, creates its successors, preserves the relationship between them and proves that every consequential system is using the correct version.</p>
+<figure class="article-photo"><img src="052-ai-development-ai-engineering-design-review.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="An editorial image of Jared Mastroianni reviewing a systems design with colleagues at a conference table."><figcaption>A unit-identity change is ready only when the physical definition, system relationships and release evidence agree. <strong>AI-generated editorial image; not documentary evidence.</strong></figcaption></figure>
+<section class="method-downloads" aria-labelledby="unit-identity-cutover-downloads"><p class="eyebrow">Governed companion package</p><h2 id="unit-identity-cutover-downloads">Use the Unit Identity Cutover Register and inspect its evidence boundaries.</h2><p>The 42-field register contains one blank template and one explicitly fictional Willow Row teaching row. Use it to preserve predecessor and successor identities, physical evidence, effective time, system-by-system readback, open-obligation dispositions, release approval and rollback. It does not establish a real renovation, product capability, facility deployment, customer result, certification or industry standard.</p><div><a href="unit-identity-cutover-register.csv" download>Download the Unit Identity Cutover Register <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download the source and limitations register <span aria-hidden="true">↓</span></a><a href="when-unit-214-becomes-two.md" download>Download the exact publication source <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="052-ai-development-ai-engineering-design-review.jpg" download>Download the governed editorial illustration <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a></div></section>
+<h2>Separate the label from the identity</h2>
+<p>“214” is useful to employees and customers. It is also a poor permanent key. Labels can be reused, reformatted or changed during a building conversion. A stable internal identifier serves a different purpose: it follows one defined unit object without depending on what is painted above the door.</p>
+<p>The current Internet Engineering Task Force specification for Universally Unique Identifiers defines a 128-bit identifier intended for uniqueness across space and time.<sup id="note-1"><a href="#source-1" aria-label="Source 1">1</a></sup> A self-storage operator does not need to adopt a particular UUID version simply because that standard exists. The operating lesson is narrower: each unit needs a stable identifier that does not silently acquire a different physical meaning.</p>
+<p>Keep at least three values separate:</p>
+<ul>
+<li><strong>Stable unit ID:</strong> the durable system identity for one physical-space definition.</li>
+<li><strong>Display label:</strong> the customer- and staff-facing name, such as 214A.</li>
+<li><strong>Version or effective interval:</strong> the period during which that identity and physical definition are valid.</li>
+</ul>
+<p>If Unit 214 is divided, the predecessor ID should not be edited until it means “214A.” Retire the predecessor and mint two successor IDs. Otherwise history moves under the reports: old payments, inspections and work orders can appear to belong to a space that did not exist when those records were created.</p>
+<h2>Start with a physical change packet</h2>
+<p>The cutover begins with a named physical change, not a database edit. Record the facility, building, floor or row, affected doors and walls, old dimensions, approved successor layout and the evidence that the work is complete. The packet should identify who owns the physical change and who owns the system release.</p>
+<p>Then state the relationship plainly:</p>
+<ul>
+<li>predecessor Unit 214 is retired;</li>
+<li>successor Unit 214A occupies the defined left-side space;</li>
+<li>successor Unit 214B occupies the defined right-side space;</li>
+<li>the predecessor&#39;s historical records remain attached to the predecessor;</li>
+<li>only explicitly transferred open obligations move to a successor.</li>
+</ul>
+<p>The World Wide Web Consortium&#39;s Provenance Data Model distinguishes derivation, specialization, alternate entities, generation and invalidation.<sup id="note-2"><a href="#source-2" aria-label="Source 2">2</a></sup> Those are general data-model concepts, not a self-storage prescription. They reinforce a useful discipline: a changed thing should have an explicit relationship to what came before, and expiry should be recorded rather than implied by overwriting.</p>
+<h2>Freeze conflicting writes before the cutover</h2>
+<p>A unit should not be rentable, advertised or assigned new work while its identity is being reconstructed. Establish a cutover window and place a visible hold on each affected record. The hold is not proof that downstream systems received it, so check the systems that can create obligations.</p>
+<p>For a typical portfolio, the minimum surface map includes:</p>
+<ol>
+<li>the property-management record;</li>
+<li>the access-control door or zone mapping;</li>
+<li>the owned website and any distribution channels;</li>
+<li>maintenance, inspection and incident records;</li>
+<li>accounting and management-reporting dimensions; and</li>
+<li>local maps, signage and staff reference material.</li>
+</ol>
+<p>The list should match the actual facility. An operator with no marketplace feed does not need to invent one. A facility with a building-automation platform, tenant-insurance integration or call-center knowledge base may need additional rows.</p>
+<p>Capture the source record ID and current version for every participating system before making a change. That snapshot turns rollback from guesswork into a defined return point.</p>
+<h2>Move obligations deliberately</h2>
+<p>The most dangerous records are not the obvious unit attributes. They are unfinished obligations.</p>
+<p>An open repair ticket for the former door may belong to 214A, 214B, both successors or neither after construction. A customer reservation must not be reassigned by inference. A delinquency, payment, insurance or legal record may require a separate authorized process. Historical sensor readings should stay with the physical definition that existed when they were observed.</p>
+<p>For each open record, choose one disposition:</p>
+<ul>
+<li>remain with the retired predecessor for history;</li>
+<li>transfer to one named successor with authority and reason;</li>
+<li>split into successor-specific work;</li>
+<li>close or supersede under the governing workflow; or</li>
+<li>hold for an accountable owner because the correct destination is unknown.</li>
+</ul>
+<p>Do not copy every relationship to both successors. Duplication can turn one work order, hold or customer obligation into two apparent obligations. Silence is not safer: an omitted access restriction can leave a new door active when the operating record remains unresolved.</p>
+<h2>Use an effective moment, not “sometime today”</h2>
+<p>Every system change needs a recorded effective time with an offset or an equivalent unambiguous representation. RFC 3339 defines an Internet timestamp format and explains the role of numeric offsets in interpreting local time.<sup id="note-3"><a href="#source-3" aria-label="Source 3">3</a></sup> The standard does not decide when a unit is legally or operationally available. It helps systems agree on which moment a record describes.</p>
+<p>Choose the cutover moment before release. Records before that point belong to the predecessor unless an authorized migration says otherwise. Records at or after it use the successors. If one system cannot support an effective timestamp, document its actual transition time and keep the portfolio hold active until the resulting gap is reconciled.</p>
+<p>Avoid a single “converted” flag. A useful state model is more honest:</p>
+<ul>
+<li><strong>planned:</strong> approved design exists; old unit remains authoritative;</li>
+<li><strong>held:</strong> new obligations and advertising are stopped;</li>
+<li><strong>physical work complete:</strong> field evidence is accepted, but systems are not released;</li>
+<li><strong>systems cut over:</strong> successor records exist and required relationships are mapped;</li>
+<li><strong>reconciled:</strong> every release-critical surface agrees or carries an explicit exception; and</li>
+<li><strong>released:</strong> an accountable owner authorizes the successors for the named uses.</li>
+</ul>
+<h2>Reconcile by query, not by confidence</h2>
+<p>After updates, read each surface back as a user or downstream system would see it. A successful save is only a write receipt.</p>
+<p>The release query should answer:</p>
+<ul>
+<li>Does the old unit remain blocked from new rental and advertising?</li>
+<li>Do both successors have the correct stable IDs, labels, dimensions and availability state?</li>
+<li>Does each access zone point to the intended physical door?</li>
+<li>Did every open obligation receive one recorded disposition?</li>
+<li>Do reports distinguish inventory change from ordinary occupancy movement?</li>
+<li>Are customer-facing channels showing only the released configuration?</li>
+<li>Can the predecessor-to-successor relationship be retrieved without relying on someone&#39;s memory?</li>
+</ul>
+<p>The World Wide Web Consortium&#39;s Data on the Web Best Practices recommends provenance, version indicators, version history and persistent identifiers.<sup id="note-4"><a href="#source-4" aria-label="Source 4">4</a></sup> Those recommendations target Web data broadly. In this operating method, the same principles make the cutover reviewable across systems without claiming that the method is a standard or certification.</p>
+<h2>A fictional split at Willow Row Storage</h2>
+<p>Consider Willow Row Storage, an entirely fictional teaching facility. Unit 214 is vacant and is approved for division into two smaller units. The portfolio team assigns stable IDs <code>UNIT-FIC-214A-01</code> and <code>UNIT-FIC-214B-01</code>, while <code>UNIT-FIC-214-00</code> remains the retired predecessor.</p>
+<p>At 6:00 p.m. local time, the fictional cutover hold stops advertising and new reservations for the predecessor. A field verifier confirms the wall, doors and labels against the approved plan. The property-management records for 214A and 214B are created but remain unavailable. An old inspection ticket is kept with the predecessor because it documents the pre-conversion condition. A new latch-adjustment ticket is assigned only to 214B. The access map is updated for both doors.</p>
+<p>Readback finds one problem: a fictional distribution feed still advertises the old unit. The team does not release either successor merely because the property-management screen looks correct. The feed record is corrected, read back again and linked to the cutover packet. The portfolio inventory owner then releases both successors for rental and reporting.</p>
+<p>Willow Row Storage, every identifier, system, unit, time, record, person, action and result in this example are fictional. The example does not report a modSTORAGE facility, customer conversion, deployment, performance result or legal disposition.</p>
+<h2>Put the cutover on one record</h2>
+<p>The accompanying Unit Identity Cutover Register captures the predecessor, successors, physical evidence, effective moment, write freeze, system-by-system readback, open-obligation dispositions, exceptions, approval and rollback reference.</p>
+<p>Use it when a unit is split, merged, renumbered or materially redefined. It is unnecessary for a spelling correction that leaves the same physical space and all governing relationships intact. The key test is simple: could an old record and a new record appear to describe the same unit while actually referring to different physical space? If yes, the change deserves an identity cutover.</p>
+<p>The concrete work ends when every release-critical system can answer two questions: which unit existed at the time of the record, and which unit is authorized now?</p>
+<section class="article-sources" aria-labelledby="unit-identity-cutover-sources"><h2 id="unit-identity-cutover-sources">Sources</h2><ol><li id="source-1">Internet Engineering Task Force, <a href="https://www.rfc-editor.org/rfc/rfc9562.html">RFC 9562 — Universally Unique IDentifiers</a>, Standards Track, May 2024; accessed September 13, 2026. <a href="#note-1" aria-label="Back to source 1">↩</a></li><li id="source-2">World Wide Web Consortium, <a href="https://www.w3.org/TR/prov-dm/">PROV-DM: The PROV Data Model</a>, W3C Recommendation, April 30, 2013; accessed September 13, 2026. <a href="#note-2" aria-label="Back to source 2">↩</a></li><li id="source-3">Internet Engineering Task Force, <a href="https://www.rfc-editor.org/rfc/rfc3339.html">RFC 3339 — Date and Time on the Internet: Timestamps</a>, Standards Track, July 2002; accessed September 13, 2026. <a href="#note-3" aria-label="Back to source 3">↩</a></li><li id="source-4">World Wide Web Consortium, <a href="https://www.w3.org/TR/dwbp/">Data on the Web Best Practices</a>, W3C Recommendation, January 31, 2017; accessed September 13, 2026. <a href="#note-4" aria-label="Back to source 4">↩</a></li></ol></section>
+<aside class="article-disclosure"><h2>Author</h2><p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. This article presents his proposed unit-identity cutover method and an entirely fictional teaching record. It does not describe a real facility renovation, product capability, customer deployment, performance result, legal or accounting conclusion, certification, or industry standard. Physical completion, system cutover, operating release, publication, crawling, indexing, coverage and recognition remain separate states.</p></aside></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture note</p><h3><a href="/writing/when-guardrails-disagree/">When Guardrails Disagree: Build a Decision Lattice for Self-Storage AI</a></h3><p>Preserve typed policy results, apply a declared combining rule, carry obligations forward and bound human review.</p><a href="/writing/when-guardrails-disagree/" class="text-link" aria-label="Read the article: When Guardrails Disagree: Build a Decision Lattice for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture note</p><h3><a href="/writing/facility-ai-priority-queue/">Below the Fold Is Still a Decision: Audit the AI Priority Queue in Self-Storage</a></h3><p>Govern candidate admission, ordering, screen exposure and correction—not only the model score.</p><a href="/writing/facility-ai-priority-queue/" class="text-link" aria-label="Read the article: Below the Fold Is Still a Decision: Audit the AI Priority Queue in Self-Storage">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Multi-location systems note</p><h3><a href="/writing/facility-configuration-drift-register-self-storage/">A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register</a></h3><p>Separate the approved portfolio standard from facility baselines, observed settings, effective state and verified behavior.</p><a href="/writing/facility-configuration-drift-register-self-storage/" class="text-link" aria-label="Read the article: A Portfolio Standard Is Not a Facility Setting: Build a Configuration-Drift Register">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
