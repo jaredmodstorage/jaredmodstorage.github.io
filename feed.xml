@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sun, 13 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>When a Lock Is Missing: A Preserve-and-Escalate Playbook for Self-Storage Managers</title>
+      <link>https://jaredmodstorage.github.io/writing/missing-lock-incident-response-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/missing-lock-incident-response-self-storage/</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A practical response for a missing lock or suspected unit tampering that preserves observations, access records, customer communication and release authority without inventing a conclusion.</description>
+    </item>
     <item>
       <title>When Unit 214 Becomes Two: The Identity Cutover for Self-Storage Inventory</title>
       <link>https://jaredmodstorage.github.io/writing/unit-identity-cutover-self-storage/</link>
