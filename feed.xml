@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A Facility Left the Portfolio. Did Every System Get the Memo?</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-exit-reconciliation-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-exit-reconciliation-self-storage/</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A practical multi-location control for retiring or transferring every connected system path after a self-storage facility leaves operating scope.</description>
+    </item>
     <item>
       <title>The Procedure Changed. Which Version Is Every Facility Using?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-instruction-version-receipt-self-storage/</link>
