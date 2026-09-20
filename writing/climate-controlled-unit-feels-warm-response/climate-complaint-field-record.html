@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Climate Complaint Field Record — Jared Mastroianni</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #18313d; background: #edf2f3; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 840px; margin: 28px auto; padding: 38px 42px; background: #fff; box-shadow: 0 6px 22px #17313b1a; }
+    h1 { margin: 0 0 12px; font-size: 2rem; line-height: 1.12; }
+    .lede { line-height: 1.5; max-width: 68ch; }
+    .notice { border-left: 4px solid #15627c; background: #eef6f8; padding: 12px 14px; margin: 18px 0 28px; line-height: 1.45; }
+    fieldset { border: 1px solid #a9bdc5; border-radius: 8px; padding: 16px; margin: 18px 0; break-inside: avoid; }
+    legend { font-weight: 750; font-size: 1.12rem; padding: 0 7px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .full { grid-column: 1 / -1; }
+    label { display: block; font-weight: 600; font-size: .91rem; line-height: 1.35; }
+    input, select, textarea { display: block; width: 100%; margin-top: 6px; padding: 9px 10px; border: 1px solid #6e8a96; border-radius: 4px; background: white; color: #17313b; font: 1rem/1.35 inherit; min-height: 42px; }
+    textarea { min-height: 76px; resize: vertical; }
+    input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #e5b35d; outline-offset: 2px; }
+    .small { color: #425e6b; font-size: .88rem; line-height: 1.45; }
+    footer { border-top: 1px solid #c6d3d8; margin-top: 26px; padding-top: 14px; line-height: 1.45; }
+    a { color: #075c86; }
+    @media (max-width: 600px) {
+      main { margin: 0; padding: 22px 17px; box-shadow: none; }
+      h1 { font-size: 1.58rem; }
+      .grid { grid-template-columns: minmax(0, 1fr); }
+      .full { grid-column: auto; }
+      fieldset { padding: 13px; }
+    }
+    @media print {
+      :root { background: white; }
+      @page { margin: .6in; }
+      main { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+      fieldset { border-color: #647984; }
+      input, select, textarea { border-color: #647984; print-color-adjust: exact; }
+      a { color: #18313d; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Climate Complaint Field Record</h1>
+  <p class="lede">One reported condition at one named unit or zone. Copy completed answers into the facility's approved incident system or print this blank record. This file does not save or transmit entered information.</p>
+  <p class="notice">Use <strong>unknown</strong> when a fact is not established; a blank field is not a normal result. Follow the site emergency procedure immediately for a safety condition. This record does not authorize customer-unit entry, technical repair, a claim about stored property, or a temperature guarantee.</p>
+
+  <fieldset><legend>1. Customer report</legend><div class="grid">
+    <label>Incident or ticket ID<input type="text" autocomplete="off"></label>
+    <label>Local date and time<input type="text" autocomplete="off"></label>
+    <label>Unit ID and customer update channel<input type="text" autocomplete="off"></label>
+    <label>First noticed when?<input type="text" autocomplete="off"></label>
+    <label class="full">Customer's own words and location of concern<textarea></textarea></label>
+    <label>Immediate safety concern?<select><option value="">Select</option><option>yes</option><option>no</option><option>unknown</option></select></label>
+    <label>Site-plan action and owner if yes or unknown<input type="text" autocomplete="off"></label>
+  </div></fieldset>
+
+  <fieldset><legend>2. Actual promise</legend><div class="grid">
+    <label class="full">Agreement, public description or policy checked; version/date and link<textarea></textarea></label>
+    <label>What does it say for this unit?<input type="text" autocomplete="off"></label>
+    <label>Sources conflict?<select><option value="">Select</option><option>yes</option><option>no</option><option>unknown</option></select></label>
+    <label class="full">Mismatch owner and next action<input type="text" autocomplete="off"></label>
+  </div></fieldset>
+
+  <fieldset><legend>3. Place and direct observation</legend><div class="grid">
+    <label>Facility, building, floor and unit<input type="text" autocomplete="off"></label>
+    <label>Climate zone or equipment mapping and source<input type="text" autocomplete="off"></label>
+    <label class="full">Safe observation point, local time, door state and observer<textarea></textarea></label>
+    <label class="full">Observed condition — not a diagnosis<textarea></textarea></label>
+    <label>Instrument and most recent check, if used<input type="text" autocomplete="off"></label>
+    <label>Reading, unit, location and time; or “not measured”<input type="text" autocomplete="off"></label>
+    <label>Water or condensation observed?<select><option value="">Select</option><option>yes</option><option>no</option><option>not checked</option></select></label>
+  </div></fieldset>
+
+  <fieldset><legend>4. System evidence and footprint</legend><div class="grid">
+    <label class="full">Display field, value/status, capture time and source; or “not checked”<textarea></textarea></label>
+    <label>Other reports or locations checked<input type="text" autocomplete="off"></label>
+    <label>Affected area supported by evidence<input type="text" autocomplete="off"></label>
+    <label class="full">Nearby area still unknown<input type="text" autocomplete="off"></label>
+  </div></fieldset>
+
+  <fieldset><legend>5. Operating decision</legend><div class="grid">
+    <label>Existing-customer access<select><option value="">Select</option><option>normal</option><option>restricted</option><option>unknown</option></select></label>
+    <label>Climate claim for affected area<select><option value="">Select</option><option>verified</option><option>unverified</option><option>restricted</option></select></label>
+    <label>New rental or advertising representation<select><option value="">Select</option><option>continue</option><option>hold exact area</option><option>review</option></select></label>
+    <label>Decision owner and time<input type="text" autocomplete="off"></label>
+    <label class="full">Reason and exact scope<textarea></textarea></label>
+  </div></fieldset>
+
+  <fieldset><legend>6. Qualified technical handoff</legend><div class="grid">
+    <label>Service owner and request ID<input type="text" autocomplete="off"></label>
+    <label>Request stage<select><option value="">Select</option><option>draft</option><option>sent</option><option>accepted</option><option>scheduled</option><option>work done</option><option>verified</option></select></label>
+    <label class="full">Facts and unknowns provided, including map, promise and source times<textarea></textarea></label>
+    <label class="full">Requested check at the affected place<textarea></textarea></label>
+  </div></fieldset>
+
+  <fieldset><legend>7. Customer update</legend><div class="grid">
+    <label class="full">Exact update text, including what remains unknown<textarea></textarea></label>
+    <label>Channel, sender, send time and delivery state<input type="text" autocomplete="off"></label>
+    <label>Next review — not promised repair time<input type="text" autocomplete="off"></label>
+  </div></fieldset>
+
+  <fieldset><legend>8. Closure readbacks</legend><div class="grid">
+    <label class="full">Technical work/result and source/time<textarea></textarea></label>
+    <label class="full">Affected-unit or zone observation after work; method/source/time<textarea></textarea></label>
+    <label>Moisture disposition if applicable<input type="text" autocomplete="off"></label>
+    <label>Access and new-rental claim reviewed by/time<input type="text" autocomplete="off"></label>
+    <label>Customer final update sent/readback<input type="text" autocomplete="off"></label>
+    <label>Unresolved item, owner and next review<input type="text" autocomplete="off"></label>
+    <label class="full">Exact area and claim released, or retained restriction<textarea></textarea></label>
+    <label>Final decision owner and time<input type="text" autocomplete="off"></label>
+  </div></fieldset>
+
+  <footer>
+    <strong>Readback rule:</strong> a normal controller status, completed technician visit or sent customer message alone cannot close the reported unit condition. Record the affected place, source, time and named release decision separately.
+    <p class="small">Authored operating template informed by <a href="https://www.epa.gov/indoor-air-quality-iaq/building-air-quality-guide-guide-building-owners-and-facility-managers">EPA's building complaint-investigation guide</a>. It is not an EPA form, a site-specific emergency plan or a legal standard. See <code>source-register.md</code> for scope limits.</p>
+  </footer>
+</main>
+</body>
+</html>

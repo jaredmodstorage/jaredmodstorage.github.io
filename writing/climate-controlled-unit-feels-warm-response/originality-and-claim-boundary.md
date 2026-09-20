@@ -1,0 +1,9 @@
+# Originality and claim boundary
+
+The September 20 morning article is a unit-specific response to a customer saying that a climate-controlled space feels warm. It is not the September 1 power-outage playbook, September 1 unit-rentability model, August 30 water-intrusion response, September 19 held battery-warning package, or any current midday/evening article. The live proposed personal-site canonical and a same-slug modBLOG URL returned HTTP 404 at the writer's September 20 check; exact title/thesis/tool searches in the local daily corpus and editorial calendar found no matching package. Public search and live sitemap checks found no matching canonical. Recheck the destination immediately before publication.
+
+The article's opening facility and C-214 illustration are explicitly fictional. It claims no actual customer, contract term, temperature, complaint, technician visit, diagnosis, repair, damage, refund, facility promise, service level, equipment deployment or outcome. It states no universal climate-controlled temperature range. The proposed field record is an authored operational template and must be used with the actual agreement, site procedure, qualified technical owner and customer-entry authority.
+
+The three cited official sources support only their stated building-investigation, zone-sensor and moisture-maintenance scopes. The article does not copy an EPA complaint form, claim EPA/DOE endorsement, or treat a controller display as observed unit condition. No external editorial assignment, exclusive manuscript, or provider-submitted text is reused.
+
+This full article, title, slug and field record are assigned exclusively to Master Personal Site Authority. Master modBLOG must reject the same full release as a duplicate. Any later WordPress companion would require a materially different title, thesis, examples, structure, tool and wording, or a visibly syndicated/cross-domain-canonical correction.
