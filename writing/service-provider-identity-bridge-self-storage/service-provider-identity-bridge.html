@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service-Provider Identity Bridge — Jared Mastroianni</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #18313d; background: #edf2f3; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 940px; margin: 28px auto; padding: 38px 42px; background: #fff; box-shadow: 0 6px 22px #17313b1a; }
+    h1 { margin: 0 0 12px; font-size: 2rem; line-height: 1.12; }
+    .lede { line-height: 1.55; max-width: 75ch; }
+    .notice { border-left: 4px solid #15627c; background: #eef6f8; padding: 12px 14px; margin: 18px 0 28px; line-height: 1.5; }
+    fieldset { border: 1px solid #a9bdc5; border-radius: 8px; padding: 16px; margin: 18px 0; break-inside: avoid; }
+    legend { font-weight: 750; font-size: 1.12rem; padding: 0 7px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .full { grid-column: 1 / -1; }
+    label { display: block; font-weight: 650; font-size: .91rem; line-height: 1.35; }
+    input, select, textarea { display: block; width: 100%; margin-top: 6px; padding: 9px 10px; border: 1px solid #6e8a96; border-radius: 4px; background: white; color: #17313b; font: 1rem/1.35 inherit; min-height: 42px; }
+    textarea { min-height: 76px; resize: vertical; }
+    input:focus-visible, select:focus-visible, textarea:focus-visible, a:focus-visible { outline: 3px solid #e5b35d; outline-offset: 2px; }
+    .small { color: #425e6b; font-size: .88rem; line-height: 1.45; }
+    footer { border-top: 1px solid #c6d3d8; margin-top: 26px; padding-top: 14px; line-height: 1.5; }
+    a { color: #075c86; }
+    @media (max-width: 600px) {
+      main { margin: 0; padding: 22px 17px; box-shadow: none; }
+      h1 { font-size: 1.58rem; }
+      .grid { grid-template-columns: minmax(0, 1fr); }
+      .full { grid-column: auto; }
+      fieldset { padding: 13px; }
+    }
+    @media print {
+      :root { background: white; }
+      @page { margin: .55in; }
+      main { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+      fieldset, input, select, textarea { border-color: #647984; }
+      a { color: #18313d; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Service-Provider Identity Bridge</h1>
+  <p class="lede">Create one row for one source record and one exact provider relationship. The downloadable CSV includes one unfilled row and four explicitly fictional examples. This browser field guide does not save or transmit entered information.</p>
+  <p class="notice"><strong>Names are candidates, not authority.</strong> Do not place bank, tax, credential, personal or sensitive security data here. This bridge does not authorize vendors, payments, access, contracts, insurance, ownership or performance conclusions.</p>
+
+  <fieldset><legend>1. Anchor the portfolio record</legend><div class="grid">
+    <label>Bridge record ID<input type="text" autocomplete="off"></label>
+    <label>Portfolio provider ID<input type="text" autocomplete="off"></label>
+    <label>Portfolio display name<input type="text" autocomplete="off"></label>
+    <label>Service category<input type="text" autocomplete="off"></label>
+    <label>Facility ID or PORTFOLIO<input type="text" autocomplete="off"></label>
+    <label>Engagement ID<input type="text" autocomplete="off"></label>
+  </div></fieldset>
+
+  <fieldset><legend>2. Preserve source-local identity</legend><div class="grid">
+    <label>Source system<input type="text" autocomplete="off"></label>
+    <label>Source record type<input type="text" autocomplete="off"></label>
+    <label>Source record ID<input type="text" autocomplete="off"></label>
+    <label>Source display name<input type="text" autocomplete="off"></label>
+    <label>Source account ID or NONE<input type="text" autocomplete="off"></label>
+    <label>Access principal ID or NONE<input type="text" autocomplete="off"></label>
+    <label>Field company name or unresolved<input type="text" autocomplete="off"></label>
+    <label>Relationship type<select><option value="">Select</option><option>contract party</option><option>trade name</option><option>provider account</option><option>execution identity</option><option>subcontractor</option><option>unresolved</option></select></label>
+  </div></fieldset>
+
+  <fieldset><legend>3. Record legal and engagement evidence</legend><div class="grid">
+    <label>Legal name claimed<input type="text" autocomplete="off"></label>
+    <label>Legal identity state<select><option value="">Select</option><option>verified</option><option>partially verified</option><option>unverified</option><option>not applicable</option></select></label>
+    <label>Identifier scheme or NONE<input type="text" autocomplete="off"></label>
+    <label>Legal identifier or NONE<input type="text" autocomplete="off"></label>
+    <label class="full">Authoritative identifier source URL or NONE<input type="url" autocomplete="off"></label>
+    <label>Contract party name or unresolved<input type="text" autocomplete="off"></label>
+    <label>Contract or scope reference<input type="text" autocomplete="off"></label>
+    <label>Remittance party or unresolved<input type="text" autocomplete="off"></label>
+    <label>Remittance-change state<select><option value="">Select</option><option>unchanged</option><option>pending change</option><option>verified change</option><option>not applicable</option></select></label>
+  </div></fieldset>
+
+  <fieldset><legend>4. Decide the relationship</legend><div class="grid">
+    <label class="full">Match basis and direct evidence<textarea></textarea></label>
+    <label>Match state<select><option value="">Select</option><option>confirmed</option><option>probable — held</option><option>conflicted</option><option>unrelated</option></select></label>
+    <label>Collision state<select><option value="">Select</option><option>none</option><option>possible collision</option><option>confirmed collision</option></select></label>
+    <label>Effective from with time zone<input type="text" autocomplete="off"></label>
+    <label>Effective to with time zone or OPEN<input type="text" autocomplete="off"></label>
+    <label class="full">Review trigger<textarea></textarea></label>
+    <label>Identity owner role<input type="text" autocomplete="off"></label>
+    <label>Approver role<input type="text" autocomplete="off"></label>
+    <label>Approved at with time zone<input type="text" autocomplete="off"></label>
+    <label>Current state<select><option value="">Select</option><option>active</option><option>held</option><option>superseded</option><option>closed</option></select></label>
+  </div></fieldset>
+
+  <fieldset><legend>5. Bound use and preserve evidence</legend><div class="grid">
+    <label class="full">Allowed use<textarea></textarea></label>
+    <label class="full">Prohibited use<textarea></textarea></label>
+    <label class="full">Evidence references without secrets<textarea></textarea></label>
+    <label class="full">Limitations and unresolved questions<textarea></textarea></label>
+  </div></fieldset>
+
+  <footer>
+    <strong>Readback rule:</strong> a confirmed link supports only the named use. It does not silently authorize payment, access, contracting, tax, insurance, ownership or performance conclusions.
+    <p class="small">Authored field guide informed by <a href="https://standard.open-contracting.org/latest/en/schema/identifiers/">Open Contracting identifier guidance</a>, <a href="https://www.gleif.org/en/organizational-identity/introducing-the-legal-entity-identifier-lei">GLEIF's LEI description</a> and <a href="https://csrc.nist.gov/pubs/sp/1305/final">NIST SP 1305</a>. It is not an agency or standards-body form. See <code>source-register.md</code> for limits.</p>
+  </footer>
+</main>
+</body>
+</html>
