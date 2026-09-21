@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 20 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>An AI Answer Must Stay Inside Its Organization</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-retrieval-organization-boundary-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-retrieval-organization-boundary-self-storage/</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A boundary test for self-storage retrieval that checks what the system may see before it composes a convincing answer.</description>
+    </item>
+    <item>
       <title>The Invoice Arrived. Did the Facility Accept the Work?</title>
       <link>https://jaredmodstorage.github.io/writing/vendor-service-receipt-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/vendor-service-receipt-self-storage/</guid>
