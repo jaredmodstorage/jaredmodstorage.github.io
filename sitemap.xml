@@ -110,7 +110,7 @@
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/writing/topics/automation/</loc>
-<lastmod>2026-08-23T00:00:00.000Z</lastmod>
+<lastmod>2026-09-21T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -129,6 +129,12 @@
 <url>
 <loc>https://jaredmodstorage.github.io/writing/topics/research/</loc>
 <lastmod>2026-09-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://jaredmodstorage.github.io/writing/revalidate-pending-ai-work-self-storage/</loc>
+<lastmod>2026-09-21T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
