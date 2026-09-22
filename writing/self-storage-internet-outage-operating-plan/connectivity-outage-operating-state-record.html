@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connectivity Outage Operating-State Record</title>
+<style>
+:root{--ink:#12202b;--muted:#526270;--line:#cad4dc;--paper:#f7fafb;--accent:#124f67;--warn:#8a4100;--stop:#812b36;--ok:#24603e}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:1100px;margin:auto;padding:clamp(20px,4vw,48px)} h1{max-width:18ch;font-size:clamp(2rem,5vw,4.2rem);line-height:1.02;margin:.25rem 0 1rem}
+.deck{max-width:70ch;color:var(--muted);font-size:1.1rem} .notice{border-left:5px solid var(--warn);background:#fff6e8;padding:16px 18px;margin:26px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px} .card{background:white;border:1px solid var(--line);border-top:6px solid var(--accent);border-radius:12px;padding:20px;min-width:0}
+.state-paused{border-top-color:var(--stop)} .state-available{border-top-color:var(--ok)} .state-unverified{border-top-color:var(--warn)}
+.eyebrow{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)} h2{font-size:1.28rem;line-height:1.2;margin:.45rem 0}
+.state{font-weight:750;color:var(--accent)} dl{margin:0} dl div{border-top:1px solid #e6ecef;padding:.65rem 0} dt{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)} dd{margin:.15rem 0 0;overflow-wrap:anywhere}
+footer{margin-top:28px;color:var(--muted);font-size:.9rem} @media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style></head><body><main>
+<p class="eyebrow">Operator reference · fictional examples</p><h1>Connectivity Outage Operating-State Record</h1>
+<p class="deck">Classify each service separately. Keep sensitive information out of the outage record. Restoration is complete only after every pending item is reconciled against the authoritative system.</p>
+<aside class="notice"><strong>Replace before use.</strong> These rows are fictional teaching examples, not a facility procedure. Align the tool with current emergency, privacy, payment, access and provider requirements.</aside>
+<section class="grid">
+        <article class="card state-unverified">
+          <div class="eyebrow">CONN-FIC-001 · fictional example</div>
+          <h2>Life safety and emergency communications</h2>
+          <p class="state">Unverified</p>
+          <dl>
+            <div><dt>Observed</dt><dd>No related life-safety fault observed; emergency phone path not yet tested</dd></div>
+            <div><dt>Customer effect</dt><dd>Potential consequence is high if unavailable</dd></div>
+            <div><dt>Approved fallback</dt><dd>Use facility emergency procedure and approved emergency contact path</dd></div>
+            <div><dt>Do not</dt><dd>Do not substitute a personal contact path or ignore a physical hazard</dd></div>
+            <div><dt>Owner</dt><dd>site manager</dd></div>
+            <div><dt>Reconcile</dt><dd>Test approved emergency communication path</dd></div>
+          </dl>
+        </article>
+        <article class="card state-local-only">
+          <div class="eyebrow">CONN-FIC-002 · fictional example</div>
+          <h2>Existing gate access</h2>
+          <p class="state">Local Only</p>
+          <dl>
+            <div><dt>Observed</dt><dd>Approved local test accepts an existing fictional credential</dd></div>
+            <div><dt>Customer effect</dt><dd>Existing authorized access may continue; new changes remain unverified</dd></div>
+            <div><dt>Approved fallback</dt><dd>Continue only under approved local-operation procedure</dd></div>
+            <div><dt>Do not</dt><dd>Do not prop gate open, share master credentials or bypass controls</dd></div>
+            <div><dt>Owner</dt><dd>site manager and access-system owner</dd></div>
+            <div><dt>Reconcile</dt><dd>Verify synchronization and every queued access change after restoration</dd></div>
+          </dl>
+        </article>
+        <article class="card state-available">
+          <div class="eyebrow">CONN-FIC-003 · fictional example</div>
+          <h2>Business phone</h2>
+          <p class="state">Available</p>
+          <dl>
+            <div><dt>Observed</dt><dd>Approved business line completes a test call</dd></div>
+            <div><dt>Customer effect</dt><dd>Customer calls can continue</dd></div>
+            <div><dt>Approved fallback</dt><dd>Use the approved business line and outage wording</dd></div>
+            <div><dt>Do not</dt><dd>Do not publish or use a personal phone number as the business line</dd></div>
+            <div><dt>Owner</dt><dd>site manager</dd></div>
+            <div><dt>Reconcile</dt><dd>Retest at next review</dd></div>
+          </dl>
+        </article>
+        <article class="card state-paused">
+          <div class="eyebrow">CONN-FIC-004 · fictional example</div>
+          <h2>Payment processing</h2>
+          <p class="state">Paused</p>
+          <dl>
+            <div><dt>Observed</dt><dd>Approved payment portal and terminal cannot reach processor</dd></div>
+            <div><dt>Customer effect</dt><dd>Payment cannot be represented as complete</dd></div>
+            <div><dt>Approved fallback</dt><dd>Use only a documented processor-approved alternative, if one exists</dd></div>
+            <div><dt>Do not</dt><dd>Do not write card data, email it, store it in notes or use an unapproved device</dd></div>
+            <div><dt>Owner</dt><dd>site manager and payment-process owner</dd></div>
+            <div><dt>Reconcile</dt><dd>Contact customer through approved channel after secure path returns</dd></div>
+          </dl>
+        </article>
+        <article class="card state-paused">
+          <div class="eyebrow">CONN-FIC-005 · fictional example</div>
+          <h2>New rental and unit release</h2>
+          <p class="state">Paused</p>
+          <dl>
+            <div><dt>Observed</dt><dd>Online rental and authoritative customer record are unreachable</dd></div>
+            <div><dt>Customer effect</dt><dd>New rental cannot be verified or released</dd></div>
+            <div><dt>Approved fallback</dt><dd>Create a non-sensitive pending-item reference and use the approved follow-up process</dd></div>
+            <div><dt>Do not</dt><dd>Do not release a unit or promise completion without a verified rental and payment state</dd></div>
+            <div><dt>Owner</dt><dd>site manager</dd></div>
+            <div><dt>Reconcile</dt><dd>Complete or cancel once in authoritative system; check duplicates</dd></div>
+          </dl>
+        </article>
+        <article class="card state-degraded">
+          <div class="eyebrow">CONN-FIC-006 · fictional example</div>
+          <h2>Email and customer messaging</h2>
+          <p class="state">Degraded</p>
+          <dl>
+            <div><dt>Observed</dt><dd>Business email is unreachable from office workstation</dd></div>
+            <div><dt>Customer effect</dt><dd>Email responses are delayed</dd></div>
+            <div><dt>Approved fallback</dt><dd>Use approved business phone and truthful outage wording</dd></div>
+            <div><dt>Do not</dt><dd>Do not move customer correspondence to personal email or unapproved messaging</dd></div>
+            <div><dt>Owner</dt><dd>site manager</dd></div>
+            <div><dt>Reconcile</dt><dd>Reconcile messages and avoid duplicate replies after restoration</dd></div>
+          </dl>
+        </article>
+        <article class="card state-local-only">
+          <div class="eyebrow">CONN-FIC-007 · fictional example</div>
+          <h2>Camera visibility and remote alerts</h2>
+          <p class="state">Local Only</p>
+          <dl>
+            <div><dt>Observed</dt><dd>Local monitor displays video; cloud recording and remote alerts are not tested</dd></div>
+            <div><dt>Customer effect</dt><dd>Local visibility may continue while remote functions are unknown</dd></div>
+            <div><dt>Approved fallback</dt><dd>Apply approved local observation and escalation procedure</dd></div>
+            <div><dt>Do not</dt><dd>Do not claim recording or remote alerts are working based only on a local image</dd></div>
+            <div><dt>Owner</dt><dd>site manager and security-system owner</dd></div>
+            <div><dt>Reconcile</dt><dd>Verify recording, remote access and alert continuity after restoration</dd></div>
+          </dl>
+        </article>
+        <article class="card state-paused">
+          <div class="eyebrow">CONN-FIC-008 · fictional example</div>
+          <h2>Work-order and facility records</h2>
+          <p class="state">Paused</p>
+          <dl>
+            <div><dt>Observed</dt><dd>Cloud work-order system is unreachable</dd></div>
+            <div><dt>Customer effect</dt><dd>Non-emergency updates are delayed</dd></div>
+            <div><dt>Approved fallback</dt><dd>Use approved outage record for minimal non-sensitive pending-item references</dd></div>
+            <div><dt>Do not</dt><dd>Do not mark work complete or create conflicting permanent records</dd></div>
+            <div><dt>Owner</dt><dd>site manager and maintenance owner</dd></div>
+            <div><dt>Reconcile</dt><dd>Reconcile once against authoritative work-order system</dd></div>
+          </dl>
+        </article></section>
+<footer>No form, script, storage, analytics or transmission is included. This is a passive reference generated from the same rows as the CSV and XLSX workbook.</footer>
+</main></body></html>

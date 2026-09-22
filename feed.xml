@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>When the Office Internet Goes Down: A No-Guessing Plan for Self-Storage Managers</title>
+      <link>https://jaredmodstorage.github.io/writing/self-storage-internet-outage-operating-plan/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/self-storage-internet-outage-operating-plan/</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A practical self-storage operating plan for office internet outages that separates local device function from cloud availability, protects customer information and reconciles every deferred action.</description>
+    </item>
     <item>
       <title>The Decision Waited. The Facility Changed.</title>
       <link>https://jaredmodstorage.github.io/writing/revalidate-pending-ai-work-self-storage/</link>
