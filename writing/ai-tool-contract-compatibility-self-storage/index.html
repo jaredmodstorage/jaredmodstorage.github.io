@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.CgInf__Z.css" data-rsc-css-href="/_next/static/css/index.CgInf__Z.css" data-precedence="vite-rsc/importer-resources"/><title>AI Tool-Contract Compatibility for Self-Storage | Jared Mastroianni</title><meta name="description" content="A compatibility gate that binds an artificial-intelligence tool call to the exact operation, argument schema, defaults, executor behavior, permission scope, projected effect and governing readback."/><meta name="robots" content="index, follow"/><meta property="og:title" content="AI Tool-Contract Compatibility for Self-Storage | Jared Mastroianni"/><meta property="og:description" content="A compatibility gate that binds an artificial-intelligence tool call to the exact operation, argument schema, defaults, executor behavior, permission scope, projected effect and governing readback."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-22"/><meta property="article:modified_time" content="2026-09-22"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/056-ai-development-smart-access-control-pilot.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni listens to a facility manager and technical colleague beside a self-storage access gate in an AI-generated editorial scene."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AI Tool-Contract Compatibility for Self-Storage | Jared Mastroianni"/><meta name="twitter:description" content="A compatibility gate that binds an artificial-intelligence tool call to the exact operation, argument schema, defaults, executor behavior, permission scope, projected effect and governing readback."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/056-ai-development-smart-access-control-pilot.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Tool Schema Changed. Did the Agent’s Authority Change Too?","datePublished":"2026-09-22","dateModified":"2026-09-22","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/#lead-image"},"description":"A compatibility gate that binds an artificial-intelligence tool call to the exact operation, argument schema, defaults, executor behavior, permission scope, projected effect and governing readback.","proficiencyLevel":"Expert / Architect","about":["Self-storage operations","Responsible artificial intelligence","Tool contract compatibility","Operating authority","Schema validation","Effect projection"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/#lead-image","name":"Self-storage AI tool-contract review","caption":"A tool contract can validate perfectly and still produce the wrong operating effect. Compatibility review must include the facility context, authority and readback. Jared-owned AI-generated editorial image; not documentary evidence.","description":"Jared Mastroianni listens to a facility manager and technical colleague beside a self-storage access gate in an AI-generated editorial scene. Jared-owned AI-generated editorial material; non-documentary and not evidence of a customer, employee, facility, access event, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/056-ai-development-smart-access-control-pilot.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Editorial image © Jared Mastroianni; governed image PHOTO-056","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Tool Schema Changed. Did the Agent’s Authority Change Too?","item":"https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Tool Schema Changed. Did the Agent’s Authority Change Too?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Responsible AI architecture<!-- --> · <time dateTime="2026-09-22">22 September 2026</time></p><h1>The Tool Schema Changed. Did the Agent’s Authority Change Too?</h1><p class="lede">A compatibility gate for artificial intelligence tool calls that binds one approved facility effect to the exact operation, argument contract, defaults and executor version.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>10 min read</span></div></header><div class="essay-body"><p>An artificial intelligence agent prepares a narrow access-control change for one self-storage facility. The approved action is to create an internal review record. The agent supplies a facility identifier, a gate identifier and a reason code. The call passes schema validation.</p>
+<p>During a routine software release, the tool gains an optional field called <code>notify_customer</code>. The executor treats a missing value as <code>true</code>. An older agent still sends the same three arguments, the payload still validates and the tool now reaches a customer-facing channel that was never part of the approved action.</p>
+<p>Nothing about the model’s text had to change. The contract around the text changed.</p>
+<p>This is an explicitly fictional failure path, not a report about a product, facility or deployment. It exposes an architecture problem that becomes more important as self-storage teams connect artificial intelligence to access, maintenance, customer communication, inventory and pricing workflows: <strong>a valid tool call is not necessarily the same authorized business action after the tool contract changes.</strong></p>
+<p>The control for that gap is a tool-contract compatibility gate. It compares the agent’s evaluated contract with the executor’s current contract and projected effect before any consequential call is released.</p>
+<figure class="article-photo"><img src="056-ai-development-smart-access-control-pilot.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni listens to a facility manager and technical colleague beside a self-storage access gate in an AI-generated editorial scene."><figcaption>A tool contract can validate perfectly and still produce the wrong operating effect. Compatibility review must include the facility context, authority and readback. <strong>Editorial image © Jared Mastroianni. Jared-owned AI-generated editorial image; not documentary evidence of an access event, facility, customer, employee, product, deployment or result.</strong></figcaption></figure>
+<h2>Separate syntax from operating authority</h2>
+<p>A schema can determine whether an object contains allowed types, required properties and enumerated values. That work matters. It prevents malformed arguments from flowing directly into an operating system.</p>
+<p>It answers a narrow question: does this instance satisfy this schema?</p>
+<p>It does not establish that the named facility is the right one, that an omitted argument received a safe value, that an enum still carries the same meaning, that the executor uses the same defaults, or that the resulting side effects remain inside the approval.</p>
+<p><a href="https://json-schema.org/draft/2020-12/json-schema-validation">JSON Schema Draft 2020-12</a> makes the distinction visible. Validation keywords impose assertions on an instance. Keywords such as <code>default</code> are annotations; they can describe a value associated with a schema without requiring every implementation to insert it during validation. The specification also explains that <code>format</code> is an annotation under the default vocabulary unless assertion behavior is deliberately enabled. A green validator therefore has to be interpreted in the context of the actual validator, dialect and application behavior.</p>
+<p>An AI action path needs four separate compatibility findings:</p>
+<ol>
+<li><strong>Structural compatibility:</strong> the proposed arguments validate under the exact declared schema and dialect.</li>
+<li><strong>Semantic compatibility:</strong> every argument, enum, unit, null state and default has the same operating meaning that was evaluated.</li>
+<li><strong>Authority compatibility:</strong> the current tool still exposes only the action, scope and side effects covered by the approval.</li>
+<li><strong>Outcome compatibility:</strong> the executor’s observed result can be reconciled to the approved effect.</li>
+</ol>
+<p>One finding cannot substitute for another.</p>
+<h2>Give the operation a durable identity</h2>
+<p>Tool names are often written for people: <code>updateGate</code>, <code>createTask</code> or <code>sendNotice</code>. A familiar name can survive several incompatible implementations.</p>
+<p>The release record needs a more exact identity:</p>
+<ul>
+<li>tool or service name;</li>
+<li>operation identifier;</li>
+<li>schema dialect and schema version;</li>
+<li>canonical schema digest;</li>
+<li>executor or adapter version;</li>
+<li>downstream endpoint and credential scope;</li>
+<li>effect class and maximum consequence;</li>
+<li>default-resolution policy;</li>
+<li>response or receipt contract; and</li>
+<li>deprecation and compatibility state.</li>
+</ul>
+<p>The current <a href="https://spec.openapis.org/oas/v3.2.1.html">OpenAPI Specification</a> defines <code>operationId</code> as a case-sensitive identifier that must be unique among operations described in the API. It also distinguishes required from optional parameters and supports schemas based on the OpenAPI dialect of JSON Schema. The specification is useful for describing an interface. Its own schema guidance warns that schemas cannot catch every specification violation.</p>
+<p>For an agent workflow, the approved unit is not merely <code>operationId=updateGate</code>. It is the operation plus its argument meaning, executor behavior, permission scope and side-effect envelope. A schema digest helps detect byte changes. It cannot explain whether those changes are compatible. That classification needs an accountable owner.</p>
+<h2>Treat defaults as executable policy</h2>
+<p>Defaults are easy to miss because they do not appear in the agent’s proposed payload. They can still determine the effect.</p>
+<p>Suppose an old contract accepts:</p>
+<pre><code class="language-json">{
+  &quot;facility_id&quot;: &quot;FAC-FIC-017&quot;,
+  &quot;gate_id&quot;: &quot;GATE-FIC-EAST&quot;,
+  &quot;action&quot;: &quot;create_review_record&quot;
+}
+</code></pre>
+<p>A new executor adds optional fields for <code>notify_customer</code>, <code>dispatch_vendor</code> and <code>restore_access</code>. If any omitted field resolves to an active behavior, the absence of text has become a command.</p>
+<p>The compatibility gate should materialize every effective value before approval or execution. It takes the model’s proposal, applies the exact current resolution rules in a non-executing environment and produces an <strong>effect projection</strong>. The projection states which records, messages, access states, vendor jobs or customer-visible surfaces could change.</p>
+<p>The release owner compares that projection with the approved effect. If a new field, default, inferred identity or hidden downstream call expands the effect, the call stops even when structural validation passes.</p>
+<p>This is also why an adapter should not silently “help” by filling a missing facility from the current browser session, choosing the first matching customer or converting an unknown enum to a nearby value. Useful inference in a draft becomes dangerous ambiguity in an action. The proposal should return to a person or a governed resolution step with the missing fact visible.</p>
+<h2>Reject more than malformed JSON</h2>
+<p>A tight action contract usually benefits from the following rules:</p>
+<ul>
+<li>reject undeclared properties instead of ignoring them;</li>
+<li>make consequential fields explicit and required;</li>
+<li>represent unknown, omitted and intentionally empty values separately;</li>
+<li>bind units and time zones to the field definition;</li>
+<li>version enums when their operating meaning changes;</li>
+<li>prevent the model from supplying server-owned receipt or approval fields;</li>
+<li>prohibit default values that create an external side effect;</li>
+<li>return machine-readable validation and compatibility failures; and</li>
+<li>keep the model’s original proposal beside the normalized candidate.</li>
+</ul>
+<p>These rules do not make the model authoritative. They make the proposal inspectable.</p>
+<p>The <a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/">OWASP GenAI Security Project’s Excessive Agency guidance</a> describes risk created by excessive functionality, permissions or autonomy in systems that can call tools. It recommends minimizing available functions and permissions, requiring approval for high-impact actions and enforcing authorization in downstream systems rather than relying on the language model. OWASP guidance is community security guidance, not a self-storage standard or a finding about a particular implementation. Its central architecture point is useful here: the executor must mediate the call under current policy.</p>
+<h2>Classify change by effect, not by version label</h2>
+<p>Teams often describe a change as major, minor or patch. That label can support release planning, but it is not enough for an operating decision. A field added in a “minor” release can broaden a customer message. A spelling fix in an enum can cause every older proposal to fail. A server-side implementation change can alter behavior without changing the published schema.</p>
+<p>Classify compatibility against the exact action class:</p>
+<ul>
+<li><strong>Equivalent:</strong> same effective arguments, scope, side effects and receipt semantics. Existing evaluation may remain eligible within its original time and policy limits.</li>
+<li><strong>Narrower:</strong> the new contract removes capability or tightens validation. Re-test because previously valid proposals may now fail, but do not assume authority expanded.</li>
+<li><strong>Broader:</strong> new target, side effect, permission, default or downstream call becomes reachable. Require a new evaluation and approval.</li>
+<li><strong>Ambiguous:</strong> meaning, default behavior, identity resolution or receipt semantics cannot be established. Hold the action.</li>
+<li><strong>Breaking:</strong> an approved argument, enum, unit, response or readback path no longer carries the evaluated meaning. Migrate and re-evaluate.</li>
+</ul>
+<p>The compatibility result belongs to a named contract owner and business-effect owner. Engineering can identify the code and schema difference. Operations can identify what the difference means at a facility. Security or access owners can confirm the effective permission. The accountable business owner decides whether the resulting action class is eligible for release.</p>
+<h2>A fictional access-tool rollout</h2>
+<p>Consider an entirely fictional operator, Basin Line Storage, using a fictional tool called <code>prepare_access_exception</code>.</p>
+<p>Version 4.1 accepts a facility ID, gate ID, evidence reference and one of three intents: <code>draft_review</code>, <code>hold_for_manager</code> or <code>close_no_action</code>. The evaluated workflow may create an internal review record. It may not change access, contact a customer or dispatch a vendor.</p>
+<p>Version 4.2 introduces three changes:</p>
+<ol>
+<li><code>hold_for_manager</code> becomes <code>restrict_pending_review</code>;</li>
+<li>an optional <code>notify_customer</code> argument is added; and</li>
+<li>the adapter resolves a missing <code>facility_id</code> from the active user session.</li>
+</ol>
+<p>The fictional agent was evaluated against 4.1. It emits a stored proposal using <code>hold_for_manager</code>, with the facility ID present and no notification field.</p>
+<p>The 4.2 schema rejects the old enum, so the adapter maps it to <code>restrict_pending_review</code>. That mapping sounds reasonable, but it changes an internal queue state into a potentially customer-affecting restriction. The new notification field resolves to <code>false</code>, so no message is sent. The facility identity remains exact.</p>
+<p>The gate still returns <strong>breaking</strong>. The risk is not only the notification default. The enum’s business effect changed. The old approval covered an internal review record, not an access restriction. The team preserves the old proposal, creates a new candidate under 4.2, projects the effect, routes the exact restriction to the authorized manager and runs a current-state readback before any release.</p>
+<p>In a second fictional test, the agent omits <code>facility_id</code>. The adapter can infer one facility from the user session, but the gate returns <strong>ambiguous</strong>. Identity inference is not accepted for this consequence class. The proposal receives a handback reason and no tool call occurs.</p>
+<p>Every organization, facility, version, field, rule and outcome in this example is invented. It demonstrates the gate; it does not claim a product, deployment or result.</p>
+<h2>Put compatibility before the execution credential</h2>
+<p>A mature flow keeps the language model on the proposal side of the boundary:</p>
+<ol>
+<li>Resolve authenticated subject, actor, organization and facility scope.</li>
+<li>Select the allowed operation from the current tool registry.</li>
+<li>Capture the exact schema, dialect, digest, executor and permission versions.</li>
+<li>Validate the model’s raw proposal without executing it.</li>
+<li>Normalize only through documented rules; preserve raw and normalized forms.</li>
+<li>Project the complete business effect, including defaults and downstream calls.</li>
+<li>Compare the current contract with the evaluated and approved contract.</li>
+<li>Require the appropriate owner to approve the exact effect and digest.</li>
+<li>Issue a narrow, expiring execution credential for that exact candidate.</li>
+<li>Execute once, collect the provider receipt, read governing state and reconcile.</li>
+</ol>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">NIST Generative Artificial Intelligence Profile</a> discusses governance, change-management controls, monitoring, documentation and different levels of human oversight across generative-AI contexts. It does not prescribe this gate or validate an implementation. It supports the broader conclusion that a changed application or human-AI configuration belongs inside governance, not outside it as a routine technical detail.</p>
+<p>Human approval also needs the projected effect, not a friendly tool name. “Approve <code>prepare_access_exception</code>” hides too much. “Create one internal review record for facility <code>FAC-FIC-017</code>; no access change, customer message, vendor dispatch or financial effect” gives the reviewer a bounded decision.</p>
+<h2>Test the path that production will run</h2>
+<p>Schema comparison alone cannot prove behavior. The test suite needs the actual adapter, executor and downstream test path.</p>
+<p>Use fixtures for prior approved proposals, current proposals, omitted fields, unknown fields, enum changes, nulls, empty strings, unit conversions, cross-facility identifiers, expired approvals and responses missing their expected receipts. Run the same candidate through the old and new contracts without releasing a real effect. Compare normalized arguments, projected effects, authorization decisions, outbound requests and resulting test readbacks.</p>
+<p>Then challenge the negative path. Confirm that a blocked compatibility result cannot obtain an execution credential. Confirm that a stale agent cannot bypass the registry by calling an old endpoint directly. Confirm that a provider success receipt cannot close the record when the governing facility state disagrees. Confirm that rollback of the schema also restores the compatible executor and permission set rather than only the documentation.</p>
+<p>The accompanying <strong>AI Tool Contract Compatibility Register</strong> keeps those facts in one review sequence. Its examples are fictional and unexecuted. It does not certify a tool, approve facility access, establish software security or replace provider-specific testing.</p>
+<p>The practical rule is concise: <strong>bind authority to the effect, then prove that the current contract still produces that effect.</strong> A validator can confirm that the call is well formed. Only the compatibility gate, current authorization and operating readback can show whether it is still the action someone approved.</p>
+<hr />
+<h2>Operator tool</h2>
+<section class="method-downloads" aria-labelledby="contract-compatibility-downloads"><p class="eyebrow">Governed companion package</p><h2 id="contract-compatibility-downloads">Inspect the contract register and its evidence boundaries.</h2><p>The workbook, CSV and passive HTML reference contain fictional, unexecuted teaching records. They do not authorize facility access, validate a deployment, certify a tool or establish an operating result.</p><div><a href="ai-tool-contract-compatibility-register.xlsx" download>Download the compatibility workbook <span aria-hidden="true">↓</span></a><a href="ai-tool-contract-compatibility-register.csv" download>Download the CSV register <span aria-hidden="true">↓</span></a><a href="ai-tool-contract-compatibility-register.html">View the passive HTML reference <span aria-hidden="true">↗</span></a><a href="source-register.md" download>Download the source and limitation register <span aria-hidden="true">↓</span></a><a href="article.md" download>Download the exact article source <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download the governed image record <span aria-hidden="true">↓</span></a><a href="checksums.sha256" download>Download the package checksums <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download the owned-publication manifest <span aria-hidden="true">↓</span></a><a href="056-ai-development-smart-access-control-pilot.png" download>Download the governed editorial image <span aria-hidden="true">↓</span></a><a href="final-editorial-qa.md" download>Download the editorial QA record <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download the originality and claim-boundary record <span aria-hidden="true">↓</span></a><a href="publisher-manifest.md" download>Download the original publisher manifest <span aria-hidden="true">↓</span></a></div></section>
+
+<p>Download the <strong>AI Tool Contract Compatibility Register</strong> as an XLSX workbook or CSV register. A passive responsive HTML reference presents the same fictional cases.</p>
+<h2>Author</h2>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. His work focuses on facility operations, multi-location systems, data governance and responsible artificial intelligence.</p>
+<h2>Editorial production note</h2>
+<p>Research synthesis, drafting, structured-tool production and quality assurance were completed with AI assistance under Jared Mastroianni’s direction. The article remains bounded by its sources, fictional-example labels and claim limitations.</p>
+</div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-retrieval-organization-boundary-self-storage/">An AI Answer Must Stay Inside Its Organization</a></h3><p>Test organization and facility boundaries before retrieval supplies evidence to a generated answer.</p><a href="/writing/ai-retrieval-organization-boundary-self-storage/" class="text-link" aria-label="Read the article: An AI Answer Must Stay Inside Its Organization">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Rate publication governance</p><h3><a href="/writing/self-storage-rate-publication-reconciliation/">The Rate Changed. Which Customer-Facing Surface Still Shows the Old One?</a></h3><p>Release one approved customer-facing rate bundle across every controlled surface, observe the result and contain every mismatch before closure.</p><a href="/writing/self-storage-rate-publication-reconciliation/" class="text-link" aria-label="Read the article: The Rate Changed. Which Customer-Facing Surface Still Shows the Old One?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Multi-location systems note</p><h3><a href="/writing/unit-identity-cutover-self-storage/">When Unit 214 Becomes Two: The Identity Cutover for Self-Storage Inventory</a></h3><p>Retire one unit identity, create its successors, preserve lineage and reconcile every release-critical system surface.</p><a href="/writing/unit-identity-cutover-self-storage/" class="text-link" aria-label="Read the article: When Unit 214 Becomes Two: The Identity Cutover for Self-Storage Inventory">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
