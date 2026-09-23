@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Same Name, Different Customer: A No-Guessing Rule for Linking Records Across Self-Storage Sites</title>
+      <link>https://jaredmodstorage.github.io/writing/same-name-different-customer-record-linking/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/same-name-different-customer-record-linking/</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A familiar name can identify a candidate for review. It cannot establish that two facility records describe the same person, authorize a link, or permit one record to overwrite another.</description>
+    </item>
     <item>
       <title>The Tool Schema Changed. Did the Agent’s Authority Change Too?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-tool-contract-compatibility-self-storage/</link>
