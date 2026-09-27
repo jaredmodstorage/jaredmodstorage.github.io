@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DshNwFP_.css" data-rsc-css-href="/_next/static/css/index.DshNwFP_.css" data-precedence="vite-rsc/importer-resources"/><title>Separation of Duties for Self-Storage AI | Jared Mastroianni</title><meta name="description" content="Separate AI proposal, human authorization, bounded execution and independent verification for consequential self-storage decisions."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Separation of Duties for Self-Storage AI | Jared Mastroianni"/><meta property="og:description" content="Separate AI proposal, human authorization, bounded execution and independent verification for consequential self-storage decisions."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-27"/><meta property="article:modified_time" content="2026-09-27"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/054-ai-development-computer-vision-pilot-inspection.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni listens as two colleagues discuss operations in a self-storage corridor beneath a security camera."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Separation of Duties for Self-Storage AI | Jared Mastroianni"/><meta name="twitter:description" content="Separate AI proposal, human authorization, bounded execution and independent verification for consequential self-storage decisions."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/054-ai-development-computer-vision-pilot-inspection.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/#article","url":"https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Same System Should Not Propose, Approve, and Verify: Separation of Duties for Self-Storage AI","datePublished":"2026-09-27","dateModified":"2026-09-27","image":{"@id":"https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/#lead-image"},"description":"Separate AI proposal, human authorization, bounded execution and independent verification for consequential self-storage decisions.","about":["Self-storage AI","Separation of duties","Human authorization","Independent verification"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/#lead-image","name":"AI decision separation","caption":"A consequential AI workflow needs different people and systems to propose, authorize, execute and verify. AI-generated editorial image; not documentary evidence.","description":"Jared Mastroianni listens as two colleagues discuss operations in a self-storage corridor beneath a security camera. Jared-owned AI-generated editorial material; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/054-ai-development-computer-vision-pilot-inspection.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed AI-generated editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Identity and governance","item":"https://jaredmodstorage.github.io/writing/topics/governance/"},{"@type":"ListItem","position":3,"name":"The Same System Should Not Propose, Approve, and Verify: Separation of Duties for Self-Storage AI","item":"https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/governance/">Identity and governance</a></li><li aria-current="page">The Same System Should Not Propose, Approve, and Verify: Separation of Duties for Self-Storage AI</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">AI decision separation<!-- --> · <time dateTime="2026-09-27">27 September 2026</time></p><h1>The Same System Should Not Propose, Approve, and Verify: Separation of Duties for Self-Storage AI</h1><p class="lede">A human approval screen is not a control if one workflow can prepare, authorize, execute and certify its own action.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="054-ai-development-computer-vision-pilot-inspection.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni listens as two colleagues discuss operations in a self-storage corridor beneath a security camera."><figcaption>A consequential AI workflow needs different people and systems to propose, authorize, execute and verify. AI-generated editorial image; not documentary evidence.</figcaption></figure>
+<p><em>Editorial disclosure: Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni's byline. All named examples are fictional; the article does not document a real customer, facility, deployment or result.</em></p>
+<p>An AI assistant reviews an after-hours access exception, assembles the supporting records and recommends a two-hour access restriction. A manager clicks approve. The assistant sends the change, reads the provider response and closes the task as verified.</p>
+<p>That looks human-in-the-loop. It may still be one system wearing five different badges.</p>
+<p>If the same workflow controls the evidence packet, approval request, execution credential and success test, the human may be present without supplying an independent decision. A stale record can shape the recommendation and the approval screen. A broad service account can turn a narrow approval into a larger change. A provider receipt can be mislabeled as proof of the operating result. The workflow can then grade its own work.</p>
+<p>For consequential facility actions, operators need separation of duties across the whole decision path. The model may propose. A qualified person may authorize. A bounded service may execute. A different person or governing source may verify. Those are four duties, not four labels on one agent session.</p>
+<h2>Start with the duties, not the org chart</h2>
+<p>Separation of duties is often treated as an accounting or security concept. The operating principle is broader: do not give one actor enough authority to initiate, approve, complete and conceal a consequential change.</p>
+<p>NIST Special Publication 800-53 includes AC-5, Separation of Duties, which calls for identifying duties that require separation and defining access authorizations to support that division.<sup id="note-1"><a href="#source-1" aria-label="Source 1">1</a></sup> The catalog is written for federal information systems, not as a self-storage rule. Its useful architectural lesson is that responsibility has to be reflected in permissions. A procedure that says “another person reviews this” is weak if the application still lets the proposing service approve and execute under the same principal.</p>
+<p>Map the operating workflow into at least four duties:</p>
+<ol>
+<li><strong>Proposal:</strong> gather admitted evidence, identify unknowns and create a bounded requested action.</li>
+<li><strong>Authorization:</strong> decide whether that exact action is allowed, by whom, for which subjects and until when.</li>
+<li><strong>Execution:</strong> perform only the authorized effect through a narrowly scoped credential.</li>
+<li><strong>Verification:</strong> determine from the governing operational source whether the intended effect occurred once and remained within scope.</li>
+</ol>
+<p>Add a fifth duty for policy administration when consequences justify it. The person or system that edits the authorization rule should not silently approve a live exception to the same rule.</p>
+<p>These duties do not always require four employees. They do require distinct authority, evidence and state transitions. The design question is not “How many people touched the task?” It is “Could one compromised or mistaken principal take the action from proposal to accepted history without an independent barrier?”</p>
+<h2>Do not let the proposal design its own approval</h2>
+<p>An AI-generated approval packet can make a poor decision look complete. It may select only confirming records, compress away a conflict or describe an unknown as a likely fact. A polished summary can become the reviewer’s entire field of view.</p>
+<p>The proposal object should therefore be immutable and inspectable. It should contain the exact requested effect, subject and facility scope, source references, evidence cutoff time, known conflicts, model and prompt versions, policy version, consequence tier and expiration. Missing fields remain missing. The model does not fill an authority gap with a confidence score.</p>
+<p>The approver needs direct access to the material sources or a governed representation that preserves limitations. The approval interface should show what changed since the proposal was created. If a source record, target set, consequence tier, policy version or requested effect changes, the old approval is invalid. The workflow must create a new decision object instead of editing the approved object in place.</p>
+<p>NIST&#39;s AI Risk Management Framework calls for documented roles, responsibilities and lines of communication, and for policies that differentiate responsibilities in human-AI configurations.<sup id="note-2"><a href="#source-2" aria-label="Source 2">2</a></sup> AI RMF 1.0 is voluntary and under revision. It does not prescribe this four-duty pattern. It does support the underlying point: “human oversight” is incomplete until the human role and its authority are explicit.</p>
+<h2>Bind the approval to an exact object</h2>
+<p>An approval should not be a reusable mood. It should be a short-lived authorization for one identified decision object.</p>
+<p>Create a digest over the fields that define the action: decision ID, facility and subject scope, proposed effect, evidence-set identity, policy version, consequence tier, execution route and expiration. Store that digest with the approver&#39;s authenticated principal, role, decision and time. The executor accepts the action only when the current object reproduces the approved digest.</p>
+<p>This blocks a common failure mode: the model proposes a two-hour restriction for one credential, receives approval, then expands the target list or changes the effective window before execution. The visible wording may look similar, but the operating object is different. A digest mismatch should deny execution and return a compact delta to the reviewer.</p>
+<p>Approval also needs a permitted effect, not merely “approved.” Useful dispositions include:</p>
+<ul>
+<li>deny;</li>
+<li>approve exactly as proposed;</li>
+<li>approve a narrower scope;</li>
+<li>approve preparation only, with execution held;</li>
+<li>require a second qualified approver; or</li>
+<li>expire and rebuild the packet.</li>
+</ul>
+<p>Free-form comments can explain a decision. They should not be parsed by the model into broader authority.</p>
+<h2>Make independence technical</h2>
+<p>A second name in an audit log does not establish independence if both actions came through the same shared account, browser session, API key or agent credential.</p>
+<p>Use distinct principals for the proposal service, human approver, execution service and verifier. Apply least privilege to each. The proposal service can create an approval request but cannot mint an execution credential. The approver can authorize an exact object but cannot rewrite its evidence. The executor can perform only the authorized action and cannot mark verification complete. The verifier can record readback but cannot expand the approved scope.</p>
+<p>NIST&#39;s Zero Trust Architecture separates a policy decision point from a policy enforcement point and describes a policy engine, policy administrator and enforcement mechanism as distinct logical components.<sup id="note-3"><a href="#source-3" aria-label="Source 3">3</a></sup> That architecture addresses access control, not facility operations, and this article uses it only as a structural analogy. The decision about permission and the mechanism that carries out the permission should not collapse into one opaque model call.</p>
+<p>A practical implementation can issue a disposable execution token after approval. The token carries the decision ID, approved digest, action class, target scope, maximum effect, expiration and idempotency key. It cannot be used for another facility or a second action. The executor presents it once, records the provider receipt and then loses the ability to reuse it.</p>
+<h2>A receipt cannot verify the result</h2>
+<p>The executor&#39;s HTTP 200, accepted status or job ID proves something about the delivery path. It does not necessarily prove that the governing facility state changed as intended.</p>
+<p>Verification should query the source that controls the operational truth: the access-control record, communication delivery record, work-management object, accounting ledger or another approved system for that action class. The verifier compares intended effect, observed effect, subject count, effective time and residual exceptions. A timeout remains unknown. A partial update remains partial. A mismatch reopens the decision instead of being rewritten as success.</p>
+<p>NIST SP 800-53A&#39;s assessment procedure for AC-5 points assessors to policies, configuration settings, access authorizations and audit records, among other evidence.<sup id="note-4"><a href="#source-4" aria-label="Source 4">4</a></sup> That assessment guide does not validate this proposed workflow. It reinforces a useful discipline: organizational prose, technical configuration and operating records are separate forms of evidence. All three matter when testing whether duties are actually separated.</p>
+<p>Policy decision logs can help connect those forms. Open Policy Agent&#39;s current documentation, for example, describes decision events containing inputs, results, bundle revisions, decision IDs and timestamps, with masking controls for sensitive fields.<sup id="note-5"><a href="#source-5" aria-label="Source 5">5</a></sup> OPA is only one implementation option. Its log does not establish source truth, human qualification or successful facility change. A decision ID is valuable because it lets the approval, enforcement and readback records point to the same decision without pretending they are the same event.</p>
+<h2>Scale the separation to consequence</h2>
+<p>Not every draft needs a committee. The separation should match the consequence and reversibility of the action.</p>
+<p>For a low-consequence draft that cannot leave an internal workspace, one person may review and revise it. The execution boundary is still closed.</p>
+<p>For a moderate-consequence action, require a qualified human approver who is distinct from the proposing service, plus governing-source readback. Examples may include creating a vendor-review task or scheduling a non-customer-facing inspection.</p>
+<p>For a high-consequence action, use stronger independence: named role eligibility, a second approver or specialist when policy requires it, narrow subject scope, short expiration, separate execution credentials and independent verification. NIST AI 600-1 likewise treats risk management as use-context dependent and gives organizations room to prioritize actions according to their circumstances; it does not supply the action list or approval design here.<sup id="note-6"><a href="#source-6" aria-label="Source 6">6</a></sup> Customer charges, delinquency notices, access restrictions, account termination, employee actions and public safety statements may belong in this tier or may retain a zero autonomous execution allowance. The operator&#39;s governing policies and qualified advisers determine the exact boundary.</p>
+<p>Small teams should not fake four people. If staffing cannot support simultaneous separation, redesign the action. Keep it in draft, lower the maximum effect, delay execution for off-site review, require next-day independent reconciliation or remove automation from the consequential step. Temporal separation is not automatically equivalent to independent authority, but an honest compensating control is better than four labels attached to one login.</p>
+<p>Emergency access needs its own break-glass path. Record who invoked it, the exact condition, temporary scope, expiration and mandatory independent review deadline. Break-glass authority must not train the model that bypassing the normal path was a successful policy preference.</p>
+<h2>A fictional Ashbury Gate exercise</h2>
+<p>The following scenario is entirely fictional. Ashbury Gate Storage, its seven facilities, every person, system, record, credential, time and result are invented teaching material.</p>
+<p>A fictional assistant finds an after-hours access exception at one facility and proposes restricting one test credential from midnight to 2:00 a.m. The proposal identifies the source records, one conflicting schedule entry, evidence cutoff, model build, prompt version, policy version and exact target. Because of the conflict, the policy service requires regional review.</p>
+<p>The regional operator opens the source records, confirms that the conflict prevents immediate approval and chooses <strong>prepare only</strong>. The system records the approval digest but issues no execution token. The assistant cannot reinterpret the comment as permission to restrict access.</p>
+<p>A fictional facility manager then corrects the schedule record. That change invalidates the proposal&#39;s evidence-set identity. The original approval cannot be reused. A new decision object requests the same two-hour restriction, now with the corrected source and a later evidence cutoff. The regional operator approves the exact object for one credential, one facility and one execution before 10:00 p.m.</p>
+<p>A dedicated access executor receives a disposable token. It submits the change once using the approved idempotency key and records the provider job ID. It cannot mark the task verified.</p>
+<p>A different facility manager reads the governing access record and runs the permitted test. The record shows the intended schedule, but the test credential still opens the gate during the restricted period. Verification is <strong>mismatch</strong>, not success. The workflow reopens with the original decision, execution receipt and readback attached. No wider restriction is attempted, and no real operating result is claimed.</p>
+<p>The lesson is not that one approval failed. The architecture made the failure visible before a single system could turn proposal, permission, delivery and self-grading into one reassuring green check.</p>
+<h2>Run the same-system test</h2>
+<p>Choose one consequential AI-assisted workflow and trace it from evidence to closure. Ask:</p>
+<ol>
+<li>Can the proposer alter the evidence packet after approval?</li>
+<li>Is approval bound to the exact scope, versions, effect and expiration?</li>
+<li>Can the proposing principal select itself or a shared account as approver?</li>
+<li>Can the executor act without a valid, narrow authorization object?</li>
+<li>Can the executor also declare the governing result verified?</li>
+<li>Does a changed source, target or policy invalidate the approval?</li>
+<li>Can one credential cross facilities or repeat the action?</li>
+<li>Does an independent readback expose partial, unknown and mismatch states?</li>
+<li>Is break-glass use reviewed outside the initiating path?</li>
+<li>Could one compromised principal move the workflow from proposal to accepted history?</li>
+</ol>
+<p>If the answer to the last question is yes, adding another approval button will not solve the architecture. Separate the duties, bind the decision and make every handoff prove only what it actually did.</p>
+
+<section class="method-downloads" aria-labelledby="same-system-propose-approve-verify-downloads"><p class="eyebrow">Governed companion package</p><h2 id="same-system-propose-approve-verify-downloads">Use the operator register with the article's claim boundaries.</h2><p>The CSV contains a blank template and explicitly fictional teaching data. It is an adaptable method, not a deployed system or verified operating result.</p><div><a href="the-same-system-should-not-propose-approve-and-verify.md" download>Download the-same-system-should-not-propose-approve-and-verify.md <span aria-hidden="true">↓</span></a><a href="ai-decision-separation-register.csv" download>Download ai-decision-separation-register.csv <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download source-register.csv <span aria-hidden="true">↓</span></a><a href="054-ai-development-computer-vision-pilot-inspection.png" download>Download 054-ai-development-computer-vision-pilot-inspection.png <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download image-notes.md <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download editorial-qa.md <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download originality-and-claim-boundary.md <span aria-hidden="true">↓</span></a><a href="destination-assignment.md" download>Download destination-assignment.md <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download owned-publication-manifest.md <span aria-hidden="true">↓</span></a><a href="validation.json" download>Download validation.json <span aria-hidden="true">↓</span></a><a href="publisher-manifest.md" download>Download publisher-manifest.md <span aria-hidden="true">↓</span></a></div></section>
+<section class="source-notes" aria-labelledby="same-system-propose-approve-verify-sources"><h2 id="same-system-propose-approve-verify-sources">Sources and limits</h2><ol><li id="source-1">National Institute of Standards and Technology, <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final" rel="noopener noreferrer"><em>Security and Privacy Controls for Information Systems and Organizations, NIST SP 800-53 Revision 5</em></a>, final publication with current supplemental-release information; accessed September 14, 2026. AC-5 and related controls are used as architectural anchors, not as a self-storage requirement, audit result or certification. <a href="#note-1" aria-label="Back to source 1">↩</a></li><li id="source-2">National Institute of Standards and Technology, <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf" rel="noopener noreferrer"><em>Artificial Intelligence Risk Management Framework, AI RMF 1.0</em></a>, January 2023; accessed September 14, 2026. The voluntary cross-sector framework is under revision and does not prescribe this article&#39;s four-duty design. <a href="#note-2" aria-label="Back to source 2">↩</a></li><li id="source-3">National Institute of Standards and Technology, <a href="https://csrc.nist.gov/pubs/sp/800/207/final" rel="noopener noreferrer"><em>Zero Trust Architecture, NIST SP 800-207</em></a>, August 2020; accessed September 14, 2026. Policy-decision and enforcement components are used as a structural analogy; the publication does not govern private self-storage operations or validate this method. <a href="#note-3" aria-label="Back to source 3">↩</a></li><li id="source-4">National Institute of Standards and Technology, <a href="https://csrc.nist.gov/pubs/sp/800/53/a/r5/final" rel="noopener noreferrer"><em>Assessing Security and Privacy Controls in Information Systems and Organizations, NIST SP 800-53A Revision 5</em></a>, January 2022; accessed September 14, 2026. Its AC-5 evidence approach does not constitute an assessment of any operator, product or workflow described here. <a href="#note-4" aria-label="Back to source 4">↩</a></li><li id="source-5">Open Policy Agent, <a href="https://www.openpolicyagent.org/docs/management-decision-logs" rel="noopener noreferrer"><em>Decision Logs</em></a>, current official documentation accessed September 14, 2026. OPA is an implementation example; its logs do not establish human authority, facility truth, successful execution or compliance. <a href="#note-5" aria-label="Back to source 5">↩</a></li><li id="source-6">National Institute of Standards and Technology, <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf" rel="noopener noreferrer"><em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST AI 600-1</em></a>, July 2024; accessed September 14, 2026. This voluntary cross-sector profile informs consequence-sensitive governance but does not define a self-storage approval policy or certify this architecture. <a href="#note-6" aria-label="Back to source 6">↩</a></li></ol></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Purpose-bound AI data</p><h3><a href="/writing/permission-to-observe-is-not-permission-to-decide/">Permission to Observe Is Not Permission to Decide: Purpose-Bound Data for Self-Storage AI</a></h3><p>Govern the purpose of AI data use, not only the role that can retrieve a record.</p><a href="/writing/permission-to-observe-is-not-permission-to-decide/" class="text-link" aria-label="Read the article: Permission to Observe Is Not Permission to Decide: Purpose-Bound Data for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">AI consequence budgets</p><h3><a href="/writing/safe-action-unsafe-batch-self-storage-ai/">A Safe Action Can Become an Unsafe Batch: Consequence Budgets for Self-Storage AI</a></h3><p>Limit cumulative AI effects by facility, portfolio, time and unresolved exposure before more action is allowed.</p><a href="/writing/safe-action-unsafe-batch-self-storage-ai/" class="text-link" aria-label="Read the article: A Safe Action Can Become an Unsafe Batch: Consequence Budgets for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Customer identity governance</p><h3><a href="/writing/same-name-different-customer-record-linking/">Same Name, Different Customer: A No-Guessing Rule for Linking Records Across Self-Storage Sites</a></h3><p>Review possible customer identity matches across facilities without guessing, merging source records or extending authority.</p><a href="/writing/same-name-different-customer-record-linking/" class="text-link" aria-label="Read the article: Same Name, Different Customer: A No-Guessing Rule for Linking Records Across Self-Storage Sites">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

@@ -1,0 +1,82 @@
+{
+  "status": "publication_ready_local_draft",
+  "run_date": "2026-09-05",
+  "lane": "midday-systems",
+  "article": {
+    "title": "Your Pilot Passed. Your Portfolio Hasn't: A Facility Cohort Gate for Multi-Location Self-Storage",
+    "file": "roll-out-by-evidence-not-optimism.md",
+    "slug": "facility-cohort-release-gate-self-storage",
+    "body_word_count": 1724,
+    "count_rule": "Text strictly between BODY START and BODY END; Unicode letter or number tokens; internal apostrophes and hyphens retained; footnote markers excluded",
+    "source_references": [1, 2, 3, 4]
+  },
+  "destination": {
+    "publisher": "Jared personal authority site",
+    "publisher_owner": "Jared Mastroianni",
+    "proposed_canonical": "https://jaredmodstorage.github.io/writing/facility-cohort-release-gate-self-storage/",
+    "assignment_created_before_manifest": true,
+    "non_selected_publisher": "modSTORAGE WordPress blog",
+    "state": "assigned_local_only"
+  },
+  "tool": {
+    "file": "facility-cohort-release-gate.csv",
+    "columns": 33,
+    "data_rows": 5,
+    "unique_record_ids": true,
+    "uniform_width": true,
+    "template_rows": 1,
+    "fictional_rows": 4
+  },
+  "sources": {
+    "file": "source-register.csv",
+    "records": 4,
+    "unique_source_ids": true,
+    "uniform_width": true,
+    "article_reference_map_complete": true,
+    "direct_http_200": 3,
+    "web_verified_with_direct_403_limit": 1
+  },
+  "image": {
+    "id": "028",
+    "file": "028-professional-board-strategy-conversation.png",
+    "width": 3840,
+    "height": 2560,
+    "format": "PNG",
+    "classification": "Jared-owned AI-generated editorial illustration",
+    "byte_identical_to_governed_master": true,
+    "visually_reviewed": true,
+    "black_turtleneck_used": false
+  },
+  "duplicate_checks": {
+    "calendar_records": 46,
+    "editorial_media_records": 75,
+    "submission_records": 357,
+    "published_asset_records": 342,
+    "evidence_records": 550,
+    "jared_live_canonicals": 57,
+    "modstorage_live_post_canonicals": 139,
+    "jared_sitemap_slug_hits": 0,
+    "modstorage_sitemap_slug_hits": 0,
+    "wordpress_exact_slug_result": [],
+    "proposed_authority_canonical_http": 404,
+    "non_selected_blog_canonical_http": 404,
+    "exact_web_search_results": 0
+  },
+  "originality": {
+    "other_markdown_files_screened": 357,
+    "normalized_sentence_matches_14_words_or_more": 0,
+    "article_unique_six_word_shingles": 1773,
+    "maximum_shared_six_word_shingles": 3,
+    "maximum_overlap_percent": 0.169
+  },
+  "publication_state": {
+    "draft_complete": true,
+    "publisher_handoff": false,
+    "repository_or_cms_object_created": false,
+    "published": false,
+    "canonical_active": false,
+    "sitemap_or_feed_inclusion": false,
+    "crawling_or_indexing": false,
+    "coverage_or_recognition": false
+  }
+}

@@ -5,8 +5,62 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Same System Should Not Propose, Approve, and Verify: Separation of Duties for Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>Separate AI proposal, human authorization, bounded execution and independent verification for consequential self-storage decisions.</description>
+    </item>
+    <item>
+      <title>A Safe Action Can Become an Unsafe Batch: Consequence Budgets for Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/safe-action-unsafe-batch-self-storage-ai/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/safe-action-unsafe-batch-self-storage-ai/</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>Set consequence budgets for self-storage AI so individually permitted actions cannot accumulate into an unauthorized portfolio-wide batch.</description>
+    </item>
+    <item>
+      <title>Permission to Observe Is Not Permission to Decide: Purpose-Bound Data for Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/permission-to-observe-is-not-permission-to-decide/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/permission-to-observe-is-not-permission-to-decide/</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A purpose-binding data admission method for self-storage AI that separates technical visibility from authorization to use data for a particular decision.</description>
+    </item>
+    <item>
+      <title>Imported Is Not Reconciled: A Quarantine Gate for Portfolio Data in Self-Storage</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-data-import-quarantine-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-data-import-quarantine-self-storage/</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A practical quarantine gate for validating, approving, reading back and reconciling portfolio data imports across self-storage facilities.</description>
+    </item>
+    <item>
+      <title>The Summary Cannot Become the Source: Stop AI-Generated Facility Text from Feeding Itself</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>Prevent AI-generated facility summaries from reentering a self-storage evidence chain as if they were independent observations.</description>
+    </item>
+    <item>
+      <title>Your Pilot Passed. Your Portfolio Hasn&apos;t: A Facility Cohort Gate for Multi-Location Self-Storage</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-cohort-release-gate-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-cohort-release-gate-self-storage/</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>Move an approved operating change through bounded facility cohorts using explicit entry, observation, stop, recovery and expansion evidence.</description>
+    </item>
     <item>
       <title>Same Name, Different Customer: A No-Guessing Rule for Linking Records Across Self-Storage Sites</title>
       <link>https://jaredmodstorage.github.io/writing/same-name-different-customer-record-linking/</link>

@@ -1,0 +1,94 @@
+{
+  "run_date": "2026-09-12",
+  "completed_at": "2026-09-12T20:30:03-07:00",
+  "lane": "midday-systems",
+  "slot_open_before_creation": true,
+  "article_title": "Imported Is Not Reconciled: A Quarantine Gate for Portfolio Data in Self-Storage",
+  "slug": "portfolio-data-import-quarantine-self-storage",
+  "body_word_count": 1786,
+  "word_count_rule": "Text between BODY START and BODY END; Unicode letter-or-number tokens; internal apostrophes and hyphens retained; bracketed numeric footnote markers excluded.",
+  "selected_destination": "Jared Mastroianni personal authority site only",
+  "publisher_owner": "Jared Mastroianni",
+  "proposed_canonical": "https://jaredmodstorage.github.io/writing/portfolio-data-import-quarantine-self-storage/",
+  "excluded_owned_publisher": "modSTORAGE WordPress blog",
+  "tool": {
+    "file": "portfolio-data-import-quarantine-register.csv",
+    "columns": 48,
+    "data_rows": 5,
+    "blank_template_rows": 1,
+    "fictional_teaching_rows": 4,
+    "uniform_width": true,
+    "unique_headers": true,
+    "unique_record_ids": true
+  },
+  "source_register": {
+    "file": "source-register.csv",
+    "sources": 5,
+    "official_urls_http_200": 5,
+    "access_date": "2026-09-12"
+  },
+  "originality": {
+    "other_markdown_files": 482,
+    "eligible_sentences_14plus_words": 61,
+    "exact_matches_14plus_words": 0,
+    "unique_six_word_shingles": 1800,
+    "maximum_shared_six_word_shingles": 3,
+    "maximum_overlap_percent": 0.166667
+  },
+  "public_duplicate_checks": {
+    "jared_sitemap_http": 200,
+    "jared_sitemap_urls": 69,
+    "modstorage_post_sitemap_http": 200,
+    "modstorage_post_urls": 140,
+    "selected_canonical_http": 404,
+    "excluded_owned_url_http": 404,
+    "wordpress_exact_slug_api_result": [],
+    "exact_title_or_slug_in_sitemaps": false,
+    "exact_title_or_slug_web_search_match": false
+  },
+  "control_room": {
+    "commit_read_only": "59a9f592373605e240f700885803e2f9f5f614cd",
+    "calendar_records": 46,
+    "submission_records": 370,
+    "editorial_media_records": 75,
+    "published_asset_records": 355,
+    "evidence_records": 563,
+    "mutation": false,
+    "ids_allocated": false
+  },
+  "image": {
+    "id": "009",
+    "file": "009-professional-conference-room-conversation.png",
+    "width": 3840,
+    "height": 2560,
+    "classification": "Jared-owned AI-generated editorial material; non-documentary",
+    "source_copy_byte_identical": true,
+    "sha256": "51cfb73f90222aede1ccaf9c6e77f082ba98d86191f9c9677da5e202e34fe762",
+    "prior_daily_package_use_found": false
+  },
+  "scored_internal_review_lenses": {
+    "senior_self_storage_trade_editor": 9.8,
+    "multi_location_operator": 9.8,
+    "data_systems_editor": 9.8,
+    "rendered_article_and_tool_presentation": 9.7,
+    "aggregate_score": 9.775
+  },
+  "rendered_visual_qa": {
+    "widths": [1280, 390, 320],
+    "full_article_renders": ["article-1280.png", "article-390.png", "article-320.png"],
+    "tool_renders": ["tool-1280.png", "tool-390.png", "tool-320.png"],
+    "preview_example_record": "PDIQ-FIC-002",
+    "viewport_overflow_count": 0,
+    "body_overflow_count": 0,
+    "image_load_failures": 0,
+    "page_errors": 0,
+    "visual_inspection": "pass"
+  },
+  "publication_state": "publication-ready local package only",
+  "publisher_handoff": "not performed",
+  "cms_or_repository_mutation": false,
+  "publication_confirmed": false,
+  "indexing_confirmed": false,
+  "coverage_confirmed": false,
+  "recognition_confirmed": false
+}

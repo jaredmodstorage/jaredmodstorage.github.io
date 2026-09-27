@@ -1,0 +1,98 @@
+{
+  "run_date": "2026-09-08",
+  "lane": "evening-ai-architecture",
+  "slot_open_before_creation": true,
+  "article_title": "The Summary Cannot Become the Source: Stop AI-Generated Facility Text from Feeding Itself",
+  "slug": "ai-generated-summary-source-reentry-self-storage",
+  "body_word_count": 1971,
+  "word_count_rule": "Text between BODY START and BODY END; Unicode letter-or-number tokens; internal apostrophes and hyphens retained; bracketed numeric footnote markers excluded.",
+  "requested_range_met": true,
+  "selected_destination": "Jared Mastroianni personal authority site",
+  "publisher_owner": "Jared Mastroianni",
+  "proposed_canonical": "https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/",
+  "excluded_owned_publisher": "modSTORAGE WordPress blog",
+  "tool": {
+    "file": "ai-output-reentry-register.csv",
+    "columns": 46,
+    "data_rows": 6,
+    "blank_template_rows": 1,
+    "fictional_teaching_rows": 5,
+    "uniform_width": true,
+    "unique_headers": true,
+    "unique_record_ids": true
+  },
+  "source_register": {
+    "file": "source-register.csv",
+    "sources": 6,
+    "urls_http_200": 6,
+    "access_date": "2026-09-08"
+  },
+  "originality": {
+    "other_markdown_files": 457,
+    "eligible_sentences_14plus_words": 60,
+    "exact_matches_14plus_words": 0,
+    "unique_six_word_shingles": 1964,
+    "maximum_shared_six_word_shingles": 4,
+    "maximum_overlap_percent": 0.203666
+  },
+  "public_duplicate_checks": {
+    "jared_sitemap_http": 200,
+    "jared_sitemap_routes": 63,
+    "jared_writing_routes": 46,
+    "selected_canonical_http": 404,
+    "modstorage_post_sitemap_http": 200,
+    "modstorage_post_records": 139,
+    "excluded_wordpress_canonical_http": 404,
+    "wordpress_exact_slug_http": 200,
+    "wordpress_exact_slug_response": []
+  },
+  "control_room": {
+    "commit": "be11ee79ec198df0c314020738620cf845a3562c",
+    "editorial_calendar_records": 28,
+    "submission_records": 79,
+    "editorial_media_records": 23,
+    "published_asset_records": 92,
+    "evidence_records": 202,
+    "note": "Current on-disk governed registers were read only; no IDs or status changes were written."
+  },
+  "same_day_other_lanes": {
+    "morning_operator": "Thunder Ends the Outdoor Task: A Lightning Stand-Down Card for Self-Storage Managers",
+    "midday_systems": "Temporary Is Not a Portfolio Standard: Put an Expiration Date on Every Facility Exception"
+  },
+  "image": {
+    "id": "051",
+    "file": "051-ai-development-ai-product-discovery-workshop.png",
+    "width": 3840,
+    "height": 2560,
+    "classification": "Jared-owned AI-generated editorial illustration; non-documentary",
+    "source_copy_byte_identical": true,
+    "prior_daily_package_uses": 0,
+    "sha256": "c7e530989f2f905a2f8fa42431a5b453a0567b178f3ac95d6bb62f2c97f57c73"
+  },
+  "scored_reviews": {
+    "senior_self_storage_trade_editor": 9.8,
+    "responsible_ai_and_data_provenance_architect": 9.8,
+    "multi_location_operator_and_implementation_editor": 9.7,
+    "source_rights_and_rendered_presentation": 9.8,
+    "aggregate_score": 9.775
+  },
+  "rendered_visual_qa": {
+    "widths": [1280, 390, 320],
+    "full_article_renders": ["article-1280.png", "article-390.png", "article-320.png"],
+    "tool_renders": ["tool-1280.png", "tool-390.png", "tool-320.png"],
+    "preview_example_record": "REENTRY-FIC-001",
+    "viewport_overflow_count": 0,
+    "tool_overflow_count": 0,
+    "image_load_failures": 0,
+    "page_errors": 0,
+    "visual_inspection": "pass"
+  },
+  "publication_state": "publication-ready local package only",
+  "publisher_handoff": false,
+  "cms_or_repository_mutation": false,
+  "publication_confirmed": false,
+  "canonical_activated": false,
+  "indexing_confirmed": false,
+  "coverage_confirmed": false,
+  "recognition_confirmed": false
+}

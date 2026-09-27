@@ -1,0 +1,107 @@
+{
+  "run_date": "2026-09-12",
+  "completed_at": "2026-09-12T20:29:19-07:00",
+  "lane": "evening-ai-architecture",
+  "slot_open_before_creation": true,
+  "article_title": "Permission to Observe Is Not Permission to Decide: Purpose-Bound Data for Self-Storage AI",
+  "slug": "permission-to-observe-is-not-permission-to-decide",
+  "body_word_count": 2389,
+  "word_count_rule": "Text between BODY START and BODY END; Unicode letter-or-number tokens; internal apostrophes and hyphens retained; bracketed numeric footnote markers excluded.",
+  "selected_destination": "Jared Mastroianni personal authority site only",
+  "publisher_owner": "Jared Mastroianni",
+  "proposed_canonical": "https://jaredmodstorage.github.io/writing/permission-to-observe-is-not-permission-to-decide/",
+  "excluded_owned_publisher": "modSTORAGE WordPress blog",
+  "tool": {
+    "file": "purpose-binding-data-admission-register.csv",
+    "columns": 40,
+    "data_rows": 8,
+    "blank_template_rows": 1,
+    "fictional_teaching_rows": 7,
+    "uniform_width": true,
+    "unique_headers": true,
+    "unique_evaluation_ids": true
+  },
+  "source_register": {
+    "file": "source-register.csv",
+    "sources": 6,
+    "registered_urls_http_200": 6,
+    "access_date": "2026-09-12"
+  },
+  "originality": {
+    "other_markdown_files": 3582,
+    "eligible_sentences_14plus_words": 72,
+    "exact_matches_14plus_words": 0,
+    "unique_six_word_shingles": 2453,
+    "maximum_shared_six_word_shingles": 13,
+    "maximum_overlap_percent": 0.529963,
+    "maximum_overlap_file": "when-guardrails-disagree.md"
+  },
+  "public_duplicate_checks": {
+    "jared_sitemap_http": 200,
+    "jared_sitemap_urls": 69,
+    "modstorage_post_sitemap_http": 200,
+    "modstorage_post_sitemap_urls": 140,
+    "selected_canonical_http": 404,
+    "excluded_owned_url_http": 404,
+    "wordpress_exact_slug_api_http": 200,
+    "wordpress_exact_slug_result": [],
+    "exact_title_or_slug_in_sitemaps": false
+  },
+  "control_room": {
+    "commit_read_only": "59a9f592373605e240f700885803e2f9f5f614cd",
+    "calendar_records": 46,
+    "submission_records": 370,
+    "editorial_media_records": 75,
+    "published_asset_records": 355,
+    "evidence_records": 563,
+    "mutation": false,
+    "ids_allocated": false
+  },
+  "same_day_distinction": {
+    "morning_title": "The Engine Stops Before Unloading: A Vehicle-Exhaust Control for Indoor Self-Storage",
+    "midday_title": "Imported Is Not Reconciled: A Quarantine Gate for Portfolio Data in Self-Storage",
+    "title_thesis_structure_example_and_tool_distinct": true
+  },
+  "hashes": {
+    "article_sha256": "75dd5b8723b0f7f3ba454166f1e54e50ec44dea9dc3759608f46696d70959504",
+    "tool_sha256": "dad5895792da6212ffe4139462f4107022ebce544834295ff5f4ce23bfbcdf86",
+    "source_register_sha256": "2a52f7336d6d91da429a28dd38edfee4c30a10ab3a03c9caa09f335be84bb5a5",
+    "image_sha256": "b1bd98e4799bdcaaf51b4f4ece42d98c3f8136c76cdbc85c3bfd333c7c0c8850"
+  },
+  "image": {
+    "id": "060",
+    "file": "060-ai-development-ai-product-retrospective.png",
+    "width": 3840,
+    "height": 2560,
+    "classification": "Jared-owned AI-generated editorial material; non-documentary",
+    "source_copy_byte_identical": true,
+    "prior_daily_package_uses": 2,
+    "rejected_black_turtleneck_asset_in_release_set": false
+  },
+  "scored_internal_review_lenses": {
+    "senior_self_storage_trade_editor": 9.8,
+    "responsible_ai_architect": 9.8,
+    "privacy_and_governance_editor": 9.8,
+    "rendered_article_and_tool_presentation": 9.7,
+    "aggregate_score": 9.775
+  },
+  "rendered_visual_qa": {
+    "widths": [1280, 390, 320],
+    "full_article_renders": ["article-1280.png", "article-390.png", "article-390-continuation.png", "article-320.png", "article-320-continuation.png"],
+    "tool_renders": ["tool-1280.png", "tool-390.png", "tool-320.png"],
+    "preview_example_record": "PBA-FIC-006",
+    "viewport_overflow_count": 0,
+    "body_overflow_count": 0,
+    "image_load_failures": 0,
+    "page_errors": 0,
+    "complete_vertical_coverage": true,
+    "visual_inspection": "pass"
+  },
+  "publication_state": "publication-ready local package only",
+  "publisher_handoff": "not performed",
+  "cms_or_repository_mutation": false,
+  "publication_confirmed": false,
+  "indexing_confirmed": false,
+  "coverage_confirmed": false,
+  "recognition_confirmed": false
+}

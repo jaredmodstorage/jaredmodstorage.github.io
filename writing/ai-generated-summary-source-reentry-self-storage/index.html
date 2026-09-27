@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DshNwFP_.css" data-rsc-css-href="/_next/static/css/index.DshNwFP_.css" data-precedence="vite-rsc/importer-resources"/><title>AI Summary Source Reentry in Self-Storage | Jared Mastroianni</title><meta name="description" content="Prevent AI-generated facility summaries from reentering a self-storage evidence chain as if they were independent observations."/><meta name="robots" content="index, follow"/><meta property="og:title" content="AI Summary Source Reentry in Self-Storage | Jared Mastroianni"/><meta property="og:description" content="Prevent AI-generated facility summaries from reentering a self-storage evidence chain as if they were independent observations."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-09-27"/><meta property="article:modified_time" content="2026-09-27"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/051-ai-development-ai-product-discovery-workshop.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Four colleagues discuss facility operations in an office beside a self-storage corridor during a fictional AI product-discovery workshop."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AI Summary Source Reentry in Self-Storage | Jared Mastroianni"/><meta name="twitter:description" content="Prevent AI-generated facility summaries from reentering a self-storage evidence chain as if they were independent observations."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/051-ai-development-ai-product-discovery-workshop.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Summary Cannot Become the Source: Stop AI-Generated Facility Text from Feeding Itself","datePublished":"2026-09-27","dateModified":"2026-09-27","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/#lead-image"},"description":"Prevent AI-generated facility summaries from reentering a self-storage evidence chain as if they were independent observations.","about":["Self-storage operations","AI-generated summaries","Data provenance","Evidence source reentry"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/#lead-image","name":"AI provenance architecture","caption":"Original operating knowledge should remain visible when AI-generated summaries move through a facility workflow.","description":"Four colleagues discuss facility operations in an office beside a self-storage corridor during a fictional AI product-discovery workshop. Jared-owned AI-generated editorial material; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/051-ai-development-ai-product-discovery-workshop.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed AI-generated editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Summary Cannot Become the Source: Stop AI-Generated Facility Text from Feeding Itself","item":"https://jaredmodstorage.github.io/writing/ai-generated-summary-source-reentry-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Summary Cannot Become the Source: Stop AI-Generated Facility Text from Feeding Itself</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">AI provenance architecture<!-- --> · <time dateTime="2026-09-27">27 September 2026</time></p><h1>The Summary Cannot Become the Source: Stop AI-Generated Facility Text from Feeding Itself</h1><p class="lede">A generated summary is a descendant of operating evidence, not a new independent source.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="051-ai-development-ai-product-discovery-workshop.png" width="3840" height="2560" loading="lazy" decoding="async" alt="Four colleagues discuss facility operations in an office beside a self-storage corridor during a fictional AI product-discovery workshop."><figcaption>Original operating knowledge should remain visible when AI-generated summaries move through a facility workflow.</figcaption></figure>
+<p><em>Editorial disclosure: Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni's byline. All named examples are fictional; the article does not document a real customer, facility, deployment or result.</em></p>
+<p>An AI-generated shift summary can become more persuasive every time a system repeats it—even when nobody has added a new fact.</p>
+<p>The first assistant reads a manager note and writes that a gate “appears to be operating normally.” That summary is copied into a work order. The work order is indexed for retrieval. A second assistant cites it in a portfolio brief. The brief is saved to the knowledge base. A third assistant finds two documents that now seem to corroborate the same condition.</p>
+<p>There is still only one underlying observation. The other records are descendants of a model’s wording.</p>
+<p>This is a recursive evidence problem. AI-generated text leaves the output surface, re-enters the operating corpus, and later returns as apparent support for another answer. The loop can turn cautious language into false consensus, preserve an error after its source is corrected, and make a derived statement look more authoritative merely because it appears in several places.</p>
+<p>Self-storage operators need a re-entry control: generated content must carry its origin, derivation and permitted use wherever it travels. A summary may help people find work. It cannot quietly promote itself into observed facility fact.</p>
+<h2>Repetition is not corroboration</h2>
+<p>Independent evidence comes from independently informative sources. Four documents do not provide four-source support when three were copied, summarized or generated from the fourth.</p>
+<p>This distinction matters in everyday facility work. A work-order description may be generated from an email. A shift handoff may summarize that work order. A regional report may summarize the handoff. A customer-service assistant may retrieve the regional report when drafting a response. Without lineage, each derivative can look like a separate confirmation.</p>
+<p>The architecture should preserve two different counts:</p>
+<ul>
+<li><strong>document count:</strong> how many artifacts mention the claim; and</li>
+<li><strong>independent-root count:</strong> how many distinct, eligible observations or governing records support it.</li>
+</ul>
+<p>The second count controls the decision. A model should not gain confidence from documents that share the same ancestor.</p>
+<p>W3C PROV-O provides a general vocabulary for recording entities, activities, agents and derivation relationships such as <code>wasGeneratedBy</code> and <code>wasDerivedFrom</code>.<sup id="note-1"><a href="#source-1" aria-label="Source 1">1</a></sup> It does not define self-storage evidence rules, but it supplies the right architectural idea: a derived artifact should remain connected to the records and process that produced it.</p>
+<h2>Give every record an origin class</h2>
+<p>Content type is not enough. “PDF,” “ticket,” “email” and “note” describe containers. They do not explain how the statement inside came to exist.</p>
+<p>Use an origin class that survives copying and indexing:</p>
+<ol>
+<li><strong>Observed:</strong> a bounded human or device observation with an identified observer, time, facility and method.</li>
+<li><strong>Governing:</strong> a record authorized to decide a defined field or policy for a defined scope.</li>
+<li><strong>Reported:</strong> a person’s claim about an event or condition that has not yet been independently verified.</li>
+<li><strong>Derived:</strong> a deterministic transformation, join, calculation or extraction from named inputs.</li>
+<li><strong>AI-generated:</strong> text, classification, summary or proposal produced by a named model runtime from recorded inputs.</li>
+<li><strong>Human-adjudicated derivative:</strong> generated or derived content reviewed for a specific use by an authorized person.</li>
+<li><strong>Unknown origin:</strong> content whose creation path cannot be established.</li>
+</ol>
+<p>Human review does not automatically turn a derivative into an observation. A manager can approve a generated incident summary for handoff without personally inspecting the gate. The artifact becomes approved for that handoff, not promoted to “gate verified normal.”</p>
+<p>The National Institute of Standards and Technology’s Generative AI Profile treats content provenance, data provenance, information integrity and lifecycle risk management as relevant practices for generative systems.<sup id="note-2"><a href="#source-2" aria-label="Source 2">2</a></sup> The profile is voluntary and cross-sectoral. It does not prescribe these seven classes or certify a workflow. Its value here is the discipline of documenting where content came from and how it is used.</p>
+<h2>Put a gate in front of re-entry</h2>
+<p>Every destination that can later inform a model—a document store, work-order system, CRM note, data warehouse, ticket index, vector store, message archive or training set—needs an admission decision.</p>
+<p>Use five dispositions:</p>
+<p><strong>Exclude.</strong> Do not admit generated content when it contains sensitive material outside the destination’s access boundary, lacks required provenance, or serves no approved operating purpose.</p>
+<p><strong>Quarantine.</strong> Hold content when origin, source coverage, facility identity, ownership, rights or integrity is unresolved. Quarantine keeps it available for review without allowing retrieval as evidence.</p>
+<p><strong>Admit as derivative.</strong> Store and retrieve the content with a visible generated-content label, parent references, permitted-use boundary and reduced evidence weight. This is the normal state for useful summaries.</p>
+<p><strong>Promote for bounded use.</strong> An authorized person may approve an exact version for a named purpose, audience and expiration. Promotion does not erase the generated origin or grant broader authority.</p>
+<p><strong>Replace with a governing record.</strong> When a person verifies the actual condition or updates the authorized source, create or update the governing record. Link the generated artifact as prior context; do not overwrite its origin history.</p>
+<p>The gate should operate on stable identifiers and hashes, not on filenames alone. A summary copied into a ticket body remains the same derivative even if it receives a new title. Near-duplicate detection can help find unlabeled copies, but similarity is a review signal rather than proof of ancestry.</p>
+<h2>Carry a provenance envelope with the text</h2>
+<p>A generated artifact should have a compact envelope that travels with it or can be resolved from a durable ID. At minimum, record:</p>
+<ul>
+<li>artifact ID and content hash;</li>
+<li>origin class and creation time;</li>
+<li>facility, portfolio and decision scope;</li>
+<li>model provider, resolved runtime, prompt and tool versions;</li>
+<li>retrieval receipt or input-set reference;</li>
+<li>parent artifact IDs and independent root IDs;</li>
+<li>source-owner and operating-owner roles;</li>
+<li>permitted and prohibited uses;</li>
+<li>admission disposition, destination and index status;</li>
+<li>review decision, reviewer and expiration when applicable;</li>
+<li>correction, supersession and invalidation links; and</li>
+<li>retention and deletion policy.</li>
+</ul>
+<p>A cryptographic hash can establish that the content has not changed since the hash was recorded. It cannot establish that the text is true. C2PA makes the same boundary explicit for content provenance: provenance information can help establish origin and history, but it does not by itself determine factual accuracy.<sup id="note-3"><a href="#source-3" aria-label="Source 3">3</a></sup> C2PA is designed for digital content credentials, not facility-system authority; the relevant lesson is to keep authenticity and truth as separate questions.</p>
+<h2>Detect loops before retrieval ranks them</h2>
+<p>The retrieval layer should calculate ancestry before treating multiple hits as support. Build a derivation graph in which nodes are artifacts and edges identify generation, quotation, summarization, revision or deterministic transformation.</p>
+<p>For each claim or decision packet, compute:</p>
+<ul>
+<li>the set of independent roots;</li>
+<li>the number of derivative hops from each root;</li>
+<li>whether the current output already appears in the ancestry;</li>
+<li>whether two candidates share a parent or model-generated ancestor;</li>
+<li>whether any parent was corrected, superseded or invalidated; and</li>
+<li>whether a generated artifact is being used outside its approved purpose.</li>
+</ul>
+<p>Then apply hard stops. Do not count siblings as corroboration. Do not allow an artifact to support itself through a cycle. Do not release a consequential answer when every supporting path terminates in generated or unknown-origin text. Do not retrieve an invalidated descendant without the correction attached.</p>
+<p>The OWASP GenAI LLM Top 10 2026 is a current community security guide, not a self-storage standard or certification.<sup id="note-4"><a href="#source-4" aria-label="Source 4">4</a></sup> Its attention to risks such as poisoning and misinformation is relevant because an uncontrolled re-entry path expands the material that can influence later model behavior. The operating control still has to be designed locally around facility identity, data rights, authority and consequence.</p>
+<h2>Corrections must travel down the graph</h2>
+<p>Suppose a manager corrects the original gate note from “operating normally” to “intermittent failure not reproduced.” Editing only the first record is not enough. Every derivative that used the earlier wording may now be stale.</p>
+<p>The correction service should identify descendants, assign each one a state and route the affected use:</p>
+<ul>
+<li><strong>unaffected:</strong> the corrected field was not used;</li>
+<li><strong>refresh required:</strong> regenerate before reuse;</li>
+<li><strong>human review required:</strong> the correction may change a prior decision;</li>
+<li><strong>withdrawn:</strong> the artifact should no longer be available for the approved use; or</li>
+<li><strong>historical only:</strong> retain for audit with a prominent invalidation link.</li>
+</ul>
+<p>Do not silently regenerate a customer-facing draft or completed decision record. Preserve what was originally reviewed, attach the correction, and create a new version. The audit question is not only “What does the summary say now?” It is also “Which version informed the action at that time?”</p>
+<h2>A fictional four-facility example</h2>
+<p>The following teaching case uses the invented Juniper Loop Storage portfolio. Names, locations, people, systems, artifacts, versions, counts and outcomes are fabricated. Nothing in it reports modSTORAGE operations, a Facily.ai capability or any real deployment.</p>
+<p>The fictional portfolio asks an assistant for overnight access exceptions across four facilities. At one site, a manager writes: “Customer reported keypad delay; not reproduced during the closing walk.” The assistant produces a shift summary: “Keypad issue reported; closing walk found no reproducible fault.”</p>
+<p>That summary is copied into a maintenance ticket. A regional digest summarizes the ticket as “no fault found.” Both are indexed. The next morning, another assistant retrieves the shift summary, ticket and digest. It reports that three records indicate the keypad was operating normally.</p>
+<p>The re-entry register changes the decision. All three artifacts trace to one reported observation, and none is a governing access-controller record or an independent onsite test. The independent-root count is one. The digest also strengthened the language from “not reproduced” to “no fault found,” so its use state is <code>human_review_required</code>.</p>
+<p>The assistant may say: “One customer report was not reproduced during the closing walk; two later summaries derive from that same note.” It may not claim three confirmations or a verified normal condition. The facility owner receives a bounded verification task. No access rule, customer message or incident closure is released from the generated chain.</p>
+<p>This example demonstrates the control logic only. It does not establish that the method improves accuracy, reduces incidents, saves time or is available in a product.</p>
+<h2>Monitor the loop as an operating system</h2>
+<p>Post-deployment monitoring should include the content supply chain, not only model latency and error rate. NIST AI 800-4 identifies human-AI feedback loops, fragmented logging and drift detection among continuing monitoring gaps or barriers.<sup id="note-5"><a href="#source-5" aria-label="Source 5">5</a></sup> The report maps challenges and open questions; it does not prove that this specific pattern occurs in self-storage or prescribe this register.</p>
+<p>Useful measures include:</p>
+<ul>
+<li>generated artifacts admitted by destination and permitted use;</li>
+<li>records with complete parent and independent-root references;</li>
+<li>retrieval results by origin class;</li>
+<li>claimed support count versus independent-root count;</li>
+<li>cycles, orphaned derivatives and unknown-origin items detected;</li>
+<li>invalidated descendants still eligible for retrieval;</li>
+<li>corrections propagated within the required window;</li>
+<li>bounded promotions that expired on time; and</li>
+<li>consequential answers held because only derivative evidence was available.</li>
+</ul>
+<p>Training-data feedback is a related but different problem. Primary research published in <em>Nature</em> found degradation when generative models were recursively trained on model-generated data under the study’s conditions.<sup id="note-6"><a href="#source-6" aria-label="Source 6">6</a></sup> That research concerns model training, not a facility retrieval index, and it does not validate the operational outcomes proposed here. It reinforces one narrower point: preserving access to original data and identifying generated material matter when outputs can become future inputs.</p>
+<h2>Start with one re-entry path</h2>
+<p>Choose one generated artifact that already travels across systems: a shift summary, work-order description, incident recap, customer-message draft or weekly portfolio brief.</p>
+<p>Map where it is created, copied, indexed, retrieved and revised. Add origin class, parent IDs, independent roots, permitted use, expiration and correction state. Run four tests: copy the summary under a new title; cite it through two descendants; correct the root; and attempt to use the chain for a higher-consequence decision. The system should preserve ancestry, collapse false corroboration, propagate the correction and hold the unauthorized use.</p>
+<p>AI-generated summaries can be operationally useful. They compress work, make patterns visible and prepare a person to decide. The control fails when compression is mistaken for observation.</p>
+<p>The rule is simple: generated text may organize evidence, but it cannot manufacture independence. If the summary comes back as a source, its entire family tree must come with it.</p>
+
+<section class="method-downloads" aria-labelledby="ai-generated-summary-source-reentry-self-storage-downloads"><p class="eyebrow">Governed companion package</p><h2 id="ai-generated-summary-source-reentry-self-storage-downloads">Use the operator register with the article's claim boundaries.</h2><p>The CSV contains a blank template and explicitly fictional teaching data. It is an adaptable method, not a deployed system or verified operating result.</p><div><a href="the-summary-cannot-become-the-source.md" download>Download the-summary-cannot-become-the-source.md <span aria-hidden="true">↓</span></a><a href="ai-output-reentry-register.csv" download>Download ai-output-reentry-register.csv <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download source-register.csv <span aria-hidden="true">↓</span></a><a href="051-ai-development-ai-product-discovery-workshop.png" download>Download 051-ai-development-ai-product-discovery-workshop.png <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download image-notes.md <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download editorial-qa.md <span aria-hidden="true">↓</span></a><a href="originality-and-claim-boundary.md" download>Download originality-and-claim-boundary.md <span aria-hidden="true">↓</span></a><a href="destination-assignment.md" download>Download destination-assignment.md <span aria-hidden="true">↓</span></a><a href="owned-publication-manifest.md" download>Download owned-publication-manifest.md <span aria-hidden="true">↓</span></a><a href="validation.json" download>Download validation.json <span aria-hidden="true">↓</span></a><a href="publisher-manifest.md" download>Download publisher-manifest.md <span aria-hidden="true">↓</span></a></div></section>
+<section class="source-notes" aria-labelledby="ai-generated-summary-source-reentry-self-storage-sources"><h2 id="ai-generated-summary-source-reentry-self-storage-sources">Sources and limits</h2><ol><li id="source-1">World Wide Web Consortium, <a href="https://www.w3.org/TR/prov-o/" rel="noopener noreferrer"><em>PROV-O: The PROV Ontology</em></a>, W3C Recommendation, April 30, 2013; accessed September 8, 2026. <a href="#note-1" aria-label="Back to source 1">↩</a></li><li id="source-2">National Institute of Standards and Technology, <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" rel="noopener noreferrer"><em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em></a>, NIST AI 600-1, July 2024, page updated April 8, 2026; accessed September 8, 2026. <a href="#note-2" aria-label="Back to source 2">↩</a></li><li id="source-3">Coalition for Content Provenance and Authenticity, <a href="https://spec.c2pa.org/specifications/" rel="noopener noreferrer"><em>C2PA Specifications</em></a>, current specification index showing version 2.4; accessed September 8, 2026. The associated C2PA explainer states that provenance alone cannot establish whether content is true, accurate or factual. <a href="#note-3" aria-label="Back to source 3">↩</a></li><li id="source-4">OWASP GenAI Security Project, <a href="https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/" rel="noopener noreferrer"><em>OWASP GenAI LLM Top 10 2026</em></a>, August 3, 2026; accessed September 8, 2026. <a href="#note-4" aria-label="Back to source 4">↩</a></li><li id="source-5">National Institute of Standards and Technology, <a href="https://www.nist.gov/publications/challenges-monitoring-deployed-ai-systems-center-ai-standards-and-innovation" rel="noopener noreferrer"><em>Challenges to the Monitoring of Deployed AI Systems</em></a>, NIST AI 800-4, March 2026; accessed September 8, 2026. <a href="#note-5" aria-label="Back to source 5">↩</a></li><li id="source-6">Ilia Shumailov et al., <a href="https://www.nature.com/articles/s41586-024-07566-y" rel="noopener noreferrer">“AI models collapse when trained on recursively generated data”</a>, <em>Nature</em> 631, 755–759, version of record July 24, 2024; accessed September 8, 2026. <a href="#note-6" aria-label="Back to source 6">↩</a></li></ol></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Portfolio rollout governance</p><h3><a href="/writing/facility-cohort-release-gate-self-storage/">Your Pilot Passed. Your Portfolio Hasn&#x27;t: A Facility Cohort Gate for Multi-Location Self-Storage</a></h3><p>Use a facility cohort gate to limit exposure, observe real work and expand only after reconciliation.</p><a href="/writing/facility-cohort-release-gate-self-storage/" class="text-link" aria-label="Read the article: Your Pilot Passed. Your Portfolio Hasn&#x27;t: A Facility Cohort Gate for Multi-Location Self-Storage">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-tool-contract-compatibility-self-storage/">The Tool Schema Changed. Did the Agent’s Authority Change Too?</a></h3><p>Bind a proposed AI tool call to the evaluated operation, schema, defaults, executor, authority and projected effect before execution.</p><a href="/writing/ai-tool-contract-compatibility-self-storage/" class="text-link" aria-label="Read the article: The Tool Schema Changed. Did the Agent’s Authority Change Too?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-retrieval-organization-boundary-self-storage/">An AI Answer Must Stay Inside Its Organization</a></h3><p>Test organization and facility boundaries before retrieval supplies evidence to a generated answer.</p><a href="/writing/ai-retrieval-organization-boundary-self-storage/" class="text-link" aria-label="Read the article: An AI Answer Must Stay Inside Its Organization">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
