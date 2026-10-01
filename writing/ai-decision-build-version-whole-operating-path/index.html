@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DshNwFP_.css" data-rsc-css-href="/_next/static/css/index.DshNwFP_.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Decision Build | Jared Mastroianni</title><meta name="description" content="Version the full self-storage AI decision path: model, instructions, retrieval, facility context, policy, tools, review and evaluation evidence."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Decision Build | Jared Mastroianni"/><meta property="og:description" content="Version the full self-storage AI decision path: model, instructions, retrieval, facility context, policy, tools, review and evaluation evidence."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-10-01"/><meta property="article:modified_time" content="2026-10-01"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/052-ai-development-ai-engineering-design-review.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="AI-generated editorial scene of Jared Mastroianni listening to two colleagues during a technology design review."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Decision Build | Jared Mastroianni"/><meta name="twitter:description" content="Version the full self-storage AI decision path: model, instructions, retrieval, facility context, policy, tools, review and evaluation evidence."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/052-ai-development-ai-engineering-design-review.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/#article","url":"https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Decision Build: Version the Whole Operating Path, Not Just the Model","datePublished":"2026-10-01","dateModified":"2026-10-01","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/#lead-image"},"description":"Version the full self-storage AI decision path: model, instructions, retrieval, facility context, policy, tools, review and evaluation evidence.","about":["Self-storage operations","Operating governance","Evidence and human authority"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/#lead-image","name":"AI operating architecture","caption":"A responsible AI release review must keep engineering configuration, operating context, and human authority in the same decision record. AI-generated editorial image; not a documentary photograph of a real meeting. AI-generated editorial illustration; not documentary evidence.","description":"AI-generated editorial scene of Jared Mastroianni listening to two colleagues during a technology design review. Jared-owned AI-generated editorial material; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/052-ai-development-ai-engineering-design-review.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed AI-generated editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Identity and governance","item":"https://jaredmodstorage.github.io/writing/topics/governance/"},{"@type":"ListItem","position":3,"name":"The AI Decision Build: Version the Whole Operating Path, Not Just the Model","item":"https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/governance/">Identity and governance</a></li><li aria-current="page">The AI Decision Build: Version the Whole Operating Path, Not Just the Model</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">AI operating architecture<!-- --> · <time dateTime="2026-10-01">1 October 2026</time></p><h1>The AI Decision Build: Version the Whole Operating Path, Not Just the Model</h1><p class="lede">A model name cannot explain why a self-storage recommendation changed. Operators need one releasable manifest for the model, instructions, retrieval set, facility context, policy, tools, review rule, and evaluation evidence that produced the decision.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="052-ai-development-ai-engineering-design-review.png" width="3840" height="2560" loading="lazy" decoding="async" alt="AI-generated editorial scene of Jared Mastroianni listening to two colleagues during a technology design review."><figcaption>A responsible AI release review must keep engineering configuration, operating context, and human authority in the same decision record. AI-generated editorial image; not a documentary photograph of a real meeting. AI-generated editorial illustration; not documentary evidence.</figcaption></figure>
+<p><em>Editorial disclosure: Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni's byline. All named examples are fictional; the article does not document a real customer, facility, deployment or result.</em></p>
+<p>A self-storage operator can keep the same artificial intelligence model in place and still deploy a materially different decision system.</p>
+<p>Change the system instructions. Rebuild the retrieval index. Replace the facility-hours source. Adjust an exception threshold. Add a tool. Rename a status. Shorten the freshness window. Move a human approval from before an action to after it. The model identifier remains unchanged while the operating behavior moves underneath it.</p>
+<p>That is why “Which model are we using?” is an incomplete control question. The model is one dependency in a longer operating path. The unit that needs to be versioned, evaluated, approved, observed, and retired is the <strong>AI decision build</strong>: the exact combination of components allowed to produce one class of recommendation for one operating scope.</p>
+<p>This is not a software bill of materials with a model name added. It is a decision-specific release record. It connects technical configuration to operating authority. When a regional leader asks why a maintenance case moved into an urgent queue, the answer should identify the complete build that evaluated the case—not merely the provider printed at the top of a settings page.</p>
+<h2>The same model can produce a different operating system</h2>
+<p>Consider a maintenance-triage assistant. Its model summarizes a new work order and recommends a route: normal queue, urgent review, or immediate handback to a person. That apparent simplicity depends on several moving parts:</p>
+<ul>
+<li>the versioned instruction that defines the task;</li>
+<li>the documents and records available for retrieval;</li>
+<li>the facility and equipment identities used to join those records;</li>
+<li>the vocabulary for priority, safety, completion, and uncertainty;</li>
+<li>the rule that converts model output into a queue;</li>
+<li>the tools the workflow may call;</li>
+<li>the evidence shown to the reviewer;</li>
+<li>the role permitted to approve the recommendation; and</li>
+<li>the telemetry and readback used to determine what happened next.</li>
+</ul>
+<p>Any one of those can change the result without changing the model.</p>
+<p>NIST&#39;s AI Risk Management Framework treats risk management as a lifecycle activity spanning the application context, data and input, model, task, and output. Its Govern function calls for AI-system inventories, explicit human-AI roles, and safe decommissioning rather than inventorying a model in isolation.<sup id="note-1"><a href="#source-1" aria-label="Source 1">1</a></sup> NIST is revising AI RMF 1.0, so it should be treated as current voluntary guidance under revision, not as a self-storage standard or certification.</p>
+<p>The operator consequence is direct: a deployment register organized only by model cannot establish which decision logic was active at a facility on a given date. It also cannot support a clean comparison between the build that passed evaluation and the build that actually ran.</p>
+<h2>Give the decision build a stable identity</h2>
+<p>Every consequential AI-assisted workflow should emit a <code>decision_build_id</code>. That identifier resolves to an immutable manifest. The manifest can reference protected artifacts by URI and digest rather than copying customer data, prompts, or proprietary rules into a broad log.</p>
+<p>At minimum, the manifest should bind sixteen control areas:</p>
+<ol>
+<li><strong>Decision contract.</strong> The exact recommendation or classification the build may produce, its intended user, and prohibited uses.</li>
+<li><strong>Consequence class.</strong> Whether an error can affect money, access, customer communication, safety escalation, public facts, employee accountability, or only a reversible internal display.</li>
+<li><strong>Scope.</strong> The permitted facilities, entities, workflows, channels, and effective period.</li>
+<li><strong>Model dependency.</strong> Provider, model identifier or deployment reference, material settings, and the evidence available for pinning or detecting provider-side change.</li>
+<li><strong>Instruction set.</strong> System instructions, prompt templates, examples, output constraints, and their digests.</li>
+<li><strong>Retrieval set.</strong> Corpus manifest, document versions, inclusion rules, index or embedding configuration, and cutoff time.</li>
+<li><strong>Facility context.</strong> Identity map, source authority, freshness rules, time zone, lifecycle state, and required local facts.</li>
+<li><strong>Semantic contract.</strong> Field definitions, state vocabulary, units, null behavior, and compatibility version.</li>
+<li><strong>Policy and thresholds.</strong> Eligibility rules, stop conditions, confidence interpretation, and exception routing.</li>
+<li><strong>Tool surface.</strong> Available tools, action schemas, permissions, idempotency rules, expiration, and side-effect class.</li>
+<li><strong>Human review contract.</strong> Reviewer role, evidence packet, approval point, handback rule, and separation of duties.</li>
+<li><strong>Evaluation suite.</strong> Test-set version, adjudication method, scenario coverage, acceptance thresholds, unresolved failures, and approved limitations.</li>
+<li><strong>Privacy and logging profile.</strong> Data minimization, restricted fields, content-capture rules, retention, and access.</li>
+<li><strong>Release authority.</strong> Named technical, operating, risk, and local approvals required for this consequence class.</li>
+<li><strong>Activation and retirement.</strong> Effective time, rollout cell, kill switch, rollback target, revocation trigger, and archive location.</li>
+<li><strong>Observation contract.</strong> Trace linkage, outcome states, readback source, correction route, and monitoring owner.</li>
+</ol>
+<p>The companion decision-build manifest turns those areas into a release gate. A blank critical field does not mean “document later.” It means the team cannot prove which system it is asking an operator to trust.</p>
+<h2>Borrow the build idea without confusing software provenance with decision authority</h2>
+<p>Software supply-chain practice offers a useful structural analogy. SLSA 1.2 defines build provenance as verifiable information about where, when, and how a software artifact was produced. Its approved build-provenance format separates a build definition, resolved dependencies, run details, builder identity, and output subject.<sup id="note-2"><a href="#source-2" aria-label="Source 2">2</a></sup></p>
+<p>An AI decision build can use the same discipline: name the output, freeze the external parameters, resolve dependencies to exact versions, identify the builder, and retain the evidence needed to verify the release. NIST SP 800-218A likewise recommends retaining verification information and provenance for AI models, components, derivatives, frameworks, and pipelines.<sup id="note-3"><a href="#source-3" aria-label="Source 3">3</a></sup></p>
+<p>The analogy has a hard boundary. A valid software attestation does not establish that a facility fact was true, a model recommendation was appropriate, a manager had authority, or an action reached the intended real-world state. Build integrity answers whether the approved parts were assembled as claimed. Decision authority and operating truth require separate evidence.</p>
+<h2>Hash artifacts; do not dump sensitive content into telemetry</h2>
+<p>Reproducibility does not require every reviewer to see every underlying record. It requires a stable way to resolve what was used, under the right access controls.</p>
+<p>For prompts, policies, schemas, test sets, and corpus manifests, record a version-controlled URI plus a cryptographic digest. For third-party model services that do not expose immutable weights, record the exact service and deployment identifiers available, request parameters, provider release information, evaluation date, and observed change controls. If the provider cannot guarantee a pinned artifact, say so in the manifest and shorten the release window accordingly.</p>
+<p>For live facility facts, do not pretend a dynamic record can be frozen by naming its application. Preserve the source record identifier, authoritative field, observation time, effective time, transformation version, and a protected evidence reference. That allows a reviewer to reconstruct what the decision build could see without copying tenant, payment, access, or employee data into an analytics system.</p>
+<p>OpenTelemetry&#39;s current semantic-conventions line supports common naming across traces, logs, metrics, and events, but its generative-AI conventions have moved to a separate repository and parts of the surrounding configuration remain in development.<sup id="note-4"><a href="#source-4" aria-label="Source 4">4</a></sup> That makes OpenTelemetry useful transport vocabulary, not a substitute for a governed manifest. Teams should pin the convention version they adopt and keep sensitive prompt or retrieval content opt-in and restricted.</p>
+<h2>Compatibility belongs at the decision boundary</h2>
+<p>Version numbers become useful only when a change rule says what they mean.</p>
+<p>A patch change may fix a display label without affecting the recommendation. A minor change may add a retrieved document type while preserving the decision contract. A major change may alter a threshold, facility population, state meaning, tool permission, or review point. The classification should follow operating consequence, not a developer&#39;s sense of code size.</p>
+<p>Use three compatibility questions before promotion:</p>
+<ol>
+<li>Can the new build answer the same operating question for the same population?</li>
+<li>Can downstream reviewers and tools interpret the output under the same contract?</li>
+<li>Can the prior evaluation evidence still support the permitted decision?</li>
+</ol>
+<p>If any answer is no, the build is decision-incompatible. It needs a new evaluation, approval, and release record even if only one configuration line changed.</p>
+<p>This is especially important for human review. A reviewer who previously saw the governing source, conflicting evidence, model rationale, and stop condition may receive a thinner packet after an interface revision. The human role still exists on the organization chart, but the control has changed. The evidence packet and the moment of review therefore belong inside the build version.</p>
+<h2>Release one decision build through seven gates</h2>
+<p>The release path should be short enough to operate and strict enough to investigate.</p>
+<p><strong>Freeze.</strong> Resolve every dependency that can affect the recommendation. Generate the manifest and build digest before evaluation.</p>
+<p><strong>Evaluate.</strong> Run the exact frozen build against the approved suite. Preserve failures, abstentions, reviewer disagreements, and coverage gaps rather than reporting only an aggregate score.</p>
+<p><strong>Authorize.</strong> Obtain the approvals required by consequence class. Technical release authority cannot stand in for operating, privacy, safety, financial, or local authority.</p>
+<p><strong>Shadow.</strong> When appropriate and permitted, run the candidate without granting it action authority. Compare queue effects and handbacks against the approved baseline. Do not convert unexecuted alternatives into claimed outcomes.</p>
+<p><strong>Activate.</strong> Release to a named facility cell, user group, and time window. Emit the <code>decision_build_id</code> with every recommendation and derived task.</p>
+<p><strong>Observe.</strong> Monitor the whole decision path: input admission, recommendation, reviewer disposition, tool request, provider acceptance, source readback, exception, and correction. NIST&#39;s 2026 report on deployed-AI monitoring identifies fragmented logging, drift detection, human-AI feedback loops, and scaling human monitoring as continuing challenges; it maps the problem rather than prescribing this architecture.<sup id="note-5"><a href="#source-5" aria-label="Source 5">5</a></sup></p>
+<p><strong>Retire.</strong> Remove current-use eligibility, stop new recommendations, preserve historical evidence, identify in-flight work, and verify the successor or handback path. Deleting a model alias is not retirement if cached recommendations and open tasks remain active.</p>
+<h2>A fictional two-facility release test</h2>
+<p>The following scenario and all values are fictional. They do not describe a modSTORAGE or Facily.ai deployment, customer, product capability, or result.</p>
+<p>A two-facility test evaluates whether new maintenance notes should enter an urgent human-review queue. Build <code>ADB-17</code> uses model deployment <code>M4</code>, instruction digest <code>P12</code>, retrieval manifest <code>R8</code>, semantic contract <code>S5</code>, policy <code>Q3</code>, and review packet <code>H2</code>. It has no authority to dispatch a vendor, change access, message a customer, close work, or change a source record.</p>
+<p>The candidate <code>ADB-18</code> keeps <code>M4</code> but updates the retrieval manifest to <code>R9</code>, the policy to <code>Q4</code>, and the review packet to <code>H3</code>. <code>R9</code> includes a revised equipment-criticality table. <code>Q4</code> treats missing equipment identity as a handback instead of normal priority. <code>H3</code> shows the conflicting identifiers to the reviewer.</p>
+<p>Calling both candidates “model M4” would hide every material change. The build manifest makes the comparison honest. Evaluation covers identifier conflicts, stale inspections, missing facility mappings, duplicate notes, and unsupported safety language. The release record shows which cases abstained, which moved queues, which required local review, and which remained ineligible.</p>
+<p>If <code>ADB-18</code> is activated, every recommendation carries that build ID. If the criticality table is later withdrawn, the operator can find recommendations derived from <code>R9</code>, suspend their current-use eligibility, and route open cases for review. The system does not claim that a source correction automatically reversed a human decision or field action.</p>
+<h2>Start with one consequential recommendation</h2>
+<p>Do not begin with an enterprise registry program. Choose one AI-assisted recommendation that can move work, attention, money, access, communication, or accountability. Ask the engineering lead and operating owner to complete the manifest together.</p>
+<p>Then select three historical cases that behaved differently and try to reconstruct the exact build behind each one. If the team can name only the model, it has found the control gap. Freeze the remaining dependencies, define the consequence-based version rule, attach the build ID to new recommendations, and require the manifest at the next release review.</p>
+<p>The model is not the operating system. The decision build is the smallest configuration an operator can evaluate as a whole—and the smallest one a responsible team should be willing to release.</p>
+
+<section class="method-downloads" aria-labelledby="ai-decision-build-version-whole-operating-path-downloads"><p class="eyebrow">Governed companion package</p><h2 id="ai-decision-build-version-whole-operating-path-downloads">Use the operator register with the article's claim boundaries.</h2><p>The CSV contains a blank template and explicitly fictional teaching data. It is an adaptable method, not a deployed system or verified operating result.</p><div><a href="the-ai-decision-build.md" download>Download the-ai-decision-build.md <span aria-hidden="true">↓</span></a><a href="ai-decision-build-manifest.csv" download>Download ai-decision-build-manifest.csv <span aria-hidden="true">↓</span></a><a href="source-register.csv" download>Download source-register.csv <span aria-hidden="true">↓</span></a><a href="052-ai-development-ai-engineering-design-review.png" download>Download 052-ai-development-ai-engineering-design-review.png <span aria-hidden="true">↓</span></a><a href="image-notes.md" download>Download image-notes.md <span aria-hidden="true">↓</span></a><a href="editorial-qa.md" download>Download editorial-qa.md <span aria-hidden="true">↓</span></a><a href="publisher-manifest.md" download>Download publisher-manifest.md <span aria-hidden="true">↓</span></a></div></section>
+<section class="source-notes" aria-labelledby="ai-decision-build-version-whole-operating-path-sources"><h2 id="ai-decision-build-version-whole-operating-path-sources">Sources and limits</h2><ol><li id="source-1">National Institute of Standards and Technology, <a href="https://doi.org/10.6028/NIST.AI.100-1" rel="noopener noreferrer">Artificial Intelligence Risk Management Framework (AI RMF 1.0)</a>, January 2023; current NIST landing page notes that version 1.0 is being revised. <a href="#note-1" aria-label="Back to source 1">↩</a></li><li id="source-2">Supply-chain Levels for Software Artifacts, <a href="https://slsa.dev/spec/v1.2/build-provenance" rel="noopener noreferrer">SLSA v1.2 Build Provenance</a>, approved specification, accessed August 27, 2026. <a href="#note-2" aria-label="Back to source 2">↩</a></li><li id="source-3">National Institute of Standards and Technology, <a href="https://doi.org/10.6028/NIST.SP.800-218A" rel="noopener noreferrer">SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models</a>, July 2024. <a href="#note-3" aria-label="Back to source 3">↩</a></li><li id="source-4">OpenTelemetry, <a href="https://opentelemetry.io/docs/specs/semconv/" rel="noopener noreferrer">Semantic Conventions 1.44.0</a> and linked generative-AI semantic-conventions repository, accessed August 27, 2026. <a href="#note-4" aria-label="Back to source 4">↩</a></li><li id="source-5">National Institute of Standards and Technology, <a href="https://doi.org/10.6028/NIST.AI.800-4" rel="noopener noreferrer">NIST AI 800-4: Challenges to the Monitoring of Deployed AI Systems</a>, March 2026. <a href="#note-5" aria-label="Back to source 5">↩</a></li></ol></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">AI operating architecture</p><h3><a href="/writing/no-model-master-key-pre-execution-gate-self-storage-ai/">No Model Gets a Master Key: The Pre-Execution Gate for Self-Storage AI</a></h3><p>A model may propose an action. A separate, deterministic control plane should decide whether that exact action may reach a facility system—and should prove what happened afterward.</p><a href="/writing/no-model-master-key-pre-execution-gate-self-storage-ai/" class="text-link" aria-label="Read the article: No Model Gets a Master Key: The Pre-Execution Gate for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">AI operating architecture</p><h3><a href="/writing/facility-content-evidence-not-command-authority-semantic-firewall/">Facility Content Is Evidence, Not Command Authority: The Semantic Firewall for Self-Storage AI</a></h3><p>Emails, work orders, PDFs, images and webpages can inform an AI workflow. None of them should be allowed to rewrite the workflow that reads them.</p><a href="/writing/facility-content-evidence-not-command-authority-semantic-firewall/" class="text-link" aria-label="Read the article: Facility Content Is Evidence, Not Command Authority: The Semantic Firewall for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">AI decision separation</p><h3><a href="/writing/same-system-propose-approve-verify/">The Same System Should Not Propose, Approve, and Verify: Separation of Duties for Self-Storage AI</a></h3><p>Bind approval to an exact decision and keep the executor from verifying its own result.</p><a href="/writing/same-system-propose-approve-verify/" class="text-link" aria-label="Read the article: The Same System Should Not Propose, Approve, and Verify: Separation of Duties for Self-Storage AI">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

@@ -5,8 +5,44 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sun, 27 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Decision Build: Version the Whole Operating Path, Not Just the Model</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>Version the full self-storage AI decision path: model, instructions, retrieval, facility context, policy, tools, review and evaluation evidence.</description>
+    </item>
+    <item>
+      <title>No Model Gets a Master Key: The Pre-Execution Gate for Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/no-model-master-key-pre-execution-gate-self-storage-ai/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/no-model-master-key-pre-execution-gate-self-storage-ai/</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A model may propose an action. A separate, deterministic control plane should decide whether that exact action may reach a facility system—and should prove what happened afterward.</description>
+    </item>
+    <item>
+      <title>The Daily Portfolio Close: A Reconciliation Method for Multi-Location Self-Storage</title>
+      <link>https://jaredmodstorage.github.io/writing/daily-portfolio-close-multi-location-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/daily-portfolio-close-multi-location-self-storage/</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A refreshed dashboard is not proof that every facility finished the day cleanly. A daily portfolio close turns cross-system differences into owned, time-bounded operating work.</description>
+    </item>
+    <item>
+      <title>Facility Content Is Evidence, Not Command Authority: The Semantic Firewall for Self-Storage AI</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-content-evidence-not-command-authority-semantic-firewall/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-content-evidence-not-command-authority-semantic-firewall/</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>Emails, work orders, PDFs, images and webpages can inform an AI workflow. None of them should be allowed to rewrite the workflow that reads them.</description>
+    </item>
     <item>
       <title>The Same System Should Not Propose, Approve, and Verify: Separation of Duties for Self-Storage AI</title>
       <link>https://jaredmodstorage.github.io/writing/same-system-propose-approve-verify/</link>
