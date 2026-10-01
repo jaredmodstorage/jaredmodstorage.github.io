@@ -1,0 +1,23 @@
+# Publisher manifest
+
+- Package date: 2026-10-01
+- Slot: midday systems
+- Title: `Priority One Does Not Mean the Same Thing Everywhere: A Portfolio Urgency Contract for Self-Storage`
+- Slug: `portfolio-urgency-contract-self-storage`
+- Selected destination: Jared Mastroianni personal authority site
+- Publisher owner: Master Personal Site Authority
+- Canonical: `https://jaredmodstorage.github.io/writing/portfolio-urgency-contract-self-storage/`
+- Exact body word count: 1,655 words from the opening paragraph through the final management question, including section headings and excluding title, deck, byline, author bio, and sources.
+- Non-selected publisher: Master modBLOG
+- Duplicate rule: the non-selected publisher must reject the same full title, slug, body, fictional example, and practical tool.
+- Article file: `article.md`
+- Practical tool: `portfolio-urgency-contract.csv`
+- Source register: `source-register.csv`
+- Image: `032-facility-corridor-team-check-in.png`
+- Image notes: `image-notes.md`
+- QA: `editorial-qa.md`
+- Rights and evidence boundary: `originality-and-claim-boundary.md`
+- Publication state: checksum-verified package authorized for one personal-site publisher handoff; no live-publication claim.
+- Indexing state: unconfirmed.
+- Independent coverage state: unconfirmed.
+- Recognition state: unconfirmed.

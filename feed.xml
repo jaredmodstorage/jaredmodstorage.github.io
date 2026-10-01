@@ -8,6 +8,15 @@
     <lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Priority One Does Not Mean the Same Thing Everywhere: A Portfolio Urgency Contract for Self-Storage</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-urgency-contract-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-urgency-contract-self-storage/</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A portfolio urgency contract translates local self-storage priorities into comparable consequence, time, authority and operating boundaries.</description>
+    </item>
+    <item>
       <title>The AI Decision Build: Version the Whole Operating Path, Not Just the Model</title>
       <link>https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-decision-build-version-whole-operating-path/</guid>
