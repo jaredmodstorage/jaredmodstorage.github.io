@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-02T19:06:02.774Z",
+  "title": "One Incident, Five Tickets: Stop Counting Workflow Records as Separate Facility Failures",
+  "slug": "one-incident-five-tickets-self-storage-incident-family",
+  "ngramSize": 14,
+  "localArticleFilesChecked": 17,
+  "localMatches": [],
+  "sitemaps": [
+    {
+      "sitemap": "https://jaredmodstorage.github.io/sitemap.xml",
+      "count": 93,
+      "status": "ok"
+    },
+    {
+      "sitemap": "https://blog.modstorage.com/post-sitemap.xml",
+      "count": 154,
+      "status": "ok"
+    }
+  ],
+  "publicUrlsChecked": 247,
+  "publicFailures": [],
+  "publicMatches": []
+}
