@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-03T07:02:27.451Z",
+  "title": "The Source Was Corrected. Did the AI Stop Repeating the Old Answer?",
+  "slug": "ai-correction-propagation-contract-self-storage",
+  "ngramSize": 14,
+  "localArticleFilesChecked": 18,
+  "localMatches": [],
+  "sitemaps": [
+    {
+      "sitemap": "https://jaredmodstorage.github.io/sitemap.xml",
+      "count": 94,
+      "status": "ok"
+    },
+    {
+      "sitemap": "https://blog.modstorage.com/post-sitemap.xml",
+      "count": 155,
+      "status": "ok"
+    }
+  ],
+  "publicUrlsChecked": 249,
+  "publicFailures": [],
+  "publicMatches": []
+}
