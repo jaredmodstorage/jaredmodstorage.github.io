@@ -1,0 +1,4 @@
+source_id,title,publisher,url,accessed_date,used_for,material_limitations
+SRC-01,PROV-DM: The PROV Data Model,W3C,https://www.w3.org/TR/prov-dm/,2026-10-03,"General provenance concepts: entities, activities, agents, time and relationships","Domain-agnostic standard; it does not prescribe a self-storage data model"
+SRC-02,RFC 3339: Date and Time on the Internet: Timestamps,RFC Editor,https://www.rfc-editor.org/rfc/rfc3339,2026-10-03,"Consistent Internet timestamp format and UTC offsets","Timestamp format standard; it does not define occupancy business rules"
+SRC-03,Privacy Framework,NIST,https://www.nist.gov/privacy-framework,2026-10-03,"Voluntary privacy-risk management grounding","High-level voluntary framework; not self-storage-specific legal or compliance advice"

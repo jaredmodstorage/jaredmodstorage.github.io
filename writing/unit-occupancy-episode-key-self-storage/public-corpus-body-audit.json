@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-03",
+  "window_words": 14,
+  "target_title": "The Unit Number Did Not Change. The Occupancy Did.",
+  "target_slug": "unit-occupancy-episode-key-self-storage",
+  "target_windows": 1734,
+  "pages_checked": 270,
+  "counts": {
+    "personal": 95,
+    "modblog": 155,
+    "local": 20
+  },
+  "fetch_errors": [],
+  "exact_title_matches": [],
+  "slug_matches": [],
+  "body_window_matches": []
+}

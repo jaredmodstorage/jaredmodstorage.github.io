@@ -1,0 +1,2 @@
+facility_id,physical_unit_id,unit_label,occupancy_episode_id,party_id,agreement_id,episode_state,effective_from,effective_through,source_system,source_record_id,predecessor_episode_id,successor_episode_id,transfer_id,access_enabled_at,access_revoked_at,recorded_at,last_corrected_at,correction_owner,linkage_state,exception_owner,notes
+,,,,,,,,,,,,,,,,,,,,,

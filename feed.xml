@@ -8,6 +8,15 @@
     <lastBuildDate>Sat, 03 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Unit Number Did Not Change. The Occupancy Did.</title>
+      <link>https://jaredmodstorage.github.io/writing/unit-occupancy-episode-key-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/unit-occupancy-episode-key-self-storage/</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A time-bounded occupancy episode keeps customer history from following the next customer through a multi-location self-storage system.</description>
+    </item>
+    <item>
       <title>The Source Was Corrected. Did the AI Stop Repeating the Old Answer?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-correction-propagation-contract-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-correction-propagation-contract-self-storage/</guid>
