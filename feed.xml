@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sun, 04 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Emergency Contact Changed. Which Facility Still Calls the Former Manager?</title>
+      <link>https://jaredmodstorage.github.io/writing/emergency-contact-change-reconciliation-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/emergency-contact-change-reconciliation-self-storage/</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A portfolio method for reconciling emergency roles across plans, providers, devices and after-hours call trees without mistaking one edited record for completion.</description>
+    </item>
     <item>
       <title>The Work Order Changed Hands. Who Owned the Delay?</title>
       <link>https://jaredmodstorage.github.io/writing/work-order-assignment-episode-self-storage/</link>
