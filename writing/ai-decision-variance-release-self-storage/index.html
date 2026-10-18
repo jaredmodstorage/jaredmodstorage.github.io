@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DshNwFP_.css" data-rsc-css-href="/_next/static/css/index.DshNwFP_.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Gave Three Different Answers. Which One Became the Operating Decision? | Jared Mastroianni</title><meta name="description" content="A release-control method for managing run-to-run variance in self-storage AI workflows"/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Gave Three Different Answers. Which One Became the Operating Decision? | Jared Mastroianni"/><meta property="og:description" content="A release-control method for managing run-to-run variance in self-storage AI workflows"/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-10-18"/><meta property="article:modified_time" content="2026-10-18"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/057-ai-development-ai-rollout-staff-training.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni, wearing a navy suit, addresses a seated audience in an AI-generated editorial image accompanying an article about human review of variable AI operating proposals."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Gave Three Different Answers. Which One Became the Operating Decision? | Jared Mastroianni"/><meta name="twitter:description" content="A release-control method for managing run-to-run variance in self-storage AI workflows"/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/057-ai-development-ai-rollout-staff-training.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Gave Three Different Answers. Which One Became the Operating Decision?","datePublished":"2026-10-18","dateModified":"2026-10-18","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/#lead-image"},"description":"A release-control method for managing run-to-run variance in self-storage AI workflows","about":["Self-storage operations","The AI Gave Three Different Answers. Which One Became the Operating Decision?"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/#lead-image","name":"The AI Gave Three Different Answers. Which One Became the Operating Decision?","caption":"Responsible AI adoption gives reviewers the evidence, disagreement and authority boundaries needed to make one accountable operating decision. AI-generated editorial image; not documentary evidence of a meeting, facility, customer, deployment, review or result. AI-generated editorial illustration; non-documentary.","description":"Jared Mastroianni, wearing a navy suit, addresses a seated audience in an AI-generated editorial image accompanying an article about human review of variable AI operating proposals. Jared-owned AI-generated editorial material; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/057-ai-development-ai-rollout-staff-training.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed AI-generated editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Accountable automation","item":"https://jaredmodstorage.github.io/writing/topics/automation/"},{"@type":"ListItem","position":3,"name":"The AI Gave Three Different Answers. Which One Became the Operating Decision?","item":"https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/automation/">Accountable automation</a></li><li aria-current="page">The AI Gave Three Different Answers. Which One Became the Operating Decision?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Responsible AI architecture<!-- --> · <time dateTime="2026-10-18">18 October 2026</time></p><h1>The AI Gave Three Different Answers. Which One Became the Operating Decision?</h1><p class="lede">A release-control method for managing run-to-run variance in self-storage AI workflows</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/images/jared-mastroianni/ai-decision-variance-release-self-storage-display.jpg" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni, wearing a navy suit, addresses a seated audience in an AI-generated editorial image accompanying an article about human review of variable AI operating proposals."><figcaption>Responsible AI adoption gives reviewers the evidence, disagreement and authority boundaries needed to make one accountable operating decision. AI-generated editorial image; not documentary evidence of a meeting, facility, customer, deployment, review or result. Jared-owned AI-generated editorial illustration; not documentary evidence of a real event, facility, deployment or result.</figcaption></figure><p>Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni’s byline. Fictional examples are instructional, not observed results.</p><h2>A release-control method for managing run-to-run variance in self-storage AI workflows</h2>
+
+<!-- BODY START -->
+
+<p>Give an AI system the same operating packet three times and it may return three different answers.</p>
+<p>One run says the facility manager should inspect an access-control event today. Another says to ask the regional manager for more evidence. A third says the event looks routine and requires no action. The source records, prompt, model label and user are unchanged. Only the run is different.</p>
+<p>That is not automatically a defect. Generative systems can produce variable outputs by design. The operating problem begins when a team treats one sampled answer as though it were the one inevitable conclusion. If the first run can create a work order, the second can suppress it and the third can change its priority, the organization does not have one decision rule. It has a lottery connected to operations.</p>
+<p>Responsible architecture must govern the variance before any output becomes an operating decision. The goal is not to force every sentence to be identical. It is to identify whether repeated outputs are materially equivalent, expose consequential disagreement, and place a deterministic release boundary between model proposals and authorized action.</p>
+<h2>Separate wording variance from decision variance</h2>
+<p>Two answers can use different words and still propose the same operating disposition. “Inspect the south gate before close” and “Complete a south-gate inspection today” may be materially equivalent if they name the same facility, action, owner, deadline, evidence and authority state.</p>
+<p>Two polished answers can also hide a serious difference. “Inspect today” is not equivalent to “monitor until the next scheduled visit.” “Draft a customer update” is not equivalent to “send the update.” “Review this unit-access anomaly” is not equivalent to “disable the credential.”</p>
+<p>Define the fields that make a difference before testing the system. For an AI-assisted operating proposal, those fields may include:</p>
+<ul>
+<li>the facility, asset, unit, customer case or work order affected;</li>
+<li>the proposed action and the systems it would touch;</li>
+<li>the recipient or execution owner;</li>
+<li>the priority, deadline and expiration;</li>
+<li>the evidence cited and any missing evidence;</li>
+<li>the policy and eligibility state;</li>
+<li>the required human authority; and</li>
+<li>the claimed final state.</li>
+</ul>
+<p>Normalize each run into those fields. Then compare the normalized proposals rather than comparing prose. This makes harmless language variation visible as harmless and prevents a material change from disappearing inside fluent wording.</p>
+<h2>Eligibility must not depend on the most persuasive answer</h2>
+<p>The safest place to reduce variance is before generation. Decide with ordinary, testable controls whether the case is eligible for the workflow at all.</p>
+<p>A facility identifier should resolve to one current property. Required sources should be present and fresh enough for the task. The requested action should be within the approved use case. The user, agent and tool should have a named scope. A legal, safety, payment, access or customer-impact boundary may require a human regardless of what the model recommends.</p>
+<p>These gates should produce structured states such as eligible, ineligible, incomplete, conflicted or expired. The model may summarize the evidence or propose an action after the gate. It should not talk an incomplete case into eligibility.</p>
+<p>This is a practical division of labor. Generative reasoning can help organize ambiguous information. Deterministic controls can enforce facility identity, required evidence, role scope, prohibited actions, time limits and approval requirements. The proposal can vary. The release conditions should not.</p>
+<h2>Test a set of runs, not the answer you happened to keep</h2>
+<p>One successful demonstration does not characterize a variable system. For a consequential workflow, the evaluation plan should specify how many repeated runs will be performed under the same controlled input and configuration. Preserve every run, including outputs the evaluator dislikes.</p>
+<p>The appropriate replication count depends on consequence, cost and expected variability. There is no universal safe number. What matters is that the count and stopping rule are set before results are reviewed. Otherwise, the evaluator can keep generating until the system produces an agreeable answer.</p>
+<p>That practice—regeneration shopping—creates false confidence. If a reviewer rejects four proposals and keeps the fifth without recording the first four, the production record hides the behavior the evaluation was supposed to reveal. A new run is new evidence about system behavior, not an eraser.</p>
+<p>For each test set, record completed runs, distinct material proposal classes, the share of runs in each class, abstentions, invalid outputs, tool requests and policy-gate outcomes. Keep the raw output under appropriate access controls, but make the normalized comparison available to the reviewer.</p>
+<p>NIST&#39;s February 2026 guidance on measuring AI system performance notes that standard errors can arise from both benchmark-item selection and nondeterministic sampling from large language models.[^1] The paper concerns benchmark evaluation, not facility decision release. Its useful operational lesson is narrower: when the system can vary across runs, uncertainty from that variation belongs in the measurement record.</p>
+<h2>Agreement is evidence, not authority</h2>
+<p>Suppose five identical-input runs produce the same proposal four times. That may support a finding that the proposal is stable under the tested configuration. It does not prove the proposal is true, safe or authorized.</p>
+<p>The repeated answer may rely on the same stale source. All five runs may misunderstand the same facility code. A majority can consistently recommend an action that policy forbids. Conversely, a minority answer may identify the missing evidence that the other runs overlooked.</p>
+<p>Do not let a model vote itself into authority. Use agreement rates as diagnostic evidence. Keep policy, human approval and execution authority separate.</p>
+<p>NIST&#39;s AI Risk Management Framework is voluntary, non-sector-specific and use-case agnostic.[^2] Its Core calls for testing before deployment and regularly in operation, measurement with uncertainty, documented test details, monitoring of production behavior, and interpretation of output within context.[^3] Those outcomes do not prescribe this release pattern or certify a self-storage workflow. They support the broader discipline of measuring the deployed system rather than trusting a selected example.</p>
+<h2>Show the reviewer the disagreement packet</h2>
+<p>A human-in-the-loop control fails if the human sees only the answer chosen by the system or developer. The review screen should show the operating evidence, normalized proposals, material differences, eligibility state, applicable policy, model and configuration identifiers, and the reason a release is being requested.</p>
+<p>The reviewer does not need five near-identical essays. A compact variance packet is better:</p>
+<ul>
+<li>three runs propose inspection today;</li>
+<li>one proposes monitoring;</li>
+<li>one abstains because the source timestamp is missing;</li>
+<li>two runs cite a work order that closed before the evidence cutoff;</li>
+<li>every run is blocked from execution until the source conflict is resolved.</li>
+</ul>
+<p>Now the person can adjudicate the actual disagreement. The reviewer can approve a bounded action, request current evidence, change the proposed owner, hold the case, or reject the use of AI for that decision type. The record should preserve who decided, what was released, the policy applied and when the decision expires.</p>
+<p>Human review is not a ritual checkbox. It is a decision function with an evidence packet, defined authority and an auditable outcome.</p>
+<h2>Release one structured decision</h2>
+<p>After review, downstream systems should receive one structured release record, not whichever paragraph the application happens to display.</p>
+<p>The release record should name the decision case, approved action, target, scope, owner, deadline, evidence snapshot, policy version, approving authority and expiration. A tool adapter should validate those fields again before creating a work order, drafting a message or updating an internal case. If the action exceeds the approved scope, the adapter should refuse it.</p>
+<p>Execution still needs a receipt. “Approved” is not “performed.” A work-order request may fail, a draft may never be reviewed, or an update may reach the wrong facility record. Reconcile the execution result to the release record and keep proposal, approval, execution and verification as separate states.</p>
+<p>This structure also prevents prose from silently expanding authority. A model may write, “Contact the customer and suspend access until inspection.” If the approved release authorizes only an internal inspection task, the messaging and access-control actions have no executable fields and must not occur.</p>
+<h2>A fully fictional portfolio example</h2>
+<p>Consider Crescent Row Storage, a fictional operator. Every facility, person, system, record, event and outcome in this example is invented.</p>
+<p>The fictional company tests an AI-assisted workflow that reviews after-hours gate events. One controlled packet concerns fictional facility CR-04 and contains an event record, a current access schedule, a recently closed gate work order and a note that the camera source is unavailable.</p>
+<p>Five repeated runs use the same frozen packet and configuration. Two propose a same-day gate inspection. One proposes monitoring for another event. One recommends asking the regional manager whether the recent repair was verified. One abstains because it cannot confirm whether the closed work order includes an operating readback.</p>
+<p>The team does not calculate a 40% vote and release the inspection. It normalizes the runs and sees three material classes plus an abstention. More importantly, the eligibility gate shows that the workflow requires a current readback after gate repair. The case is incomplete.</p>
+<p>The fictional reviewer requests the missing readback and holds all automated action. After an authorized employee records current evidence through the existing operating process, the case receives a new input-packet identifier. Prior outputs remain attached to the old packet. The system does not regenerate until one answer looks convenient, and it does not represent the later evidence as though it existed during the first runs.</p>
+<p>This example demonstrates the control logic only. It is not a modSTORAGE or Facily.ai deployment, incident, customer result, performance claim or product feature.</p>
+<h2>The AI Decision Variance and Release Register</h2>
+<p>The companion register creates one record for the decision case and one linked row for each repeated run. It captures the frozen input-packet hash, evidence cutoff, model and prompt versions, tool schema, sampling configuration, normalized proposal class, cited evidence, eligibility state, material-difference code, disagreement state, reviewer disposition, released action and execution receipt.</p>
+<p>Use four release states:</p>
+<ul>
+<li><strong>Hold:</strong> required evidence, identity, policy, authority or test coverage is incomplete.</li>
+<li><strong>Limited:</strong> only a named low-consequence subset may proceed under a bounded scope.</li>
+<li><strong>Approved:</strong> an authorized reviewer releases one structured action for a defined target and time window.</li>
+<li><strong>Reconciled:</strong> the approved action has a verified execution receipt and any required operating readback.</li>
+</ul>
+<p>The register does not prove model accuracy, facility safety or legal compliance. It does not turn repeated agreement into ground truth. It provides a narrower control: the organization can show what varied, what mattered, who had authority and which single decision—if any—was allowed to reach operations.</p>
+<h2>Govern the distance between an answer and an action</h2>
+<p>AI output variance is manageable when the architecture treats model responses as proposals. Freeze the input packet. Predefine the replication and stopping rule. Normalize the decision fields. Preserve every run. Expose material disagreement. Keep eligibility and authority deterministic. Give the reviewer the variance packet. Release one structured decision and reconcile its execution.</p>
+<p>Then three different answers are not a hidden inconsistency. They are observable system behavior inside a controlled decision process.</p>
+<p>The dangerous architecture is not the one that admits the model can vary. It is the one that samples once, keeps the most convenient answer and lets that answer become facility fact.</p>
+<!-- BODY END -->
+
+<h2>Sources</h2>
+<p>[^1]: National Institute of Standards and Technology, <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-3.pdf"><em>Expanding the AI Evaluation Toolbox with Statistical Models</em> (NIST AI 800-3)</a>, February 2026, accessed October 14, 2026.
+[^2]: National Institute of Standards and Technology, <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10"><em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em></a>, January 2023, accessed October 14, 2026.
+[^3]: National Institute of Standards and Technology, <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"><em>AI RMF Core</em></a>, official AIRC presentation of AI RMF 1.0 outcomes, accessed October 14, 2026.</p>
+<section aria-label="Publication package downloads"><h2>Publication package downloads</h2><ul><li><a href="article.md">article.md</a></li><li><a href="ai-decision-variance-and-release-register.md">ai-decision-variance-and-release-register.md</a></li><li><a href="ai-decision-variance-and-release-template.csv">ai-decision-variance-and-release-template.csv</a></li><li><a href="ai-decision-variance-and-release-fictional-example.csv">ai-decision-variance-and-release-fictional-example.csv</a></li><li><a href="source-register.csv">source-register.csv</a></li><li><a href="image-notes.md">image-notes.md</a></li><li><a href="057-ai-development-ai-rollout-staff-training.png">057-ai-development-ai-rollout-staff-training.png</a></li><li><a href="destination-assignment.md">destination-assignment.md</a></li><li><a href="duplicate-check.md">duplicate-check.md</a></li><li><a href="originality-and-claim-boundary.md">originality-and-claim-boundary.md</a></li><li><a href="review-scores.md">review-scores.md</a></li><li><a href="final-editorial-qa.md">final-editorial-qa.md</a></li><li><a href="assigned-publisher-manifest.md">assigned-publisher-manifest.md</a></li><li><a href="payload-checksums.sha256">payload-checksums.sha256</a></li><li><a href="publisher-manifest.md">publisher-manifest.md</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-raised-no-alert-decision-coverage/">The AI Raised No Alert. Was Everything Normal?</a></h3><p>Govern the silent side of automated decisions with decision coverage, negative sampling, and proof of execution</p><a href="/writing/ai-raised-no-alert-decision-coverage/" class="text-link" aria-label="Read the article: The AI Raised No Alert. Was Everything Normal?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/checklist-version-control-self-storage-portfolio/">Every Site Passed Inspection. Which Checklist Did They Use?</a></h3><p>A version-control method for comparing facility inspections without turning different questions into one portfolio score</p><a href="/writing/checklist-version-control-self-storage-portfolio/" class="text-link" aria-label="Read the article: Every Site Passed Inspection. Which Checklist Did They Use?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/model-version-action-authority-self-storage/">The Model Changed Overnight. Did Its Permission to Act Change Too?</a></h3><p>Responsible AI operations require authority to follow an exact release, not a familiar endpoint</p><a href="/writing/model-version-action-authority-self-storage/" class="text-link" aria-label="Read the article: The Model Changed Overnight. Did Its Permission to Act Change Too?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

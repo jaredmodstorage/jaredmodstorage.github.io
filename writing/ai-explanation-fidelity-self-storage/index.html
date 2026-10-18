@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DshNwFP_.css" data-rsc-css-href="/_next/static/css/index.DshNwFP_.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Explained Its Decision. Did the Explanation Come From the Decision Path? | Jared Mastroianni</title><meta name="description" content="A fluent rationale can help a self-storage operator understand a recommendation—or quietly invent a reason the system never used."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Explained Its Decision. Did the Explanation Come From the Decision Path? | Jared Mastroianni"/><meta property="og:description" content="A fluent rationale can help a self-storage operator understand a recommendation—or quietly invent a reason the system never used."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-10-18"/><meta property="article:modified_time" content="2026-10-18"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/051-ai-development-ai-product-discovery-workshop.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared and facility employees review an AI workflow at a conference table, representing the need for explanations that match the real decision path."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Explained Its Decision. Did the Explanation Come From the Decision Path? | Jared Mastroianni"/><meta name="twitter:description" content="A fluent rationale can help a self-storage operator understand a recommendation—or quietly invent a reason the system never used."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/051-ai-development-ai-product-discovery-workshop.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Explained Its Decision. Did the Explanation Come From the Decision Path?","datePublished":"2026-10-18","dateModified":"2026-10-18","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/#lead-image"},"description":"A fluent rationale can help a self-storage operator understand a recommendation—or quietly invent a reason the system never used.","about":["Self-storage operations","The AI Explained Its Decision. Did the Explanation Come From the Decision Path?"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/#lead-image","name":"The AI Explained Its Decision. Did the Explanation Come From the Decision Path?","caption":"`An AI explanation should connect the operator-facing reason to the evidence, computation, policy and limits that actually shaped the decision. Jared-owned AI-generated editorial illustration; not a documentary record of a deployment or result.` AI-generated editorial illustration; non-documentary.","description":"Jared and facility employees review an AI workflow at a conference table, representing the need for explanations that match the real decision path. Jared-owned AI-generated editorial material; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/051-ai-development-ai-product-discovery-workshop.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed AI-generated editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Accountable automation","item":"https://jaredmodstorage.github.io/writing/topics/automation/"},{"@type":"ListItem","position":3,"name":"The AI Explained Its Decision. Did the Explanation Come From the Decision Path?","item":"https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/automation/">Accountable automation</a></li><li aria-current="page">The AI Explained Its Decision. Did the Explanation Come From the Decision Path?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Responsible AI architecture<!-- --> · <time dateTime="2026-10-18">18 October 2026</time></p><h1>The AI Explained Its Decision. Did the Explanation Come From the Decision Path?</h1><p class="lede">An explanation is not the decision record</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>11 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/images/jared-mastroianni/ai-explanation-fidelity-self-storage-display.jpg" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared and facility employees review an AI workflow at a conference table, representing the need for explanations that match the real decision path."><figcaption>`An AI explanation should connect the operator-facing reason to the evidence, computation, policy and limits that actually shaped the decision. Jared-owned AI-generated editorial illustration; not a documentary record of a deployment or result.` Jared-owned AI-generated editorial illustration; not documentary evidence of a real event, facility, deployment or result.</figcaption></figure><p>Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni’s byline. Fictional examples are instructional, not observed results.</p><p><strong>Deck:</strong> A fluent rationale can help a self-storage operator understand a recommendation—or quietly invent a reason the system never used. Explanation fidelity has to be an architectural control, not a writing preference.</p>
+
+<!-- BODY_WORD_COUNT_START -->
+
+<p>A facility manager opens an AI-assisted review queue and sees a gate event labeled “possible unauthorized access.” Beneath the label is a confident explanation: the credential failed three times after the facility closed, then succeeded from an unfamiliar vehicle.</p>
+<p>The explanation is clear. It is also dangerous if the system did not actually establish those facts.</p>
+<p>Perhaps the classifier used only credential status and event time. Perhaps the language model retrieved a stale hours record, confused three log rows from different credentials, or added the vehicle detail from a nearby camera note. The resulting paragraph may sound like the reason for the decision while being only a plausible story written after the decision.</p>
+<p>That distinction matters in self-storage. An explanation can influence whether a manager calls a customer, changes access, dispatches a vendor, escalates a safety concern, or dismisses an alert. A human reviewer cannot provide meaningful oversight if the interface gives the reviewer an invented account of what the system considered.</p>
+<p>Responsible architecture should therefore treat an explanation as a governed artifact. It must identify the decision it explains, the evidence it is allowed to describe, the process it can faithfully represent, the audience it serves, its limits, and the action authority it does not possess.</p>
+<h2>An explanation is not the decision record</h2>
+<p>Operators often use several different objects as though they were interchangeable:</p>
+<ul>
+<li>the source records available to the system;</li>
+<li>the features or evidence actually used in a computation;</li>
+<li>the model output;</li>
+<li>the policy rule that converts an output into a queue state;</li>
+<li>the generated explanation shown to a person; and</li>
+<li>the human or system action that follows.</li>
+</ul>
+<p>They are related, but they are not the same.</p>
+<p>The source set may contain facts the model never used. A feature contribution may describe an association without proving cause. A policy may route a score to review even when the model itself produces no prose. A language model may then translate structured reason codes into plain language. Finally, a reviewer may take an action for a different, independently verified reason.</p>
+<p>If those layers collapse into one paragraph, the organization loses the ability to answer basic questions. Did the system observe the claim? Did the decision depend on it? Was it added only to make the output understandable? Did a policy rule—not the model—control the result? Did a person verify it before acting?</p>
+<p>NIST&#39;s <em>Four Principles of Explainable Artificial Intelligence</em> separates the existence of an explanation from its meaning, its accuracy to the system&#39;s process, and the system&#39;s knowledge limits.[^1] The publication is general guidance, not a self-storage standard, but its distinction is operationally useful: a readable explanation is not necessarily a faithful one.</p>
+<h2>Build from typed evidence, not free-form recollection</h2>
+<p>The safest explanation pipeline begins before any sentence is generated. Create a decision receipt containing typed fields that can be tested independently:</p>
+<ol>
+<li><strong>Decision identity.</strong> One immutable case ID, facility ID, subject ID, decision type and event time.</li>
+<li><strong>Source boundary.</strong> The exact source references, versions, retrieval time and freshness state available to the workflow.</li>
+<li><strong>Used-input record.</strong> The fields, features, rules or retrieved passages actually admitted to the decision path—not every item present in the context window.</li>
+<li><strong>Output identity.</strong> Model, prompt, policy and explanation-template versions, plus the raw output or stable reference.</li>
+<li><strong>Routing result.</strong> The deterministic policy result that turned the output into <code>display</code>, <code>review</code>, <code>hold</code>, <code>abstain</code> or another defined state.</li>
+<li><strong>Explanation claims.</strong> Each user-visible claim mapped to a source reference, a used-input field, a policy reason code, or an explicit inference label.</li>
+<li><strong>Knowledge limits.</strong> Missing, conflicting, stale or out-of-scope evidence and the effect of those limits on the explanation.</li>
+</ol>
+<p>This structure prevents a common shortcut: asking a language model to inspect an entire transcript and “explain why.” The model may produce a coherent answer, but coherence does not prove that the answer reflects the actual processing path.</p>
+<p>NIST&#39;s Generative AI Profile specifically identifies the risk of generated logic or citations that appear to justify an answer and mislead people into inappropriate trust.[^2] That warning does not mean every generated explanation is false. It means the architecture must verify support instead of treating fluency as evidence.</p>
+<h2>Separate four kinds of reasons</h2>
+<p>An operator-facing explanation becomes more honest when it labels the type of reason being presented.</p>
+<p><strong>Observed reason.</strong> A referenced system of record contains the stated value. Example: the credential-status record was <code>suspended</code> at the decision time.</p>
+<p><strong>Computed reason.</strong> A deterministic calculation produced a value from named inputs. Example: the event occurred 47 minutes outside the current access schedule. The explanation should preserve the schedule version and timezone rather than merely say “after hours.”</p>
+<p><strong>Model-associated reason.</strong> An attribution or feature-contribution method indicates that an input was associated with the model output. This is not automatically a causal explanation, and it may be unstable or incomplete. The method and model version belong in the technical view.</p>
+<p><strong>Policy reason.</strong> A rule outside the model controlled routing or action eligibility. Example: any suspended credential event is sent to human review, regardless of the model score.</p>
+<p>These labels stop a policy rule from being described as machine insight and stop a model association from being described as an observed facility fact. They also help operators decide what to verify. A facility manager may need the observed and policy reasons immediately; a model owner may need the technical attribution later.</p>
+<h2>Give each audience the explanation it needs</h2>
+<p>One explanation cannot serve every person equally well.</p>
+<p>A site manager needs a short statement of what was observed, what remains unknown, why the case is in the queue, and what authority the manager has. A regional operator may need the same facts plus the governing policy and any cross-facility exception. A model reviewer needs input versions, reason codes, attribution method, uncertainty and test results. A customer-facing communication needs separately verified facts and approved language; it should not copy an internal model rationale.</p>
+<p>The underlying receipt can be shared while each view remains purpose-specific. That is different from generating three independent stories. Every view should resolve back to the same claim IDs and source references.</p>
+<p>NIST&#39;s AI Risk Management Framework describes explainability and interpretability as connected but distinct characteristics, and its Measure function calls for models to be explained, validated and documented while outputs are interpreted in context.[^3] It does not prescribe a particular interface or certify any explanation method. The practical implication is that “more detail” is not a sufficient design goal. The right question is whether the right person can understand the bounded reason for the output without receiving an unsupported claim.</p>
+<h2>Make unsupported claims fail closed</h2>
+<p>Explanation generation needs an enforcement point after drafting and before display.</p>
+<p>Parse the draft into claim units. For each unit, require one allowed support type: direct source reference, deterministic calculation, model-attribution record, policy reason code, or explicitly labeled inference. Reject or rewrite claims with no support. Block causal verbs such as “caused,” “led to,” or “because” unless the governing method can support that claim. Block precise counts, times, locations and identities when they do not reconcile to source records.</p>
+<p>The validator should also test contradiction. If the rationale says three denied entries but the admitted records show one denial and two unrelated events, the explanation cannot be released. If facility hours are stale, “outside current hours” should become “the stored schedule indicates the event was outside hours; current schedule not verified.” If evidence is too incomplete to explain the result, the system should say so and route the case appropriately.</p>
+<p>An abstention is better than fabricated clarity.</p>
+<p>This control should not depend solely on a second language model grading the first. A model can help identify claims, but deterministic checks should reconcile identifiers, counts, timestamps, source citations, reason codes and allowed vocabulary. High-consequence cases should add human review, especially when the explanation may influence access, customer treatment, safety escalation or financial action.</p>
+<h2>Preserve the explanation that the reviewer actually saw</h2>
+<p>Explanations change. A source may be corrected. A prompt may be revised. A policy may receive a clearer label. A model may produce different language on a repeated run.</p>
+<p>Do not silently replace the original explanation in the audit record. Preserve its version and hash, the underlying decision receipt, the validation result, the viewer, and the display time. If a correction is necessary, create a linked correction that identifies which claims changed and why. Re-evaluate any pending action that relied on a corrected claim.</p>
+<p>This does not require retaining unlimited sensitive content. Store governed references, claim IDs, reason codes, hashes and the minimum text necessary for review under the organization&#39;s retention rules. Explanation traceability is not permission to copy customer, access or camera data into a general-purpose log.</p>
+<h2>A fictional gate-review example</h2>
+<p>Consider <strong>Harbor Finch Storage</strong>, a fictional facility used only to demonstrate the control. No real deployment, customer, model, vendor or performance result is described.</p>
+<p>An AI-assisted workflow places fictional event <code>GF-2041</code> into a manager-review queue. The first generated rationale says: “Three denied attempts occurred after closing, followed by a successful entry from an unrecognized vehicle.”</p>
+<p>The explanation validator stops it.</p>
+<p>The decision receipt shows one denied attempt for the subject credential. Two other denials belong to different credentials. The current model used credential status and event time; it did not use vehicle recognition. A camera-review note exists, but it says only that a vehicle identifier was unavailable. The hours source is 19 days old and has not been confirmed after a seasonal change.</p>
+<p>The released explanation is narrower: “This event was routed for review because the credential was marked suspended and the stored access schedule placed the event outside its permitted window. Current facility hours have not been verified. No vehicle identity was used in the decision.”</p>
+<p>The interface shows <code>policy_reason=suspended_credential_review</code>, links the credential-status and schedule records, and instructs the manager to verify the live account and access settings before any action. The fictional case remains a review item; no access restriction, customer contact or other outcome is claimed.</p>
+<p>The improved explanation is less dramatic. It is also more useful because it tells the manager what is known, what controlled the routing, what remains uncertain and what the system did not decide.</p>
+<h2>Use an explanation-fidelity release gate</h2>
+<p>The companion <strong>AI Explanation Fidelity and Action Boundary Card</strong> turns these principles into a release test. It records the decision receipt, audience, claim inventory, support type, source or reason-code link, fidelity status, knowledge limit, prohibited implication, reviewer, display version, action boundary and correction path. A blank CSV template and an explicitly fictional worked example are included.</p>
+<p>Before an explanation reaches an operator, require five outcomes:</p>
+<ol>
+<li>Every material claim has an allowed support type.</li>
+<li>The explanation distinguishes observed, computed, model-associated and policy reasons.</li>
+<li>Missing or conflicting evidence is visible rather than smoothed over.</li>
+<li>The displayed rationale states what action it does and does not authorize.</li>
+<li>The exact explanation shown to the reviewer can be reconstructed and corrected.</li>
+</ol>
+<p>Evaluate the control with cases that tempt the system to tell a better story than the records support: duplicate events, stale schedules, cross-facility records, missing camera identifiers, conflicting status fields, unsupported causal language, and policy overrides that the model never considered. Measure unsupported-claim rate, contradiction rate, citation resolution, correct reason-type labeling, appropriate abstention, reviewer comprehension and actions taken outside the stated boundary.</p>
+<p>Do not optimize only for whether users say the explanation feels helpful. A persuasive rationale can increase confidence while decreasing accuracy. Helpfulness belongs beside fidelity, not above it.</p>
+<h2>A trustworthy explanation is allowed to be incomplete</h2>
+<p>The purpose of explanation is not to make every AI output sound reasonable. It is to give a person a faithful, bounded view of the system&#39;s path so that judgment can improve rather than be steered by invented certainty.</p>
+<p>In self-storage operations, that means preserving the line between facility evidence, model association, policy routing, generated language and authorized action. When the path cannot support a claim, remove the claim. When evidence conflicts, show the conflict. When the system does not know, let it say so.</p>
+<p>The most responsible explanation may be shorter than the one the model wants to write. It should also be the one the operator can safely use.</p>
+<!-- BODY_WORD_COUNT_END -->
+
+<h2>Sources</h2>
+<p>[^1]: P. Jonathon Phillips et al., National Institute of Standards and Technology, <em>Four Principles of Explainable Artificial Intelligence</em>, NISTIR 8312, September 2021, checked October 15, 2026. <a href="https://doi.org/10.6028/NIST.IR.8312">https://doi.org/10.6028/NIST.IR.8312</a>
+[^2]: National Institute of Standards and Technology, <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>, NIST AI 600-1, July 2024, checked October 15, 2026. <a href="https://doi.org/10.6028/NIST.AI.600-1">https://doi.org/10.6028/NIST.AI.600-1</a>
+[^3]: National Institute of Standards and Technology, <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em> and official AI RMF Core resource, January 2023, checked October 15, 2026. <a href="https://doi.org/10.6028/NIST.AI.100-1">https://doi.org/10.6028/NIST.AI.100-1</a> and <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">https://airc.nist.gov/airmf-resources/airmf/5-sec-core/</a></p>
+<h2>Disclosure</h2>
+<p>This article was prepared with AI-assisted research and drafting under human editorial direction. The architecture, operator guidance, fictional example, source interpretation and final wording were reviewed for publication under Jared Mastroianni&#39;s name. The fictional scenario is not evidence of a modSTORAGE or Facily.ai deployment, product feature, customer result or operating outcome.</p>
+<section aria-label="Publication package downloads"><h2>Publication package downloads</h2><ul><li><a href="article.md">article.md</a></li><li><a href="ai-explanation-fidelity-and-action-boundary-card.md">ai-explanation-fidelity-and-action-boundary-card.md</a></li><li><a href="ai-explanation-fidelity-template.csv">ai-explanation-fidelity-template.csv</a></li><li><a href="ai-explanation-fidelity-fictional-example.csv">ai-explanation-fidelity-fictional-example.csv</a></li><li><a href="source-register.csv">source-register.csv</a></li><li><a href="image-notes.md">image-notes.md</a></li><li><a href="051-ai-development-ai-product-discovery-workshop.png">051-ai-development-ai-product-discovery-workshop.png</a></li><li><a href="destination-assignment.md">destination-assignment.md</a></li><li><a href="duplicate-check.md">duplicate-check.md</a></li><li><a href="originality-and-claim-boundary.md">originality-and-claim-boundary.md</a></li><li><a href="review-scores.md">review-scores.md</a></li><li><a href="final-editorial-qa.md">final-editorial-qa.md</a></li><li><a href="assigned-publisher-manifest.md">assigned-publisher-manifest.md</a></li><li><a href="payload-checksums.sha256">payload-checksums.sha256</a></li><li><a href="publisher-manifest.md">publisher-manifest.md</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-decision-variance-release-self-storage/">The AI Gave Three Different Answers. Which One Became the Operating Decision?</a></h3><p>A release-control method for managing run-to-run variance in self-storage AI workflows</p><a href="/writing/ai-decision-variance-release-self-storage/" class="text-link" aria-label="Read the article: The AI Gave Three Different Answers. Which One Became the Operating Decision?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/self-storage-unit-type-data-contract-portfolio/">A 10x10 Is Not a Product Definition</a></h3><p>Build a governed unit-type contract before comparing inventory across self-storage facilities</p><a href="/writing/self-storage-unit-type-data-contract-portfolio/" class="text-link" aria-label="Read the article: A 10x10 Is Not a Product Definition">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-raised-no-alert-decision-coverage/">The AI Raised No Alert. Was Everything Normal?</a></h3><p>Govern the silent side of automated decisions with decision coverage, negative sampling, and proof of execution</p><a href="/writing/ai-raised-no-alert-decision-coverage/" class="text-link" aria-label="Read the article: The AI Raised No Alert. Was Everything Normal?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

@@ -5,13 +5,139 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Thu, 08 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>One Invoice, Six Facilities: The Allocation Ledger Behind Comparable Operating Costs</title>
+      <link>https://jaredmodstorage.github.io/writing/one-invoice-six-facilities-allocation-ledger/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/one-invoice-six-facilities-allocation-ledger/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A shared vendor bill does not become facility-level operating data when someone divides it by six.</description>
+    </item>
+    <item>
+      <title>The Portfolio Total Matches. Which Facilities Are Canceling Each Other Out?</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-total-matches-offsetting-facility-variances/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-total-matches-offsetting-facility-variances/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A zero portfolio variance can conceal missing records at one facility and duplicates at another.</description>
+    </item>
+    <item>
+      <title>The Facility Changed Regions. Did You Rewrite Last Quarter?</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-region-change-historical-attribution/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-region-change-historical-attribution/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A current org chart is not a historical record. Multi-location operators need effective-dated facility membership and explicit attribution views.</description>
+    </item>
+    <item>
+      <title>The AI Explained Its Decision. Did the Explanation Come From the Decision Path?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-explanation-fidelity-self-storage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>A fluent rationale can help a self-storage operator understand a recommendation—or quietly invent a reason the system never used.</description>
+    </item>
+    <item>
+      <title>A 10x10 Is Not a Product Definition</title>
+      <link>https://jaredmodstorage.github.io/writing/self-storage-unit-type-data-contract-portfolio/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/self-storage-unit-type-data-contract-portfolio/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>Build a governed unit-type contract before comparing inventory across self-storage facilities</description>
+    </item>
+    <item>
+      <title>The AI Gave Three Different Answers. Which One Became the Operating Decision?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-decision-variance-release-self-storage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>A release-control method for managing run-to-run variance in self-storage AI workflows</description>
+    </item>
+    <item>
+      <title>Every Site Passed Inspection. Which Checklist Did They Use?</title>
+      <link>https://jaredmodstorage.github.io/writing/checklist-version-control-self-storage-portfolio/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/checklist-version-control-self-storage-portfolio/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A version-control method for comparing facility inspections without turning different questions into one portfolio score</description>
+    </item>
+    <item>
+      <title>The AI Raised No Alert. Was Everything Normal?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-raised-no-alert-decision-coverage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-raised-no-alert-decision-coverage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>Govern the silent side of automated decisions with decision coverage, negative sampling, and proof of execution</description>
+    </item>
+    <item>
+      <title>The Credential Changed. Which Facilities Quietly Stopped Syncing?</title>
+      <link>https://jaredmodstorage.github.io/writing/credential-changed-facility-sync-coverage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/credential-changed-facility-sync-coverage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>Treat integration credential changes as portfolio operating events, not isolated administrator tasks</description>
+    </item>
+    <item>
+      <title>Fourteen Tasks Are Overdue. Are the Facilities Actually Comparable?</title>
+      <link>https://jaredmodstorage.github.io/writing/maintenance-overdue-tasks-comparability-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/maintenance-overdue-tasks-comparability-self-storage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A defensible maintenance comparison starts with the asset, governing basis, trigger, and evidence—not the red number on a dashboard</description>
+    </item>
+    <item>
+      <title>The Alert Names a County. Which Facilities Are Actually in Scope?</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-alert-scope-resolution-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-alert-scope-resolution-self-storage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A multi-location operator needs a governed location record, the full alert geography, and a facility-by-facility resolution before assigning work</description>
+    </item>
+    <item>
+      <title>The Repair Photo Looks Right. Which Facility, Asset, and Visit Does It Belong To?</title>
+      <link>https://jaredmodstorage.github.io/writing/repair-photo-evidence-envelope-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/repair-photo-evidence-envelope-self-storage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A portfolio photo should carry its operating context with it—not borrow certainty from a filename, folder, or dashboard thumbnail</description>
+    </item>
+    <item>
+      <title>The Model Changed Overnight. Did Its Permission to Act Change Too?</title>
+      <link>https://jaredmodstorage.github.io/writing/model-version-action-authority-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/model-version-action-authority-self-storage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>Responsible AI operations require authority to follow an exact release, not a familiar endpoint</description>
+    </item>
+    <item>
+      <title>The Facility Added 38 Units. Did Last Year&apos;s Occupancy Rate Change Too?</title>
+      <link>https://jaredmodstorage.github.io/writing/occupancy-denominator-versioning-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/occupancy-denominator-versioning-self-storage/</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A capacity denominator is a versioned operating record, not a field someone should overwrite</description>
+    </item>
     <item>
       <title>The Alerts Were Muted for Maintenance. Who Turned Them Back On?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-alert-suppression-expiry-reconciliation-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-alert-suppression-expiry-reconciliation-self-storage/</guid>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
       <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>A suppression-expiry and reconciliation system for multi-location self-storage operations</description>
@@ -20,7 +146,7 @@
       <title>The Gate Was Fixed. Which Asset Changed?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-equipment-asset-hierarchy-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-equipment-asset-hierarchy-self-storage/</guid>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
       <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>A portfolio equipment hierarchy for comparing maintenance without flattening systems, components, and replacements into one vague record</description>
@@ -29,7 +155,7 @@
       <title>The Export Says Complete. Which Facility Is Missing?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-export-completeness-receipt-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-export-completeness-receipt-self-storage/</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
       <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>A portfolio extract receipt for proving scope, time, filters, and facility coverage before comparison</description>
@@ -38,7 +164,7 @@
       <title>The Emergency Contact Changed. Which Facility Still Calls the Former Manager?</title>
       <link>https://jaredmodstorage.github.io/writing/emergency-contact-change-reconciliation-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/emergency-contact-change-reconciliation-self-storage/</guid>
-      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
       <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
       <description>A portfolio method for reconciling emergency roles across plans, providers, devices and after-hours call trees without mistaking one edited record for completion.</description>
