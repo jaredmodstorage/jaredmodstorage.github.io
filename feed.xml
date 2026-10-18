@@ -5,8 +5,35 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Alerts Were Muted for Maintenance. Who Turned Them Back On?</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-alert-suppression-expiry-reconciliation-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-alert-suppression-expiry-reconciliation-self-storage/</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A suppression-expiry and reconciliation system for multi-location self-storage operations</description>
+    </item>
+    <item>
+      <title>The Gate Was Fixed. Which Asset Changed?</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-equipment-asset-hierarchy-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-equipment-asset-hierarchy-self-storage/</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A portfolio equipment hierarchy for comparing maintenance without flattening systems, components, and replacements into one vague record</description>
+    </item>
+    <item>
+      <title>The Export Says Complete. Which Facility Is Missing?</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-export-completeness-receipt-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-export-completeness-receipt-self-storage/</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A portfolio extract receipt for proving scope, time, filters, and facility coverage before comparison</description>
+    </item>
     <item>
       <title>The Emergency Contact Changed. Which Facility Still Calls the Former Manager?</title>
       <link>https://jaredmodstorage.github.io/writing/emergency-contact-change-reconciliation-self-storage/</link>
