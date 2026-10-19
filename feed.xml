@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sun, 18 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Customer Asked to Borrow the Ladder. The Answer Needs a Procedure, Not a Favor</title>
+      <link>https://jaredmodstorage.github.io/writing/customer-borrow-facility-ladder-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/customer-borrow-facility-ladder-self-storage/</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A facility ladder is not a courtesy item. Before it changes hands, the manager needs a written use boundary, an identified asset, a condition decision, a responsible custodian and a documented closeout.</description>
+    </item>
     <item>
       <title>One Invoice, Six Facilities: The Allocation Ledger Behind Comparable Operating Costs</title>
       <link>https://jaredmodstorage.github.io/writing/one-invoice-six-facilities-allocation-ledger/</link>
