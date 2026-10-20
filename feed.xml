@@ -8,6 +8,15 @@
     <lastBuildDate>Tue, 20 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Customer Moved Facilities. Did the Old Gate Permission End?</title>
+      <link>https://jaredmodstorage.github.io/writing/cross-facility-access-transition-reconciliation/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/cross-facility-access-transition-reconciliation/</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A cross-facility transfer is not complete when the new unit appears. The portfolio must reconcile the old entitlement, the new entitlement, any approved overlap and the readback from both access boundaries.</description>
+    </item>
+    <item>
       <title>The Exit Sign Is Dark. Treat the Route as Unverified Until the Marking Is Restored</title>
       <link>https://jaredmodstorage.github.io/writing/dark-exit-sign-self-storage-response/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/dark-exit-sign-self-storage-response/</guid>
