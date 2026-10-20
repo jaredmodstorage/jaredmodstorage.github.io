@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Mon, 19 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Exit Sign Is Dark. Treat the Route as Unverified Until the Marking Is Restored</title>
+      <link>https://jaredmodstorage.github.io/writing/dark-exit-sign-self-storage-response/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/dark-exit-sign-self-storage-response/</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>An unlit exit sign is not merely a bulb ticket. It changes what the manager can truthfully say about route visibility, so the response needs an operating boundary, an escalation owner and evidence before release.</description>
+    </item>
     <item>
       <title>The Customer Asked to Borrow the Ladder. The Answer Needs a Procedure, Not a Favor</title>
       <link>https://jaredmodstorage.github.io/writing/customer-borrow-facility-ladder-self-storage/</link>
