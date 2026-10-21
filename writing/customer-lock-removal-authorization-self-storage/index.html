@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DshNwFP_.css" data-rsc-css-href="/_next/static/css/index.DshNwFP_.css" data-precedence="vite-rsc/importer-resources"/><title>Customer Lock Removal: Verify Authority Before Cutting | Jared Mastroianni</title><meta name="description" content="Verify identity, current authority and the exact target before customer lock removal. Preserve hardware custody, replacement-security readback and account reconciliation in one controlled record."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Customer Lock Removal: Verify Authority Before Cutting | Jared Mastroianni"/><meta property="og:description" content="Verify identity, current authority and the exact target before customer lock removal. Preserve hardware custody, replacement-security readback and account reconciliation in one controlled record."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-10-21"/><meta property="article:modified_time" content="2026-10-21"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/061-industry-leadership-drive-aisle-walk.png"/><meta property="og:image:width" content="1536"/><meta property="og:image:height" content="1024"/><meta property="og:image:alt" content="Three self-storage leaders walk an exterior drive aisle beside green roll-up unit doors."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Customer Lock Removal: Verify Authority Before Cutting | Jared Mastroianni"/><meta name="twitter:description" content="Verify identity, current authority and the exact target before customer lock removal. Preserve hardware custody, replacement-security readback and account reconciliation in one controlled record."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/061-industry-leadership-drive-aisle-walk.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Customer Wants the Lock Cut. Verify Authority Before the Bolt Cutter Comes Out","datePublished":"2026-10-21","dateModified":"2026-10-21","image":{"@id":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/#lead-image"},"description":"Verify identity, current authority and the exact target before customer lock removal. Preserve hardware custody, replacement-security readback and account reconciliation in one controlled record.","about":["Self-storage operations","The Customer Wants the Lock Cut. Verify Authority Before the Bolt Cutter Comes Out"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/#lead-image","name":"The Customer Wants the Lock Cut. Verify Authority Before the Bolt Cutter Comes Out","caption":"Lock-removal controls should be tested against the physical facility, not left as a counter script. Non-documentary editorial illustration; not the fictional Red Oak Bend scenario, a lock-removal event or a verified facility condition.","description":"Three self-storage leaders walk an exterior drive aisle beside green roll-up unit doors. Jared-owned editorial material; generation method not recorded; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/061-industry-leadership-drive-aisle-walk.png","width":1536,"height":1024,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed non-documentary editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"© 2024 Jared James Mastroianni. All rights reserved.","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Customer Wants the Lock Cut. Verify Authority Before the Bolt Cutter Comes Out","item":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Customer Wants the Lock Cut. Verify Authority Before the Bolt Cutter Comes Out</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Portfolio operating systems<!-- --> · <time dateTime="2026-10-21">21 October 2026</time></p><h1>The Customer Wants the Lock Cut. Verify Authority Before the Bolt Cutter Comes Out</h1><p class="lede">A lock-removal request is a security, custody and identity event. The manager needs one controlled record that separates who is asking, what they may authorize, which lock may be removed and what proves the unit was secured again.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>10 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/images/jared-mastroianni/customer-lock-removal-authorization-self-storage-display.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Three self-storage leaders walk an exterior drive aisle beside green roll-up unit doors."><figcaption>Lock-removal controls should be tested against the physical facility, not left as a counter script. Non-documentary editorial illustration; not the fictional Red Oak Bend scenario, a lock-removal event or a verified facility condition.</figcaption></figure><p>Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni’s byline. Fictional examples are instructional, not observed results.</p><!-- BODY START -->
+
+<p>A customer walks into the office, places an identification card on the counter and says, “I lost my key. Can you cut the lock?”</p>
+<p>The request sounds routine. The consequence is not. Removing a lock changes the physical security of a specific rented space. It may expose property, defeat a facility control, affect an account restriction and create a custody question about the removed hardware. A friendly face, a familiar name or possession of a gate code does not answer all of those questions.</p>
+<p>The manager needs to establish four separate facts before work begins:</p>
+<ol>
+<li>Which account and unit are involved?</li>
+<li>Who is making the request, and how was that identity verified through the operator’s approved process?</li>
+<li>Does that person have current authority to request this exact lock action?</li>
+<li>What conditions must be true before the unit is released after the cut?</li>
+</ol>
+<p>If any answer is unknown, the work is not ready.</p>
+<h2>Record the request before reaching for a tool</h2>
+<p>Open a lock-removal event and give it a unique identifier. Record the request time, channel, claimed customer name, account reference, unit identifier, requested action and the employee receiving it. If the customer is at the counter, record that fact. If the request arrived by phone or message, record the approved channel actually used.</p>
+<p>Do not collapse “customer called” into “authorized.” A phone number shown on caller ID, an email address typed into a message or a government ID presented at the desk is an input to the company’s verification process. It is not, by itself, proof of contractual authority over a unit.</p>
+<p>NIST’s current digital identity guidance separates identity resolution, evidence validation and identity verification. It also says that entitlement to a benefit or service is outside the scope of identity proofing. That distinction transfers well to facility operations: confirming who a person is and determining what that person may authorize are two different decisions.</p>
+<p>Use the identity and account-verification method already approved by the operator. Do not improvise security questions, copy more personal information than the process requires, or treat staff recognition as a universal exception. If the prescribed process cannot be completed, route the case to the named exception owner.</p>
+<h2>Check authority at the moment of action</h2>
+<p>Once identity is verified, establish the requester’s current relationship to the account. The name on an ID may match a stored name while the authority state has changed. The unit could be subject to a company overlock, delinquency process, lien activity, legal hold, incident preservation, deceased-tenant procedure, court order, ownership dispute or another restriction.</p>
+<p>The frontline manager should not decide those conflicts from memory. Read the current account state and the controlling company procedure. Identify the authority source used for the decision: for example, the current rental record plus the operator’s approved customer request workflow. Record who approved the work and when.</p>
+<p>Keep the scope exact. Authority to enter the property does not necessarily authorize lock removal. Authority to remove one customer-supplied padlock does not authorize removal of a facility overlock, a cylinder, a hasp or any other device. Authority to cut a lock does not authorize staff to enter the unit, inventory property, move contents or dispose of anything found inside.</p>
+<p>If the requester is an employee, family member, mover, contractor, attorney, estate representative or other third party, use the separate third-party or special-circumstance procedure. Do not stretch an ordinary lost-key workflow to cover a different legal or operational relationship.</p>
+<h2>Match the authorization to the physical target</h2>
+<p>Before anyone touches the door, reconcile the record to the facility.</p>
+<p>Verify the facility, building, aisle and unit identifier from the approved source. Compare those facts with the physical labels. Identify the exact locking device to be removed and who owns or controls it. Record whether another lock or overlock is present. Photograph the closed door and target device if policy permits, keeping adjacent unit details and customer contents out of the frame as much as practical.</p>
+<p>Use a two-person readback where the company requires it: one person states the event ID, unit and target lock; the authorized worker confirms them at the door. If the number is missing, inconsistent or obstructed, stop. A work order for C-214 cannot be “close enough” to C-241.</p>
+<p>The authorization should be single-purpose and time-bounded. It should name the unit, target device, authorized worker or vendor, method category, start window, stop conditions and disposition of the removed lock. If the scope changes, create or amend the authorization through the approved process. Do not expand it verbally in the drive aisle.</p>
+<h2>Control the work area, not just the cut</h2>
+<p>Lock removal can involve hand tools or powered equipment. OSHA notes that hand and power tools can cause severe injury when used or maintained improperly and that workers should be trained in proper use, use the right tool, inspect it before use and follow manufacturer instructions. The article is not a cutting procedure. The operator’s safety program must determine who is qualified, which tool is appropriate, what personal protective equipment and area controls are required, and when a specialist is needed.</p>
+<p>Keep customers and uninvolved employees outside the work boundary. Account for adjacent doors, vehicles, combustible material and the path of fragments or sparks when the approved method presents those hazards. If conditions do not match the authorization or the safe-work plan, stop and escalate.</p>
+<p>The customer’s impatience is not a reason to skip the boundary. Neither is a vendor’s arrival. A service appointment is not permission to work on an unverified target.</p>
+<p>Preserve the state immediately before removal: door closed, latch position observed, target lock identified, other controls present and work area established. Use observations, not conclusions. “Silver padlock on unit C-214 matched authorization LR-1021-004” is useful. “Everything looked fine” is not.</p>
+<h2>Keep custody of the removed hardware explicit</h2>
+<p>The moment the device comes off, record the time, person performing the work, method category and result. If the lock is retained, bag or tag it under the operator’s procedure and record the custody location. If it is handed to the verified customer, record the recipient and time. If policy authorizes disposal, record the policy reference and disposition.</p>
+<p>Do not assume the removed lock has no value. It may matter to the customer, an insurer, an incident review or a later dispute. A simple custody field prevents the afternoon shift from guessing whether the lock was returned, discarded or left on a cart.</p>
+<p>Staff should not cross the threshold or handle contents merely because the lock is gone. If the opened doorway reveals an apparent emergency, prohibited condition, damage or other exception, stop and use the applicable response procedure. The lock-removal authorization does not become an inspection authorization.</p>
+<h2>Release the unit only after a new security state is verified</h2>
+<p>The work is not complete when the old lock falls away. The unit is now in a transition state.</p>
+<p>Record who supplies and applies the replacement lock or cylinder. Follow the company’s policy on whether staff may handle a customer lock, issue a temporary device or require the customer to secure the unit. Then perform the assigned physical readback: the door is closed, the latch is in the intended position, the replacement device is present and the required check was completed.</p>
+<p>Use precise language. “Customer applied replacement disc lock; manager observed door closed and completed the site’s assigned pull-check at 10:26 a.m.” is stronger than “unit secured.” It says what happened without claiming that the facility guarantees the lock, the door or the contents against every threat.</p>
+<p>Reconcile the physical result with the account. Confirm whether a facility overlock or restriction remains, whether an access credential should change, whether a fee or work order needs disposition, and whether a customer notice is required. Close only the fields supported by evidence. A completed cut does not automatically clear a delinquency restriction, resolve an ownership dispute or prove the condition of property inside.</p>
+<h2>A fictional example</h2>
+<p><strong>Everything in the scenario below—including the facility, people, identifiers, times, conditions and outcome—is fictional and appears only to demonstrate the method.</strong></p>
+<p>At fictional Red Oak Bend Storage, fictional customer Dana Mercer arrives at 9:48 a.m. and asks for help removing a lost-key padlock from fictional unit C-214. Manager Luis Arden opens event <code>FIC-LR-1021-004</code> and completes the company’s fictional in-person identity and account workflow. The account record names Dana as the current renter, but it also shows a restriction flag whose meaning is not clear from the counter view.</p>
+<p>Luis does not interpret the flag. He escalates to the fictional regional operations owner, who checks the underlying record and confirms that the flag relates to an already-closed maintenance note, not an access or lien restriction. The owner records approval for one customer-owned padlock on C-214 between 10:10 and 10:40 a.m. The authorization does not permit unit entry, property handling, facility-overlock removal or account changes.</p>
+<p>At the door, Luis and the fictional approved technician read back the unit and target device. They document the closed-door condition and establish the approved work boundary. The technician removes the named lock under the fictional company safety procedure at 10:19 a.m. and hands it to Dana, which Luis records.</p>
+<p>Dana applies a new lock. Luis completes the assigned closed-door and latch readback at 10:26 a.m., records the new physical state, reconciles the account note and closes the event at 10:31 a.m.</p>
+<p>The record does not prove ownership of the stored goods, guarantee their condition, establish legal compliance or claim that the new lock cannot be defeated. It shows the verified identity process, authority source, exact target, approved work, hardware disposition and observed return state.</p>
+<h2>Use one card from request through release</h2>
+<p>The accompanying <strong>Customer Lock-Removal Authorization and Custody Card</strong> keeps the event together. Its most important fields are not the tool or the fee. They are requester identity state, authority source, current restriction state, exact target device, authorized worker, prohibited actions, pre-work evidence, removed-hardware disposition, replacement-security readback and closure owner.</p>
+<p>Print it for the counter or build the same fields into the operating system. Do not let a blank field silently become approval. Use explicit states such as <code>pending</code>, <code>verified</code>, <code>approved</code>, <code>blocked</code>, <code>completed</code> and <code>not_applicable</code>.</p>
+<p>The next time a customer says, “Just cut it,” the manager should be able to move quickly without guessing. Speed comes from a clear path: verify the person, verify the authority, match the physical target, control the work, preserve custody and prove the unit’s next security state.</p>
+<p>That is not bureaucracy around a bolt cutter. It is the operating discipline that keeps a simple service request from becoming an irreversible security mistake.</p>
+<!-- BODY END -->
+
+<h2>Sources</h2>
+<ul>
+<li><a href="https://pages.nist.gov/800-63-4/sp800-63a.html">NIST Special Publication 800-63A-4 — Digital Identity Guidelines: Identity Proofing and Enrollment</a>, National Institute of Standards and Technology.</li>
+<li><a href="https://pages.nist.gov/800-63-4/sp800-63b.html">NIST Special Publication 800-63B-4 — Digital Identity Guidelines: Authentication and Authenticator Management</a>, National Institute of Standards and Technology.</li>
+<li><a href="https://www.osha.gov/hand-power-tools">Hand and Power Tools</a>, Occupational Safety and Health Administration.</li>
+<li><a href="https://www.osha.gov/Publications/osha3080.pdf">Hand and Power Tools, OSHA 3080</a>, Occupational Safety and Health Administration.</li>
+</ul>
+<h2>Disclosure</h2>
+<p>Red Oak Bend Storage, event <code>FIC-LR-1021-004</code>, Dana Mercer, Luis Arden, unit C-214 and every related person, identifier, time, condition, decision and outcome are fictional teaching examples. They do not describe a real facility, customer, employee, technician, deployment, performance result, legal determination or security outcome. NIST SP 800-63A-4 and SP 800-63B-4 govern digital identity services; this article uses their separation of identity proofing, authentication and entitlement only as design input for an operator workflow. This article is not legal, lien, security, tool-safety or contractual advice. Operators must follow their rental documents, company policies, qualified safety authorities and applicable law.</p>
+<section aria-label="Publication package downloads"><h2>Publication package downloads</h2><ul><li><a href="article.md">article.md</a></li><li><a href="customer-lock-removal-authorization-and-custody-card.md">customer-lock-removal-authorization-and-custody-card.md</a></li><li><a href="customer-lock-removal-template.csv">customer-lock-removal-template.csv</a></li><li><a href="customer-lock-removal-fictional-example.csv">customer-lock-removal-fictional-example.csv</a></li><li><a href="source-register.csv">source-register.csv</a></li><li><a href="image-notes.md">image-notes.md</a></li><li><a href="061-industry-leadership-drive-aisle-walk.png">061-industry-leadership-drive-aisle-walk.png</a></li><li><a href="destination-assignment.md">destination-assignment.md</a></li><li><a href="duplicate-check.md">duplicate-check.md</a></li><li><a href="originality-and-claim-boundary.md">originality-and-claim-boundary.md</a></li><li><a href="review-scores.md">review-scores.md</a></li><li><a href="final-editorial-qa.md">final-editorial-qa.md</a></li><li><a href="assigned-publisher-manifest.md">assigned-publisher-manifest.md</a></li><li><a href="payload-checksums.sha256">payload-checksums.sha256</a></li><li><a href="publisher-manifest.md">publisher-manifest.md</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/cross-facility-access-transition-reconciliation/">The Customer Moved Facilities. Did the Old Gate Permission End?</a></h3><p>A cross-facility transfer is not complete when the new unit appears. The portfolio must reconcile the old entitlement, the new entitlement, any approved overlap and the readback from both access boundaries.</p><a href="/writing/cross-facility-access-transition-reconciliation/" class="text-link" aria-label="Read the article: The Customer Moved Facilities. Did the Old Gate Permission End?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/dark-exit-sign-self-storage-response/">The Exit Sign Is Dark. Treat the Route as Unverified Until the Marking Is Restored</a></h3><p>An unlit exit sign is not merely a bulb ticket. It changes what the manager can truthfully say about route visibility, so the response needs an operating boundary, an escalation owner and evidence before release.</p><a href="/writing/dark-exit-sign-self-storage-response/" class="text-link" aria-label="Read the article: The Exit Sign Is Dark. Treat the Route as Unverified Until the Marking Is Restored">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/customer-borrow-facility-ladder-self-storage/">The Customer Asked to Borrow the Ladder. The Answer Needs a Procedure, Not a Favor</a></h3><p>A facility ladder is not a courtesy item. Before it changes hands, the manager needs a written use boundary, an identified asset, a condition decision, a responsible custodian and a documented closeout.</p><a href="/writing/customer-borrow-facility-ladder-self-storage/" class="text-link" aria-label="Read the article: The Customer Asked to Borrow the Ladder. The Answer Needs a Procedure, Not a Favor">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
