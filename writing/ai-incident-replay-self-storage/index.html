@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DshNwFP_.css" data-rsc-css-href="/_next/static/css/index.DshNwFP_.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Made the Wrong Call. Can You Replay It Without Touching the Facility? | Jared Mastroianni</title><meta name="description" content="An incident replay should reconstruct what an AI system saw, decided and attempted without sending a second message, changing a second record or rewriting the evidence from the first run."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Made the Wrong Call. Can You Replay It Without Touching the Facility? | Jared Mastroianni"/><meta property="og:description" content="An incident replay should reconstruct what an AI system saw, decided and attempted without sending a second message, changing a second record or rewriting the evidence from the first run."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-10-22"/><meta property="article:modified_time" content="2026-10-22"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/063-operations-metrics-roundtable.png"/><meta property="og:image:width" content="1536"/><meta property="og:image:height" content="1024"/><meta property="og:image:alt" content="Jared Mastroianni and three colleagues compare operating records around a conference table overlooking a self-storage facility."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Made the Wrong Call. Can You Replay It Without Touching the Facility? | Jared Mastroianni"/><meta name="twitter:description" content="An incident replay should reconstruct what an AI system saw, decided and attempted without sending a second message, changing a second record or rewriting the evidence from the first run."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/063-operations-metrics-roundtable.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Made the Wrong Call. Can You Replay It Without Touching the Facility?","datePublished":"2026-10-22","dateModified":"2026-10-22","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/#lead-image"},"description":"An incident replay should reconstruct what an AI system saw, decided and attempted without sending a second message, changing a second record or rewriting the evidence from the first run.","about":["Self-storage operations","The AI Made the Wrong Call. Can You Replay It Without Touching the Facility?"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/#lead-image","name":"The AI Made the Wrong Call. Can You Replay It Without Touching the Facility?","caption":"An AI incident review should compare the original evidence, execution path and replay results without changing the facility record. Editorial image; not documentary evidence of a deployment, incident or result. Does not depict Harbor Vale, a customer event or a production trace.","description":"Jared Mastroianni and three colleagues compare operating records around a conference table overlooking a self-storage facility. Jared-owned editorial material; generation method not recorded; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/063-operations-metrics-roundtable.png","width":1536,"height":1024,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed non-documentary editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"© 2024 Jared James Mastroianni. All rights reserved.","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Accountable automation","item":"https://jaredmodstorage.github.io/writing/topics/automation/"},{"@type":"ListItem","position":3,"name":"The AI Made the Wrong Call. Can You Replay It Without Touching the Facility?","item":"https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/automation/">Accountable automation</a></li><li aria-current="page">The AI Made the Wrong Call. Can You Replay It Without Touching the Facility?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Responsible AI architecture<!-- --> · <time dateTime="2026-10-22">22 October 2026</time></p><h1>The AI Made the Wrong Call. Can You Replay It Without Touching the Facility?</h1><p class="lede">An incident replay should reconstruct what an AI system saw, decided and attempted without sending a second message, changing a second record or rewriting the evidence from the first run.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>11 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/images/jared-mastroianni/ai-incident-replay-self-storage-display.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Jared Mastroianni and three colleagues compare operating records around a conference table overlooking a self-storage facility."><figcaption>An AI incident review should compare the original evidence, execution path and replay results without changing the facility record. Editorial image; not documentary evidence of a deployment, incident or result. Does not depict Harbor Vale, a customer event or a production trace.</figcaption></figure><p>Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni’s byline. Fictional examples are instructional, not observed results.</p><!-- BODY START -->
+
+<p>An artificial intelligence assistant routes a gate-repair note to the normal maintenance queue. The note later turns out to contain a condition that should have triggered immediate human review. The team wants to know why the system missed it.</p>
+<p>The obvious request is: run it again.</p>
+<p>That request is more dangerous than it sounds. If the replay uses current facility records, it is no longer reconstructing the original run. If it calls live tools, it may create another work order, send another message or change the queue again. If the model returns a different answer, the team may treat the new output as proof that the old answer was impossible. If the replay replaces missing evidence with today&#39;s state, it can produce a clean explanation for a run that never actually occurred.</p>
+<p>A responsible replay architecture must separate four jobs: preserve the original event, reconstruct the original execution context, run controlled experiments and decide what may change in production. Those jobs can inform one another. They cannot be collapsed into a button labeled <strong>retry</strong>.</p>
+<h2>Preserve the incident before improving it</h2>
+<p>The first response to a disputed AI decision should be preservation, not prompt editing.</p>
+<p>Freeze the production trace identifiers, decision-build identity, model and deployment references, material generation settings, system and task instructions, retrieved record identities, admitted context, tool schemas, policy version, human-review state, tool requests, provider receipts, governing-source readback and timestamps. Preserve the original output exactly as emitted. If a field was not captured, mark it unavailable. Do not reconstruct an absent value from memory and place it into the preserved record.</p>
+<p>This distinction matters because an operating incident contains several kinds of evidence:</p>
+<ul>
+<li>a production record observed during the original run;</li>
+<li>a protected snapshot or digest retained from that run;</li>
+<li>a current source record observed later;</li>
+<li>a deterministic reconstruction from retained inputs;</li>
+<li>a new model-generated result from a replay; and</li>
+<li>a human interpretation of the difference.</li>
+</ul>
+<p>They are not interchangeable. A current work-order status may help explain what happened after the decision. It does not prove what the model could see when the decision was made.</p>
+<p>NIST AI 800-4 describes post-deployment monitoring as necessary in part because AI outputs may vary under the same input conditions and because deployed systems include many interacting components.[^1] The report maps monitoring challenges; it does not prescribe this replay design. Its practical implication for operators is narrower: the production event cannot be reduced to the model&#39;s final sentence.</p>
+<h2>Build a replay bundle, not a screenshot</h2>
+<p>A screenshot of an answer preserves appearance. A replay bundle preserves the dependencies needed to investigate behavior.</p>
+<p>For one disputed decision, the bundle should include:</p>
+<ol>
+<li><strong>Incident identity:</strong> incident ID, production decision ID, trace ID, facility and workflow scope, discovery time and preservation owner.</li>
+<li><strong>Decision build:</strong> model reference, instructions, retrieval configuration, semantic contract, policy, tool definitions and human-review rule active for that run.</li>
+<li><strong>Input evidence:</strong> exact submitted input, source-record references, protected snapshots or digests, observation times, freshness state, transformations and omitted or unavailable fields.</li>
+<li><strong>Execution path:</strong> retrieval calls, candidate records, admitted records, ordering, compression, truncation, model request, model response, parser results, policy decisions and tool requests.</li>
+<li><strong>Side effects:</strong> every attempted action, idempotency key, provider receipt, authoritative readback and unresolved effect.</li>
+<li><strong>Environment:</strong> service versions, regional or tenant configuration, time zone, clocks, feature flags, dependency versions and known provider-side uncertainty.</li>
+<li><strong>Integrity:</strong> bundle digest, storage location, access restrictions, retention rule and chain of custody.</li>
+</ol>
+<p>W3C PROV-O models provenance using entities, activities and agents, including relationships such as generation, use and attribution.[^2] A facility operator does not need to adopt the full ontology to benefit from the discipline. The replay bundle should let a reviewer distinguish the records used, the activities performed and the people or systems responsible for them.</p>
+<p>Do not put unrestricted tenant, payment, access or employee content into a broadly readable debugging archive. Preserve references, digests and protected snapshots under the same or stronger access controls as the production source. Reproducibility is not permission to duplicate sensitive evidence everywhere.</p>
+<h2>Quarantine the replay from operating authority</h2>
+<p>The safest replay environment has no path to production side effects.</p>
+<p>Replace live tools with recorded-response fixtures or simulators. Use a separate identity that cannot send a customer communication, create or close a real work order, change access, post a charge, alter a source record, notify a vendor or publish a claim. Block outbound routes by default. If a tool call is part of the behavior under investigation, record the proposed call and evaluate it against the captured schema; do not deliver it to the production endpoint.</p>
+<p>This is stronger than asking the model not to act. A prompt is not a network boundary. A dry-run flag is not enough if a downstream connector ignores it. A replay service should be technically unable to exercise production authority, and its outputs should carry a visible <code>replay_only</code> state that downstream systems reject.</p>
+<p>Copying the incident into a staging environment also requires care. Staging may have different facility mappings, policy bundles, user roles, caches or tool schemas. Record those differences. The goal is not to make staging look generally similar. It is to know which parts of the original path can be reproduced and which remain unknown.</p>
+<p>OpenTelemetry defines traces as collections of spans that represent operations, with events and links available for additional relationships.[^3] That structure can connect retrieval, model and tool activity. It does not, by itself, preserve prompt content, source authority, policy meaning, facility truth or the right to replay sensitive records. Trace completeness is an implementation question, not a conclusion to assume.</p>
+<h2>Distinguish reconstruction from rerun</h2>
+<p>Teams often say “replay” when they mean one of several different tests. Give each mode a separate disposition.</p>
+<p><strong>Reconstruction</strong> rebuilds the recorded path from immutable artifacts without invoking the model or live tools. It asks whether the team can account for what was submitted, what rules were active and what effects were attempted.</p>
+<p><strong>Same-build rerun</strong> submits the preserved input to the closest available copy of the original decision build inside the isolated environment. It asks whether that build can produce the same or a materially different result. It does not prove what happened in production.</p>
+<p><strong>Repeated-run test</strong> executes the same isolated request multiple times to characterize output variation. NIST AI 800-3 notes that large-language-model evaluations commonly involve randomness and that even zero-temperature sampling does not ensure full determinism.[^4] The publication addresses evaluation statistics, not incident replay. The applicable lesson is that one matching rerun or one divergent rerun is not a sufficient estimate of system behavior.</p>
+<p><strong>Counterfactual test</strong> changes one declared dependency: a corrected source record, revised instruction, new policy, alternative context assembly or successor model. It asks what the changed system does. Its result belongs to the new test configuration, not to the production history.</p>
+<p>Label every output with the replay mode, build identity, input-bundle digest, changed variables, run number, execution time and isolation proof. Otherwise, a helpful counterfactual can later be mistaken for evidence from the original event.</p>
+<h2>Compare at control points, not only at the answer</h2>
+<p>Two runs can end with the same recommendation for different reasons. They can also diverge long before the final output.</p>
+<p>Compare the original and replay at each control point:</p>
+<ul>
+<li>Which source records were eligible, retrieved, admitted and submitted?</li>
+<li>Were records ordered, compressed or truncated differently?</li>
+<li>Did the same instruction and semantic contract apply?</li>
+<li>Did the model return the same structured fields before formatting?</li>
+<li>Did parsing, validation or policy logic change the disposition?</li>
+<li>Was the same human-review requirement applied?</li>
+<li>Did the workflow propose the same tool and arguments?</li>
+<li>Did any downstream system accept, reject or transform the request?</li>
+<li>What did the governing source show after the original attempt?</li>
+</ul>
+<p>The comparison should produce a delta record, not a narrative alone. Classify each difference as reproduced, explained, unexplained, unavailable or outside the replay boundary. A human reviewer may interpret the operational significance, but the system should retain the underlying evidence and uncertainty.</p>
+<p>NIST&#39;s AI Risk Management Framework calls for production monitoring and for incident response, recovery and change-management processes to be documented.[^5] The framework is voluntary and under revision. It supports the lifecycle discipline, not the specific fields in this article&#39;s tool.</p>
+<h2>A fix is not a finding</h2>
+<p>Incident analysis often discovers an obvious improvement: a missing document should be added, a handback rule tightened or a parser corrected. Make the change, but do not let the new behavior overwrite the incident finding.</p>
+<p>Keep three conclusions separate:</p>
+<ol>
+<li><strong>Historical finding:</strong> what the retained evidence supports about the production run.</li>
+<li><strong>Replay finding:</strong> what happened in a named isolated reconstruction or experiment.</li>
+<li><strong>Change decision:</strong> what the organization authorizes for a future build, including evaluation, scope, release and monitoring.</li>
+</ol>
+<p>A successful counterfactual does not prove the repair is ready for production. It may solve the incident case while harming other cases. A failed reproduction does not prove the incident report was wrong. The original provider state may be unavailable, a dependency may have changed or the production record may be incomplete.</p>
+<p>The production correction should therefore travel through the normal release process. New prompts, retrieval rules, policies, models or tool definitions need their own evaluation and approval. Open work affected by the incident needs a bounded review. Prior communications, access effects or accounting entries do not reverse themselves because a replay found a better answer.</p>
+<h2>A fictional Harbor Vale replay</h2>
+<p>The following example is entirely fictional. Harbor Vale Storage Cooperative, its facilities, people, systems, records, identifiers, times and results are invented teaching material.</p>
+<p>A fictional maintenance-triage assistant assigns decision <code>HVS-D-2048</code> to the normal queue. A manager later finds that one note included the phrase “gate reverses after contact.” The operator&#39;s fictional policy required human safety review when that condition was present.</p>
+<p>The preservation owner freezes the decision build, submitted context, retrieval list, policy bundle, structured model response and queue-write receipt. The trace shows that the source note was retrieved but omitted during context compression. The original model request therefore did not contain the condition. That is an observed trace finding, not a model explanation.</p>
+<p>The team creates replay bundle <code>HVS-RB-031</code> and moves it into an isolated environment with no production credentials. A reconstruction reproduces the context manifest and confirms the omission. A same-build rerun with the exact submitted context again returns the normal queue in four of five fictional trials and returns handback once. Those invented results describe only the teaching scenario.</p>
+<p>A counterfactual then changes one variable: the context assembler marks gate-contact language as non-droppable. Five fictional tests now hand back to human review. The team records that as evidence for evaluating a candidate build, not proof of a repaired facility outcome. It separately reviews the real-world work item represented in the fictional scenario and requires governing-source readback before closure.</p>
+<p>The replay did not touch the facility, rewrite the original trace or turn a better second answer into a cleaner first history.</p>
+<h2>Use the replay record before the next incident</h2>
+<p>The accompanying <strong>AI Incident Replay and Isolation Record</strong> is both a preparation checklist and an incident worksheet. It forces the team to identify the original evidence, preserved dependencies, isolation controls, replay mode, changed variables, run results, control-point deltas, unresolved gaps and production-release boundary.</p>
+<p>Test it before a serious incident. Select one low-consequence historical decision, attempt a reconstruction and confirm that replay credentials cannot reach a production tool. If the team cannot identify the submitted context, policy version or downstream effect, that is a monitoring gap to fix now. If the isolated runner can still send a message or write a work order, that is an authority gap.</p>
+<p>The purpose of replay is not to make the AI give the answer the team wishes it had given. It is to preserve an honest production history, learn from a controlled experiment and improve the next build without causing a second operating event.</p>
+<!-- BODY END -->
+
+<h2>Practical tool</h2>
+<ul>
+<li><a href="ai-incident-replay-and-isolation-record.md">AI Incident Replay and Isolation Record — operator guide</a></li>
+<li><a href="ai-incident-replay-template.csv">Blank CSV template</a></li>
+<li><a href="ai-incident-replay-fictional-example.csv">Explicitly fictional worked example</a></li>
+</ul>
+<h2>Sources</h2>
+<p>[^1]: National Institute of Standards and Technology, <em>Challenges to the Monitoring of Deployed AI Systems</em>, NIST AI 800-4, March 2026; accessed October 22, 2026. <a href="https://doi.org/10.6028/NIST.AI.800-4">https://doi.org/10.6028/NIST.AI.800-4</a>
+[^2]: World Wide Web Consortium, <em>PROV-O: The PROV Ontology</em>, W3C Recommendation, April 30, 2013; accessed October 22, 2026. <a href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a>
+[^3]: OpenTelemetry, <em>Tracing API</em>, stable official specification page; accessed October 22, 2026. <a href="https://opentelemetry.io/docs/specs/otel/trace/api/">https://opentelemetry.io/docs/specs/otel/trace/api/</a>
+[^4]: National Institute of Standards and Technology, <em>Expanding the AI Evaluation Toolbox with Statistical Models</em>, NIST AI 800-3, February 2026; accessed October 22, 2026. <a href="https://doi.org/10.6028/NIST.AI.800-3">https://doi.org/10.6028/NIST.AI.800-3</a>
+[^5]: National Institute of Standards and Technology, <em>AI Risk Management Framework Core</em>, including Measure 2.4 and Manage 4.1–4.3; accessed October 22, 2026. <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">https://airc.nist.gov/airmf-resources/airmf/5-sec-core/</a></p>
+<h2>Author</h2>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai.</p>
+<h2>Editorial production note</h2>
+<p>Research, drafting, structured-tool production and QA were completed with AI assistance under Jared Mastroianni&#39;s direction. The final article remains bounded by the cited sources, the explicit fictional-example labels and the claim limitations recorded in this package.</p>
+<section aria-label="Publication package downloads"><h2>Publication package downloads</h2><ul><li><a href="article.md">article.md</a></li><li><a href="ai-incident-replay-and-isolation-record.md">ai-incident-replay-and-isolation-record.md</a></li><li><a href="ai-incident-replay-template.csv">ai-incident-replay-template.csv</a></li><li><a href="ai-incident-replay-fictional-example.csv">ai-incident-replay-fictional-example.csv</a></li><li><a href="source-register.csv">source-register.csv</a></li><li><a href="image-notes.md">image-notes.md</a></li><li><a href="063-operations-metrics-roundtable.png">063-operations-metrics-roundtable.png</a></li><li><a href="destination-assignment.md">destination-assignment.md</a></li><li><a href="duplicate-check.md">duplicate-check.md</a></li><li><a href="originality-and-claim-boundary.md">originality-and-claim-boundary.md</a></li><li><a href="review-scores.md">review-scores.md</a></li><li><a href="final-editorial-qa.md">final-editorial-qa.md</a></li><li><a href="assigned-publisher-manifest.md">assigned-publisher-manifest.md</a></li><li><a href="payload-checksums.sha256">payload-checksums.sha256</a></li><li><a href="publisher-manifest.md">publisher-manifest.md</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-derived-claim-provenance-recursion-gate-self-storage/">The AI Cited Another AI Summary. Where Did the Facility Evidence Go?</a></h3><p>Model-generated summaries can move quickly through an operating stack until a derived sentence looks like a direct facility fact. A provenance gate should preserve the route back to authoritative evidence—and stop when that route disappears.</p><a href="/writing/ai-derived-claim-provenance-recursion-gate-self-storage/" class="text-link" aria-label="Read the article: The AI Cited Another AI Summary. Where Did the Facility Evidence Go?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/part-number-matches-approved-facility-asset/">The Part Number Matches. Is It Approved for This Facility and Asset?</a></h3><p>A portfolio spare-parts program becomes reliable only when item identity, applicability evidence, revision, custody, installation authority and post-work reconciliation travel together.</p><a href="/writing/part-number-matches-approved-facility-asset/" class="text-link" aria-label="Read the article: The Part Number Matches. Is It Approved for This Facility and Asset?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-explanation-fidelity-self-storage/">The AI Explained Its Decision. Did the Explanation Come From the Decision Path?</a></h3><p>An explanation is not the decision record</p><a href="/writing/ai-explanation-fidelity-self-storage/" class="text-link" aria-label="Read the article: The AI Explained Its Decision. Did the Explanation Come From the Decision Path?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

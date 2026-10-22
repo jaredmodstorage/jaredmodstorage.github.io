@@ -8,6 +8,15 @@
     <lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The AI Made the Wrong Call. Can You Replay It Without Touching the Facility?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-incident-replay-self-storage/</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>An incident replay should reconstruct what an AI system saw, decided and attempted without sending a second message, changing a second record or rewriting the evidence from the first run.</description>
+    </item>
+    <item>
       <title>The Part Number Matches. Is It Approved for This Facility and Asset?</title>
       <link>https://jaredmodstorage.github.io/writing/part-number-matches-approved-facility-asset/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/part-number-matches-approved-facility-asset/</guid>
