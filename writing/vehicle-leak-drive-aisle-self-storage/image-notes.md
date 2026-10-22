@@ -1,0 +1,22 @@
+# Governed image record
+
+- **Image ID:** PHOTO-STORYLINES-067
+- **Filename:** `067-facility-curb-appeal-walkthrough.png`
+- **Source library:** `/Users/jared/Desktop/Image Libraries/Personal/Industry Leadership/`
+- **Library title:** Facility Curb-Appeal Walkthrough
+- **Recorded business focus:** modSTORAGE property presentation
+- **Recorded storyline:** The group reviews how landscaping, facade condition, lighting, and the arrival sequence shape customer confidence before anyone reaches the office.
+- **Recorded location:** Charlotte, North Carolina, United States
+- **Use in this article:** Exterior operating context for inspecting the arrival area and vehicle route; not evidence of a leak, spill, response, vehicle, facility condition or result.
+- **Alt text:** A self-storage leadership team reviews the exterior arrival area of a facility.
+- **Caption:** Exterior operating conditions should be reviewed where customers, vehicles and water paths meet. Editorial image; provenance and non-documentary-use limits are recorded in the package.
+- **Crop:** Preserve the full horizontal scene; use a centered 16:9 or original-aspect crop without removing people, facility context or visible arrival-area cues.
+- **Classification:** Editorial, non-documentary governed library image. The selected CSV does not state a raster-generation method; this package does not invent one.
+- **Dimensions:** 1,536 × 1,024 pixels, RGB PNG.
+- **SHA-256:** `a891982d91c99de143544bea30f192b8341e7e16200a3f279fb11ab08142ea3a`.
+- **Creator and copyright owner:** Jared James Mastroianni.
+- **Copyright notice:** © 2025 Jared James Mastroianni. All rights reserved.
+- **Rights link:** https://jaredmodstorage.github.io/assets/
+- **Use-request link:** https://jaredmodstorage.github.io/contact/
+- **Portrait restriction:** Not an author/profile portrait. The rejected black-turtleneck portrait is not used.
+- **Ownership and rights:** Preserve the library's rights metadata and do not represent the scene as documentary evidence of the fictional scenario.
