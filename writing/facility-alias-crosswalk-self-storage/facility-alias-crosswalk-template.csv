@@ -1,0 +1,2 @@
+internal_facility_key,canonical_facility_name,source_system,source_record_type,source_identifier,source_display_label,alias_scope,parent_internal_key,effective_from,effective_through,mapping_status,validation_evidence_reference,validation_method,mapping_owner,approver,approval_date,change_reference,allowed_downstream_use,quarantine_reason,last_reviewed_at,notes
+,,,,,,,,,,unknown,,,,,,,,,,

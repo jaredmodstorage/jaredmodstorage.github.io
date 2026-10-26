@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DshNwFP_.css" data-rsc-css-href="/_next/static/css/index.DshNwFP_.css" data-precedence="vite-rsc/importer-resources"/><title>Build the Facility Alias Crosswalk Before Comparing the Portfolio | Jared Mastroianni</title><meta name="description" content="When the same property carries a different identity in every system, the portfolio does not have a reporting problem. It has an identity-control problem."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Build the Facility Alias Crosswalk Before Comparing the Portfolio | Jared Mastroianni"/><meta property="og:description" content="When the same property carries a different identity in every system, the portfolio does not have a reporting problem. It has an identity-control problem."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-10-24"/><meta property="article:modified_time" content="2026-10-24"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/063-operations-metrics-roundtable.png"/><meta property="og:image:width" content="1536"/><meta property="og:image:height" content="1024"/><meta property="og:image:alt" content="Jared Mastroianni and three colleagues review operating metrics in a conference room overlooking a self-storage facility."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Build the Facility Alias Crosswalk Before Comparing the Portfolio | Jared Mastroianni"/><meta name="twitter:description" content="When the same property carries a different identity in every system, the portfolio does not have a reporting problem. It has an identity-control problem."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/063-operations-metrics-roundtable.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio","datePublished":"2026-10-24","dateModified":"2026-10-24","image":{"@id":"https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/#lead-image"},"description":"When the same property carries a different identity in every system, the portfolio does not have a reporting problem. It has an identity-control problem.","about":["Self-storage operations","Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/#lead-image","name":"Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio","caption":"Portfolio comparisons begin with knowing which source-system records refer to the same facility. Non-documentary editorial illustration; not Quarry Bend Storage Group, a real facility-alias decision, customer, verified configuration or result. Image reused from October 19 and October 22 packages. © 2024 Jared James Mastroianni. All rights reserved.","description":"Jared Mastroianni and three colleagues review operating metrics in a conference room overlooking a self-storage facility. Jared-owned editorial material; generation method not recorded; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/063-operations-metrics-roundtable.png","width":1536,"height":1024,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed non-documentary editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"© 2024 Jared James Mastroianni. All rights reserved.","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio","item":"https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Portfolio operating systems<!-- --> · <time dateTime="2026-10-24">24 October 2026</time></p><h1>Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio</h1><p class="lede">When the same property carries a different identity in every system, the portfolio does not have a reporting problem. It has an identity-control problem.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/images/jared-mastroianni/facility-alias-crosswalk-self-storage-display.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Jared Mastroianni and three colleagues review operating metrics in a conference room overlooking a self-storage facility."><figcaption>Portfolio comparisons begin with knowing which source-system records refer to the same facility. Non-documentary editorial illustration; not Quarry Bend Storage Group, a real facility-alias decision, customer, verified configuration or result. Image reused from October 19 and October 22 packages. © 2024 Jared James Mastroianni. All rights reserved.</figcaption></figure><p>Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni’s direction. Fictional examples are instructional, not observed results.</p><p>A regional manager opens the property-management system and sees facility 7842. The access-control platform calls the same place Oak Avenue. Accounting uses Site 14. A repair invoice says 4100 Oak Ave. The weekly scorecard abbreviates it OAK-1.</p>
+<p>Those labels may all refer to the same self-storage facility. They may also refer to a main building, an annex, a legal entity, a bank account, or an old property record that should no longer receive activity. Until the portfolio resolves that question, every comparison built on those records is conditional.</p>
+<p>This is where multi-location operators get into trouble. A dashboard can look polished while invoices, work orders, access events, leads and rent data are quietly joining to the wrong property. A name match feels reasonable. An address match feels stronger. Neither is a durable portfolio key by itself. Names are shortened, addresses are reformatted, ownership changes, annexes share street names, and vendors keep labels long after an internal rename.</p>
+<p>The answer is not to force every system to display the same name. The answer is to establish one stable internal facility key and maintain a governed crosswalk from every source-system identifier to that key.</p>
+<h2>The label is an attribute, not the identity</h2>
+<p>Operators naturally recognize a property by the name on the sign. Software does not have that context. It sees strings and record IDs.</p>
+<p>That distinction matters. “Oak Avenue Storage,” “Oak Ave,” and “4100 Oak Avenue” can appear to be obvious matches. But a nearby annex might use “Oak Avenue Annex.” A vendor might type only “Oak Ave” on invoices for both buildings. A management system might create a new record after an acquisition while the old record remains searchable. If the portfolio treats the display name or normalized address as the identity, an apparently successful join can be wrong.</p>
+<p>A governed facility key should represent the operating location the company intends to manage and compare. It should not change when the marketing name, ownership entity, manager, street formatting, software vendor or reporting hierarchy changes. The key might look like <code>QBS-014</code> or another controlled internal format. The format matters less than the rules: each active operating location receives one key; the key is not recycled; and changes to descriptive attributes do not silently create a new identity.</p>
+<p>External patterns support this separation. EPA&#39;s ENERGY STAR Portfolio Manager distinguishes its own property ID from parent, custom and standard IDs. The Federal Real Property Council requires a real-property identifier that remains stable over time and enables linkage to other systems. GS1&#39;s General Specifications identify a physical location with a unique Global Location Number. None of those sources dictates a self-storage data model. They do demonstrate the same control principle: a location can carry several identifiers, but the relationship among them must be explicit.</p>
+<h2>Preserve source IDs instead of overwriting them</h2>
+<p>Once an internal facility key exists, the next temptation is to replace source identifiers with the new key. That destroys evidence.</p>
+<p>The access-control system&#39;s property code, the property-management-system ID, the accounting class, the utility account, the vendor&#39;s location label and the internal facility key each answer a different question. If a manager changes the source record or strips it from imported data, the portfolio loses the ability to trace a result back to the system that produced it.</p>
+<p>Keep the source identifier exactly as received. Store its source system, source record type, display label and effective dates. Map that record to the internal facility key in a separate crosswalk. This creates a visible chain:</p>
+<p><code>source system + source record ID -&gt; approved alias record -&gt; internal facility key</code></p>
+<p>That chain lets a reviewer reproduce a join, explain why a row landed at a facility and reverse a bad mapping without rewriting the original transaction. It also supports systems that legitimately use more than one facility-related code. Accounting may distinguish a legal entity from a property class. Access control may distinguish a building from an individual gate. A vendor may bill the main building and annex separately. The crosswalk should record the scope of each identifier rather than pretending all codes mean the same thing.</p>
+<h2>Build the crosswalk as an operating control</h2>
+<p>A useful facility-alias crosswalk needs more than two columns. At minimum, record:</p>
+<ul>
+<li>the stable internal facility key;</li>
+<li>the source system and source record type;</li>
+<li>the exact source identifier and display label;</li>
+<li>the alias scope, such as facility, building, gate, legal entity or billing account;</li>
+<li>the effective-from and effective-through dates;</li>
+<li>the mapping status;</li>
+<li>the evidence used to validate the relationship;</li>
+<li>the owner who approved it and the approval date; and</li>
+<li>a change-ticket or review reference.</li>
+</ul>
+<p>Effective dates are essential. A property may change vendors, ownership entities or accounting structures without changing its operating identity. A source ID may be valid through one date and replaced the next day. If the crosswalk stores only the current answer, historical reports can be remapped incorrectly.</p>
+<p>The mapping status should also be operational, not decorative. I use five useful states:</p>
+<ol>
+<li><strong>Matched:</strong> evidence supports one source record mapping to one internal facility key for the stated scope and dates.</li>
+<li><strong>Ambiguous:</strong> the record could reasonably map to more than one facility or scope.</li>
+<li><strong>Unknown:</strong> the identifier has not been resolved.</li>
+<li><strong>Retired:</strong> the mapping is no longer current but remains valid for its historical period.</li>
+<li><strong>Rejected:</strong> review determined that the proposed relationship was wrong.</li>
+</ol>
+<p>Only a matched record should flow automatically into portfolio reporting or downstream action. Ambiguous and unknown records belong in quarantine. Retired records remain available for historical reconstruction. Rejected proposals should remain visible so the same bad match is not repeatedly suggested.</p>
+<h2>Quarantine is better than confident misallocation</h2>
+<p>An unmatched invoice or work order creates visible friction. A wrong match creates hidden damage.</p>
+<p>Consider what happens when a vendor invoice labeled “Oak Ave” is assigned to the first facility whose name contains Oak. The expense posts. The facility&#39;s repair cost rises. A regional comparison flags the wrong property. A manager explains variance that does not belong to the site. Meanwhile, the facility that received the actual service appears to have no repair activity.</p>
+<p>Automation raises the stakes. A misidentified facility can send a work order to the wrong manager, suppress an exception at the affected site, or trigger a customer message using the wrong access conditions. The same fuzzy match that is merely annoying in a spreadsheet becomes an execution risk when it controls action.</p>
+<p>Quarantine should preserve the source row and make the missing decision obvious. The exception record should show the raw identifier, likely candidates, why the match failed, the accountable resolver and a due date. It should not guess silently. If the portfolio permits a provisional mapping, label it provisional, restrict what it can drive and require a human release before money, customer communication, access or maintenance action depends on it.</p>
+<p>NIST&#39;s Cybersecurity Framework 2.0 is not a property master-data standard, but its asset-management guidance is useful here: organizations identify and manage assets, maintain inventories of data and metadata, and account for assets across their life cycles. For an operator, the practical lesson is straightforward. Facility identity is governed inventory. Someone must own it, review it and control changes.</p>
+<h2>Resolve identity before calculating performance</h2>
+<p>A facility crosswalk should sit upstream of portfolio metrics. Do not calculate the comparison and then clean up the facilities that look strange. That makes the metric itself part of the investigation.</p>
+<p>Instead, sequence the work:</p>
+<ol>
+<li>ingest source records without altering their identifiers;</li>
+<li>attempt a deterministic lookup against approved, effective-dated aliases;</li>
+<li>quarantine unknown, ambiguous or out-of-period records;</li>
+<li>have the assigned owner validate the facility and scope;</li>
+<li>release the mapping through change control; and</li>
+<li>calculate metrics only from eligible records.</li>
+</ol>
+<p>This order creates a clean boundary between source evidence, identity resolution and portfolio interpretation. A region cannot explain a facility&#39;s performance if the underlying transactions are still changing properties during cleanup.</p>
+<p>It also improves change management. When a new property enters the portfolio, the operating key can be established before data migration. Each source identifier is then attached deliberately. When a property is sold, the facility key is retired for new activity but preserved for history. When two adjacent facilities are operationally combined, leadership must decide whether the management unit truly changed. A shared brand name alone should not collapse two identities.</p>
+<h2>A fictional example: Quarry Bend Storage Group</h2>
+<p>The following example is fictional and uses invented facilities, identifiers and events.</p>
+<p>Quarry Bend Storage Group operates <code>QBS-014</code>, marketed as Quarry Bend Storage — Oak Avenue. Its property-management-system ID is <code>7842</code>, accounting class is <code>SITE-14</code>, and access-control property code is <code>OAK1</code>. A maintenance vendor submits an invoice with only “Oak Ave.”</p>
+<p>The portfolio also operates <code>QBS-041</code>, Quarry Bend Storage — Oak Avenue Annex, two blocks away. Both properties have used the abbreviated vendor label “Oak Ave” in prior emails. The invoice includes no unit range, gate code, service address or work-order reference.</p>
+<p>The crosswalk does not resolve the invoice by choosing the first Oak Avenue result. It marks the vendor alias ambiguous and quarantines the row. The assigned facilities coordinator requests the service address and work-order number. The vendor confirms the repair occurred at the annex. The coordinator creates a matched vendor-location alias for <code>QBS-041</code>, limited to that vendor account and effective from the verified contract date. A second reviewer approves the mapping. The source invoice label remains unchanged.</p>
+<p>That resolution proves only which facility the reviewed vendor record refers to. It does not prove the invoice is accurate, authorized, paid, posted or reconciled. Those are separate controls.</p>
+<h2>Use the Facility Identity and Alias Crosswalk</h2>
+<p>The package accompanying this article includes a blank crosswalk template and the fictional Quarry Bend example. Start with the systems that drive the most consequential action: property management, accounting, access control, work orders, utilities and recurring vendors.</p>
+<p>For each source, export the native identifier and display label. Do not begin by cleaning the labels. First determine whether an approved mapping already exists for the transaction date and scope. Route exceptions to an owner who can inspect contracts, source records, service addresses, acquisition files and operating evidence. Record the decision, reviewer and effective period.</p>
+<p>Then test the control with deliberately difficult cases: a renamed property, a sold property, a main building and annex on the same street, a vendor abbreviation, an old accounting class and a source record outside its effective dates. The purpose is not to prove that the clean rows match. It is to prove that the uncertain rows stop.</p>
+<p>A portfolio becomes comparable only after its records refer to the facilities leadership thinks they refer to. The facility alias crosswalk is not clerical cleanup. It is the identity layer that keeps reporting, reconciliation and automation attached to the right place.</p>
+<hr>
+<h2>Practical operator tool</h2>
+<p>Use the accompanying <strong>Facility Identity and Alias Crosswalk</strong> to govern current and historical source identifiers, quarantine ambiguity and preserve approval evidence. The blank CSV is implementation-ready; the completed CSV is explicitly fictional.</p>
+<h2>Sources and limitations</h2>
+<p>The article draws on current EPA ENERGY STAR Portfolio Manager guidance, the Federal Real Property Council&#39;s FY 2026 reporting dictionary, GS1 location-identification guidance and NIST CSF 2.0. These are authoritative examples of identifier and lifecycle controls, not self-storage regulations or proof that a specific operator must adopt any external identifier standard. Full provenance, access dates, HTTP outcomes and material limitations are recorded in <code>source-register.csv</code>.</p>
+<h2>Author</h2>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai.</p>
+<h2>Practical downloads</h2>
+<ul>
+<li><a href="facility-identity-and-alias-crosswalk.md">Facility Identity and Alias Crosswalk</a></li>
+<li><a href="facility-alias-crosswalk-template.csv">Blank CSV template</a></li>
+<li><a href="facility-alias-crosswalk-fictional-example.csv">Explicitly fictional example</a></li>
+</ul>
+<h2>Source links and scope</h2>
+<ul>
+<li><a href="https://portfoliomanager.energystar.gov/pm/help">EPA Portfolio Manager Property IDs</a>. Product identifiers, not a self-storage data-model mandate.</li>
+<li><a href="https://www.gsa.gov/system/files/FY%202026%20FRPP%20DATA%20DICTIONARY%20%281%29.pdf">GSA FY 2026 FRPP Data Dictionary</a>. Federal inventory requirements, not rules governing private self-storage.</li>
+<li><a href="https://ref.gs1.org/standards/genspecs/">GS1 General Specifications</a>. External identification standard; no requirement to adopt GLNs.</li>
+<li><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=957258">NIST CSF 2.0</a>. General cybersecurity control patterns, not a property-master-data or accounting standard.</li>
+</ul>
+<section aria-label="Publication package downloads"><h2>Publication package downloads</h2><ul><li><a href="article.md">article.md</a></li><li><a href="facility-identity-and-alias-crosswalk.md">facility-identity-and-alias-crosswalk.md</a></li><li><a href="facility-alias-crosswalk-template.csv">facility-alias-crosswalk-template.csv</a></li><li><a href="facility-alias-crosswalk-fictional-example.csv">facility-alias-crosswalk-fictional-example.csv</a></li><li><a href="source-register.csv">source-register.csv</a></li><li><a href="image-notes.md">image-notes.md</a></li><li><a href="063-operations-metrics-roundtable.png">063-operations-metrics-roundtable.png</a></li><li><a href="destination-assignment.md">destination-assignment.md</a></li><li><a href="duplicate-check.md">duplicate-check.md</a></li><li><a href="originality-and-claim-boundary.md">originality-and-claim-boundary.md</a></li><li><a href="review-scores.md">review-scores.md</a></li><li><a href="final-editorial-qa.md">final-editorial-qa.md</a></li><li><a href="assigned-publisher-manifest.md">assigned-publisher-manifest.md</a></li><li><a href="payload-checksums.sha256">payload-checksums.sha256</a></li><li><a href="publisher-manifest.md">publisher-manifest.md</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/restroom-backup-self-storage/">The Restroom Is Backing Up. Close the Area Before Cleanup Becomes the Exposure</a></h3><p>A practical self-storage operator protocol for containing a restroom backup, preserving customer and employee access, controlling vendors, and reopening on evidence instead of assumption.</p><a href="/writing/restroom-backup-self-storage/" class="text-link" aria-label="Read the article: The Restroom Is Backing Up. Close the Area Before Cleanup Becomes the Exposure">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-imputed-facility-data-self-storage/">The AI Filled the Missing Readings. Which Values Were Actually Observed?</a></h3><p>A smooth facility time series can hide a dangerous substitution: values generated to bridge a data gap being presented as if a sensor actually reported them.</p><a href="/writing/ai-imputed-facility-data-self-storage/" class="text-link" aria-label="Read the article: The AI Filled the Missing Readings. Which Values Were Actually Observed?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/part-number-matches-approved-facility-asset/">The Part Number Matches. Is It Approved for This Facility and Asset?</a></h3><p>A portfolio spare-parts program becomes reliable only when item identity, applicability evidence, revision, custody, installation authority and post-work reconciliation travel together.</p><a href="/writing/part-number-matches-approved-facility-asset/" class="text-link" aria-label="Read the article: The Part Number Matches. Is It Approved for This Facility and Asset?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

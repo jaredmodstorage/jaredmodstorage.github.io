@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>When the same property carries a different identity in every system, the portfolio does not have a reporting problem. It has an identity-control problem.</description>
+    </item>
     <item>
       <title>The AI Filled the Missing Readings. Which Values Were Actually Observed?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-imputed-facility-data-self-storage/</link>
