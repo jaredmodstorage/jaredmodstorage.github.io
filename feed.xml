@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sat, 24 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Recurring Task Fired. Which Facilities Actually Completed the Control?</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-recurring-control-run-ledger-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-recurring-control-run-ledger-self-storage/</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A multi-location self-storage method for turning recurring reminders into facility-scoped control runs with current evidence, verification, exception handling and honest portfolio completion rates.</description>
+    </item>
     <item>
       <title>Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio</title>
       <link>https://jaredmodstorage.github.io/writing/facility-alias-crosswalk-self-storage/</link>
