@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><title>Human Changes to AI Recommendations: Record the Final Decision | Jared Mastroianni</title><meta name="description" content="Human review is not a binary approval step. When an operator changes an AI proposal, the architecture must preserve the delta, recheck authority and record the human-authored decision that actually governs the work."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Human Changes to AI Recommendations: Record the Final Decision | Jared Mastroianni"/><meta property="og:description" content="Human review is not a binary approval step. When an operator changes an AI proposal, the architecture must preserve the delta, recheck authority and record the human-authored decision that actually governs the work."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-10-27"/><meta property="article:modified_time" content="2026-10-27"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/052-ai-development-ai-engineering-design-review.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="AI-generated editorial scene of Jared Mastroianni listening to two colleagues during a technology design review."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Human Changes to AI Recommendations: Record the Final Decision | Jared Mastroianni"/><meta name="twitter:description" content="Human review is not a binary approval step. When an operator changes an AI proposal, the architecture must preserve the delta, recheck authority and record the human-authored decision that actually governs the work."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/052-ai-development-ai-engineering-design-review.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Operator Changed the AI Recommendation. Which Decision Did the System Record?","datePublished":"2026-10-27","dateModified":"2026-10-27","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/#lead-image"},"description":"Human review is not a binary approval step. When an operator changes an AI proposal, the architecture must preserve the delta, recheck authority and record the human-authored decision that actually governs the work.","about":["Self-storage operations","The Operator Changed the AI Recommendation. Which Decision Did the System Record?"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/#lead-image","name":"The Operator Changed the AI Recommendation. Which Decision Did the System Record?","caption":"A responsible AI review should make the proposed fields, human changes, governing evidence and final authority visible in the same decision record. AI-generated editorial image; not a documentary photograph of a real meeting or deployment.","description":"AI-generated editorial scene of Jared Mastroianni listening to two colleagues during a technology design review. Jared-owned AI-generated editorial material; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/052-ai-development-ai-engineering-design-review.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed AI-generated non-documentary editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Accountable automation","item":"https://jaredmodstorage.github.io/writing/topics/automation/"},{"@type":"ListItem","position":3,"name":"The Operator Changed the AI Recommendation. Which Decision Did the System Record?","item":"https://jaredmodstorage.github.io/writing/ai-human-decision-delta-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/automation/">Accountable automation</a></li><li aria-current="page">The Operator Changed the AI Recommendation. Which Decision Did the System Record?</li></ol></nav><article class="essay essay-human-decision-delta"><header class="essay-header"><p class="eyebrow">Responsible AI architecture<!-- --> · <time dateTime="2026-10-27">27 October 2026</time></p><h1>The Operator Changed the AI Recommendation. Which Decision Did the System Record?</h1><p class="lede">Human review is not a binary approval step. When an operator changes an AI proposal, the architecture must preserve the delta, recheck authority and record the human-authored decision that actually governs the work.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>11 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/images/jared-mastroianni/ai-human-decision-delta-self-storage-display.jpg" width="3840" height="2560" loading="lazy" decoding="async" alt="AI-generated editorial scene of Jared Mastroianni listening to two colleagues during a technology design review."><figcaption>A responsible AI review should make the proposed fields, human changes, governing evidence and final authority visible in the same decision record. AI-generated editorial image; not a documentary photograph of a real meeting or deployment.</figcaption></figure><p>Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni’s direction. Fictional examples are instructional, not observed results.</p><p>An AI assistant proposes restricting one fictional access credential from 10:00 p.m. to 6:00 a.m. A regional operator opens the review screen, changes the start time to 9:00 p.m., adds a second credential and includes a customer message. Then the operator clicks <strong>Approve</strong>.</p>
+<p>What did the system approve?</p>
+<p>If the audit log says only “AI recommendation approved,” it is wrong in two directions. The AI did not propose the released scope. The operator did not merely approve what the AI produced. A person authored a materially different decision, and the added fields may require different evidence, permission, review and execution controls.</p>
+<p>Human-in-the-loop architecture often treats review as a binary event: approve or reject. Real operators edit. They narrow a recommendation, widen it, remove unsupported language, add a facility exception, change a due time or substitute a different action. Those changes are not comments around the decision. They are part of the decision.</p>
+<p>The system should preserve that authorship instead of collapsing the whole episode into a green checkmark.</p>
+<h2>A proposal is not the operating decision</h2>
+<p>An AI output can be useful without holding authority. It can identify candidate records, summarize evidence and prepare a structured proposal. The operating decision is the exact object an authorized person releases after reviewing the evidence and applicable rules.</p>
+<p>Those objects may match. They often should not be assumed to match.</p>
+<p>The architecture needs at least three separate identities:</p>
+<ol>
+<li><strong>Proposal identity:</strong> the model-generated fields, evidence references, model and workflow versions, and proposal time.</li>
+<li><strong>Decision identity:</strong> the exact fields a person adopts, removes, adds or changes, together with the decision time, reason and authority.</li>
+<li><strong>Execution identity:</strong> the command, message, work item or other effect actually sent, plus its receipt and governing readback.</li>
+</ol>
+<p>This separation protects both people and systems. It prevents the AI from receiving credit for a judgment a person made. It prevents the person from being described as a rubber stamp when the decision differs materially. It also prevents an edited value from bypassing controls that applied to the original proposal.</p>
+<p>NIST&#39;s voluntary AI Risk Management Framework treats human-AI configurations, accountability, transparency and lifecycle monitoring as connected parts of AI risk management.<a href="#source-1">1</a> Its Generative AI Profile notes that generative-AI use may warrant additional human review, tracking, documentation and management oversight.<a href="#source-2">2</a> Neither publication defines a self-storage approval workflow. The relevant principle is narrower: human oversight must be designed and documented, not inferred from the presence of an approval button.</p>
+<h2>Record the delta at field level</h2>
+<p>A screenshot of the final form is not enough. The decision record should show what changed between the proposal and the released decision.</p>
+<p>For every decision field, classify the result:</p>
+<ul>
+<li><strong>accepted:</strong> the person adopted the proposed value without change;</li>
+<li><strong>modified:</strong> the person replaced the proposed value;</li>
+<li><strong>added:</strong> the person introduced a field or target the AI did not propose;</li>
+<li><strong>removed:</strong> the person excluded a proposed field, target or action;</li>
+<li><strong>held:</strong> the person left the field unresolved and prevented release; or</li>
+<li><strong>not applicable:</strong> the field did not belong to this decision class.</li>
+</ul>
+<p>Then retain the before value, after value, reason, evidence reference and human actor for every material change. A free-text note such as “adjusted based on experience” may be appropriate commentary, but it should not replace the structured delta.</p>
+<p>The delta also needs semantic meaning. Changing a customer-message typo is different from changing a credential target. Moving a maintenance review from Tuesday to Wednesday is different from converting “inspect” into “repair.” An effective schema identifies which fields affect scope, consequence, authority, evidence, timing, communication or execution.</p>
+<p>W3C PROV-O provides a general vocabulary for entities, activities, agents and derivation relationships.<a href="#source-3">3</a> It does not decide whether a human edit is authorized. It does offer a useful pattern: the final decision can be represented as a new entity derived from the proposal through a review activity associated with a named human actor. The proposal remains intact rather than being overwritten.</p>
+<h2>Re-run the gates after the edit</h2>
+<p>Human input does not automatically make a decision eligible. A person can make an informed correction. A person can also select the wrong facility, add a target outside the reviewer&#39;s role, rely on stale information or turn a low-consequence draft into a consequential action.</p>
+<p>Every material edit should pass the same deterministic gates that protected the proposal:</p>
+<ul>
+<li>exact organization, facility, asset, account or credential identity;</li>
+<li>permitted action and consequence class;</li>
+<li>current source eligibility and evidence completeness;</li>
+<li>reviewer role, scope and expiration;</li>
+<li>applicable policy and version;</li>
+<li>duplicate-action and idempotency check;</li>
+<li>required separation of duties;</li>
+<li>current operating preconditions; and</li>
+<li>required handback or secondary approval.</li>
+</ul>
+<p>If the reviewer adds a second credential, the system must evaluate that credential as a new target. If the reviewer changes an informational note into a customer communication, the communication policy applies. If the reviewer widens a one-facility proposal to three facilities, portfolio authority does not appear merely because the same screen contains all three names.</p>
+<p>The safe pattern is <strong>edit, evaluate, then authorize</strong>. Do not validate the AI proposal, let a person change it afterward and send the changed object under the proposal&#39;s old eligibility result.</p>
+<p>This is where many review interfaces quietly fail. The policy service evaluates version A. The person edits the screen into version B. The connector receives version B with the authorization receipt for version A. The system can show a human in the loop while breaking the binding between the reviewed evidence, the authorized object and the released effect.</p>
+<h2>Preserve disagreement instead of cleaning it away</h2>
+<p>A human change can be valuable evidence about the AI system. If reviewers repeatedly remove the same unsupported conclusion or add the same missing operating field, the pattern may reveal a retrieval, prompt, schema or training problem.</p>
+<p>Do not erase the proposal once the decision is final. Preserve it with its input manifest and build identity. Preserve the final human-authored decision separately. Link both to the delta and the release evaluation.</p>
+<p>That record supports questions operators will eventually ask:</p>
+<ul>
+<li>Which fields do reviewers change most often?</li>
+<li>Do edits usually narrow or widen consequence?</li>
+<li>Which changes trigger a new handback or second approval?</li>
+<li>Are certain source gaps associated with repeated human correction?</li>
+<li>Did a later model release reduce a specific type of material edit?</li>
+<li>Which executed actions differ from both the proposal and the final decision?</li>
+</ul>
+<p>These are operating questions, not a leaderboard for employees. A high edit rate may indicate an AI design problem, a difficult decision class or a healthy review culture. A low edit rate may indicate strong proposals, automation bias or a form that makes changes difficult. The number alone does not establish quality.</p>
+<h2>Attribute the final language honestly</h2>
+<p>The same control applies when the output is a message rather than a system command.</p>
+<p>Suppose the AI drafts: “Your access has been restored.” The operator changes it to: “We received your request and are verifying the current access state.” The second sentence is materially safer because it does not convert a request or attempted change into a verified result.</p>
+<p>The record should not say the AI sent an accurate restoration notice. It should say the AI proposed one statement, the operator replaced it, the authorized workflow released the replacement and the delivery channel produced a separate receipt. If the message was only saved as a draft, that remains a draft. Human editing does not prove sending, delivery, receipt or resolution.</p>
+<p>This boundary matters for operational intelligence. A person can approve the wording of a summary without verifying the underlying facility condition. Record <code>language_reviewed</code> when that is what happened. Reserve <code>condition_verified</code> for the evidence and authority that actually establish the condition.</p>
+<p>NIST SP 800-53 Rev. 5 includes configuration-change controls that call for reviewing proposed changes, approving or disapproving them, documenting decisions, implementing approved changes and monitoring change-controlled activity. Its audit controls also emphasize enough event content to establish what occurred, when, where, from which source, with what outcome and under whose identity.<a href="#source-4">4</a> Those controls govern federal information systems, not self-storage AI. They provide a disciplined analogy: changed objects, decisions and responsible actors should remain reconstructable.</p>
+<h2>Make the review screen show the real decision</h2>
+<p>A good interface should not bury the delta in an audit export that no operator will read.</p>
+<p>Before release, show three views:</p>
+<p><strong>What the AI proposed.</strong> Display the structured fields, evidence references, limitations and build identity. Generated prose should be labeled as generated.</p>
+<p><strong>What the person changed.</strong> Highlight additions, removals and modifications by decision significance, not only by text color. A changed target, action or authority field deserves more prominence than punctuation.</p>
+<p><strong>What will actually happen.</strong> Show the final executable scope, communication recipient, due time, action ceiling and any remaining unknowns. The confirmation language should describe the final effect, not the earlier proposal.</p>
+<p>If a material edit invalidates the current authorization, disable release and explain the next bounded step: refresh evidence, obtain secondary review, resolve identity or return the case to the correct owner. “Approval failed” is less useful than “The added facility is outside this reviewer&#39;s scope; route it to the regional authority or remove it from this decision.”</p>
+<p>The screen should also preserve accessibility. Do not rely on red and green alone to communicate changes. Use text labels, icons with accessible names, a logical heading structure and a readable summary of the material delta.</p>
+<h2>A completely fictional review episode</h2>
+<p><strong>Everything in this example is fictional: the company, facility, people, identifiers, records, AI behavior, times, policies, actions and outcomes. It is teaching data, not a deployment report.</strong></p>
+<p>Fictional <strong>Blue Lantern Storage</strong> operates fictional facility <code>FIC-BL-014</code>. An AI workflow proposes an internal maintenance-priority decision for fictional gate controller <code>FIC-GC-22</code>. The proposal is <code>routine_review</code>, due the next business day, based on one communication alert and an open diagnostic task.</p>
+<p>A fictional regional operator reviews the source packet. The operator sees a second authorized record showing three failed entry attempts during staffed hours. The operator changes the priority to <code>same_shift_review</code>, adds that evidence reference and removes the AI&#39;s unsupported sentence that the controller “is failing.” The operator does not authorize a repair, access restriction, customer message or vendor dispatch.</p>
+<p>The system records three deltas: priority modified, evidence added and diagnosis language removed. The priority change remains within the fictional operator&#39;s scope, but it triggers a fresh policy evaluation and a shorter due time. The unsupported diagnosis cannot survive as hidden context in the work item. The final decision is attributed to the fictional operator, derived from—but not identical to—the AI proposal.</p>
+<p>The fictional workflow then creates a review task. A task-creation receipt proves only that the task was accepted by the fictional work system. It does not prove the controller condition, technician arrival, repair, restored access or customer outcome. No real facility or result is represented.</p>
+<h2>Use the proposal-to-decision delta record</h2>
+<p>The accompanying <strong>AI Proposal-to-Human-Decision Delta and Authority Record</strong> gives architects and operators one control surface for proposal identity, field-level changes, evidence, policy re-evaluation, human authority, final decision identity, execution binding and readback.</p>
+<p>Start with one bounded decision class. Use fictional test records to exercise:</p>
+<ul>
+<li>approval with no change;</li>
+<li>a typo-only edit;</li>
+<li>a changed target;</li>
+<li>a widened facility scope;</li>
+<li>a removed unsupported claim;</li>
+<li>an added action outside the reviewer&#39;s role;</li>
+<li>an edit that requires a second approver;</li>
+<li>a stale proposal that must be recomputed;</li>
+<li>an execution payload that differs from the final decision; and</li>
+<li>a correction that must reach downstream records.</li>
+</ul>
+<p>The pass condition is not that a human clicked something. The pass condition is that the system can prove what the AI proposed, what the person changed, why the change was eligible, which exact object was authorized, what was sent and what the governing system later showed.</p>
+<p>Human review is valuable because people can apply context, judgment and responsibility that a model does not possess. Architecture should make that contribution visible. When a person changes an AI recommendation, the final record should tell the truth: the AI proposed; the human decided; the policy evaluated the actual decision; and the evidence—not the interface color—determined what could happen next.</p>
+<h2>Sources</h2>
+<p><a id="source-1"></a></p>
+<ol>
+<li>National Institute of Standards and Technology, <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"><em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em></a>, NIST AI 100-1, January 2023, accessed October 27, 2026.</li>
+</ol>
+<p><a id="source-2"></a></p>
+<ol start="2">
+<li>National Institute of Standards and Technology, <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"><em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em></a>, NIST AI 600-1, July 2024, page updated April 8, 2026, accessed October 27, 2026.</li>
+</ol>
+<p><a id="source-3"></a></p>
+<ol start="3">
+<li>World Wide Web Consortium, <a href="https://www.w3.org/TR/prov-o/"><em>PROV-O: The PROV Ontology</em></a>, W3C Recommendation, April 30, 2013, accessed October 27, 2026.</li>
+</ol>
+<p><a id="source-4"></a></p>
+<ol start="4">
+<li>National Institute of Standards and Technology, <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"><em>Security and Privacy Controls for Information Systems and Organizations</em></a>, SP 800-53 Rev. 5 Release 5.2.0, accessed October 27, 2026.</li>
+</ol>
+<h2>Author</h2>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai.</p>
+<h2>Disclosure</h2>
+<p>This article and its companion tool were developed with AI assistance under Jared Mastroianni&#39;s editorial direction and reviewed for source scope, originality, claim boundaries and publication readiness. Blue Lantern Storage and every associated facility, person, identifier, record, AI behavior, policy, action, time and outcome are explicitly fictional. No real customer, deployment, product capability, performance result, incident or facility condition is represented.</p>
+<h2>Practical tool and implementation records</h2>
+<ul>
+<li><a href="ai-proposal-to-human-decision-delta-and-authority-record.md">AI Proposal-to-Human-Decision Delta and Authority Record</a></li>
+<li><a href="ai-proposal-decision-delta-template.csv">Blank CSV template</a></li>
+<li><a href="ai-proposal-decision-delta-fictional-example.csv">Explicitly fictional example</a></li>
+</ul>
+<h2>Source scope</h2>
+<p>NIST AI RMF and its Generative AI Profile are voluntary cross-sector guidance, not validation of this method or a self-storage standard. W3C PROV-O supplies a general provenance vocabulary, not operating authority. NIST SP 800-53 provides security and privacy controls, not self-storage AI certification or evidence that this workflow is deployed.</p>
+<section aria-label="Publication package downloads"><h2>Publication package downloads</h2><ul><li><a href="052-ai-development-ai-engineering-design-review.png">052-ai-development-ai-engineering-design-review.png</a></li><li><a href="ai-proposal-decision-delta-fictional-example.csv">ai-proposal-decision-delta-fictional-example.csv</a></li><li><a href="ai-proposal-decision-delta-template.csv">ai-proposal-decision-delta-template.csv</a></li><li><a href="ai-proposal-to-human-decision-delta-and-authority-record.md">ai-proposal-to-human-decision-delta-and-authority-record.md</a></li><li><a href="article.md">article.md</a></li><li><a href="destination-assignment.md">destination-assignment.md</a></li><li><a href="duplicate-check.md">duplicate-check.md</a></li><li><a href="editorial-reviews.md">editorial-reviews.md</a></li><li><a href="final-editorial-qa.md">final-editorial-qa.md</a></li><li><a href="image-notes.md">image-notes.md</a></li><li><a href="originality-and-claim-boundary.md">originality-and-claim-boundary.md</a></li><li><a href="rendered-visual-qa.md">rendered-visual-qa.md</a></li><li><a href="source-register.csv">source-register.csv</a></li><li><a href="assigned-publisher-manifest.md">assigned-publisher-manifest.md</a></li><li><a href="payload-checksums.sha256">payload-checksums.sha256</a></li><li><a href="publisher-manifest.md">publisher-manifest.md</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-cross-system-temporal-coherence-self-storage/">The AI Joined Three Current Records. They Were Never Current at the Same Time.</a></h3><p>An operations agent can retrieve three accurate facility records and still assemble a false operating picture. Temporal coherence has to be designed, tested and visible before a composite answer can govern action.</p><a href="/writing/ai-cross-system-temporal-coherence-self-storage/" class="text-link" aria-label="Read the article: The AI Joined Three Current Records. They Were Never Current at the Same Time.">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-action-revocation-propagation-self-storage/">The Operator Canceled the AI Action. Did the Work Actually Stop?</a></h3><p>A red “canceled” label is not a control. An operations agent needs a revocation path that reaches every queued worker, connector and target before the action crosses its execution boundary.</p><a href="/writing/ai-action-revocation-propagation-self-storage/" class="text-link" aria-label="Read the article: The Operator Canceled the AI Action. Did the Work Actually Stop?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-imputed-facility-data-self-storage/">The AI Filled the Missing Readings. Which Values Were Actually Observed?</a></h3><p>A smooth facility time series can hide a dangerous substitution: values generated to bridge a data gap being presented as if a sensor actually reported them.</p><a href="/writing/ai-imputed-facility-data-self-storage/" class="text-link" aria-label="Read the article: The AI Filled the Missing Readings. Which Values Were Actually Observed?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
