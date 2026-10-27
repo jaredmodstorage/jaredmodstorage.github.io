@@ -1,0 +1,21 @@
+# Image notes
+
+- **Image ID:** 052
+- **Filename:** `052-ai-development-ai-engineering-design-review.png`
+- **Governed master path:** `/Users/jared/Documents/Codex/2026-08-23/ca/outputs/jared-public-image-master-highres/052-ai-development-ai-engineering-design-review.png`
+- **Photo-storyline source:** `/Users/jared/Documents/Codex/2026-08-23/ca/outputs/jared-photo-storylines/PHOTO-STORYLINES.csv`
+- **Collection:** AI development.
+- **Headline:** Engineering review with the operating context in the room.
+- **Storyline:** The design review balances technical possibility with practical usefulness and asks whether the system is understandable, governable and relevant to facility operations.
+- **Business focus:** Facily; AI product development.
+- **Suggested use:** Technology article, product-development page or team story.
+- **Dimensions:** 3840 × 2560 pixels.
+- **SHA-256:** `5aa6a224294c7426eba866e92c569e6216ff2ea0d05820e1426977ebebe293e1`.
+- **Alt text:** `Jared Mastroianni listens as colleagues review an AI system design around a laptop.`
+- **Caption:** `A consequential AI record should preserve what people reviewed, not only what the system believes now.`
+- **Crop guidance:** Retain the 3:2 landscape composition and all principal participants. For narrower cards, preserve Jared and the central conversation; do not crop into a profile portrait.
+- **Treatment:** AI-generated editorial illustration; non-documentary. It does not depict the fictional Copper Hollow facility, records, decision, incident or result.
+- **Rights/provenance:** Governed master and storyline record retained. Do not strip or falsify legitimate provenance, ownership or assistance disclosures.
+- **Prior-use disclosure:** This governed asset has appeared in earlier AI-architecture editorial packages. Reuse is deliberate because the engineering-review setting directly fits evidence custody and human review; it does not create a new event claim.
+- **Rejected visual exclusion:** Image 058 was considered and moved to `unselected-working/` because its black-turtleneck treatment conflicts with the standing portrait restriction. It is not eligible for publication or payload inclusion.
+- **Author/profile portrait:** None used. The approved navy-blazer v2 and rejected black-turtleneck portraits are not part of this package.
