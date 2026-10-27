@@ -8,6 +8,15 @@
     <lastBuildDate>Tue, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The AI Timeline Says the Action Came First. Did the Clocks Agree?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-clock-integrity-causal-timeline-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-clock-integrity-causal-timeline-self-storage/</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>A clean incident timeline can still reverse cause and effect when facility systems measure time differently. Responsible AI architecture must preserve clock quality, causal links and ordering uncertainty before a reconstructed sequence changes operating work.</description>
+    </item>
+    <item>
       <title>The Bank Deposit Matches. Which Facilities and Shifts Does It Actually Close?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/</guid>
