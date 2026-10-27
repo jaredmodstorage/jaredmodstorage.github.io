@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><title>Bank Deposit Reconciliation Across Facilities and Shifts | Jared Mastroianni</title><meta name="description" content="A multi-location self-storage method for tracing facility-day receipts through processor batches, bank acceptance and ledger posting without letting a matching total hide cross-site errors."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Bank Deposit Reconciliation Across Facilities and Shifts | Jared Mastroianni"/><meta property="og:description" content="A multi-location self-storage method for tracing facility-day receipts through processor batches, bank acceptance and ledger posting without letting a matching total hide cross-site errors."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-10-27"/><meta property="article:modified_time" content="2026-10-27"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/027-professional-board-meeting-listening.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Jared Mastroianni listens during a boardroom discussion with colleagues seated around a conference table."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Bank Deposit Reconciliation Across Facilities and Shifts | Jared Mastroianni"/><meta name="twitter:description" content="A multi-location self-storage method for tracing facility-day receipts through processor batches, bank acceptance and ledger posting without letting a matching total hide cross-site errors."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/027-professional-board-meeting-listening.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Bank Deposit Matches. Which Facilities and Shifts Does It Actually Close?","datePublished":"2026-10-27","dateModified":"2026-10-27","image":{"@id":"https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/#lead-image"},"description":"A multi-location self-storage method for tracing facility-day receipts through processor batches, bank acceptance and ledger posting without letting a matching total hide cross-site errors.","about":["Self-storage operations","The Bank Deposit Matches. Which Facilities and Shifts Does It Actually Close?"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/#lead-image","name":"The Bank Deposit Matches. Which Facilities and Shifts Does It Actually Close?","caption":"A matching portfolio total is the beginning of a reconciliation question, not the end. Editorial, non-documentary illustration; generation method is not recorded. This image does not depict the fictional operator, a deposit review or a verified accounting control. Intentional reuse of governed image 027.","description":"Jared Mastroianni listens during a boardroom discussion with colleagues seated around a conference table. Jared-owned editorial material; generation method not recorded; non-documentary and not evidence of an actual facility, meeting, product, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/027-professional-board-meeting-listening.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creditText":"Jared Mastroianni / governed non-documentary editorial image","creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"© 2024 Jared James Mastroianni. All rights reserved.","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The Bank Deposit Matches. Which Facilities and Shifts Does It Actually Close?","item":"https://jaredmodstorage.github.io/writing/portfolio-deposit-chain-reconciliation-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The Bank Deposit Matches. Which Facilities and Shifts Does It Actually Close?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Portfolio operating systems<!-- --> · <time dateTime="2026-10-27">27 October 2026</time></p><h1>The Bank Deposit Matches. Which Facilities and Shifts Does It Actually Close?</h1><p class="lede">One bank deposit can equal the expected portfolio amount while one facility is short, another is over, a processor batch crossed the cutoff and the ledger posted to the wrong place. Reconcile the chain, not only the total.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/images/jared-mastroianni/portfolio-deposit-chain-reconciliation-self-storage-display.jpg" width="3840" height="2560" loading="lazy" decoding="async" alt="Jared Mastroianni listens during a boardroom discussion with colleagues seated around a conference table."><figcaption>A matching portfolio total is the beginning of a reconciliation question, not the end. Editorial, non-documentary illustration; generation method is not recorded. This image does not depict the fictional operator, a deposit review or a verified accounting control. Intentional reuse of governed image 027.</figcaption></figure><p>Research synthesis, drafting and quality assurance were AI-assisted under Jared Mastroianni’s direction. Fictional examples are instructional, not observed results.</p><p>The bank shows a $24,680 deposit. The daily portfolio report expected $24,680. The line turns green.</p>
+<p>That looks reconciled.</p>
+<p>It may only be equal.</p>
+<p>One facility can be short by $180 while another is over by $180. A card batch can include late transactions from yesterday and omit transactions still pending today. A deposit can reach the bank but post to the wrong property or accounting period. A cash bag can be prepared without bank acceptance. A processor can accept a batch before the funds settle.</p>
+<p>If the operating system compares only two grand totals, all of those errors can disappear inside a perfect match.</p>
+<p>Multi-location self-storage operators need a deposit chain that preserves each facility-day population from source receipts through provider batches, bank activity and ledger posting. The control should explain not only whether the money totals agree, but which transactions, facilities, shifts and business dates the agreement actually closes.</p>
+<h2>A total is not an identity</h2>
+<p>Money is fungible. Operating evidence is not.</p>
+<p>Two amounts can be equal without representing the same activity. That is why a deposit record needs identity at every stage:</p>
+<ul>
+<li>facility and stable facility key;</li>
+<li>business date and shift or accountability period;</li>
+<li>source receipt population and report cutoff;</li>
+<li>tender class;</li>
+<li>processor, cash-bag or deposit-batch identifier;</li>
+<li>bank transaction identifier and bank date;</li>
+<li>ledger journal, property, account and post period; and</li>
+<li>exception or correction references.</li>
+</ul>
+<p>The amount remains essential, but it sits inside that identity. A $2,100 processor settlement for three facilities is not interchangeable with a $2,100 cash deposit for one facility. A $500 bank credit on Monday may correspond to Friday activity, a reserve release, a correction or something else. The number alone cannot tell the operator which obligation it satisfied.</p>
+<p>The <a href="https://www.w3.org/TR/prov-o/">W3C Provenance Ontology</a> offers a useful technical analogy. It separates entities, activities and agents, then links what an activity used, generated and derived. PROV-O is a web provenance standard, not an accounting rule. Its practical lesson is still strong: if an artifact was generated from earlier records, preserve the relationship instead of relying on a matching label or value.</p>
+<h2>Reconcile five states, not one green check</h2>
+<p>I use five distinct operating states for the deposit chain.</p>
+<p><strong>Facility closeout prepared.</strong> The identified drawer, shift or business-day population has been closed under the facility’s procedure. Expected cash and noncash tenders are supported by source records. This state does not prove the bank or processor received anything.</p>
+<p><strong>Batch submitted.</strong> The processor batch, deposit bag or other transmission was created and submitted. Record the exact population, amount, submitter, timestamp and provider reference. Submission is not acceptance.</p>
+<p><strong>Provider accepted.</strong> The processor, courier, bank branch or remote-deposit service returned a receipt for the identified submission. Acceptance is stronger than “we sent it,” but it is not proof of final settlement or ledger posting.</p>
+<p><strong>Bank observed.</strong> The bank record shows the corresponding credit or deposit under the approved matching rule. Preserve the bank transaction reference and observed date. A bank observation does not decide which facility or accounting period should receive the amount.</p>
+<p><strong>Ledger posted and reconciled.</strong> The authorized accounting record shows the amount assigned to the correct entity, property, account and period, and every material variance has a disposition. This is the only state that should close the end-to-end chain.</p>
+<p>The names can change to match company policy. The separation cannot. “Deposited” is too broad when it can mean prepared, sent, accepted, visible at the bank or posted in the ledger.</p>
+<h2>Build the population before matching the money</h2>
+<p>Start with the source population, not the bank line.</p>
+<p>For each facility-day, freeze the expected receipt set at a named cutoff. Keep original transaction identifiers, tender classes, voids, refunds, charge reversals, cash pulls and authorized corrections. If a transaction arrives after the cutoff, record the next eligible population rather than slipping it into whichever total makes the day balance.</p>
+<p>Then bind every downstream record to that population. A processor batch may contain hundreds of receipts. A cash deposit may contain one or more shift bags. A bank deposit may combine several bags. A ledger journal may allocate one settlement across several properties. The chain can be one-to-one, one-to-many or many-to-one. The control must represent those relationships explicitly.</p>
+<p>This is where a bridge table or reconciliation matrix earns its keep. One row can represent one source population’s contribution to one downstream batch. If a facility-day is split across two processor batches, it gets two rows. If one processor batch covers six facilities, it gets six linked rows. Each row carries its expected share, observed share and variance.</p>
+<p>Only after those relationships are defined should the portfolio calculate whether the chain balances.</p>
+<h2>Use two tests: amount and population</h2>
+<p>An amount test asks whether the expected and observed dollars agree within the approved rule.</p>
+<p>A population test asks whether every eligible source receipt appears exactly where it should, no receipt appears twice and no downstream amount lacks a supported source.</p>
+<p>Both tests must pass.</p>
+<p>Consider a portfolio with two facilities. Facility A expects $900 and Facility B expects $1,100. The bank shows $2,000. If the ledger posts $1,000 to each facility, the portfolio amount test passes while both facility allocations fail. If one $100 receipt from Facility A is duplicated and one $100 receipt from Facility B is missing, both portfolio and facility totals can still match. Only the receipt-population test exposes the error.</p>
+<p>The U.S. Government Accountability Office’s <a href="https://www.gao.gov/greenbook">2025 Green Book</a> describes internal control as a process management designs, implements and operates to help achieve objectives, including reliable reporting. It also emphasizes quality information and monitoring. The Green Book governs federal agencies, not private self-storage operators. Used cautiously, it reinforces a practical point: a control should produce information that is complete and usable for the decision, not merely a total that happens to agree.</p>
+<h2>Keep exceptions open without freezing the whole portfolio</h2>
+<p>A portfolio reconciliation should make local uncertainty visible without holding unrelated facilities hostage.</p>
+<p>Use exception states such as:</p>
+<ul>
+<li><code>source_population_open</code> — the facility closeout is incomplete or changing;</li>
+<li><code>submitted_not_accepted</code> — the provider has not returned a usable receipt;</li>
+<li><code>accepted_not_observed</code> — the provider accepted the item but no matching bank activity is visible under the rule;</li>
+<li><code>bank_observed_unallocated</code> — the bank line exists but facility allocation is incomplete;</li>
+<li><code>posted_with_variance</code> — the ledger posted, but amount or population differs;</li>
+<li><code>held_for_correction</code> — an authorized correction is being evaluated; and</li>
+<li><code>reconciled</code> — the complete chain passed both tests.</li>
+</ul>
+<p>Assign each exception an owner, next action and due time. Do not clear the portfolio total while facility rows remain in <code>posted_with_variance</code>. At the same time, do not mark every other facility unreconciled because one bank line is delayed. Roll up honestly: ten reconciled, one held, one overdue is more useful than either “all green” or “nothing complete.”</p>
+<p>Corrections need their own identity. Preserve the original source record, reason, supporting evidence, approver, correction time and replacement relationship. Never change a transaction merely to force the bank match. A difference may be a timing item, a classification issue, a duplicate, a missing record or a genuine unresolved variance. The ledger should record which one evidence supports.</p>
+<h2>Protect payment data by design</h2>
+<p>A reconciliation file does not need full card numbers, bank credentials or unnecessary customer information.</p>
+<p>Use internal transaction IDs, processor references, masked identifiers where permitted, and governed links to restricted source systems. The PCI Security Standards Council says <a href="https://www.pcisecuritystandards.org/standards/pci-dss/">PCI DSS</a> provides technical and operational requirements for protecting payment account data, and its current <a href="https://www.pcisecuritystandards.org/faqs/1071/">FAQ 1071</a> requires masking a primary account number when displayed unless there is a specific business need. PCI DSS scope and applicability depend on the actual payment environment. This article does not determine compliance. The operational rule is simpler: do not turn a portfolio control sheet into a new store of sensitive payment data.</p>
+<p>Access should follow role and purpose. A facility manager may need to see whether the facility closeout was accepted. A reconciliation owner may need provider and bank references. Only authorized accounting roles should make or approve ledger changes. Visibility into status does not confer authority to edit the underlying transaction.</p>
+<h2>A fictional portfolio chain</h2>
+<p>The following example is entirely fictional. Harbor Crest Storage, its facilities, people, systems, amounts and results do not represent a real operator or deployment.</p>
+<p>Fictional facility <code>HCS-FIC-014</code> closes business date October 24 with $1,420 in card receipts. Fictional facility <code>HCS-FIC-022</code> closes with $980. Processor batch <code>PB-FIC-5501</code> reports $2,400, and the bank later shows a $2,400 credit.</p>
+<p>The total matches.</p>
+<p>The population test does not. One $60 transaction from <code>HCS-FIC-014</code> posted after the approved cutoff but entered the batch. One $60 transaction from <code>HCS-FIC-022</code> was accepted in the facility system before cutoff but excluded from the batch and remains pending. The processor amount still equals the combined facility expectation because the two differences offset.</p>
+<p>The reconciliation matrix assigns the late $60 to the next eligible facility-day population and leaves the missing $60 in <code>accepted_not_observed</code>. The bank credit remains observed, but the chain is not closed. The ledger allocation stays held until the accounting owner applies the approved timing treatment and the pending receipt receives a provider or bank disposition.</p>
+<p>Nothing in that example suggests loss, misconduct or system failure. It demonstrates why equality is not lineage.</p>
+<h2>Put the matrix into the weekly operating rhythm</h2>
+<p>The accompanying <strong>Portfolio Deposit Chain Reconciliation Matrix</strong> includes a blank 35-column CSV and an explicitly fictional worked example. Start with one week, one tender path and a small group of facilities.</p>
+<p>For each facility-day, capture the source cutoff and expected population. Link it to the submission, provider receipt, bank observation and ledger journal. Test amount and population separately. Assign unresolved items. Then roll up counts and dollars by disposition without collapsing the open exceptions.</p>
+<p>The review should answer seven questions:</p>
+<ol>
+<li>Which facility-days are expected for the period?</li>
+<li>Which source populations are frozen and complete?</li>
+<li>Which batches accepted those populations?</li>
+<li>Which bank records correspond to those batches?</li>
+<li>Which ledger entries assigned the right amount to the right facility and period?</li>
+<li>Which population or amount variances remain open, and who owns them?</li>
+<li>What evidence supports the final reconciled state?</li>
+</ol>
+<p>A matching bank deposit is good news. It is not the conclusion. The portfolio closes the chain only when it can show which facility and shift produced the amount, how it moved, where it posted and what happened to every exception.</p>
+<hr>
+<h2>Practical operator tool</h2>
+<p>Use the accompanying <strong>Portfolio Deposit Chain Reconciliation Matrix</strong> to bind facility-day source populations to submission, provider acceptance, bank observation, ledger posting and exception closure. The blank CSV is implementation-ready; the completed CSV is explicitly fictional.</p>
+<h2>Sources and limitations</h2>
+<p>The article uses current W3C provenance guidance, GAO’s 2025 Green Book and current PCI Security Standards Council materials as bounded design references. None is presented as a private self-storage accounting procedure, audit opinion, legal requirement or compliance determination. Full access dates, provenance and limitations are recorded in <code>source-register.csv</code>.</p>
+<h2>Author</h2>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai.</p>
+<h2>Practical tool downloads</h2>
+<ul>
+<li><a href="portfolio-deposit-chain-reconciliation-matrix.md">Portfolio Deposit Chain Reconciliation Matrix</a></li>
+<li><a href="portfolio-deposit-chain-reconciliation-template.csv">Blank 35-column CSV template</a></li>
+<li><a href="portfolio-deposit-chain-reconciliation-fictional-example.csv">Explicitly fictional worked example</a></li>
+</ul>
+<section aria-label="Publication package downloads"><h2>Publication package downloads</h2><ul><li><a href="article.md">article.md</a></li><li><a href="portfolio-deposit-chain-reconciliation-matrix.md">portfolio-deposit-chain-reconciliation-matrix.md</a></li><li><a href="portfolio-deposit-chain-reconciliation-template.csv">portfolio-deposit-chain-reconciliation-template.csv</a></li><li><a href="portfolio-deposit-chain-reconciliation-fictional-example.csv">portfolio-deposit-chain-reconciliation-fictional-example.csv</a></li><li><a href="source-register.csv">source-register.csv</a></li><li><a href="image-notes.md">image-notes.md</a></li><li><a href="027-professional-board-meeting-listening.png">027-professional-board-meeting-listening.png</a></li><li><a href="destination-assignment.md">destination-assignment.md</a></li><li><a href="duplicate-check.md">duplicate-check.md</a></li><li><a href="originality-and-claim-boundary.md">originality-and-claim-boundary.md</a></li><li><a href="review-scores.md">review-scores.md</a></li><li><a href="rendered-visual-qa.md">rendered-visual-qa.md</a></li><li><a href="final-editorial-qa.md">final-editorial-qa.md</a></li><li><a href="assigned-publisher-manifest.md">assigned-publisher-manifest.md</a></li><li><a href="payload-checksums.sha256">payload-checksums.sha256</a></li><li><a href="publisher-manifest.md">publisher-manifest.md</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/portfolio-recurring-control-run-ledger-self-storage/">The Recurring Task Fired. Which Facilities Actually Completed the Control?</a></h3><p>A multi-location self-storage method for turning recurring reminders into facility-scoped control runs with current evidence, verification, exception handling and honest portfolio completion rates.</p><a href="/writing/portfolio-recurring-control-run-ledger-self-storage/" class="text-link" aria-label="Read the article: The Recurring Task Fired. Which Facilities Actually Completed the Control?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-human-decision-delta-self-storage/">The Operator Changed the AI Recommendation. Which Decision Did the System Record?</a></h3><p>Human review is not a binary approval step. When an operator changes an AI proposal, the architecture must preserve the delta, recheck authority and record the human-authored decision that actually governs the work.</p><a href="/writing/ai-human-decision-delta-self-storage/" class="text-link" aria-label="Read the article: The Operator Changed the AI Recommendation. Which Decision Did the System Record?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/facility-alias-crosswalk-self-storage/">Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio</a></h3><p>When the same property carries a different identity in every system, the portfolio does not have a reporting problem. It has an identity-control problem.</p><a href="/writing/facility-alias-crosswalk-self-storage/" class="text-link" aria-label="Read the article: Site 14, Oak Avenue, or 7842? Build the Facility Alias Crosswalk Before You Compare the Portfolio">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

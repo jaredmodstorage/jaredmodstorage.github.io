@@ -1,0 +1,22 @@
+# Image notes
+
+- **Image ID:** 027
+- **Filename:** `027-professional-board-meeting-listening.png`
+- **Governed master:** `/Users/jared/Desktop/Image Libraries/Personal/Main Collection/027-professional-board-meeting-listening.png`
+- **Catalog:** `/Users/jared/Documents/Codex/2026-08-23/ca/outputs/jared-photo-storylines/PHOTO-STORYLINES.csv`
+- **Catalog title:** Listening is part of board leadership
+- **Storyline:** Before shaping a decision, Jared gives the speaker full attention and creates room for information that could change the outcome.
+- **Suggested use:** Governance page, board communication or leadership essay.
+- **Dimensions:** 3840 × 2560 pixels
+- **Package/master SHA-256:** `be9d756c08ced1ab754ee7a6367475b247340df8f6dec1025c9023437f5c30e0`
+- **Creator:** Jared James Mastroianni
+- **Copyright:** © 2024 Jared James Mastroianni. All rights reserved.
+- **Rights page:** https://jaredmodstorage.github.io/assets/
+- **Use-request page:** https://jaredmodstorage.github.io/contact/
+- **Alt text:** Jared Mastroianni listens during a boardroom discussion with colleagues seated around a conference table.
+- **Caption:** A matching portfolio total is the beginning of a reconciliation question, not the end.
+- **Crop:** Preserve the 3:2 horizontal composition. A responsive center crop may tighten the outer walls, but keep Jared, the active speaker and the table discussion visible. Do not isolate a participant in a way that changes the scene’s meaning.
+- **Classification:** Editorial, non-documentary illustration. Governed source metadata does not state whether the raster was AI-generated; do not represent it as documentary photography or invent a generation claim.
+- **Claim boundary:** The image does not depict fictional Harbor Crest Storage, a deposit review, a processor or bank record, a customer, a verified accounting control or a claimed operating result.
+- **Reuse disclosure:** The image appeared in the September 8 midday systems package. Reuse is intentional because the governed listening/governance storyline fits the present reconciliation topic; no first-use or exclusivity claim is made.
+- **Portrait use:** Not an author portrait. The approved navy-blazer v2 portrait was not needed, and the rejected black-turtleneck portrait was not used.
