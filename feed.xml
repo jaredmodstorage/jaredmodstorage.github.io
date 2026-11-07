@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sat, 07 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 06:13:50 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Conversation Memory Is Not Operating Authority</title>
+      <link>https://jaredmodstorage.github.io/writing/conversation-memory-is-not-operating-authority/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/conversation-memory-is-not-operating-authority/</guid>
+      <pubDate>Sat, 07 Nov 2026 06:13:50 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>A practical AI architecture for preserving useful conversational continuity without allowing an earlier turn to expand authority, carry stale facility evidence or authorize a new action.</description>
+    </item>
     <item>
       <title>Two Facilities Use the Same Charge Code. Do They Mean the Same Thing?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-charge-code-definition-mapping-self-storage/</link>
