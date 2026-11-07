@@ -5,13 +5,94 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Two Facilities Use the Same Charge Code. Do They Mean the Same Thing?</title>
+      <link>https://jaredmodstorage.github.io/writing/portfolio-charge-code-definition-mapping-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-charge-code-definition-mapping-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio total is comparable only when each source code has a governed definition, an effective period and an explicit relationship to the portfolio concept.</description>
+    </item>
+    <item>
+      <title>The Operator Approved the Batch. Which Facility Actions Were Actually Inside It?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-batch-approval-action-manifest-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-batch-approval-action-manifest-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>Human review is meaningful only when approval binds to an exact, immutable set of facility actions—and execution can be reconciled to that same set.</description>
+    </item>
+    <item>
+      <title>The Task Was Due Monday. Which Facility&apos;s Monday?</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-deadline-business-calendar-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-deadline-business-calendar-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio cannot compare overdue work until it can reproduce how each deadline was calculated.</description>
+    </item>
+    <item>
+      <title>The English Version Passed Review. Who Approved the Spanish Meaning?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-translation-meaning-preservation-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-translation-meaning-preservation-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>AI translation can preserve fluent wording while changing the operating instruction. Self-storage operators need a versioned meaning contract that binds every language to the same facility, event state, time, action, authority, and correction path.</description>
+    </item>
+    <item>
+      <title>The Vendor Left. Why Is the Access Code Still Active?</title>
+      <link>https://jaredmodstorage.github.io/insights/vendor-access-closeout-multi-location-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/insights/vendor-access-closeout-multi-location-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A completed work order does not prove that a vendor’s facility access ended. Multi-location operators need a closeout control that reconciles the person, credential, scope, time window, work record, return evidence, and revocation receipt.</description>
+    </item>
+    <item>
+      <title>The AI Escalated the Case. Who Owns It Before a Human Accepts?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-human-handback-acceptance-gap-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-human-handback-acceptance-gap-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>An AI workflow finds a facility condition it is not authorized to resolve. It creates an escalation, assigns a regional operator and changes its own task to “handed back.” The dashboard looks responsible. The model knew when to stop.</description>
+    </item>
+    <item>
+      <title>The Policy Changed. Which Facilities Are Still Authorized to Operate the Old Way?</title>
+      <link>https://jaredmodstorage.github.io/writing/policy-exception-expiration-register-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/policy-exception-expiration-register-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio can publish a new operating policy in the morning and still have facilities following the old one that afternoon. That is not automatically a failure. A gate controller may need a replacement board. A local fire official may require a different inspection sequence. A software migration may.</description>
+    </item>
+    <item>
+      <title>The AI Marked It “Closed.” Which Kind of Closed Did It Mean?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>A practical architecture for preventing one overloaded status word from turning into an unsafe self-storage operating decision.</description>
+    </item>
+    <item>
+      <title>The New Gate Is Open. Which Records Still Describe the Old Facility?</title>
+      <link>https://jaredmodstorage.github.io/writing/facility-change-propagation-register-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/facility-change-propagation-register-self-storage/</guid>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A physical facility change is not operationally complete until the asset record, access logic, inspection scope, vendor coverage, emergency documents, customer route, and reporting definitions agree on the new state.</description>
+    </item>
     <item>
       <title>The AI Lost One Tool. Why Did the Workflow Still Say Complete?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/</guid>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
       <dc:creator>Jared Mastroianni</dc:creator>
       <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
       <description>A self-storage AI workflow needs an explicit runtime capability contract, a lower action ceiling when a required tool fails, and a handback that tells an operator exactly what remains unresolved.</description>

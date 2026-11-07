@@ -1,0 +1,385 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Marked It “Closed.” Which Kind of Closed Did It Mean? | Jared Mastroianni</title><meta name="description" content="A practical architecture for preventing one overloaded status word from turning into an unsafe self-storage operating decision."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Marked It “Closed.” Which Kind of Closed Did It Mean? | Jared Mastroianni"/><meta property="og:description" content="A practical architecture for preventing one overloaded status word from turning into an unsafe self-storage operating decision."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-11-07"/><meta property="article:modified_time" content="2026-11-07"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/054-ai-development-computer-vision-pilot-inspection.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Three colleagues review a camera and operating workflow during an AI governance discussion."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Marked It “Closed.” Which Kind of Closed Did It Mean? | Jared Mastroianni"/><meta name="twitter:description" content="A practical architecture for preventing one overloaded status word from turning into an unsafe self-storage operating decision."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/054-ai-development-computer-vision-pilot-inspection.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Marked It “Closed.” Which Kind of Closed Did It Mean?","datePublished":"2026-11-07","dateModified":"2026-11-07","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/#lead-image"},"description":"A practical architecture for preventing one overloaded status word from turning into an unsafe self-storage operating decision."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/#lead-image","name":"The AI Marked It “Closed.” Which Kind of Closed Did It Mean?","caption":"Operational AI needs typed evidence, decision boundaries, and a human handback when meanings collide. AI-generated editorial image; not documentary evidence of a meeting, facility, deployment, product capability, or result. AI-generated editorial illustration; not documentary evidence of a real meeting, deployment or result.","description":"AI-generated editorial illustration; not documentary evidence of a real meeting, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/054-ai-development-computer-vision-pilot-inspection.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"© Jared James Mastroianni. All rights reserved.","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/","creditText":"Jared James Mastroianni public image library"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Accountable automation","item":"https://jaredmodstorage.github.io/writing/topics/automation/"},{"@type":"ListItem","position":3,"name":"The AI Marked It “Closed.” Which Kind of Closed Did It Mean?","item":"https://jaredmodstorage.github.io/writing/ai-semantic-state-collision-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/automation/">Accountable automation</a></li><li aria-current="page">The AI Marked It “Closed.” Which Kind of Closed Did It Mean?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Responsible AI architecture<!-- --> · <time dateTime="2026-11-07">7 November 2026</time></p><h1>The AI Marked It “Closed.” Which Kind of Closed Did It Mean?</h1><p class="lede">A practical architecture for preventing one overloaded status word from turning into an unsafe self-storage operating decision.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>11 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/writing/ai-semantic-state-collision-self-storage/054-ai-development-computer-vision-pilot-inspection.png" width="3840" height="2560" alt="Three colleagues review a camera and operating workflow during an AI governance discussion."><figcaption>Operational AI needs typed evidence, decision boundaries, and a human handback when meanings collide. AI-generated editorial image; not documentary evidence of a meeting, facility, deployment, product capability, or result. AI-generated editorial illustration; not documentary evidence of a real meeting, deployment or result.</figcaption></figure><p>An AI assistant is asked a simple question: “Is the gate closed?”</p>
+<p>It finds four records. The gate contact says <code>closed</code>. The office-hours record says <code>closed</code>. A gate repair work order says <code>closed</code>. An incident case tied to the same entrance says <code>closed</code>.</p>
+<p>All four statements may be accurate. Only one describes the physical position of the gate leaf. None, by itself, answers the question the operator probably cares about: Can an authorized customer enter the property safely right now?</p>
+<p>That distinction is where responsible AI architecture becomes operational work. A model can read every available record correctly and still produce the wrong answer because the word <em>closed</em> is carrying several unrelated meanings. The failure is not necessarily hallucination. It may be a semantic collision: the same label is being used for different subjects, different state types, different authorities, and different consequences.</p>
+<p>In self-storage, that is not a language problem we can solve with a better prompt. It is a data-contract and decision-authority problem.</p>
+<h2>A status word is not an operating state</h2>
+<p>Operational software often presents short labels because people need to scan quickly: open, closed, active, inactive, complete, blocked, released. Those labels work inside a familiar screen because the surrounding context supplies the missing meaning. A manager looking at a work-order queue knows that <em>closed</em> means the administrative record is no longer active. A person standing at the keypad may use <em>closed</em> to mean the gate leaf is across the lane. The same person, looking at the office schedule, means the office is outside staffed hours.</p>
+<p>AI systems flatten those contexts when they retrieve and combine records. If the architecture passes the model a bag of labels, the model is forced to reconstruct meaning from nearby text, naming conventions, and probabilities. That may be acceptable for summarization. It is a poor basis for releasing an operational action.</p>
+<p>The safer unit is not <code>status = closed</code>. It is a typed statement:</p>
+<blockquote>
+<p>At 6:42 p.m., gate contact G-02 reported the physical leaf position as closed, according to controller C-17, under source version 8841. This observation does not establish access availability, controller health, customer authorization, lane clearance, or operating release.</p>
+</blockquote>
+<p>That statement is longer because the system had always been relying on hidden context. The architecture’s job is to make the context explicit before the AI is allowed to use the state.</p>
+<h2>Define the subject before the state</h2>
+<p>Every operational state needs a subject. “Closed” should be impossible to store or exchange without saying what is closed.</p>
+<p>For a gate episode, the relevant subjects might include:</p>
+<ul>
+<li>the physical gate leaf;</li>
+<li>the access controller;</li>
+<li>the customer-access schedule;</li>
+<li>a particular customer credential;</li>
+<li>the vehicle lane;</li>
+<li>the office-hours schedule;</li>
+<li>the repair work order; and</li>
+<li>the incident case.</li>
+</ul>
+<p>These subjects are related, but they are not interchangeable. A closed repair work order does not prove the gate is physically closed. A closed gate leaf does not prove the controller is healthy. A healthy controller does not prove a particular credential is authorized. An open access schedule does not prove the lane is clear.</p>
+<p>The first architecture rule is therefore simple: bind every state to a canonical <code>subject_type</code> and <code>subject_id</code> before it enters an AI retrieval layer. If a source cannot identify the subject, the record may still be displayed for human review, but it should not be promoted into an action-bearing fact.</p>
+<h2>Give each state its own namespace</h2>
+<p>The second rule is to stop treating familiar words as universal codes. A namespace makes the domain part of the value:</p>
+<div tabindex="0" role="region" aria-label="Scrollable data table 1" style="overflow-x:auto;max-width:100%"><table style="min-width:52rem;font-size:14px">
+<thead>
+<tr>
+  <th>Ambiguous label</th>
+  <th>Typed state example</th>
+  <th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>closed</code></td>
+  <td><code>gate_leaf.position = closed</code></td>
+  <td>The contact reports the physical leaf at its closed position.</td>
+</tr>
+<tr>
+  <td><code>closed</code></td>
+  <td><code>office.service_window = closed</code></td>
+  <td>The office is outside the staffed service interval.</td>
+</tr>
+<tr>
+  <td><code>closed</code></td>
+  <td><code>work_order.lifecycle = closed</code></td>
+  <td>The maintenance record reached its administrative terminal state.</td>
+</tr>
+<tr>
+  <td><code>closed</code></td>
+  <td><code>incident_case.lifecycle = closed</code></td>
+  <td>The incident review was administratively concluded.</td>
+</tr>
+<tr>
+  <td><code>closed</code></td>
+  <td><code>facility.access_availability = closed</code></td>
+  <td>The operating authority has disabled customer entry.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The words remain readable, but the state type does the real work. It constrains which transitions are valid, which source has authority, and which consequences may follow.</p>
+<p>This is also where schema validation helps. The official <a href="https://json-schema.org/draft/2020-12/json-schema-validation">JSON Schema Draft 2020-12 validation vocabulary</a> defines structural controls including <code>type</code>, <code>enum</code>, <code>const</code>, and <code>required</code>. Those controls can reject a state record that lacks a subject, uses an unapproved value, or omits a required authority field. The limitation matters: schema validation can prove that a document has the expected shape. It cannot prove that the sensor is truthful, the source is current, the operator had authority, or the proposed action is safe.</p>
+<h2>Separate observation, assertion, inference, and proposal</h2>
+<p>A semantic contract also needs to say what kind of statement it contains. I use four classes:</p>
+<ol>
+<li><strong>Observation:</strong> a source reports a condition, such as a contact sensor reporting the gate leaf closed.</li>
+<li><strong>Assertion:</strong> an authorized person or system declares an operating state, such as the manager placing customer access on hold.</li>
+<li><strong>Inference:</strong> a system derives a conclusion from other records, such as inferring that the office is likely unstaffed from a schedule and time zone.</li>
+<li><strong>Proposal:</strong> an AI recommends an action or a new state, such as proposing that access remain disabled pending inspection.</li>
+</ol>
+<p>The classes must never silently collapse. An inference is not an observation. A proposal is not authorization. An administrative status is not a physical condition.</p>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">NIST AI Risk Management Framework 1.0</a> calls for risk management throughout the AI lifecycle and organizes work around governing, mapping, measuring, and managing risk. It also treats context, human oversight, and interpretation of AI output as part of that work. The framework is voluntary and general; it does not prescribe a self-storage state model. The operator still has to define the subjects, authority classes, decision boundaries, and handback rules that make those principles real at the facility.</p>
+<h2>Preserve the event envelope, not just the latest value</h2>
+<p>A typed state can still become unsafe if its origin and timing disappear. Every state transition should retain at least:</p>
+<ul>
+<li>event ID;</li>
+<li>source system and source record ID;</li>
+<li>subject type and ID;</li>
+<li>state namespace and canonical value;</li>
+<li>observation, assertion, inference, or proposal class;</li>
+<li>observed time and effective time;</li>
+<li>source version and superseded record;</li>
+<li>authority class;</li>
+<li>valid-until time, when applicable; and</li>
+<li>expected operational consequence.</li>
+</ul>
+<p>The <a href="https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md">CloudEvents 1.0.2 specification</a> provides a useful, vendor-neutral event envelope with attributes such as <code>id</code>, <code>source</code>, <code>type</code>, <code>subject</code>, and <code>time</code>. It is a transport and interoperability specification, not a self-storage business ontology. It does not decide whether a state is true, which actor may authorize access, or whether delivery was exactly once. Its value here is narrower: an operational event should arrive with enough identity and provenance to be interpreted and traced.</p>
+<p>Do not overwrite <code>gate_leaf.position = open</code> with <code>closed</code> and retain only the latest row. Append the transition. Link it to the prior version. Preserve the event that caused the change. If a correction is required, record the correction as another event rather than rewriting history. The AI should be able to explain which evidence it used and which later event superseded it.</p>
+<h2>Make impossible transitions visible</h2>
+<p>A typed state model should define allowed transitions. A work order may move from open to assigned to in progress to completed to closed. A gate leaf may move from open to moving-closed to closed. An access-availability state may move from enabled to restricted to disabled, but only under defined authority.</p>
+<p>Those transition graphs prevent a source label from jumping across domains. They also expose contradictions. If the access controller reports the gate leaf as both open and closed under the same version and effective interval, the architecture should not ask the model to pick the more plausible value. It should create a semantic-collision exception.</p>
+<p>The exception needs an owner, a deadline, and an action boundary. Until the conflict is resolved, the AI may summarize the competing records and identify the missing evidence. It must not convert uncertainty into facility fact.</p>
+<h2>Join the facts required by the operating question</h2>
+<p>“Is the gate closed?” is usually an incomplete question. The system should identify the intended decision before selecting evidence.</p>
+<p>If the operator is checking the physical leaf position, the gate-contact observation may be enough to answer—with source and timestamp attached. If the operator is asking whether a customer can enter, the decision requires a join across several subjects:</p>
+<ul>
+<li>Is the customer-access schedule open for this facility and time zone?</li>
+<li>Is the controller online and processing current rules?</li>
+<li>Is the credential authorized and not on hold?</li>
+<li>Is the gate lane released from maintenance or incident control?</li>
+<li>Is the physical device in an operable state?</li>
+<li>Has an authorized person imposed a temporary restriction?</li>
+</ul>
+<p>No single <code>closed</code> label answers that set. The result should be a decision object with its own evidence list, preconditions, authority requirement, and expiration. If any required input is ambiguous, stale, missing, or contradicted, the correct output is a handback—not a guess.</p>
+<h2>A fictional collision at Granite Reed Storage</h2>
+<p>The following scenario and every record in it are fictional. They do not describe a customer, deployment, facility, product, or measured result.</p>
+<p>At 6:45 p.m., an AI assistant at fictional Granite Reed Storage is asked whether customers can use the main gate. Retrieval returns four current-looking records:</p>
+<ul>
+<li><code>gate_leaf.position = closed</code>, observed by contact G-02 at 6:42 p.m.;</li>
+<li><code>office.service_window = closed</code>, effective at 6:00 p.m.;</li>
+<li><code>work_order.lifecycle = closed</code>, set by a maintenance coordinator at 4:18 p.m.; and</li>
+<li><code>incident_case.lifecycle = closed</code>, set by a regional reviewer at 5:07 p.m.</li>
+</ul>
+<p>An untyped system might summarize: “The gate is closed, the repair is complete, and the incident is resolved.” Every clause sounds reasonable. The conclusion is still unsafe. The contact says where the leaf is, not whether it can move. The work-order state says the administrative record is closed, not that the operating release was verified. The incident state says the case is closed, not that the lane is available. The office schedule is irrelevant to authorized after-hours access unless policy explicitly makes it a precondition.</p>
+<p>The typed system returns a different answer:</p>
+<blockquote>
+<p>Customer access cannot be determined from the retrieved states. The gate leaf was observed closed at 6:42 p.m. The work order and incident case are administratively closed. No current controller-health readback, lane-release assertion, or access-availability decision was found. Hand back to the on-call operator before representing the gate as available.</p>
+</blockquote>
+<p>That answer is less convenient. It is also honest about what the evidence can support.</p>
+<h2>Monitor collisions after deployment</h2>
+<p>Semantic safety is not finished when the schema ships. Source systems change labels. Vendors add statuses. Teams reuse a familiar word for a new workflow. A mapping that was valid last quarter can become misleading without breaking an API.</p>
+<p><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf">NIST AI 800-4, <em>Challenges to the Monitoring of Deployed AI Systems</em></a>, notes that post-deployment monitoring is needed to assess real-world reliability, track unforeseen outputs and drift, and identify consequences in new or changing contexts. The report also says that monitoring terminology, validated methods, and best practices are still nascent. It is a monitoring landscape and challenges report, not a prescriptive semantic-control standard.</p>
+<p>For an operating portfolio, monitor at least five collision signals:</p>
+<ol>
+<li>a new raw label that has no approved namespace mapping;</li>
+<li>one raw label mapped to more than one state type without an explicit source rule;</li>
+<li>contradictory states for the same subject and effective interval;</li>
+<li>a downstream action based on an inference or proposal as though it were an authorized assertion; and</li>
+<li>a decision produced without every required precondition and action-time readback.</li>
+</ol>
+<p>Track the exceptions by source, facility, state type, action consequence, resolution owner, and age. A rising collision count is not merely a data-quality metric. It is evidence that the operating vocabulary and the actual workflows are drifting apart.</p>
+<h2>Use the Semantic State Collision Test before action</h2>
+<p>The companion tool converts this architecture into a reviewable contract. For every action-bearing state, the operator or system owner must be able to answer:</p>
+<ul>
+<li>What exact subject does this state describe?</li>
+<li>Which namespace gives the label its meaning?</li>
+<li>Is the statement an observation, assertion, inference, or proposal?</li>
+<li>Which source and version produced it?</li>
+<li>When was it observed, when did it become effective, and when does it expire?</li>
+<li>Which transitions are allowed, and who may authorize them?</li>
+<li>What does the state permit the AI to conclude?</li>
+<li>What must the AI never infer from it?</li>
+<li>Which additional states must be joined before action?</li>
+<li>What action-time readback is required?</li>
+<li>Who receives the handback when any answer is missing or conflicting?</li>
+</ul>
+<p>The point is not to build a bigger glossary. It is to keep one convenient word from crossing an authority boundary it was never designed to cross.</p>
+<h2>The model should not have to guess what operations mean</h2>
+<p>An AI system can be fluent, careful, and technically correct while still joining the wrong meanings. When that happens, improving the prose of the prompt may make the answer sound better without making the operating decision safer.</p>
+<p>The durable fix is architectural: typed subjects, state namespaces, explicit statement classes, append-only transitions, source and time provenance, allowed-transition rules, action preconditions, and human handback. Then the model can do what it is good at—finding, comparing, and explaining information—without being asked to invent the missing operating contract.</p>
+<p>At a self-storage facility, <em>closed</em> should never be the end of the question. It should be the beginning of a more precise one: What is closed, according to whom, as of when, and what does that state actually authorize us to do?</p>
+<hr />
+<p><strong>Practical operator tool:</strong> See <code>semantic-state-collision-test-and-action-contract.md</code>, the blank CSV template, and the explicitly fictional Granite Reed Storage example included with this package.</p>
+<p><strong>Author:</strong> Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai.</p>
+<p><strong>Image disclosure:</strong> The featured image is an AI-generated editorial illustration. It is not documentary evidence of a meeting, facility, deployment, product capability, or result.</p>
+<section aria-label="Practical operator tool"><h2>Semantic State Collision Test and Action Contract</h2><p>Use this tool before an AI output can be represented as an operating fact or released into an action. Complete one contract for each action-bearing state or decision. A blank, conflicting, stale, or unowned field requires handback.</p>
+<h3>1. Identify the state precisely</h3>
+<ul>
+<li>[ ] Canonical facility ID is recorded.</li>
+<li>[ ] <code>subject_type</code> and <code>subject_id</code> identify exactly what the state describes.</li>
+<li>[ ] The raw source label is retained.</li>
+<li>[ ] A governed <code>state_namespace</code> and <code>canonical_state_code</code> are assigned.</li>
+<li>[ ] The plain-language meaning is written without relying on the raw label alone.</li>
+<li>[ ] The statement is classified as observation, assertion, inference, or proposal.</li>
+</ul>
+<h3>2. Bind provenance and time</h3>
+<ul>
+<li>[ ] Source system and source record ID are retained.</li>
+<li>[ ] Source version and triggering event ID are retained.</li>
+<li>[ ] Observed time and effective time are separate.</li>
+<li>[ ] A valid-until time is set when the state can expire.</li>
+<li>[ ] A superseded record is linked rather than overwritten.</li>
+<li>[ ] Evidence can be opened by the reviewer.</li>
+</ul>
+<h3>3. Test meaning and authority</h3>
+<div tabindex="0" role="region" aria-label="Scrollable data table 2" style="overflow-x:auto;max-width:100%"><table style="min-width:52rem;font-size:14px">
+<thead>
+<tr>
+  <th>Test</th>
+  <th>Pass condition</th>
+  <th>Handback trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Subject test</td>
+  <td>The record identifies one canonical subject.</td>
+  <td>“Closed,” “open,” or another label is detached from a subject.</td>
+</tr>
+<tr>
+  <td>Namespace test</td>
+  <td>The raw label maps to one governed state type under the source rule.</td>
+  <td>One label maps to competing meanings without a disambiguation rule.</td>
+</tr>
+<tr>
+  <td>Statement-class test</td>
+  <td>Observation, assertion, inference, and proposal remain explicit.</td>
+  <td>An inference or proposal is presented as observed or authorized fact.</td>
+</tr>
+<tr>
+  <td>Authority test</td>
+  <td>The actor or source may create this state.</td>
+  <td>The source can report data but cannot authorize the transition.</td>
+</tr>
+<tr>
+  <td>Transition test</td>
+  <td>The prior and next states are permitted.</td>
+  <td>The transition is impossible, skipped, or outside the actor’s authority.</td>
+</tr>
+<tr>
+  <td>Collision test</td>
+  <td>No contradictory state covers the same subject and effective interval.</td>
+  <td>Competing values exist and no governing precedence rule resolves them.</td>
+</tr>
+<tr>
+  <td>Consequence test</td>
+  <td>Expected consequence and prohibited inference are both written.</td>
+  <td>A downstream consumer could infer more than the state supports.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4. Build the action contract</h3>
+<p>Before action, write the following in one place:</p>
+<ol>
+<li><strong>Action candidate:</strong> What action is being considered?</li>
+<li><strong>Required authority:</strong> Who or what may authorize it?</li>
+<li><strong>Required subjects:</strong> Which state types must be joined?</li>
+<li><strong>Preconditions:</strong> Which exact values must be current and non-conflicting?</li>
+<li><strong>Action-time readback:</strong> What must be checked again immediately before release?</li>
+<li><strong>Expiration:</strong> When does the decision become invalid without re-evaluation?</li>
+<li><strong>Expected consequence:</strong> What should change if the action succeeds?</li>
+<li><strong>Verification:</strong> Which readback proves the expected consequence occurred?</li>
+<li><strong>Prohibited inference:</strong> What must not be claimed from this evidence?</li>
+<li><strong>Handback owner:</strong> Who receives the case when any required element fails?</li>
+</ol>
+<h3>5. Release decision</h3>
+<ul>
+<li>[ ] Every required state is present, typed, current, and non-conflicting.</li>
+<li>[ ] The action authority is confirmed.</li>
+<li>[ ] The action-time readback passed.</li>
+<li>[ ] The proposed action and expected consequence are within the contract.</li>
+<li>[ ] The verification method and exception owner are assigned before execution.</li>
+</ul>
+<blockquote>
+<p><strong>Release rule:</strong> The AI may summarize an unresolved collision. It may not resolve the collision by choosing the most plausible meaning. If any required element is missing, conflicting, stale, or unauthorized, the result is <strong>HAND BACK</strong>, not “probably safe.”</p>
+</blockquote>
+<h3>Minimum audit record</h3>
+<p>Retain the completed CSV row, evidence link, source version, action-time readback, final human or system authority, action result, verification record, and any correction or supersession event. Do not replace the earlier state with the corrected one.</p>
+</section><section aria-label="Practical tool downloads"><h2>Download the practical tool</h2><ul><li><a download href="semantic-state-collision-test-and-action-contract.md">Practical tool (Markdown)</a></li><li><a download href="semantic-state-collision-fictional-example.csv">Fictional example CSV</a></li><li><a download href="semantic-state-collision-template.csv">Blank CSV template</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-tool-failure-degraded-mode-self-storage/">The AI Lost One Tool. Why Did the Workflow Still Say Complete?</a></h3><p>A self-storage AI workflow needs an explicit runtime capability contract, a lower action ceiling when a required tool fails, and a handback that tells an operator exactly what remains unresolved.</p><a href="/writing/ai-tool-failure-degraded-mode-self-storage/" class="text-link" aria-label="Read the article: The AI Lost One Tool. Why Did the Workflow Still Say Complete?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Portfolio operating systems</p><h3><a href="/writing/facility-change-propagation-register-self-storage/">The New Gate Is Open. Which Records Still Describe the Old Facility?</a></h3><p>A physical facility change is not operationally complete until the asset record, access logic, inspection scope, vendor coverage, emergency documents, customer route, and reporting definitions agree on the new state.</p><a href="/writing/facility-change-propagation-register-self-storage/" class="text-link" aria-label="Read the article: The New Gate Is Open. Which Records Still Describe the Old Facility?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-absence-state-contract-self-storage/">The Field Is Blank. Did the AI Read “No,” “Unknown,” or “Not Applicable”?</a></h3><p>A missing value is not an operating decision. If an AI system cannot explain why a field is empty, the field cannot safely authorize an action.</p><a href="/writing/ai-absence-state-contract-self-storage/" class="text-link" aria-label="Read the article: The Field Is Blank. Did the AI Read “No,” “Unknown,” or “Not Applicable”?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
