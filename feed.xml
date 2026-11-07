@@ -8,6 +8,15 @@
     <lastBuildDate>Fri, 06 Nov 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Field Is Blank. Did the AI Read “No,” “Unknown,” or “Not Applicable”?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-absence-state-contract-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-absence-state-contract-self-storage/</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/automation/">Accountable automation</category>
+      <description>A missing value is not an operating decision. If an AI system cannot explain why a field is empty, the field cannot safely authorize an action.</description>
+    </item>
+    <item>
       <title>The Month Closed. Which Late Facility Changes Are Allowed Back In?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-period-reopen-restatement-register-self-storage/</link>
       <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/portfolio-period-reopen-restatement-register-self-storage/</guid>
