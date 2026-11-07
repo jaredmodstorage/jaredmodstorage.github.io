@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Lost One Tool. Why Did the Workflow Still Say Complete? | Jared Mastroianni</title><meta name="description" content="A self-storage AI workflow needs an explicit runtime capability contract, a lower action ceiling when a required tool fails, and a handback that tells an operator exactly what remains unresolved."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Lost One Tool. Why Did the Workflow Still Say Complete? | Jared Mastroianni"/><meta property="og:description" content="A self-storage AI workflow needs an explicit runtime capability contract, a lower action ceiling when a required tool fails, and a handback that tells an operator exactly what remains unresolved."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-11-06"/><meta property="article:modified_time" content="2026-11-06"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/056-ai-development-smart-access-control-pilot.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Three self-storage professionals review a keypad-controlled gate during a smart-access pilot."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Lost One Tool. Why Did the Workflow Still Say Complete? | Jared Mastroianni"/><meta name="twitter:description" content="A self-storage AI workflow needs an explicit runtime capability contract, a lower action ceiling when a required tool fails, and a handback that tells an operator exactly what remains unresolved."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/056-ai-development-smart-access-control-pilot.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Lost One Tool. Why Did the Workflow Still Say Complete?","datePublished":"2026-11-06","dateModified":"2026-11-06","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/#lead-image"},"description":"A self-storage AI workflow needs an explicit runtime capability contract, a lower action ceiling when a required tool fails, and a handback that tells an operator exactly what remains unresolved."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/#lead-image","name":"The AI Lost One Tool. Why Did the Workflow Still Say Complete?","caption":"A tool can be online while a workflow is incomplete. Runtime controls have to test every required capability before an AI-assisted action is released. AI-generated editorial image. AI-generated editorial illustration; not documentary evidence of a real meeting, deployment or result.","description":"AI-generated editorial illustration; not documentary evidence of a real meeting, deployment or result.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/056-ai-development-smart-access-control-pilot.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"© Jared James Mastroianni. All rights reserved.","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/","creditText":"Jared James Mastroianni public image library"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Accountable automation","item":"https://jaredmodstorage.github.io/writing/topics/automation/"},{"@type":"ListItem","position":3,"name":"The AI Lost One Tool. Why Did the Workflow Still Say Complete?","item":"https://jaredmodstorage.github.io/writing/ai-tool-failure-degraded-mode-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/automation/">Accountable automation</a></li><li aria-current="page">The AI Lost One Tool. Why Did the Workflow Still Say Complete?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Responsible AI architecture<!-- --> · <time dateTime="2026-11-06">6 November 2026</time></p><h1>The AI Lost One Tool. Why Did the Workflow Still Say Complete?</h1><p class="lede">A self-storage AI workflow needs an explicit runtime capability contract, a lower action ceiling when a required tool fails, and a handback that tells an operator exactly what remains unresolved.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body"><figure class="article-photo"><img src="/writing/ai-tool-failure-degraded-mode-self-storage/056-ai-development-smart-access-control-pilot.png" width="3840" height="2560" alt="Three self-storage professionals review a keypad-controlled gate during a smart-access pilot."><figcaption>A tool can be online while a workflow is incomplete. Runtime controls have to test every required capability before an AI-assisted action is released. AI-generated editorial image. AI-generated editorial illustration; not documentary evidence of a real meeting, deployment or result.</figcaption></figure><p>An AI workflow rarely fails as cleanly as a power switch. One tool works. Another times out. A third returns yesterday's snapshot. The model still has enough context to write a confident answer, and the orchestration layer still has enough green checks to display “complete.”</p>
+<p>That is one of the most dangerous failure shapes in an operating system: not a total outage, but a plausible partial success.</p>
+<p>In self-storage, a customer-access workflow may depend on several different facts. Is the account eligible for access? Is the credential active? Is the facility open for the applicable access window? Is there a documented exception or hold? Those facts may live in different systems. If the gate tool responds but the authoritative account-status tool does not, the workflow does not have most of the answer. It has the wrong answer shape.</p>
+<p>The control I want is simple to state: <strong>a workflow may not claim completion when a required capability was unavailable at runtime.</strong> It must lower its action ceiling, preserve the receipts it did obtain, and hand the unresolved decision to the right person.</p>
+<p>That rule is more useful than a generic instruction to “keep a human in the loop.” It tells us when the human is needed, what the system is allowed to do before handback, and what evidence should travel with the exception.</p>
+<h2>A successful call is not a completed decision</h2>
+<p>Operators should separate four states that software often collapses:</p>
+<ol>
+<li><strong>Transport success:</strong> the request reached a service and received a response.</li>
+<li><strong>Tool completion:</strong> the tool performed the requested operation within its declared scope.</li>
+<li><strong>Workflow completion:</strong> every required capability contributed an acceptable result.</li>
+<li><strong>Business-state verification:</strong> the real facility or account state was read back after any consequential action.</li>
+</ol>
+<p>A <code>200</code> response can prove transport success without proving tool completion. A tool can complete while returning only the first page of records. Every tool can return successfully while the workflow is still missing a required policy check. And an action can be accepted by an API without proving that the customer credential, ledger, message, or work order changed as intended.</p>
+<p>This distinction fits the <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">NIST AI Risk Management Framework</a>, which treats validity, reliability, monitoring, accountability, and documented roles as continuing parts of risk management. It also fits the <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">NIST Generative AI Profile</a>, which emphasizes monitoring, incident response, change management, and defined human oversight. Those documents are voluntary, cross-sector guidance—not self-storage operating rules—but the architecture lesson is direct: a system needs evidence about how it behaved, not merely an answer it produced.</p>
+<h2>Give the workflow a runtime capability contract</h2>
+<p>Most AI workflow diagrams show tools as permanent boxes. Production tools are not permanent. Their permissions change. A schema adds a field. A credential expires. A site mapping points to the wrong facility. A source is available but stale. A vendor endpoint returns an incomplete page without an error.</p>
+<p>Before a run begins, the orchestrator should assemble a capability contract for that specific run. At minimum, it should record:</p>
+<ul>
+<li>the tool and operation identifier;</li>
+<li>tool version and expected schema;</li>
+<li>organization and facility binding;</li>
+<li>permission scope;</li>
+<li>whether the capability is required or optional;</li>
+<li>freshness and coverage requirements;</li>
+<li>accepted success and failure states;</li>
+<li>the permitted degraded mode;</li>
+<li>the maximum action allowed in that mode; and</li>
+<li>the human owner of a handback.</li>
+</ul>
+<p>Treat that contract as a short-lived lease, not permanent configuration. Invalidate it when a tool version, schema, identity binding, permission, policy, model, or facility context changes. Then rerun the preflight instead of carrying yesterday's green check into today's decision.</p>
+<p>This is where conventional access control and contingency thinking help. <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">NIST Special Publication 800-53 Release 5.2.0</a> is a federal information-system control catalog, not a mandate for storage operators. Still, its control families around access, audit, contingency planning, monitoring, and recovery offer a useful design analogy: authority, evidence, fallback behavior, and recovery should be specified before the incident.</p>
+<h2>Name failure states precisely</h2>
+<p>“Tool error” is too broad to govern an operating action. A runtime receipt should distinguish at least these states:</p>
+<ul>
+<li><code>not_invoked</code>: the workflow never attempted the required call;</li>
+<li><code>rejected</code>: identity, permission, policy, or request validation blocked it;</li>
+<li><code>timed_out</code>: no acceptable result arrived within the decision window;</li>
+<li><code>partial</code>: the result covered less than the required population or fields;</li>
+<li><code>stale</code>: the result was older than the workflow's freshness limit;</li>
+<li><code>empty_valid</code>: the authoritative source completed and validly returned no records;</li>
+<li><code>completed</code>: the tool met its declared operation, scope, and freshness contract; and</li>
+<li><code>completed_unverified</code>: the tool accepted a change, but required business-state readback is still missing.</li>
+</ul>
+<p>Those distinctions prevent two common mistakes. First, an empty result cannot be treated as a timeout. Second, a timeout cannot be treated as evidence that nothing exists.</p>
+<p>Retries also need boundaries. Retry a transient transport failure within a defined limit. Do not retry a permission rejection as if persistence will create authority. Do not replay a consequential write unless the operation has an idempotency control or the current target state has been read first. And when a tool recovers, recompute the decision from current authoritative inputs; do not simply resume the sentence the model was writing before the outage.</p>
+<p>Telemetry should preserve these states in a trace that links the workflow, tool receipt, facility identity, decision, action, and readback. The <a href="https://opentelemetry.io/docs/specs/semconv/general/recording-errors/">OpenTelemetry guidance on recording errors</a> supports consistent error classification at the operation level. Its semantic-convention page is marked “Development,” and telemetry standards do not determine whether a storage decision is operationally complete. A green span is evidence about a software operation, not proof that a customer should receive access.</p>
+<h2>Lower the action ceiling instead of improvising</h2>
+<p>The worst degraded mode is silent substitution. A required account-status tool fails, so the model uses a cached summary, an earlier conversation, or general policy language and continues. The output may sound reasonable because the substitute is semantically related. It is still not the required authority.</p>
+<p>Each failure state should map to an explicit action ceiling. For example:</p>
+<div tabindex="0" role="region" aria-label="Scrollable data table 1" style="overflow-x:auto;max-width:100%"><table style="min-width:52rem;font-size:14px">
+<thead>
+<tr>
+  <th>Runtime condition</th>
+  <th>Maximum safe workflow behavior</th>
+  <th>Prohibited behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Required source current and complete</td>
+  <td>Prepare the governed action; execute only within assigned authority</td>
+  <td>Expanding scope beyond the approved operation</td>
+</tr>
+<tr>
+  <td>Optional source unavailable</td>
+  <td>Continue only in the declared degraded mode with visible limitation</td>
+  <td>Hiding the missing input</td>
+</tr>
+<tr>
+  <td>Required source stale, partial, rejected, or timed out</td>
+  <td>Preserve evidence, create handback, and stop at draft or diagnostic support</td>
+  <td>Customer-facing decision, access change, charge, refund, lockout, or irreversible work order</td>
+</tr>
+<tr>
+  <td>Consequential write accepted but not read back</td>
+  <td>Mark <code>completed_unverified</code> and hold closure</td>
+  <td>Reporting the business state as changed</td>
+</tr>
+<tr>
+  <td>Facility or account identity conflict</td>
+  <td>Stop the run and require identity resolution</td>
+  <td>Guessing the intended target</td>
+</tr>
+</tbody>
+</table></div>
+<p>The system may still be useful while action is restricted. It can summarize the evidence it received, identify the missing capability, draft operator questions, or assemble a diagnostic packet. It cannot promote assistance into authority simply because the operator is busy.</p>
+<h2>A fictional access example</h2>
+<p>Consider <strong>Moraine Gate Storage</strong>, a fictional facility used only to show the control. No real customer, deployment, vendor result, or performance claim is described.</p>
+<p>An AI-assisted access-support workflow receives a call about a tenant who cannot enter. Its runtime contract requires four capabilities: current account eligibility, gate-credential status, the facility's applicable access window, and the approved exception policy.</p>
+<p>The credential tool reports that the code is active. The facility-hours source is current. The policy source loads. The account-status tool times out.</p>
+<p>The wrong workflow says: “The credential is active, so access should work,” then sends troubleshooting instructions or changes the credential.</p>
+<p>The governed workflow records three successful receipts and one <code>timed_out</code> required capability. Its action ceiling drops to diagnostic support. It may tell the operator that the credential service reports an active code and that account eligibility is unresolved. It may prepare a handback with the tenant and facility identifiers, timestamps, source ages, trace ID, attempted operation, successful receipts, missing capability, prohibited actions, and the next authorized check. It may not infer eligibility, change access, or tell the customer that access is approved.</p>
+<p>When the account tool returns, the workflow must read the current account state and recompute. Recovery does not retroactively make the earlier run complete.</p>
+<h2>Make the handback small enough to use</h2>
+<p>A handback should not be a raw trace dump. The operator needs a compact decision packet:</p>
+<ul>
+<li><strong>What was requested?</strong> State the customer or facility outcome in plain language.</li>
+<li><strong>What is known?</strong> List authoritative receipts with source, scope, and time.</li>
+<li><strong>What is missing or conflicting?</strong> Name the required capability and exact failure state.</li>
+<li><strong>What did the system not do?</strong> State the held actions explicitly.</li>
+<li><strong>What can the operator do next?</strong> Provide the authorized read, call, inspection, or escalation.</li>
+<li><strong>What evidence closes the handback?</strong> Identify the required readback or supervisor decision.</li>
+</ul>
+<p>Assign the handback to a role, not “operations.” Give it a due time based on consequence. A customer waiting at a gate needs a different response window than a portfolio-analysis job. If the owner changes, transfer the packet and record acceptance; do not leave the exception in an unowned queue.</p>
+<h2>Test the failure shape before launch</h2>
+<p>A demo in which every tool answers does not test the architecture. Before release, inject the failures the workflow will eventually encounter:</p>
+<ul>
+<li>required-tool timeout;</li>
+<li>expired permission;</li>
+<li>wrong facility binding;</li>
+<li>partial pagination;</li>
+<li>stale cached result;</li>
+<li>schema mismatch;</li>
+<li>valid empty result;</li>
+<li>duplicate retry;</li>
+<li>write accepted without readback; and</li>
+<li>tool recovery after handback.</li>
+</ul>
+<p>For each test, verify the declared action ceiling, visible limitation, prohibited-action hold, owner assignment, and recomputation behavior. The most important metric is not how often the model finishes a response. Track how often a run lacked a required capability, how often it entered degraded mode, how long handbacks remained open, whether recovered runs were recomputed, and whether any silent substitution occurred. The acceptable target for silent substitution is zero.</p>
+<h2>Completion should mean what the operator thinks it means</h2>
+<p>An operator reading “complete” reasonably believes the required work was done. If the platform means “the model stopped generating tokens” or “the orchestration graph reached its final node,” the label is misleading.</p>
+<p>Responsible AI architecture is often described through principles. Operators need state definitions. A required tool was available or it was not. Its result met freshness and coverage requirements or it did not. The workflow had authority to act or it handed back. A consequential change was read back or it remained unverified.</p>
+<p>That discipline does not make an AI system timid. It makes the system dependable under the conditions that matter most: when production is only partly working and the output still sounds completely sure.</p>
+<hr />
+<h2>Practical operator tool</h2>
+<p>Use the accompanying <strong>AI Runtime Capability and Degraded-Mode Release Matrix</strong> before enabling or changing an AI-assisted workflow. The package includes a blank CSV and an explicitly fictional completed example.</p>
+<h2>Author</h2>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai.</p>
+<h2>Disclosure</h2>
+<p>This article was developed with AI-assisted research and editorial support under human direction and review. The architecture, examples, and operating recommendations remain the author's responsibility. The Moraine Gate Storage scenario and all data in its completed tool are explicitly fictional.</p>
+<section aria-label="Practical operator tool"><h2>AI Runtime Capability and Degraded-Mode Release Matrix</h2><p>Use this tool for each consequential AI-assisted workflow before release and after any change to a tool, schema, permission, model, policy, organization binding, or facility binding. One row represents one required or optional runtime capability. The matrix does not grant authority; it records the authority and controls supplied by the operator.</p>
+<h3>Part 1: Define the capability contract</h3>
+<div tabindex="0" role="region" aria-label="Scrollable data table 2" style="overflow-x:auto;max-width:100%"><table style="min-width:52rem;font-size:14px">
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Required entry</th>
+  <th>Release question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Workflow, run, organization, and facility IDs</td>
+  <td>Exact governed identifiers</td>
+  <td>Could this run act on the wrong business or property?</td>
+</tr>
+<tr>
+  <td>Decision and consequence class</td>
+  <td>Describe the intended decision and impact</td>
+  <td>What is the most consequential possible outcome?</td>
+</tr>
+<tr>
+  <td>Tool, operation, version, and schema digest</td>
+  <td>Exact runtime dependency</td>
+  <td>Can a reviewer reproduce which capability was expected?</td>
+</tr>
+<tr>
+  <td>Permission and identity scope</td>
+  <td>Read/write rights and target scope</td>
+  <td>Does the caller have the required authority for this target?</td>
+</tr>
+<tr>
+  <td>Required or optional</td>
+  <td><code>required</code> or <code>optional</code></td>
+  <td>May the workflow reach release without this capability?</td>
+</tr>
+<tr>
+  <td>Freshness and coverage requirements</td>
+  <td>Maximum age and required population/fields</td>
+  <td>What makes the result current and complete enough?</td>
+</tr>
+<tr>
+  <td>Permitted degraded mode</td>
+  <td>Exact useful behavior when unavailable</td>
+  <td>What can continue without becoming a decision?</td>
+</tr>
+<tr>
+  <td>Action ceiling</td>
+  <td>Maximum allowed action in that state</td>
+  <td>Which actions must remain prohibited?</td>
+</tr>
+<tr>
+  <td>Handback owner</td>
+  <td>Named role or person</td>
+  <td>Who owns resolution and by when?</td>
+</tr>
+<tr>
+  <td>Readback requirement</td>
+  <td>Authoritative post-action check</td>
+  <td>What proves the business state actually changed?</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Part 2: Classify each runtime receipt</h3>
+<p>Use one of these states rather than a generic success/error flag:</p>
+<div tabindex="0" role="region" aria-label="Scrollable data table 3" style="overflow-x:auto;max-width:100%"><table style="min-width:52rem;font-size:14px">
+<thead>
+<tr>
+  <th>State</th>
+  <th>Meaning</th>
+  <th>Default control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>not_invoked</code></td>
+  <td>Required call was never attempted</td>
+  <td>Hold and investigate orchestration</td>
+</tr>
+<tr>
+  <td><code>rejected</code></td>
+  <td>Identity, permission, policy, or validation blocked the call</td>
+  <td>Hold; resolve authority, do not blind-retry</td>
+</tr>
+<tr>
+  <td><code>timed_out</code></td>
+  <td>No acceptable result arrived within the decision window</td>
+  <td>Bounded retry if transient, then hand back</td>
+</tr>
+<tr>
+  <td><code>partial</code></td>
+  <td>Coverage or required fields are incomplete</td>
+  <td>Hold decision; request missing scope</td>
+</tr>
+<tr>
+  <td><code>stale</code></td>
+  <td>Result exceeds the freshness limit</td>
+  <td>Refresh before decision</td>
+</tr>
+<tr>
+  <td><code>empty_valid</code></td>
+  <td>Authoritative source completed and validly returned no records</td>
+  <td>Preserve as a valid result; do not relabel as failure</td>
+</tr>
+<tr>
+  <td><code>completed</code></td>
+  <td>Operation met scope, coverage, and freshness requirements</td>
+  <td>Continue within declared authority</td>
+</tr>
+<tr>
+  <td><code>completed_unverified</code></td>
+  <td>Write accepted but required state readback is missing</td>
+  <td>Hold closure and customer-facing claim</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Part 3: Apply the release gate</h3>
+<ul>
+<li>[ ] Every required capability has a current <code>completed</code> or valid <code>empty_valid</code> receipt.</li>
+<li>[ ] Organization, facility, account, and policy identity scopes agree.</li>
+<li>[ ] Partial results, page limits, and stale cache paths were tested.</li>
+<li>[ ] No model memory, cached summary, or conversational context substituted for a missing authoritative source.</li>
+<li>[ ] Optional capability loss is visible and within the declared degraded mode.</li>
+<li>[ ] Required capability loss lowered the action ceiling and created a handback.</li>
+<li>[ ] Retries are bounded, semantically appropriate, and safe from duplicate writes.</li>
+<li>[ ] A recovered tool causes a new current read and full recomputation.</li>
+<li>[ ] Any consequential write has an authoritative business-state readback.</li>
+<li>[ ] The final workflow label distinguishes <code>eligible_for_release</code>, <code>executed_awaiting_readback</code>, and <code>closed</code>.</li>
+</ul>
+<h3>Part 4: Handback packet</h3>
+<p>Record only the evidence an operator needs to resolve the exception:</p>
+<ol>
+<li>Requested outcome and consequence class.</li>
+<li>Exact organization, facility, account, and workflow identifiers.</li>
+<li>Successful receipts with source, scope, age, and trace reference.</li>
+<li>Missing or conflicting capability with its failure state.</li>
+<li>Actions the system explicitly did not take.</li>
+<li>Next authorized check or escalation.</li>
+<li>Owner, due time, and required closure evidence.</li>
+<li>Whether full recomputation is required after recovery.</li>
+</ol>
+<h3>Release rule</h3>
+<p>If any required capability is <code>not_invoked</code>, <code>rejected</code>, <code>timed_out</code>, <code>partial</code>, <code>stale</code>, or <code>completed_unverified</code>, the workflow may not claim business completion. It may continue only within a documented degraded mode, and no customer-facing or consequential action may exceed the recorded action ceiling.</p>
+</section><section aria-label="Practical tool downloads"><h2>Download the practical tool</h2><ul><li><a download href="ai-runtime-capability-and-degraded-mode-release-matrix.md">Practical tool (Markdown)</a></li><li><a download href="ai-runtime-capability-and-degraded-mode-fictional-example.csv">Fictional example CSV</a></li><li><a download href="ai-runtime-capability-and-degraded-mode-template.csv">Blank CSV template</a></li></ul></section></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-absence-state-contract-self-storage/">The Field Is Blank. Did the AI Read “No,” “Unknown,” or “Not Applicable”?</a></h3><p>A missing value is not an operating decision. If an AI system cannot explain why a field is empty, the field cannot safely authorize an action.</p><a href="/writing/ai-absence-state-contract-self-storage/" class="text-link" aria-label="Read the article: The Field Is Blank. Did the AI Read “No,” “Unknown,” or “Not Applicable”?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-decision-evidence-custody-self-storage/">The AI Record Changed After the Incident. Which Version Is Evidence?</a></h3><p>An editable activity screen can tell you what the system believes now. It cannot, by itself, prove what evidence the AI used, what a person reviewed or what the facility confirmed at the time. Preserve the original decision packet, then append corrections without rewriting history.</p><a href="/writing/ai-decision-evidence-custody-self-storage/" class="text-link" aria-label="Read the article: The AI Record Changed After the Incident. Which Version Is Evidence?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Responsible AI architecture</p><h3><a href="/writing/ai-clock-integrity-causal-timeline-self-storage/">The AI Timeline Says the Action Came First. Did the Clocks Agree?</a></h3><p>A clean incident timeline can still reverse cause and effect when facility systems measure time differently. Responsible AI architecture must preserve clock quality, causal links and ordering uncertainty before a reconstructed sequence changes operating work.</p><a href="/writing/ai-clock-integrity-causal-timeline-self-storage/" class="text-link" aria-label="Read the article: The AI Timeline Says the Action Came First. Did the Clocks Agree?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
