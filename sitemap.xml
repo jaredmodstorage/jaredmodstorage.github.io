@@ -44,7 +44,7 @@
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/research/</loc>
-<lastmod>2026-11-10T13:03:47.000Z</lastmod>
+<lastmod>2026-11-09T19:22:59.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -122,7 +122,7 @@
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/writing/topics/architecture/</loc>
-<lastmod>2026-11-10T13:03:47.000Z</lastmod>
+<lastmod>2026-11-09T19:22:59.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -135,12 +135,6 @@
 <url>
 <loc>https://jaredmodstorage.github.io/writing/topics/research/</loc>
 <lastmod>2026-09-01T00:00:00.000Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://jaredmodstorage.github.io/writing/ai-conversation-speaker-claim-binding-self-storage/</loc>
-<lastmod>2026-11-10T13:03:47.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
