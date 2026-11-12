@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Thu, 12 Nov 2026 13:14:49 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 19:10:22 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Refused to Decide. Why Did the Workflow Act Anyway?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-abstention-routing-default-action-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-abstention-routing-default-action-self-storage/</guid>
+      <pubDate>Thu, 12 Nov 2026 19:10:22 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A responsible AI workflow needs a first-class abstention route so a model&apos;s refusal cannot become an operating action through a default value.</description>
+    </item>
     <item>
       <title>Every Facility Uploaded a File. Were They All Cut Off at the Same Time?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-source-watermark-self-storage/</link>
