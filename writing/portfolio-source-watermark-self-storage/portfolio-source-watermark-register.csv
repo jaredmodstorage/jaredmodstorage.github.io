@@ -1,0 +1,2 @@
+run_id,purpose,comparison_instant_utc,facility_population_version,facility_id,facility_name,source_system,extract_name,watermark_timestamp,watermark_basis,extraction_timestamp,receipt_timestamp,local_timezone,file_name,object_id,sha256,record_count,declared_scope,schema_check,population_check,reasonableness_check,prior_object_id,supersession_reason,exception_state,exception_owner,exception_due,consumer_limitation,release_state,release_owner,release_timestamp,second_verifier,verification_timestamp,evidence_note
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,4 @@
+source_id,title,url,publisher,accessed,provenance,material_limitation
+S1,NIST SP 800-53 Revision 5,https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final,NIST,2026-11-12,Official federal publication page,Security-control catalog; not a self-storage reporting mandate or compliance conclusion
+S2,RFC 3339 Date and Time on the Internet Timestamps,https://www.rfc-editor.org/info/rfc3339/,RFC Editor,2026-11-12,Official RFC record,Defines timestamps for instants; does not define business intervals cutoffs or completeness
+S3,PROV-O The PROV Ontology,https://www.w3.org/TR/prov-o/,W3C,2026-11-12,W3C Recommendation,Architectural provenance reference; does not require RDF or establish an implementation
