@@ -1,0 +1,473 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><link rel="stylesheet" href="/_next/static/css/page.BPeHRJcl.css" data-rsc-css-href="/_next/static/css/page.BPeHRJcl.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change? | Jared Mastroianni</title><meta name="description" content="A production chart can show that something changed. It cannot tell an operator which part of the operating system changed unless the comparison cohort, sources, labels, policy and human review are preserved."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change? | Jared Mastroianni"/><meta property="og:description" content="A production chart can show that something changed. It cannot tell an operator which part of the operating system changed unless the comparison cohort, sources, labels, policy and human review are preserved."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-11-13T19:17:52+00:00"/><meta property="article:modified_time" content="2026-11-13T19:17:52+00:00"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/customer-opt-out-propagation-self-storage/066-industry-conference-peer-roundtable.png"/><meta property="og:image:width" content="1536"/><meta property="og:image:height" content="1024"/><meta property="og:image:alt" content="Self-storage leaders hold a seated peer roundtable in an industry conference lounge."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change? | Jared Mastroianni"/><meta name="twitter:description" content="A production chart can show that something changed. It cannot tell an operator which part of the operating system changed unless the comparison cohort, sources, labels, policy and human review are preserved."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/customer-opt-out-propagation-self-storage/066-industry-conference-peer-roundtable.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change?","datePublished":"2026-11-13T19:17:52+00:00","dateModified":"2026-11-13T19:17:52+00:00","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/#lead-image"},"description":"A production chart can show that something changed. It cannot tell an operator which part of the operating system changed unless the comparison cohort, sources, labels, policy and human review are preserved."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/#lead-image","name":"The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change?","caption":"Industry progress depends on comparing what changed in the system with what changed in the operating environment.","description":"Governed editorial image. Production method is not stated in the governed inventory.","contentUrl":"https://jaredmodstorage.github.io/writing/customer-opt-out-propagation-self-storage/066-industry-conference-peer-roundtable.png","width":1536,"height":1024,"encodingFormat":"image/png","representativeOfPage":true,"creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/","creditText":"Jared James Mastroianni public image library. © 2025 Jared James Mastroianni. All rights reserved."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change?","item":"https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change?</li></ol></nav><article class="essay"><header class="essay-header"><p class="eyebrow">Operating systems<!-- --> · <time dateTime="2026-11-13T19:17:52+00:00">13 November 2026</time></p><h1>The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change?</h1><p class="lede">A production chart can show that something changed. It cannot tell an operator which part of the operating system changed unless the comparison cohort, sources, labels, policy and human review are preserved.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body _responsive_1u4ig_1"><figure class="article-photo"><img src="/writing/customer-opt-out-propagation-self-storage/066-industry-conference-peer-roundtable.png" width="1536" height="1024" alt="Self-storage leaders hold a seated peer roundtable in an industry conference lounge."><figcaption>Industry progress depends on comparing what changed in the system with what changed in the operating environment.</figcaption></figure><p>Governed editorial image. The registry does not state its production method. Editorial context only. The image is not evidence of a customer, model, deployment, monitoring review, performance result, partnership, award or recognition.</p><p>An AI monitoring report says a self-storage portfolio's exception rate increased from one month to the next. The model appears to be producing more cases for human review. Someone labels the change <strong>model drift</strong> and proposes a retraining cycle.</p>
+<p>That may be the right response. It may also be the wrong diagnosis.</p>
+<p>The portfolio may have added facilities with different operating patterns. A source system may have stopped sending complete records. The outcome label may take longer to mature than the reporting window allows. A new policy may have widened the set of cases that require review. Operators may be applying the same review rule differently after training or staffing changes. The facilities themselves may be experiencing a real seasonal or operational shift.</p>
+<p>Each condition can move the chart while the model remains unchanged.</p>
+<p>Production monitoring is necessary, but a changed metric is an observation, not a cause. The architecture needs a way to preserve what was compared and route the change through a bounded investigation before anyone retrains a model, relaxes a threshold or turns a monitoring signal into an operating conclusion.</p>
+<h2>Start With a Comparison Contract</h2>
+<p>A monitoring dashboard usually places two values side by side: a baseline and a current period. The visual comparison looks complete. The underlying comparison may not be.</p>
+<p>Before interpreting the difference, preserve six identities:</p>
+<ol>
+<li><strong>Decision build:</strong> the model, prompt, retrieval configuration, rules, threshold and post-processing versions that produced the monitored output.</li>
+<li><strong>Task contract:</strong> the exact question the system was asked and the permitted operating consequence of its output.</li>
+<li><strong>Cohort:</strong> the facilities, record types and eligibility rules represented in each period.</li>
+<li><strong>Observation coverage:</strong> the sources expected, sources received, freshness limits, missingness rules and known instrumentation changes.</li>
+<li><strong>Outcome contract:</strong> the event counted as correct, incorrect, escalated or unresolved; the observation window; exclusions; correction process; and the date when a label is mature enough to evaluate.</li>
+<li><strong>Decision environment:</strong> the human-review rule, policy version, reviewer population and any operating condition that could change the recorded outcome.</li>
+</ol>
+<p>If one of these identities is missing, the correct state is <strong>comparison not established</strong>. That is not a euphemism for good or bad performance. It is an evidence boundary.</p>
+<p>The <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">NIST AI Risk Management Framework Core</a> calls for performance criteria to be demonstrated under conditions similar to deployment settings, production behavior to be monitored, test sets and metrics to be documented, and measurement uncertainty to be considered. The framework is voluntary and general; it does not prescribe a self-storage monitoring system. Its useful architectural lesson is that a metric remains connected to its context, measurement method and uncertainty.</p>
+<h2>Separate Six Possible Causes</h2>
+<p>The investigation should not begin with a binary choice between “the model drifted” and “nothing happened.” Use a cause map that keeps materially different changes apart.</p>
+<h3>1. The decision build changed</h3>
+<p>A model version, prompt, tool schema, retrieval source, threshold or fallback rule changed. This is the most direct technical explanation, but it still requires evidence. A release note is not enough. Preserve the build identifier on every monitored decision and compare the actual paths used in both periods.</p>
+<h3>2. The portfolio mix changed</h3>
+<p>The current period contains different facilities, customers, unit types, channels, seasons or event frequencies. Even when every site uses the same system, a newly added urban property may contribute a different distribution of access exceptions than a drive-up portfolio. An aggregate rate can move because the mix changed, not because the model's behavior within any comparable facility changed.</p>
+<h3>3. Observation coverage changed</h3>
+<p>A camera, access controller, property-management export, work-order feed or customer-contact source may be missing, delayed or newly available. The model may receive a thinner or richer evidence packet. A source-coverage change is not automatically a model defect, and model output is not a substitute for the missing facility observation.</p>
+<h3>4. The outcome label changed or has not matured</h3>
+<p>An alert cannot be evaluated against an outcome that is not yet observable. A maintenance recurrence may require a defined number of days. A customer-contact classification may need a completed review. A safety observation may never become an automated label at all. If the current window contains more unresolved outcomes than the baseline, comparing “accuracy” can turn label lag into apparent performance loss.</p>
+<h3>5. Policy or human review changed</h3>
+<p>An operator may widen mandatory review, change the escalation rule or introduce a second approver. Reviewers may receive new instructions or work under different queue pressure. The recorded disposition can change even when the model output does not. Human judgment is part of the operating system; it should not be hidden inside a model-performance number.</p>
+<h3>6. The operating environment changed</h3>
+<p>A real facility condition may be more common. Weather, construction, traffic, access configuration, staffing, vendor availability or customer behavior may alter the cases reaching the system. The model may be detecting a real shift, missing it or merely encountering it. The monitoring record should preserve these as separate possibilities until evidence resolves them.</p>
+<p>The <a href="https://airc.nist.gov/airmf-resources/playbook/measure/">NIST AI RMF Playbook's Measure guidance</a> describes production monitoring as a way to identify evolving issues and notes that changes in the operational or business environment can affect accuracy and precision. The playbook also recommends documenting differences between deployment metrics and pre-deployment testing. It is guidance, not a finding about any model or facility. It supports the need to investigate both the system and its environment.</p>
+<h2>Compare Like With Like Before You Aggregate</h2>
+<p>The fastest useful test is often a matched-cohort view.</p>
+<p>Hold the decision build constant. Restrict the comparison to facilities and record types present in both periods. Apply the same eligibility rule, source-coverage requirement and mature-label rule. Then inspect the metric within that matched set.</p>
+<p>This produces three useful views:</p>
+<ul>
+<li><strong>Reported portfolio view:</strong> what the dashboard showed across all eligible records in each period.</li>
+<li><strong>Matched-cohort view:</strong> what changed among comparable facilities and records under the same definitions.</li>
+<li><strong>Composition view:</strong> how much of the reported change is associated with facilities or records that entered, left or changed eligibility.</li>
+</ul>
+<p>These views do not prove causation. They prevent a portfolio mix change from being silently presented as a model change.</p>
+<p>Uncertainty also belongs in the record. <a href="https://www.nist.gov/publications/expanding-ai-evaluation-toolbox-statistical-models">NIST AI 800-3, <em>Expanding the AI Evaluation Toolbox with Statistical Models</em></a>, distinguishes performance on a fixed benchmark from performance generalized to a broader population and emphasizes that the measurement target and analytical assumptions should be explicit. The report studies benchmark evaluations, including large language models; it does not provide a ready-made formula for self-storage production monitoring. Its bounded lesson is relevant: a single average can answer different questions depending on the population and assumptions behind it.</p>
+<p>For small facility cohorts or rare outcomes, show the counts, unresolved labels and interval or uncertainty method rather than presenting a precise percentage as settled truth. “Not enough mature evidence” is a valid monitoring result.</p>
+<h2>Replay the Same Evidence Packet</h2>
+<p>When the matched cohort still shows a material change, separate model behavior from input behavior with a controlled replay.</p>
+<p>Preserve a sample of the exact evidence packets received in the baseline and current periods. Run the same immutable packet through the baseline decision build and the current build in a non-operating evaluation environment. Record output, abstention, tool use, threshold result and nondeterminism controls.</p>
+<p>The comparison can reveal four patterns:</p>
+<ul>
+<li>Same packet, same build, materially different outputs: investigate nondeterminism, unavailable dependencies or an incomplete build record.</li>
+<li>Same packet, different builds, materially different outputs: investigate the changed model, prompt, retrieval, rule or threshold.</li>
+<li>Different packets, same build, materially different outputs: investigate the source or operating-context shift before calling it model drift.</li>
+<li>Stable model outputs, different human dispositions: investigate policy, reviewer instructions, workload and authority.</li>
+</ul>
+<p>A replay is not permission to act on historical cases again. It is evaluation evidence. It should be isolated from live tools and customer-facing channels, and its results should not overwrite the original decision record.</p>
+<h2>A Fictional Portfolio Review</h2>
+<p>The following scenario and every facility, count, rate and result in it are fictional teaching data. They do not describe a customer, deployment or performance claim.</p>
+<p>Harbor Lantern Storage uses an advisory model to route possible access-support cases for manager review. It cannot change access, contact a customer or dispatch a vendor. During the fictional baseline window, 72 of 600 eligible records entered review. During the current window, 102 of 600 entered review. The portfolio rate moved from 12 percent to 17 percent.</p>
+<p>The first dashboard note says <strong>possible model drift</strong>.</p>
+<p>The cohort-integrity review finds that two newly acquired facilities entered the current window. Their access system sends a narrower event packet and their local policy requires manager review whenever an entry attempt lacks a resolved device identity. Those sites contributed 39 review cases from 150 eligible records.</p>
+<p>The matched cohort contains the same facilities, evidence requirements and policy version in both periods. In that fictional view, 72 of 600 baseline records cannot be compared directly with the current portfolio total because the denominators and membership differ. After applying the matched eligibility rule, the review rate is 12 percent in the baseline and 12.4 percent in the current period. Several outcome labels in the current period are also not mature.</p>
+<p>The team does not conclude that the model is stable, improved or degraded. It records <strong>portfolio composition shift supported</strong>, <strong>source-coverage difference open</strong>, and <strong>outcome evidence not mature</strong>. The model remains advisory while the two facilities' evidence packets and review policy are reconciled. No retraining or threshold change is authorized from the aggregate chart.</p>
+<p>That result is operationally useful because it directs work to the comparison failure rather than assigning a cause the evidence does not support.</p>
+<h2>Use a Performance-Shift Triage Register</h2>
+<p>The companion <strong>AI Performance Shift Triage and Cohort Integrity Register</strong> turns this method into a reviewable operating record. One row covers one metric, comparison window and decision scope. It should capture:</p>
+<ul>
+<li>the baseline and current metric, numerator, denominator and uncertainty method;</li>
+<li>the exact decision build and task contract in each period;</li>
+<li>the facility and record cohorts, entries, exits and eligibility changes;</li>
+<li>required source coverage, missingness and freshness;</li>
+<li>the label definition, maturity date and unresolved count;</li>
+<li>the policy, reviewer population and authority in effect;</li>
+<li>matched-cohort and composition views;</li>
+<li>replay evidence and its non-operating boundary;</li>
+<li>supported and unsupported cause classes;</li>
+<li>the decision owner, interim operating state and stop condition; and</li>
+<li>the evidence required to close or reopen the investigation.</li>
+</ul>
+<p>Use explicit states such as <code>observed_shift</code>, <code>comparison_not_established</code>, <code>cohort_shift_supported</code>, <code>source_gap_open</code>, <code>labels_not_mature</code>, <code>model_change_candidate</code>, <code>operating_change_candidate</code>, <code>human_review_required</code> and <code>resolved</code>. Do not collapse them into a red-yellow-green status that hides why the comparison moved.</p>
+<p><a href="ai-performance-shift-triage-register.md">Read the field guide</a>, <a href="ai-performance-shift-triage-template.csv">download the blank CSV</a>, or <a href="ai-performance-shift-triage-fictional-example.csv">inspect the explicitly fictional example</a>.</p>
+<h2>Monitoring Should Narrow the Next Decision</h2>
+<p>A strong monitoring system does not promise that every change can be diagnosed immediately. It makes the uncertainty legible and routes the next bounded decision.</p>
+<p>If the decision build changed, evaluate the release. If the cohort changed, restore a comparable view. If source coverage changed, repair or explicitly bound the evidence. If labels are immature, wait or use a different measure. If policy or reviewer behavior changed, review the human operating rule. If the facility environment changed, investigate the condition with appropriate operational evidence.</p>
+<p>Only after those distinctions are preserved should a team consider retraining, recalibration, threshold changes or broader authority.</p>
+<p>The chart can tell you where to look. The cohort-integrity record keeps it from pretending it already knows what happened.</p>
+<h2>Sources</h2>
+<ol>
+<li><a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">NIST AI Risk Management Framework Core</a>, accessed November 13, 2026. Voluntary, general AI risk-management guidance used for production monitoring, deployment-context measurement, documentation and uncertainty principles; not a self-storage rule, certification or implementation finding.</li>
+<li><a href="https://airc.nist.gov/airmf-resources/playbook/measure/">NIST AI RMF Playbook: Measure</a>, accessed November 13, 2026. Suggested actions for production monitoring and investigation of operational-environment change; the playbook states that AI RMF 1.0 is being updated and does not diagnose any particular system.</li>
+<li><a href="https://www.nist.gov/publications/expanding-ai-evaluation-toolbox-statistical-models">NIST AI 800-3, <em>Expanding the AI Evaluation Toolbox with Statistical Models</em></a>, published February 17, 2026; accessed November 13, 2026. Research on benchmark and generalized accuracy, statistical assumptions and uncertainty; used by analogy, not as a production-monitoring formula or self-storage requirement.</li>
+</ol>
+<h2>AI Performance Shift Triage and Cohort Integrity Register</h2><p>Use one register for one monitored metric, comparison window and bounded decision scope. A moved metric opens an investigation; it does not establish model drift.</p>
+<h3>1. Name the observation</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Field</th>
+<th role="columnheader" scope="col">Required entry</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Field" role="cell">Register ID</td>
+<td data-label="Required entry" role="cell">Stable identifier</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Metric and permitted use</td>
+<td data-label="Required entry" role="cell">Exact measure and what it may influence</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Baseline window</td>
+<td data-label="Required entry" role="cell">Start, end and reporting time zone</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Current window</td>
+<td data-label="Required entry" role="cell">Start, end and reporting time zone</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Baseline numerator / denominator</td>
+<td data-label="Required entry" role="cell">Counts, not only a percentage</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Current numerator / denominator</td>
+<td data-label="Required entry" role="cell">Counts, not only a percentage</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Uncertainty method</td>
+<td data-label="Required entry" role="cell">Interval, resampling method or <code>not_established</code></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Observed shift</td>
+<td data-label="Required entry" role="cell">Absolute and relative change, if appropriate</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Initial state</td>
+<td data-label="Required entry" role="cell"><code>observed_shift</code> or <code>comparison_not_established</code></td>
+</tr>
+</tbody>
+</table>
+<h3>2. Freeze the comparison contract</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Identity</th>
+<th role="columnheader" scope="col">Baseline</th>
+<th role="columnheader" scope="col">Current</th>
+<th role="columnheader" scope="col">Same?</th>
+<th role="columnheader" scope="col">Evidence reference</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Identity" role="cell">Decision build</td>
+<td data-label="Baseline" role="cell">Model, prompt, retrieval, rules, threshold and post-processing versions</td>
+<td data-label="Current" role="cell"></td>
+<td data-label="Same?" role="cell">yes / no / unknown</td>
+<td data-label="Evidence reference" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Identity" role="cell">Task contract</td>
+<td data-label="Baseline" role="cell">Question, output meaning and permitted consequence</td>
+<td data-label="Current" role="cell"></td>
+<td data-label="Same?" role="cell">yes / no / unknown</td>
+<td data-label="Evidence reference" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Identity" role="cell">Facility cohort</td>
+<td data-label="Baseline" role="cell">Included facilities and membership rule</td>
+<td data-label="Current" role="cell"></td>
+<td data-label="Same?" role="cell">yes / no / unknown</td>
+<td data-label="Evidence reference" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Identity" role="cell">Record cohort</td>
+<td data-label="Baseline" role="cell">Eligible record types and exclusions</td>
+<td data-label="Current" role="cell"></td>
+<td data-label="Same?" role="cell">yes / no / unknown</td>
+<td data-label="Evidence reference" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Identity" role="cell">Source coverage</td>
+<td data-label="Baseline" role="cell">Required sources, received sources, freshness and missingness</td>
+<td data-label="Current" role="cell"></td>
+<td data-label="Same?" role="cell">yes / no / unknown</td>
+<td data-label="Evidence reference" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Identity" role="cell">Outcome contract</td>
+<td data-label="Baseline" role="cell">Label, observation window, exclusions and correction rule</td>
+<td data-label="Current" role="cell"></td>
+<td data-label="Same?" role="cell">yes / no / unknown</td>
+<td data-label="Evidence reference" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Identity" role="cell">Label maturity</td>
+<td data-label="Baseline" role="cell">Earliest valid evaluation date and unresolved count</td>
+<td data-label="Current" role="cell"></td>
+<td data-label="Same?" role="cell">yes / no / unknown</td>
+<td data-label="Evidence reference" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Identity" role="cell">Decision environment</td>
+<td data-label="Baseline" role="cell">Policy, reviewer population, authority and known operating conditions</td>
+<td data-label="Current" role="cell"></td>
+<td data-label="Same?" role="cell">yes / no / unknown</td>
+<td data-label="Evidence reference" role="cell"></td>
+</tr>
+</tbody>
+</table>
+<p>If a release-critical identity is <code>unknown</code>, do not diagnose model drift. Keep the state <code>comparison_not_established</code> and assign the missing evidence.</p>
+<h3>3. Produce three views</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">View</th>
+<th role="columnheader" scope="col" style="text-align:right">Numerator</th>
+<th role="columnheader" scope="col" style="text-align:right">Denominator</th>
+<th role="columnheader" scope="col" style="text-align:right">Result</th>
+<th role="columnheader" scope="col">Limitation</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="View" role="cell">Reported portfolio</td>
+<td data-label="Numerator" role="cell" style="text-align:right"></td>
+<td data-label="Denominator" role="cell" style="text-align:right"></td>
+<td data-label="Result" role="cell" style="text-align:right"></td>
+<td data-label="Limitation" role="cell">Includes all period-eligible records</td>
+</tr>
+<tr role="row">
+<td data-label="View" role="cell">Matched cohort</td>
+<td data-label="Numerator" role="cell" style="text-align:right"></td>
+<td data-label="Denominator" role="cell" style="text-align:right"></td>
+<td data-label="Result" role="cell" style="text-align:right"></td>
+<td data-label="Limitation" role="cell">Same facilities, records, definitions, sources and maturity rule</td>
+</tr>
+<tr role="row">
+<td data-label="View" role="cell">Composition</td>
+<td data-label="Numerator" role="cell" style="text-align:right"></td>
+<td data-label="Denominator" role="cell" style="text-align:right"></td>
+<td data-label="Result" role="cell" style="text-align:right"></td>
+<td data-label="Limitation" role="cell">Entries, exits or eligibility changes only</td>
+</tr>
+</tbody>
+</table>
+<h3>4. Classify supported causes</h3>
+<p>Use <code>supported</code>, <code>candidate</code>, <code>not supported</code>, <code>not evaluated</code> or <code>unknown</code>.</p>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Cause class</th>
+<th role="columnheader" scope="col">State</th>
+<th role="columnheader" scope="col">Evidence needed before conclusion</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Cause class" role="cell">Decision-build change</td>
+<td data-label="State" role="cell"></td>
+<td data-label="Evidence needed before conclusion" role="cell">Versioned build and controlled replay</td>
+</tr>
+<tr role="row">
+<td data-label="Cause class" role="cell">Portfolio or record-mix change</td>
+<td data-label="State" role="cell"></td>
+<td data-label="Evidence needed before conclusion" role="cell">Membership diff and matched-cohort result</td>
+</tr>
+<tr role="row">
+<td data-label="Cause class" role="cell">Observation or source-coverage change</td>
+<td data-label="State" role="cell"></td>
+<td data-label="Evidence needed before conclusion" role="cell">Source receipt, freshness and missingness evidence</td>
+</tr>
+<tr role="row">
+<td data-label="Cause class" role="cell">Label definition or maturity change</td>
+<td data-label="State" role="cell"></td>
+<td data-label="Evidence needed before conclusion" role="cell">Versioned outcome contract and matured-label counts</td>
+</tr>
+<tr role="row">
+<td data-label="Cause class" role="cell">Policy or reviewer change</td>
+<td data-label="State" role="cell"></td>
+<td data-label="Evidence needed before conclusion" role="cell">Policy version, reviewer instructions and disposition comparison</td>
+</tr>
+<tr role="row">
+<td data-label="Cause class" role="cell">Real operating-environment change</td>
+<td data-label="State" role="cell"></td>
+<td data-label="Evidence needed before conclusion" role="cell">Qualified facility evidence independent of model output</td>
+</tr>
+</tbody>
+</table>
+<h3>5. Bound replay and action</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Field</th>
+<th role="columnheader" scope="col">Required entry</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Field" role="cell">Replay packet IDs</td>
+<td data-label="Required entry" role="cell">Immutable copies of the exact historical evidence packets</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Builds compared</td>
+<td data-label="Required entry" role="cell">Exact baseline and current identifiers</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Isolation boundary</td>
+<td data-label="Required entry" role="cell">Confirmation that replay cannot call live tools or customer channels</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Replay result</td>
+<td data-label="Required entry" role="cell">Output, abstention, threshold and tool-use comparison</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Unsupported conclusions</td>
+<td data-label="Required entry" role="cell">Causes the evidence does not establish</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Interim operating state</td>
+<td data-label="Required entry" role="cell"><code>advisory</code>, <code>shadow</code>, <code>human_review_required</code>, <code>held</code> or approved bounded state</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Stop condition</td>
+<td data-label="Required entry" role="cell">Condition that suspends use or prevents broader authority</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Decision owner</td>
+<td data-label="Required entry" role="cell">Accountable human role</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Next evidence and due time</td>
+<td data-label="Required entry" role="cell">Concrete owner, artifact and deadline</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Closure state</td>
+<td data-label="Required entry" role="cell"><code>cohort_shift_supported</code>, <code>source_gap_open</code>, <code>labels_not_mature</code>, <code>model_change_candidate</code>, <code>operating_change_candidate</code>, <code>resolved</code> or another defined state</td>
+</tr>
+</tbody>
+</table>
+<h3>Close rule</h3>
+<p>Close only when the comparison contract is preserved, each supported cause is tied to evidence, unsupported causes remain explicitly unproven, the interim operating state is reconciled, and the decision owner signs the final disposition. Reopen after a material correction to the build, cohort, sources, labels, policy, review process or facility evidence.</p>
+<h2>Downloads</h2><ul><li><a download href="/writing/ai-performance-shift-cohort-integrity-self-storage/ai-performance-shift-triage-template.csv">Blank triage register CSV</a></li><li><a download href="/writing/ai-performance-shift-cohort-integrity-self-storage/ai-performance-shift-triage-fictional-example.csv">Fictional example CSV</a></li><li><a download href="/writing/ai-performance-shift-cohort-integrity-self-storage/ai-performance-shift-triage-register.md">Field guide Markdown</a></li><li><a download href="/writing/ai-performance-shift-cohort-integrity-self-storage/article.md">Article Markdown</a></li></ul></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Operating systems</p><h3><a href="/writing/vendor-go-live-facility-readiness-self-storage/">The Vendor Has a Go-Live Date. Does Every Facility Have a Ready State?</a></h3><p>A portfolio operating method for translating a vendor go-live plan into facility-specific readiness, controlled change, evidence, failure handling and recovery.</p><a href="/writing/vendor-go-live-facility-readiness-self-storage/" class="text-link" aria-label="Read the article: The Vendor Has a Go-Live Date. Does Every Facility Have a Ready State?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating systems</p><h3><a href="/writing/ai-abstention-routing-default-action-self-storage/">The AI Refused to Decide. Why Did the Workflow Act Anyway?</a></h3><p>A responsible AI workflow needs a first-class abstention route so a model&#x27;s refusal cannot become an operating action through a default value.</p><a href="/writing/ai-abstention-routing-default-action-self-storage/" class="text-link" aria-label="Read the article: The AI Refused to Decide. Why Did the Workflow Act Anyway?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating systems</p><h3><a href="/writing/portfolio-source-watermark-self-storage/">Every Facility Uploaded a File. Were They All Cut Off at the Same Time?</a></h3><p>A multi-location reporting batch is comparable only when every facility-source pair represents the same governed operating moment.</p><a href="/writing/portfolio-source-watermark-self-storage/" class="text-link" aria-label="Read the article: Every Facility Uploaded a File. Were They All Cut Off at the Same Time?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Fri, 13 Nov 2026 13:12:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 19:17:52 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-performance-shift-cohort-integrity-self-storage/</guid>
+      <pubDate>Fri, 13 Nov 2026 19:17:52 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A production chart can show that something changed. It cannot tell an operator which part of the operating system changed unless the comparison cohort, sources, labels, policy and human review are preserved.</description>
+    </item>
     <item>
       <title>The Vendor Has a Go-Live Date. Does Every Facility Have a Ready State?</title>
       <link>https://jaredmodstorage.github.io/writing/vendor-go-live-facility-readiness-self-storage/</link>
