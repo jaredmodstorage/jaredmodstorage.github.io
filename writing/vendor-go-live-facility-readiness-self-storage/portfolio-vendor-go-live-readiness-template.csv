@@ -1,0 +1,2 @@
+facility_id,facility_aliases,vendor_site_id,environment,affected_boundary,current_baseline,proposed_action,explicit_exclusions,approval_owner,execution_identity,pause_owner,recovery_owner,preconditions,evidence_references,local_exception,exception_owner,window_start,window_stop,stop_conditions,request_id,provider_response,authoritative_source,readback_query,readback_result,readback_reviewer,readback_time,recovery_method,operating_restriction,local_release_owner,local_release_time,current_state,next_decision_time
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,discovery_open,
