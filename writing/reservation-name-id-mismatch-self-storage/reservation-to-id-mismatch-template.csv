@@ -1,0 +1,2 @@
+record_id,facility_id,local_time,reservation_id,original_reservation_name,presented_name_result,mismatch_category,evidence_category,evidence_result,policy_reference,decision_authority,decision,original_preserved,downstream_readback,access_release_state,credential_issued,release_time,unresolved_exception,next_owner
+,,,,,,,,,,,,,,,,,,
