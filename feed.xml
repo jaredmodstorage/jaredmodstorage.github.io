@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sat, 14 Nov 2026 07:16:34 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 13:11:11 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Lease Changed. Which Version Did Each Customer Actually Sign?</title>
+      <link>https://jaredmodstorage.github.io/writing/lease-version-issuance-reconciliation-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/lease-version-issuance-reconciliation-self-storage/</guid>
+      <pubDate>Sat, 14 Nov 2026 13:11:11 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio operating method for proving which approved lease artifact was active, rendered, issued, executed and reproducible across every facility and rental channel.</description>
+    </item>
     <item>
       <title>The Reservation Name Does Not Match the ID. Pause Before You Grant Access.</title>
       <link>https://jaredmodstorage.github.io/writing/reservation-name-id-mismatch-self-storage/</link>
