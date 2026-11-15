@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sat, 14 Nov 2026 13:11:11 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 00:57:32 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/</guid>
+      <pubDate>Sun, 15 Nov 2026 00:57:32 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A facility AI architecture for testing which plausible evidence changes would move a recommendation across a real operating boundary before it becomes work.</description>
+    </item>
     <item>
       <title>The Lease Changed. Which Version Did Each Customer Actually Sign?</title>
       <link>https://jaredmodstorage.github.io/writing/lease-version-issuance-reconciliation-self-storage/</link>

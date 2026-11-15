@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><link rel="stylesheet" href="/_next/static/css/page.BL0EKfsz.css" data-rsc-css-href="/_next/static/css/page.BL0EKfsz.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable? | Jared Mastroianni</title><meta name="description" content="A facility AI architecture for testing which plausible evidence changes would move a recommendation across a real operating boundary before it becomes work."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable? | Jared Mastroianni"/><meta property="og:description" content="A facility AI architecture for testing which plausible evidence changes would move a recommendation across a real operating boundary before it becomes work."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-11-15T00:57:32+00:00"/><meta property="article:modified_time" content="2026-11-15T00:57:32+00:00"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/059-ai-development-predictive-maintenance-pilot.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Four adults discuss a facility equipment issue beside a row of self-storage doors."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable? | Jared Mastroianni"/><meta name="twitter:description" content="A facility AI architecture for testing which plausible evidence changes would move a recommendation across a real operating boundary before it becomes work."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/059-ai-development-predictive-maintenance-pilot.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable?","datePublished":"2026-11-15T00:57:32+00:00","dateModified":"2026-11-15T00:57:32+00:00","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/#lead-image"},"description":"A facility AI architecture for testing which plausible evidence changes would move a recommendation across a real operating boundary before it becomes work."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/#lead-image","name":"The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable?","caption":"Decision-sensitive AI work should keep facility evidence, technical review and operating authority in the same conversation. AI-generated editorial illustration.","description":"AI-generated editorial illustration.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-label-dispute-layer-self-storage/059-ai-development-predictive-maintenance-pilot.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/","creditText":"Jared James Mastroianni public image library. All rights reserved."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable?","item":"https://jaredmodstorage.github.io/writing/ai-decision-sensitivity-evidence-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable?</li></ol></nav><article class="essay"><header class="essay-header _heading_nul0b_13"><p class="eyebrow">Operating systems<!-- --> · <time dateTime="2026-11-15T00:57:32+00:00">15 November 2026</time></p><h1>The AI Recommendation Changed After One Field Was Corrected. Was the Decision Ever Stable?</h1><p class="lede">A facility AI architecture for testing which plausible evidence changes would move a recommendation across a real operating boundary before it becomes work.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>9 min read</span></div></header><div class="essay-body _responsive_nul0b_1"><figure class="article-photo"><img src="/writing/ai-label-dispute-layer-self-storage/059-ai-development-predictive-maintenance-pilot.png" width="3840" height="2560" alt="Four adults discuss a facility equipment issue beside a row of self-storage doors."><figcaption>Decision-sensitive AI work should keep facility evidence, technical review and operating authority in the same conversation. AI-generated editorial illustration.</figcaption></figure><p>The illustration does not depict a real inspection or the fictional Marrow Bay Storage example.</p><p>An AI output is not ready for operating use until the team knows which plausible input changes would push it across a real action boundary.</p>
+<p>An AI recommendation can look solid right up to the moment someone corrects one field.</p>
+<p>A facility status changes from closed to open. A sensor value changes from observed to inferred. A note timestamp moves into the prior shift. A work order that appeared unresolved is linked to a completed inspection. The model produces a different answer, and the operating path changes with it.</p>
+<p>That does not automatically mean the model failed. The corrected fact may deserve to change the result. The problem is discovering the dependency only after the recommendation has influenced a queue, a dispatch, a customer message or an access decision.</p>
+<p>Before an AI-assisted recommendation crosses into facility work, the system should test its decision sensitivity: which plausible changes to the current evidence would alter the recommendation, its priority or its permitted next action? The answer belongs in the operating record, not only in an evaluation notebook.</p>
+<h2>Stability, correctness and authority are different questions</h2>
+<p>Teams often compress four questions into one confidence score.</p>
+<p><strong>Repeatability</strong> asks whether the system produces the same output from the same input. <strong>Sensitivity</strong> asks whether a small, plausible change to an input produces a materially different output. <strong>Correctness</strong> asks whether the output is supported by the governing facts and evaluation method. <strong>Authority</strong> asks what the workflow may do with that output.</p>
+<p>None answers the others.</p>
+<p>A recommendation can be repeatable and wrong because the same stale facility record is supplied every time. It can be sensitive for a good reason because the current operating mode should change the response. It can be technically correct but still lack authority to send a message or change a facility setting. It can carry a high model score while depending on an inferred field that no operator has verified.</p>
+<p>The <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> is voluntary, cross-sector guidance. It calls for risk management across the AI lifecycle and for testing, evaluation, validation and verification appropriate to context. It does not prescribe a self-storage sensitivity test. It supports the underlying operating principle: the system must be evaluated in the conditions and workflow where people intend to use it.</p>
+<h2>Define the action boundary before testing the answer</h2>
+<p>Sensitivity becomes useful when the team defines what counts as a material change.</p>
+<p>Changing punctuation in a summary may change the wording without changing the operating decision. Changing the facility operating mode may move a recommendation from routine review to immediate human attention. Those outcomes should not be treated as equivalent.</p>
+<p>Create a short action ladder for the use case:</p>
+<ol>
+<li><strong>Display evidence</strong> without a recommendation.</li>
+<li><strong>Propose a classification or priority</strong> for human review.</li>
+<li><strong>Place work in a governed queue</strong> without executing it.</li>
+<li><strong>Prepare an action</strong> that still requires named approval.</li>
+<li><strong>Execute a bounded action</strong> only through separate, explicit authority.</li>
+</ol>
+<p>Then define the boundaries between those states. A decision-sensitivity test is material when a plausible evidence change moves the output across one of those boundaries, changes the responsible reviewer, changes the required evidence, or changes the permitted time window.</p>
+<p>The boundary evaluator should be deterministic. The model may propose a class, but code or policy should determine that a particular class requires a human, that a missing source creates a hold, or that a recommendation may not become an action. Otherwise, the same model whose sensitivity is being tested also decides whether the sensitivity matters.</p>
+<h2>Challenge plausible fields, not random words</h2>
+<p>Random prompt noise can help with some technical tests, but it is not an operating sensitivity plan. Facility work changes along recognizable dimensions.</p>
+<p>Build a bounded challenge set around five types of evidence:</p>
+<ul>
+<li><strong>Identity:</strong> facility, unit, customer, device, vendor, work order or policy version.</li>
+<li><strong>Time:</strong> event time, source cutoff, local time zone, business calendar, maintenance window or evidence age.</li>
+<li><strong>State:</strong> open, closed, restricted, active, completed, canceled, acknowledged or unknown.</li>
+<li><strong>Provenance:</strong> observed value, staff entry, vendor response, calculated field, retrieved summary or model inference.</li>
+<li><strong>Missingness:</strong> absent, unreadable, unavailable, not applicable, not evaluated or explicitly negative.</li>
+</ul>
+<p>For each selected field, define a plausible alternative before running the test. Do not let the model invent a convenient alternate history. A facility calendar can be challenged with its prior approved version. A sensor state can be replaced with <code>unknown</code> if the connection failed. An inferred work-order status can be replaced with the last verified status. A local timestamp can be challenged at the daylight-saving or business-day boundary.</p>
+<p>The test artifact must remain clearly synthetic. A challenged value is not a corrected facility record. It is a question asked of the decision path: if this fact were different, would the operating outcome cross a boundary?</p>
+<h2>Turn sensitive fields into evidence obligations</h2>
+<p>When a plausible field change crosses an action boundary, that field becomes decision-critical for that recommendation.</p>
+<p>Decision-critical does not mean globally important. A field may be critical for one recommendation and irrelevant to another. The obligation is local and traceable: verify this exact value from its governing source before this exact recommendation advances.</p>
+<p>The evidence packet should record:</p>
+<ul>
+<li>the baseline source snapshot and its digest;</li>
+<li>the model, prompt, retrieval, policy and configuration versions;</li>
+<li>the field challenged and why the alternate value was plausible;</li>
+<li>the baseline and challenged outputs;</li>
+<li>the baseline and challenged action classes;</li>
+<li>the boundary crossed;</li>
+<li>the governing source for the critical field;</li>
+<li>the source freshness and retrieval outcome;</li>
+<li>the reviewer and disposition; and</li>
+<li>the final operating readback, if any action is later authorized.</li>
+</ul>
+<p>This is more useful than saying the model was “robust.” Robust to what, within which range, for which facility state and against which operating boundary? A bounded sensitivity record gives the operator an answer that can be reviewed.</p>
+<p>NIST’s <a href="https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence">Four Principles of Explainable Artificial Intelligence</a> describes explanation, meaningfulness, explanation accuracy and knowledge limits. The publication does not require counterfactual testing or certify an explanation method. Its distinction between an explanation and one that accurately reflects the system’s process matters here. A polished reason generated after the fact is not a substitute for evidence showing what actually changed the result.</p>
+<h2>Keep the test away from live execution</h2>
+<p>A sensitivity runner should never share the live action path.</p>
+<p>Clone the decision input into an isolated evaluation context. Block tool credentials and write permissions. Mark every challenged field as synthetic. Capture the output without placing it in the live queue. Compare the baseline and challenged outputs through the deterministic boundary evaluator. Only the verified baseline record may return to the operating workflow, and it should return with a new decision identifier after critical evidence is resolved.</p>
+<p>This separation prevents a test from dispatching a vendor, changing gate behavior, sending a customer message or updating a facility record. It also prevents a synthetic value from being mistaken for observed history.</p>
+<p>Use durable identifiers rather than screenshots alone. A practical event chain might include <code>recommendation_created</code>, <code>sensitivity_test_started</code>, <code>field_challenged</code>, <code>boundary_crossed</code>, <code>critical_evidence_verified</code>, <code>human_disposition_recorded</code> and <code>operating_readback_completed</code>. The <a href="https://www.w3.org/TR/prov-dm/">W3C PROV data model</a> offers a general vocabulary for entities, activities, agents, generation and responsibility. It does not authenticate a facility record, but it is useful for keeping the source snapshot, test activity, reviewer and resulting decision connected without collapsing them into one event.</p>
+<h2>A fictional gate-maintenance example</h2>
+<p>The following portfolio, facilities, systems, records, people, values and outcomes are entirely fictional. They do not describe modSTORAGE, Facily.ai, a customer or a deployed product.</p>
+<p>Marrow Bay Storage uses an invented AI-assisted triage workflow to propose review priority for equipment notes. At the fictional North Harbor facility, the system receives a gate-motor alert, an operator note and a facility-calendar record.</p>
+<p>The baseline recommendation is “routine next-business-day review.” The evidence packet shows that the recommendation depends on <code>facility_operating_mode=closed</code>. The sensitivity runner challenges that field with the plausible approved state <code>open_for_customer_access</code>. The recommendation changes to “human review before the next access period,” crossing the portfolio’s review-timing boundary.</p>
+<p>That result does not prove the gate is unsafe, the facility is open, a dispatch is required or a customer will be affected. It proves that the proposed timing depends materially on one field.</p>
+<p>The workflow places the baseline recommendation on hold. An operator retrieves the current approved facility calendar and confirms that the source snapshot used an outdated holiday schedule. The system creates a new baseline from the corrected source, retains the original and challenged records, and routes the new recommendation to the named facility reviewer.</p>
+<p>No remote gate change occurs. No vendor is dispatched. No customer communication is prepared. Those actions would require their own evidence and authority.</p>
+<p>The useful outcome is not that the AI “caught” the problem. The useful outcome is that the architecture exposed a fragile dependency before the recommendation acquired operating force.</p>
+<h2>The Facility AI Decision-Sensitivity and Evidence Challenge</h2>
+<p>Use the accompanying tool before a recommendation enters a consequential queue or prepared-action state.</p>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Gate</th>
+<th role="columnheader" scope="col">Required question</th>
+<th role="columnheader" scope="col">Hold condition</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Gate" role="cell">Baseline</td>
+<td data-label="Required question" role="cell">Can the exact source snapshot and system versions be reproduced?</td>
+<td data-label="Hold condition" role="cell">Snapshot, version or purpose is missing</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Boundary</td>
+<td data-label="Required question" role="cell">Which change would alter priority, owner, evidence or permitted action?</td>
+<td data-label="Hold condition" role="cell">No action ladder or boundary rule exists</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Challenge</td>
+<td data-label="Required question" role="cell">Is the alternate value plausible and explicitly synthetic?</td>
+<td data-label="Hold condition" role="cell">The test invents an unbounded scenario</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Evidence</td>
+<td data-label="Required question" role="cell">Did a challenged field cross a boundary, and what source governs it?</td>
+<td data-label="Hold condition" role="cell">Critical field is inferred, stale or unavailable</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Human review</td>
+<td data-label="Required question" role="cell">Did the reviewer see both outputs and the evidence difference?</td>
+<td data-label="Hold condition" role="cell">Reviewer sees only a generated explanation</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Release</td>
+<td data-label="Required question" role="cell">Does the verified baseline remain within approved authority?</td>
+<td data-label="Hold condition" role="cell">Recommendation changed, expired or lacks readback</td>
+</tr>
+</tbody>
+</table>
+<p>The tool is not a lease form, safety protocol, legal determination, engineering standard or compliance certification. It is an architecture worksheet for exposing which facts carry an AI-assisted decision.</p>
+<h2>Monitor sensitivity after release</h2>
+<p>Predeployment tests are necessary, but they cannot represent every live combination of source quality, facility state, interface behavior and human use. NIST’s 2026 report <a href="https://www.nist.gov/publications/challenges-monitoring-deployed-ai-systems-center-ai-standards-and-innovation">Challenges to the Monitoring of Deployed AI Systems</a> identifies functionality, operational, human-factors, security, compliance and large-scale-impact monitoring categories, while emphasizing that validated methods and common terminology remain immature. The report is a research synthesis, not a certification or a ready-made facility-monitoring standard.</p>
+<p>For a bounded facility workflow, monitor:</p>
+<ul>
+<li>how often a recommendation has at least one decision-critical field;</li>
+<li>which source types most often trigger boundary crossings;</li>
+<li>how often critical evidence is unavailable or stale;</li>
+<li>how often verification changes the baseline;</li>
+<li>which model, prompt or policy versions change the crossing rate;</li>
+<li>how long sensitive recommendations remain on hold; and</li>
+<li>whether an executed action lacks the required sensitivity record or readback.</li>
+</ul>
+<p>Do not interpret a low crossing rate as proof of safety. The challenge set may be weak. The action boundaries may be too broad. The system may be failing to expose missing evidence. Review samples from both crossing and non-crossing cases, and revise the challenge set when source schemas, policies, facility states or models change.</p>
+<p>The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST Generative AI Profile</a> is also voluntary and cross-sector. It emphasizes risks arising from human-AI configuration, confabulation and inappropriate reliance, among other concerns. It does not validate this tool or a self-storage deployment. Its practical relevance is that generated output must be evaluated as part of the surrounding system, including the people, evidence and authority boundaries that give the output consequence.</p>
+<h2>Make instability visible before it becomes work</h2>
+<p>An operator should not have to discover decision sensitivity by accident.</p>
+<p>The architecture can test plausible evidence changes before release, isolate the test from live tools, identify fields that carry the decision, verify those fields from governing sources and require a human disposition when an operating boundary moves.</p>
+<p>That does not make the AI correct. It makes one important weakness observable.</p>
+<p>If one corrected field can change the work, the field is part of the decision. Treat it that way before the recommendation leaves the screen.</p>
+<hr/>
+<h2>Sources and limitations</h2>
+<ul>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a>, accessed November 14, 2026. Voluntary, cross-sector framework currently being revised; it does not prescribe or certify this architecture.</li>
+<li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST AI 600-1, Generative Artificial Intelligence Profile</a>, July 2024, accessed November 14, 2026. Cross-sector profile; it does not establish a self-storage requirement or deployment result.</li>
+<li><a href="https://www.nist.gov/publications/challenges-monitoring-deployed-ai-systems-center-ai-standards-and-innovation">NIST AI 800-4, Challenges to the Monitoring of Deployed AI Systems</a>, March 2026, accessed November 14, 2026. Research synthesis identifying monitoring categories and open challenges; it does not certify a monitoring method.</li>
+<li><a href="https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence">NISTIR 8312, Four Principles of Explainable Artificial Intelligence</a>, September 2021, accessed November 14, 2026. General explainability principles; it does not require counterfactual testing or validate a generated explanation.</li>
+<li><a href="https://www.w3.org/TR/prov-dm/">W3C PROV-DM</a>, W3C Recommendation, April 2013, accessed November 14, 2026. General provenance model; it does not authenticate, authorize or complete a facility record.</li>
+</ul>
+<h2>Disclosure</h2>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. This article proposes an operating architecture and uses an explicitly fictional scenario. It does not describe a released product capability, customer deployment, measured result, certification, legal conclusion or industry standard.</p>
+<h2>Facility AI Decision-Sensitivity and Evidence Challenge</h2><p>Use this tool to test whether a plausible evidence change would move an AI-assisted recommendation across a real operating boundary. It is an architecture worksheet, not a live action engine.</p>
+<h3>Operating rules</h3>
+<ol>
+<li>Run the challenge in an isolated evaluation context with no production credentials or write tools.</li>
+<li>Preserve the baseline input snapshot, model/configuration versions and output before changing anything.</li>
+<li>Use only bounded, plausible alternate values. Mark every alternate value as synthetic.</li>
+<li>Treat a boundary-crossing field as decision-critical for that recommendation.</li>
+<li>Verify decision-critical fields from their named governing sources before release.</li>
+<li>Never copy a synthetic challenge value into facility history.</li>
+</ol>
+<h3>1. Freeze the baseline</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Field</th>
+<th role="columnheader" scope="col">Required entry</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Field" role="cell">Recommendation ID</td>
+<td data-label="Required entry" role="cell">Durable identifier for this baseline recommendation</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Use case and purpose</td>
+<td data-label="Required entry" role="cell">Exact workflow and approved reason for using AI</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Facility and object identity</td>
+<td data-label="Required entry" role="cell">Stable IDs for the facility and affected object</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Source snapshot ID and digest</td>
+<td data-label="Required entry" role="cell">Reproducible evidence set, cutoff and cryptographic digest</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">System versions</td>
+<td data-label="Required entry" role="cell">Model, prompt, retrieval, feature, policy and boundary-evaluator versions</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Baseline output</td>
+<td data-label="Required entry" role="cell">Recommendation text or structured class</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Baseline action class</td>
+<td data-label="Required entry" role="cell">Display, propose, queue, prepare or execute</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Authority ceiling</td>
+<td data-label="Required entry" role="cell">Highest state the workflow may reach without additional approval</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hold when:</strong> the snapshot, identity, purpose, version or authority ceiling is missing.</p>
+<h3>2. Define the material boundaries</h3>
+<p>Record the deterministic rules that make a change material.</p>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Boundary</th>
+<th role="columnheader" scope="col">Examples of material movement</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Boundary" role="cell">Timing</td>
+<td data-label="Examples of material movement" role="cell">Routine review becomes immediate human review</td>
+</tr>
+<tr role="row">
+<td data-label="Boundary" role="cell">Ownership</td>
+<td data-label="Examples of material movement" role="cell">Facility review becomes regional, security or qualified-service review</td>
+</tr>
+<tr role="row">
+<td data-label="Boundary" role="cell">Evidence</td>
+<td data-label="Examples of material movement" role="cell">Ordinary source packet requires a current inspection or governing-source readback</td>
+</tr>
+<tr role="row">
+<td data-label="Boundary" role="cell">Action</td>
+<td data-label="Examples of material movement" role="cell">Display becomes queue placement; queue placement becomes prepared action</td>
+</tr>
+<tr role="row">
+<td data-label="Boundary" role="cell">Communication</td>
+<td data-label="Examples of material movement" role="cell">Internal note becomes a proposed customer or vendor message</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hold when:</strong> the model itself decides whether its output crossed a consequential boundary.</p>
+<h3>3. Build the challenge set</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Challenge family</th>
+<th role="columnheader" scope="col">Bounded alternatives</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Challenge family" role="cell">Identity</td>
+<td data-label="Bounded alternatives" role="cell">Current stable ID, unresolved ID, governing linked record</td>
+</tr>
+<tr role="row">
+<td data-label="Challenge family" role="cell">Time</td>
+<td data-label="Bounded alternatives" role="cell">Current cutoff, prior approved calendar, expired evidence, unknown local time</td>
+</tr>
+<tr role="row">
+<td data-label="Challenge family" role="cell">State</td>
+<td data-label="Bounded alternatives" role="cell">Approved states plus <code>unknown</code> and <code>not evaluated</code></td>
+</tr>
+<tr role="row">
+<td data-label="Challenge family" role="cell">Provenance</td>
+<td data-label="Bounded alternatives" role="cell">Observed, staff-entered, vendor-returned, calculated, summarized, inferred</td>
+</tr>
+<tr role="row">
+<td data-label="Challenge family" role="cell">Missingness</td>
+<td data-label="Bounded alternatives" role="cell">Absent, unavailable, unreadable, not applicable, explicitly negative</td>
+</tr>
+</tbody>
+</table>
+<p>For each field, document why the alternate value is plausible and which source or rule bounded it. Do not ask the model to invent an alternate history.</p>
+<h3>4. Compare outcomes</h3>
+<p>For every challenge run, capture:</p>
+<ul>
+<li>challenged field and original value;</li>
+<li>synthetic alternate value;</li>
+<li>challenge-set version;</li>
+<li>challenged output and digest;</li>
+<li>challenged action class;</li>
+<li>boundary-crossing result;</li>
+<li>explanation produced by the system, if any; and</li>
+<li>whether the explanation is supported by the recorded process.</li>
+</ul>
+<p>The comparison should be machine-readable. A prose note alone is not sufficient evidence.</p>
+<h3>5. Verify decision-critical evidence</h3>
+<p>When a challenge crosses a boundary:</p>
+<ol>
+<li>Name the governing source for the challenged field.</li>
+<li>Retrieve the current value through an authorized read path.</li>
+<li>Record source time, retrieval time and freshness rule.</li>
+<li>Classify the outcome as verified, contradicted, unavailable or unresolved.</li>
+<li>Create a new baseline if the governing source changes the evidence.</li>
+<li>Preserve the original baseline and the synthetic challenge as separate test artifacts.</li>
+</ol>
+<p><strong>Hold when:</strong> the critical field is inferred, stale, unavailable, contradicted or outside the reviewer’s authority.</p>
+<h3>6. Release decision</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Release state</th>
+<th role="columnheader" scope="col">Required condition</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Release state" role="cell">Release for display</td>
+<td data-label="Required condition" role="cell">Evidence packet reproducible; no hidden action</td>
+</tr>
+<tr role="row">
+<td data-label="Release state" role="cell">Release for human review</td>
+<td data-label="Required condition" role="cell">Critical fields verified or visibly unresolved; named reviewer</td>
+</tr>
+<tr role="row">
+<td data-label="Release state" role="cell">Hold</td>
+<td data-label="Required condition" role="cell">Boundary crossing unresolved, recommendation expired or authority unclear</td>
+</tr>
+<tr role="row">
+<td data-label="Release state" role="cell">Retest</td>
+<td data-label="Required condition" role="cell">Model, prompt, retrieval, policy, source schema or boundary rule changed</td>
+</tr>
+<tr role="row">
+<td data-label="Release state" role="cell">Retire</td>
+<td data-label="Required condition" role="cell">Use case no longer approved or safe operating conditions cannot be maintained</td>
+</tr>
+</tbody>
+</table>
+<p>If a later action is authorized, record its separate action ID, approver, execution receipt and operating readback. A sensitivity test never supplies action authority.</p>
+<h3>Review questions</h3>
+<ul>
+<li>Could a plausible change to one field alter the owner, timing, evidence or permitted action?</li>
+<li>Did the challenge use a real bounded alternative rather than random text?</li>
+<li>Can the reviewer see both outputs and the exact evidence difference?</li>
+<li>Is every boundary-crossing field verified from its governing source?</li>
+<li>Are synthetic values blocked from production records and tools?</li>
+<li>Can the team reconstruct why the final recommendation was released, held, retested or retired?</li>
+</ul>
+<p>This template requires adaptation and review by the organization’s operating, technical, security, privacy and legal owners as applicable.</p>
+<h2>Downloads</h2><ul><li><a download href="/writing/ai-decision-sensitivity-evidence-self-storage/decision-sensitivity-challenge-template.csv">Blank decision challenge CSV</a></li><li><a download href="/writing/ai-decision-sensitivity-evidence-self-storage/decision-sensitivity-challenge-fictional-example.csv">Fictional example CSV</a></li><li><a download href="/writing/ai-decision-sensitivity-evidence-self-storage/facility-ai-decision-sensitivity-and-evidence-challenge.md">Decision challenge Markdown</a></li><li><a download href="/writing/ai-decision-sensitivity-evidence-self-storage/article.md">Article Markdown</a></li></ul></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Operating systems</p><h3><a href="/writing/ai-performance-shift-cohort-integrity-self-storage/">The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change?</a></h3><p>A production chart can show that something changed. It cannot tell an operator which part of the operating system changed unless the comparison cohort, sources, labels, policy and human review are preserved.</p><a href="/writing/ai-performance-shift-cohort-integrity-self-storage/" class="text-link" aria-label="Read the article: The AI Metric Moved. Did the Model Drift, or Did the Portfolio Change?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating practice</p><h3><a href="/writing/lease-version-issuance-reconciliation-self-storage/">The Lease Changed. Which Version Did Each Customer Actually Sign?</a></h3><p>A portfolio operating method for proving which approved lease artifact was active, rendered, issued, executed and reproducible across every facility and rental channel.</p><a href="/writing/lease-version-issuance-reconciliation-self-storage/" class="text-link" aria-label="Read the article: The Lease Changed. Which Version Did Each Customer Actually Sign?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating systems</p><h3><a href="/writing/vendor-go-live-facility-readiness-self-storage/">The Vendor Has a Go-Live Date. Does Every Facility Have a Ready State?</a></h3><p>A portfolio operating method for translating a vendor go-live plan into facility-specific readiness, controlled change, evidence, failure handling and recovery.</p><a href="/writing/vendor-go-live-facility-readiness-self-storage/" class="text-link" aria-label="Read the article: The Vendor Has a Go-Live Date. Does Every Facility Have a Ready State?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>
