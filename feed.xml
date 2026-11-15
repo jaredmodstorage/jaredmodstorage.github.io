@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sun, 15 Nov 2026 13:15:03 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 19:14:19 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Trace Explained the Error. Why Is the Customer Record Inside It?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-trace-customer-data-boundary-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-trace-customer-data-boundary-self-storage/</guid>
+      <pubDate>Sun, 15 Nov 2026 19:14:19 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A practical architecture for observable AI workflows without turning telemetry into a second, weakly governed customer database</description>
+    </item>
     <item>
       <title>The Backup Completed. Can Any Facility Actually Restore Its Operating Record?</title>
       <link>https://jaredmodstorage.github.io/writing/portfolio-backup-restore-proof-self-storage/</link>
