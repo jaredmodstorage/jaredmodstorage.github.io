@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Mon, 16 Nov 2026 07:12:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 13:16:46 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Temperature Alert Says 80°F. Which Facility Calls That an Exception?</title>
+      <link>https://jaredmodstorage.github.io/writing/temperature-alert-threshold-contract-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/temperature-alert-threshold-contract-self-storage/</guid>
+      <pubDate>Mon, 16 Nov 2026 13:16:46 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio operating method for defining, comparing and changing facility alert thresholds while keeping observations, diagnoses and action authority separate.</description>
+    </item>
     <item>
       <title>An Unattended Bag Is Beside the Keypad. Do Not Move It to Open the Lane.</title>
       <link>https://jaredmodstorage.github.io/writing/unattended-bag-keypad-self-storage/</link>
