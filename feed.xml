@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sun, 15 Nov 2026 19:14:19 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 07:12:27 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>An Unattended Bag Is Beside the Keypad. Do Not Move It to Open the Lane.</title>
+      <link>https://jaredmodstorage.github.io/writing/unattended-bag-keypad-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/unattended-bag-keypad-self-storage/</guid>
+      <pubDate>Mon, 16 Nov 2026 07:12:27 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>The first management decision is not what the item is. It is whether anyone should approach it, who needs to move, and who has authority to clear the scene.</description>
+    </item>
     <item>
       <title>The AI Trace Explained the Error. Why Is the Customer Record Inside It?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-trace-customer-data-boundary-self-storage/</link>

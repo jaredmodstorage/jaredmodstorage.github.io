@@ -1,0 +1,2 @@
+event_id,fictional_status,facility,discovery_time,observer_role,item_location,visible_description,threat_or_suspicious_context,person_or_vehicle_observation,restricted_area,staff_accounted_for,customer_vendor_route,emergency_plan_activated,authority_notified,authority_reference,operator_contact,actions_completed,prohibited_actions_confirmed,responder_release_reference,responder_release_time,remaining_restrictions,operator_site_readback,reopening_authorized_by,follow_up_owners,closure_time,limitations
+,,,,,,,,,,,,,,,,,,,,,,,,,
