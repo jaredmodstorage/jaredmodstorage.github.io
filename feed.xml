@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Tue, 17 Nov 2026 07:16:55 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 17:41:02 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Electrical Panel Door Is Open. Close the Area, Not the Panel.</title>
+      <link>https://jaredmodstorage.github.io/writing/open-electrical-panel-door-self-storage-response/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/open-electrical-panel-door-self-storage-response/</guid>
+      <pubDate>Tue, 17 Nov 2026 17:41:02 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>An open electrical enclosure is not a housekeeping task. Keep people away, preserve what you can observe from safety, and let a qualified person restore the guarding before the facility resumes normal use of the area.</description>
+    </item>
     <item>
       <title>The AI Tool Call Passed Validation. Why Was the Facility Action Still Impossible?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-tool-call-operating-invariants-self-storage/</link>
