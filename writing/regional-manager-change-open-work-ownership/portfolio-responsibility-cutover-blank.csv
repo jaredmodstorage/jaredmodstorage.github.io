@@ -1,0 +1,1 @@
+record_id,facility_id,facility_name,work_surface,source_item_id,historical_owner,incoming_owner,decision_authority,effective_time,acceptance_time,access_status,route_test_status,exception_class,exception_owner,next_action,due_time,evidence_link,final_state

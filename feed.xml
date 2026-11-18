@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Tue, 17 Nov 2026 17:41:02 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 02:23:46 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Regional Manager Changed. Who Owns the Open Work Tomorrow?</title>
+      <link>https://jaredmodstorage.github.io/writing/regional-manager-change-open-work-ownership/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/regional-manager-change-open-work-ownership/</guid>
+      <pubDate>Wed, 18 Nov 2026 02:23:46 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio responsibility cutover method for transferring open work, confirming authority and acceptance, and exposing orphan queues when a regional manager changes.</description>
+    </item>
     <item>
       <title>The Electrical Panel Door Is Open. Close the Area, Not the Panel.</title>
       <link>https://jaredmodstorage.github.io/writing/open-electrical-panel-door-self-storage-response/</link>
