@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Wed, 18 Nov 2026 02:23:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 17:30:36 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Credit Posted. Was It a Correction, a Courtesy, or a Policy Exception?</title>
+      <link>https://jaredmodstorage.github.io/writing/account-adjustment-authority-portfolio-control/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/account-adjustment-authority-portfolio-control/</guid>
+      <pubDate>Thu, 19 Nov 2026 17:30:36 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio control method for classifying account adjustments, verifying decision authority, preserving evidence and reconciling posted credits.</description>
+    </item>
     <item>
       <title>The Regional Manager Changed. Who Owns the Open Work Tomorrow?</title>
       <link>https://jaredmodstorage.github.io/writing/regional-manager-change-open-work-ownership/</link>
