@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Fri, 20 Nov 2026 05:16:52 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 11:17:51 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Operator Approved the Plan. Did the AI Change It After Execution Started?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-agent-replanning-approval-envelope-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-agent-replanning-approval-envelope-self-storage/</guid>
+      <pubDate>Fri, 20 Nov 2026 11:17:51 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>An agent’s ability to recover from a failed step is useful only when replanning cannot silently expand the targets, actions or consequences a person approved.</description>
+    </item>
     <item>
       <title>The PDF Has a New Filename. Is It a Second Invoice or the Same Obligation?</title>
       <link>https://jaredmodstorage.github.io/writing/invoice-identity-duplicate-review-self-storage/</link>
