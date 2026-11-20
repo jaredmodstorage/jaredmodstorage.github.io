@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Thu, 19 Nov 2026 17:53:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 05:16:52 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The PDF Has a New Filename. Is It a Second Invoice or the Same Obligation?</title>
+      <link>https://jaredmodstorage.github.io/writing/invoice-identity-duplicate-review-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/invoice-identity-duplicate-review-self-storage/</guid>
+      <pubDate>Fri, 20 Nov 2026 05:16:52 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio operating method for distinguishing invoice files from business obligations, reviewing possible duplicates and preserving evidence for the final decision.</description>
+    </item>
     <item>
       <title>The Fire Alarm Panel Says Trouble. Do Not Press Reset to Make It Quiet.</title>
       <link>https://jaredmodstorage.github.io/writing/fire-alarm-panel-trouble-signal-first-response-self-storage/</link>
