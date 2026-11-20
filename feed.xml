@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Fri, 20 Nov 2026 13:46:18 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 15:19:59 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Handed the Case Back. Why Did the Benchmark Mark It Wrong?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-handback-aware-evaluation-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-handback-aware-evaluation-self-storage/</guid>
+      <pubDate>Fri, 20 Nov 2026 15:19:59 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>An AI evaluation method for distinguishing answer correctness, evidence eligibility, operating authority and complete handback before release.</description>
+    </item>
     <item>
       <title>The AI Found One Approved Exception. Why Did It Treat It as Portfolio Policy?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-policy-exception-scope-self-storage/</link>
