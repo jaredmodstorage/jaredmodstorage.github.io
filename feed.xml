@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Fri, 20 Nov 2026 11:17:51 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 13:46:18 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Found One Approved Exception. Why Did It Treat It as Portfolio Policy?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-policy-exception-scope-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-policy-exception-scope-self-storage/</guid>
+      <pubDate>Fri, 20 Nov 2026 13:46:18 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>An AI operating architecture for admitting retrieved records according to their authority, scope, current applicability and evidence role.</description>
+    </item>
     <item>
       <title>The Operator Approved the Plan. Did the AI Change It After Execution Started?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-agent-replanning-approval-envelope-self-storage/</link>
