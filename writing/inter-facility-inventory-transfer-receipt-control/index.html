@@ -1,0 +1,497 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><link rel="stylesheet" href="/_next/static/css/page.BL0EKfsz.css" data-rsc-css-href="/_next/static/css/page.BL0EKfsz.css" data-precedence="vite-rsc/importer-resources"/><title>The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It? | Jared Mastroianni</title><meta name="description" content="A portfolio operating method for tracing inventory transfers from request and release through receipt, inspection, acceptance and unresolved exceptions."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It? | Jared Mastroianni"/><meta property="og:description" content="A portfolio operating method for tracing inventory transfers from request and release through receipt, inspection, acceptance and unresolved exceptions."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-11-21T05:14:50+00:00"/><meta property="article:modified_time" content="2026-11-21T05:14:50+00:00"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/061-industry-leadership-drive-aisle-walk.png"/><meta property="og:image:width" content="1536"/><meta property="og:image:height" content="1024"/><meta property="og:image:alt" content="Three self-storage leaders walk a facility drive aisle while discussing operations."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It? | Jared Mastroianni"/><meta name="twitter:description" content="A portfolio operating method for tracing inventory transfers from request and release through receipt, inspection, acceptance and unresolved exceptions."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/061-industry-leadership-drive-aisle-walk.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/#article","url":"https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?","datePublished":"2026-11-21T05:14:50+00:00","dateModified":"2026-11-21T05:14:50+00:00","image":{"@id":"https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/#lead-image"},"description":"A portfolio operating method for tracing inventory transfers from request and release through receipt, inspection, acceptance and unresolved exceptions."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/#lead-image","name":"The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?","caption":"A portfolio control has to connect the physical item, the sending facility, the receiving facility and the people responsible for each handoff. Governed editorial image; not evidence of the fictional example.","description":"Governed editorial asset. Production method unspecified.","contentUrl":"https://jaredmodstorage.github.io/writing/customer-lock-removal-authorization-self-storage/061-industry-leadership-drive-aisle-walk.png","width":1536,"height":1024,"encodingFormat":"image/png","representativeOfPage":true,"creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/","creditText":"Jared James Mastroianni public image library. All rights reserved."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Identity and governance","item":"https://jaredmodstorage.github.io/writing/topics/governance/"},{"@type":"ListItem","position":3,"name":"The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?","item":"https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/governance/">Identity and governance</a></li><li aria-current="page">The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?</li></ol></nav><article class="essay"><header class="essay-header _heading_nul0b_13"><p class="eyebrow">Operating practice<!-- --> · <time dateTime="2026-11-21T05:14:50+00:00">21 November 2026</time></p><h1>The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?</h1><p class="lede">A portfolio operating method for tracing inventory transfers from request and release through receipt, inspection, acceptance and unresolved exceptions.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>10 min read</span></div></header><div class="essay-body _responsive_nul0b_1"><figure class="article-photo"><img src="/writing/customer-lock-removal-authorization-self-storage/061-industry-leadership-drive-aisle-walk.png" width="1536" height="1024" alt="Three self-storage leaders walk a facility drive aisle while discussing operations."><figcaption>A portfolio control has to connect the physical item, the sending facility, the receiving facility and the people responsible for each handoff. Governed editorial image; not evidence of the fictional example.</figcaption></figure><p>Consider a fictional portfolio that moves two cases of disc locks, a box of gate remotes and a carton of retail packing supplies from one self-storage facility to another.</p>
+<p>The sending manager updates the source count when the tote leaves. The receiving manager is off that day, so the tote is set behind the counter. No receipt is recorded. On Monday, the destination's stock count still shows the old quantity. The source says the items transferred. The destination says it never received them. The physical tote may be in the building, but the portfolio has no accepted transfer.</p>
+<p>This is not mainly an inventory-count problem. It is a transaction-design problem.</p>
+<p>An inter-facility transfer crosses two control boundaries. One facility releases custody; another accepts it. If the systems represent that movement as a subtraction at Site A and an unrelated addition at Site B, the portfolio cannot tell whether the goods are approved, picked, in transit, delivered, inspected, accepted, rejected or missing.</p>
+<p>The fix is to govern the transfer as one record with two facilities, one item set and a visible chain of events.</p>
+<h2>A transfer is not complete when the source count changes</h2>
+<p>The transfer begins with a request, not a stock edit. The request should name the source facility, destination facility, items, quantities, unit of measure, business reason, requested date and requesting role. It should also identify who may approve the movement under the operator's policy.</p>
+<p>After approval, the source can pick the items. Picking is a preparation state. It does not prove the tote left the building. A release event should record the exact item identity, quantity, condition, package or seal identifier when used, releasing person, custody recipient, timestamp and transport method.</p>
+<p>The destination then records a separate receipt event. Receipt means the shipment reached the designated receiving point. It does not automatically mean the quantity and condition were accepted.</p>
+<p>Acceptance follows the destination's check. The receiver compares the transfer record with what arrived, records the observed quantity and condition, and either accepts the transfer or opens an exception. Only then should the destination's available stock reflect the accepted amount under the portfolio's inventory policy.</p>
+<p>That sequence creates a clean set of states:</p>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Transfer state</th>
+<th role="columnheader" scope="col">What it proves</th>
+<th role="columnheader" scope="col">What it does not prove</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Transfer state" role="cell">Requested</td>
+<td data-label="What it proves" role="cell">A need and proposed scope were recorded</td>
+<td data-label="What it does not prove" role="cell">Approval, availability or movement</td>
+</tr>
+<tr role="row">
+<td data-label="Transfer state" role="cell">Approved</td>
+<td data-label="What it proves" role="cell">An authorized role approved the bounded transfer</td>
+<td data-label="What it does not prove" role="cell">Picking or release</td>
+</tr>
+<tr role="row">
+<td data-label="Transfer state" role="cell">Picked</td>
+<td data-label="What it proves" role="cell">Items were prepared against the transfer</td>
+<td data-label="What it does not prove" role="cell">Departure from the source</td>
+</tr>
+<tr role="row">
+<td data-label="Transfer state" role="cell">Released / in transit</td>
+<td data-label="What it proves" role="cell">Source custody ended through a recorded handoff</td>
+<td data-label="What it does not prove" role="cell">Destination receipt or acceptance</td>
+</tr>
+<tr role="row">
+<td data-label="Transfer state" role="cell">Received pending inspection</td>
+<td data-label="What it proves" role="cell">Package reached the destination receiving point</td>
+<td data-label="What it does not prove" role="cell">Correct quantity, usable condition or availability</td>
+</tr>
+<tr role="row">
+<td data-label="Transfer state" role="cell">Accepted</td>
+<td data-label="What it proves" role="cell">Destination completed the required comparison</td>
+<td data-label="What it does not prove" role="cell">Future sale, use or customer outcome</td>
+</tr>
+<tr role="row">
+<td data-label="Transfer state" role="cell">Exception open</td>
+<td data-label="What it proves" role="cell">Quantity, identity, condition or evidence does not reconcile</td>
+<td data-label="What it does not prove" role="cell">Loss, fault or final financial treatment</td>
+</tr>
+<tr role="row">
+<td data-label="Transfer state" role="cell">Canceled</td>
+<td data-label="What it proves" role="cell">Authorized cancellation occurred before the applicable commitment boundary</td>
+<td data-label="What it does not prove" role="cell">Physical return unless separately recorded</td>
+</tr>
+</tbody>
+</table>
+<p>A transfer cannot be both <code>accepted</code> and <code>in transit</code>. Those states should be derived from events, not typed into separate spreadsheets by each property.</p>
+<h2>Give the transfer, item and facilities separate identities</h2>
+<p>The transfer needs a stable transfer ID. Each facility needs its stable facility ID, not only a display name. Every item line needs a product or asset identifier and an explicit unit of measure.</p>
+<p>“One box of locks” is not controlled data if one facility means 12 locks and another means 24. “Gate remotes” is incomplete when two incompatible models share the description. “Packing supplies” is not an item identity at all.</p>
+<p>Use the portfolio's approved identifiers. If a barcode, serial number, lot number or package identifier is available and appropriate, record it. Do not invent false precision where the item is managed only by a governed SKU and quantity.</p>
+<p>This is consistent with the <a href="https://support.gs1.org/support/solutions/articles/43000734535-what-is-the-gs1-traceability-standard-">GS1 description of traceability</a>, which separates critical tracking events—such as receiving, packing, shipping and transporting—from the key data elements that describe each event. GS1's standard is not a self-storage inventory requirement, but the distinction is useful: an event says what happened; its data says to which object, where, when and under whose recorded process.</p>
+<p>The facility identities matter just as much as the item identity. A transfer to “Downtown” is unsafe if that name can refer to an office, a facility, a cost center or a former property name. Resolve both endpoints before release.</p>
+<h2>Preserve custody without pretending a signature proves everything</h2>
+<p>A signature can support a handoff, but it is not a complete transfer record. The signer may acknowledge a tote without verifying every line. A carrier scan may show delivery at a building without showing who received it or whether the contents matched.</p>
+<p>The event trail should answer:</p>
+<ul>
+<li>who requested and approved the transfer;</li>
+<li>which exact items and quantities were authorized;</li>
+<li>who picked and verified the source package;</li>
+<li>who released custody, to whom and when;</li>
+<li>which transport reference or hand-carry method applied;</li>
+<li>when and where the destination received the package;</li>
+<li>who compared expected with observed contents;</li>
+<li>which lines were accepted, rejected, short, over, damaged or held; and</li>
+<li>which person owns each unresolved exception.</li>
+</ul>
+<p>The <a href="https://csrc.nist.gov/glossary/term/audit_trail">NIST definition of an audit trail</a> describes a chronological record sufficient to reconstruct the sequence surrounding an operation or event from inception to result. NIST's definition is written for security-relevant transactions, not retail inventory between self-storage facilities. The architecture lesson still holds: if the sequence cannot be reconstructed, a final quantity alone is weak evidence.</p>
+<p>Do not overwrite a release when a receipt arrives. Add the receipt. Do not change the requested quantity to match the observed quantity. Preserve both and record the variance. Do not delete a canceled transfer. Preserve the cancellation authority, time and reason.</p>
+<h2>Use two-sided posting, not wishful synchronization</h2>
+<p>The source and destination inventory changes should be tied to the same transfer ID, but they do not have to occur at the same moment.</p>
+<p>The source may move accepted quantities from <code>available</code> to <code>allocated for transfer</code> when items are picked, then to <code>in transit</code> when custody is released. The destination may show an expected inbound quantity without adding it to available stock. After receipt and inspection, accepted quantity can enter the destination state approved by policy. Short, damaged or unidentified items remain in exception states.</p>
+<p>Exact stock-state names depend on the operator's systems and accounting treatment. The essential rule is that an unreceived shipment must not look available at the destination, and a received-but-uninspected shipment must not be silently treated as accepted.</p>
+<p>This is also where segregation matters. The <a href="https://www.gao.gov/greenbook">2025 GAO Green Book</a> is a federal internal-control standard, not a private self-storage mandate. It emphasizes reliable operational reporting, documented control activities and risk-appropriate internal control. Applied as a design reference, it supports separating authorization, custody, recording and review when practical—and documenting the compensating review when staffing makes full separation impractical.</p>
+<p>A small portfolio may not have four different people. It can still avoid one invisible action. For example, one manager may request and hand-carry a transfer, while the destination manager performs the count and a regional reviewer examines exceptions weekly. The control should reflect actual staffing rather than claiming segregation that did not occur.</p>
+<h2>Reconcile by transfer, not only by facility total</h2>
+<p>Portfolio reconciliation should start with open transfer records. A facility-level stock count cannot explain whether a variance came from a sale, use, damage, receiving delay, unit-of-measure error or transfer mismatch.</p>
+<p>For each open transfer, compare:</p>
+<ol>
+<li>approved quantity;</li>
+<li>source-picked quantity;</li>
+<li>source-released quantity;</li>
+<li>destination-received quantity;</li>
+<li>destination-accepted quantity;</li>
+<li>rejected or held quantity; and</li>
+<li>unresolved difference.</li>
+</ol>
+<p>The quantities should reconcile by item line:</p>
+<p><strong>Released quantity = accepted quantity + rejected/held quantity + unresolved quantity.</strong></p>
+<p>That is an authored operating check, not an accounting standard. It prevents the transfer from disappearing inside portfolio totals. If the formula does not close, keep the transfer open and route the difference to a named owner.</p>
+<p>Age the transfer by state. A request waiting for approval is different from a shipment released three days ago with no receipt. A receipt waiting for inspection is different from a confirmed shortage. One generic “open transfer” age conceals the decision that is actually late.</p>
+<h2>A fictional portfolio example</h2>
+<p>The following example and dataset are entirely fictional. They do not describe an actual facility, customer, deployment, loss or result.</p>
+<p>Fictional Juniper Storage Group creates transfer <code>FIC-TR-204</code> from facility <code>FIC-JSG-01</code> to <code>FIC-JSG-04</code>. The approved lines are 24 disc locks in units of <code>each</code>, 10 compatible gate remotes in units of <code>each</code>, and 6 retail box bundles in units of <code>bundle</code>.</p>
+<p>The source picks and releases all three lines at 10:20 a.m. to a named internal courier. The destination records receipt at 12:05 p.m. During inspection, it accepts 24 locks and 6 box bundles. It observes only 9 gate remotes and opens a one-unit shortage exception. The destination does not alter the approved or released quantity. It records the observed and accepted quantity, assigns the exception, and keeps that line open.</p>
+<p>The portfolio view now tells the truth: two lines are accepted; one line is partially accepted with an unresolved quantity of one. It does not accuse the source, courier or destination. It preserves the facts needed for review.</p>
+<h2>Build the control before the next tote moves</h2>
+<p>Use the accompanying <strong>Inter-Facility Transfer and Receipt Ledger</strong> to define the control and record one transfer end to end.</p>
+<p>Before the next movement:</p>
+<ol>
+<li>Assign stable IDs to the transfer, both facilities and every item line.</li>
+<li>Define units of measure and the stock states used at source, in transit and destination.</li>
+<li>Separate request, approval, pick, release, receipt, inspection, acceptance and exception events.</li>
+<li>Decide which evidence is required at each event and who can create it.</li>
+<li>Preserve expected, observed and accepted quantities instead of overwriting one with another.</li>
+<li>Reconcile every released line to accepted, held/rejected and unresolved quantities.</li>
+<li>Age the state that is waiting, not merely the overall record.</li>
+<li>Review unresolved transfers across the portfolio until each has an authorized disposition.</li>
+</ol>
+<p>The physical tote can move in an hour. The operating record has to survive long after the people involved forget the trip. One governed transfer record gives both facilities the same transaction, preserves each handoff, and keeps an unresolved difference visible until someone with authority closes it.</p>
+<h2>Inter-Facility Transfer and Receipt Ledger</h2><p>Use this ledger to govern one physical inventory transfer between two facilities. Adapt item eligibility, approvals, evidence, stock states, valuation, accounting and retention to the operator's actual systems and policies. This tool does not establish ownership, loss, tax treatment or employee fault.</p>
+<h3>1. Transfer identity and authorization</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Field</th>
+<th role="columnheader" scope="col">Controlled record</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Field" role="cell">Transfer ID</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Source facility stable ID</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Destination facility stable ID</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Requester / request time</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Business reason</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Approver / approval time</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Approval basis or policy version</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Requested movement date</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Current transfer state</td>
+<td data-label="Controlled record" role="cell"></td>
+</tr>
+</tbody>
+</table>
+<h3>2. Item-line reconciliation</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Line</th>
+<th role="columnheader" scope="col">Item ID / description</th>
+<th role="columnheader" scope="col">Unit</th>
+<th role="columnheader" scope="col" style="text-align:right">Approved</th>
+<th role="columnheader" scope="col" style="text-align:right">Picked</th>
+<th role="columnheader" scope="col" style="text-align:right">Released</th>
+<th role="columnheader" scope="col" style="text-align:right">Received</th>
+<th role="columnheader" scope="col" style="text-align:right">Accepted</th>
+<th role="columnheader" scope="col" style="text-align:right">Rejected or held</th>
+<th role="columnheader" scope="col" style="text-align:right">Unresolved</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Line" role="cell">1</td>
+<td data-label="Item ID / description" role="cell"></td>
+<td data-label="Unit" role="cell"></td>
+<td data-label="Approved" role="cell" style="text-align:right"></td>
+<td data-label="Picked" role="cell" style="text-align:right"></td>
+<td data-label="Released" role="cell" style="text-align:right"></td>
+<td data-label="Received" role="cell" style="text-align:right"></td>
+<td data-label="Accepted" role="cell" style="text-align:right"></td>
+<td data-label="Rejected or held" role="cell" style="text-align:right"></td>
+<td data-label="Unresolved" role="cell" style="text-align:right"></td>
+</tr>
+<tr role="row">
+<td data-label="Line" role="cell">2</td>
+<td data-label="Item ID / description" role="cell"></td>
+<td data-label="Unit" role="cell"></td>
+<td data-label="Approved" role="cell" style="text-align:right"></td>
+<td data-label="Picked" role="cell" style="text-align:right"></td>
+<td data-label="Released" role="cell" style="text-align:right"></td>
+<td data-label="Received" role="cell" style="text-align:right"></td>
+<td data-label="Accepted" role="cell" style="text-align:right"></td>
+<td data-label="Rejected or held" role="cell" style="text-align:right"></td>
+<td data-label="Unresolved" role="cell" style="text-align:right"></td>
+</tr>
+<tr role="row">
+<td data-label="Line" role="cell">3</td>
+<td data-label="Item ID / description" role="cell"></td>
+<td data-label="Unit" role="cell"></td>
+<td data-label="Approved" role="cell" style="text-align:right"></td>
+<td data-label="Picked" role="cell" style="text-align:right"></td>
+<td data-label="Released" role="cell" style="text-align:right"></td>
+<td data-label="Received" role="cell" style="text-align:right"></td>
+<td data-label="Accepted" role="cell" style="text-align:right"></td>
+<td data-label="Rejected or held" role="cell" style="text-align:right"></td>
+<td data-label="Unresolved" role="cell" style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<p>For each line, test: <code>released = accepted + rejected_or_held + unresolved</code>.</p>
+<h3>3. Event trail</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Event</th>
+<th role="columnheader" scope="col">Actor</th>
+<th role="columnheader" scope="col">Facility / location</th>
+<th role="columnheader" scope="col">Timestamp</th>
+<th role="columnheader" scope="col">Evidence reference</th>
+<th role="columnheader" scope="col">Result / next state</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Event" role="cell">Requested</td>
+<td data-label="Actor" role="cell"></td>
+<td data-label="Facility / location" role="cell"></td>
+<td data-label="Timestamp" role="cell"></td>
+<td data-label="Evidence reference" role="cell"></td>
+<td data-label="Result / next state" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Event" role="cell">Approved</td>
+<td data-label="Actor" role="cell"></td>
+<td data-label="Facility / location" role="cell"></td>
+<td data-label="Timestamp" role="cell"></td>
+<td data-label="Evidence reference" role="cell"></td>
+<td data-label="Result / next state" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Event" role="cell">Picked / source verified</td>
+<td data-label="Actor" role="cell"></td>
+<td data-label="Facility / location" role="cell"></td>
+<td data-label="Timestamp" role="cell"></td>
+<td data-label="Evidence reference" role="cell"></td>
+<td data-label="Result / next state" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Event" role="cell">Custody released</td>
+<td data-label="Actor" role="cell"></td>
+<td data-label="Facility / location" role="cell"></td>
+<td data-label="Timestamp" role="cell"></td>
+<td data-label="Evidence reference" role="cell"></td>
+<td data-label="Result / next state" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Event" role="cell">Transport update</td>
+<td data-label="Actor" role="cell"></td>
+<td data-label="Facility / location" role="cell"></td>
+<td data-label="Timestamp" role="cell"></td>
+<td data-label="Evidence reference" role="cell"></td>
+<td data-label="Result / next state" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Event" role="cell">Destination received</td>
+<td data-label="Actor" role="cell"></td>
+<td data-label="Facility / location" role="cell"></td>
+<td data-label="Timestamp" role="cell"></td>
+<td data-label="Evidence reference" role="cell"></td>
+<td data-label="Result / next state" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Event" role="cell">Inspected / accepted</td>
+<td data-label="Actor" role="cell"></td>
+<td data-label="Facility / location" role="cell"></td>
+<td data-label="Timestamp" role="cell"></td>
+<td data-label="Evidence reference" role="cell"></td>
+<td data-label="Result / next state" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Event" role="cell">Exception disposition</td>
+<td data-label="Actor" role="cell"></td>
+<td data-label="Facility / location" role="cell"></td>
+<td data-label="Timestamp" role="cell"></td>
+<td data-label="Evidence reference" role="cell"></td>
+<td data-label="Result / next state" role="cell"></td>
+</tr>
+</tbody>
+</table>
+<h3>4. Custody and exception controls</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Control</th>
+<th role="columnheader" scope="col">Record</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Control" role="cell">Package, tote, seal or transport reference</td>
+<td data-label="Record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Control" role="cell">Source releaser and custody recipient</td>
+<td data-label="Record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Control" role="cell">Destination receiver</td>
+<td data-label="Record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Control" role="cell">Condition at release and receipt</td>
+<td data-label="Record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Control" role="cell">Variance reason state</td>
+<td data-label="Record" role="cell">Unknown / Short / Over / Damaged / Wrong item / Unit mismatch / Other governed code</td>
+</tr>
+<tr role="row">
+<td data-label="Control" role="cell">Exception owner and due time</td>
+<td data-label="Record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Control" role="cell">Authorized disposition</td>
+<td data-label="Record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Control" role="cell">Independent or compensating review</td>
+<td data-label="Record" role="cell"></td>
+</tr>
+<tr role="row">
+<td data-label="Control" role="cell">Final closure actor / time</td>
+<td data-label="Record" role="cell"></td>
+</tr>
+</tbody>
+</table>
+<h3>Release test</h3>
+<ul>
+<li>Both facility identities resolve to one current governed record.</li>
+<li>Every item has an identifier and unit of measure.</li>
+<li>Request, approval, release, receipt and acceptance are separate events.</li>
+<li>No destination quantity is available merely because the source released it.</li>
+<li>Expected, observed and accepted quantities remain visible.</li>
+<li>Every released line reconciles or carries an open exception.</li>
+<li>Closure preserves the event history and named authority.</li>
+</ul>
+<h2>Downloads</h2><ul><li><a download href="/writing/inter-facility-inventory-transfer-receipt-control/inter-facility-transfer-ledger-template.csv">Blank 36-column transfer ledger CSV</a></li><li><a download href="/writing/inter-facility-inventory-transfer-receipt-control/inter-facility-transfer-ledger-fictional-example.csv">Explicitly fictional example CSV</a></li><li><a download href="/writing/inter-facility-inventory-transfer-receipt-control/inter-facility-transfer-and-receipt-ledger.md">Inter-facility transfer and receipt ledger Markdown</a></li><li><a download href="/writing/inter-facility-inventory-transfer-receipt-control/article.md">Article Markdown</a></li></ul></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Operating practice</p><h3><a href="/writing/invoice-identity-duplicate-review-self-storage/">The PDF Has a New Filename. Is It a Second Invoice or the Same Obligation?</a></h3><p>A portfolio operating method for distinguishing invoice files from business obligations, reviewing possible duplicates and preserving evidence for the final decision.</p><a href="/writing/invoice-identity-duplicate-review-self-storage/" class="text-link" aria-label="Read the article: The PDF Has a New Filename. Is It a Second Invoice or the Same Obligation?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">AI architecture</p><h3><a href="/writing/ai-handback-aware-evaluation-self-storage/">The AI Handed the Case Back. Why Did the Benchmark Mark It Wrong?</a></h3><p>An AI evaluation method for distinguishing answer correctness, evidence eligibility, operating authority and complete handback before release.</p><a href="/writing/ai-handback-aware-evaluation-self-storage/" class="text-link" aria-label="Read the article: The AI Handed the Case Back. Why Did the Benchmark Mark It Wrong?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating practice</p><h3><a href="/writing/fire-alarm-panel-trouble-signal-first-response-self-storage/">The Fire Alarm Panel Says Trouble. Do Not Press Reset to Make It Quiet.</a></h3><p>An operator response for preserving a fire alarm trouble signal, confirming the protection boundary, assigning service ownership and verifying restoration.</p><a href="/writing/fire-alarm-panel-trouble-signal-first-response-self-storage/" class="text-link" aria-label="Read the article: The Fire Alarm Panel Says Trouble. Do Not Press Reset to Make It Quiet.">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

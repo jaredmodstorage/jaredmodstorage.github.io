@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Fri, 20 Nov 2026 15:19:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 05:14:50 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?</title>
+      <link>https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/</guid>
+      <pubDate>Sat, 21 Nov 2026 05:14:50 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A portfolio operating method for tracing inventory transfers from request and release through receipt, inspection, acceptance and unresolved exceptions.</description>
+    </item>
     <item>
       <title>The AI Handed the Case Back. Why Did the Benchmark Mark It Wrong?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-handback-aware-evaluation-self-storage/</link>
