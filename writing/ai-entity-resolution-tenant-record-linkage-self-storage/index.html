@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><link rel="stylesheet" href="/_next/static/css/page.BL0EKfsz.css" data-rsc-css-href="/_next/static/css/page.BL0EKfsz.css" data-precedence="vite-rsc/importer-resources"/><title>The AI Says These Records Belong to the Same Tenant. Who Authorized the Join? | Jared Mastroianni</title><meta name="description" content="An AI operating architecture for reviewing tenant-record linkage candidates while preserving source identity, conflicting evidence, decision authority and downstream effects."/><meta name="robots" content="index, follow"/><meta property="og:title" content="The AI Says These Records Belong to the Same Tenant. Who Authorized the Join? | Jared Mastroianni"/><meta property="og:description" content="An AI operating architecture for reviewing tenant-record linkage candidates while preserving source identity, conflicting evidence, decision authority and downstream effects."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-11-21T12:50:29+00:00"/><meta property="article:modified_time" content="2026-11-21T12:50:29+00:00"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/portfolio-delinquency-definition-reconciliation-self-storage/063-operations-metrics-roundtable.png"/><meta property="og:image:width" content="1536"/><meta property="og:image:height" content="1024"/><meta property="og:image:alt" content="Four self-storage leaders review operating records around a conference table overlooking storage units."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Says These Records Belong to the Same Tenant. Who Authorized the Join? | Jared Mastroianni"/><meta name="twitter:description" content="An AI operating architecture for reviewing tenant-record linkage candidates while preserving source identity, conflicting evidence, decision authority and downstream effects."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/portfolio-delinquency-definition-reconciliation-self-storage/063-operations-metrics-roundtable.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","@id":"https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/#article","url":"https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"The AI Says These Records Belong to the Same Tenant. Who Authorized the Join?","datePublished":"2026-11-21T12:50:29+00:00","dateModified":"2026-11-21T12:50:29+00:00","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/#lead-image"},"description":"An AI operating architecture for reviewing tenant-record linkage candidates while preserving source identity, conflicting evidence, decision authority and downstream effects."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/#lead-image","name":"The AI Says These Records Belong to the Same Tenant. Who Authorized the Join?","caption":"Record-linkage review should preserve source identity, conflicting evidence, decision authority and downstream effects. Governed editorial image; not evidence of the fictional example.","description":"Governed editorial asset. Production method unspecified.","contentUrl":"https://jaredmodstorage.github.io/writing/portfolio-delinquency-definition-reconciliation-self-storage/063-operations-metrics-roundtable.png","width":1536,"height":1024,"encodingFormat":"image/png","representativeOfPage":true,"creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"© 2024 Jared James Mastroianni. All rights reserved.","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/","copyrightYear":2024,"creditText":"Jared James Mastroianni public image library. All rights reserved."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Operating architecture","item":"https://jaredmodstorage.github.io/writing/topics/architecture/"},{"@type":"ListItem","position":3,"name":"The AI Says These Records Belong to the Same Tenant. Who Authorized the Join?","item":"https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/architecture/">Operating architecture</a></li><li aria-current="page">The AI Says These Records Belong to the Same Tenant. Who Authorized the Join?</li></ol></nav><article class="essay"><header class="essay-header _heading_nul0b_13"><p class="eyebrow">AI architecture<!-- --> · <time dateTime="2026-11-21T12:50:29+00:00">21 November 2026</time></p><h1>The AI Says These Records Belong to the Same Tenant. Who Authorized the Join?</h1><p class="lede">An AI operating architecture for reviewing tenant-record linkage candidates while preserving source identity, conflicting evidence, decision authority and downstream effects.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>10 min read</span></div></header><div class="essay-body _responsive_nul0b_1"><figure class="article-photo"><img src="/writing/portfolio-delinquency-definition-reconciliation-self-storage/063-operations-metrics-roundtable.png" width="1536" height="1024" alt="Four self-storage leaders review operating records around a conference table overlooking storage units."><figcaption>Record-linkage review should preserve source identity, conflicting evidence, decision authority and downstream effects. Governed editorial image; not evidence of the fictional example.</figcaption></figure><p>Two records look like the same tenant. The names differ by one character. The phone numbers share the same last seven digits. One record belongs to a former customer at Facility A; the other belongs to a current tenant at Facility B. An AI service assigns a 96 percent match score.</p>
+<p>What may the system do next?</p>
+<p>It may place the pair in a review queue. It may show the evidence that raised and lowered the score. It may ask an authorized employee to resolve the ambiguity.</p>
+<p>It may not silently combine the records, carry an access state from one facility to another, move a balance, inherit a consent, or tell a customer that the organization has verified a single identity. Similarity is not authority.</p>
+<p>Record linkage is already part of ordinary multi-location work. Names change. Phone numbers are recycled. Email addresses are shared. A customer can rent at more than one property, and separate platforms can assign different local identifiers to the same person. AI can make candidate generation faster. It can also make a weak assumption travel farther before anyone sees it.</p>
+<p>The architecture should therefore separate three decisions: <strong>candidate</strong>, <strong>link</strong> and <strong>merge</strong>. A candidate is a possibility worth checking. A link says two source records have an approved relationship while preserving their separate identities. A merge creates or updates a governing identity and may change what downstream systems can see or do. Those states should never be compressed into one <code>matched=true</code> field.</p>
+<h2>A score is not an identity decision</h2>
+<p>A matching system compares features: name, normalized address, phone, email, date of birth, government or account identifiers, device information, facility history, and other permitted evidence. It may use deterministic rules, a statistical model, an embedding or a combination.</p>
+<p>The output often looks authoritative because it is numeric. But a score of 0.96 is not automatically a 96 percent probability that the records belong to one person. Its meaning depends on the training population, candidate-generation method, feature set, calibration, threshold and operating context. A score produced among records already narrowed to the same facility does not carry the same meaning across an entire portfolio.</p>
+<p>The consequence matters too. A lower-confidence link might be acceptable for showing an employee two possible search results. The same link may be unacceptable for changing gate access, combining balances, disclosing account history, applying a legal notice, or deciding who is authorized to act for a tenant.</p>
+<p>The system needs a decision policy above the model. That policy should identify the permitted use, required evidence, conflict rules, human authority, expiration and downstream effect. The model proposes. The policy determines what the proposal can become.</p>
+<h2>Keep the source records intact</h2>
+<p>The fastest way to lose control is to overwrite two local identities with one portfolio identity before the relationship is settled.</p>
+<p>Preserve each source record, its facility, source system, local identifier, observed version and effective time. Store the proposed relationship as a separate object. That object should say which records are being compared, which feature and rule versions were used, what evidence agreed, what evidence conflicted, who reviewed the case and what relationship was approved.</p>
+<p>This design follows a practical provenance principle. The <a href="https://www.w3.org/TR/prov-overview/">W3C PROV overview</a> distinguishes entities, activities and agents so that derivation and responsibility can be represented. It is not a self-storage identity standard. It does, however, support a useful boundary: source records, the matching activity and the person or service making a decision should remain distinguishable.</p>
+<p>Preserving the originals also makes correction possible. If a reviewer later learns that two people share a family phone number, the organization can withdraw the link and identify every downstream view or action that depended on it. A destructive merge without dependency records turns a correctable judgment into a forensic problem.</p>
+<h2>Separate identity resolution from identity verification</h2>
+<p>Finding a unique record in a population is not the same as proving that the person presenting evidence owns that identity.</p>
+<p><a href="https://pages.nist.gov/800-63-4/sp800-63a.html">NIST SP 800-63A-4</a> separates identity resolution, evidence validation and identity verification. Its requirements govern federal digital identity contexts, not ordinary self-storage account management. The distinction is still valuable. A portfolio may resolve two records as likely referring to one person while still lacking sufficient evidence that the caller, visitor or online user is that person.</p>
+<p>That means a cross-facility match must not become a shortcut around the current facility's verification procedure. A shared email address, familiar voice, old access code or matching last name may help route a case. None should silently grant authority over another record.</p>
+<p>The review screen should use precise language:</p>
+<ul>
+<li><strong>candidate:</strong> records may refer to the same person;</li>
+<li><strong>linked:</strong> an authorized review approved a defined relationship;</li>
+<li><strong>verified for this interaction:</strong> the current person met the applicable verification procedure;</li>
+<li><strong>authorized for this action:</strong> policy permits the requested action in the stated scope; and</li>
+<li><strong>merged:</strong> a designated governing record replaced or absorbed specified source functions under an approved change.</li>
+</ul>
+<p>One state does not imply the next.</p>
+<h2>Make disagreement visible</h2>
+<p>Matching systems are often designed to display confirming evidence and hide contradictions inside the score. Operators need both.</p>
+<p>If the name and phone align but the date of birth conflicts, show the conflict. If an address is old, identify its effective date. If one source says the email was verified and another merely stores the same string, preserve that distinction. If a phone number appears on several active records, treat reuse as negative evidence instead of rewarding every pair.</p>
+<p>Missing is not agreement. Two blank dates of birth are not a match. A normalized apartment address can remove meaningful unit details. A transliterated or shortened name can be legitimate without behaving like an exact identifier. The architecture needs field-specific semantics, not a generic count of matching columns.</p>
+<p>The reviewer should also see why the pair entered the candidate set. Candidate generation can create blind spots. A rule that considers only records sharing a phone number will never surface the same customer after a number change. A broad semantic search may surface too many people with similar names. Record the blocking rule and the population searched so a later reviewer can understand what was eligible to be found.</p>
+<h2>Bind thresholds to allowed effects</h2>
+<p>Do not publish one portfolio-wide match threshold and call the problem solved.</p>
+<p>Create consequence classes. Search assistance, analytics deduplication, customer communication, account maintenance, financial action and access control should not share an automatic decision rule. For each class, specify whether the system may suggest, create a reversible link, require a second reviewer, or prohibit automated resolution.</p>
+<p>High-consequence effects should require stronger, independent evidence and a current verification step. They should also have explicit conflicts that force handback regardless of score. A government identifier mismatch, an active fraud flag, incompatible dates of birth or conflicting facility ownership may be a hard stop under approved policy. The exact rules belong to the operator's legal, security, privacy and operating review; this article does not supply them.</p>
+<p>NIST's <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">AI Risk Management Framework Core</a> is voluntary and cross-sectoral. Its emphasis on documented context, risks, human oversight, monitoring and measurement supports this consequence-based approach without providing a self-storage threshold. The number must earn its meaning in the actual population and use.</p>
+<h2>Limit the data before improving the model</h2>
+<p>Identity-resolution projects can become collection projects. Every additional field appears useful because it might improve separation. That is the wrong default.</p>
+<p>Start with the minimum permitted evidence required for the decision. Record the purpose for each feature, its source, retention, authorized users and whether it can be used for model development. Keep sensitive values out of general traces and dashboards. Use protected references where the reviewer can retrieve evidence under the right role rather than copying customer data into every log.</p>
+<p>The <a href="https://www.nist.gov/privacy-framework">NIST Privacy Framework</a> is voluntary guidance for managing privacy risk; it is not a declaration of compliance and does not determine which data a storage operator may use. Its value here is managerial: data processing creates risks that should be identified, governed, controlled, communicated and monitored alongside the technical match quality.</p>
+<p>A feature can improve a score and still be inappropriate for the purpose. A retained value can also become stale, inaccurate or unexpectedly revealing when combined with other records. Technical availability is not permission.</p>
+<h2>Human review needs a real decision surface</h2>
+<p>A reviewer cannot independently decide if the interface shows only <code>96% match — approve?</code></p>
+<p>Present the source records side by side, with facility and system identity intact. Show exact agreements, normalized agreements, conflicts, missing fields, source ages, validation status and reuse counts. Identify the model, rules and threshold that produced the candidate. Display the allowed decision and the effects that would follow.</p>
+<p>The reviewer should be able to choose:</p>
+<ul>
+<li>approve a limited link;</li>
+<li>reject the link;</li>
+<li>request defined evidence;</li>
+<li>refer the case to a qualified owner;</li>
+<li>mark the pair as known different people; or</li>
+<li>escalate a suspected duplicate or fraud condition under approved procedure.</li>
+</ul>
+<p>Do not make “merge” the easiest or default button. Require a reason code and an evidence reference. Prevent the same person who changed the matching rule from quietly adjudicating all of its uncertain outputs when independent review is material.</p>
+<p>Monitor reviewer disagreement, reversal rate, unresolved backlog, population coverage and downstream corrections. A high approval rate may mean the model is precise. It may also mean the screen encourages approval or the queue excludes difficult cases.</p>
+<h2>A fictional portfolio example</h2>
+<p>The following scenario, portfolio, facilities, people, records, values and decisions are entirely fictional.</p>
+<p>Fictional North Harbor Storage Group receives a candidate pair. Record <code>NH-A-1842</code> is a former tenant at fictional Harbor East. Record <code>NH-B-7710</code> is an active tenant at fictional Harbor North. The names differ by a middle initial. The normalized street address agrees. The phone numbers match, but the number appears on three portfolio records. The dates of birth conflict. The candidate service returns 0.94.</p>
+<p>The review policy allows the service to suggest search candidates above its documented threshold. It does not allow automatic cross-facility linking when a core attribute conflicts or a supposedly identifying phone number is reused.</p>
+<p>The system creates review case <code>ER-FIC-204</code>, preserves both source versions and shows the positive and negative evidence. It prohibits access, balance, consent and communication effects. The reviewer selects <strong>request evidence</strong> and routes the case to the authorized account-resolution owner. No records are merged, no gate state changes and no customer history crosses facilities.</p>
+<p>A later fictional review establishes that the records belong to two relatives at the same address who share a phone plan. The candidate is rejected, the pair is marked as known different people for the scoped rule version, and no source record is rewritten.</p>
+<p>The example demonstrates a control sequence, not a deployment or performance result.</p>
+<h2>Use an entity-resolution decision gate</h2>
+<p>Before a candidate can change an operating record, complete a gate that ties the proposed relationship to its evidence, authority and effects.</p>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Gate</th>
+<th role="columnheader" scope="col">Required record</th>
+<th role="columnheader" scope="col">Hold condition</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Gate" role="cell">Scope</td>
+<td data-label="Required record" role="cell">Exact records, facilities, systems, local IDs and observed versions</td>
+<td data-label="Hold condition" role="cell">Target or population is ambiguous</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Purpose</td>
+<td data-label="Required record" role="cell">Permitted use and consequence class</td>
+<td data-label="Hold condition" role="cell">Candidate is being reused for a broader purpose</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Method</td>
+<td data-label="Required record" role="cell">Candidate rule, feature set, model and threshold versions</td>
+<td data-label="Hold condition" role="cell">Resolved runtime cannot be reproduced</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Evidence</td>
+<td data-label="Required record" role="cell">Agreements, conflicts, missing values, reuse counts and source ages</td>
+<td data-label="Hold condition" role="cell">Conflicting or stale required evidence</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Decision</td>
+<td data-label="Required record" role="cell">Candidate, limited link, reject, request evidence or merge</td>
+<td data-label="Hold condition" role="cell">Interface offers only approve or deny</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Authority</td>
+<td data-label="Required record" role="cell">Named reviewer role, policy version and decision time</td>
+<td data-label="Hold condition" role="cell">Reviewer lacks authority for the effect</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Effects</td>
+<td data-label="Required record" role="cell">Explicit allowed and prohibited downstream changes</td>
+<td data-label="Hold condition" role="cell">Link could silently change access, money or communication</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Recovery</td>
+<td data-label="Required record" role="cell">Reversal path and dependency register</td>
+<td data-label="Hold condition" role="cell">A wrong link cannot be withdrawn and traced</td>
+</tr>
+<tr role="row">
+<td data-label="Gate" role="cell">Monitoring</td>
+<td data-label="Required record" role="cell">Review date, expiration and correction owner</td>
+<td data-label="Hold condition" role="cell">Link is treated as permanent truth without revalidation</td>
+</tr>
+</tbody>
+</table>
+<p>The companion <strong>AI Entity-Resolution Decision Gate</strong> includes a blank CSV and a completed fictional record. It does not prescribe legal evidence, universal thresholds or vendor behavior.</p>
+<h2>The operating rule</h2>
+<p>AI can help an operator find records that deserve attention. That is valuable work. It becomes dangerous when candidate generation, identity verification and operating authority collapse into one invisible step.</p>
+<p>Keep the source records intact. Show disagreement. Bind thresholds to consequences. Require a current verification path for consequential actions. Record the person and policy that authorized a relationship. Make every link reversible and every dependent effect discoverable.</p>
+<p>The right question is not, “How confident is the model?”</p>
+<p>It is, “What relationship did we authorize, for which purpose, on what evidence, and what is the system now allowed to do?”</p>
+<h2>Sources</h2>
+<ol>
+<li>National Institute of Standards and Technology, <a href="https://pages.nist.gov/800-63-4/sp800-63a.html">NIST Special Publication 800-63A-4: Digital Identity Guidelines — Enrollment and Identity Proofing</a>, accessed November 21, 2026. Federal digital-identity guidance used for the distinction among resolution, validation and verification; it is not a self-storage account-management standard.</li>
+<li>National Institute of Standards and Technology, <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">AI Risk Management Framework Core</a>, accessed November 21, 2026. Voluntary cross-sector framework used for governance, context, oversight, measurement and monitoring concepts; it does not supply identity-match thresholds.</li>
+<li>National Institute of Standards and Technology, <a href="https://www.nist.gov/privacy-framework">Privacy Framework</a>, accessed November 21, 2026. Voluntary privacy-risk guidance; it does not establish legal compliance or authorize particular customer-data uses.</li>
+<li>World Wide Web Consortium, <a href="https://www.w3.org/TR/prov-overview/">PROV-Overview</a>, W3C Working Group Note, April 30, 2013; accessed November 21, 2026. Provenance model used by analogy to keep source entities, matching activities and responsible agents distinct.</li>
+</ol>
+<h2>Author</h2>
+<p>Jared Mastroianni is Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai.</p>
+<h2>Editorial disclosure</h2>
+<p>North Harbor Storage Group and every facility, person, record, identifier, score, policy, review and outcome in the example are fictional. The governed image is a non-documentary editorial asset; the retained registry does not state its production method. It is not evidence of a customer, meeting, deployment, product capability or result. AI assistance supported research synthesis, drafting, tool production and editorial QA under Jared Mastroianni's direction. The article presents a proposed operating architecture, not legal, privacy, security, identity-proofing or site-specific implementation advice.</p>
+<h2>AI Entity-Resolution Decision Gate</h2><p>Use this gate when an AI or rules service proposes that two self-storage records refer to the same person or organization. Complete it before a proposed relationship can change access, money, communications, account history or another operating state.</p>
+<h3>Decision sequence</h3>
+<ol>
+<li>Identify both source records by source system, facility, local ID and observed version.</li>
+<li>State the permitted purpose and consequence class for this review.</li>
+<li>Record the candidate-generation rule, feature-set version, model or rules version and threshold meaning.</li>
+<li>Separate exact agreements, normalized agreements, conflicts, missing values, reused values and stale evidence.</li>
+<li>Choose one state: candidate, limited link, reject, request evidence, refer or merge.</li>
+<li>Record the reviewer role, authority source, reason code, decision time and evidence references.</li>
+<li>List allowed effects and prohibited effects. A link does not inherit access, consent, balance or communication authority unless policy expressly allows it.</li>
+<li>Record the reversal method and every downstream dependency that consumes the relationship.</li>
+<li>Set expiration, revalidation triggers, monitoring owner and correction route.</li>
+</ol>
+<h3>Decision rules</h3>
+<ul>
+<li>A score is never the only evidence recorded.</li>
+<li>Missing values are not treated as agreements.</li>
+<li>Reused phone numbers, emails and addresses are surfaced as ambiguity, not hidden inside a score.</li>
+<li>Identity resolution does not establish that the present person owns the identity or is authorized for the requested action.</li>
+<li>A material conflict invokes the approved hold or handback rule regardless of aggregate score.</li>
+<li>Source records remain intact unless a separately authorized merge procedure governs their disposition.</li>
+<li>A rejected pair can be recorded as known different people for a scoped rule version without falsifying either source record.</li>
+<li>A wrong link must be reversible, and its dependent effects must be discoverable.</li>
+</ul>
+<p>The blank CSV is a template. The fictional example demonstrates structure only. It does not prescribe evidence, thresholds, legal requirements or vendor behavior.</p>
+<h2>Downloads</h2><ul><li><a download href="/writing/ai-entity-resolution-tenant-record-linkage-self-storage/ai-entity-resolution-decision-gate-blank.csv">Blank 42-field entity resolution gate CSV</a></li><li><a download href="/writing/ai-entity-resolution-tenant-record-linkage-self-storage/ai-entity-resolution-decision-gate-fictional-example.csv">Explicitly fictional example CSV</a></li><li><a download href="/writing/ai-entity-resolution-tenant-record-linkage-self-storage/ai-entity-resolution-decision-gate.md">Entity-resolution decision gate Markdown</a></li><li><a download href="/writing/ai-entity-resolution-tenant-record-linkage-self-storage/article.md">Article Markdown</a></li></ul></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">AI architecture</p><h3><a href="/writing/ai-handback-aware-evaluation-self-storage/">The AI Handed the Case Back. Why Did the Benchmark Mark It Wrong?</a></h3><p>An AI evaluation method for distinguishing answer correctness, evidence eligibility, operating authority and complete handback before release.</p><a href="/writing/ai-handback-aware-evaluation-self-storage/" class="text-link" aria-label="Read the article: The AI Handed the Case Back. Why Did the Benchmark Mark It Wrong?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating practice</p><h3><a href="/writing/inter-facility-inventory-transfer-receipt-control/">The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?</a></h3><p>A portfolio operating method for tracing inventory transfers from request and release through receipt, inspection, acceptance and unresolved exceptions.</p><a href="/writing/inter-facility-inventory-transfer-receipt-control/" class="text-link" aria-label="Read the article: The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">AI architecture</p><h3><a href="/writing/ai-policy-exception-scope-self-storage/">The AI Found One Approved Exception. Why Did It Treat It as Portfolio Policy?</a></h3><p>An AI operating architecture for admitting retrieved records according to their authority, scope, current applicability and evidence role.</p><a href="/writing/ai-policy-exception-scope-self-storage/" class="text-link" aria-label="Read the article: The AI Found One Approved Exception. Why Did It Treat It as Portfolio Policy?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

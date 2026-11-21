@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sat, 21 Nov 2026 05:14:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 12:50:29 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Says These Records Belong to the Same Tenant. Who Authorized the Join?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/</guid>
+      <pubDate>Sat, 21 Nov 2026 12:50:29 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>An AI operating architecture for reviewing tenant-record linkage candidates while preserving source identity, conflicting evidence, decision authority and downstream effects.</description>
+    </item>
     <item>
       <title>The Inventory Transfer Left One Facility. Did the Other Facility Ever Receive It?</title>
       <link>https://jaredmodstorage.github.io/writing/inter-facility-inventory-transfer-receipt-control/</link>
