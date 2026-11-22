@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sat, 21 Nov 2026 12:50:29 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 05:41:48 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Facility Is Temporarily Closed. Should It Still Count in the Portfolio?</title>
+      <link>https://jaredmodstorage.github.io/writing/temporarily-closed-facility-portfolio-inclusion-control/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/temporarily-closed-facility-portfolio-inclusion-control/</guid>
+      <pubDate>Sun, 22 Nov 2026 05:41:48 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>Build a Metric-Specific Inclusion Contract Before One Status Flag Rewrites the Story</description>
+    </item>
     <item>
       <title>The AI Says These Records Belong to the Same Tenant. Who Authorized the Join?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-entity-resolution-tenant-record-linkage-self-storage/</link>
