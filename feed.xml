@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Sun, 22 Nov 2026 05:41:48 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 11:12:30 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Combined Three Facility Signals. Did It Find an Incident—or Invent One?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-signal-correlation-incident-formation-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-signal-correlation-incident-formation-self-storage/</guid>
+      <pubDate>Sun, 22 Nov 2026 11:12:30 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>Correlation can help an operator find a case worth reviewing. It cannot turn several uncertain observations into one confirmed facility condition without a governed formation decision.</description>
+    </item>
     <item>
       <title>The Facility Is Temporarily Closed. Should It Still Count in the Portfolio?</title>
       <link>https://jaredmodstorage.github.io/writing/temporarily-closed-facility-portfolio-inclusion-control/</link>
