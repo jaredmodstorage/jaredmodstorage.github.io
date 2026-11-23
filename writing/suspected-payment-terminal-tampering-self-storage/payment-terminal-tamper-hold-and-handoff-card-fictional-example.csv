@@ -1,0 +1,21 @@
+section,field,value
+identity,facility / terminal location,Fictional Cedar Junction Storage / front office terminal T-02
+identity,date and time observed,2026-11-23 07:08 ET
+identity,observer,Fictional manager Alex Rivera
+identity,approved make / model / serial,Fictional provider record / model PX-8 / serial 620184
+observation,direct visual difference,"Left reader seam raised; unfamiliar black cable behind device; displayed serial label 620194 does not match approved register"
+observation,last documented normal inspection,2026-11-22 18:04 ET / matched baseline
+containment,customer availability at discovery,Terminal was powered and available; no customer at counter
+containment,last known transaction time,2026-11-22 17:41 ET per ordinary business record; not independently analyzed
+containment,time transactions stopped,2026-11-23 07:09 ET
+containment,area-control method,Approved out-of-service placard and counter position closed
+containment,approved alternate payment route,Verified company payment page from existing procedure
+handoff,verified contact / channel,Processor security number from approved directory
+handoff,instruction or action,Keep terminal unused and powered; preserve area pending provider call
+handoff,person handling device if any,None at initial handoff
+release,authorized inspector or technician verified,Pending
+release,device identity reconciled,Pending
+release,required checks complete or assigned,Pending
+release,evidence preserved,Initial record and approved photo saved to incident repository
+release,release owner / time / evidence,Pending
+release,final device state,Held under review
