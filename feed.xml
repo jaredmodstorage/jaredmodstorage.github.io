@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Mon, 23 Nov 2026 12:35:32 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 13:20:55 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The AI Saved a Manager Note as Memory. Who Decides When It Expires?</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-agent-memory-admission-expiration-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-agent-memory-admission-expiration-self-storage/</guid>
+      <pubDate>Mon, 23 Nov 2026 13:20:55 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/architecture/">Operating architecture</category>
+      <description>A write gate for persistent facility memory in responsible artificial intelligence systems</description>
+    </item>
     <item>
       <title>The Same 10x10 Shows Three Prices. Which One Can the Customer Actually Rent?</title>
       <link>https://jaredmodstorage.github.io/writing/self-storage-published-rate-offer-reconciliation/</link>

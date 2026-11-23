@@ -44,7 +44,7 @@
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/research/</loc>
-<lastmod>2026-11-23T12:35:32.000Z</lastmod>
+<lastmod>2026-11-23T13:20:55.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -122,7 +122,7 @@
 </url>
 <url>
 <loc>https://jaredmodstorage.github.io/writing/topics/architecture/</loc>
-<lastmod>2026-11-22T11:12:30.000Z</lastmod>
+<lastmod>2026-11-23T13:20:55.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -135,6 +135,12 @@
 <url>
 <loc>https://jaredmodstorage.github.io/writing/topics/research/</loc>
 <lastmod>2026-09-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://jaredmodstorage.github.io/writing/ai-agent-memory-admission-expiration-self-storage/</loc>
+<lastmod>2026-11-23T13:20:55.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
