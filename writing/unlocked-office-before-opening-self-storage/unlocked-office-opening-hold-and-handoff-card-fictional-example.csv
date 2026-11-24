@@ -1,0 +1,17 @@
+section,field,entry_or_result,evidence_or_exception,owner,status_or_time
+Fictional example label,Dataset status,"EXPLICITLY FICTIONAL: Northglass Storage; training only; no real facility, employee, event, loss or finding",,,
+Immediate branch,Facility and office location,Northglass Storage front office (fictional),,,
+Immediate branch,Date and discovery time,November 24 2026 at 6:48 a.m. (fictional),,,
+Immediate branch,Reporter and safe callback,Opening manager A. Rivera (fictional),,,
+Immediate branch,Door position and visible lock/latch state,Door resting approximately two inches open; no visible frame damage from exterior (fictional),,,
+Immediate branch,"Visible damage, person, object, sound, odor or light",No person or damage visible from safe exterior position; interior not entered (fictional),,,
+Immediate branch,Known people currently on property,Reporter only; not independently verified (fictional),,,
+Immediate branch,Alarm status visible to reporter role,Unverified (fictional),,,
+Immediate branch,Area held clear and customer route,Front approach held; remote phone service used (fictional),,,
+Immediate branch,Emergency/security owner contacted,Regional operations owner contacted through approved directory (fictional),,,10 minutes after discovery
+Evidence and access,Approved cleaner/vendor window,Approved cleaner window ended 6:00 a.m.; schedule does not prove arrival or exit condition (fictional),,,
+Evidence and access,Electronic access event record,Event recorded at 5:51 a.m.; identity and physical action not established (fictional),,,
+Evidence and access,Camera health and retention window,Review assigned; footage not interpreted by opening manager (fictional),Security owner,open
+Reopening,Physical condition,Cleared for authorized entry by named response owner (fictional),No cause assigned,Operations owner,cleared for entry only
+Reopening,Controlled assets,"Key cabinet, cash drawer, payment terminal, devices and files require separate checks (fictional)",No combined result allowed,Assigned control owners,reconciliation in progress
+Reopening,Final authority,No full release in fictional example,Unresolved asset and access checks,Operations owner,held
