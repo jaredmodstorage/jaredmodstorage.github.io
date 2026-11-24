@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Mon, 23 Nov 2026 19:08:06 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 05:15:04 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Move-In Was Canceled. Which Systems Still Think the Customer Moved In?</title>
+      <link>https://jaredmodstorage.github.io/writing/canceled-move-in-cross-system-reconciliation-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/canceled-move-in-cross-system-reconciliation-self-storage/</guid>
+      <pubDate>Tue, 24 Nov 2026 05:15:04 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A multi-location self-storage method for canceling a move-in across unit inventory, agreements, payments, protection, access, communications and reporting without deleting the evidence.</description>
+    </item>
     <item>
       <title>The Payment Terminal Looks Different. Stop Taking Cards Before You Touch It.</title>
       <link>https://jaredmodstorage.github.io/writing/suspected-payment-terminal-tampering-self-storage/</link>
