@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Wed, 25 Nov 2026 07:09:12 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 13:00:51 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Customer Can’t Hear the Gate Intercom. What Happens Next?</title>
+      <link>https://jaredmodstorage.github.io/writing/gate-intercom-accessible-communication-self-storage/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/gate-intercom-accessible-communication-self-storage/</guid>
+      <pubDate>Wed, 25 Nov 2026 13:00:51 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A shift-ready guide to helping a self-storage customer when the gate intercom is unusable, with an alternate contact method, safe directions and a clear handoff.</description>
+    </item>
     <item>
       <title>What Should an AI-Drafted Work Order Tell the Vendor?</title>
       <link>https://jaredmodstorage.github.io/writing/ai-vendor-work-order-data-disclosure-self-storage/</link>
