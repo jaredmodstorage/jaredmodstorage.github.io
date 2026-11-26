@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Thu, 26 Nov 2026 13:15:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 19:06:24 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Before You Hand Over a 10×10, Check the Route for the Largest Item</title>
+      <link>https://jaredmodstorage.github.io/writing/storage-unit-fit-check-largest-item/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/storage-unit-fit-check-largest-item/</guid>
+      <pubDate>Thu, 26 Nov 2026 19:06:24 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A move-in route check for self-storage managers, from the unloading point through the last opening.</description>
+    </item>
     <item>
       <title>To Audit AI Maintenance Triage, Inspect the Jobs It Put Last</title>
       <link>https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/</link>
