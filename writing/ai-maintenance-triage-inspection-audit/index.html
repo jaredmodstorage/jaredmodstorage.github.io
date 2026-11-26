@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/index.DQnlzTEM.css" data-rsc-css-href="/_next/static/css/index.DQnlzTEM.css" data-precedence="vite-rsc/importer-resources"/><link rel="stylesheet" href="/_next/static/css/page.BL0EKfsz.css" data-rsc-css-href="/_next/static/css/page.BL0EKfsz.css" data-precedence="vite-rsc/importer-resources"/><title>To Audit AI Maintenance Triage, Inspect the Jobs It Put Last | Jared Mastroianni</title><meta name="description" content="A field audit for self-storage operators who want to find actionable maintenance work below an AI triage cutoff."/><meta name="robots" content="index, follow"/><meta property="og:title" content="To Audit AI Maintenance Triage, Inspect the Jobs It Put Last | Jared Mastroianni"/><meta property="og:description" content="A field audit for self-storage operators who want to find actionable maintenance work below an AI triage cutoff."/><meta property="og:url" content="https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/"/><meta property="og:site_name" content="Jared Mastroianni"/><meta property="og:type" content="article"/><meta property="og:locale" content="en_US"/><meta property="article:published_time" content="2026-11-26T13:15:15+00:00"/><meta property="article:modified_time" content="2026-11-26T13:15:15+00:00"/><meta property="article:author" content="https://jaredmodstorage.github.io/about/"/><meta property="og:image" content="https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/053-ai-development-ai-sensor-operations-walk.png"/><meta property="og:image:width" content="3840"/><meta property="og:image:height" content="2560"/><meta property="og:image:alt" content="Three people walk and talk in a corridor lined with self-storage unit doors."/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="To Audit AI Maintenance Triage, Inspect the Jobs It Put Last | Jared Mastroianni"/><meta name="twitter:description" content="A field audit for self-storage operators who want to find actionable maintenance work below an AI triage cutoff."/><meta name="twitter:image" content="https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/053-ai-development-ai-sensor-operations-walk.png"/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="canonical" href="https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/"/><link rel="alternate" type="application/rss+xml" title="Jared Mastroianni writing" href="/feed.xml"/>
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Fallback';
+  src: local("Arial");
+  ascent-override: 95.94%;
+  descent-override: 28.16%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.76%;
+}
+
+.__font_geist_19ysh9d { font-family: 'Geist', 'Geist Fallback'; font-style: normal; }
+
+.__variable_geist_19ysh9d { --font-geist-sans: 'Geist', 'Geist Fallback'; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Geist Mono Fallback';
+  src: local("Arial");
+  ascent-override: 74.67%;
+  descent-override: 21.92%;
+  line-gap-override: 0.00%;
+  size-adjust: 134.59%;
+}
+
+.__font_geist_mono_1001rt9 { font-family: 'Geist Mono', 'Geist Mono Fallback'; font-style: normal; }
+
+.__variable_geist_mono_1001rt9 { --font-geist-mono: 'Geist Mono', 'Geist Mono Fallback'; }
+</style>
+</head><body class="__variable_geist_19ysh9d __variable_geist_mono_1001rt9"><a class="skip-link" href="#site-content">Skip to content</a><header class="site-header"><a href="/" class="wordmark" aria-label="JM, Jared Mastroianni home"><span aria-hidden="true">JM</span><strong>Jared Mastroianni</strong></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/media/" class="nav-cta">Media</a></nav><details class="mobile-nav"><summary>Menu <span aria-hidden="true">+</span></summary><nav aria-label="Mobile navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/facily/">Facily</a><a href="/facily-os/">Facily OS</a><a href="/writing/" aria-current="page">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a></nav></details></header><main class="site-content" id="site-content" tabindex="-1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/#article","url":"https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/","mainEntityOfPage":"https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/","author":{"@id":"https://jaredmodstorage.github.io/#person"},"publisher":{"@id":"https://jaredmodstorage.github.io/#person"},"isPartOf":{"@id":"https://jaredmodstorage.github.io/#website"},"inLanguage":"en-US","headline":"To Audit AI Maintenance Triage, Inspect the Jobs It Put Last","datePublished":"2026-11-26T13:15:15+00:00","dateModified":"2026-11-26T13:15:15+00:00","image":{"@id":"https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/#lead-image"},"description":"A field audit for self-storage operators who want to find actionable maintenance work below an AI triage cutoff."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","@id":"https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/#lead-image","name":"To Audit AI Maintenance Triage, Inspect the Jobs It Put Last","caption":"An inspection is how a facility team turns a maintenance report into a verified finding. AI-generated editorial illustration.","description":"AI-generated contextual editorial image.","contentUrl":"https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/053-ai-development-ai-sensor-operations-walk.png","width":3840,"height":2560,"encodingFormat":"image/png","representativeOfPage":true,"creator":{"@type":"Person","@id":"https://jaredmodstorage.github.io/#person","name":"Jared Mastroianni"},"copyrightNotice":"Jared Mastroianni","license":"https://jaredmodstorage.github.io/assets/","acquireLicensePage":"https://jaredmodstorage.github.io/contact/","creditText":"Jared James Mastroianni public image library. All rights reserved."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Writing","item":"https://jaredmodstorage.github.io/writing/"},{"@type":"ListItem","position":2,"name":"Identity and governance","item":"https://jaredmodstorage.github.io/writing/topics/governance/"},{"@type":"ListItem","position":3,"name":"To Audit AI Maintenance Triage, Inspect the Jobs It Put Last","item":"https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/"}]}</script><nav class="article-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/writing/">Writing</a></li><li><a href="/writing/topics/governance/">Identity and governance</a></li><li aria-current="page">To Audit AI Maintenance Triage, Inspect the Jobs It Put Last</li></ol></nav><article class="essay"><header class="essay-header _heading_nul0b_13"><p class="eyebrow">Operating practice<!-- --> · <time dateTime="2026-11-26T13:15:15+00:00">26 November 2026</time></p><h1>To Audit AI Maintenance Triage, Inspect the Jobs It Put Last</h1><p class="lede">A field audit for self-storage operators who want to find actionable maintenance work below an AI triage cutoff.</p><div class="byline"><span>By <a href="/about/" rel="author">Jared Mastroianni</a></span><span>10 min read</span></div></header><div class="essay-body _responsive_nul0b_1"><figure class="article-photo"><img src="/writing/ai-maintenance-triage-inspection-audit/053-ai-development-ai-sensor-operations-walk.png" width="3840" height="2560" alt="Three people walk and talk in a corridor lined with self-storage unit doors."><figcaption>An inspection is how a facility team turns a maintenance report into a verified finding. AI-generated editorial illustration.</figcaption></figure><p>A manager can clear most of an AI-ranked maintenance list and still learn very little about the work the model put at the bottom. The jobs near the top get inspected. Those inspections produce photographs, notes and a disposition. Lower down, the records may sit untouched until the next round. When the software team evaluates the model against completed work orders, it studies the part of the queue the workflow already chose to see.</p>
+<p>Consider a fictional self-storage portfolio testing AI on cosmetic wall damage in public corridors. The weekend team reports a cluster of scuffs outside the loading area and several more along the upper-floor turns. The model pushes the loading area reports to the top. A manager walks those corridors, confirms most of the first batch and approves touch-ups. The dashboard has an encouraging hit rate. The only evidence on the upper floors is the original report. Nobody has walked them with the same inspection checklist.</p>
+<p>I would look at that hit rate before deciding whether to keep the tool. I would want a second number before letting the rank decide what waits. How much work that meets our paint standard is sitting below the cutoff? Answering it takes a way to inspect some of those reports even when the model and the normal schedule would leave them alone.</p>
+<h2>Define the finding before the model gets a vote</h2>
+<p>Start with a narrow job. A ranking model can suggest which reports of cosmetic wall damage should be checked first. An authorized employee confirms the condition and decides whether it meets the portfolio’s cosmetic repair criteria. Keep damaged hardware, possible trip hazards, accessibility barriers, signs of water entry and any other safety or service issue on their established response paths. A report routed out of the cosmetic queue still belongs to someone. The audit has no authority to delay work, cancel a visit or close a ticket.</p>
+<p>For this audit, define the finding as “meets the cosmetic touch-up criteria at the inspection.” Set a short, common window for the inspection, starting at the recorded report time. The criteria should tell two readers how to recognize a qualifying defect at the correct location and distinguish it from a removable mark. Have the operations lead approve a short guide with examples and the evidence required. Use the same guide for reports above and below the cutoff. Apply your normal escalation procedure if the condition turns out to involve something beyond cosmetic work.</p>
+<p>A technician’s note that paint was applied describes a job. A contemporaneous finding that exposed substrate met the touch-up rule describes a condition. Those records can be linked, but each answers a different question. The absence of a labor entry, a closed ticket or another complaint cannot tell an evaluator whether that condition was there. An observed wall after cleaning or patching can establish its present appearance. To establish the earlier condition for an evaluation, use evidence from before the intervention that meets the same standard.</p>
+<p><a href="https://www.cs.cornell.edu/home/kleinber/kdd17-selective.pdf">KDD research on selective labels</a> describes the underlying problem in other decision settings. Choices about which cases receive action can determine which cases have observed outcomes. For maintenance triage, the practical adaptation is to collect an additional observation from reports that the ordinary workflow would rarely inspect. The audit can answer a question about the condition. Estimating whether a different schedule would have improved customer experience, reduced costs or prevented deterioration would take a different study.</p>
+<h2>Draw the audit from the queue as it existed</h2>
+<p>At the start of each audit batch, save the roster of eligible reports before inspection outcomes arrive. Record the facility, public-area location, report ID and time, version of the eligibility rule, model and rule versions, original score or abstention, and the cutoff in effect. Record the decision the normal workflow would have made at that point. Keep that snapshot if the ticket is later merged or closed. Otherwise, a cleaned-up export can quietly drop the cases the audit was meant to examine.</p>
+<p>Choose the unit before drawing. For a per-defect estimate, group known repeat reports using the site and surface identifiers before freezing the roster. For a per-report estimate, keep the original records and tie confirmed duplicates to the same field visit. If a duplicate emerges after a per-defect draw, preserve the selected IDs and have the analyst assess the effect of the duplicate on selection probabilities before publishing a rate. A portfolio whose sites log different numbers of reports per defect can change the apparent per-report error rate just by changing its intake habits.</p>
+<p>For the first cycle, separate reports above the cutoff from those below it. Give unscored reports their own group. Draw from each group with an agreed method. A simple random draw within each group works if you know how many eligible items were in the group and keep the list of selected IDs. A team that samples by score band and site can protect representation at smaller locations. It then needs to retain each group’s size and draw size so the combined result gives each group its proper weight.</p>
+<p>Make the draw before anyone sees the outcome. Keep the assigned inspections even when they are awkward to fit into a route. If a selected public area is unavailable, log the reason, attempt an authorized follow-up within the window and carry any unresolved item as unknown. Give the reviewer the location, time and approved inspection instructions. Withhold the score and priority band where the work system permits it. If the reviewer can infer the original queue position, record that limitation and use a second review of qualifying evidence on a small subset.</p>
+<h2>Read the missed work in the right units</h2>
+<p>In the fictional portfolio, an audit batch contains 120 scored reports and a further four eligible unscored reports. Each report concerns a different defect. The daily queue moves 20 scored reports above the cutoff. All 20 receive an inspection, and 16 meet the written criteria. Of the 100 scored reports below the cutoff, the evaluation team randomly selects 20 across the entire band and completes every inspection on time. Five meet the criteria. All four unscored reports are selected and three get a timely inspection. One qualifies, two do not and the fourth is still unknown when the results are compiled.</p>
+<p>The manager can say the above-cutoff group yielded 16 qualifying findings in 20 inspections. The below-cutoff audit directly found five qualifying defects in 20 selected reports. In this fictional simple random sample, each of those below-cutoff results represents five reports in its group. The estimated count below the cutoff is 25, with sampling uncertainty. It would be misleading to enter 25 confirmed misses in the maintenance system. Enter the five verified findings, route them through normal planning and report the estimate separately.</p>
+<p>For the scored group, the estimated share of qualifying reports that the ranking kept below the cutoff is 25 divided by the sum of 25 estimated and 16 confirmed qualifying reports, approximately 61 percent in this example. Five divided by 20 answers a different question. It is the observed share of the below-cutoff sample that qualified. Keep those two statements together in the review. They tell the facilities lead how productive the additional inspection was and tell the model owner how much of the qualifying work the cutoff may be leaving out.</p>
+<p>If the audit inspects a larger fraction of near-cutoff reports than bottom-band reports, calculate each group’s estimated number of qualifying findings separately using its own population and sample sizes. Add the estimated totals to produce the combined result. A raw average across inspected cases gives extra influence to the group the team chose to visit more often. Preserve the unscored group in the same review, with its confirmed and unresolved outcomes visible. The 61 percent in the example speaks only to the scored group.</p>
+<p>Incomplete inspections need their own line in the review. If three selected inspections never happen, show the confirmed results alongside the three unresolved cases and their reasons. For that group’s selected cases, calculate the qualifying share twice, treating every unresolved selection as qualifying once and as nonqualifying once. That gives an extreme-case range for the selected cases. It does not account for sampling uncertainty or defects missing from the report roster. An interval for the population estimate needs to reflect the actual draw design, and a small pilot can be too imprecise to justify changing the threshold.</p>
+<h2>Keep the measurement separate from the work order</h2>
+<p>The scheduling system can show one inspection route while preserving two reasons to send someone to a wall. Routine operations can prioritize a report for normal work. The evaluation service can independently select a report because the audit needs a field finding. A manager should be able to merge both visits into one authorized inspection without erasing either origin. Keep model score, audit selection, reviewer finding, work authorization and completion in separate fields linked by the report ID.</p>
+<p>This separation lets you fix conditions found during an audit without feeding a misleading lesson back into the model. When new labels are prepared for training, retain how they were obtained. A randomly drawn inspection, a complaint escalated by the manager and a routine high-score visit each reflect a different path into the labeled dataset. Do not convert a ticket that aged out into “no defect,” or copy a model-written description into the observation field. Keep this audit batch out of training while it is serving as your evaluation set. If a later version uses those examples to learn, assess that version on a new batch.</p>
+<p>The <a href="https://airc.nist.gov/airmf-resources/playbook/measure/">NIST AI Risk Management Framework Playbook’s Measure guidance</a> describes documenting evaluation conditions and monitoring real-world performance. In this workflow, the threshold, inspection standard and sampling method all belong with the versioned results. If one changes, record when it changed and keep the cohorts separate long enough to tell what moved. A different cutoff applied to a new intake roster and a revised inspection guide leaves three plausible reasons for a different result.</p>
+<h2>Decide what the audit can authorize</h2>
+<p>Before anyone receives the first list of sampled tickets, agree on the decision the evidence could support. Have the facilities lead and model owner specify a minimum audit completion rate, which groups must be represented and what level of estimated missed work warrants action. Set those thresholds using the work available, the consequence of a delay and the uncertainty the reviewers can tolerate. If one group cannot be sampled in time, flag the gap and keep the current operating rule for that group while collecting better evidence.</p>
+<p>If the audit reveals qualifying work concentrated just below the cutoff, inspect the scoring variables and try a revised threshold on a fresh batch. If the bottom band also contains actionable work, moving the cutoff a few points may leave the operating problem intact. The team can preserve a human rotation through low-ranked reports, narrow the model’s eligible categories or return to the ordinary schedule while it investigates. Look for differences in report channels and images before treating one facility’s labels as evidence of different model behavior. The location might not be the reason.</p>
+<p>Start with a small batch that the facilities team can finish without moving urgent work off its calendar. Use the <strong>AI Maintenance Triage Audit Sheet</strong> to freeze the roster, authorize the inspections and record what the evidence permits. Review both the work orders and the evaluation results at the same meeting. A verified defect needs a person and a date. A possible pattern needs enough evidence to change the ranking rule. Keeping those responsibilities clear gives the operator a way to use the model while still seeing the work it would have left out.</p>
+<h2>AI Maintenance Triage Audit Sheet</h2><h3>Define the batch</h3>
+<p>Record the facilities, report window, authorized inspection window, eligible cosmetic category, unit of analysis, excluded categories and their owners, model version, cutoff, inspection checklist version and staff capacity. Set minimum inspection completion, minimum coverage by band and the decision the results could authorize.</p>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Field</th>
+<th role="columnheader" scope="col">Record</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Field" role="cell">Snapshot</td>
+<td data-label="Record" role="cell">Facility, public area, report or defect ID, received time, eligible category</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Model result</td>
+<td data-label="Record" role="cell">Version, score, band or abstention, cutoff, ordinary queue decision</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Audit draw</td>
+<td data-label="Record" role="cell">Group, group size, planned draw size, selected IDs, draw method and reference</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Field review</td>
+<td data-label="Record" role="cell">Reviewer, inspection time, evidence reference, qualifying, nonqualifying or unknown</td>
+</tr>
+<tr role="row">
+<td data-label="Field" role="cell">Work decision</td>
+<td data-label="Record" role="cell">Authorized owner, action and date. Preserve whether a visit served normal work, the audit or both.</td>
+</tr>
+</tbody>
+</table>
+<h3>Work through the audit</h3>
+<ul>
+<li><span aria-label="Unchecked">☐</span> Freeze the eligible roster before inspection outcomes. Link duplicate reports while preserving the draw record.</li>
+<li><span aria-label="Unchecked">☐</span> Draw cases from each group. Keep the score off the inspection form when feasible.</li>
+<li><span aria-label="Unchecked">☐</span> Check each selected case within the window or record why it remains unresolved. Escalate urgent or service-affecting findings through the established procedure.</li>
+<li><span aria-label="Unchecked">☐</span> Keep work authorization separate from the evaluation record. Withhold the evaluation cases from training while they serve as the evaluation set.</li>
+</ul>
+<h3>Reconcile findings</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Group</th>
+<th role="columnheader" scope="col">Record and interpret</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Group" role="cell">Above cutoff</td>
+<td data-label="Record and interpret" role="cell">Eligible, selected, inspected, qualifying, nonqualifying, unresolved.</td>
+</tr>
+<tr role="row">
+<td data-label="Group" role="cell">Below cutoff</td>
+<td data-label="Record and interpret" role="cell">Same fields by band. A complete simple random draw estimates qualifying count by multiplying the group size by the sample’s qualifying fraction. Combine estimated counts across groups.</td>
+</tr>
+<tr role="row">
+<td data-label="Group" role="cell">Unscored</td>
+<td data-label="Record and interpret" role="cell">Keep abstentions visible. Reconcile the inspection outcomes and unknowns separately.</td>
+</tr>
+<tr role="row">
+<td data-label="Group" role="cell">Missing outcomes</td>
+<td data-label="Record and interpret" role="cell">Report the reason and show extreme-case bounds for selected cases. Keep sampling uncertainty separate.</td>
+</tr>
+</tbody>
+</table>
+<h3>Fictional example</h3>
+<table role="table">
+<thead role="rowgroup">
+<tr role="row">
+<th role="columnheader" scope="col">Group</th>
+<th role="columnheader" scope="col">Selection and result</th>
+</tr>
+</thead>
+<tbody role="rowgroup">
+<tr role="row">
+<td data-label="Group" role="cell">Above cutoff</td>
+<td data-label="Selection and result" role="cell">20 of 20 inspected. 16 qualify.</td>
+</tr>
+<tr role="row">
+<td data-label="Group" role="cell">Below cutoff</td>
+<td data-label="Selection and result" role="cell">20 of 100 selected randomly. All inspected. Five qualify. The estimated group count is 25.</td>
+</tr>
+<tr role="row">
+<td data-label="Group" role="cell">Unscored</td>
+<td data-label="Selection and result" role="cell">All four selected. Three inspected. One qualifies, two do not and one is unresolved.</td>
+</tr>
+</tbody>
+</table>
+<p>Among scored cases, the fictional estimated share of qualifying reports below cutoff is 25 ÷ (25 + 16), about 61%. The five qualifying field findings can enter normal work planning. The estimated total stays in the evaluation record. No confidence interval or operating outcome is reported.</p>
+<p><strong>Decision record.</strong> Enter the permitted change or hold, the remaining uncertainty, the person who owns the decision and the date of the next audit.</p>
+<h2>Downloads</h2><ul><li><a download href="/writing/ai-maintenance-triage-inspection-audit/ai-maintenance-triage-audit-sheet.md">AI Maintenance Triage Audit Sheet Markdown</a></li><li><a download href="/writing/ai-maintenance-triage-inspection-audit/article.md">Article Markdown</a></li></ul></div></article><section class="article-support" aria-label="Author and related reading"><div class="author-module"><div><p class="card-label">About the author</p><h2>Jared Mastroianni</h2></div><div><p>Chief Operating Officer of modSTORAGE and CEO and Founder of Facily.ai. Jared writes from the intersection of self-storage operations, accountable artificial intelligence, and operator-shaped software.</p><a href="/about/" class="text-link" rel="author">Read the verified executive profile <span aria-hidden="true">→</span></a></div></div><div class="related-reading"><div class="section-kicker"><span>+</span><p>Related reading</p></div><div class="related-grid"><article><p class="card-label">Operating practice</p><h3><a href="/writing/move-out-reason-response-coverage-self-storage/">Before You Rank Sites by Move-Out Reasons, Count Who Answered</a></h3><p>Reconcile who was invited, who answered and how move-out reasons were recorded before comparing self-storage facilities or changing prices.</p><a href="/writing/move-out-reason-response-coverage-self-storage/" class="text-link" aria-label="Read the article: Before You Rank Sites by Move-Out Reasons, Count Who Answered">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating practice</p><h3><a href="/writing/gate-intercom-accessible-communication-self-storage/">The Customer Can’t Hear the Gate Intercom. What Happens Next?</a></h3><p>A shift-ready guide to helping a self-storage customer when the gate intercom is unusable, with an alternate contact method, safe directions and a clear handoff.</p><a href="/writing/gate-intercom-accessible-communication-self-storage/" class="text-link" aria-label="Read the article: The Customer Can’t Hear the Gate Intercom. What Happens Next?">Read the article <span aria-hidden="true">→</span></a></article><article><p class="card-label">Operating practice</p><h3><a href="/writing/ai-vendor-work-order-data-disclosure-self-storage/">What Should an AI-Drafted Work Order Tell the Vendor?</a></h3><p>Design vendor work orders that carry useful facility context while controlling which records, attachments and links leave a self-storage operation.</p><a href="/writing/ai-vendor-work-order-data-disclosure-self-storage/" class="text-link" aria-label="Read the article: What Should an AI-Drafted Work Order Tell the Vendor?">Read the article <span aria-hidden="true">→</span></a></article></div></div></section></main><footer><div><strong>Jared Mastroianni</strong><span>Self-storage operations and technology</span></div><nav aria-label="Footer navigation"><a href="/about/">About</a><a href="/modstorage/">modSTORAGE</a><a href="/writing/">Writing</a><a href="/research/">Research</a><a href="/speaking/">Speaking</a><a href="/contact/">Contact</a><a href="/financial-profile-and-disclosures/">Financial disclosures</a><a href="/media/">Media kit</a><a href="/photos/">Photos</a><a href="/assets/">Assets</a><a href="/publishing-principles/">Publishing principles</a><a href="/feed.xml" type="application/rss+xml">RSS feed</a></nav><p>Facts and product status last reviewed 22 August 2026.</p></footer></body></html>

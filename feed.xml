@@ -5,8 +5,17 @@
     <link>https://jaredmodstorage.github.io/writing/</link>
     <description>First-party writing on self-storage operations, accountable artificial intelligence, and operator-shaped software.</description>
     <language>en-US</language>
-    <lastBuildDate>Wed, 25 Nov 2026 19:09:04 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 13:15:15 GMT</lastBuildDate>
     <atom:link href="https://jaredmodstorage.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>To Audit AI Maintenance Triage, Inspect the Jobs It Put Last</title>
+      <link>https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/</link>
+      <guid isPermaLink="true">https://jaredmodstorage.github.io/writing/ai-maintenance-triage-inspection-audit/</guid>
+      <pubDate>Thu, 26 Nov 2026 13:15:15 GMT</pubDate>
+      <dc:creator>Jared Mastroianni</dc:creator>
+      <category domain="https://jaredmodstorage.github.io/writing/topics/governance/">Identity and governance</category>
+      <description>A field audit for self-storage operators who want to find actionable maintenance work below an AI triage cutoff.</description>
+    </item>
     <item>
       <title>Before You Rank Sites by Move-Out Reasons, Count Who Answered</title>
       <link>https://jaredmodstorage.github.io/writing/move-out-reason-response-coverage-self-storage/</link>
